@@ -12,7 +12,6 @@
     <link rel="canonical" href="https://arthcalculator.in/beta/">
     <link rel="icon" href="https://arthcalculator.in/favicon.png" type="image/png">
     
-    <!-- Open Graph Tags -->
     <meta property="og:title" content="Beta Calculator India (2026) – Calculate Stock Volatility">
     <meta property="og:description" content="Measure your stock's volatility relative to the market. Get a detailed sensitivity analysis and risk assessment.">
     <meta property="og:type" content="website">
@@ -20,7 +19,6 @@
     <meta property="og:image" content="https://arthcalculator.in/logo.png">
     <meta property="og:site_name" content="ArthCalculator">
     
-    <!-- Schema Markup: WebPage -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -39,7 +37,6 @@
     }
     </script>
 
-    <!-- Schema Markup: Organization -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -50,7 +47,6 @@
     }
     </script>
 
-    <!-- Schema Markup: SoftwareApplication -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -66,7 +62,6 @@
     }
     </script>
 
-    <!-- Schema Markup: HowTo -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -78,11 +73,10 @@
         { "@type": "HowToStep", "name": "Input Market Volatility", "text": "Enter the standard deviation of the benchmark index (e.g. Nifty 50)." },
         { "@type": "HowToStep", "name": "Enter Correlation", "text": "Input the correlation coefficient between the stock and the market." },
         { "@type": "HowToStep", "name": "Review Result", "text": "The calculator provides the Beta value and risk classification." }
-      ]
+      }
     }
     </script>
 
-    <!-- Schema Markup: FAQ -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -120,7 +114,7 @@
             "text": "Yes. A negative beta means the stock moves inversely to the market. Gold-related assets often exhibit this behavior."
           }
         }
-      ]
+      }
     }
     </script>
 
@@ -144,7 +138,6 @@
 <body class="text-slate-800 antialiased min-h-screen pb-12">
     <div id="navbar"></div>
 
-    <!-- Header & Breadcrumbs -->
     <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
         <div class="max-w-6xl mx-auto px-4 text-pretty">
             <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
@@ -189,15 +182,13 @@
     </header>
 
     <main class="max-w-6xl mx-auto px-4">
-        <!-- Calculator Section -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 text-pretty">
             
-            <!-- Left Side: Inputs -->
             <div class="lg:col-span-5 space-y-6">
                 <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow transition-all hover:shadow-lg">
                     <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
                         <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
-                        Volatility Inputs
+                        Volatilities Inputs
                     </h2>
 
                     <div class="mb-8">
@@ -205,7 +196,7 @@
                             <label class="text-sm font-medium text-slate-600">Stock Volatility (%)</label>
                             <input type="number" id="monthlyInput" value="25" min="1" step="0.5" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                         </div>
-                        <input type="range" id="monthlyRange" min="1" max="100" step="0.5" value="25" class="w-full py-2 cursor-pointer">
+                        <input type="range" id="monthlyRange" min="1" max="100" stroke="0.5" value="25" class="w-full py-2 cursor-pointer">
                     </div>
 
                     <div class="mb-8">
@@ -244,7 +235,6 @@
                 </div>
             </div>
 
-            <!-- Right Side: Results -->
             <div class="lg:col-span-7 space-y-6">
                 <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
                     <h2 class="text-slate-800 font-bold text-lg mb-6">Stock Beta Summary</h2>
@@ -287,7 +277,6 @@
 
                     <hr class="border-slate-100 mb-6">
 
-                    <!-- Key Highlights Box -->
                     <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8 text-pretty">
                         <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -295,9 +284,9 @@
                         </h4>
                         <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-blue-800 font-medium">
                             <li class="flex items-center gap-2">✅ Beta > 1: Aggressive stock</li>
-                            <li class="flex items-center gap-2 text-pretty">📉 Beta < 1: Defensive stock</li>
+                            <li class="flex items-center gap-2 text-pretty">📉 Beta &lt; 1: Defensive stock</li>
                             <li class="flex items-center gap-2">🔄 Beta = 1: Market Neutral</li>
-                            <li class="flex items-center gap-2 text-pretty">⚡ Beta < 0: Inverse Correlation</li>
+                            <li class="flex items-center gap-2 text-pretty">⚡ Beta &lt; 0: Inverse Correlation</li>
                         </ul>
                     </div>
 
@@ -345,7 +334,6 @@
         </div>
 
         <div class="space-y-12 mb-12" id="about">
-            <!-- Educational Content Section -->
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
                 <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Understanding Stock Beta in Portfolio Management</h2>
                 <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
@@ -366,7 +354,21 @@
                 </div>
             </section>
 
-            <!-- FAQ Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Evaluating Systematic Risk in the Indian Stock Market</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>
+                        When analyzing equities on the National Stock Exchange (NSE) or Bombay Stock Exchange (BSE), understanding the nuances of the beta coefficient is critical for capital preservation. Beta isolates systematic risk—the market-wide risk factors like RBI repo rate adjustments, inflation cycles, and macroeconomic shifts that cannot be diversified away. By running a standard historical covariance regression analysis against benchmark indices like Nifty 50 or Sensex, investors can discover exactly how responsive an asset is to systemic shocks.
+                    </p>
+                    <p>
+                        Indian market sectors exhibit highly distinct beta footprints due to structural variances. For example, defensive sectors such as Fast-Moving Consumer Goods (FMCG) and Information Technology (IT) often display a low beta (typically between 0.5 and 0.8). These defensive allocations remain resilient during market downturns, shielding portfolio drawdowns. Conversely, highly cyclical spaces like Banking, Financial Services, and Real Estate generally possess an aggressive beta profile (ranging from 1.2 to 1.6), moving faster than the broader index during structural rallies.
+                    </p>
+                    <p>
+                        Advanced risk balancing strategies utilize beta to compute the cost of equity within the Capital Asset Pricing Model (CAPM framework). By mapping a stock's customized volatility metric, financial planners and Chartered Accountants can accurately determine hurdle rates for equity valuation modeling. Tracking these risk parameters protects long-term compounding structures, helping individuals optimize asset distribution models across diverse asset classes while matching their risk tolerance levels perfectly.
+                    </p>
+                </div>
+            </section>
+
             <section class="max-w-4xl mx-auto py-10 text-pretty" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty text-pretty">Frequently Asked Questions</h2>
                 <div class="space-y-4 text-pretty text-pretty">
@@ -378,7 +380,6 @@
                 </div>
             </section>
 
-            <!-- Related Tools Section -->
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center text-pretty text-pretty text-pretty">
                 <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider md:text-left text-pretty text-pretty">Related Risk Analytics Tools</h2>
                 <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-pretty">
