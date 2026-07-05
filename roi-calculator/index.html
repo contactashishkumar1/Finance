@@ -11,12 +11,10 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://arthcalculator.in/roi-calculator/">
     
-    <!-- Performance Optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Schema Markup: WebPage -->
     <script type="application/ld+json">
     {
      "@context":"https://schema.org",
@@ -28,7 +26,6 @@
     }
     </script>
 
-    <!-- Schema Markup: SoftwareApplication -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -51,7 +48,6 @@
     }
     </script>
 
-    <!-- Schema Markup: Breadcrumb -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -60,7 +56,7 @@
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
         { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
         { "@type": "ListItem", "position": 3, "name": "ROI Calculator", "item": "https://arthcalculator.in/roi-calculator/" }
-      ]
+      }
     }
     </script>
 
@@ -84,7 +80,6 @@
 <body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
     <div id="navbar"></div>
 
-    <!-- Header & Breadcrumbs -->
     <header class="bg-white border-b border-slate-200 py-8 sm:py-12 mb-6 sm:mb-8 text-center md:text-left">
         <div class="max-w-6xl mx-auto px-4">
             <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
@@ -119,14 +114,12 @@
     </header>
 
     <main class="max-w-6xl mx-auto px-4">
-        <!-- Quick Action Strip -->
         <div class="mb-6 flex flex-wrap gap-2 justify-center md:justify-start">
             <button onclick="applyExample()" class="border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold uppercase tracking-tighter text-slate-600 hover:bg-slate-50 transition-all">Apply Example</button>
             <button onclick="resetCalculator()" class="border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold uppercase tracking-tighter text-red-500 hover:bg-slate-50 transition-all">Reset All</button>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 text-pretty">
-            <!-- Left Side: Inputs -->
             <div class="lg:col-span-5 space-y-6">
                 <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
                     <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
@@ -134,7 +127,6 @@
                         Performance Inputs
                     </h2>
 
-                    <!-- Calculation Mode Tabs -->
                     <div class="flex p-1 bg-slate-100 rounded-xl mb-8">
                         <button onclick="setMode('total')" id="tabTotal" class="tab-btn flex-1 py-2 text-xs font-bold rounded-lg active">By Total Return</button>
                         <button onclick="setMode('profit')" id="tabProfit" class="tab-btn flex-1 py-2 text-xs font-bold rounded-lg text-slate-500">By Profit Amount</button>
@@ -168,7 +160,6 @@
                 </div>
             </div>
 
-            <!-- Right Side: Results -->
             <div class="lg:col-span-7 space-y-6">
                 <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
                     <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2 text-center md:text-left">Return on Investment (ROI)</h2>
@@ -227,13 +218,30 @@
             </div>
         </div>
 
-        <!-- content: SEO SECTIONS -->
         <div class="space-y-12 mb-12 text-pretty">
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty text-pretty">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6">What is Return on Investment (ROI)?</h2>
                 <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
                     <p>Return on Investment (ROI) is a performance measure used to evaluate the efficiency or profitability of an investment. It measures the amount of return on an investment, relative to the investment’s cost. To calculate ROI, the benefit (or return) of an investment is divided by the cost of the investment. The result is expressed as a percentage or a ratio.</p>
                     <p>For Indian investors, ROI is the most common metric used to judge a <a href="/sip/" class="text-blue-600 underline">Mutual Fund SIP</a> or a stock market trade. Unlike our <a href="/cagr/" class="text-blue-600 underline">CAGR Calculator</a>, which provides the annualized growth, ROI provides the simple absolute growth of the capital invested.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">How to Measure Your Real Investment Profits and Spot Hidden Outlays</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6">
+                    <p>
+                        Whenever you put your money into a business venture, a stock market setup, or even a basic property deal, you want to know one core metric: how hard is your cash working? It is very easy to look at a final bank balance and assume your deal was a massive financial success. But unless you explicitly divide your true net growth against your starting base capital, you cannot see your real percentage returns.
+                    </p>
+                    <p class="font-bold text-slate-900">Why measuring your simple ROI helps you build smarter financial habits:</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>Deduct Upfront Entry Fees:</strong> A true profit calculation requires tracking your total out-of-pocket costs. If you buy a small online setup or a stock position, always add entry broker fees, registration taxes, and initial repair expenses directly to your purchase base before calculating gains.</li>
+                        <li><strong>Don't Let Simple Percentages Blind You to Time:</strong> Absolute returns can sometimes lie if you ignore the holding period. Making a 50% profit sounds incredible, but if that growth took ten years to show up, your money underperformed standard risk-free savings accounts. Always check the duration.</li>
+                        <li><strong>Compare Across Different Assets:</strong> Calculating a clean percentage allows you to put different deals side-by-side. You can easily compare the success of a local retail store expansion against your equity portfolios to see where your capital achieves the highest efficiency.</li>
+                    </ul>
+                    <p>
+                        Tracking simple percentage growth across your diverse investment channels keeps your financial strategy transparent. It cuts through look-good numbers to show you exactly how many rupees of net profit were recovered for every single rupee you risked at the starting gate. Use our interactive auditing template to review your current portfolio performance lines cleanly.
+                    </p>
                 </div>
             </section>
 
@@ -270,7 +278,6 @@
                 </div>
             </section>
 
-            <!-- FAQ Section -->
             <section class="max-w-4xl mx-auto py-10 text-pretty" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
                 <div class="space-y-4 text-pretty">
@@ -281,7 +288,6 @@
                 </div>
             </section>
 
-            <!-- Related Tools Section -->
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center text-pretty">
                 <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider md:text-left text-pretty">Related Financial Tools</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -318,7 +324,8 @@
                 </div>
             </section>
 
-            <!-- Disclaimer -->
+            <div id="arthcalculatorLinkingHub"></div>
+
             <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-pretty text-pretty">
                 <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide text-pretty">Disclaimer</p>
                 ROI is an absolute measure of return and does not account for the risk profile or time period automatically. High ROI often comes with high risk. This tool provides mathematical estimations for general awareness and should not be treated as formal financial advice.
@@ -327,8 +334,7 @@
         </div>
     </main>
 
-    <!-- Popular Tools Grid (Footer area linked) -->
-    <section class="max-w-6xl mx-auto px-4 pt-8 border-t border-slate-200 text-pretty text-pretty">
+    <section class="max-w-6xl mx-auto px-4 pt-8 border-t border-slate-200 text-pretty text-pretty mb-12">
         <div class="text-center mb-10 text-pretty">
             <h2 class="text-xl sm:text-2xl font-bold text-slate-900 mb-2">Popular Finance Tools</h2>
         </div>
@@ -342,6 +348,9 @@
     </section>
 
     <div id="footer"></div>
+
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
 
     <script>
         let currentMode = 'total';
