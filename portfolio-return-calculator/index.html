@@ -61,7 +61,7 @@
             "text": "A good portfolio return should ideally beat inflation (approx 6%) and Fixed Deposit rates (approx 7%). For long-term equity heavy portfolios, 12-15% is considered healthy."
           }
         }
-      ]
+      }
     }
     </script>
 
@@ -90,7 +90,7 @@
     <!-- Header -->
     <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
         <div class="max-w-6xl mx-auto px-4">
-            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
                 <ol class="flex list-none p-0">
                     <li class="flex items-center">
                         <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
@@ -177,7 +177,7 @@
                         </div>
                         <div class="flex justify-between mt-4 text-[10px] font-bold uppercase text-slate-500">
                             <span id="investedLabel">Inv: ₹0</span>
-                            <span id="returnsLabel">Gain: ₹0</span>
+                            <span id="growthLabel">Gain: ₹0</span>
                         </div>
                     </div>
 
@@ -252,6 +252,25 @@
                 </div>
             </section>
 
+            <!-- EASY-TO-READ HUMAN-TONE SEO KNOWLEDGE BASE BLOCK -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">How to Measure Combined Portfolio Performance and Control Allocation Weight Leakage</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6">
+                    <p>
+                        When reviewing an active investment portfolio, it is incredibly easy to focus only on your biggest single winning asset. Seeing a specific small-cap stock or satellite mutual fund surge by 50% looks amazing on your tracking screen and makes for a great story. But if that winning asset only accounts for a tiny 2% slice of your total capital, its explosive growth won't noticemove the needle on your long-term family wealth.
+                    </p>
+                    <p class="font-semibold text-slate-900">Why computing a weighted portfolio return keeps your strategy sharp:</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>Weighted Averages Reveal the True Story:</strong> To see your real performance, you must distribute your returns by how much actual money is tied up in each position. A modest 12% gain on a massive index allocation contributes far more cash to your net worth than a massive 80% spike on an experimental small-ticket asset.</li>
+                        <li><strong>Watch Out for Silent Allocation Drifts:</strong> During strong market bull runs, your highest-risk equity positions grow rapidly in value. Left unchecked, their share of your total wealth expands automatically, leaving your portfolio dangerously over-exposed to market corrections. Periodic tracking flags when it is time to rebalance.</li>
+                        <li><strong>Focus on Total Capital Efficiency:</strong> Looking at your capital as a single, combined engine forces you to cut out lazy cash. It shows you exactly where your money is underperforming risk-free benchmarks, allowing you to streamline your diversification and focus on compound growth lines.</li>
+                    </ul>
+                    <p>
+                        Evaluating your combined performance safeguards your asset strategy from simple visual distortions. It helps you focus on generating stable annual milestones across your entire investment net worth rather than chasing isolated, high-risk spikes. Run your distributed asset lines through our matrix evaluator to chart your true performance.
+                    </p>
+                </div>
+            </section>
+
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-tight">How to Improve Your Portfolio Returns</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm leading-relaxed">
@@ -284,6 +303,9 @@
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How often should I review my portfolio?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">A semi-annual or annual review is best. Over-monitoring leads to panic-selling, while under-monitoring leads to carrying obsolete or bad assets. Check your <a href="/net-worth/" class="text-blue-600 underline">Net Worth</a> regularly for better context.</div></details>
                 </div>
             </section>
+
+            <!-- ARTHCALCULATOR CENTRAL LINKING INFRASTRUCTURE -->
+            <div id="arthcalculatorLinkingHub"></div>
 
             <!-- Related Tools Section -->
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center">
@@ -319,6 +341,9 @@
     </main>
 
     <div id="footer"></div>
+
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
 
     <script>
         let rowCount = 0;
