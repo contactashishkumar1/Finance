@@ -299,7 +299,7 @@
                         <input type="range" id="terminalRange" min="0" max="10" step="0.1" value="4" class="w-full py-2 cursor-pointer">
                     </div>
 
-                    <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all text-pretty uppercase">Calculate Fair Value</button>
+                    <button type="button" id="calcBtn" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all text-pretty uppercase">Calculate Fair Value</button>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-pretty text-pretty">
@@ -349,7 +349,7 @@
                                 <span class="text-[10px] sm:text-xs text-slate-500 font-medium" id="investedLabel">₹0</span>
                             </div>
                             <div class="flex items-center">
-                                <div class="w-3 h-3 bg-indigo-400 rounded-sm mr-2 text-pretty text-pretty"></div>
+                                <div class="w-3 h-3 bg-indigo-400 rounded-sm mr-2 text-pretty"></div>
                                 <span class="text-[10px] sm:text-xs text-slate-500 font-medium" id="returnsLabel">₹0</span>
                             </div>
                         </div>
@@ -378,7 +378,7 @@
                             <table class="w-full text-left text-[11px] sm:text-sm">
                                 <thead class="bg-slate-50 sticky top-0 z-10 text-pretty">
                                     <tr>
-                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-pretty text-pretty">Year</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-pretty">Year</th>
                                         <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap text-pretty">Projected CF</th>
                                         <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap text-pretty">Discount Factor</th>
                                         <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Present Value</th>
@@ -393,18 +393,18 @@
 
                 <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
                     <h2 class="text-lg font-bold text-slate-900 mb-4" id="formula">How is DCF Fair Value Calculated?</h2>
-                    <div class="formula-box text-blue-800 text-center mb-6 text-sm font-bold text-pretty text-pretty">
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm font-bold text-pretty">
                         Fair Value = Σ [CF<sub>n</sub> / (1 + r)<sup>n</sup>] + [TV / (1 + r)<sup>n</sup>]
                     </div>
-                    <div class="text-sm text-slate-600 space-y-2 mb-6 text-xs sm:text-sm text-pretty text-pretty">
+                    <div class="text-sm text-slate-600 space-y-2 mb-6 text-xs sm:text-sm text-pretty">
                         <p><strong>CF<sub>n</sub>:</strong> Cash Flow in year n | <strong>r:</strong> Discount Rate (<a href="/wacc/" class="underline font-bold text-blue-600">WACC</a>)</p>
                         <p><strong>TV:</strong> Terminal Value | <strong>n:</strong> Year Number</p>
                         <p><strong>Equity cost:</strong> For Re, use the <a href="/cost-of-equity/" class="underline font-bold text-blue-600">Cost of Equity Tool</a>.</p>
                         <p><strong>Debt cost:</strong> For Rd, use the <a href="/cost-of-debt/" class="underline font-bold text-blue-600">Cost of Debt Tool</a>.</p>
                     </div>
 
-                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="example text-pretty text-pretty text-pretty">Example DCF Calculation</h3>
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed text-pretty text-pretty text-pretty">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="example">Example DCF Calculation</h3>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed text-pretty">
                         If a company generates <strong>₹1,00,000</strong> FCF, grows at <strong>15%</strong> for 10 years, and we use a <strong>10%</strong> discount rate:<br>
                         <ul class="list-disc ml-5 mt-2 space-y-1 text-xs sm:text-sm font-medium">
                             <li>Total PV of Cash Flows: <strong>₹12,71,324</strong></li>
@@ -416,6 +416,7 @@
             </div>
         </div>
 
+        <!-- SEO POV KNOWLEDGE SECTIONS -->
         <div class="space-y-12 mb-12 text-pretty" id="about-dcf">
             <!-- Educational Content Section -->
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
@@ -433,15 +434,34 @@
                 </div>
             </section>
 
-            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
-                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 text-pretty">WACC vs Discount Rate – Which to Use?</h2>
+            <!-- EASY-TO-READ HUMAN-TONE SEO KNOWLEDGE BASE BLOCK -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">How to Value a Stock Using Future Cash Projections and Find Undervalued Assets</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6">
+                    <p>
+                        When checking stock prices on market tickers, it is incredibly easy to get caught up in daily swings, news headlines, and emotional momentum. But buying a stock means you are purchasing an actual fraction of a living business. To know if you are paying a fair price, you need to strip away market noise and figure out the company's real intrinsic value—and that is exactly where the Discounted Cash Flow model shines.
+                    </p>
+                    <p class="font-bold text-slate-900">How the DCF valuation process works in plain, simple terms:</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>Cash in Hand Beats a Promise:</strong> A company's real value comes down to the net cash it generates after paying for operations and factory upgrades, known as Free Cash Flow. Because a rupee earned ten years from now cannot buy what a rupee buys today, the model scales future projections down to match present-day purchasing power.</li>
+                        <li><strong>Projections Fade into Constant Horizons:</strong> Predicting explosive company growth forever is unrealistic. The calculation splits the timeline into two buckets: a clear ten-year roadmap where a company expands rapidly, and a forever stage called Terminal Value where the business settles into a stable, modest pace matching country growth.</li>
+                        <li><strong>Build a Vital Margin of Safety:</strong> Even the most precise spreadsheet projections are guesses about the future. Value investors protect their capital by applying a major discount corridor. If a stock's calculated fair value says ₹1,000, setting a 25% safety margin means you only pull the trigger if it trades below ₹750 in the open market.</li>
+                    </ul>
+                    <p>
+                        Finding out what a company is fundamentally worth gives you the ultimate psychological edge over the broader market. Instead of reacting to stock fluctuations, you gain the confidence to buy assets when they are heavily discounted and sell them when they grow overly expensive. Balance your growth assumptions against real interest limits above to audit your favourite enterprises cleanly.
+                    </p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">WACC vs Discount Rate – Which to Use?</h2>
                 <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
                     Choosing the right discount rate is the most sensitive part of a DCF analysis. For most Indian stocks, a discount rate of 10% to 12% is used.
                 </p>
-                <div class="overflow-x-auto text-pretty">
-                    <table class="w-full text-left border-collapse border border-slate-100 text-pretty text-pretty">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse border border-slate-100 text-pretty">
                         <thead>
-                            <tr class="bg-slate-50 text-pretty">
+                            <tr class="bg-slate-50">
                                 <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Factor</th>
                                 <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Conservative</th>
                                 <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Aggressive</th>
@@ -461,19 +481,19 @@
                             <tr>
                                 <td class="p-4 border-b font-medium text-slate-600">Fair Value Result</td>
                                 <td class="p-4 border-b">Lower Intrinsic Value</td>
-                                <td class="p-4 border-b text-red-500 font-bold text-pretty text-pretty">Higher Intrinsic Value</td>
+                                <td class="p-4 border-b">Higher Intrinsic Value</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
 
-            <section class="bg-slate-900 p-6 sm:p-10 rounded-2xl text-white text-pretty text-pretty text-pretty">
+            <section class="bg-slate-900 p-6 sm:p-10 rounded-2xl text-white text-pretty">
                 <h2 class="text-2xl font-bold mb-6">How to Find Undervalued Stocks Faster?</h2>
-                <p class="text-slate-300 text-sm mb-8 leading-relaxed text-pretty">
+                <p class="text-slate-300 text-sm mb-8 leading-relaxed">
                     Once you calculate the <strong>Intrinsic Value</strong> using our tool, compare it with the current market price of the stock:
                 </p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-pretty text-pretty text-pretty">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
                         <h4 class="text-emerald-400 font-bold mb-2">Margin of Safety (MoS)</h4>
                         <p class="text-xs text-slate-400 mb-3 text-pretty">If Intrinsic Value is ₹1000 and Market Price is ₹700, you have a 30% MoS. This protects against errors in the <a href="/sip/" class="underline">long-term SIP</a> model projections.</p>
@@ -481,48 +501,51 @@
                     </div>
                     <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 text-pretty">
                         <h4 class="text-blue-400 font-bold mb-2">Terminal Value Check</h4>
-                        <p class="text-xs text-slate-400 mb-3 text-pretty text-pretty text-pretty">Ensure Terminal Growth is not higher than the country's GDP growth rate (usually 4-6% for India).</p>
+                        <p class="text-xs text-slate-400 mb-3 text-pretty text-pretty">Ensure Terminal Growth is not higher than the country's GDP growth rate (usually 4-6% for India).</p>
                         <p class="text-lg font-bold text-white">Prevent Overvaluation</p>
                     </div>
                 </div>
             </section>
 
             <!-- FAQ Section -->
-            <section class="max-w-4xl mx-auto py-10 text-pretty text-pretty" id="faqs">
-                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">DCF Frequently Asked Questions</h2>
+            <section class="max-w-4xl mx-auto py-10 text-pretty" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">DCF Frequently Asked Questions</h2>
                 <div class="space-y-4">
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is a DCF Calculator?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">A DCF calculator estimates the value of an investment based on its expected future cash flows, discounted back to their present value.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is a DCF Calculator?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">A DCF calculator estimates the value of an investment based on its expected future cash flows, discounted back to their present value.</div></details>
                     
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty text-pretty">What is the Discount Rate in DCF?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">The discount rate represents the required rate of return or the cost of capital (WACC). It accounts for the time value of money and risk.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is the Discount Rate in DCF?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">The discount rate represents the required rate of return or the cost of capital (WACC). It accounts for the time value of money and risk.</div></details>
 
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Why is Terminal Value important in DCF?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty text-pretty">Terminal value accounts for all future cash flows beyond the projection period (usually 10 years). It often makes up 60-80% of the total intrinsic value.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Why is Terminal Value important in DCF?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Terminal value accounts for all future cash flows beyond the projection period (usually 10 years). It often makes up 60-80% of the total intrinsic value.</div></details>
 
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">How does inflation affect DCF?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">Inflation increases both the growth rate (due to price hikes) and the discount rate (due to higher interest rates). High inflation generally lowers DCF values.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">How does inflation affect DCF?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Inflation increases both the growth rate (due to price hikes) and the discount rate (due to higher interest rates). High inflation generally lowers DCF values.</div></details>
 
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What is the Gordon Growth Model?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">It is a formula used to calculate terminal value, assuming the company will grow at a constant rate forever. Formula: TV = [CF_final * (1 + g)] / (r - g).</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is the Gordon Growth Model?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">It is a formula used to calculate terminal value, assuming the company will grow at a constant rate forever. Formula: TV = [CF_final * (1 + g)] / (r - g).</div></details>
                     
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Is DCF suitable for all companies?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">DCF works best for companies with stable cash flows. It is less effective for banks (due to high debt) or early-stage startups with negative FCF.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Is DCF suitable for all companies?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">DCF works best for companies with stable cash flows. It is less effective for banks (due to high debt) or early-stage startups with negative FCF.</div></details>
                     
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What is the Margin of Safety?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">It is the difference between intrinsic value and market price. Investing only when market price is significantly lower than intrinsic value protects against valuation risks.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is the Margin of Safety?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">It is the difference between intrinsic value and market price. Investing only when market price is significantly lower than intrinsic value protects against valuation risks.</div></details>
                     
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty text-pretty text-pretty text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Can intrinsic value change daily?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">No, intrinsic value is based on fundamentals. While market price fluctuates daily, intrinsic value only changes when business earnings or macro-economic rates shift.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Can intrinsic value change daily?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">No, intrinsic value is based on fundamentals. While market price fluctuates daily, intrinsic value only changes when business earnings or macro-economic rates shift.</div></details>
                 </div>
             </section>
 
+            <!-- ARTHCALCULATOR CENTRAL LINKING HUB WRAPPER -->
+            <div id="arthcalculatorLinkingHub"></div>
+
             <!-- Related Tools -->
-            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center text-pretty text-pretty text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center">
                 <h2 class="text-xl font-bold text-slate-900 mb-6 uppercase tracking-wider md:text-left text-pretty">Related Valuation Tools</h2>
-                <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-pretty text-pretty text-pretty text-pretty text-pretty">
+                <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     <a href="/wacc/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center">
-                        <h4 class="font-bold text-slate-800 text-[10px] uppercase tracking-tighter text-pretty text-pretty">WACC Calc</h4>
+                        <h4 class="font-bold text-slate-800 text-[10px] uppercase tracking-tighter">WACC Calc</h4>
                     </a>
                     <a href="/enterprise-value/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center">
-                        <h4 class="font-bold text-slate-800 text-[10px] uppercase tracking-tighter text-pretty">EV Tool</h4>
+                        <h4 class="font-bold text-slate-800 text-[10px] uppercase tracking-tighter">EV Tool</h4>
                     </a>
-                    <a href="/cagr/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-pretty text-pretty">
+                    <a href="/cagr/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-pretty">
                         <h4 class="font-bold text-slate-800 text-[10px] uppercase tracking-tighter">CAGR Tool</h4>
                     </a>
-                    <a href="/xirr/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-pretty text-pretty text-pretty text-pretty">
+                    <a href="/xirr/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-pretty">
                         <h4 class="font-bold text-slate-800 text-[10px] uppercase tracking-tighter">XIRR Tool</h4>
                     </a>
                 </div>
@@ -537,6 +560,10 @@
     </main>
 
     <div id="footer"></div>
+
+    <!-- SHARED INFRASTRUCTURE SCRIPT INJECTIONS -->
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
 
     <script>
         // NAVBAR & FOOTER FETCH
@@ -634,7 +661,7 @@
             elements.totalInvestedMobile.textContent = formatIndian(pvCashFlows);
             elements.wealthGainedMobile.textContent = formatIndian(pvTerminalValue);
 
-            // Bar visualization - FIXED JS SAFETY
+            // Bar visualization
             const cfPercent = totalFairValue > 0 ? (pvCashFlows / totalFairValue) * 100 : 0;
             const tvPercent = totalFairValue > 0 ? (pvTerminalValue / totalFairValue) * 100 : 0;
             elements.investedBar.style.width = `${cfPercent}%`;
