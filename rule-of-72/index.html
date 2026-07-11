@@ -156,7 +156,6 @@
         body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
         .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-        input[type="range"] { accent-color: #2563eb; height: 6px; }
         .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
         .nav-link.active { color: #2563eb; font-weight: 600; }
         .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
@@ -208,6 +207,11 @@
     </header>
 
     <main class="max-w-6xl mx-auto px-4">
+        <div class="mb-6 flex flex-wrap gap-2 justify-center md:justify-start">
+            <button onclick="applyExample()" class="border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold uppercase tracking-tighter text-slate-600 hover:bg-slate-50 transition-all">Apply Example</button>
+            <button onclick="resetCalculator()" class="border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold uppercase tracking-tighter text-red-500 hover:bg-slate-50 transition-all">Reset All</button>
+        </div>
+
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 text-pretty">
             <!-- Left Side: Inputs -->
             <div class="lg:col-span-5 space-y-6">
@@ -322,13 +326,32 @@
             </div>
         </div>
 
-        <!-- Knowledge Section -->
+        <!-- content: SEO Knowledge Sections -->
         <div class="space-y-12 mb-12 text-pretty">
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6">What is the Rule of 72?</h2>
                 <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4 text-pretty">
                     <p>The Rule of 72 is a simple, standard mathematical shortcut used to estimate the number of years required to double the invested money at a given fixed annual rate of return. It is a favorite tool for investors to quickly grasp the power of <a href="/compound-interest/" class="text-blue-600 underline font-bold">Compound Interest</a> without needing complex software.</p>
                     <p>By dividing 72 by the annual interest rate, investors can get a rough estimate of how long it will take for their initial investment to duplicate in value. For example, if your <a href="/sip/" class="text-blue-600 underline font-bold">SIP investment</a> earns 12%, your money doubles in approximately 6 years.</p>
+                </div>
+            </section>
+
+            <!-- EASY-TO-READ HUMAN-TONE SEO KNOWLEDGE BASE BLOCK -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">How Compounding Interacts with Time to Define Your Wealth Multiplication Milestones</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6">
+                    <p>
+                        When analyzing your investment map, looking strictly at yearly growth metrics can feel abstract. Knowing your portfolio grew by 10% this year is nice, but it doesn't give you a clear mental picture of your long-term roadmap. The Rule of 72 cuts through this mathematical blur by shifting the focus entirely to a highly practical question: How long before your hard-earned savings actually double in size?
+                    </p>
+                    <p class="font-bold text-slate-900">Why measuring your financial timeline through multiplication intervals matters:</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>Small Rate Shifts Trigger Massive Time Gaps:</strong> Because compound growth curves operate exponentially rather than linearly, tiny adjustments in your yield percentage produce giant changes in your wealth timeline. Securing a 12% return over a basic 6% bank option doesn't just mean a bit more money; it slashes your asset multiplication window in half—from 12 long years down to just 6.</li>
+                        <li><strong>Inflation is the Silent Value Eraser:</strong> Calculating nominal growth patterns can build false confidence if you leave out cost-of-living adjustments. While your paper currency count might double over a fixed timeframe, local inflation continues to erode what those rupees can actually purchase. True financial safety requires running your calculations using net, inflation-adjusted numbers.</li>
+                        <li><strong>A Core Framework for Long-Term Audits:</strong> Evaluating assets through doubling cycles lets you audit commercial financial products with extreme speed. If a long-term fixed lock-in plan claims it will take 11 years to double your principal, you instantly know the underlying yield is running around a modest 6.5%, allowing you to make quick, objective asset decisions.</li>
+                    </ul>
+                    <p>
+                        Visualizing your capital as an active engine built around clear expansion blocks shifts your mindset from passive saving to strategic growth planning. Ensuring your timeline coordinates with high-efficiency assets prevents your lifestyle from trailing behind broader macro expansions. Run your unique yield assumptions through our rapid projection module above to check your replication velocity today.
+                    </p>
                 </div>
             </section>
 
@@ -417,14 +440,17 @@
             <!-- FAQ Section -->
             <section class="max-w-4xl mx-auto py-10" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
-                <div class="space-y-4 text-pretty text-pretty text-pretty text-pretty text-pretty">
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">What is the Rule of 72?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">The Rule of 72 is a simplified way to estimate how many years it will take to double your investment at a fixed annual rate of interest.</div></details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm">How to calculate doubling time with inflation?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty text-pretty">To calculate the real doubling time, subtract the inflation rate from your return rate, then divide 72 by the resulting real return rate.</div></details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm">Is Rule of 72 accurate?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">It is a highly accurate approximation for typical interest rates between 5% and 15%. For extremely high or low rates, its precision decreases slightly.</div></details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm">Does Rule of 72 work for SIP?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">No. The Rule of 72 applies only to a single one-time (lumpsum) investment. For periodic investments, you should use an SIP calculator.</div></details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm">What return doubles money in 10 years?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">According to the rule, you need an annual return of approximately 7.2% to double your money in exactly 10 years (72 / 10 = 7.2).</div></details>
+                <div class="space-y-4 space-y-4 text-pretty text-pretty text-pretty text-pretty">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">What is the Rule of 72?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t">The Rule of 72 is a simplified way to estimate how many years it will take to double your investment at a fixed annual rate of interest.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm">How to calculate doubling time with inflation?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t text-pretty text-pretty">To calculate the real doubling time, subtract the inflation rate from your return rate, then divide 72 by the resulting real return rate.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm">Is Rule of 72 accurate?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t">It is a highly accurate approximation for typical interest rates between 5% and 15%. For extremely high or low rates, its precision decreases slightly.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm">Does Rule of 72 work for SIP?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t">No. The Rule of 72 applies only to a single one-time (lumpsum) investment. For periodic investments, you should use an SIP calculator.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm">What return doubles money in 10 years?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t">According to the rule, you need an annual return of approximately 7.2% to double your money in exactly 10 years (72 / 10 = 7.2).</div></details>
                 </div>
             </section>
+
+            <!-- ARTHCALCULATOR CENTRAL LINKING HUB WRAPPER -->
+            <div id="arthcalculatorLinkingHub"></div>
 
             <!-- Related Tools Section -->
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center text-pretty text-pretty">
@@ -478,6 +504,10 @@
     </main>
 
     <div id="footer"></div>
+
+    <!-- REINFORCED DYNAMIC GLOBAL INFRASTRUCTURE LINKS -->
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
 
     <script>
         const elements = {
