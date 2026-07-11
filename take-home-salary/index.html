@@ -122,7 +122,7 @@
                     </p>
                 </div>
                 <div class="hidden md:block mt-4 md:mt-0">
-                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full border border-blue-100 uppercase tracking-wide shadow-sm">Budget 2025 Ready</span>
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full border border-blue-100 uppercase tracking-wide shadow-sm">Budget Ready</span>
                 </div>
             </div>
         </div>
@@ -132,7 +132,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
             <!-- Inputs -->
             <div class="lg:col-span-6 space-y-6">
-                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow text-pretty">
                     <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
                         <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                         Salary Configuration
@@ -173,7 +173,7 @@
                     </div>
 
                     <div class="mb-8">
-                        <label class="text-sm font-medium text-slate-600 block mb-3">Tax Regime (FY 2025-26)</label>
+                        <label class="text-sm font-medium text-slate-600 block mb-3">Tax Regime (FY 2026-27)</label>
                         <div class="flex p-1 bg-slate-100 rounded-xl">
                             <button onclick="setRegime('new')" id="tabNew" class="tab-btn flex-1 py-2 text-xs font-bold rounded-lg active">New Regime</button>
                             <button onclick="setRegime('old')" id="tabOld" class="tab-btn flex-1 py-2 text-xs font-bold rounded-lg text-slate-500">Old Regime</button>
@@ -197,17 +197,17 @@
 
             <!-- Results -->
             <div class="lg:col-span-6 space-y-6">
-                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
                     <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2 text-center md:text-left">Monthly In-Hand Salary</h2>
                     <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 block mb-8 text-center md:text-left" id="monthlyInHandDisp">₹0</span>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                         <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1 text-pretty">Annual In-Hand Pay</p>
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Annual In-Hand Pay</p>
                             <p class="font-bold text-slate-800 text-lg" id="annualInHandDisp">₹0</p>
                         </div>
                         <div class="p-4 bg-red-50 rounded-xl border border-red-100">
-                            <p class="text-[10px] text-red-600 uppercase font-bold mb-1 text-pretty">Monthly Deductions (incl. Tax)</p>
+                            <p class="text-[10px] text-red-600 uppercase font-bold mb-1">Monthly Deductions (incl. Tax)</p>
                             <p class="font-bold text-red-700 text-lg" id="totalDeductionsDisp">₹0</p>
                         </div>
                     </div>
@@ -243,12 +243,12 @@
                         </div>
                     </div>
 
-                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-3 text-pretty">
-                        <h4 class="text-slate-400 font-bold text-[10px] uppercase tracking-widest text-pretty">Other Mandatory Contributions</h4>
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-3">
+                        <h4 class="text-slate-400 font-bold text-[10px] uppercase tracking-widest">Other Mandatory Contributions</h4>
                         <div class="space-y-2 text-xs font-medium text-slate-600">
                             <div class="flex justify-between"><span>Employee Provident Fund (EPF):</span> <span id="pfVal" class="text-red-500">- ₹0</span></div>
                             <div class="flex justify-between"><span>Gratuity Component (in CTC):</span> <span id="gratuityVal" class="text-red-500">- ₹0</span></div>
-                            <div class="flex justify-between text-pretty"><span>Professional Tax:</span> <span id="ptVal" class="text-red-500">- ₹0</span></div>
+                            <div class="flex justify-between"><span>Professional Tax:</span> <span id="ptVal" class="text-red-500">- ₹0</span></div>
                         </div>
                     </div>
                 </div>
@@ -264,14 +264,33 @@
                 </div>
             </section>
 
+            <!-- EASY-TO-READ HUMAN-TONE SEO KNOWLEDGE BASE SECTION -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Demystifying Your Paycheck: Why Your In-Hand Cash Differs From Your Gross Offer</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6">
+                    <p>
+                        When signing a fresh employment agreement or evaluating a new career transition offer, looking strictly at the annual headline package can lead to major budget surprises later. It is incredibly common to assume that dividing your flat package by twelve represents your monthly spending capacity. However, Indian payroll frameworks incorporate deep layers of hidden statutory allocations that separate headline figures from real spending cash.
+                    </p>
+                    <p class="font-bold text-slate-900">Key variables that alter your net monthly cash availability:</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>The CTC Framework Contains Non-Cash Elements:</strong> Your absolute package figure represents the macro cost an enterprise carries to keep you on the team. This structural calculation blends your actual money components with corporate liabilities you do not get to hold immediately, like the company's matched pension deposits and future terminal gratuity pools.</li>
+                        <li><strong>Provident Fund Limits Your Instant Liquid Resource:</strong> A standard slice of your core compensation goes directly into retirement accounts. While these matched contributions build a highly secure, compound financial safety net for your long-term plans, they function as an immediate cash deduction from your liquid balance sheet today.</li>
+                        <li><strong>Tax Regime Slabs Define the In-Hand Cut:</strong> Sourcing your exact net paycheck means running structural criteria through specific regime configurations. Under standard slabs, tracking options like automated standard deduction thresholds directly alters how much your employer holds back as automated income tax withholdings.</li>
+                    </ul>
+                    <p>
+                        Navigating payroll adjustments backward protects your ongoing personal budget planning. Understanding the clear margins between non-cash company obligations and real bank deposits allows you to chart realistic lifestyle spending lanes or schedule precise investment targets confidently. Run your total baseline package metrics through our calculation matrix to see your exact pocket allocation instantly.
+                    </p>
+                </div>
+            </section>
+
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
-                <h2 class="text-2xl font-bold text-slate-900 mb-6 text-pretty">Difference Between CTC and In-Hand Salary</h2>
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Difference Between CTC and In-Hand Salary</h2>
                 <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
                     <p><strong>CTC (Cost to Company)</strong> includes everything the employer pays for you, including components you don't see in cash, such as the employer's PF contribution, <strong>Gratuity</strong>, and insurance premiums. <strong>In-hand salary</strong>, on the other hand, is your Gross Pay minus statutory deductions like Income Tax (TDS), Employee PF, and Professional Tax.</p>
                 </div>
             </section>
 
-            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6">Common Salary Deductions in India</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
                     <div class="p-6 bg-slate-50 border border-slate-100 rounded-2xl">
@@ -280,11 +299,11 @@
                     </div>
                     <div class="p-6 bg-slate-50 border border-slate-100 rounded-2xl">
                         <h4 class="font-bold text-emerald-600 mb-2 uppercase text-xs">Gratuity Portion</h4>
-                        <p class="text-slate-600 leading-relaxed text-pretty">A standard <strong>4.81% of Basic Salary</strong> is often listed in the CTC. This is calculated using the 15/26 day rule under the Gratuity Act.</p>
+                        <p class="text-slate-600 leading-relaxed">A standard <strong>4.81% of Basic Salary</strong> is often listed in the CTC. This is calculated using the 15/26 day rule under the Gratuity Act.</p>
                     </div>
                     <div class="p-6 bg-slate-50 border border-slate-100 rounded-2xl">
                         <h4 class="font-bold text-orange-600 mb-2 uppercase text-xs">Income Tax (TDS)</h4>
-                        <p class="text-slate-600 leading-relaxed text-pretty">Calculated based on the slab rates of your chosen regime (Old/New). Use our <a href="/income-tax" class="text-blue-600 underline">Income Tax Calculator</a> for a deep dive.</p>
+                        <p class="text-slate-600 leading-relaxed">Calculated based on the slab rates of your chosen regime (Old/New). Use our <a href="/income-tax" class="text-blue-600 underline">Income Tax Calculator</a> for a deep dive.</p>
                     </div>
                     <div class="p-6 bg-slate-50 border border-slate-100 rounded-2xl">
                         <h4 class="font-bold text-purple-600 mb-2 uppercase text-xs">Professional Tax</h4>
@@ -303,9 +322,12 @@
                 </div>
             </section>
 
+            <!-- ARTHCALCULATOR CENTRAL LINKING HUB WRAPPER -->
+            <div id="arthcalculatorLinkingHub"></div>
+
             <!-- Related Tools Section -->
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center text-pretty">
-                <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider md:text-left text-pretty">Related Financial Tools</h2>
+                <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider md:text-left">Related Financial Tools</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
                     <a href="/income-tax" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center">
                         <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
@@ -343,13 +365,17 @@
             <!-- Disclaimer -->
             <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-pretty text-pretty">
                 <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide">Disclaimer</p>
-                Calculations are based on general income tax rules for FY 2025-26. Standard Gratuity accrual (4.81%) is assumed based on common Indian corporate practices. Always refer to your company HR's Annexure-A for final take-home figures.
+                Calculations are based on general income tax rules for FY 2026-27. Standard Gratuity accrual (4.81%) is assumed based on common Indian corporate practices. Always refer to your company HR's Annexure-A for final take-home figures.
                 <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
             </div>
         </div>
     </main>
 
     <div id="footer"></div>
+
+    <!-- REINFORCED DYNAMIC GLOBAL INFRASTRUCTURE LINKS -->
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
 
     <script>
         let currentRegime = 'new';
@@ -431,7 +457,7 @@
 
             const totalMonthlyDeduc = monthlyPF + monthlyTax + monthlyGratuity + pt + other;
             const monthlyInHand = Math.max(0, monthlyGross - totalMonthlyDeduc);
-            const effTaxRate = (annualTax / ctc) * 100;
+            const effTaxRate = ctc > 0 ? (annualTax / ctc) * 100 : 0;
 
             // Update UI
             document.getElementById('monthlyInHandDisp').textContent = formatInr(monthlyInHand);
@@ -450,7 +476,7 @@
             document.getElementById('takeHomeLabel').textContent = "In-Hand: " + formatCompact(monthlyInHand);
             document.getElementById('deducLabel').textContent = "Deductions: " + formatCompact(totalMonthlyDeduc);
 
-            const takeHomePerc = (monthlyInHand / monthlyGross) * 100 || 0;
+            const takeHomePerc = monthlyGross > 0 ? (monthlyInHand / monthlyGross) * 100 : 0;
             document.getElementById('takeHomeBar').style.width = takeHomePerc + "%";
             document.getElementById('deducBar').style.width = (100 - takeHomePerc) + "%";
         }
