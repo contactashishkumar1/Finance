@@ -90,8 +90,9 @@
         .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
         .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
         .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         input[type="range"] { accent-color: #0f172a; height: 6px; }
-        .formula-box { background: #f1f5f9; padding: 1.25rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; color: #1e293b; }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; color: #1e293b; }
         @media print { .no-print { display: none; } }
     </style>
 </head>
@@ -129,8 +130,12 @@
     </header>
 
     <main class="max-w-6xl mx-auto px-4">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 text-pretty">
-            
+        <div class="mb-6 flex flex-wrap gap-2 justify-center md:justify-start">
+            <button onclick="applyExample()" class="border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold uppercase tracking-tighter text-slate-600 hover:bg-slate-50 transition-all">Apply Example</button>
+            <button onclick="resetCalculator()" class="border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold uppercase tracking-tighter text-red-500 hover:bg-slate-50 transition-all">Reset All</button>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 gap-y-6 text-pretty">
             <!-- Left Side: Inputs -->
             <div class="lg:col-span-5 space-y-6">
                 <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow text-pretty">
@@ -191,7 +196,7 @@
 
             <!-- Right Side: Results Dashboard -->
             <div class="lg:col-span-7 space-y-6">
-                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
                     <h2 class="text-slate-800 font-bold text-lg mb-6">Survival Comparison Projections</h2>
                     
                     <div class="p-6 bg-slate-900 rounded-2xl text-center mb-10 shadow-xl shadow-slate-200">
@@ -213,7 +218,7 @@
                         </div>
                     </div>
 
-                    <div class="mb-10 text-pretty text-pretty">
+                    <div class="mb-10 text-pretty">
                         <div class="flex justify-between text-[11px] mb-3">
                             <span class="text-emerald-600 font-bold uppercase">Scenario A (Bull Start)</span>
                             <span class="text-rose-600 font-bold uppercase">Scenario B (Bear Start)</span>
@@ -261,10 +266,10 @@
                     </div>
                 </div>
 
-                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
                     <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">The Simulation Math</h3>
                     <div class="formula-box text-slate-800 text-center mb-6 text-sm text-pretty">
-                        $Bal_{t} = (Bal_{t-1} - Withdrawal_{t}) \times (1 + r_{t})$
+                        $$Bal_{t} = (Bal_{t-1} - Withdrawal_{t}) \times (1 + r_{t})$$
                     </div>
                     <div class="text-sm text-slate-600 space-y-3">
                         <p><strong>Withdrawal:</strong> Your starting monthly pension, adjusted by the inflation rate every 12 months.</p>
@@ -281,6 +286,25 @@
                 <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6">
                     <p>In your working years (accumulation phase), the order of returns doesn't matter much as long as the average is high. However, once you enter the <strong>decumulation phase</strong> (retirement), the sequence is everything. If the market crashes while you are withdrawing money, you are selling more units of your mutual funds or stocks to meet the same rupee requirements.</p>
                     <p>This creates a downward spiral where the remaining principal doesn't have enough "mass" left to benefit from the eventual market recovery. This is why a 10% average return doesn't guarantee a 25-year survival. Before finalizing your goal, check our <a href="/child-education-planner/" class="text-slate-900 underline font-bold">Child Education Projector</a> to ensure your kids' goals don't jeopardize your retirement corpus.</p>
+                </div>
+            </section>
+
+            <!-- EASY-TO-READ HUMAN-TONE SEO KNOWLEDGE BASE SECTION -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Why Bad Market Timing Early in Retirement Can Quietly Destroy Your Nest Egg</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6">
+                    <p>
+                        When we review retirement simulations, we usually look at long-term historical charts and feel safe if the average yearly return sits at a comfortable 10% or 12%. But average returns hide a dangerous math trap. If a massive recession hits the stock market right as you start making monthly regular withdrawals, your retirement plan faces a critical vulnerability called Sequence of Returns Risk.
+                    </p>
+                    <p class="font-bold text-slate-900">Why the exact order of market returns determines your portfolio's survival:</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>Early Crashes Lock in Permanent Losses:</strong> If the stock market slides during your first two years of retirement, your portfolio base shrinks. Because you are simultaneously withdrawing money to fund your monthly pension, you are forced to liquidate a massive count of mutual fund units at rock-bottom prices.</li>
+                        <li><strong>A Shrunk Principal Cannot Recover:</strong> When the market eventually turns around and launches into a strong bull run, your remaining portfolio won't have enough asset "mass" left to ride the recovery upward. Even if the long-term mathematical average looks completely healthy, your nest egg can hit zero decades early.</li>
+                        <li><strong>The Contrast is Shocking:</strong> Two retirees can start with the exact same initial corpus, take out the exact same inflation-adjusted pension, and experience identical average market returns over thirty years. If one starts during a bull market and the other during a bear market, one ends up incredibly wealthy while the other runs out of cash entirely.</li>
+                    </ul>
+                    <p>
+                        Protecting your lifetime savings from bad timing requires building reliable financial speed bumps. Incorporating conservative dividend cash lines, defensive debt layers, or implementing flexible guardrail withdrawal frameworks ensures your core growth positions are never harvested during sudden corrections. Run your active retirement numbers through our stress simulator to check your long-term longevity score.
+                    </p>
                 </div>
             </section>
 
@@ -326,6 +350,9 @@
                 </div>
             </section>
 
+            <!-- ARTHCALCULATOR CENTRAL LINKING INFRASTRUCTURE -->
+            <div id="arthcalculatorLinkingHub"></div>
+
             <!-- Strategic Linking -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <a href="/child-education-planner/" class="block p-5 bg-white border border-slate-200 rounded-2xl card-shadow hover:border-slate-900 transition-all group">
@@ -343,6 +370,10 @@
     </main>
 
 <div id="footer"></div>
+
+<!-- GLOBAL LINKING HUB INFRASTRUCTURE ATTACHMENTS -->
+<script src="/js/related-tools.js" defer></script>
+<script src="/js/search.js" defer></script>
 
 <script>
     const elements = {
@@ -381,13 +412,10 @@
         const simTotalYears = parseInt(elements.simYears.value) || 25;
 
         // Sequence Generation
-        // Scenario A: Bull Start (High early, lower later)
-        // Scenario B: Bear Start (Crashes in Year 1-2, recovery later)
         const returnsA = [];
         const returnsB = [];
         
         for(let i=0; i < simTotalYears; i++) {
-            // Logic to keep overall average roughly same but sequence different
             if(i < 3) {
                 returnsA.push(avgReturnRate + 0.05); // High start
                 returnsB.push(i === 0 ? -0.15 : -0.10); // Massive early crash
@@ -484,6 +512,17 @@
         (bFailed ? `To prevent Year ${yearSurvivedB} failure, reduce monthly withdrawal to <strong>${formatINR(initialCorpus * 0.035 / 12)}</strong>.` : `Your low withdrawal rate acts as a buffer against market shocks.`);
     }
 
+    function formatIndian(val, withDenom = true) {
+        const absFormatter = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 });
+        const absoluteValue = absFormatter.format(val);
+        let indianDenom = "";
+        if (withDenom) {
+            if (val >= 10000000) indianDenom = ` (${(val / 10000000).toFixed(2)} Cr)`;
+            else if (val >= 100000) indianDenom = ` (${(val / 100000).toFixed(2)} L)`;
+        }
+        return "₹" + absoluteValue + indianDenom;
+    }
+
     function setupSync(input, range) {
         input.addEventListener('input', () => { range.value = input.value; calculate(); });
         range.addEventListener('input', () => { input.value = range.value; calculate(); });
@@ -504,6 +543,28 @@
 
         calculate();
     });
+
+    function resetCalculator() {
+        elements.corpusInput.value = 50000000;
+        elements.corpusRange.value = 50000000;
+        elements.pensionInput.value = 150000;
+        elements.pensionRange.value = 150000;
+        elements.returnInput.value = 10;
+        elements.inflationInput.value = 6;
+        elements.simYears.value = "25";
+        calculate();
+    }
+
+    function applyExample() {
+        elements.corpusInput.value = 40000000;
+        elements.corpusRange.value = 40000000;
+        elements.pensionInput.value = 160000;
+        elements.pensionRange.value = 160000;
+        elements.returnInput.value = 11;
+        elements.inflationInput.value = 6.5;
+        elements.simYears.value = "30";
+        calculate();
+    }
 </script>
 </body>
 </html>
