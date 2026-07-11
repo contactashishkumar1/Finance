@@ -75,6 +75,7 @@
         details summary { list-style: none; }
         details summary::-webkit-details-marker { display: none; }
         details[open] summary svg { transform: rotate(180deg); }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
         input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
     </style>
 </head>
@@ -115,12 +116,12 @@
     <main class="max-w-6xl mx-auto px-4">
         <!-- Quick Action Micro-Strip -->
         <div class="mb-6 flex flex-wrap gap-2 justify-center md:justify-start">
-            <button onclick="applyExample()" class="border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold uppercase tracking-tighter text-slate-600">Apply Example</button>
-            <button onclick="resetCalculator()" class="border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold uppercase tracking-tighter text-red-500">Reset All</button>
+            <button onclick="applyExample()" class="border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold uppercase tracking-tighter text-slate-600 hover:bg-slate-50 transition-all">Apply Example</button>
+            <button onclick="resetCalculator()" class="border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold uppercase tracking-tighter text-red-500 hover:bg-slate-50 transition-all">Reset All</button>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 text-pretty">
-            <!-- Left Side: Inputs -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 gap-y-6 text-pretty">
+            <!-- Inputs -->
             <div class="lg:col-span-5 space-y-6">
                 <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
                     <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
@@ -238,7 +239,26 @@
                 </div>
             </section>
 
-            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+            <!-- SIMPLE FRIENDLY HUMAN TONE SEO KNOWLEDGE BASE BLOCK -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">How Your Business Margins Protect You and How to Price Products Correctly</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6">
+                    <p>
+                        When auditing a business's health, it is incredibly easy to get dazzled by massive top-line sales milestones. Seeing high transactional traffic numbers on your storefront or ledger makes it look like things are thriving. But high revenue can be highly deceptive. Sales tell you how busy your business operations are, but your profit margin tells you how resilient your business actually is when invoices come due.
+                    </p>
+                    <p class="font-bold text-slate-900">Why separating gross margins from net operational margins keeps your venture alive:</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>Gross Margins Track Production Core:</strong> Your gross percentage measures the clean gap between a product's price tag and its direct cost of materials or wholesale procurement. If this buffer is too narrow, your business won't generate enough momentum to survive, let alone fund your secondary business overheads.</li>
+                        <li><strong>Net Margins Catch the Sneaky Overhead Bleed:</strong> A business can maintain an amazing gross score but still lose money at the end of the quarter. Net margin factors in the true operating expenses—your office rent, staff salary cycles, shipping logistics, software bills, and marketing spend. It shows what you actually keep.</li>
+                        <li><strong>Markup and Margin Are Not the Same:</strong> Getting these two formulas mixed up is a classic trap that hurts new owners. If an item costs ₹100 and you price it at ₹150, you added a 50% markup on cost. However, your true profit margin on that transaction is actually 33.3%. Confusing the two can cause you to underprice your inventory.</li>
+                    </ul>
+                    <p>
+                        Setting sustainable price tiers is the absolute cornerstone of running a durable, stress-free venture. Ensuring that every unit sold leaves behind a healthy cash buffer allows you to absorb unexpected supply disruptions or seasonal low windows smoothly. Balance your unit cost price metrics against your real overhead expenses above to map out your genuine business safety baseline today.
+                    </p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-tight">Difference Between Margin and Markup</h2>
                 <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6">
                     <p>Many entrepreneurs confuse Margin with Markup. While both involve the same profit amount, the base of calculation is different:</p>
@@ -295,9 +315,12 @@
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is a good profit margin?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">It depends on the industry. Retail might operate on 10-15% margins, while Software (SaaS) or Luxury goods can exceed 50-70%. Generally, 20% is considered healthy.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">How do I calculate margin from markup?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Use the formula: Margin = Markup / (1 + Markup). For example, a 100% markup (doubling the price) results in a 50% profit margin.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Is 10% margin good for a startup?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty">A 10% gross margin is usually low for a startup because it leaves very little room to cover operating expenses and marketing. Aim for at least 25% gross margin.</div></details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Why did my net margin drop?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty">Common reasons include rising raw material costs, high customer acquisition costs (marketing), or increasing utility and staff expenses.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">Why did my net margin drop?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty">Common reasons include rising raw material costs, high customer acquisition costs (marketing), or increasing utility and staff expenses.</div></details>
                 </div>
             </section>
+
+            <!-- ARTHCALCULATOR CENTRAL LINKING HUB WRAPPER -->
+            <div id="arthcalculatorLinkingHub"></div>
 
             <!-- Related Tools Section -->
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center text-pretty">
@@ -323,7 +346,7 @@
                     </a>
                     <a href="/loan-vs-investment-calculator/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center text-pretty">
                         <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors text-pretty">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         </div>
                         <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">Debt vs Invest</h4>
                     </a>
@@ -355,11 +378,14 @@
             <a href="/roi-calculator/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all"><h4 class="text-xs font-bold text-slate-800">ROI Tool</h4></a>
             <a href="/break-even-calculator/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all text-pretty"><h4 class="text-xs font-bold text-slate-800">Break Even</h4></a>
             <a href="/cagr/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all text-pretty text-pretty"><h4 class="text-xs font-bold text-slate-800">CAGR Tool</h4></a>
-            <a href="/intraday-profit-calculator/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all text-pretty text-pretty"><h4 class="text-xs font-bold text-slate-800">Intraday Profit</h4></a>
+            <a href="/intraday-profit-calculator/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all text-pretty text-pretty"><h4 class="text-xs font-bold text-slate-800 text-pretty">Intraday Profit</h4></a>
         </div>
     </section>
 
     <div id="footer"></div>
+
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
 
     <script>
         const elements = {
@@ -393,52 +419,41 @@
         }
 
         function calculate() {
-            // Input Validation: treated as numbers, default to 0
             const cost = Math.max(0, parseFloat(elements.costInp.value) || 0);
             const sell = Math.max(0, parseFloat(elements.sellInp.value) || 0);
             const units = Math.max(0, parseFloat(elements.unitsInp.value) || 0);
             const expenses = Math.max(0, parseFloat(elements.expenseInp.value) || 0);
 
-            // Per unit metrics
             const profitPerUnit = sell - cost;
             
-            // Zero division protection
             const marginPerc = sell > 0 ? (profitPerUnit / sell) * 100 : 0;
             const markupPerc = cost > 0 ? (profitPerUnit / cost) * 100 : 0;
             
-            // Total volume metrics
             const totalRevenue = sell * units;
             const totalGrossProfit = profitPerUnit * units;
             const totalNetProfit = totalGrossProfit - expenses;
             const netMarginPerc = totalRevenue > 0 ? (totalNetProfit / totalRevenue) * 100 : 0;
 
-            // UI Display - Standardizing to 2 decimal places
             elements.marginDisp.textContent = marginPerc.toFixed(2) + "%";
             elements.profitPerUnitDisp.textContent = formatInr(profitPerUnit);
             elements.markupDisp.textContent = markupPerc.toFixed(2) + "%";
             elements.totalProfitDisp.textContent = formatInr(totalGrossProfit);
-            
-            // Net Margin displays N/A if revenue is zero
             elements.netMarginDisp.textContent = totalRevenue > 0 ? netMarginPerc.toFixed(2) + "%" : "0.00%";
 
-            // Progress Bar Logic (NaN and Bounds Protection)
             let barCost = 0;
             let barMargin = 0;
 
             if (sell > 0) {
-                // If making a profit
                 if (sell >= cost) {
                     barCost = (cost / sell) * 100;
                     barMargin = 100 - barCost;
                     elements.lossBar.className = "h-full bg-emerald-500 transition-all duration-700";
                 } else {
-                    // If making a loss
                     barCost = 100;
-                    barMargin = 0; // Negative margin logic usually doesn't show well on standard bars
+                    barMargin = 0;
                     elements.lossBar.className = "h-full bg-red-500 transition-all duration-700";
                 }
             } else if (cost > 0) {
-                // Cost exists but selling price is 0
                 barCost = 100;
                 barMargin = 0;
             }
@@ -446,14 +461,11 @@
             elements.retainedBar.style.width = barCost + "%";
             elements.lossBar.style.width = barMargin + "%";
             
-            // Update labels
             elements.retainedLabel.textContent = `Cost: ${cost > sell ? ( (cost/sell)*100 ).toFixed(1) : barCost.toFixed(1)}%`;
             elements.lossLabel.textContent = `Margin: ${marginPerc.toFixed(1)}%`;
 
-            // Quality Score Logic
             updateQuality(marginPerc, profitPerUnit, netMarginPerc);
 
-            // Insights Content
             let insightText = `<div class="space-y-1">`;
             if (profitPerUnit > 0) {
                 insightText += `<p>✅ <strong>Per Unit:</strong> You keep <strong>₹${marginPerc.toFixed(2)}</strong> for every ₹100 of revenue.</p>`;
@@ -549,4 +561,4 @@
         fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
     </script>
 </body>
-</html> 
+</html>
