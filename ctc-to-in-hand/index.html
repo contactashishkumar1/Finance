@@ -566,6 +566,16 @@ fetch("/footer.html")
         return tax;
     }
 
+    function applyNewRegimeSurcharge(basicTax, taxableIncome) {
+        const levels = [
+            { threshold: 20000000, rate: 0.25, previousTax: 5580000 * 1.15 },
+            { threshold: 10000000, rate: 0.15, previousTax: 2580000 * 1.10 },
+            { threshold: 5000000, rate: 0.10, previousTax: 1080000 }
+        ];
+        const level = levels.find(item => taxableIncome > item.threshold);
+        return level ? Math.min(basicTax * (1 + level.rate), level.previousTax + taxableIncome - level.threshold) : basicTax;
+    }
+
     function updateCalculations() {
         const ctc = parseFloat(elements.ctcInput.value) || 0;
         const basicPct = parseFloat(elements.basicInput.value) || 0;
@@ -598,11 +608,9 @@ fetch("/footer.html")
         if (taxMode === 'auto') {
             const taxableIncome = Math.max(0, annualGross - 75000); // Standard Deduction
             let slabTax = calculateNewRegimeSlabTax(taxableIncome);
-            // Apply Rebate Condition
-            if (taxableIncome <= 1200000) {
-                slabTax = 0;
-            }
-            annualTax = slabTax * 1.04; // Cess is applied after rebate logic
+            // Section 87A rebate and marginal relief.
+            slabTax = taxableIncome <= 1200000 ? 0 : Math.min(slabTax, taxableIncome - 1200000);
+            annualTax = applyNewRegimeSurcharge(slabTax, taxableIncome) * 1.04; // Cess is applied after relief
         } else {
             const manualRate = (parseFloat(elements.manualTaxRate.value) || 0) / 100;
             annualTax = annualGross * manualRate;

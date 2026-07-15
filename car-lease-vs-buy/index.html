@@ -477,21 +477,24 @@
         // Add PL/Loan specific fees GST impact
         const loanProcFees = (loanAmt * 0.01) * 1.18; // Est 1% fee + GST
         const totalLoanOutflow = downPay + (emi * months) + (maintenance * (months / 12)) + loanProcFees;
+        // A buyer still owns a depreciated car at the end of the comparison period.
+        const ownerResidualValue = price * (parseFloat(elements.residualPct.value) / 100);
+        const netLoanOutflow = totalLoanOutflow - ownerResidualValue;
 
         // UI Logic
-        const winnerLease = netLeaseOutflow < totalLoanOutflow;
+        const winnerLease = netLeaseOutflow < netLoanOutflow;
         elements.winnerText.textContent = winnerLease ? "Corporate Lease Wins" : "Standard Loan Wins";
         elements.winnerCard.className = winnerLease ? "bg-emerald-600 p-6 rounded-2xl text-white shadow-lg shadow-emerald-200" : "bg-blue-600 p-6 rounded-2xl text-white shadow-lg shadow-blue-200";
         
-        const winningNetMonthly = winnerLease ? (netLeaseOutflow / months) : (totalLoanOutflow / months);
+        const winningNetMonthly = winnerLease ? (netLeaseOutflow / months) : (netLoanOutflow / months);
         elements.netMonthlyCost.textContent = formatINR(winningNetMonthly);
         elements.totalTaxSaved.textContent = formatINR(totalTaxSavedLease);
         
-        const savingsGap = Math.abs(netLeaseOutflow - totalLoanOutflow);
+        const savingsGap = Math.abs(netLeaseOutflow - netLoanOutflow);
         elements.verdictDesc.textContent = `You save ${formatINR(savingsGap)} over ${months/12} years by choosing the ${winnerLease ? 'Lease' : 'Loan'} route.`;
 
         // 3. Updated Progress Bars with Internal Percentages
-        const totalPool = netLeaseOutflow + totalLoanOutflow;
+        const totalPool = netLeaseOutflow + netLoanOutflow;
         const leasePct = Math.round((netLeaseOutflow / totalPool) * 100);
         const loanPct = 100 - leasePct;
 
@@ -504,13 +507,13 @@
         const rows = [
             ["Sticker Price", formatINR(price), formatINR(price)],
             ["Total Installments", formatINR(totalLeaseRentals), formatINR(emi * months)],
-            ["Residual Value (Inc 18% GST)", formatINR(rvAmount), "₹0"],
+            ["Lease Buyback / Car Resale Value", formatINR(rvAmount), "- " + formatINR(ownerResidualValue)],
             ["Proc. Fees + GST", "Included", formatINR(loanProcFees)],
             ["Maint. & Insurance", "Included*", formatINR(maintenance * (months/12))],
             ["Tax Benefit (Shield)", "- " + formatINR(totalTaxSavedLease), "₹0"],
             ["Perquisite Tax (Cost)", formatINR(monthlyTaxOnPerk * months), "₹0"],
-            ["Net Economic Outflow", "<strong>" + formatINR(netLeaseOutflow) + "</strong>", "<strong>" + formatINR(totalLoanOutflow) + "</strong>"],
-            ["Effective Monthly Cost", formatINR(netLeaseOutflow / months), formatINR(totalLoanOutflow / months)]
+            ["Net Economic Outflow", "<strong>" + formatINR(netLeaseOutflow) + "</strong>", "<strong>" + formatINR(netLoanOutflow) + "</strong>"],
+            ["Effective Monthly Cost", formatINR(netLeaseOutflow / months), formatINR(netLoanOutflow / months)]
         ];
 
         elements.breakdownTable.innerHTML = rows.map(r => `

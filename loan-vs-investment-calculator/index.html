@@ -539,17 +539,26 @@
             let totalInterestPrepaid = 0;
             let monthsPrepaid = 0;
             const newEmi = emi + surplus;
+            let prepayPortfolio = 0;
             
-            while (balance > 0 && monthsPrepaid < n_loan) {
-                const interestMonth = balance * r_loan;
-                totalInterestPrepaid += interestMonth;
-                const principalMonth = Math.min(balance, newEmi - interestMonth);
-                balance -= principalMonth;
-                monthsPrepaid++;
+            for (let month = 1; month <= n_loan; month++) {
+                let loanPayment = 0;
+                if (balance > 0) {
+                    const interestMonth = balance * r_loan;
+                    totalInterestPrepaid += interestMonth;
+                    loanPayment = Math.min(balance + interestMonth, newEmi);
+                    balance -= (loanPayment - interestMonth);
+                    if (balance < 0.01) {
+                        balance = 0;
+                        if (!monthsPrepaid) monthsPrepaid = month;
+                    }
+                }
+                // Once the loan closes, the same monthly budget is invested to the original horizon.
+                prepayPortfolio = (prepayPortfolio + (newEmi - loanPayment)) * (1 + r_inv);
             }
             
             const interestSaved = Math.max(0, totalInterestBase - totalInterestPrepaid);
-            const finalNewTenure = (monthsPrepaid / 12).toFixed(1);
+            const finalNewTenure = ((monthsPrepaid || n_loan) / 12).toFixed(1);
 
             // Investment Calculation (SIP)
             let fv_inv;
@@ -562,13 +571,13 @@
             const netGrowth = fv_inv - totalInvested;
 
             // Decision Logic
-            const diff = Math.abs(fv_inv - interestSaved);
-            if (fv_inv > interestSaved) {
+            const diff = Math.abs(fv_inv - prepayPortfolio);
+            if (fv_inv > prepayPortfolio) {
                 elements.verdictTitle.textContent = "Investment Wins";
-                elements.verdictDesc.textContent = `Investing surplus creates ${formatINR(diff)} more net wealth compared to loan savings.`;
+                elements.verdictDesc.textContent = `Investing surplus creates ${formatINR(diff)} more wealth at the common end date.`;
             } else {
                 elements.verdictTitle.textContent = "Prepay Loan Wins";
-                elements.verdictDesc.textContent = `Prepaying your loan saves ${formatINR(diff)} more in interest compared to investment returns.`;
+                elements.verdictDesc.textContent = `Prepaying and investing the freed EMI creates ${formatINR(diff)} more wealth at the common end date.`;
             }
 
             // Update UI
@@ -580,22 +589,22 @@
             elements.totalInv.textContent = formatINR(totalInvested);
             elements.invReturns.textContent = formatINR(netGrowth);
 
-            const maxVal = Math.max(interestSaved, fv_inv);
-            elements.loanBar.style.width = (interestSaved / maxVal * 100) + "%";
+            const maxVal = Math.max(prepayPortfolio, fv_inv, 1);
+            elements.loanBar.style.width = (prepayPortfolio / maxVal * 100) + "%";
             elements.invBar.style.width = (fv_inv / maxVal * 100) + "%";
             
-            elements.loanLabel.textContent = `Saved: ${formatINR(interestSaved)}`;
+            elements.loanLabel.textContent = `Prepay wealth: ${formatINR(prepayPortfolio)}`;
             elements.invLabel.textContent = `Wealth: ${formatINR(fv_inv)}`;
 
-            elements.insightText.innerHTML = `By investing <strong>${formatINR(surplus)}/month</strong>, you accumulate <strong>${formatINR(fv_inv)}</strong> over ${elements.tenureInput.value} years. Prepaying the same amount saves you <strong>${formatINR(interestSaved)}</strong> in interest and closes your loan in <strong>${finalNewTenure} years</strong>. The ${fv_inv > interestSaved ? 'Investment' : 'Prepayment'} route is mathematically superior by <strong>${formatINR(diff)}</strong>.`;
+            elements.insightText.innerHTML = `Investing <strong>${formatINR(surplus)}/month</strong> builds <strong>${formatINR(fv_inv)}</strong> by the original end date. Prepayment closes the loan in <strong>${finalNewTenure} years</strong>, saves <strong>${formatINR(interestSaved)}</strong> in interest, and builds <strong>${formatINR(prepayPortfolio)}</strong> by investing the freed EMI. The ${fv_inv > prepayPortfolio ? 'Investment' : 'Prepayment'} route leads by <strong>${formatINR(diff)}</strong>.`;
 
             // Breakdown Table
             const rows = [
                 ["Benefit Type", "Guaranteed Savings", "Market Returns"],
-                ["Total Benefit", formatINR(interestSaved), formatINR(fv_inv)],
+                ["End-Date Wealth", formatINR(prepayPortfolio), formatINR(fv_inv)],
                 ["Time Impact", `Tenure → ${finalNewTenure} Yrs`, `Wealth → ${formatINR(fv_inv)}`],
                 ["Risk Profile", "Zero Risk", "Moderate/High Risk"],
-                ["Decision Result", fv_inv < interestSaved ? "Best Option" : "Secondary", fv_inv > interestSaved ? "Best Option" : "Secondary"]
+                ["Decision Result", fv_inv < prepayPortfolio ? "Best Option" : "Secondary", fv_inv > prepayPortfolio ? "Best Option" : "Secondary"]
             ];
 
             elements.breakdownBody.innerHTML = rows.map(r => `

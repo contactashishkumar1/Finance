@@ -408,13 +408,13 @@ fetch("/footer.html")
                     
                     balance += totalMonthlyCont;
                     
-                    // EPF interest is calculated on the monthly running balance
+                    // EPF interest accrues monthly but is credited only at year-end.
                     const monthlyInterest = balance * monthlyRate;
                     yearTotalInterest += monthlyInterest;
-                    balance += monthlyInterest;
                 }
 
                 totalInterestAccumulated += yearTotalInterest;
+                balance += yearTotalInterest;
 
                 tableHtml += `
                     <tr class="hover:bg-slate-50 transition-colors">

@@ -480,19 +480,24 @@
             const totalInterest = totalEmiPaid - loanAmount;
             const totalMaint = P_price * MaintRate * T_years;
             const futurePropValue = P_price * Math.pow(1 + Appr, T_years);
-            
-            const wealthBuying = futurePropValue - totalInterest - totalMaint - DP;
 
-            // --- RENT SCENARIO ---
+            // --- EQUIVALENT-CASH-FLOW COMPARISON ---
+            // Both paths receive the same monthly housing budget. Any lower cost is invested.
+            const monthlyReturn = I_return / 12;
+            const monthlyBuyCost = emi + (P_price * MaintRate / 12);
             let totalRentPaid = 0;
             let currentRent = R_start;
-            for(let i=0; i < T_years; i++) {
-                totalRentPaid += (currentRent * 12);
-                currentRent *= (1 + R_inc);
+            let renterPortfolio = DP;
+            let buyerPortfolio = 0;
+            for (let m = 1; m <= n; m++) {
+                if (m > 1 && (m - 1) % 12 === 0) currentRent *= (1 + R_inc);
+                totalRentPaid += currentRent;
+                renterPortfolio = (renterPortfolio + Math.max(0, monthlyBuyCost - currentRent)) * (1 + monthlyReturn);
+                buyerPortfolio = (buyerPortfolio + Math.max(0, currentRent - monthlyBuyCost)) * (1 + monthlyReturn);
             }
-
-            const investFv = DP * Math.pow(1 + I_return, T_years);
-            const wealthRenting = investFv - totalRentPaid;
+            const investFv = renterPortfolio;
+            const wealthBuying = futurePropValue + buyerPortfolio;
+            const wealthRenting = renterPortfolio;
 
             // --- DISPLAY RESULTS ---
             elements.buyWealthDisp.textContent = formatInr(wealthBuying);

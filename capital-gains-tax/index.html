@@ -635,13 +635,10 @@
             else if (assetType === 'debt') isLtcg = false; 
             else isLtcg = diffDays >= (2 * 365); 
 
-            if (assetType === 'other' && isLtcg) {
-                elements.indexationContainer.classList.remove('hidden');
-                elements.indexationContainer.classList.add('flex');
-            } else {
-                elements.indexationContainer.classList.add('hidden');
-                elements.indexationToggle.checked = false;
-            }
+            // A generic "other asset" input cannot safely apply indexation: eligibility
+            // depends on the asset, taxpayer residency and acquisition date.
+            elements.indexationContainer.classList.add('hidden');
+            elements.indexationToggle.checked = false;
 
             const grossGain = sellVal - buyVal - charges;
             
@@ -679,17 +676,8 @@
                 taxCategoryLabel = "Taxed as Income (Slab)";
             } else {
                 if (isLtcg) {
-                    if (useIndexation) {
-                        const preciseYears = diffDays / 365.25;
-                        const indexedCost = buyVal * Math.pow(1.05, preciseYears);
-                        taxableGain = Math.max(0, sellVal - indexedCost - charges);
-                        baseTax = taxableGain * 0.125;
-                        indexationMsg = "<p class='text-[10px] opacity-70 mt-1 italic'>* Indexation uses estimated 5% inflation factor for illustration.</p>";
-                        taxCategoryLabel = "LTCG Indexed (12.5%)";
-                    } else {
-                        baseTax = grossGain * 0.125;
-                        taxCategoryLabel = "LTCG (12.5%)";
-                    }
+                    baseTax = grossGain * 0.125;
+                    taxCategoryLabel = "LTCG (12.5%; verify asset-specific relief)";
                 } else {
                     baseTax = grossGain * (slabRate / 100);
                     taxCategoryLabel = `STCG (Slab ${slabRate}%)`;

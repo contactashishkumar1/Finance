@@ -545,7 +545,9 @@
                         for (let i = 0; i < 60; i++) {
                             let mid = (low + high) / 2, tempFV = 0, curSip = mid;
                             for (let y = 1; y <= years; y++) {
-                                tempFV = (tempFV + (curSip * 12)) * Math.pow(1 + rMonthly, 12);
+                                for (let month = 0; month < 12; month++) {
+                                    tempFV = (tempFV + curSip) * (1 + rMonthly);
+                                }
                                 curSip *= (1 + stepUp);
                             }
                             if (tempFV < netGoal) low = mid; else high = mid;

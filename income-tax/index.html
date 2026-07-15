@@ -602,7 +602,8 @@ fetch("/footer.html")
             }
         }
 
-        function calculateRegimeTax(gross, isSalaried, regime, deductions = {}) {
+        function calculateRegimeTax(salaryIncome, otherIncome, isSalaried, regime, deductions = {}) {
+            const gross = salaryIncome + otherIncome;
             const stdDed = isSalaried ? (regime === 'new' ? 75000 : 50000) : 0;
             const totalOtherDeductions = regime === 'old' ? (deductions.c + deductions.d + deductions.hra + deductions.s24 + deductions.other) : 0;
             const taxableIncome = Math.max(0, gross - stdDed - totalOtherDeductions);
@@ -658,9 +659,18 @@ fetch("/footer.html")
                 }
             }
 
-            const cess = basicTax * 0.04;
-            const finalTax = basicTax + cess;
-            return { finalTax, taxableIncome, breakdown, basicTax, cess, stdDed, totalOtherDeductions };
+            const taxWithSurcharge = applySurcharge(basicTax, taxableIncome, regime);
+            const cess = taxWithSurcharge * 0.04;
+            const finalTax = taxWithSurcharge + cess;
+            return { finalTax, taxableIncome, breakdown, basicTax: taxWithSurcharge, cess, stdDed, totalOtherDeductions };
+        }
+
+        function applySurcharge(basicTax, taxableIncome, regime) {
+            const levels = regime === 'new'
+                ? [{ threshold: 20000000, rate: 0.25, previousTax: 5580000 * 1.15 }, { threshold: 10000000, rate: 0.15, previousTax: 2580000 * 1.10 }, { threshold: 5000000, rate: 0.10, previousTax: 1080000 }]
+                : [{ threshold: 50000000, rate: 0.37, previousTax: 14812500 * 1.25 }, { threshold: 20000000, rate: 0.25, previousTax: 5812500 * 1.15 }, { threshold: 10000000, rate: 0.15, previousTax: 2812500 * 1.10 }, { threshold: 5000000, rate: 0.10, previousTax: 1312500 }];
+            const level = levels.find(item => taxableIncome > item.threshold);
+            return level ? Math.min(basicTax * (1 + level.rate), level.previousTax + taxableIncome - level.threshold) : basicTax;
         }
 
         function formatCrL(val) {
@@ -675,7 +685,6 @@ fetch("/footer.html")
         function runCalculations() {
             const grossInput = parseFloat(elements.grossIncome.value) || 0;
             const otherInput = parseFloat(elements.otherIncome.value) || 0;
-            const totalGross = grossInput + otherInput;
             const isSalaried = elements.employmentType.value === 'salaried';
             const regime = elements.regimeSelect.value;
             
@@ -687,8 +696,9 @@ fetch("/footer.html")
                 other: parseFloat(elements.dedOther.value) || 0
             };
 
-            const resNew = calculateRegimeTax(totalGross, isSalaried, 'new');
-            const resOld = calculateRegimeTax(totalGross, isSalaried, 'old', deductions);
+            const totalGross = grossInput + otherInput;
+            const resNew = calculateRegimeTax(grossInput, otherInput, isSalaried, 'new');
+            const resOld = calculateRegimeTax(grossInput, otherInput, isSalaried, 'old', deductions);
 
             let activeRes;
             if (regime === 'compare') {

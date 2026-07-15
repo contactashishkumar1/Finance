@@ -413,8 +413,9 @@
             ["Annual Out-of-Pocket", formatINR(principal), formatINR(principal)],
             ["Annual Tax Savings", regime === 'old' ? formatINR(annualTaxSaved) : "₹0 (New Regime)", "₹0"],
             ["Total Matures (Gross)", formatINR(fv_A), formatINR(fv_B_gross)],
-            ["Exit Tax Payable", "₹0 (60% Free + 40% Ann.)", formatINR(tax_B)],
-            ["Net Realizable Wealth", "<strong>" + formatINR(fv_A) + "</strong>", "<strong>" + formatINR(fv_B_net) + "</strong>"]
+            ["Tax at NPS Exit", "₹0 (60% lump sum; 40% buys annuity)", formatINR(tax_B)],
+            ["Taxable Later", "Pension paid from the 40% annuity", "₹0"],
+            ["Maturity Corpus (not all liquid)", "<strong>" + formatINR(fv_A) + "</strong>", "<strong>" + formatINR(fv_B_net) + "</strong>"]
         ];
 
         elements.breakdownTable.innerHTML = rows.map(r => `
