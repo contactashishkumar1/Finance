@@ -260,7 +260,7 @@
 
                         <input type="range" id="remittanceRange" min="0" max="2500000" step="10000" value="800000" class="w-full py-2 cursor-pointer">
 
-                        <p class="text-[10px] text-slate-400 mt-1 italic text-pretty">Amount spent/invested abroad. 20% TCS applies above ₹7L.</p>
+                        <p class="text-[10px] text-slate-400 mt-1 italic text-pretty">Amount spent/invested abroad. 20% TCS applies above ₹10L.</p>
 
                     </div>
 
@@ -508,7 +508,7 @@
 
                         <p><strong>Section 44ADA:</strong> Allows specified professionals to pay tax on only 50% of turnover. Note: Standard deduction of ₹75k is <em>not</em> available for professional income, only for salary.</p>
 
-                        <p><strong>TCS (LRS):</strong> 20% Tax Collected at Source on outward remittances above ₹7 Lakhs. This is <em>not</em> an extra tax, but a prepayment that can be claimed as a refund or adjusted against liability.</p>
+                        <p><strong>TCS (LRS):</strong> 20% Tax Collected at Source on applicable outward remittances above ₹10 Lakhs. This is <em>not</em> an extra tax, but a prepayment that can be claimed as a refund or adjusted against liability.</p>
 
                     </div>
 
@@ -721,8 +721,16 @@
 
         }
 
-        return tax * 1.04; // 4% Cess
+        // Section 87A marginal relief caps tax just above ₹12 lakh.
+        const basicTax = Math.min(tax, taxable - 1200000);
+        return applyNewRegimeSurcharge(basicTax, taxable) * 1.04; // 4% Cess
 
+    }
+
+    function applyNewRegimeSurcharge(basicTax, taxableIncome) {
+        const levels = [{ threshold: 20000000, rate: 0.25, previousTax: 5580000 * 1.15 }, { threshold: 10000000, rate: 0.15, previousTax: 2580000 * 1.10 }, { threshold: 5000000, rate: 0.10, previousTax: 1080000 }];
+        const level = levels.find(item => taxableIncome > item.threshold);
+        return level ? Math.min(basicTax * (1 + level.rate), level.previousTax + taxableIncome - level.threshold) : basicTax;
     }
 
 
@@ -745,7 +753,7 @@
 
         const contractorTax = calculateSlabTax(professionalProfit);
 
-        const tcsAmount = remittance > 700000 ? (remittance - 700000) * 0.20 : 0;
+        const tcsAmount = remittance > 1000000 ? (remittance - 1000000) * 0.20 : 0;
 
         const contractorNet = gross - contractorTax - tcsAmount;
 

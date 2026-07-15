@@ -560,7 +560,15 @@ fetch("/footer.html")
                 prevLimit = slab.limit;
             }
         }
-        return tax * 1.04; // Add 4% Cess
+        // Section 87A marginal relief caps tax just above ₹12 lakh.
+        const basicTax = Math.min(tax, taxableIncome - 1200000);
+        return applyNewRegimeSurcharge(basicTax, taxableIncome) * 1.04; // Add 4% Cess
+    }
+
+    function applyNewRegimeSurcharge(basicTax, taxableIncome) {
+        const levels = [{ threshold: 20000000, rate: 0.25, previousTax: 5580000 * 1.15 }, { threshold: 10000000, rate: 0.15, previousTax: 2580000 * 1.10 }, { threshold: 5000000, rate: 0.10, previousTax: 1080000 }];
+        const level = levels.find(item => taxableIncome > item.threshold);
+        return level ? Math.min(basicTax * (1 + level.rate), level.previousTax + taxableIncome - level.threshold) : basicTax;
     }
 
     function updateCalculations() {

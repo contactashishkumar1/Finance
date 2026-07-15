@@ -70,7 +70,7 @@
             {
               "@type": "Question",
               "name": "What is the threshold for TCS on LRS in 2026?",
-              "acceptedAnswer": { "@type": "Answer", "text": "The standard threshold is ₹7 Lakhs per financial year. Beyond this, TCS ranges from 0.5% to 20% depending on the category. However, Overseas Tour Packages attract 5% TCS from the first rupee." }
+              "acceptedAnswer": { "@type": "Answer", "text": "The standard threshold is ₹10 Lakhs per financial year for applicable LRS remittances. Overseas tour packages attract 2% TCS from the first rupee." }
             },
             {
               "@type": "Question",
@@ -123,7 +123,7 @@
                 <div class="max-w-3xl">
                     <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight pb-1">LRS & TCS Refund Calculator (2026-27 Edition)</h1>
                     <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
-                        Calculate the <strong>TCS (Tax Collected at Source)</strong> impact on your foreign transfers and plan your tax refunds. Factors in the ₹7 Lakh threshold and tiered rates for Education, Medical, and Tours.
+                        Calculate the <strong>TCS (Tax Collected at Source)</strong> impact on your foreign transfers and plan your tax refunds. Factors in the ₹10 Lakh threshold and current rates for education, medical, investments, and tours.
                     </p>
                 </div>
             </div>
@@ -163,7 +163,7 @@
                     <div class="mb-8 p-4 bg-blue-50 rounded-xl border border-blue-100 text-pretty">
                         <label class="text-[10px] font-bold text-blue-700 uppercase block mb-2 tracking-wider">Already Remitted in this FY (₹)</label>
                         <input type="number" id="previousInput" value="0" min="0" step="10000" class="w-full px-3 py-2 border border-blue-200 rounded-lg text-sm font-bold text-slate-800">
-                        <p class="text-[9px] text-blue-500 mt-2">Required to determine the remaining ₹7 Lakh exemption limit.</p>
+                        <p class="text-[9px] text-blue-500 mt-2">Required to determine the remaining ₹10 Lakh exemption limit.</p>
                     </div>
 
                     <button type="button" id="calcBtn" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2">
@@ -187,7 +187,7 @@
                     <div class="p-6 bg-amber-50 rounded-2xl border border-amber-200 mb-10 text-center text-pretty">
                         <h4 class="text-amber-700 text-xs font-bold uppercase tracking-wider mb-2 text-pretty">TCS to be Paid (Locked Outflow)</h4>
                         <div class="text-4xl sm:text-5xl font-extrabold text-amber-900" id="tcsDisplay">₹0</div>
-                        <p class="text-sm text-amber-600 mt-2 font-medium" id="thresholdNotice">Deducted on amount above ₹7 Lakhs</p>
+                        <p class="text-sm text-amber-600 mt-2 font-medium" id="thresholdNotice">Deducted on amount above ₹10 Lakhs</p>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10 text-pretty">
@@ -252,10 +252,10 @@
                 <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
                     <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">LRS TCS Math (2026 Rules)</h3>
                     <div class="formula-box text-blue-800 text-center mb-6 text-sm">
-                        TCS = max(0, Current + Prev - 7,00,000) × Applicable Rate
+                        TCS = max(0, Current + Prev - 10,00,000) × Applicable Rate
                     </div>
                     <div class="text-sm text-slate-600 space-y-3">
-                        <p><strong>Exemption:</strong> The ₹7 Lakh threshold is aggregated across all LRS remittances in a single PAN per financial year (except tour packages).</p>
+                        <p><strong>Exemption:</strong> The ₹10 Lakh threshold is aggregated across applicable LRS remittances in a single PAN per financial year (except tour packages).</p>
                         <p><strong>Refundable:</strong> TCS is not a separate expense; it is a prepayment of tax. If you have no tax liability, the IT department refunds the full amount with interest after filing ITR.</p>
                     </div>
                 </div>
@@ -366,25 +366,17 @@
         const totalAmount = currentAmount + prevAmount;
         
         let tcs = 0;
-        const threshold = 700000;
+        const threshold = 1000000;
 
         // TCS Logic for FY 2026-27
         if (purpose === 'tour') {
-            // Tour packages: 5% up to 7L (aggregated), 20% above 7L
-            if (totalAmount <= threshold) {
-                tcs = currentAmount * 0.05;
-            } else if (prevAmount >= threshold) {
-                tcs = currentAmount * 0.20;
-            } else {
-                const lowerPart = threshold - prevAmount;
-                const upperPart = totalAmount - threshold;
-                tcs = (lowerPart * 0.05) + (upperPart * 0.20);
-            }
+            // Overseas-tour packages attract TCS on the full package value.
+            tcs = currentAmount * 0.02;
         } else {
-            // Education, Medical, Investments, Gifts
+            // Education, medical, investments and gifts under LRS.
             let rate = 0.20; // Default (Investments/Gifts)
-            if (purpose === 'eduLoan') rate = 0.005;
-            else if (purpose === 'eduSelf' || purpose === 'medical') rate = 0.05;
+            if (purpose === 'eduLoan') rate = 0;
+            else if (purpose === 'eduSelf' || purpose === 'medical') rate = 0.02;
 
             if (totalAmount > threshold) {
                 const taxablePart = Math.min(currentAmount, totalAmount - threshold);
@@ -430,7 +422,7 @@
                 insight += "Strategy: Split this transfer with family members to save the 20% TCS hit.";
             }
         } else {
-            insight = "Great! You are within the ₹7 Lakh annual threshold. No TCS is applicable for this transfer.";
+            insight = "Great! You are within the ₹10 Lakh annual threshold. No TCS is applicable for this transfer.";
         }
         elements.insightText.innerHTML = insight;
     }

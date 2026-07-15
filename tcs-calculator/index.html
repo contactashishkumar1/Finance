@@ -137,10 +137,10 @@
         },
         {
           "@type": "Question",
-          "name": "Does the ₹7 Lakh LRS limit apply to each bank?",
+          "name": "Does the ₹10 Lakh LRS limit apply to each bank?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. The ₹7 Lakh threshold is an aggregate limit per financial year across all banks and authorized dealers."
+            "text": "No. The ₹10 Lakh threshold is an aggregate limit per financial year across all banks and authorized dealers."
           }
         },
         {
@@ -229,12 +229,12 @@
                         <label class="text-xs font-bold text-slate-400 uppercase block mb-3">TCS Nature of Transaction</label>
                         <select id="tcsCategory" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all bg-white text-slate-700">
                             <optgroup label="Liberalised Remittance Scheme (LRS)">
-                                <option value="lrs_edu_loan" data-rate="0.5" data-threshold="700000">LRS: Education (via Education Loan) - 0.5%</option>
-                                <option value="lrs_edu_med" data-rate="5" data-threshold="700000">LRS: Education / Medical (Own Funds) - 5%</option>
-                                <option value="lrs_others" data-rate="20" data-threshold="700000">LRS: Others (Investment/Maintenance) - 20%</option>
+                                <option value="lrs_edu_loan" data-rate="0" data-threshold="1000000">LRS: Education (via Education Loan) - Nil</option>
+                                <option value="lrs_edu_med" data-rate="2" data-threshold="1000000">LRS: Education / Medical (Own Funds) - 2%</option>
+                                <option value="lrs_others" data-rate="20" data-threshold="1000000">LRS: Others (Investment/Maintenance) - 20%</option>
                             </optgroup>
                             <optgroup label="Travel & Luxury">
-                                <option value="overseas_tour" data-rate="5" data-threshold="700000" data-tier2="20">Overseas Tour Program Package - 5%/20%</option>
+                                <option value="overseas_tour" data-rate="2" data-threshold="0">Overseas Tour Program Package - 2%</option>
                                 <option value="luxury_car" data-rate="1" data-threshold="1000000">Purchase of Motor Vehicle (> ₹10L) - 1%</option>
                             </optgroup>
                             <optgroup label="Business & Goods">
@@ -348,9 +348,9 @@
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-slate-50">
-                                    <tr><td class="px-3 py-3 text-slate-600">LRS (Education/Medical)</td><td class="px-3 py-3 text-right font-bold">5%</td><td class="px-3 py-3 text-right">₹7 Lakhs</td></tr>
-                                    <tr><td class="px-3 py-3 text-slate-600">LRS (Others)</td><td class="px-3 py-3 text-right font-bold text-indigo-600">20%</td><td class="px-3 py-3 text-right">₹7 Lakhs</td></tr>
-                                    <tr><td class="px-3 py-3 text-slate-600">Overseas Tour Program</td><td class="px-3 py-3 text-right font-bold">5% / 20%</td><td class="px-3 py-3 text-right">₹7 Lakhs</td></tr>
+                                    <tr><td class="px-3 py-3 text-slate-600">LRS (Education/Medical)</td><td class="px-3 py-3 text-right font-bold">2%</td><td class="px-3 py-3 text-right">₹10 Lakhs</td></tr>
+                                    <tr><td class="px-3 py-3 text-slate-600">LRS (Others)</td><td class="px-3 py-3 text-right font-bold text-indigo-600">20%</td><td class="px-3 py-3 text-right">₹10 Lakhs</td></tr>
+                                    <tr><td class="px-3 py-3 text-slate-600">Overseas Tour Program</td><td class="px-3 py-3 text-right font-bold">2%</td><td class="px-3 py-3 text-right">No threshold</td></tr>
                                     <tr><td class="px-3 py-3 text-slate-600">Luxury Motor Vehicle</td><td class="px-3 py-3 text-right font-bold">1%</td><td class="px-3 py-3 text-right">₹10 Lakhs</td></tr>
                                     <tr><td class="px-3 py-3 text-slate-600">Sale of Goods (u/s 206C(1H))</td><td class="px-3 py-3 text-right font-bold">0.1%</td><td class="px-3 py-3 text-right">₹50 Lakhs</td></tr>
                                 </tbody>
@@ -365,7 +365,7 @@
                         TCS = Max(0, Payment - Threshold) × Rate%
                     </div>
                     <div class="text-sm text-slate-600 space-y-2 mb-6 text-xs sm:text-sm text-pretty leading-relaxed text-pretty text-pretty text-pretty text-pretty text-pretty">
-                        <p><strong>1. Threshold Limit:</strong> Most LRS transactions have a ₹7 Lakh combined annual exemption.</p>
+                        <p><strong>1. Threshold Limit:</strong> Most LRS transactions have a ₹10 Lakh combined annual exemption.</p>
                         <p><strong>2. Marginal Calculation:</strong> TCS is only applied to the amount *exceeding* the threshold.</p>
                         <p><strong>3. PAN Importance:</strong> If PAN is not provided, Section 206CC mandates a higher rate (usually 20%).</p>
                     </div>
@@ -565,23 +565,16 @@
             let tcsAmount = 0;
             let appliedRateText = "";
 
-            if (amount <= threshold) {
-                if (elements.catSel.value === 'overseas_tour') {
-                    tcsAmount = (amount * 5) / 100;
-                    appliedRateText = "5.0%";
-                } else {
-                    tcsAmount = 0;
-                    appliedRateText = "0% (Exempt)";
-                }
+            if (elements.catSel.value === 'overseas_tour') {
+                tcsAmount = (amount * baseRate) / 100;
+                appliedRateText = baseRate + "%";
+            } else if (amount <= threshold) {
+                tcsAmount = 0;
+                appliedRateText = "0% (Within threshold)";
             } else {
                 const excess = amount - threshold;
-                if (tier2Rate && elements.catSel.value === 'overseas_tour') {
-                    tcsAmount = (threshold * 5 / 100) + (excess * tier2Rate / 100);
-                    appliedRateText = "Mixed (5%/20%)";
-                } else {
-                    tcsAmount = (excess * baseRate) / 100;
-                    appliedRateText = baseRate + "%";
-                }
+                tcsAmount = (excess * baseRate) / 100;
+                appliedRateText = baseRate + "%";
             }
 
             // PAN Penalty Check (Section 206CC)
