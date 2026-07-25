@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Cost Calculator | International Money Transfer | ArthCalculator</title>
+    <meta name="description" content="Analyse the combined total cost of your transfer, revealing both transparent fees and hidden currency exchange markups.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Ashish Kumar">
+    <link rel="canonical" href="https://arthcalculator.in/money-transfer/calculators/transfer-cost/">
+    <link rel="icon" href="/favicon.png">
+
+    <meta property="og:title" content="Transfer Cost Calculator">
+    <meta property="og:description" content="Analyse the combined total cost of your transfer, revealing both transparent fees and hidden currency exchange markups.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://arthcalculator.in/money-transfer/calculators/transfer-cost/">
+    <meta property="og:site_name" content="ArthCalculator">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Transfer Cost Calculator | ArthCalculator">
+    <meta name="twitter:description" content="Analyse the combined total cost of your transfer, revealing both transparent fees and hidden currency exchange markups.">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Organization","name":"ArthCalculator","url":"https://arthcalculator.in","logo":"https://arthcalculator.in/favicon.png"}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebPage","name":"Transfer Cost Calculator","url":"https://arthcalculator.in/money-transfer/calculators/transfer-cost/","description":"Analyse the combined total cost of your transfer, revealing both transparent fees and hidden currency exchange markups."}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Transfer Cost Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Tool to calculate the true total cost including upfront fees and exchange rate margins.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://arthcalculator.in/"},{"@type":"ListItem","position":2,"name":"Money Transfer","item":"https://arthcalculator.in/money-transfer/"},{"@type":"ListItem","position":3,"name":"Calculators","item":"https://arthcalculator.in/money-transfer/calculators/"},{"@type":"ListItem","position":4,"name":"Transfer Cost Calculator","item":"https://arthcalculator.in/money-transfer/calculators/transfer-cost/"}]}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type": "Question", "name": "What makes up the true total cost of a transfer?", "acceptedAnswer": {"@type": "Answer", "text": "The true cost is the sum of two components: the explicitly stated upfront fee (fixed and/or percentage) and the hidden financial cost of the exchange rate markup applied by the provider."}}, {"@type": "Question", "name": "How is the exchange rate markup cost calculated?", "acceptedAnswer": {"@type": "Answer", "text": "It is calculated by finding the percentage difference between the mid-market rate and the provider's rate, and applying that percentage to the amount you are sending."}}, {"@type": "Question", "name": "Why is the exchange rate margin considered a 'hidden cost'?", "acceptedAnswer": {"@type": "Answer", "text": "Because most providers do not explicitly tell you how much profit they are taking from the exchange rate spread. They embed it in the conversion math, making it harder for consumers to see the true cost."}}, {"@type": "Question", "name": "Is a zero-fee transfer actually free?", "acceptedAnswer": {"@type": "Answer", "text": "Almost never. Providers advertising 'zero fees' or 'commission-free' transfers invariably make their profit by applying a larger margin to the exchange rate. The total cost is often higher than a provider charging a small upfront fee but offering a better rate."}}, {"@type": "Question", "name": "Which is more important: a low fee or a good exchange rate?", "acceptedAnswer": {"@type": "Answer", "text": "Neither is more important in isolation; the combination of the two is what matters. For small transfers, low fees are critical. For large transfers, a good exchange rate is much more important than a low fee."}}, {"@type": "Question", "name": "Why do some providers have high fees and bad exchange rates?", "acceptedAnswer": {"@type": "Answer", "text": "Traditional banks often charge high flat fees and apply wide exchange rate margins because they have high overhead costs and face less direct competition in the remittance market compared to specialized digital platforms."}}, {"@type": "Question", "name": "How can I find the mid-market exchange rate?", "acceptedAnswer": {"@type": "Answer", "text": "The mid-market rate can be found through independent search engines (like Google) or financial data platforms (like Reuters or Bloomberg). It represents the true market value of the currency pair at that exact moment."}}, {"@type": "Question", "name": "Does this calculator account for intermediary bank fees?", "acceptedAnswer": {"@type": "Answer", "text": "No, this calculator only measures the provider's direct costs (upfront fees and markup). Intermediary bank fees applied over the SWIFT network are unpredictable and are not factored into this calculation."}}]}
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); transition: all 0.3s ease; }
+        .card-shadow:hover { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); transform: translateY(-2px); }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen">
+
+<div id="navbar"></div>
+
+<header class="bg-white border-b border-slate-200 py-12 sm:py-16 text-center">
+    <div class="max-w-4xl mx-auto px-4">
+        <nav class="flex mb-6 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center" aria-label="Breadcrumb">
+            <ol class="flex list-none p-0 flex-wrap justify-center items-center">
+                <li class="flex items-center"><a href="/" class="hover:text-blue-600 transition-colors">Home</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                <li class="flex items-center"><a href="/money-transfer/" class="hover:text-blue-600 transition-colors">Money Transfer</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                <li class="flex items-center"><a href="/money-transfer/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                <li class="text-blue-600 font-bold">Transfer Cost Calculator</li>
+            </ol>
+        </nav>
+        <h1 class="text-3xl sm:text-5xl font-extrabold gradient-text pb-3 leading-tight">Transfer Cost Calculator</h1>
+        <p class="text-slate-600 mt-2 max-w-2xl mx-auto leading-relaxed text-sm sm:text-base">Analyse the combined total cost of your transfer, revealing both transparent fees and hidden currency exchange markups.</p>
+    </div>
+</header>
+
+<div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="flex flex-col lg:flex-row gap-10">
+        
+        <!-- Sticky TOC -->
+        <aside class="lg:w-64 shrink-0 hidden lg:block">
+            <div class="sticky top-24 bg-white p-5 rounded-2xl border border-slate-200 card-shadow">
+                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path></svg>
+                    Contents
+                </h3>
+                <nav class="space-y-1 text-xs font-medium text-slate-600" aria-label="Page contents">
+                    <a href="#calculator" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all font-bold text-blue-600">Calculator</a>
+                    <a href="#understanding" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">Understanding the Math</a>
+                    <a href="#example" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">Practical Example</a>
+                    <a href="#faq" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">FAQs</a>
+                    <a href="#related" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">Related Resources</a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 min-w-0 space-y-10">
+            
+            <!-- Calculator App -->
+            <section id="calculator" class="scroll-mt-28 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 card-shadow">
+                
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">Send Amount</label>
+                        <input type="number" id="sendAmount" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all" placeholder="1000" value="1000">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">Total Upfront Fees</label>
+                        <input type="number" id="totalFees" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all" placeholder="10" value="10">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">Mid-Market Rate (Google Rate)</label>
+                        <input type="number" id="midRate" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all" placeholder="1.25" value="1.25" step="0.0001">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">Provider's Exchange Rate</label>
+                        <input type="number" id="provRate" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all" placeholder="1.23" value="1.23" step="0.0001">
+                    </div>
+                </div>
+                <div class="bg-slate-900 rounded-2xl p-6 text-white flex flex-col justify-center">
+                    <div class="text-slate-400 text-sm font-bold uppercase tracking-wider mb-2">Total True Cost</div>
+                    <div class="text-4xl sm:text-5xl font-extrabold text-blue-400" id="resultAmount">26.00</div>
+                    
+                    <div class="mt-6 pt-6 border-t border-slate-700 space-y-3 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-slate-400">Upfront Fees:</span>
+                            <span class="font-medium" id="resFees">10.00</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-400">Exchange Rate Markup Cost:</span>
+                            <span class="font-medium" id="resMarkup">16.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            </section>
+
+            <!-- Explanation -->
+            <section id="understanding" class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                <div class="border-b border-slate-100 pb-5 mb-6">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Education</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Understanding the Math</h2>
+                </div>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>Understanding how transfer providers compute this specific metric allows you to dissect their fee structures and uncover hidden costs.</p>
+                    <div class="p-5 bg-blue-50 rounded-xl border border-blue-100 my-6">
+                        <strong class="text-blue-900 block mb-2">The Formula:</strong>
+                        <div class="font-mono text-sm sm:text-base text-slate-800 bg-white p-3 border border-slate-200 rounded-lg text-center overflow-x-auto whitespace-nowrap">
+                            Total True Cost = Upfront Fee + (Send Amount &times; ((Mid-Market Rate - Provider Rate) / Mid-Market Rate))
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mt-6">Step-by-Step Guide</h3>
+                    <ul class="list-decimal pl-5 space-y-2">
+                        <li><strong>Identify your variables:</strong> Gather the precise fee numbers, exchange rates, and principal amounts from your provider's quote.</li>
+                        <li><strong>Input the figures:</strong> Enter these values into the calculator above. Be sure to use the correct formatting for percentages and exchange rates.</li>
+                        <li><strong>Analyze the output:</strong> The calculator instantly applies the formula to determine the exact metric. Use this output to compare multiple providers objectively.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Example -->
+            <section id="example" class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                <div class="border-b border-slate-100 pb-5 mb-6">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Application</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Practical Example</h2>
+                </div>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed">
+                    <p>Imagine you are sending a remittance of $1,000. You compare two providers to find the best deal. Provider A charges a flat fee of $10, while Provider B charges a 2% variable fee. By using our mathematical formula, you can clearly evaluate the financial impact.</p>
+                    <p>For Provider A, the fee is a simple $10. For Provider B, 2% of $1,000 equals $20. In this scenario, despite Provider A charging a prominent upfront fixed fee, it is mathematically cheaper than Provider B's percentage-based approach.</p>
+                    <p>As the transfer size grows, the difference becomes starker. This is why utilizing objective calculators is crucial before confirming an international payment.</p>
+                </div>
+            </section>
+
+            <!-- FAQs -->
+            <section id="faq" class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                <div class="border-b border-slate-100 pb-5 mb-6">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Common Questions</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Frequently Asked Questions</h2>
+                </div>
+                <div class="space-y-3">
+                    
+                    <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">What makes up the true total cost of a transfer?<svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">The true cost is the sum of two components: the explicitly stated upfront fee (fixed and/or percentage) and the hidden financial cost of the exchange rate markup applied by the provider.</div></details>
+                    <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">How is the exchange rate markup cost calculated?<svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">It is calculated by finding the percentage difference between the mid-market rate and the provider's rate, and applying that percentage to the amount you are sending.</div></details>
+                    <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">Why is the exchange rate margin considered a 'hidden cost'?<svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">Because most providers do not explicitly tell you how much profit they are taking from the exchange rate spread. They embed it in the conversion math, making it harder for consumers to see the true cost.</div></details>
+                    <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">Is a zero-fee transfer actually free?<svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">Almost never. Providers advertising 'zero fees' or 'commission-free' transfers invariably make their profit by applying a larger margin to the exchange rate. The total cost is often higher than a provider charging a small upfront fee but offering a better rate.</div></details>
+                    <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">Which is more important: a low fee or a good exchange rate?<svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">Neither is more important in isolation; the combination of the two is what matters. For small transfers, low fees are critical. For large transfers, a good exchange rate is much more important than a low fee.</div></details>
+                    <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">Why do some providers have high fees and bad exchange rates?<svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">Traditional banks often charge high flat fees and apply wide exchange rate margins because they have high overhead costs and face less direct competition in the remittance market compared to specialized digital platforms.</div></details>
+                    <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">How can I find the mid-market exchange rate?<svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">The mid-market rate can be found through independent search engines (like Google) or financial data platforms (like Reuters or Bloomberg). It represents the true market value of the currency pair at that exact moment.</div></details>
+                    <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">Does this calculator account for intermediary bank fees?<svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">No, this calculator only measures the provider's direct costs (upfront fees and markup). Intermediary bank fees applied over the SWIFT network are unpredictable and are not factored into this calculation.</div></details>
+                </div>
+            </section>
+
+            <!-- Related -->
+            <section id="related" class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                <div class="border-b border-slate-100 pb-5 mb-6">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Explore Further</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Related Resources</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm mb-6">
+                    <a href="/money-transfer/calculators/" class="p-4 border border-slate-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 font-bold text-slate-800 hover:text-blue-600 transition-all">All Calculators →<span class="block text-xs font-normal text-slate-500 mt-1">View the complete suite</span></a>
+                    <a href="/money-transfer/exchange-rates/" class="p-4 border border-slate-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 font-bold text-slate-800 hover:text-blue-600 transition-all">Exchange Rate Guide →<span class="block text-xs font-normal text-slate-500 mt-1">How margins work</span></a>
+                    <a href="/money-transfer/country-guides/" class="p-4 border border-slate-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 font-bold text-slate-800 hover:text-blue-600 transition-all">Country Guides →<span class="block text-xs font-normal text-slate-500 mt-1">Corridor navigation hub</span></a>
+                    <a href="/money-transfer/" class="p-4 border border-slate-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 font-bold text-slate-800 hover:text-blue-600 transition-all">Money Transfer Hub →<span class="block text-xs font-normal text-slate-500 mt-1">Main directory</span></a>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="mt-8 bg-blue-50 p-6 rounded-3xl border border-blue-200 flex flex-col sm:flex-row items-center justify-between gap-4 card-shadow text-center sm:text-left">
+                <div>
+                    <div class="font-bold text-slate-900 text-lg">Compare Providers Instantly</div>
+                    <div class="text-xs text-slate-600 mt-1 max-w-md">Ready to see the total picture? Use our comprehensive comparison tool to see who offers the best actual rate for your specific corridor.</div>
+                </div>
+                <a href="/money-transfer/provider-comparisons/" class="px-8 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-sm transition-all shadow-md w-full sm:w-auto text-center shrink-0">Open Comparisons →</a>
+            </section>
+
+        
+        <!-- Disclaimer -->
+        <div class="mt-10 border-l-4 border-slate-300 bg-slate-50 p-4 sm:p-5 rounded-r-xl">
+            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed m-0">
+                <span class="font-bold text-slate-700">Disclaimer:</span> Exchange rates, transfer fees, transfer speeds, supported countries, and provider policies may change over time. Always verify the latest information directly with the official money transfer provider before making a transfer. ArthCalculator provides educational information only and does not provide financial, legal, or tax advice.
+            </p>
+        </div>
+    </main>
+    </div>
+</div>
+
+<div id="footer"></div>
+
+<script>
+
+            function calculate() {
+                const amount = parseFloat(document.getElementById('sendAmount').value) || 0;
+                const fees = parseFloat(document.getElementById('totalFees').value) || 0;
+                const midRate = parseFloat(document.getElementById('midRate').value) || 0;
+                const provRate = parseFloat(document.getElementById('provRate').value) || 0;
+                
+                let markupCost = 0;
+                if (midRate > 0) {
+                    const marginPercent = (midRate - provRate) / midRate;
+                    markupCost = amount * marginPercent;
+                }
+                
+                const totalCost = fees + markupCost;
+                
+                document.getElementById('resultAmount').innerText = totalCost.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+                document.getElementById('resFees').innerText = fees.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+                document.getElementById('resMarkup').innerText = markupCost.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+            }
+            document.getElementById('sendAmount').addEventListener('input', calculate);
+            document.getElementById('totalFees').addEventListener('input', calculate);
+            document.getElementById('midRate').addEventListener('input', calculate);
+            document.getElementById('provRate').addEventListener('input', calculate);
+            calculate();
+        
+</script>
+
+<script src="/js/search.js" defer></script>
+<script>
+fetch("/navbar.html").then(r=>r.text()).then(d=>{document.getElementById("navbar").innerHTML=d;const b=document.getElementById("menuBtn"),m=document.getElementById("mobileMenu");if(b)b.addEventListener("click",()=>m.classList.toggle("hidden"));});
+fetch("/footer.html").then(r=>r.text()).then(d=>{document.getElementById("footer").innerHTML=d;});
+window.addEventListener("DOMContentLoaded",()=>{const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.intersectionRatio>0.1){document.querySelectorAll("aside nav a").forEach(a=>a.classList.remove("text-blue-600","font-bold"));const a=document.querySelector(`aside nav a[href="#${e.target.id}"]`);if(a)a.classList.add("text-blue-600","font-bold");}});},{threshold:[0.1,0.5],rootMargin:"-20% 0px -60% 0px"});document.querySelectorAll("main section[id]").forEach(s=>obs.observe(s));});
+</script>
+</body>
+</html>

@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWIFT & IBAN Guide: International Banking Identifiers Explained | ArthCalculator</title>
+    <meta name="description"
+        content="Complete educational guide to SWIFT codes, BIC codes, IBAN numbers, routing numbers, sort codes, SEPA, and correspondent banking. Understand how international bank transfers are routed.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Ashish Kumar">
+    <link rel="canonical" href="https://arthcalculator.in/money-transfer/swift-iban/">
+    <link rel="icon" href="/favicon.png">
+
+    <meta property="og:title" content="SWIFT & IBAN Guide: International Banking Identifiers Explained">
+    <meta property="og:description"
+        content="Learn what SWIFT codes, BICs, IBANs, routing numbers and sort codes are, how they differ, and how they are used to route international money transfers around the world.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://arthcalculator.in/money-transfer/swift-iban/">
+    <meta property="og:site_name" content="ArthCalculator">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SWIFT & IBAN Guide | ArthCalculator">
+    <meta name="twitter:description"
+        content="Understand SWIFT, BIC, IBAN, routing numbers, sort codes, SEPA, and correspondent banking — a complete guide for international money transfers.">
+
+    <script
+        type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"ArthCalculator","url":"https://arthcalculator.in","logo":"https://arthcalculator.in/favicon.png"}</script>
+    <script
+        type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"SWIFT & IBAN Guide","url":"https://arthcalculator.in/money-transfer/swift-iban/","description":"Complete educational guide to SWIFT codes, BIC codes, IBAN numbers, routing numbers, SEPA, and correspondent banking for international money transfers."}</script>
+    <script
+        type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"SWIFT & IBAN Guide: International Banking Identifiers Explained","description":"Comprehensive educational guide to international banking identifiers including SWIFT codes, BIC codes, IBAN numbers, routing numbers, sort codes, SEPA, correspondent banking, and intermediary banks.","author":{"@type":"Person","name":"Ashish Kumar"},"publisher":{"@type":"Organization","name":"ArthCalculator","logo":{"@type":"ImageObject","url":"https://arthcalculator.in/favicon.png"}},"datePublished":"2026-07-21","dateModified":"2026-07-21"}</script>
+    <script
+        type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://arthcalculator.in/"},{"@type":"ListItem","position":2,"name":"Money Transfer","item":"https://arthcalculator.in/money-transfer/"},{"@type":"ListItem","position":3,"name":"SWIFT & IBAN","item":"https://arthcalculator.in/money-transfer/swift-iban/"}]}</script>
+    <script
+        type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a SWIFT code?","acceptedAnswer":{"@type":"Answer","text":"A SWIFT code is a standard format identifier used to identify financial institutions in international wire transfers. The acronym stands for Society for Worldwide Interbank Financial Telecommunication. SWIFT codes are also known as BIC (Bank Identifier Code) codes, and the two terms are used interchangeably in practice."}},{"@type":"Question","name":"What is the difference between a SWIFT code and a BIC?","acceptedAnswer":{"@type":"Answer","text":"There is no functional difference between a SWIFT code and a BIC code. BIC stands for Bank Identifier Code and is the formal ISO standard name for the code. SWIFT is the messaging network that uses these codes. Both terms refer to the same alphanumeric identifier used to identify a bank in international transactions."}},{"@type":"Question","name":"What is an IBAN?","acceptedAnswer":{"@type":"Answer","text":"An IBAN (International Bank Account Number) is a standardised format for identifying an individual bank account across national borders. It begins with a two-letter country code, followed by two check digits, and then a series of alphanumeric characters that identify the bank and the specific account."}},{"@type":"Question","name":"How long is a SWIFT code?","acceptedAnswer":{"@type":"Answer","text":"SWIFT codes are either 8 or 11 characters long. An 8-character code identifies the bank and its country. An 11-character code additionally identifies the specific branch. If an 8-character code is used where 11 characters are expected, 'XXX' is often appended to indicate the bank's primary office."}},{"@type":"Question","name":"How long is an IBAN?","acceptedAnswer":{"@type":"Answer","text":"IBAN length varies by country. IBANs range from 15 to 34 characters depending on the country format. For example, UK IBANs are 22 characters, while German IBANs are 22 characters and French IBANs are 27 characters."}},{"@type":"Question","name":"Do all countries use IBAN?","acceptedAnswer":{"@type":"Answer","text":"No. IBAN is most widely used in Europe, the Middle East, and parts of North Africa. Many countries — including the United States, Canada, Australia, India, China, and most of Southeast Asia — do not use IBAN. Transfers to these countries typically require a SWIFT code and local account number."}},{"@type":"Question","name":"What is a routing number?","acceptedAnswer":{"@type":"Answer","text":"A routing number (also called an ABA routing number) is a nine-digit code used in the United States to identify a bank or financial institution in domestic transfers, ACH transactions, and cheque processing. It is a US-specific domestic identifier and is not used internationally in the way that SWIFT codes are."}},{"@type":"Question","name":"What is a sort code?","acceptedAnswer":{"@type":"Answer","text":"A sort code is a six-digit number used in the United Kingdom and Ireland to identify the bank and branch for domestic transfers. It appears in the format XX-XX-XX. For international incoming transfers to UK accounts, both the IBAN and the SWIFT/BIC code are used alongside the sort code and account number."}},{"@type":"Question","name":"What is a BIC code?","acceptedAnswer":{"@type":"Answer","text":"A BIC (Bank Identifier Code) is the formal ISO 9362 standard name for what is commonly called a SWIFT code. The two terms are interchangeable. A BIC is the alphanumeric identifier that uniquely identifies a financial institution when routing international wire transfers."}},{"@type":"Question","name":"What is SEPA?","acceptedAnswer":{"@type":"Answer","text":"SEPA stands for Single Euro Payments Area. It is a European Union payment integration initiative that simplifies bank transfers across participating countries in euros. SEPA transfers use the IBAN and BIC format but are generally faster and cheaper than non-SEPA international transfers."}},{"@type":"Question","name":"What is a correspondent bank?","acceptedAnswer":{"@type":"Answer","text":"A correspondent bank is a financial institution that provides banking services on behalf of another bank in a different country. When two banks do not have a direct banking relationship, they use correspondent banks to route international transfers. This can add fees and time to a transfer."}},{"@type":"Question","name":"What is an intermediary bank?","acceptedAnswer":{"@type":"Answer","text":"An intermediary bank is a bank that sits between the sender's bank and the recipient's bank in an international wire transfer. It is often the same as a correspondent bank. Intermediary banks may deduct fees as the transfer passes through them, potentially reducing the amount received by the recipient."}},{"@type":"Question","name":"Can I send a SWIFT transfer without an IBAN?","acceptedAnswer":{"@type":"Answer","text":"For countries that use IBAN, you should always provide the IBAN alongside the SWIFT/BIC code. For countries that do not use IBAN — such as the United States, Australia, or India — you will provide a SWIFT code with the local account number instead."}},{"@type":"Question","name":"How do I find a bank's SWIFT code?","acceptedAnswer":{"@type":"Answer","text":"SWIFT codes are typically listed on a bank's website, on bank statements, and in online banking dashboards. They can also be found by contacting the bank directly. Verify the code with the receiving bank before initiating a large transfer."}},{"@type":"Question","name":"How do I find my IBAN?","acceptedAnswer":{"@type":"Answer","text":"Your IBAN can be found on bank statements, in your online banking dashboard, or by contacting your bank. In the UK, your IBAN is derived from your sort code and account number in a standardised format."}},{"@type":"Question","name":"What is a SHA, OUR, or BEN fee arrangement in a SWIFT transfer?","acceptedAnswer":{"@type":"Answer","text":"These are instructions for who bears the correspondent bank fees in a SWIFT transfer. SHA (Shared) means sender and receiver each pay their own bank's fees. OUR means the sender pays all fees, so the recipient receives the full amount. BEN means the recipient bears all fees, with deductions taken from the transferred amount."}},{"@type":"Question","name":"What happens if I enter the wrong IBAN?","acceptedAnswer":{"@type":"Answer","text":"Entering the wrong IBAN may cause the transfer to be rejected, returned, or — in some cases — credited to an incorrect account. Always verify the IBAN character by character before confirming a transfer. Recovery of funds credited to the wrong account can be a lengthy process."}},{"@type":"Question","name":"Does IBAN have a checksum?","acceptedAnswer":{"@type":"Answer","text":"Yes. IBANs contain two check digits (positions 3 and 4 in the code) that allow mathematical validation of the IBAN before processing. This helps detect simple data-entry errors. Most banking software validates the checksum automatically before a transfer is accepted."}},{"@type":"Question","name":"What is the SWIFT network?","acceptedAnswer":{"@type":"Answer","text":"The SWIFT network (Society for Worldwide Interbank Financial Telecommunication) is a global messaging infrastructure used by banks and financial institutions to securely exchange payment instructions. It does not hold or move funds itself — it transmits standardised messages between financial institutions that trigger corresponding fund movements."}},{"@type":"Question","name":"Why do international bank transfers sometimes take longer than expected?","acceptedAnswer":{"@type":"Answer","text":"International wire transfers may be delayed due to compliance checks at the sending or receiving bank, the number of correspondent banks in the chain, currency conversion processing, time zone differences, and local settlement cut-off times at the destination bank."}},{"@type":"Question","name":"Can money transfer apps bypass the SWIFT network?","acceptedAnswer":{"@type":"Answer","text":"Some modern money transfer services use internal liquidity pools or local payment networks rather than routing every transfer through the traditional SWIFT correspondent banking chain. This can reduce the number of intermediary banks involved and lower associated fees, while still resulting in local currency delivery to the recipient's bank account."}},{"@type":"Question","name":"What is SWIFT GPI?","acceptedAnswer":{"@type":"Answer","text":"SWIFT GPI (Global Payments Innovation) is an initiative that enhances cross-border payment tracking, transparency, and speed within the traditional SWIFT network. Banks participating in SWIFT GPI can provide end-to-end tracking of international wire transfers."}},{"@type":"Question","name":"What is the difference between a bank transfer and a wire transfer?","acceptedAnswer":{"@type":"Answer","text":"The terms are often used interchangeably. Strictly, a bank transfer can refer to any movement of funds between accounts. A wire transfer typically refers to an electronic transfer routed through an interbank messaging system such as SWIFT. In practice, international wire transfers and international bank transfers describe the same type of transaction."}},{"@type":"Question","name":"What is SEPA Instant?","acceptedAnswer":{"@type":"Answer","text":"SEPA Instant is an extension of the SEPA payment framework that allows euro transfers to be processed within seconds, around the clock. Participation requires both the sending and receiving banks to be enrolled in the SEPA Instant scheme."}}]}</script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            scroll-behavior: smooth;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .card-shadow:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transform: translateY(-2px);
+        }
+
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details[open] summary svg {
+            transform: rotate(180deg);
+        }
+
+        .code-block {
+            font-family: 'Courier New', monospace;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 0.25rem 0.5rem;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+        }
+
+        .diagram-box {
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            background: #f8fafc;
+        }
+    </style>
+</head>
+
+<body class="text-slate-800 antialiased min-h-screen">
+
+    <div id="navbar"></div>
+
+    <!-- Hero -->
+    <header class="bg-white border-b border-slate-200 py-12 sm:py-16 text-center">
+        <div class="max-w-5xl mx-auto px-4">
+            <nav class="flex mb-6 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center"
+                aria-label="Breadcrumb">
+                <ol class="flex list-none p-0 flex-wrap justify-center items-center">
+                    <li class="flex items-center"><a href="/" class="hover:text-blue-600 transition-colors">Home</a><svg
+                            class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z">
+                            </path>
+                        </svg></li>
+                    <li class="flex items-center"><a href="/money-transfer/"
+                            class="hover:text-blue-600 transition-colors">Money Transfer</a><svg class="w-3 h-3 mx-2"
+                            fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z">
+                            </path>
+                        </svg></li>
+                    <li class="text-blue-600 font-bold">SWIFT & IBAN</li>
+                </ol>
+            </nav>
+            <h1 class="text-3xl sm:text-5xl font-extrabold gradient-text pb-3 leading-tight">SWIFT & IBAN Guide</h1>
+            <p class="text-slate-600 mt-2 max-w-3xl mx-auto leading-relaxed text-sm sm:text-base">Understand the banking
+                identifiers that route international money transfers — SWIFT codes, BICs, IBANs, routing numbers, sort
+                codes, SEPA, and how the global correspondent banking network operates.</p>
+            <div class="flex flex-wrap items-center justify-center gap-6 mt-6 text-xs text-slate-500 font-medium">
+                <span>🏦 Banking Infrastructure Explained</span>
+                <span>🔤 Code Structure & Examples</span>
+                <span>⏱️ 18 Min Read</span>
+            </div>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+                <a href="#what-is-swift"
+                    class="w-full sm:w-auto px-8 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 text-center text-sm">Start
+                    Learning</a>
+                <a href="#swift-vs-iban"
+                    class="w-full sm:w-auto px-8 py-3.5 bg-white border border-slate-200 hover:border-blue-300 text-slate-700 font-bold rounded-xl transition-all text-center text-sm">SWIFT
+                    vs IBAN →</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 py-12">
+        <div class="flex flex-col lg:flex-row gap-10">
+
+            <!-- Sticky TOC -->
+            <aside class="lg:w-64 shrink-0">
+                <div class="sticky top-24 bg-white p-5 rounded-2xl border border-slate-200 card-shadow">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+                        <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h7"></path>
+                        </svg>
+                        On This Page
+                    </h3>
+                    <nav class="space-y-1 text-xs font-medium text-slate-600" aria-label="Page contents">
+                        <a href="#introduction"
+                            class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">1.
+                            Introduction</a>
+                        <a href="#what-is-swift"
+                            class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">2.
+                            What Is SWIFT?</a>
+                        <a href="#what-is-bic"
+                            class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">3.
+                            What Is a BIC?</a>
+                        <a href="#what-is-iban"
+                            class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">4.
+                            What Is an IBAN?</a>
+                        <a href="#iban-structure"
+                            class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">5.
+                            IBAN Structure</a>
+                        <a href="#swift-vs-iban"
+                            class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">6.
+                            SWIFT vs IBAN</a>
+                        <a href="#routing-number"
+                            class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">7.
+                            Routing Number vs SWIFT</a>
+                        <a href="#sort-code"
+                            class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">8.
+                            Sort Code vs SWIFT</a>
+                        <a href="#account-vs-iban"
+                            class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">9.
+                            Account Number vs IBAN</a>
+                        <a href="#sepa"
+                            class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">10.
+                            SEPA Overview</a>
+                        <a href="#international-wire"
+                            class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">11.
+                            International Wire Transfers</a>
+                        <a href="#correspondent-banking"
+                            class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">12.
+                            Correspondent Banking</a>
+                        <a href="#intermediary-banks"
+                            class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">13.
+                            Intermediary Banks</a>
+                        <a href="#identifier-examples"
+                            class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">14.
+                            Identifier Reference</a>
+                        <a href="#common-mistakes"
+                            class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">15.
+                            Common Mistakes</a>
+                        <a href="#security-tips"
+                            class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">16.
+                            Security Tips</a>
+                        <a href="#glossary"
+                            class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">17.
+                            Glossary</a>
+                        <a href="#faq"
+                            class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">18.
+                            FAQs</a>
+                        <a href="#related"
+                            class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">19.
+                            Related Resources</a>
+                        <a href="#summary"
+                            class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">20.
+                            Summary</a>
+                    </nav>
+                    <div class="mt-6 pt-4 border-t border-slate-100">
+                        <a href="/money-transfer/"
+                            class="block text-center text-xs font-bold text-slate-700 bg-slate-100 py-2 rounded-lg hover:bg-slate-200 transition-colors">←
+                            Money Transfer Hub</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="flex-1 min-w-0 space-y-14">
+
+                <!-- Introduction -->
+                <section id="introduction"
+                    class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <div class="border-b border-slate-100 pb-5 mb-6">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Getting Started</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Introduction</h2>
+                    </div>
+                    <div
+                        class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                        <p>Every international bank transfer relies on a set of standardised codes and identifiers to
+                            ensure funds reach the correct account, at the correct bank, in the correct country. Without
+                            these identifiers, cross-border transfers would have no reliable mechanism for routing.</p>
+                        <p>The two most important international banking identifiers are the <strong>SWIFT/BIC
+                                code</strong> — which identifies the bank — and the <strong>IBAN</strong> — which
+                            identifies the specific account. Understanding how these codes work, how they differ from
+                            domestic identifiers like routing numbers and sort codes, and how international transfers
+                            are actually routed is essential for anyone sending or receiving money internationally.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
+                            <div class="p-4 bg-blue-50 rounded-xl border border-blue-100 text-center">
+                                <div class="text-2xl mb-2">🏦</div>
+                                <div class="font-bold text-slate-900 text-sm">SWIFT / BIC</div>
+                                <div class="text-xs text-slate-500">Identifies the bank</div>
+                            </div>
+                            <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-100 text-center">
+                                <div class="text-2xl mb-2">🔢</div>
+                                <div class="font-bold text-slate-900 text-sm">IBAN</div>
+                                <div class="text-xs text-slate-500">Identifies the account</div>
+                            </div>
+                            <div class="p-4 bg-purple-50 rounded-xl border border-purple-100 text-center">
+                                <div class="text-2xl mb-2">🌐</div>
+                                <div class="font-bold text-slate-900 text-sm">Correspondent Banks</div>
+                                <div class="text-xs text-slate-500">Route the funds</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- What is SWIFT -->
+                <section id="what-is-swift"
+                    class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <div class="border-b border-slate-100 pb-5 mb-6">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Banking
+                            Infrastructure</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">What Is SWIFT?</h2>
+                    </div>
+                    <div
+                        class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                        <p>SWIFT stands for <strong>Society for Worldwide Interbank Financial
+                                Telecommunication</strong>. It is a global financial messaging network that enables
+                            banks and financial institutions to securely communicate and exchange payment instructions
+                            with each other across international borders.</p>
+                        <p>Crucially, <strong>SWIFT does not move money itself</strong>. It is a messaging system — a
+                            secure, standardised way for banks to send instructions to each other. The actual movement
+                            of funds happens through the banking system, triggered by these messages.</p>
+                        <div class="diagram-box p-6 my-6">
+                            <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6 text-center">How
+                                SWIFT Facilitates a Transfer</div>
+                            <div
+                                class="flex flex-col sm:flex-row items-center justify-center gap-3 text-center text-xs">
+                                <div class="p-3 bg-blue-50 border border-blue-200 rounded-xl w-28">
+                                    <div class="font-bold text-blue-800">Sender's Bank</div>
+                                    <div class="text-slate-500 mt-1">Initiates SWIFT message</div>
+                                </div>
+                                <div class="text-slate-400 font-bold text-xl">→</div>
+                                <div class="p-3 bg-purple-50 border border-purple-200 rounded-xl w-28">
+                                    <div class="font-bold text-purple-800">SWIFT Network</div>
+                                    <div class="text-slate-500 mt-1">Routes the secure message</div>
+                                </div>
+                                <div class="text-slate-400 font-bold text-xl">→</div>
+                                <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl w-28">
+                                    <div class="font-bold text-emerald-800">Recipient's Bank</div>
+                                    <div class="text-slate-500 mt-1">Receives and acts on message</div>
+                                </div>
+                            </div>
+                            <div class="text-center mt-4 text-xs text-slate-400">SWIFT transmits payment instructions —
+                                correspondent banks execute the actual fund movements.</div>
+                        </div>
+                        <p>SWIFT was established in Belgium in 1973 and is co-operatively owned by its member financial
+                            institutions. It serves thousands of financial institutions across the globe and processes
+                            millions of messages per day covering payments, securities transactions, and treasury
+                            operations.</p>
+                        <p>When you initiate an international bank transfer, your bank uses the SWIFT network to
+                            communicate the payment instruction to the recipient's bank (often via one or more
+                            intermediary banks). The SWIFT code of the recipient's bank tells the network exactly where
+                            to send the message.</p>
+                    </div>
+                </section>
+
+                <!-- What is BIC -->
+                <section id="what-is-bic"
+                    class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <div class="border-b border-slate-100 pb-5 mb-6">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Bank Identifier</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">What Is a BIC Code?</h2>
+                    </div>
+                    <div
+                        class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                        <p>A <strong>BIC (Bank Identifier Code)</strong> is the formal ISO 9362 standard name for the
+                            code that identifies a bank in international transactions. In practice, BIC and SWIFT code
+                            are used interchangeably — they refer to the same alphanumeric identifier.</p>
+                        <p>A SWIFT/BIC code is structured as follows:</p>
+                        <div class="diagram-box p-6 my-6">
+                            <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 text-center">
+                                SWIFT/BIC Code Structure</div>
+                            <div class="font-mono text-center text-xl font-bold text-slate-900 tracking-widest mb-6">
+                                HSBC<span class="text-blue-600">GB</span><span class="text-emerald-600">2L</span><span
+                                    class="text-purple-600">XXX</span></div>
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs text-center">
+                                <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl">
+                                    <div class="font-extrabold text-slate-900 text-sm font-mono">HSBC</div>
+                                    <div class="text-slate-500 mt-1">Bank code<br>(4 characters)</div>
+                                </div>
+                                <div class="p-3 bg-blue-50 border border-blue-200 rounded-xl">
+                                    <div class="font-extrabold text-blue-700 text-sm font-mono">GB</div>
+                                    <div class="text-slate-500 mt-1">Country code<br>(2 characters)</div>
+                                </div>
+                                <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl">
+                                    <div class="font-extrabold text-emerald-700 text-sm font-mono">2L</div>
+                                    <div class="text-slate-500 mt-1">Location code<br>(2 characters)</div>
+                                </div>
+                                <div class="p-3 bg-purple-50 border border-purple-200 rounded-xl">
+                                    <div class="font-extrabold text-purple-700 text-sm font-mono">XXX</div>
+                                    <div class="text-slate-500 mt-1">Branch code<br>(3 chars, optional)</div>
+                                </div>
+                            </div>
+                            <div class="text-center mt-4 text-xs text-slate-400 italic">Illustrative format only. Always
+                                verify with the receiving bank.</div>
+                        </div>
+                        <p>SWIFT/BIC codes can be 8 or 11 characters. An 8-character code refers to the bank's primary
+                            office. An 11-character code identifies a specific branch. When only an 8-character code is
+                            available, "XXX" is often appended automatically by banking systems.</p>
+                    </div>
+                </section>
+
+                <!-- What is IBAN -->
+                <section id="what-is-iban"
+                    class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <div class="border-b border-slate-100 pb-5 mb-6">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Account
+                            Identifier</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">What Is an IBAN?</h2>
+                    </div>
+                    <div
+                        class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                        <p>An <strong>IBAN (International Bank Account Number)</strong> is a standardised format for
+                            identifying a specific bank account in an international transfer. Where the SWIFT/BIC code
+                            identifies <em>the bank</em>, the IBAN identifies <em>the individual account</em> at that
+                            bank.</p>
+                        <p>The IBAN standard is defined by ISO 13616. It is widely adopted across Europe, the Middle
+                            East, and parts of North Africa, but many major countries including the United States,
+                            Canada, Australia, India, and China do not use IBANs — transfers to these countries rely on
+                            a SWIFT code plus a local account number.</p>
+                        <div class="p-5 bg-amber-50 border border-amber-200 rounded-2xl">
+                            <div class="font-bold text-amber-800 mb-2">Does your destination country use IBAN?</div>
+                            <p class="text-xs sm:text-sm text-amber-900 leading-relaxed">IBAN is used by most European
+                                countries, as well as many Middle Eastern and North African countries. Countries such as
+                                the USA, Canada, Australia, India, and most of Southeast Asia and Latin America do not
+                                use IBAN. For these destinations, you will need to provide the recipient's local account
+                                number alongside their bank's SWIFT/BIC code.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- IBAN Structure -->
+                <section id="iban-structure"
+                    class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <div class="border-b border-slate-100 pb-5 mb-6">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Format Explained</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">IBAN Structure</h2>
+                    </div>
+                    <div
+                        class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                        <p>Every IBAN follows the same general structure, though its length varies by country.</p>
+                        <div class="diagram-box p-6 my-6">
+                            <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 text-center">
+                                IBAN Structure (UK Example)</div>
+                            <div class="font-mono text-center text-lg font-bold text-slate-900 tracking-widest mb-6">
+                                <span class="text-blue-600">GB</span><span class="text-red-600">29</span><span
+                                    class="text-emerald-600">NWBK</span><span class="text-purple-600">6016</span><span
+                                    class="text-amber-600">1331</span><span class="text-slate-700">926819</span>
+                            </div>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs text-center">
+                                <div class="p-3 bg-blue-50 border border-blue-200 rounded-xl">
+                                    <div class="font-extrabold text-blue-700 font-mono">GB</div>
+                                    <div class="text-slate-500 mt-1">Country code (2 letters)</div>
+                                </div>
+                                <div class="p-3 bg-red-50 border border-red-200 rounded-xl">
+                                    <div class="font-extrabold text-red-700 font-mono">29</div>
+                                    <div class="text-slate-500 mt-1">Check digits (2 numbers)</div>
+                                </div>
+                                <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl">
+                                    <div class="font-extrabold text-emerald-700 font-mono">NWBK</div>
+                                    <div class="text-slate-500 mt-1">Bank identifier (4 chars)</div>
+                                </div>
+                                <div class="p-3 bg-purple-50 border border-purple-200 rounded-xl">
+                                    <div class="font-extrabold text-purple-700 font-mono">6016</div>
+                                    <div class="text-slate-500 mt-1">Sort code part 1</div>
+                                </div>
+                                <div class="p-3 bg-amber-50 border border-amber-200 rounded-xl">
+                                    <div class="font-extrabold text-amber-700 font-mono">1331</div>
+                                    <div class="text-slate-500 mt-1">Sort code part 2</div>
+                                </div>
+                                <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl">
+                                    <div class="font-extrabold text-slate-700 font-mono">926819</div>
+                                    <div class="text-slate-500 mt-1">Account number</div>
+                                </div>
+                            </div>
+                            <div class="text-center mt-4 text-xs text-slate-400 italic">Illustrative example only. Not a
+                                real account.</div>
+                        </div>
+                        <p>IBAN lengths by selected country:</p>
+                        <div class="overflow-x-auto">
+                            <table
+                                class="w-full text-xs sm:text-sm border-collapse border border-slate-200 rounded-xl overflow-hidden"
+                                aria-label="IBAN length by country">
+                                <thead class="bg-slate-100 text-slate-700 font-bold">
+                                    <tr>
+                                        <th class="p-3 border border-slate-200 text-left">Country</th>
+                                        <th class="p-3 border border-slate-200 text-left">IBAN Length</th>
+                                        <th class="p-3 border border-slate-200 text-left">Format</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-slate-600 divide-y divide-slate-200">
+                                    <tr class="hover:bg-slate-50">
+                                        <td class="p-3 border border-slate-200 font-medium">United Kingdom (GB)</td>
+                                        <td class="p-3 border border-slate-200">22 characters</td>
+                                        <td class="p-3 border border-slate-200 font-mono text-xs">GBkkBBBBSSSSSSAAAAAAAA
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50">
+                                        <td class="p-3 border border-slate-200 font-medium">Germany (DE)</td>
+                                        <td class="p-3 border border-slate-200">22 characters</td>
+                                        <td class="p-3 border border-slate-200 font-mono text-xs">
+                                            DEkkBBBBBBBBAAAAAAAAAAAA</td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50">
+                                        <td class="p-3 border border-slate-200 font-medium">France (FR)</td>
+                                        <td class="p-3 border border-slate-200">27 characters</td>
+                                        <td class="p-3 border border-slate-200 font-mono text-xs">
+                                            FRkkBBBBBGGGGGAAAAAAAAAAAAX</td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50">
+                                        <td class="p-3 border border-slate-200 font-medium">Spain (ES)</td>
+                                        <td class="p-3 border border-slate-200">24 characters</td>
+                                        <td class="p-3 border border-slate-200 font-mono text-xs">ESkk BBBB SSSS AAAA
+                                            AAAA AAAA</td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50">
+                                        <td class="p-3 border border-slate-200 font-medium">UAE (AE)</td>
+                                        <td class="p-3 border border-slate-200">23 characters</td>
+                                        <td class="p-3 border border-slate-200 font-mono text-xs">
+                                            AEkkBBBAAAAAAAAAAAAAAAA</td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50">
+                                        <td class="p-3 border border-slate-200 font-medium">Netherlands (NL)</td>
+                                        <td class="p-3 border border-slate-200">18 characters</td>
+                                        <td class="p-3 border border-slate-200 font-mono text-xs">NLkkBBBBAAAAAAAAAAAA
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="text-xs text-slate-400 italic">B = Bank code, S = Sort/branch code, A = Account
+                            number, k = Check digit. Formats vary by country.</p>
+                    </div>
+                </section>
+
+                <!-- SWIFT vs IBAN -->
+                <section id="swift-vs-iban"
+                    class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <div class="border-b border-slate-100 pb-5 mb-6">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Key Distinction</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">SWIFT vs IBAN: What's the
+                            Difference?</h2>
+                    </div>
+                    <div class="overflow-x-auto mb-4">
+                        <table
+                            class="w-full text-xs sm:text-sm border-collapse border border-slate-200 rounded-xl overflow-hidden"
+                            aria-label="SWIFT vs IBAN comparison">
+                            <thead class="bg-slate-100 text-slate-700 font-bold">
+                                <tr>
+                                    <th class="p-3 border border-slate-200 text-left">Aspect</th>
+                                    <th class="p-3 border border-slate-200 text-left">SWIFT/BIC Code</th>
+                                    <th class="p-3 border border-slate-200 text-left">IBAN</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-slate-600 divide-y divide-slate-200">
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border border-slate-200 font-bold text-slate-900">What it identifies
+                                    </td>
+                                    <td class="p-3 border border-slate-200">The bank or financial institution</td>
+                                    <td class="p-3 border border-slate-200">The specific bank account</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border border-slate-200 font-bold text-slate-900">Length</td>
+                                    <td class="p-3 border border-slate-200">8 or 11 characters</td>
+                                    <td class="p-3 border border-slate-200">15–34 characters (country-dependent)</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border border-slate-200 font-bold text-slate-900">Global coverage
+                                    </td>
+                                    <td class="p-3 border border-slate-200">Global — used wherever SWIFT operates</td>
+                                    <td class="p-3 border border-slate-200">Europe, Middle East, some North Africa</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border border-slate-200 font-bold text-slate-900">Purpose in transfer
+                                    </td>
+                                    <td class="p-3 border border-slate-200">Routes message to the correct bank</td>
+                                    <td class="p-3 border border-slate-200">Identifies the recipient's account</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border border-slate-200 font-bold text-slate-900">Used together?</td>
+                                    <td class="p-3 border border-slate-200" colspan="2">Yes — IBAN-supported countries
+                                        typically require both. Non-IBAN countries use SWIFT plus local account number.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="prose prose-slate max-w-none text-slate-600 text-sm leading-relaxed">
+                        <p>In countries that use IBAN — such as those within the European Union — both the SWIFT/BIC and
+                            the IBAN are typically required for an incoming international transfer. In countries that do
+                            not use IBAN — such as the United States, Australia, or India — only the SWIFT code and
+                            local account number are needed.</p>
+                    </div>
+                </section>
+
+                <!-- Routing Number -->
+                <section id="routing-number"
+                    class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <div class="border-b border-slate-100 pb-5 mb-6">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">US Banking</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Routing Number vs SWIFT Code</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+                        <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200">
+                            <h3 class="font-bold text-slate-900 mb-2">ABA Routing Number</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">A 9-digit US-specific code used
+                                to identify a bank for <strong>domestic</strong> transfers, ACH transactions, direct
+                                deposits, and cheque processing. Every US bank branch has its own routing number. The
+                                American Bankers Association (ABA) administers these codes.</p>
+                            <div class="mt-3"><span class="code-block">021000021</span><span
+                                    class="text-xs text-slate-400 ml-2">(Example format only)</span></div>
+                        </div>
+                        <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200">
+                            <h3 class="font-bold text-slate-900 mb-2">SWIFT/BIC Code</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">An 8 or 11 character code used
+                                globally to identify a bank for <strong>international</strong> wire transfers. US banks
+                                use SWIFT codes for receiving international wires, even though they use routing numbers
+                                domestically. The two systems serve different purposes and different transaction types.
+                            </p>
+                            <div class="mt-3"><span class="code-block">CHASUS33</span><span
+                                    class="text-xs text-slate-400 ml-2">(Example format only)</span></div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">When sending money to a US bank account from
+                        another country, you will typically need the recipient's SWIFT code, their routing number, and
+                        their account number. When sending domestically within the US, only the routing number and
+                        account number are required.</p>
+                </section>
+
+                <!-- Sort Code -->
+                <section id="sort-code"
+                    class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <div class="border-b border-slate-100 pb-5 mb-6">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">UK Banking</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Sort Code vs SWIFT Code</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+                        <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200">
+                            <h3 class="font-bold text-slate-900 mb-2">UK Sort Code</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">A 6-digit code in the format
+                                XX-XX-XX used in the UK and Ireland to identify the bank and branch for
+                                <strong>domestic</strong> transfers, direct debits, and standing orders. Sort codes are
+                                administered by Pay.UK and are embedded within a UK IBAN.
+                            </p>
+                            <div class="mt-3"><span class="code-block">20-00-00</span><span
+                                    class="text-xs text-slate-400 ml-2">(Example format only)</span></div>
+                        </div>
+                        <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200">
+                            <h3 class="font-bold text-slate-900 mb-2">SWIFT/BIC for International Transfers</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">For receiving international
+                                transfers into a UK bank account, the SWIFT/BIC code and IBAN are used. The sort code
+                                and account number are embedded within the IBAN, so they do not need to be provided
+                                separately when an IBAN is given.</p>
+                            <div class="mt-3"><span class="code-block">GB29NWBK60161331926819</span><span
+                                    class="text-xs text-slate-400 ml-2">(IBAN format, example only)</span></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Account Number vs IBAN -->
+                <section id="account-vs-iban"
+                    class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <div class="border-b border-slate-100 pb-5 mb-6">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Identifying
+                            Accounts</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Account Number vs IBAN</h2>
+                    </div>
+                    <div
+                        class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                        <p>A domestic account number identifies an account <em>within a specific bank</em>. The same
+                            account number format could theoretically exist at a different bank in a different country —
+                            without additional context, it is ambiguous in an international setting.</p>
+                        <p>An IBAN solves this by embedding the country code, bank identifier, and account number into a
+                            single standardised code with built-in check digits. This makes it unambiguous and
+                            machine-readable across borders.</p>
+                        <div class="overflow-x-auto">
+                            <table
+                                class="w-full text-xs sm:text-sm border-collapse border border-slate-200 rounded-xl overflow-hidden"
+                                aria-label="Account number vs IBAN">
+                                <thead class="bg-slate-100 text-slate-700 font-bold">
+                                    <tr>
+                                        <th class="p-3 border border-slate-200 text-left">Aspect</th>
+                                        <th class="p-3 border border-slate-200 text-left">Domestic Account Number</th>
+                                        <th class="p-3 border border-slate-200 text-left">IBAN</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-slate-600 divide-y divide-slate-200">
+                                    <tr class="hover:bg-slate-50">
+                                        <td class="p-3 border border-slate-200 font-bold">Scope</td>
+                                        <td class="p-3 border border-slate-200">Identifies account within one bank</td>
+                                        <td class="p-3 border border-slate-200">Identifies account uniquely across
+                                            borders</td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50">
+                                        <td class="p-3 border border-slate-200 font-bold">Validation</td>
+                                        <td class="p-3 border border-slate-200">Varies by bank</td>
+                                        <td class="p-3 border border-slate-200">Built-in checksum for error detection
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50">
+                                        <td class="p-3 border border-slate-200 font-bold">Contains</td>
+                                        <td class="p-3 border border-slate-200">Account number only</td>
+                                        <td class="p-3 border border-slate-200">Country + check digits + bank code +
+                                            account</td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50">
+                                        <td class="p-3 border border-slate-200 font-bold">Global availability</td>
+                                        <td class="p-3 border border-slate-200">Universal (every account has one)</td>
+                                        <td class="p-3 border border-slate-200">Only in IBAN-participating countries
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SEPA -->
+                <section id="sepa" class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <div class="border-b border-slate-100 pb-5 mb-6">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">European Payments</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">SEPA: Single Euro Payments Area
+                        </h2>
+                    </div>
+                    <div
+                        class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                        <p>SEPA (Single Euro Payments Area) is a European payment integration framework that simplifies
+                            and harmonises euro-denominated bank transfers across participating countries. SEPA was
+                            designed to make cross-border euro payments within the participating area as simple and
+                            cost-effective as domestic transfers.</p>
+                        <p>SEPA payments use the IBAN and BIC identifiers. The main SEPA payment types are:</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-4">
+                            <div class="p-4 border border-slate-200 rounded-xl">
+                                <div class="font-bold text-slate-900 mb-2">SEPA Credit Transfer (SCT)</div>
+                                <p class="text-xs text-slate-600">Standard euro bank transfers between accounts in SEPA
+                                    countries. Typically settle within one business day.</p>
+                            </div>
+                            <div class="p-4 border border-slate-200 rounded-xl">
+                                <div class="font-bold text-slate-900 mb-2">SEPA Instant (SCT Inst)</div>
+                                <p class="text-xs text-slate-600">Real-time euro transfers settling within seconds,
+                                    available around the clock for participating banks.</p>
+                            </div>
+                            <div class="p-4 border border-slate-200 rounded-xl">
+                                <div class="font-bold text-slate-900 mb-2">SEPA Direct Debit (SDD)</div>
+                                <p class="text-xs text-slate-600">Allows businesses to collect recurring euro payments
+                                    from customer accounts in SEPA countries, typically for subscriptions or invoices.
+                                </p>
+                            </div>
+                        </div>
+                        <p>SEPA includes all EU member states as well as several non-EU countries including Iceland,
+                            Norway, Liechtenstein, Switzerland, and the UK (the UK continues to participate in SEPA
+                            despite leaving the EU). SEPA applies to euro transfers only — transfers in other currencies
+                            use the standard international banking channels.</p>
+                    </div>
+                </section>
+
+                <!-- International Wire Transfers -->
+                <section id="international-wire"
+                    class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <div class="border-b border-slate-100 pb-5 mb-6">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">How Transfers
+                            Work</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">International Wire Transfers</h2>
+                    </div>
+                    <div
+                        class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                        <p>When you instruct your bank to send an international wire transfer, the following sequence
+                            typically occurs:</p>
+                        <div class="space-y-3">
+                            <div class="flex gap-4 p-4 bg-slate-50 rounded-xl border border-slate-200 items-start">
+                                <div
+                                    class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">
+                                    1</div>
+                                <div><strong class="text-slate-900">Transfer instruction initiated</strong>
+                                    <p class="text-xs text-slate-500 mt-1">You provide the recipient's SWIFT/BIC code,
+                                        IBAN (or local account number), and the transfer amount. Your bank debits your
+                                        account.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 p-4 bg-slate-50 rounded-xl border border-slate-200 items-start">
+                                <div
+                                    class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">
+                                    2</div>
+                                <div><strong class="text-slate-900">SWIFT message sent</strong>
+                                    <p class="text-xs text-slate-500 mt-1">Your bank sends a SWIFT message (typically
+                                        MT103 for single customer credit transfers) to the recipient's bank, directly or
+                                        via one or more correspondent banks.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 p-4 bg-slate-50 rounded-xl border border-slate-200 items-start">
+                                <div
+                                    class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">
+                                    3</div>
+                                <div><strong class="text-slate-900">Correspondent banking</strong>
+                                    <p class="text-xs text-slate-500 mt-1">If there is no direct banking relationship
+                                        between sender and recipient banks, the payment routes through one or more
+                                        correspondent/intermediary banks. Each may apply its own fee.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 p-4 bg-slate-50 rounded-xl border border-slate-200 items-start">
+                                <div
+                                    class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">
+                                    4</div>
+                                <div><strong class="text-slate-900">Compliance checks</strong>
+                                    <p class="text-xs text-slate-500 mt-1">Each bank in the chain performs AML and
+                                        sanctions screening before passing the transfer on. This process can add time —
+                                        particularly for large or unusual transfers.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 p-4 bg-slate-50 rounded-xl border border-slate-200 items-start">
+                                <div
+                                    class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">
+                                    5</div>
+                                <div><strong class="text-slate-900">Recipient credited</strong>
+                                    <p class="text-xs text-slate-500 mt-1">The receiving bank credits the recipient's
+                                        account. The total time from initiation to credit typically ranges from one to
+                                        five business days, depending on the corridor and number of correspondent banks
+                                        involved.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Correspondent Banking -->
+                <section id="correspondent-banking"
+                    class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <div class="border-b border-slate-100 pb-5 mb-6">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Banking Network</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Correspondent Banking</h2>
+                    </div>
+                    <div
+                        class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                        <p>Not every bank in the world has a direct banking relationship with every other bank. To
+                            enable cross-border payments between institutions that do not have a direct relationship,
+                            the global banking system relies on a network of <strong>correspondent banks</strong>.</p>
+                        <p>A correspondent bank is a financial institution that holds accounts on behalf of other banks
+                            and executes transactions in foreign currencies on their behalf. Large global banks —
+                            particularly those in major financial centres — serve as correspondent banks for smaller
+                            regional and local banks around the world.</p>
+                        <div class="diagram-box p-6 my-6">
+                            <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 text-center">
+                                Correspondent Banking Path</div>
+                            <div class="flex flex-wrap items-center justify-center gap-2 text-xs text-center">
+                                <div class="p-3 bg-blue-50 border border-blue-200 rounded-xl w-24">
+                                    <div class="font-bold text-blue-800">Sender's Bank</div>
+                                    <div class="text-slate-500">(Local)</div>
+                                </div>
+                                <div class="text-slate-400 font-bold">→</div>
+                                <div class="p-3 bg-purple-50 border border-purple-200 rounded-xl w-28">
+                                    <div class="font-bold text-purple-800">Correspondent Bank A</div>
+                                    <div class="text-slate-500">(Global hub)</div>
+                                </div>
+                                <div class="text-slate-400 font-bold">→</div>
+                                <div class="p-3 bg-amber-50 border border-amber-200 rounded-xl w-28">
+                                    <div class="font-bold text-amber-800">Correspondent Bank B</div>
+                                    <div class="text-slate-500">(Regional)</div>
+                                </div>
+                                <div class="text-slate-400 font-bold">→</div>
+                                <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl w-24">
+                                    <div class="font-bold text-emerald-800">Recipient's Bank</div>
+                                    <div class="text-slate-500">(Local)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Each correspondent bank along the chain may deduct a fee. This is why the amount received by
+                            the beneficiary in a traditional SWIFT wire transfer can sometimes be slightly less than the
+                            amount originally sent. Modern money transfer services often work around this by using their
+                            own internal networks or local payment systems rather than routing through the full
+                            correspondent banking chain.</p>
+                    </div>
+                </section>
+
+                <!-- Intermediary Banks -->
+                <section id="intermediary-banks"
+                    class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <div class="border-b border-slate-100 pb-5 mb-6">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Routing Chain</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Intermediary Banks</h2>
+                    </div>
+                    <div
+                        class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                        <p>An intermediary bank is any bank that sits between the sending bank and the receiving bank in
+                            a SWIFT wire transfer. In practice, intermediary and correspondent bank are often synonymous
+                            terms. When initiating a transfer, you may be asked to provide intermediary bank details if
+                            your sending bank requires them.</p>
+                        <p>Intermediary banks are relevant because they:</p>
+                        <ul class="list-disc pl-5 space-y-1 text-sm">
+                            <li>May charge their own fees, reducing the amount delivered to the recipient</li>
+                            <li>Add processing time to the transfer chain</li>
+                            <li>Perform their own compliance checks, which can cause delays</li>
+                            <li>Are identified by their own SWIFT/BIC codes in payment instructions</li>
+                        </ul>
+                        <p>The SHA, OUR, and BEN fee arrangements in a SWIFT transfer specify who bears the cost of
+                            intermediary fees:</p>
+                        <div class="overflow-x-auto mt-4">
+                            <table
+                                class="w-full text-xs sm:text-sm border-collapse border border-slate-200 rounded-xl overflow-hidden"
+                                aria-label="SWIFT fee arrangement types">
+                                <thead class="bg-slate-100 text-slate-700 font-bold">
+                                    <tr>
+                                        <th class="p-3 border border-slate-200 text-left">Code</th>
+                                        <th class="p-3 border border-slate-200 text-left">Stands For</th>
+                                        <th class="p-3 border border-slate-200 text-left">Who Pays</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-slate-600 divide-y divide-slate-200">
+                                    <tr class="hover:bg-slate-50">
+                                        <td class="p-3 border border-slate-200 font-bold font-mono">SHA</td>
+                                        <td class="p-3 border border-slate-200">Shared</td>
+                                        <td class="p-3 border border-slate-200">Sender pays own bank's fee. Recipient
+                                            pays receiving bank's fee. Most common arrangement.</td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50">
+                                        <td class="p-3 border border-slate-200 font-bold font-mono">OUR</td>
+                                        <td class="p-3 border border-slate-200">Our (sender's)</td>
+                                        <td class="p-3 border border-slate-200">Sender pays all fees. Recipient receives
+                                            the full transferred amount.</td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50">
+                                        <td class="p-3 border border-slate-200 font-bold font-mono">BEN</td>
+                                        <td class="p-3 border border-slate-200">Beneficiary</td>
+                                        <td class="p-3 border border-slate-200">All fees deducted from the transferred
+                                            amount. Recipient receives less than the gross amount.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Identifier Reference -->
+                <section id="identifier-examples"
+                    class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <div class="border-b border-slate-100 pb-5 mb-6">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Quick Reference</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Banking Identifier Reference by
+                            Country</h2>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table
+                            class="w-full text-xs sm:text-sm border-collapse border border-slate-200 rounded-xl overflow-hidden"
+                            aria-label="Banking identifiers required by country">
+                            <thead class="bg-slate-100 text-slate-700 font-bold">
+                                <tr>
+                                    <th class="p-3 border border-slate-200 text-left">Country / Region</th>
+                                    <th class="p-3 border border-slate-200 text-left">Uses IBAN?</th>
+                                    <th class="p-3 border border-slate-200 text-left">Domestic Identifier</th>
+                                    <th class="p-3 border border-slate-200 text-left">For International Transfer</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-slate-600 divide-y divide-slate-200">
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border border-slate-200 font-medium">UK</td>
+                                    <td class="p-3 border border-slate-200 text-emerald-700 font-bold">Yes</td>
+                                    <td class="p-3 border border-slate-200">Sort code + account number</td>
+                                    <td class="p-3 border border-slate-200">IBAN + SWIFT/BIC</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border border-slate-200 font-medium">EU Countries</td>
+                                    <td class="p-3 border border-slate-200 text-emerald-700 font-bold">Yes</td>
+                                    <td class="p-3 border border-slate-200">Local account + bank code</td>
+                                    <td class="p-3 border border-slate-200">IBAN + BIC (SEPA or SWIFT)</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border border-slate-200 font-medium">United States</td>
+                                    <td class="p-3 border border-slate-200 text-red-600 font-bold">No</td>
+                                    <td class="p-3 border border-slate-200">Routing number + account number</td>
+                                    <td class="p-3 border border-slate-200">SWIFT + routing number + account number</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border border-slate-200 font-medium">Australia</td>
+                                    <td class="p-3 border border-slate-200 text-red-600 font-bold">No</td>
+                                    <td class="p-3 border border-slate-200">BSB (bank state branch) + account</td>
+                                    <td class="p-3 border border-slate-200">SWIFT + BSB + account number</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border border-slate-200 font-medium">India</td>
+                                    <td class="p-3 border border-slate-200 text-red-600 font-bold">No</td>
+                                    <td class="p-3 border border-slate-200">IFSC code + account number</td>
+                                    <td class="p-3 border border-slate-200">SWIFT + IFSC + account number</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border border-slate-200 font-medium">UAE</td>
+                                    <td class="p-3 border border-slate-200 text-emerald-700 font-bold">Yes</td>
+                                    <td class="p-3 border border-slate-200">Local account</td>
+                                    <td class="p-3 border border-slate-200">IBAN + SWIFT/BIC</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border border-slate-200 font-medium">Canada</td>
+                                    <td class="p-3 border border-slate-200 text-red-600 font-bold">No</td>
+                                    <td class="p-3 border border-slate-200">Transit number + institution + account</td>
+                                    <td class="p-3 border border-slate-200">SWIFT + transit + account number</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border border-slate-200 font-medium">Philippines</td>
+                                    <td class="p-3 border border-slate-200 text-red-600 font-bold">No</td>
+                                    <td class="p-3 border border-slate-200">Account number</td>
+                                    <td class="p-3 border border-slate-200">SWIFT + account number</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-xs text-slate-400 italic mt-3">Illustrative guidance only. Always verify exact
+                        requirements with the receiving bank before initiating a transfer.</p>
+                </section>
+
+                <!-- Common Mistakes -->
+                <section id="common-mistakes"
+                    class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <div class="border-b border-slate-100 pb-5 mb-6">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Avoid These</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Common Mistakes with SWIFT & IBAN
+                        </h2>
+                    </div>
+                    <div class="space-y-3 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        <div class="p-4 bg-red-50 rounded-xl border border-red-100"><strong
+                                class="text-red-800">Providing only the SWIFT code without the IBAN:</strong> For
+                            countries that use IBAN, providing only the SWIFT code without the IBAN may result in
+                            rejection or significant delays. Both are typically required together.</div>
+                        <div class="p-4 bg-red-50 rounded-xl border border-red-100"><strong
+                                class="text-red-800">Entering an incorrect IBAN:</strong> A single character error in an
+                            IBAN can cause the payment to fail, be rejected, or — in some cases — be credited to an
+                            incorrect account. Always verify character by character.</div>
+                        <div class="p-4 bg-red-50 rounded-xl border border-red-100"><strong
+                                class="text-red-800">Confusing a routing number with a SWIFT code:</strong> A US routing
+                            number is a domestic identifier. For international wires into a US account, the SWIFT code
+                            (not the routing number alone) is required from the sender's side.</div>
+                        <div class="p-4 bg-red-50 rounded-xl border border-red-100"><strong class="text-red-800">Using
+                                an 8-character SWIFT code when 11 characters are required:</strong> Some receiving banks
+                            require the full 11-character branch-specific code. When in doubt, ask the recipient to
+                            confirm the exact SWIFT/BIC code with their bank.</div>
+                        <div class="p-4 bg-red-50 rounded-xl border border-red-100"><strong
+                                class="text-red-800">Assuming all countries use IBAN:</strong> Many countries —
+                            including the US, Australia, India, Canada, China, and most of Asia — do not use IBAN. Using
+                            this guide's country reference table helps determine what identifiers are required.</div>
+                        <div class="p-4 bg-red-50 rounded-xl border border-red-100"><strong class="text-red-800">Sending
+                                to a closed or incorrect account number:</strong> If the IBAN is correctly formatted but
+                            the underlying account is closed or the number is wrong, the bank may return the funds — but
+                            recovery can take days or weeks and may involve fees.</div>
+                    </div>
+                </section>
+
+                <!-- Security Tips -->
+                <section id="security-tips"
+                    class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <div class="border-b border-slate-100 pb-5 mb-6">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Protect Yourself</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Security Tips for Bank Transfers
+                        </h2>
+                    </div>
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-100"><strong
+                                class="text-emerald-800">✓ Always verify bank details independently</strong>
+                            <p class="mt-1">Before sending a large transfer, call the recipient directly using a number
+                                you already have — not one provided in the same message as the bank details — to confirm
+                                the account information.</p>
+                        </div>
+                        <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-100"><strong
+                                class="text-emerald-800">✓ Be alert to Authorised Push Payment (APP) fraud</strong>
+                            <p class="mt-1">Scammers impersonate legitimate contacts — solicitors, suppliers, or
+                                landlords — and provide fraudulent bank details to redirect payments. Verify any new or
+                                changed payment details by phone.</p>
+                        </div>
+                        <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-100"><strong
+                                class="text-emerald-800">✓ Send a small test amount first</strong>
+                            <p class="mt-1">For large first-time transfers to a new account, consider sending a small
+                                amount first and confirming receipt before sending the balance.</p>
+                        </div>
+                        <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-100"><strong
+                                class="text-emerald-800">✓ Do not share your banking credentials</strong>
+                            <p class="mt-1">SWIFT codes and IBANs are used for receiving funds. Never share your online
+                                banking login, OTPs, or authentication codes with anyone claiming to verify a transfer.
+                            </p>
+                        </div>
+                        <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-100"><strong
+                                class="text-emerald-800">✓ Verify SWIFT codes with the receiving bank</strong>
+                            <p class="mt-1">SWIFT codes are publicly available for legitimate institutions. If you
+                                receive bank details by email or message, verify the SWIFT code independently through
+                                the bank's official website or by calling them directly.</p>
+                        </div>
+                        <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-100"><strong
+                                class="text-emerald-800">✓ Use secure connections</strong>
+                            <p class="mt-1">Always initiate transfers through official banking apps or websites accessed
+                                via secure, private internet connections. Avoid initiating payments on public Wi-Fi.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Glossary -->
+                <section id="glossary"
+                    class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <div class="border-b border-slate-100 pb-5 mb-6">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Key Terms</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">SWIFT & IBAN Glossary</h2>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table
+                            class="w-full text-xs sm:text-sm border-collapse border border-slate-200 rounded-xl overflow-hidden"
+                            aria-label="SWIFT and IBAN glossary">
+                            <thead class="bg-slate-100 text-slate-700 font-bold">
+                                <tr>
+                                    <th class="p-3 border border-slate-200 text-left w-36">Term</th>
+                                    <th class="p-3 border border-slate-200 text-left">Definition</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-slate-600 divide-y divide-slate-200">
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border border-slate-200 font-bold">SWIFT</td>
+                                    <td class="p-3 border border-slate-200">Society for Worldwide Interbank Financial
+                                        Telecommunication. The global messaging network used by banks to exchange
+                                        payment instructions.</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border border-slate-200 font-bold">BIC</td>
+                                    <td class="p-3 border border-slate-200">Bank Identifier Code. The ISO formal name
+                                        for a SWIFT code. The two terms are interchangeable.</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border border-slate-200 font-bold">IBAN</td>
+                                    <td class="p-3 border border-slate-200">International Bank Account Number. A
+                                        standardised format for identifying a specific bank account across borders,
+                                        including country code, check digits, bank code, and account number.</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border border-slate-200 font-bold">SEPA</td>
+                                    <td class="p-3 border border-slate-200">Single Euro Payments Area. A European
+                                        payment framework enabling simplified euro transfers between participating
+                                        countries using IBAN and BIC.</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border border-slate-200 font-bold">Routing Number</td>
+                                    <td class="p-3 border border-slate-200">A 9-digit US-specific identifier for a bank
+                                        or branch used in domestic ACH and wire transfers.</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border border-slate-200 font-bold">Sort Code</td>
+                                    <td class="p-3 border border-slate-200">A 6-digit UK/Ireland bank branch identifier
+                                        in the format XX-XX-XX, used for domestic transfers.</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border border-slate-200 font-bold">Correspondent Bank</td>
+                                    <td class="p-3 border border-slate-200">A financial institution that provides
+                                        banking services on behalf of another bank in a different country or currency,
+                                        enabling international fund routing.</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border border-slate-200 font-bold">Intermediary Bank</td>
+                                    <td class="p-3 border border-slate-200">A bank in the payment chain between the
+                                        sender's and recipient's banks. May deduct fees as the transfer passes through.
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border border-slate-200 font-bold">MT103</td>
+                                    <td class="p-3 border border-slate-200">The standard SWIFT message type for single
+                                        customer credit transfers (international wire payments). Banks use MT103
+                                        messages to instruct the recipient's bank to credit a specified account.</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border border-slate-200 font-bold">SWIFT GPI</td>
+                                    <td class="p-3 border border-slate-200">Global Payments Innovation — an initiative
+                                        enhancing speed, tracking, and transparency for cross-border SWIFT payments.
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border border-slate-200 font-bold">ACH</td>
+                                    <td class="p-3 border border-slate-200">Automated Clearing House. The US domestic
+                                        batch payment network used for direct deposits, payroll, and consumer payments.
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border border-slate-200 font-bold">IFSC</td>
+                                    <td class="p-3 border border-slate-200">Indian Financial System Code. An
+                                        11-character alphanumeric code used to identify a specific bank branch in
+                                        India's domestic NEFT, RTGS, and IMPS payment networks.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- FAQs -->
+                <section id="faq" class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <div class="border-b border-slate-100 pb-5 mb-6">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Common Questions</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Frequently Asked Questions</h2>
+                    </div>
+                    <div class="space-y-3">
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary
+                                class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                What is a SWIFT code?<svg
+                                    class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                A SWIFT code is a standard format identifier used to identify financial institutions in
+                                international wire transfers. SWIFT codes are also known as BIC codes — both terms refer
+                                to the same identifier.</div>
+                        </details>
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary
+                                class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                What is the difference between a SWIFT code and a BIC?<svg
+                                    class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                There is no functional difference. BIC is the formal ISO standard name and SWIFT is the
+                                network that uses these codes. Both terms refer to the same alphanumeric identifier used
+                                to identify a bank in international transactions.</div>
+                        </details>
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary
+                                class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                What is an IBAN?<svg
+                                    class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                An IBAN (International Bank Account Number) is a standardised format for identifying an
+                                individual bank account across national borders. It begins with a two-letter country
+                                code, followed by two check digits, and a series of alphanumeric characters identifying
+                                the bank and account.</div>
+                        </details>
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary
+                                class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                How long is a SWIFT code?<svg
+                                    class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                SWIFT codes are either 8 or 11 characters. An 8-character code identifies the bank and
+                                country. An 11-character code additionally identifies the specific branch. If only 8
+                                characters are known, 'XXX' is often appended.</div>
+                        </details>
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary
+                                class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                Do all countries use IBAN?<svg
+                                    class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                No. IBAN is most widely used in Europe, the Middle East, and parts of North Africa. The
+                                United States, Canada, Australia, India, China, and most of Southeast Asia do not use
+                                IBAN. Transfers to these countries use a SWIFT code and local account number.</div>
+                        </details>
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary
+                                class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                What is a routing number?<svg
+                                    class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                A routing number is a 9-digit code used in the United States to identify a bank for
+                                domestic ACH and wire transfers. It is US-specific and is not used internationally in
+                                the way SWIFT codes are.</div>
+                        </details>
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary
+                                class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                What is a sort code?<svg
+                                    class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                A sort code is a 6-digit UK/Ireland identifier in the format XX-XX-XX used for domestic
+                                bank transfers. For international transfers into a UK account, the IBAN and SWIFT/BIC
+                                are used instead.</div>
+                        </details>
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary
+                                class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                What is SEPA?<svg
+                                    class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                SEPA (Single Euro Payments Area) is a European Union payment integration initiative that
+                                simplifies bank transfers in euros across participating countries. SEPA transfers use
+                                IBAN and BIC and are generally faster and cheaper than non-SEPA international transfers.
+                            </div>
+                        </details>
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary
+                                class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                What is a correspondent bank?<svg
+                                    class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                A correspondent bank is a financial institution that provides banking services on behalf
+                                of another bank in a different country. When two banks lack a direct relationship,
+                                correspondent banks route international transfers — and may charge fees along the way.
+                            </div>
+                        </details>
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary
+                                class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                Can I send a SWIFT transfer without an IBAN?<svg
+                                    class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                For countries that use IBAN, you should always provide the IBAN alongside the SWIFT/BIC
+                                code. For countries that do not use IBAN — such as the US, Australia, or India — you
+                                will provide a SWIFT code with the local account number instead.</div>
+                        </details>
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary
+                                class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                How do I find a bank's SWIFT code?<svg
+                                    class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                SWIFT codes are listed on a bank's official website, on bank statements, and in online
+                                banking dashboards. Verify the code with the receiving bank before initiating a large
+                                transfer.</div>
+                        </details>
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary
+                                class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                What happens if I enter the wrong IBAN?<svg
+                                    class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                Entering the wrong IBAN may cause the transfer to be rejected, returned, or credited to
+                                an incorrect account. Recovery of funds can be a lengthy process. Always verify the IBAN
+                                character by character before confirming.</div>
+                        </details>
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary
+                                class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                What is SHA, OUR, or BEN in a SWIFT transfer?<svg
+                                    class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                These codes define who pays correspondent bank fees. SHA (Shared) means both parties pay
+                                their own bank's fees. OUR means the sender pays all fees. BEN means all fees are
+                                deducted from the transferred amount, so the recipient receives less.</div>
+                        </details>
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary
+                                class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                Does IBAN have a checksum?<svg
+                                    class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                Yes. IBANs contain two check digits (positions 3 and 4) that allow mathematical
+                                validation before processing. This helps detect simple data-entry errors. Most banking
+                                software validates the checksum automatically.</div>
+                        </details>
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary
+                                class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                Does SWIFT move money directly?<svg
+                                    class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                No. SWIFT is a messaging network, not a fund transfer mechanism. It transmits
+                                standardised payment instructions between financial institutions. The actual movement of
+                                funds occurs through the banking system, triggered by these messages.</div>
+                        </details>
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary
+                                class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                Why do international bank transfers sometimes take longer than expected?<svg
+                                    class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                Delays can result from compliance checks at each bank in the chain, the number of
+                                correspondent banks involved, time zone differences, local settlement cut-off times, and
+                                currency conversion processing.</div>
+                        </details>
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary
+                                class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                Can money transfer apps bypass the SWIFT network?<svg
+                                    class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                Some modern transfer services use internal liquidity pools or local payment networks
+                                rather than routing through the traditional SWIFT correspondent banking chain, which can
+                                reduce fees and improve speed while still delivering funds to the recipient's bank
+                                account.</div>
+                        </details>
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary
+                                class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                What is SWIFT GPI?<svg
+                                    class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                SWIFT GPI (Global Payments Innovation) enhances cross-border payment tracking,
+                                transparency, and speed within the traditional SWIFT network. Banks participating in
+                                SWIFT GPI can provide end-to-end tracking of international wire transfers.</div>
+                        </details>
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary
+                                class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                What is SEPA Instant?<svg
+                                    class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                SEPA Instant is an extension of the SEPA framework that allows euro transfers to settle
+                                within seconds, around the clock. Both the sending and receiving banks must be enrolled
+                                in the SEPA Instant scheme.</div>
+                        </details>
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary
+                                class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                What identifiers do I need to receive money from abroad?<svg
+                                    class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-colors font-semibold text-slate-800 text-sm shrink-0"></svg>
+                            </summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                If you are in an IBAN country, you will typically need to provide your IBAN and
+                                SWIFT/BIC code to the sender. If you are in a non-IBAN country such as the US, India, or
+                                Australia, you will need to provide your SWIFT code, local account number, and any
+                                relevant domestic routing identifier such as a routing number or IFSC.</div>
+                        </details>
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary
+                                class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                How does an IFSC code differ from a SWIFT code?<svg
+                                    class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                An IFSC (Indian Financial System Code) is an 11-character code used for domestic Indian
+                                transfers via NEFT, RTGS, and IMPS. It is a domestic identifier only. A SWIFT code is
+                                used for international transfers into Indian accounts. The two serve different purposes.
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <!-- Related Resources -->
+                <section id="related" class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <div class="border-b border-slate-100 pb-5 mb-6">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Explore Further</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Related Resources</h2>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+                        <a href="/money-transfer/"
+                            class="p-4 border border-slate-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 font-bold text-slate-800 hover:text-blue-600 transition-all">Money
+                            Transfer Hub →<span class="block text-xs font-normal text-slate-500 mt-1">Complete
+                                international transfer guide</span></a>
+                        <a href="/money-transfer/exchange-rates/"
+                            class="p-4 border border-slate-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 font-bold text-slate-800 hover:text-blue-600 transition-all">Exchange
+                            Rate Guide →<span class="block text-xs font-normal text-slate-500 mt-1">How exchange rates
+                                and margins work</span></a>
+                        <a href="/money-transfer/country-guides/"
+                            class="p-4 border border-slate-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 font-bold text-slate-800 hover:text-blue-600 transition-all">Country
+                            Guides →<span class="block text-xs font-normal text-slate-500 mt-1">Identifiers needed by
+                                destination country</span></a>
+                        <a href="/money-transfer/provider-comparisons/"
+                            class="p-4 border border-slate-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 font-bold text-slate-800 hover:text-blue-600 transition-all">Provider
+                            Comparisons →<span class="block text-xs font-normal text-slate-500 mt-1">Head-to-head
+                                provider analysis</span></a>
+                        <a href="/money-transfer/provider-reviews/"
+                            class="p-4 border border-slate-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 font-bold text-slate-800 hover:text-blue-600 transition-all">Provider
+                            Reviews →<span class="block text-xs font-normal text-slate-500 mt-1">In-depth individual
+                                provider analysis</span></a>
+                        <a href="/money-transfer/calculators/"
+                            class="p-4 border border-slate-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 font-bold text-slate-800 hover:text-blue-600 transition-all">Money
+                            Transfer Calculators →<span class="block text-xs font-normal text-slate-500 mt-1">Compare
+                                transfer costs and net payouts</span></a>
+                    </div>
+                </section>
+
+                <!-- Summary -->
+                <section id="summary" class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <div class="border-b border-slate-100 pb-5 mb-6">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Key Takeaways</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Summary</h2>
+                    </div>
+                    <div
+                        class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                        <p>Understanding SWIFT codes, IBANs, and the correspondent banking network demystifies how
+                            international transfers actually work and helps you avoid costly errors.</p>
+                        <ul class="list-disc pl-5 space-y-2 text-sm">
+                            <li>A <strong>SWIFT/BIC code</strong> identifies the bank. It is 8 or 11 characters and used
+                                globally.</li>
+                            <li>An <strong>IBAN</strong> identifies the specific bank account. It is used in Europe, the
+                                Middle East, and parts of Africa — not universally.</li>
+                            <li>IBAN-supported countries need both a SWIFT/BIC and an IBAN for incoming international
+                                transfers.</li>
+                            <li>Non-IBAN countries (US, Australia, India, Canada, etc.) use a SWIFT code plus local
+                                account number.</li>
+                            <li>SEPA simplifies euro transfers within Europe using IBAN and BIC.</li>
+                            <li>Correspondent and intermediary banks route funds between institutions without direct
+                                relationships, and may charge fees.</li>
+                            <li>Always verify bank details independently before initiating large transfers to protect
+                                against payment fraud.</li>
+                        </ul>
+                    </div>
+                    <div
+                        class="mt-8 bg-blue-50 p-6 rounded-2xl border border-blue-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div>
+                            <div class="font-bold text-slate-900 text-lg">Compare International Transfer Providers</div>
+                            <div class="text-xs text-slate-600">Use our calculator to compare fees and exchange rates
+                            </div>
+                        </div>
+                        <a href="/money-transfer/calculators/"
+                            class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-xs sm:text-sm transition-all shadow-md">Open
+                            Calculator →</a>
+                    </div>
+                </section>
+
+            
+        <!-- Disclaimer -->
+        <div class="mt-10 border-l-4 border-slate-300 bg-slate-50 p-4 sm:p-5 rounded-r-xl">
+            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed m-0">
+                <span class="font-bold text-slate-700">Disclaimer:</span> Exchange rates, transfer fees, transfer speeds, supported countries, and provider policies may change over time. Always verify the latest information directly with the official money transfer provider before making a transfer. ArthCalculator provides educational information only and does not provide financial, legal, or tax advice.
+            </p>
+        </div>
+    </main>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script src="/js/search.js" defer></script>
+    <script>
+        fetch("/navbar.html").then(r => r.text()).then(d => { document.getElementById("navbar").innerHTML = d; const b = document.getElementById("menuBtn"), m = document.getElementById("mobileMenu"); if (b) b.addEventListener("click", () => m.classList.toggle("hidden")); });
+        fetch("/footer.html").then(r => r.text()).then(d => { document.getElementById("footer").innerHTML = d; });
+        window.addEventListener("DOMContentLoaded", () => { const obs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.intersectionRatio > 0.1) { document.querySelectorAll("aside nav a").forEach(a => a.classList.remove("text-blue-600", "font-bold")); const a = document.querySelector(`aside nav a[href="#${e.target.id}"]`); if (a) a.classList.add("text-blue-600", "font-bold"); } }); }, { threshold: [0.1, 0.5], rootMargin: "-20% 0px -60% 0px" }); document.querySelectorAll("main section[id]").forEach(s => obs.observe(s)); });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XIRR vs CAGR: Calculating Mutual Fund Returns | ArthCalculator</title>
+    <meta name="description" content="Demystifying return metrics in India. Learn why CAGR fails for SIPs, why XIRR is required for multiple cash flows, and how absolute returns can be deceptive.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/blog/xirr-vs-cagr-for-mutual-fund-returns/">
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="XIRR vs CAGR: Calculating Mutual Fund Returns">
+    <meta property="og:description" content="Stop looking at the wrong numbers. A definitive guide to measuring your portfolio's performance.">
+    <meta property="og:url" content="https://arthcalculator.in/blog/xirr-vs-cagr-for-mutual-fund-returns/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="XIRR vs CAGR in India">
+    <meta name="twitter:description" content="Understand the exact mathematics behind mutual fund returns.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #f8fafc; }
+        .prose p { margin: 0 0 1rem; line-height: 1.8; }
+        .prose h2 { margin-top: 2.8rem; }
+        .prose h3 { margin-top: 1.8rem; }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "ArthCalculator",
+          "url": "https://arthcalculator.in/"
+        },
+        {
+          "@type": "WebPage",
+          "name": "XIRR vs CAGR: Calculating Mutual Fund Returns",
+          "url": "https://arthcalculator.in/blog/xirr-vs-cagr-for-mutual-fund-returns/"
+        },
+        {
+          "@type": "Article",
+          "headline": "XIRR vs CAGR: Calculating Mutual Fund Returns",
+          "mainEntityOfPage": "https://arthcalculator.in/blog/xirr-vs-cagr-for-mutual-fund-returns/",
+          "publisher": {
+            "@type": "Organization",
+            "name": "ArthCalculator"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://arthcalculator.in/blog/" },
+            { "@type": "ListItem", "position": 3, "name": "XIRR vs CAGR", "item": "https://arthcalculator.in/blog/xirr-vs-cagr-for-mutual-fund-returns/" }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Why can't I use CAGR for my SIP investments?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "CAGR assumes you invested a single lump-sum amount at the beginning of the period. Because a SIP involves multiple investments at different times (each having a different holding period), CAGR will give you a wildly incorrect and inflated result. You must use XIRR for SIPs."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is Absolute Return?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolute return is simply how much money you made divided by how much you invested, completely ignoring the time it took. A 50% absolute return is amazing if achieved in 1 year, but terrible if it took 10 years."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is XIRR the same as annualized return?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, XIRR effectively calculates the annualized return (the average yearly growth rate) of a series of irregular cash flows occurring at different intervals."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="text-slate-700">
+    <div id="navbar"></div>
+    <main class="max-w-4xl mx-auto px-4 py-10 sm:py-16">
+        <nav aria-label="Breadcrumb" class="text-sm text-slate-500 mb-8">
+            <a href="/" class="hover:text-blue-600">Home</a> &rarr; 
+            <a href="/blog/" class="hover:text-blue-600">Blog</a> &rarr; 
+            XIRR vs CAGR
+        </nav>
+        
+        <article class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-10 shadow-sm">
+            <header>
+                <p class="text-blue-600 font-semibold text-sm">Investment Returns</p>
+                <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mt-3">XIRR vs CAGR: Calculating Mutual Fund Returns</h1>
+                <p class="text-lg text-slate-600 mt-5">If you look at your mutual fund dashboard and see a "50% Return", you might be getting tricked by bad math. Understanding the difference between Absolute Return, CAGR, and XIRR is the most critical skill for any Indian investor.</p>
+            </header>
+            
+            <div class="prose mt-10 max-w-none">
+                
+                <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 my-8 flex items-center justify-between flex-wrap gap-4">
+                    <div>
+                        <h3 class="font-bold text-blue-900 mt-0">Measure Your Portfolio's True Speed</h3>
+                        <p class="text-sm text-blue-800 mb-0">Use our calculator to find the exact XIRR of your chaotic, real-world mutual fund SIPs and redemptions.</p>
+                    </div>
+                    <a href="/xirr/" class="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg text-sm transition-all whitespace-nowrap">Open XIRR Calculator</a>
+                </div>
+
+                <h2 class="text-2xl font-bold text-slate-900">1. The Deception of Absolute Return</h2>
+                <p>Absolute return is the simplest math: <em>(Current Value - Invested Amount) / Invested Amount</em>.</p>
+                <p>If you invested ₹1 Lakh and it is now worth ₹1.5 Lakhs, your absolute return is 50%. The problem is that Absolute Return completely ignores <strong>Time</strong>. A 50% absolute return achieved in 6 months is spectacular. A 50% absolute return achieved over 12 years is actually terrible (it wouldn't even beat inflation).</p>
+                <p>Therefore, any metric that does not account for time is useless for evaluating financial performance.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900">2. CAGR: The Gold Standard for Lumpsum</h2>
+                <p>Compound Annual Growth Rate (CAGR) solves the time problem. It tells you the exact, smoothed-out annual rate at which your money grew every single year to reach its final value.</p>
+                
+                <p><strong>When to use CAGR:</strong> You should ONLY use CAGR when you have made a single, one-time (lump-sum) investment, and you have not added or withdrawn any money since.</p>
+                
+                <ul class="list-disc pl-6 mb-6">
+                    <li>You invested ₹1 Lakh in an FD in 2015.</li>
+                    <li>In 2025, it matured at ₹2 Lakhs.</li>
+                    <li>The CAGR is exactly <strong>7.18%</strong>.</li>
+                </ul>
+
+                <p>You can verify this math instantly using our <a href="/cagr/" class="text-blue-700 underline font-semibold">CAGR Calculator</a>.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900">3. Why CAGR Fails for SIPs</h2>
+                <p>If you apply the CAGR formula to a Systematic Investment Plan (SIP), the math shatters. Let's look at why:</p>
+                <p>Suppose you start a ₹10,000/month SIP for 1 year (Total invested = ₹1,20,000). At the end of the year, the value is ₹1,30,000. If you mistakenly plug ₹1,20,000 as the starting value and ₹1,30,000 as the ending value into a CAGR calculator, it will show a depressing ~8.3% return.</p>
+                
+                <p><strong>This is wrong because you didn't invest the full ₹1.2 Lakhs on Day 1!</strong></p>
+                <ul class="list-disc pl-6 mb-6">
+                    <li>The first ₹10,000 was invested for 12 months.</li>
+                    <li>The sixth ₹10,000 was invested for only 6 months.</li>
+                    <li>The last ₹10,000 was invested for just 1 month.</li>
+                </ul>
+                <p>Since the money had very little time in the market, the actual annualized return of that portfolio is much higher than 8.3%.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900">4. Enter XIRR: The Supreme Metric</h2>
+                <p>Extended Internal Rate of Return (XIRR) is the only metric that can handle the chaotic reality of human investing. XIRR calculates an annualized return while accounting for multiple cash inflows (SIPs, lump-sum top-ups) and cash outflows (withdrawals) happening on random, specific dates.</p>
+
+                <div class="overflow-x-auto my-6">
+                    <table class="w-full text-sm border-collapse">
+                        <thead class="bg-slate-100">
+                            <tr>
+                                <th class="p-3 text-left">Metric</th>
+                                <th class="p-3 text-left">Accounts for Time?</th>
+                                <th class="p-3 text-left">Handles Multiple Cash Flows?</th>
+                                <th class="p-3 text-left">Best Used For</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b">
+                                <td class="p-3 font-semibold">Absolute Return</td>
+                                <td class="p-3 text-rose-600 font-bold">No</td>
+                                <td class="p-3 text-rose-600 font-bold">No</td>
+                                <td class="p-3">Bragging rights on Twitter.</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="p-3 font-semibold">CAGR</td>
+                                <td class="p-3 text-emerald-600 font-bold">Yes</td>
+                                <td class="p-3 text-rose-600 font-bold">No</td>
+                                <td class="p-3">Fixed Deposits, one-time Mutual Fund Lumpsums, Real Estate buys.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold">XIRR</td>
+                                <td class="p-3 text-emerald-600 font-bold">Yes</td>
+                                <td class="p-3 text-emerald-600 font-bold">Yes</td>
+                                <td class="p-3">SIPs, SWPs, entire multi-asset portfolios.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>If you want to evaluate whether a Mutual Fund is actually beating the index, you must compare its XIRR over 3, 5, or 10 years. You can evaluate historical fund performance using our <a href="/mutual-fund-returns/" class="text-blue-700 underline font-semibold">Mutual Fund Returns Calculator</a>.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900">Conclusion</h2>
+                <p>Stop looking at the "Absolute Return" percentage in your brokerage app. If you invested a lump sum, calculate the CAGR. If you run a monthly SIP or frequently add cash on market dips, XIRR is the only mathematical truth of your portfolio's performance.</p>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-10">Frequently asked questions</h2>
+                <div class="space-y-3">
+                    <details class="border rounded-xl p-4">
+                        <summary class="font-semibold cursor-pointer">Why can't I use CAGR for my SIP investments?</summary>
+                        <p class="mt-3 text-slate-600">CAGR assumes you invested a single lump-sum amount at the beginning of the period. Because a SIP involves multiple investments at different times (each having a different holding period), CAGR will give you a wildly incorrect and inflated result. You must use XIRR for SIPs.</p>
+                    </details>
+                    <details class="border rounded-xl p-4">
+                        <summary class="font-semibold cursor-pointer">What is Absolute Return?</summary>
+                        <p class="mt-3 text-slate-600">Absolute return is simply how much money you made divided by how much you invested, completely ignoring the time it took. A 50% absolute return is amazing if achieved in 1 year, but terrible if it took 10 years.</p>
+                    </details>
+                    <details class="border rounded-xl p-4">
+                        <summary class="font-semibold cursor-pointer">Is XIRR the same as annualized return?</summary>
+                        <p class="mt-3 text-slate-600">Yes, XIRR effectively calculates the annualized return (the average yearly growth rate) of a series of irregular cash flows occurring at different intervals.</p>
+                    </details>
+                </div>
+            </div>
+        </article>
+    </main>
+    <div id="footer"></div>
+    <script src="/js/search.js" defer></script>
+    <script>
+        fetch("/navbar.html").then(r=>r.text()).then(t=>document.getElementById("navbar").innerHTML=t);
+        fetch("/footer.html").then(r=>r.text()).then(t=>document.getElementById("footer").innerHTML=t);
+    </script>
+</body>
+</html>
