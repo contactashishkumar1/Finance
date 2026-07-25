@@ -87,40 +87,26 @@
 <body class="text-slate-800 antialiased min-h-screen pb-12">
     <div id="navbar"></div>
 
-    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
-        <div class="max-w-6xl mx-auto px-4 text-pretty">
-            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
-                <ol class="flex list-none p-0">
-                    <li class="flex items-center">
-                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
-                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
-                    </li>
-                    <li class="flex items-center text-pretty text-pretty">
-                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
-                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
-                    </li>
-                    <li class="text-blue-600 font-bold">Goal Planner</li>
-                </ol>
-            </nav>
+    <header class="bg-white border-b border-slate-200 py-16 sm:py-24 text-center">
+        <div class="max-w-4xl mx-auto px-4 text-pretty">
 
-            <div class="flex flex-col md:flex-row justify-between items-center text-pretty text-pretty">
-                <div class="max-w-3xl">
-                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Financial Goal Planner India – Calculate SIP for All Life Goals (Retirement, Education, House & More)</h1>
-                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed text-pretty text-pretty">
-                        Stop guessing your future. Secure your dreams by planning exactly how much to save today for a stress-free tomorrow. Calculate the monthly SIP required for your life milestones.
-                    </p>
-                    <div class="mt-4 p-4 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl text-sm text-blue-800 text-pretty">
-                        <strong>Pro Tip:</strong> Achieving big goals requires beating inflation. Use our <a href="/cagr/" class="font-bold underline text-blue-700">CAGR Calculator</a> to track your annual growth or start a <a href="/sip/" class="font-bold underline text-blue-700">SIP Calculator</a> today to maximize compounding.
-                    </div>
-                </div>
-                <div class="hidden md:block mt-4 md:mt-0">
-                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full border border-blue-100 shadow-sm uppercase tracking-wide">Flagship Suite 2026</span>
-                </div>
+            <div class="mb-6 inline-block">
+                <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full border border-blue-100 shadow-sm uppercase tracking-wide">Flagship Suite 2026</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text pb-4 leading-tight">Financial Goal Planner India – Calculate SIP for All Life Goals</h1>
+            
+            <p class="text-slate-600 mt-4 max-w-3xl mx-auto leading-relaxed text-sm sm:text-lg font-medium text-pretty">
+                Stop guessing your future. Secure your dreams by planning exactly how much to save today for a stress-free tomorrow. Calculate the monthly SIP required for your life milestones like retirement, child education, house, and more.
+            </p>
+            
+            <div class="mt-8 max-w-2xl mx-auto p-4 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl text-sm text-blue-800 text-left text-pretty shadow-sm">
+                <strong>Pro Tip:</strong> Achieving big goals requires beating inflation. Use our <a href="/cagr/" class="font-bold underline text-blue-700">CAGR Calculator</a> to track your annual growth or start a <a href="/sip/" class="font-bold underline text-blue-700">SIP Calculator</a> today to maximize compounding.
             </div>
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-4">
+    <main class="max-w-6xl mx-auto px-4 pt-12 sm:pt-16">
         <!-- Goal Selection -->
         <section class="mb-10 pb-2">
             <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Step 1: Choose Your Financial Goal</h2>
@@ -307,7 +293,37 @@
                 </div>
             </section>
 
-            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                        <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty mb-12">
+                <div class="mb-8">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Master Your Finances</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Goal Planning Masterclass</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-6 bg-slate-50 border border-slate-100 rounded-xl hover:border-blue-300 transition-colors group">
+                        <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-xl border border-slate-200 shadow-sm mb-4 group-hover:scale-110 transition-transform">📉</div>
+                        <h3 class="font-bold text-slate-900 mb-2">The Impact of Inflation</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Inflation is the silent wealth killer. A goal that costs ₹50 Lakhs today will cost ₹1.3 Crores in 15 years at 7% inflation. Always project your required corpus using Future Value (FV) mathematics before starting a SIP.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-slate-50 border border-slate-100 rounded-xl hover:border-blue-300 transition-colors group">
+                        <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-xl border border-slate-200 shadow-sm mb-4 group-hover:scale-110 transition-transform">⚖️</div>
+                        <h3 class="font-bold text-slate-900 mb-2">Asset Allocation by Timeline</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Never invest short-term money in the stock market. For goals under 3 years (like a car), use liquid funds or FDs. For goals beyond 7 years (like retirement), maximize equity exposure to beat inflation.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-slate-50 border border-slate-100 rounded-xl hover:border-blue-300 transition-colors group">
+                        <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-xl border border-slate-200 shadow-sm mb-4 group-hover:scale-110 transition-transform">📈</div>
+                        <h3 class="font-bold text-slate-900 mb-2">The Rule of 72</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Divide 72 by your expected rate of return to know how long it takes for your money to double. At a 12% equity return, your corpus doubles every 6 years, highlighting the massive power of compounding.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+<section class="max-w-4xl mx-auto py-10" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Financial Goal Planning FAQ</h2>
                 <div class="space-y-4" id="faqContainer">
                     <!-- FAQ Content managed by script -->
@@ -420,11 +436,7 @@
             { q: "What return to assume for SIP in India?", a: "For 10+ year horizons, 12% is a safe equity benchmark. For 3-5 year goals, 7-9% in debt or hybrid funds is conservative." },
             { q: "Is SIP enough for retirement?", a: "SIP builds the corpus, but you must transition to a Systematic Withdrawal Plan (SWP) for monthly income post-retirement." },
             { q: "How to reach goals faster?", a: "Use a 'Step-up SIP'—increasing your investment by 10% every year as your salary increases can cut down goal completion time by years." },
-            { q: "What is a good safe withdrawal rate?", a: "The 4% rule is standard, but for the Indian market with higher inflation, 3% is often considered a safer withdrawal rate." },
-            { q: "How to calculate actual portfolio returns?", a: "Use an <a href='/xirr/' class='underline text-pretty text-pretty'>XIRR Calculator</a> to find your personalized internal rate of return for irregular cash flows." },
-            { q: "Does this account for one-time bonuses?", a: "Yes, you can add existing savings which act like a <a href='/lumpsum/' class='underline text-pretty text-pretty'>Lumpsum Investment</a> to reduce your required monthly SIP." },
-            { q: "Can I ignore inflation in short-term goals?", a: "No. Even for a 3-year vacation, 8-10% travel inflation can significantly increase the required ticket price." },
-            { q: "Is home loan better than saving?", a: "Saving for a downpayment reduces your interest outgo by lakhs. Compare your EMI against potential SIP returns." }
+            { q: "What is a good safe withdrawal rate?", a: "The 4% rule is standard, but for the Indian market with higher inflation, 3% is often considered a safer withdrawal rate." }
         ];
 
         function selectGoal(goal) {
