@@ -1,37 +1,53 @@
 <nav class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="flex justify-between items-center h-16 gap-4">
+  <div class="max-w-6xl mx-auto px-4 lg:px-8">
+    <div class="flex justify-between items-center h-16 gap-6">
 
-      <a href="/" class="text-blue-600 font-bold text-lg hover:opacity-80 transition shrink-0">
-        ArthCalculator
+      <a href="/" class="flex items-center gap-2.5 text-blue-600 font-bold text-lg hover:opacity-80 transition shrink-0">
+        <img src="/favicon.png" alt="ArthCalculator Logo" class="h-7 w-auto object-contain">
+        <span class="tracking-tight">ArthCalculator</span>
       </a>
 
-      <div class="hidden md:flex relative flex-1 max-w-xs lg:max-w-sm mx-4">
-        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+      <div class="hidden md:flex relative flex-1 max-w-sm lg:max-w-md mx-auto">
+        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-blue-500">
           <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
         </div>
-        <input type="text" id="desktopSearchTrigger" placeholder="Search calculators..." readonly class="w-full pl-9 pr-4 py-1.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-700 placeholder-slate-400 cursor-pointer hover:bg-slate-100/70 focus:outline-none transition-all">
-        <span class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-[9px] font-bold text-slate-400 uppercase tracking-widest">Ctrl K</span>
+        <input type="text" id="desktopSearchTrigger" placeholder="Search calculators and finance guides..." readonly class="w-full pl-10 pr-14 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium text-slate-700 placeholder-slate-400 cursor-pointer hover:bg-white hover:border-blue-300 hover:shadow-sm focus:outline-none transition-all shadow-sm">
+        <div class="absolute inset-y-0 right-0 pr-2 flex items-center pointer-events-none">
+          <span class="bg-white border border-slate-200 rounded text-[10px] font-bold text-slate-500 tracking-widest px-1.5 py-0.5 shadow-sm">Ctrl K</span>
+        </div>
       </div>
 
-      <div class="hidden md:flex items-center space-x-5 text-sm font-medium text-slate-600 shrink-0">
+      <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-600 shrink-0">
         <a href="/calculators/" class="nav-link">All Calculators</a>
-        <a href="/blog/" class="nav-link font-semibold text-blue-600">Financial Guides</a>
-        <a href="/money-transfer/" class="nav-link">International Money Transfer</a>
+        <a href="/blog/" class="nav-link">Financial Guides</a>
+        <a href="/money-transfer/" class="nav-link">Money Transfer</a>
         <a href="/financial-goal-planner/" class="nav-link">Goal Planner</a>
-        <a href="/sip/" class="nav-link">SIP</a>
-        <a href="/emi/" class="nav-link">EMI</a>
-        <a href="/income-tax/" class="nav-link">Income Tax</a>
-        <a href="/ppf/" class="nav-link">PPF</a>
+        
+        <div class="relative group">
+          <button class="nav-link flex items-center gap-1 focus:outline-none pb-[4px]">
+            Popular Calculators
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-blue-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          
+          <div class="absolute top-full right-0 mt-1 w-52 bg-white border border-slate-200 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-right scale-95 group-hover:scale-100 z-50">
+            <div class="py-2 flex flex-col">
+              <a href="/sip/" class="px-4 py-2.5 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors">SIP Calculator</a>
+              <a href="/emi/" class="px-4 py-2.5 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors">EMI Calculator</a>
+              <a href="/income-tax/" class="px-4 py-2.5 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors">Income Tax Calculator</a>
+              <a href="/ppf/" class="px-4 py-2.5 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors">PPF Calculator</a>
+            </div>
+          </div>
+        </div>
+
         <a href="/about/" class="nav-link">About</a>
       </div>
 
-      <div class="flex items-center gap-1 md:hidden">
+      <div class="flex items-center gap-2 md:hidden">
         <button id="mobileSearchTrigger" class="p-2 text-slate-500 hover:text-blue-600 transition" aria-label="Search Tools">
           <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
         </button>
 
-        <button id="menuBtn" class="text-slate-700 hover:text-blue-600 transition p-2">
+        <button id="menuBtn" class="text-slate-700 hover:text-blue-600 transition p-2 focus:outline-none">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
@@ -41,26 +57,34 @@
     </div>
   </div>
 
-  <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 bg-white">
-    <div class="flex flex-col p-4 space-y-4 text-sm font-medium text-slate-700">
-      <a href="/calculators/" class="hover:text-blue-600">All Calculators</a>
-      <a href="/blog/" class="hover:text-blue-600 font-semibold text-blue-600">Financial Guides ⭐</a>
-      <a href="/money-transfer/" class="hover:text-blue-600">International Money Transfer</a>
-      <a href="/financial-goal-planner/" class="hover:text-blue-600">Financial Goal Planner</a>
-      <a href="/sip/" class="hover:text-blue-600">SIP Calculator</a>
-      <a href="/emi/" class="hover:text-blue-600">EMI Calculator</a>
-      <a href="/income-tax/" class="hover:text-blue-600">Income Tax</a>
-      <a href="/ppf/" class="hover:text-blue-600">PPF Calculator</a>
-      <a href="/about/" class="hover:text-blue-600">About</a>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 bg-white shadow-inner">
+    <div class="flex flex-col p-5 space-y-4 text-sm font-medium text-slate-700">
+      <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+      <a href="/calculators/" class="hover:text-blue-600 transition-colors">All Calculators</a>
+      <a href="/blog/" class="hover:text-blue-600 transition-colors">Financial Guides</a>
+      <a href="/money-transfer/" class="hover:text-blue-600 transition-colors">Money Transfer</a>
+      <a href="/financial-goal-planner/" class="hover:text-blue-600 transition-colors">Goal Planner</a>
+      
+      <div class="pt-3 pb-2 border-t border-slate-100">
+        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 pl-1">Popular Calculators</div>
+        <div class="flex flex-col space-y-3 pl-3">
+          <a href="/sip/" class="hover:text-blue-600 text-slate-600 transition-colors">SIP Calculator</a>
+          <a href="/emi/" class="hover:text-blue-600 text-slate-600 transition-colors">EMI Calculator</a>
+          <a href="/income-tax/" class="hover:text-blue-600 text-slate-600 transition-colors">Income Tax Calculator</a>
+          <a href="/ppf/" class="hover:text-blue-600 text-slate-600 transition-colors">PPF Calculator</a>
+        </div>
+      </div>
+      
+      <a href="/about/" class="hover:text-blue-600 border-t border-slate-100 pt-4 transition-colors">About</a>
     </div>
   </div>
 </nav>
 
 <style>
-.nav-link{ position:relative; padding-bottom:4px; transition:all 0.2s ease; }
-.nav-link:hover{ color:#2563eb; }
-.nav-link::after{ content:""; position:absolute; left:0; bottom:0; width:0; height:2px; background:#2563eb; transition:width 0.25s ease; }
-.nav-link:hover::after{ width:100%; }
-.nav-link.active{ color:#2563eb; font-weight:600; }
-.nav-link.active::after{ width:100%; }
+.nav-link { position:relative; padding-bottom:4px; transition:all 0.2s ease; }
+.nav-link:hover { color:#2563eb; }
+.nav-link::after { content:""; position:absolute; left:0; bottom:0; width:0; height:2px; background:#2563eb; transition:width 0.25s ease; }
+.nav-link:hover::after { width:100%; }
+.nav-link.active { color:#2563eb; font-weight:600; }
+.nav-link.active::after { width:100%; }
 </style>

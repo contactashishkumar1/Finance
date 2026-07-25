@@ -16,15 +16,48 @@
   <div id="navbar"></div>
   
   <!-- Hero Section -->
-  <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-16 sm:py-24 mb-12 shadow-inner">
-      <div class="max-w-6xl mx-auto px-4 text-center">
-          <span class="inline-block py-1 px-3 rounded-full bg-blue-500/20 text-blue-300 font-semibold text-sm mb-4 border border-blue-500/30">ArthCalculator Academy</span>
-          <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6">Master Your Money.</h1>
-          <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">Stop guessing. We break down the exact mathematics of Indian personal finance, taxes, and debt so you can make decisions that actually build wealth.</p>
-      </div>
-  </div>
+  <header class="bg-white border-b border-slate-200 pt-16 pb-20 sm:pt-24 sm:pb-28 mb-12">
+      <div class="max-w-4xl mx-auto px-4 text-center text-pretty">
+          
+          <div class="mb-6 inline-flex items-center gap-2 bg-blue-50 border border-blue-100 px-4 py-1.5 rounded-full text-blue-700 text-xs font-bold uppercase tracking-wider">
+              <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+              </span>
+              FINANCIAL EDUCATION HUB
+          </div>
 
-  <main class="max-w-6xl mx-auto px-4 pb-20">
+          <h1 class="text-4xl sm:text-6xl font-extrabold text-slate-900 leading-[1.2] mb-4 pb-2 tracking-tight">
+              Financial Guides to Help You Make Smarter Money Decisions
+          </h1>
+          
+          <p class="text-slate-600 text-sm sm:text-lg font-medium mb-6 leading-relaxed text-pretty">
+              Explore detailed educational guides that explain investing, taxation, retirement planning, loans, financial ratios, and wealth-building concepts in simple language backed by accurate calculations and practical examples.
+          </p>
+          
+          <p class="text-slate-500 text-base sm:text-xl leading-relaxed mb-10 max-w-2xl mx-auto text-pretty">
+              Whether you're planning investments, comparing financial products, reducing debt, or improving long-term wealth, ArthCalculator's learning hub helps you understand the mathematics behind better financial decisions.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+              <button onclick="document.getElementById('guides').scrollIntoView({behavior: 'smooth'})" aria-label="Browse Financial Guides" class="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 text-center">
+                  Browse Financial Guides
+              </button>
+              <a href="/calculators/" aria-label="Explore All Calculators" class="w-full sm:w-auto px-8 py-4 bg-white border border-slate-200 hover:border-blue-300 text-slate-700 font-bold rounded-xl transition-all text-center">
+                  Explore All Calculators
+              </a>
+          </div>
+          
+          <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-3 text-sm font-semibold text-slate-500">
+              <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 15+ Finance Guides</span>
+              <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Verified Formulae</span>
+              <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Beginner Friendly</span>
+          </div>
+
+      </div>
+  </header>
+
+  <main id="guides" class="max-w-6xl mx-auto px-4 pb-20">
       
       <!-- Featured Guides -->
       <div class="mb-16">
