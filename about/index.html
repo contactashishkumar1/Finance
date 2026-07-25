@@ -43,17 +43,45 @@
         <div class="max-w-4xl mx-auto px-4 text-pretty">
             <h1 class="text-3xl sm:text-5xl font-bold gradient-text leading-tight mb-3">About ArthCalculator</h1>
             <p class="text-slate-600 text-sm sm:text-lg font-medium mb-4">
-                Independent financial education platform providing free, transparent, and precise tools for Indian users.
+                India's premier independent platform for precision financial tools, deep-dive strategy guides, and global remittance transparency.
             </p>
             
             <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 px-4 py-2 rounded-full text-blue-700 text-[10px] font-bold uppercase tracking-widest">
-                Our Mission: To simplify financial decisions by providing free, accurate and easy financial calculators.
+                Our Mission: To bring exact mathematics and strategic clarity to your wealth-building journey.
             </div>
         </div>
     </header>
 
     <main class="max-w-6xl mx-auto px-4 space-y-12">
         
+        <!-- The Ecosystem Section (NEW) -->
+        <section class="max-w-5xl mx-auto text-center mb-4 mt-8">
+            <h2 class="text-2xl font-bold text-slate-900 mb-8">The ArthCalculator Ecosystem</h2>
+            <div class="grid md:grid-cols-3 gap-6 text-left">
+                <!-- Pillar 1 -->
+                <a href="/calculators/" class="block bg-white p-6 rounded-2xl border border-slate-200 card-shadow hover:border-blue-400 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-4 text-2xl group-hover:bg-blue-100 transition-colors">🧮</div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">Precision Calculators</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">100+ highly accurate, verified calculators covering SIPs, Income Tax, EMIs, and complex business metrics like WACC and CAGR.</p>
+                    <span class="inline-block mt-4 text-xs font-bold text-blue-600 group-hover:translate-x-1 transition-transform">Explore Calculators →</span>
+                </a>
+                <!-- Pillar 2 -->
+                <a href="/blog/" class="block bg-white p-6 rounded-2xl border border-slate-200 card-shadow hover:border-emerald-400 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center mb-4 text-2xl group-hover:bg-emerald-100 transition-colors">📚</div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors">Financial Guides</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">Deep-dive financial strategy guides that break down the math behind complex decisions like Tax Loss Harvesting and the FIRE movement.</p>
+                    <span class="inline-block mt-4 text-xs font-bold text-emerald-600 group-hover:translate-x-1 transition-transform">Read Guides →</span>
+                </a>
+                <!-- Pillar 3 -->
+                <a href="/money-transfer/" class="block bg-white p-6 rounded-2xl border border-slate-200 card-shadow hover:border-indigo-400 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-4 text-2xl group-hover:bg-indigo-100 transition-colors">🌍</div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">International Money Transfer</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">A dedicated Money Transfer hub bringing ultimate transparency to international remittance providers, fees, and exchange rate policies.</p>
+                    <span class="inline-block mt-4 text-xs font-bold text-indigo-600 group-hover:translate-x-1 transition-transform">Compare Rates →</span>
+                </a>
+            </div>
+        </section>
+
         <!-- Identity Section -->
         <section class="max-w-4xl mx-auto bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
             <div class="flex items-center gap-3 mb-6">
@@ -63,10 +91,10 @@
                 <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Created by a Qualified Finance Professional</h2>
             </div>
             <p class="text-slate-600 leading-relaxed mb-4">
-                ArthCalculator was created by a <strong>Qualified Finance Professional</strong> with the goal of making financial calculations simple, accurate and accessible for everyone. 
+                ArthCalculator was created by a <strong>Qualified Finance Professional</strong> with the goal of making complex financial concepts simple, accurate and accessible for everyone. 
             </p>
             <p class="text-slate-600 leading-relaxed">
-                The platform is built using a practical understanding of taxation, investments, loans and financial planning concepts, ensuring that the results provided are grounded in real-world Indian financial protocols.
+                The platform is built using a practical understanding of taxation, investments, loans and global finance, ensuring that every guide and tool is grounded in real-world Indian financial protocols.
             </p>
         </section>
 
@@ -74,7 +102,7 @@
         <section class="max-w-4xl mx-auto bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
             <h2 class="text-xl sm:text-2xl font-bold text-slate-900 mb-6">Why ArthCalculator Exists</h2>
             <p class="text-slate-600 leading-relaxed">
-                Many financial calculators available online are either too technical for the average user or too basic to provide real planning value. ArthCalculator focuses on providing <strong>practical, India-focused financial tools</strong> that are accurate and easy to use without unnecessary complexity.
+                Building true wealth requires two things: <strong>exact mathematics</strong> and <strong>deep strategic understanding</strong>. Many online tools offer one without the other—either calculators that are too basic to provide real planning value, or blogs that offer generic advice without hard numbers. ArthCalculator was built to bridge this gap, providing you with the exact formulas and the strategic knowledge necessary to master your money.
             </p>
         </section>
 
@@ -274,5 +302,6 @@
         document.getElementById('successMsg').classList.remove('hidden');
     });
     </script>
+    <script src="/js/search.js" defer></script>
 </body>
 </html>

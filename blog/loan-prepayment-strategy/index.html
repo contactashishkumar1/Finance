@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Loan Prepayment Strategy: Should You Invest or Pay Off Debt?</title>
+<meta name="description" content="Discover the ultimate home loan prepayment strategy. Learn the mathematics of foreclosing your loan early versus investing your extra cash, complete with examples.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://arthcalculator.in/blog/loan-prepayment-strategy/">
+<link rel="icon" href="/favicon.ico">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Loan Prepayment Strategy Explained">
+<meta property="og:description" content="A comprehensive guide to home loan prepayment. Compare the mathematical benefits of prepaying debt versus investing in SIPs.">
+<meta property="og:url" content="https://arthcalculator.in/blog/loan-prepayment-strategy/">
+<meta property="og:site_name" content="ArthCalculator">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Loan Prepayment Strategy">
+<meta name="twitter:description" content="Should you prepay your home loan or invest? We break down the math.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>body{font-family:Inter,sans-serif;background:#f8fafc}.prose p{margin:0 0 1rem;line-height:1.8}.prose h2{margin-top:2.8rem}.prose h3{margin-top:1.8rem}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "ArthCalculator",
+      "url": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Loan Prepayment Strategy Explained",
+      "url": "https://arthcalculator.in/blog/loan-prepayment-strategy/"
+    },
+    {
+      "@type": "Article",
+      "headline": "Loan Prepayment Strategy: Should You Invest or Pay Off Debt?",
+      "mainEntityOfPage": "https://arthcalculator.in/blog/loan-prepayment-strategy/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ArthCalculator"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://arthcalculator.in/blog/"},
+        {"@type": "ListItem", "position": 3, "name": "Loan Prepayment Strategy", "item": "https://arthcalculator.in/blog/loan-prepayment-strategy/"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "What is loan prepayment?", "acceptedAnswer": {"@type": "Answer", "text": "Loan prepayment is the process of paying off a portion or the entirety of your outstanding loan principal before the scheduled tenure ends. This directly reduces the total interest you will pay."}},
+        {"@type": "Question", "name": "Is there a penalty for prepaying a home loan?", "acceptedAnswer": {"@type": "Answer", "text": "For floating-rate home loans taken by individuals, the RBI has banned all prepayment penalties. However, fixed-rate loans and business loans often carry a 2% to 4% penalty."}},
+        {"@type": "Question", "name": "Should I reduce my EMI or reduce my tenure when I prepay?", "acceptedAnswer": {"@type": "Answer", "text": "Mathematically, reducing the tenure while keeping the EMI the same saves you significantly more money in long-term interest. Only reduce your EMI if you are facing severe cash flow issues."}},
+        {"@type": "Question", "name": "When is the best time to prepay a loan?", "acceptedAnswer": {"@type": "Answer", "text": "The earlier, the better. Because home loans are heavily front-loaded with interest (due to amortization), prepaying in the first 5 years destroys far more future interest than prepaying in the last 5 years."}},
+        {"@type": "Question", "name": "Does prepaying a loan affect my tax benefits?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. If you aggressively prepay a home loan, the total interest paid in a financial year drops. This means you might not be able to claim the full Section 24(b) deduction of ₹2 Lakhs on home loan interest."}},
+        {"@type": "Question", "name": "Is it better to invest in a SIP or prepay my home loan?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the spread. If your expected post-tax return from a SIP (e.g., 12%) is significantly higher than your home loan interest rate (e.g., 8.5%), investing is mathematically better. However, paying off debt offers guaranteed, risk-free returns."}},
+        {"@type": "Question", "name": "How does inflation impact my prepayment decision?", "acceptedAnswer": {"@type": "Answer", "text": "Inflation devalues money over time. A ₹50,000 EMI today feels much heavier than a ₹50,000 EMI will feel 15 years from now. Thus, dragging out a low-interest loan during high inflation can actually be beneficial."}},
+        {"@type": "Question", "name": "Can I prepay a personal loan?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, but unlike floating home loans, personal loans are fixed-rate instruments and almost always carry heavy foreclosure or part-prepayment penalties. Always check the terms before prepaying."}},
+        {"@type": "Question", "name": "What is the 5% prepayment rule?", "acceptedAnswer": {"@type": "Answer", "text": "It is a popular strategy where you prepay 5% of your outstanding loan principal every single year. This simple habit can reduce a 20-year loan down to just 12 years."}},
+        {"@type": "Question", "name": "Does prepaying help my CIBIL score?", "acceptedAnswer": {"@type": "Answer", "text": "Closing a loan completely can temporarily drop your score because it reduces your credit mix and total available credit history. However, in the long run, having lower debt is excellent for your financial profile."}}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="text-slate-700">
+<div id="navbar"></div>
+<main class="max-w-3xl mx-auto px-4 py-10 sm:py-16">
+<nav aria-label="Breadcrumb" class="text-sm text-slate-500 mb-8">
+  <a class="hover:text-blue-600" href="/">Home</a> <span aria-hidden="true">→</span> 
+  <a class="hover:text-blue-600" href="/blog/">Blog</a> <span aria-hidden="true">→</span> Prepayment Strategy
+</nav>
+
+<article class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-10 shadow-sm">
+<header>
+  <p class="text-blue-600 font-semibold text-sm">Debt Management</p>
+  <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 mt-3">Loan Prepayment Strategy: Should You Invest or Pay Off Debt?</h1>
+  <p class="text-lg text-slate-600 mt-5">It is the most common financial dilemma of our generation: If you have extra cash, should you use it to destroy your home loan, or should you invest it in the stock market? Uncover the mathematical truth and build your optimal prepayment strategy.</p>
+</header>
+
+<div class="prose mt-10">
+  <h2 class="text-2xl font-bold text-slate-900">The Burden of Long-Term Debt</h2>
+  <p>Taking a 20-year home loan is often the largest financial commitment a person makes in their lifetime. As we discussed in our guide on <a class="text-blue-700 underline font-semibold" href="/blog/loan-amortization/">Loan Amortization</a>, the structure of a long-term loan means that for the first decade, the vast majority of your monthly EMI is consumed by pure interest.</p>
+  <p>For example, if you take a ₹50 Lakh loan at 9% for 20 years, your total interest payable is almost ₹58 Lakhs. You end up paying back more than double what you borrowed. </p>
+  <p>However, you have a secret weapon: <strong>Prepayment</strong>. By making lump-sum payments toward your principal balance, you can geometrically destroy future interest and slash years off your tenure. But there is a catch. Every rupee you use to prepay a loan is a rupee you <em>cannot</em> invest in compounding assets like mutual funds. This creates a massive financial crossroads.</p>
+
+  <section class="mt-8 mb-10 not-prose">
+    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+      <h2 class="text-xl font-bold text-slate-900">Quick Answer</h2>
+      <p class="mt-3 text-sm leading-relaxed text-slate-600">The decision to prepay versus invest comes down to the <strong>Interest Spread</strong>. If your expected post-tax return from investing (e.g., 12% in Equity) is higher than your home loan interest rate (e.g., 8.5%), investing is mathematically superior. However, loan prepayment guarantees a risk-free return of 8.5% and offers immense psychological relief. For most people, a hybrid approach—investing heavily while making small, systematic prepayments—is the safest strategy.</p>
+    </div>
+  </section>
+
+  <div class="bg-amber-50 border border-amber-100 rounded-xl p-5 not-prose my-6">
+    <h3 class="font-bold text-amber-900">Did You Know?</h3>
+    <p class="mt-2 text-sm leading-6">The Reserve Bank of India (RBI) prohibits banks from charging prepayment or foreclosure penalties on floating-rate home loans taken by individuals. This means you can prepay as aggressively as you want without losing a single rupee to bank fees. (Note: Fixed-rate loans and business loans still attract penalties).</p>
+  </div>
+
+  <h2 class="text-2xl font-bold text-slate-900">The Mathematics of Prepayment</h2>
+  <p>Why is prepayment so powerful? Because home loans operate on a <a class="text-blue-700 underline font-semibold" href="/blog/flat-interest-vs-reducing-balance/">reducing balance</a> method. The interest the bank charges you next month is calculated strictly on the outstanding principal left at the end of this month.</p>
+  <p>When you make a ₹1 Lakh prepayment, 100% of that money goes directly into destroying principal. The bank can no longer charge you 9% interest on that ₹1 Lakh for the remaining 15 years of your loan. That single ₹1 Lakh payment instantly saves you ₹1.35 Lakhs in future interest.</p>
+
+  <h3 class="text-xl font-bold text-slate-900 mt-4">Tenure vs EMI Reduction</h3>
+  <p>When you make a lump-sum prepayment, the bank will ask you a crucial question: <em>"Do you want to reduce your monthly EMI, or do you want to keep the EMI same and reduce your tenure?"</em></p>
+  <p>Unless you are facing an emergency cash crunch, <strong>always choose to reduce the tenure</strong>. By keeping the EMI artificially high while the principal drops, you force the loan to amortize aggressively, saving you massive amounts of money.</p>
+
+  <div class="bg-blue-50 border border-blue-200 rounded-xl p-5 my-6 flex flex-col sm:flex-row items-center justify-between not-prose">
+    <div class="mb-4 sm:mb-0">
+      <h4 class="font-bold text-blue-900 mb-1">Calculate Prepayment Savings</h4>
+      <p class="text-sm text-blue-800">Use our dedicated calculator to see exactly how many months you can shave off your loan.</p>
+    </div>
+    <a href="/loan-prepayment/" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg text-sm transition-colors whitespace-nowrap text-center">Open Calculator →</a>
+  </div>
+
+  <h2 class="text-2xl font-bold text-slate-900">Worked Example 1: The Power of 1 Extra EMI</h2>
+  <p>You don't need a massive windfall to destroy a loan. Let's look at the power of small, systematic prepayments. Assume a borrower has a standard <strong>₹50,00,000 Home Loan</strong> at <strong>9% interest</strong> for <strong>20 years</strong>. The normal EMI is <strong>₹44,986</strong>.</p>
+  
+  <p><strong>Scenario A: Standard Repayment</strong><br>
+  The borrower pays exactly ₹44,986 every month for 20 years.<br>
+  Total Interest Paid = <strong>₹57,96,711</strong>.</p>
+  
+  <p><strong>Scenario B: One Extra EMI a Year</strong><br>
+  Instead of paying 12 EMIs a year, the borrower decides to pay <strong>13 EMIs</strong> a year. Every January, they make a tiny lump-sum prepayment of ₹45,000. </p>
+  
+  <p>What happens?</p>
+  <ul class="list-disc pl-6 mb-4">
+    <li>The total tenure drops from 20 years to just <strong>15.5 years</strong>.</li>
+    <li>Total Interest Paid drops to <strong>₹42,50,000</strong>.</li>
+    <li><strong>Net Savings:</strong> Almost <strong>₹15.5 Lakhs</strong> saved just by finding an extra ₹45,000 once a year!</li>
+  </ul>
+  <p>This happens because early prepayments bypass the heavy interest front-loading. Read our <a class="text-blue-700 underline font-semibold" href="/blog/loan-amortization/">Loan Amortization Guide</a> to see why the first 5 years of a loan are the most critical time to prepay.</p>
+
+  <h2 class="text-2xl font-bold text-slate-900">The Core Argument: Prepayment vs Investing (SIP)</h2>
+  <p>Now we arrive at the great debate. If you have a ₹5 Lakh bonus, should you dump it into your home loan, or should you put it into an equity mutual fund via Lumpsum or <a class="text-blue-700 underline font-semibold" href="/blog/sip-vs-lumpsum/">SIP</a>?</p>
+
+  <p>To solve this, we must compare the <strong>Cost of Debt</strong> against the <strong>Yield of Investment</strong>. We call this the "Interest Spread".</p>
+  
+  <p>A home loan in India typically costs between 8.5% to 9.5%. However, home loans also offer tax benefits under Section 24(b) (up to ₹2 Lakhs deduction on interest) and Section 80C (up to ₹1.5 Lakhs on principal). If you fall in the 30% tax bracket, these deductions reduce your <em>Effective Cost of Debt</em>.</p>
+  
+  <p>If your home loan is 9%, your post-tax effective cost of debt might only be around <strong>6.5% to 7%</strong>.</p>
+
+  <p>Now look at investments. A diversified equity mutual fund historically yields about 12% to 14% over a 15-year period. After long-term capital gains tax (LTCG), your effective return is around <strong>11% to 12%</strong>.</p>
+
+  <h3 class="text-xl font-bold text-slate-900 mt-4">The Mathematical Verdict</h3>
+  <p>If your investments generate 12%, and your debt only costs you 7%, investing is mathematically superior by a spread of 5%. By choosing to prepay the loan, you are effectively accepting a guaranteed 7% return, while sacrificing a highly probable 12% return. Over a 20-year period, this 5% difference amounts to <em>Crores</em> of lost wealth.</p>
+
+  <div class="overflow-x-auto my-6">
+    <table class="w-full text-sm border-collapse border border-slate-200">
+      <caption class="text-left font-semibold text-slate-900 mb-2">₹10,000 Monthly Surplus: Prepay vs Invest (20 Years)</caption>
+      <thead class="bg-slate-100">
+        <tr>
+          <th class="p-3 text-left border-b border-slate-200">Strategy</th>
+          <th class="p-3 text-left border-b border-slate-200">Action Taken</th>
+          <th class="p-3 text-left border-b border-slate-200">Wealth Generated / Saved</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b border-slate-200">
+          <td class="p-3 font-medium">Prepay the Loan</td>
+          <td class="p-3">Add ₹10,000 to EMI (Loan at 9%)</td>
+          <td class="p-3 text-amber-600 font-medium">Saves ~₹24 Lakhs in interest</td>
+        </tr>
+        <tr class="border-b border-slate-200">
+          <td class="p-3 font-medium">Invest in SIP</td>
+          <td class="p-3">Invest ₹10,000 at 12% Equity Return</td>
+          <td class="p-3 text-emerald-600 font-bold">Generates ~₹1.0 Crore corpus</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The math is heavily skewed in favor of investing. To verify these numbers yourself, run your own scenarios using our <a class="text-blue-700 underline font-semibold" href="/loan-vs-investment-calculator/">Loan vs Investment Calculator</a> and <a class="text-blue-700 underline font-semibold" href="/sip/">SIP Calculator</a>.</p>
+
+  <h2 class="text-2xl font-bold text-slate-900">Worked Example 2: The Psychological Verdict</h2>
+  <p>If the math favors investing, why do financial advisors still recommend prepaying loans? Because human beings are not spreadsheets.</p>
+  
+  <p>Investing in the stock market involves risk. The 12% return is an average. You might experience a 3-year bear market where your portfolio bleeds red. Meanwhile, the home loan EMI acts as a permanent, stress-inducing sword hanging over your monthly budget. </p>
+  
+  <p>When you prepay a home loan at 9%, you are securing a <strong>100% Guaranteed, Risk-Free, Tax-Free return of 9%</strong>. There is absolutely no mutual fund or Fixed Deposit on Earth that offers a guaranteed 9% post-tax return. From a risk-adjusted perspective, prepaying debt is an incredible "investment."</p>
+
+  <div class="bg-rose-50 border border-rose-100 rounded-xl p-5 not-prose my-6">
+    <h3 class="font-bold text-rose-900">Common Mistake: Ignoring Inflation</h3>
+    <p class="mt-2 text-sm leading-6">Many borrowers rush to clear their loans to become "debt-free." But they forget about inflation. A ₹50,000 EMI might consume 40% of your salary today. However, due to inflation and salary hikes, 15 years from now, that exact same ₹50,000 EMI might only consume 10% of your salary. The debt naturally becomes cheaper over time. Aggressively clearing cheap debt in a high-inflation environment is a poor strategy.</p>
+  </div>
+
+  <h2 class="text-2xl font-bold text-slate-900">The Ultimate Strategy: The Hybrid Approach</h2>
+  <p>Instead of taking an extreme stance, the optimal financial strategy is a hybrid approach. It balances mathematical wealth creation with psychological debt relief.</p>
+  
+  <h3 class="text-xl font-bold text-slate-900 mt-4">Phase 1: The Tax Optimization</h3>
+  <p>Never prepay so aggressively that you lose your Section 24(b) tax benefits. If your annual home loan interest is hovering around ₹2,00,000, leave the loan alone. Let the government subsidize your debt. Invest all extra cash into SIPs.</p>
+
+  <h3 class="text-xl font-bold text-slate-900 mt-4">Phase 2: The 5% Rule</h3>
+  <p>If your loan is massive and you want to reduce the tenure without halting your investments, apply the 5% rule. Aim to prepay exactly 5% of your outstanding loan principal every year (using annual bonuses). This tiny, manageable effort will compress a 20-year loan into roughly 12 years, while allowing your monthly salary to freely flow into mutual funds.</p>
+
+  <h3 class="text-xl font-bold text-slate-900 mt-4">Phase 3: The Rate Shock Defense</h3>
+  <p>If you have a <a class="text-blue-700 underline font-semibold" href="/blog/fixed-vs-floating-interest-rate/">floating interest rate</a>, your strategy must adapt to the RBI. When the repo rate is low (e.g., loan at 7%), do not prepay; invest heavily. When the RBI hikes rates aggressively to fight inflation (e.g., loan spikes to 9.5%), pause your SIPs temporarily and divert all cash to loan prepayment. You adapt to the cost of money.</p>
+
+  <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 not-prose my-6">
+    <h3 class="font-bold text-slate-900">Pro Tip: Beware the Emergency Fund Trap</h3>
+    <p class="mt-2 text-sm leading-6">Never use your emergency savings to prepay a home loan. A home loan is a highly illiquid trap. If you dump ₹5 Lakhs into the loan today, and lose your job tomorrow, the bank will NOT give you that ₹5 Lakhs back. They will still demand next month's EMI. Always keep a 6-month liquid buffer in an <a class="text-slate-700 underline font-semibold" href="/fd/">FD</a> before even thinking about prepayment.</p>
+  </div>
+
+  <h2 class="text-2xl font-bold text-slate-900">Evaluating Different Types of Debt</h2>
+  <p>Not all debt is created equal. The "Invest vs Prepay" debate is entirely centered around Home Loans because they are cheap (8-9%) and offer tax benefits.</p>
+  
+  <p>If you have a <strong>Personal Loan</strong> (14%), an <strong>Auto Loan</strong> (11%), or outstanding <strong>Credit Card EMIs</strong> (15% to 40%), the math changes violently. There is no mutual fund that guarantees 15%. Therefore, you must halt all investments and mercilessly destroy high-interest debt before building wealth. Read our <a class="text-blue-700 underline font-semibold" href="/blog/credit-card-emi/">Credit Card EMI Guide</a> to understand how toxic high-interest revolving debt truly is.</p>
+
+  <section class="mt-10 not-prose">
+    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+      <h2 class="text-2xl font-bold text-slate-900">Quick Answer & Summary</h2>
+      <p class="mt-3 leading-relaxed">The loan prepayment strategy dictates that if your expected investment return (12%) exceeds your effective loan interest rate (7%), investing is superior. However, the emotional security of being debt-free cannot be ignored. The optimal path is a hybrid strategy: maintain a strict SIP, leverage home loan tax benefits, and use annual bonuses to make small, 5% principal prepayments to compress the loan tenure without sacrificing compounding wealth.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-4 mt-5">
+      <div class="bg-blue-50 border border-blue-100 rounded-xl p-5">
+        <h3 class="font-bold text-blue-900">Actionable Takeaways</h3>
+        <ul class="mt-3 text-sm leading-6 list-disc pl-5">
+          <li>Prepay heavily in the first 5 years of a loan.</li>
+          <li>Always choose to reduce Tenure, not EMI.</li>
+          <li>Never drain your emergency fund to prepay debt.</li>
+          <li>Destroy high-interest personal loans before investing.</li>
+        </ul>
+      </div>
+      <div class="bg-amber-50 border border-amber-100 rounded-xl p-5">
+        <h3 class="font-bold text-amber-900">Important Note</h3>
+        <p class="mt-3 text-sm leading-6">To accurately track how your investments compare to your debt over long periods, you must master the concept of compounding. Dive into our <a class="text-amber-800 underline font-semibold" href="/blog/simple-vs-compound-interest/">Simple vs Compound Interest Guide</a> for a mathematical breakdown.</p>
+      </div>
+    </div>
+  </section>
+
+  <h2 class="text-2xl font-bold text-slate-900 mt-10">Frequently Asked Questions</h2>
+  <div class="space-y-3 mt-6">
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">What is loan prepayment?</summary>
+      <p class="mt-3 text-sm">Loan prepayment is the process of paying off a portion or the entirety of your outstanding loan principal before the scheduled tenure ends. This directly reduces the total interest you will pay.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">Is there a penalty for prepaying a home loan?</summary>
+      <p class="mt-3 text-sm">For floating-rate home loans taken by individuals, the RBI has banned all prepayment penalties. However, fixed-rate loans and business loans often carry a 2% to 4% penalty.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">Should I reduce my EMI or reduce my tenure when I prepay?</summary>
+      <p class="mt-3 text-sm">Mathematically, reducing the tenure while keeping the EMI the same saves you significantly more money in long-term interest. Only reduce your EMI if you are facing severe cash flow issues.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">When is the best time to prepay a loan?</summary>
+      <p class="mt-3 text-sm">The earlier, the better. Because home loans are heavily front-loaded with interest (due to amortization), prepaying in the first 5 years destroys far more future interest than prepaying in the last 5 years.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">Does prepaying a loan affect my tax benefits?</summary>
+      <p class="mt-3 text-sm">Yes. If you aggressively prepay a home loan, the total interest paid in a financial year drops. This means you might not be able to claim the full Section 24(b) deduction of ₹2 Lakhs on home loan interest.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">Is it better to invest in a SIP or prepay my home loan?</summary>
+      <p class="mt-3 text-sm">It depends on the spread. If your expected post-tax return from a SIP (e.g., 12%) is significantly higher than your home loan interest rate (e.g., 8.5%), investing is mathematically better. However, paying off debt offers guaranteed, risk-free returns.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">How does inflation impact my prepayment decision?</summary>
+      <p class="mt-3 text-sm">Inflation devalues money over time. A ₹50,000 EMI today feels much heavier than a ₹50,000 EMI will feel 15 years from now. Thus, dragging out a low-interest loan during high inflation can actually be beneficial.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">Can I prepay a personal loan?</summary>
+      <p class="mt-3 text-sm">Yes, but unlike floating home loans, personal loans are fixed-rate instruments and almost always carry heavy foreclosure or part-prepayment penalties. Always check the terms before prepaying.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">What is the 5% prepayment rule?</summary>
+      <p class="mt-3 text-sm">It is a popular strategy where you prepay 5% of your outstanding loan principal every single year. This simple habit can reduce a 20-year loan down to just 12 years.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">Does prepaying help my CIBIL score?</summary>
+      <p class="mt-3 text-sm">Closing a loan completely can temporarily drop your score because it reduces your credit mix and total available credit history. However, in the long run, having lower debt is excellent for your financial profile.</p>
+    </details>
+  </div>
+</div>
+</article>
+</main>
+<div id="footer"></div>
+<script src="/js/search.js" defer></script>
+<script>
+fetch("/navbar.html").then(r=>r.text()).then(t=>document.getElementById("navbar").innerHTML=t);
+fetch("/footer.html").then(r=>r.text()).then(t=>document.getElementById("footer").innerHTML=t);
+</script>
+</body>
+</html>

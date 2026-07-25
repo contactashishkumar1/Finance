@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Time Value of Money (TVM) Explained with Examples</title>
+<meta name="description" content="Master the Time Value of Money (TVM) concept. Learn why ₹100 today is worth more than ₹100 tomorrow, complete with Future Value (FV) and Present Value (PV) formulas.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://arthcalculator.in/blog/time-value-of-money/">
+<link rel="icon" href="/favicon.ico">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Time Value of Money (TVM) Explained">
+<meta property="og:description" content="Discover the foundational principle of all finance. Understand Present Value, Future Value, and how time impacts wealth.">
+<meta property="og:url" content="https://arthcalculator.in/blog/time-value-of-money/">
+<meta property="og:site_name" content="ArthCalculator">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Time Value of Money Explained">
+<meta name="twitter:description" content="Why a Rupee today is worth more than a Rupee tomorrow.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>body{font-family:Inter,sans-serif;background:#f8fafc}.prose p{margin:0 0 1rem;line-height:1.8}.prose h2{margin-top:2.8rem}.prose h3{margin-top:1.8rem}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "ArthCalculator",
+      "url": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Time Value of Money Explained",
+      "url": "https://arthcalculator.in/blog/time-value-of-money/"
+    },
+    {
+      "@type": "Article",
+      "headline": "Time Value of Money (TVM) Explained with Examples",
+      "mainEntityOfPage": "https://arthcalculator.in/blog/time-value-of-money/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ArthCalculator"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://arthcalculator.in/blog/"},
+        {"@type": "ListItem", "position": 3, "name": "Time Value of Money", "item": "https://arthcalculator.in/blog/time-value-of-money/"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "What is the Time Value of Money (TVM)?", "acceptedAnswer": {"@type": "Answer", "text": "The Time Value of Money is the core financial principle that a sum of money is worth more today than the exact same sum of money in the future. This is due to its potential earning capacity (interest) and the destructive force of inflation."}},
+        {"@type": "Question", "name": "Why is money today worth more than money tomorrow?", "acceptedAnswer": {"@type": "Answer", "text": "If you have ₹10,000 today, you can invest it at 10% and have ₹11,000 next year. If you wait until next year to receive the ₹10,000, you have permanently lost the opportunity to earn that ₹1,000 in interest."}},
+        {"@type": "Question", "name": "What is Future Value (FV)?", "acceptedAnswer": {"@type": "Answer", "text": "Future Value is the amount that a current sum of money will grow to at a specified future date, assuming a specific interest rate (compounding). It tells you what today's money will become."}},
+        {"@type": "Question", "name": "What is Present Value (PV)?", "acceptedAnswer": {"@type": "Answer", "text": "Present Value is the exact opposite of Future Value. It tells you what a future sum of money is actually worth right now, today, when discounted back by a specific interest rate or inflation rate."}},
+        {"@type": "Question", "name": "How does inflation relate to TVM?", "acceptedAnswer": {"@type": "Answer", "text": "Inflation is the negative application of TVM. While compound interest increases the Future Value of your money, inflation decreases the Future Purchasing Power of your money. TVM calculates both sides."}},
+        {"@type": "Question", "name": "What is the Discount Rate?", "acceptedAnswer": {"@type": "Answer", "text": "The discount rate is the interest rate used to calculate Present Value. It represents the rate of return you could have earned if you had the money today, or it represents the inflation rate degrading the money."}},
+        {"@type": "Question", "name": "Why is TVM important in real life?", "acceptedAnswer": {"@type": "Answer", "text": "TVM is the math behind every financial decision. It is how banks calculate your home loan EMI, how insurance companies price your life insurance policies, and how investors decide if a business is worth buying."}},
+        {"@type": "Question", "name": "Does TVM apply to salaries?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. If your company promises you a ₹5 Lakh bonus, but delays paying it for 2 years, they are mathematically stealing from you. The Present Value of that ₹5 Lakhs is much lower due to the 2 years of lost investment potential."}},
+        {"@type": "Question", "name": "Is compounding the same as TVM?", "acceptedAnswer": {"@type": "Answer", "text": "Compounding is the mathematical engine that drives TVM. TVM is the philosophy, and compound interest is the formula used to calculate the exact values across time."}},
+        {"@type": "Question", "name": "What are the 5 variables in a TVM calculation?", "acceptedAnswer": {"@type": "Answer", "text": "The five variables are: Present Value (PV), Future Value (FV), Number of Periods (n), Interest Rate (r), and Payment amount (PMT - used for recurring investments like SIPs or EMIs)."}}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="text-slate-700">
+<div id="navbar"></div>
+<main class="max-w-3xl mx-auto px-4 py-10 sm:py-16">
+<nav aria-label="Breadcrumb" class="text-sm text-slate-500 mb-8">
+  <a class="hover:text-blue-600" href="/">Home</a> <span aria-hidden="true">→</span> 
+  <a class="hover:text-blue-600" href="/blog/">Blog</a> <span aria-hidden="true">→</span> Time Value of Money
+</nav>
+
+<article class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-10 shadow-sm">
+<header>
+  <p class="text-blue-600 font-semibold text-sm">Financial Mathematics</p>
+  <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 mt-3">Time Value of Money (TVM) Explained with Examples</h1>
+  <p class="text-lg text-slate-600 mt-5">If someone offers you ₹1,00,000 today or ₹1,00,000 exactly one year from today, which should you choose? The answer reveals the single most important mathematical principle in all of modern finance: The Time Value of Money.</p>
+</header>
+
+<div class="prose mt-10">
+  <h2 class="text-2xl font-bold text-slate-900">The Golden Rule of Finance</h2>
+  <p>The entire global financial system—every bank loan, every mutual fund, every insurance policy, and every stock market valuation—is built on one foundational law:</p>
+  <p class="text-xl font-bold text-slate-900 bg-slate-100 p-4 border-l-4 border-blue-600">A Rupee today is worth more than a Rupee tomorrow.</p>
+  
+  <p>This is the <strong>Time Value of Money (TVM)</strong>. It dictates that money holds a "time-dependent" value. The exact same currency note sitting in your wallet today is fundamentally more valuable than it will be 12 months from now.</p>
+  
+  <p>Why? Because of two opposing forces: <strong>Opportunity Cost</strong> and <strong>Inflation</strong>.</p>
+  <ul class="list-disc pl-6 mb-4">
+    <li><strong>Opportunity Cost:</strong> If you have ₹1 Lakh today, you can invest it immediately in an <a class="text-blue-700 underline font-semibold" href="/fd/">FD</a> at 7%. By next year, you will have ₹1,07,000. If you wait a year to receive the money, you forever lose the opportunity to earn that ₹7,000.</li>
+    <li><strong>Inflation:</strong> As we discussed in our <a class="text-blue-700 underline font-semibold" href="/blog/inflation-explained/">Inflation Guide</a>, prices constantly rise. ₹1 Lakh today buys a certain amount of groceries. Next year, those exact same groceries will cost more. So, next year's ₹1 Lakh is physically weaker than today's ₹1 Lakh.</li>
+  </ul>
+
+  <section class="mt-8 mb-10 not-prose">
+    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+      <h2 class="text-xl font-bold text-slate-900">Quick Answer</h2>
+      <p class="mt-3 text-sm leading-relaxed text-slate-600">The Time Value of Money (TVM) states that money has earning potential over time. To compare money across different years, you cannot just look at the numbers. You must use formulas to convert future money into today's value (Present Value) or convert today's money into future value (Future Value). Understanding this allows you to calculate the true cost of loans and the true yield of investments.</p>
+    </div>
+  </section>
+
+  <div class="bg-amber-50 border border-amber-100 rounded-xl p-5 not-prose my-6">
+    <h3 class="font-bold text-amber-900">Did You Know?</h3>
+    <p class="mt-2 text-sm leading-6">When lottery winners are given a choice between receiving ₹10 Crores spread out over 20 years, or taking a single lump sum of ₹6 Crores today, financially literate winners ALWAYS take the smaller lump sum today. Why? Because investing ₹6 Crores immediately (Time Value of Money) will generate vastly more wealth than waiting 20 years for the rest of the cash.</p>
+  </div>
+
+  <h2 class="text-2xl font-bold text-slate-900">The Core Components of TVM</h2>
+  <p>To calculate TVM, you need to understand five interlocking mathematical variables. Every financial calculator uses these five letters:</p>
+  
+  <ul class="list-disc pl-6 mb-4">
+    <li><strong>PV (Present Value):</strong> What the money is worth right now, today.</li>
+    <li><strong>FV (Future Value):</strong> What the money will be worth at a specific date in the future.</li>
+    <li><strong>r (Interest Rate / Discount Rate):</strong> The rate of return (or inflation) applied per period.</li>
+    <li><strong>n (Number of Periods):</strong> The time (usually years or months) the money is invested or delayed.</li>
+    <li><strong>PMT (Payment):</strong> Recurring additions or subtractions (like a monthly <a class="text-blue-700 underline font-semibold" href="/sip/">SIP</a> or EMI). For simple lumpsum TVM, PMT is zero.</li>
+  </ul>
+
+  <h2 class="text-2xl font-bold text-slate-900">1. Future Value (FV): Looking Forward</h2>
+  <p>Future Value answers the question: <em>"If I invest X amount today, what will it become in the future?"</em></p>
+  <p>This is the application of <a class="text-blue-700 underline font-semibold" href="/blog/simple-vs-compound-interest/">Compound Interest</a>. The formula is:</p>
+  
+  <div class="bg-slate-100 p-4 rounded-xl text-center font-mono text-lg my-4 border border-slate-200">
+    FV = PV × (1 + r)<sup>n</sup>
+  </div>
+  
+  <h3 class="text-xl font-bold text-slate-900 mt-4">Worked Example: The Power of Compounding</h3>
+  <p>You have <strong>₹5,00,000 (PV)</strong> today. You invest it in a mutual fund generating <strong>12% annually (r)</strong>. You leave it there for <strong>15 years (n)</strong>.</p>
+  
+  <p>FV = 5,00,000 × (1 + 0.12)<sup>15</sup></p>
+  <p>FV = 5,00,000 × (5.4735)</p>
+  <p><strong>FV = ₹27,36,750</strong></p>
+  
+  <p>The Future Value of your ₹5 Lakhs is ₹27.36 Lakhs. The Time Value of Money mathematically proved that holding onto the money and giving it <em>time</em> multiplied its worth by more than 5x.</p>
+
+  <div class="bg-blue-50 border border-blue-200 rounded-xl p-5 my-6 flex flex-col sm:flex-row items-center justify-between not-prose">
+    <div class="mb-4 sm:mb-0">
+      <h4 class="font-bold text-blue-900 mb-1">Calculate Future Value</h4>
+      <p class="text-sm text-blue-800">Use our FV Calculator to project the growth of any lumpsum investment over decades.</p>
+    </div>
+    <a href="/future-value/" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg text-sm transition-colors whitespace-nowrap text-center">Open FV Calculator →</a>
+  </div>
+
+  <h2 class="text-2xl font-bold text-slate-900">2. Present Value (PV): Looking Backward (Discounting)</h2>
+  <p>Present Value is the exact inverse of Future Value. It answers the question: <em>"If someone promises me X amount in the future, what is that promise actually worth to me right now?"</em></p>
+  
+  <p>Instead of compounding, we use a process called <strong>Discounting</strong>. The formula is:</p>
+
+  <div class="bg-slate-100 p-4 rounded-xl text-center font-mono text-lg my-4 border border-slate-200">
+    PV = FV / (1 + r)<sup>n</sup>
+  </div>
+
+  <h3 class="text-xl font-bold text-slate-900 mt-4">Worked Example: The Insurance Trap</h3>
+  <p>An insurance agent approaches you with a "Guaranteed Return" endowment policy. The pitch: "Pay us ₹1 Lakh a year for 10 years, and we guarantee to give you exactly <strong>₹20,00,000</strong> after 20 years!"</p>
+  
+  <p>₹20 Lakhs sounds amazing. But you must use TVM to find the <em>Present Value</em> of that ₹20 Lakhs. If you didn't buy the policy, you could have easily invested your money at an <strong>8% (r)</strong> return elsewhere.</p>
+  
+  <p>Let's discount the promised ₹20,00,000 (FV) back 20 years (n) at a discount rate of 8% (r).</p>
+  
+  <p>PV = 20,00,000 / (1 + 0.08)<sup>20</sup></p>
+  <p>PV = 20,00,000 / (4.66)</p>
+  <p><strong>PV = ₹4,29,184</strong></p>
+  
+  <p>The agent is promising you ₹20 Lakhs in the future, but mathematically, that future money is only worth <strong>₹4.29 Lakhs today</strong>. When you realize you are paying ₹10 Lakhs (over 10 years) to buy something only worth ₹4.29 Lakhs, you immediately reject the policy. <strong>This is how TVM saves you from financial traps.</strong></p>
+
+  <div class="bg-blue-50 border border-blue-200 rounded-xl p-5 my-6 flex flex-col sm:flex-row items-center justify-between not-prose">
+    <div class="mb-4 sm:mb-0">
+      <h4 class="font-bold text-blue-900 mb-1">Calculate Present Value</h4>
+      <p class="text-sm text-blue-800">Use our PV Calculator to discount any future payout and see its true worth today.</p>
+    </div>
+    <a href="/present-value/" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg text-sm transition-colors whitespace-nowrap text-center">Open PV Calculator →</a>
+  </div>
+
+  <h2 class="text-2xl font-bold text-slate-900">Applying TVM to Everyday Life</h2>
+  <p>TVM is not just for Wall Street bankers. It dictates every major financial decision you make.</p>
+
+  <h3 class="text-xl font-bold text-slate-900 mt-4">1. Negotiating a Salary Bonus</h3>
+  <p>Your boss says, "I can't give you a ₹2 Lakh bonus today, but I will give it to you next year." Using TVM, you know that ₹2 Lakhs next year is worth less than ₹2 Lakhs today (due to inflation and lost investment returns). A financially literate employee responds: "If you delay it a year, the bonus must be ₹2.2 Lakhs to compensate for the Time Value of Money."</p>
+
+  <h3 class="text-xl font-bold text-slate-900 mt-4">2. Paying Off Debt Early</h3>
+  <p>Why is your home loan EMI so high in the beginning? Because the bank uses TVM to calculate it. They know the money they lent you today is highly valuable, and the money you pay them back in Year 20 is heavily degraded by inflation. By accelerating your payments, you destroy the bank's compounding engine. (See our <a class="text-blue-700 underline font-semibold" href="/blog/loan-amortization/">Loan Amortization Guide</a>).</p>
+
+  <div class="bg-rose-50 border border-rose-100 rounded-xl p-5 not-prose my-6">
+    <h3 class="font-bold text-rose-900">Common Mistake: Ignoring Inflation in TVM</h3>
+    <p class="mt-2 text-sm leading-6">When calculating Future Value, many investors get overly excited by massive numbers. "I will have ₹5 Crores when I retire!" But if you don't use TVM to <em>discount</em> that ₹5 Crores back to Present Value using the inflation rate (e.g., 6%), you are living an illusion. ₹5 Crores in 30 years might only buy what ₹85 Lakhs buys today.</p>
+  </div>
+
+  <section class="mt-10 not-prose">
+    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+      <h2 class="text-2xl font-bold text-slate-900">Quick Answer & Summary</h2>
+      <p class="mt-3 leading-relaxed">The Time Value of Money dictates that receiving money today is always superior to receiving the exact same amount of money in the future. By using the Future Value (FV) formula, we can see how today's money grows through compounding. By using the Present Value (PV) formula, we can strip away the illusion of time to see what future promises are actually worth right now. Mastering TVM is the absolute foundation of financial literacy.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-4 mt-5">
+      <div class="bg-blue-50 border border-blue-100 rounded-xl p-5">
+        <h3 class="font-bold text-blue-900">Actionable Takeaways</h3>
+        <ul class="mt-3 text-sm leading-6 list-disc pl-5">
+          <li>Never compare money from 2010 to money in 2030 without adjusting for TVM.</li>
+          <li>Always take a lump sum today rather than a delayed payout.</li>
+          <li>Use Present Value (PV) to evaluate insurance policies.</li>
+          <li>Use Future Value (FV) to project your SIP corpus.</li>
+        </ul>
+      </div>
+      <div class="bg-amber-50 border border-amber-100 rounded-xl p-5">
+        <h3 class="font-bold text-amber-900">Important Note</h3>
+        <p class="mt-3 text-sm leading-6">When you have a series of varying cash flows over many years (like an uneven SIP or business revenue), a simple TVM formula isn't enough. You must use XIRR (Extended Internal Rate of Return) or NPV (Net Present Value). Read our <a class="text-amber-800 underline font-semibold" href="/blog/cagr-vs-xirr-vs-absolute-return/">XIRR Guide</a> for advanced calculations.</p>
+      </div>
+    </div>
+  </section>
+
+  <h2 class="text-2xl font-bold text-slate-900 mt-10">Frequently Asked Questions</h2>
+  <div class="space-y-3 mt-6">
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">What is the Time Value of Money (TVM)?</summary>
+      <p class="mt-3 text-sm">The Time Value of Money is the core financial principle that a sum of money is worth more today than the exact same sum of money in the future. This is due to its potential earning capacity (interest) and the destructive force of inflation.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">Why is money today worth more than money tomorrow?</summary>
+      <p class="mt-3 text-sm">If you have ₹10,000 today, you can invest it at 10% and have ₹11,000 next year. If you wait until next year to receive the ₹10,000, you have permanently lost the opportunity to earn that ₹1,000 in interest.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">What is Future Value (FV)?</summary>
+      <p class="mt-3 text-sm">Future Value is the amount that a current sum of money will grow to at a specified future date, assuming a specific interest rate (compounding). It tells you what today's money will become.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">What is Present Value (PV)?</summary>
+      <p class="mt-3 text-sm">Present Value is the exact opposite of Future Value. It tells you what a future sum of money is actually worth right now, today, when discounted back by a specific interest rate or inflation rate.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">How does inflation relate to TVM?</summary>
+      <p class="mt-3 text-sm">Inflation is the negative application of TVM. While compound interest increases the Future Value of your money, inflation decreases the Future Purchasing Power of your money. TVM calculates both sides.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">What is the Discount Rate?</summary>
+      <p class="mt-3 text-sm">The discount rate is the interest rate used to calculate Present Value. It represents the rate of return you could have earned if you had the money today, or it represents the inflation rate degrading the money.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">Why is TVM important in real life?</summary>
+      <p class="mt-3 text-sm">TVM is the math behind every financial decision. It is how banks calculate your home loan EMI, how insurance companies price your life insurance policies, and how investors decide if a business is worth buying.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">Does TVM apply to salaries?</summary>
+      <p class="mt-3 text-sm">Yes. If your company promises you a ₹5 Lakh bonus, but delays paying it for 2 years, they are mathematically stealing from you. The Present Value of that ₹5 Lakhs is much lower due to the 2 years of lost investment potential.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">Is compounding the same as TVM?</summary>
+      <p class="mt-3 text-sm">Compounding is the mathematical engine that drives TVM. TVM is the philosophy, and compound interest is the formula used to calculate the exact values across time.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">What are the 5 variables in a TVM calculation?</summary>
+      <p class="mt-3 text-sm">The five variables are: Present Value (PV), Future Value (FV), Number of Periods (n), Interest Rate (r), and Payment amount (PMT - used for recurring investments like SIPs or EMIs).</p>
+    </details>
+  </div>
+</div>
+</article>
+</main>
+<div id="footer"></div>
+<script src="/js/search.js" defer></script>
+<script>
+fetch("/navbar.html").then(r=>r.text()).then(t=>document.getElementById("navbar").innerHTML=t);
+fetch("/footer.html").then(r=>r.text()).then(t=>document.getElementById("footer").innerHTML=t);
+</script>
+</body>
+</html>

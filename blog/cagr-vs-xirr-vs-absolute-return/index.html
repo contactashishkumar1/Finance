@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CAGR vs XIRR vs Absolute Return: What's the Difference?</title>
+<meta name="description" content="Learn when to use CAGR, XIRR and absolute return with simple examples, comparison tables, mistakes to avoid and practical portfolio tips.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://arthcalculator.in/blog/cagr-vs-xirr-vs-absolute-return/">
+<link rel="icon" href="/favicon.ico">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CAGR vs XIRR vs Absolute Return: What's the Difference?">
+<meta property="og:description" content="Choose the right return measure for your investment.">
+<meta property="og:url" content="https://arthcalculator.in/blog/cagr-vs-xirr-vs-absolute-return/">
+<meta property="og:site_name" content="ArthCalculator">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CAGR vs XIRR vs Absolute Return">
+<meta name="twitter:description" content="A clear comparison for investors.">
+<script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>body{font-family:Inter,sans-serif;background:#f8fafc}.prose p{margin:0 0 1rem;line-height:1.8}.prose h2{margin-top:2.8rem}.prose h3{margin-top:1.8rem}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"ArthCalculator","url":"https://arthcalculator.in/"},{"@type":"WebPage","name":"CAGR vs XIRR vs Absolute Return &ndash; What's the Difference?","url":"https://arthcalculator.in/blog/cagr-vs-xirr-vs-absolute-return/"},{"@type":"Article","headline":"CAGR vs XIRR vs Absolute Return &ndash; What's the Difference?","mainEntityOfPage":"https://arthcalculator.in/blog/cagr-vs-xirr-vs-absolute-return/","publisher":{"@type":"Organization","name":"ArthCalculator"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://arthcalculator.in/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://arthcalculator.in/blog/"},{"@type":"ListItem","position":3,"name":"CAGR vs XIRR vs Absolute Return","item":"https://arthcalculator.in/blog/cagr-vs-xirr-vs-absolute-return/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is CAGR?","acceptedAnswer":{"@type":"Answer","text":"CAGR is the annualised growth rate between one starting value and one ending value over a period."}},{"@type":"Question","name":"What is XIRR?","acceptedAnswer":{"@type":"Answer","text":"XIRR annualises returns while accounting for cash flows made on different dates."}},{"@type":"Question","name":"What is absolute return?","acceptedAnswer":{"@type":"Answer","text":"Absolute return is the total percentage change without converting it into a yearly rate."}},{"@type":"Question","name":"Which metric is best for SIPs?","acceptedAnswer":{"@type":"Answer","text":"XIRR is generally more suitable because SIP instalments occur on different dates."}},{"@type":"Question","name":"Can CAGR be negative?","acceptedAnswer":{"@type":"Answer","text":"Yes. A lower ending value can produce a negative annualised return."}},{"@type":"Question","name":"Does XIRR predict future returns?","acceptedAnswer":{"@type":"Answer","text":"No. It measures past cash-flow performance only."}},{"@type":"Question","name":"Should I compare XIRR and CAGR directly?","acceptedAnswer":{"@type":"Answer","text":"Only after checking that the underlying cash-flow pattern is comparable."}},{"@type":"Question","name":"Does return include inflation?","acceptedAnswer":{"@type":"Answer","text":"Usually these measures are nominal unless inflation is separately adjusted."}}]}]}</script>
+</head>
+<body class="text-slate-700">
+<div id="navbar"></div>
+<main class="max-w-3xl mx-auto px-4 py-10 sm:py-16"><nav aria-label="Breadcrumb" class="text-sm text-slate-500 mb-8"><a href="/" class="hover:text-blue-600">Home</a> &rarr; <a href="/blog/" class="hover:text-blue-600">Blog</a> &rarr; CAGR vs XIRR vs Absolute Return</nav><article class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-10 shadow-sm"><header><p class="text-blue-600 font-semibold text-sm">Investment returns</p>
+<h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mt-3">CAGR vs XIRR vs Absolute Return: What&rsquo;s the Difference?</h1>
+<p class="text-lg text-slate-600 mt-5">A return number is only useful when it answers the right question. CAGR, XIRR and absolute return all describe performance, but they handle time and cash flows differently.</p></header><div class="prose mt-10">
+<h2 class="text-2xl font-bold text-slate-900">The quick answer</h2>
+<div class="overflow-x-auto"><table class="w-full text-sm">
+<caption class="text-left font-semibold text-slate-900 mb-2">Choose the measure that matches the cash flows</caption>
+<thead class="bg-slate-100"><tr>
+<th class="p-3 text-left">Measure</th>
+<th class="p-3 text-left">Best for</th>
+<th class="p-3 text-left">What it says</th>
+</tr></thead>
+<tbody>
+<tr class="border-b">
+<td class="p-3 font-semibold">Absolute return</td>
+<td class="p-3">A short, simple holding period</td>
+<td class="p-3">Total gain or loss</td>
+</tr>
+<tr class="border-b">
+<td class="p-3 font-semibold">CAGR</td>
+<td class="p-3">One purchase and one ending value</td>
+<td class="p-3">Smoothed annual growth</td>
+</tr>
+<tr>
+<td class="p-3 font-semibold">XIRR</td>
+<td class="p-3">SIPs and irregular transactions</td>
+<td class="p-3">Annualised cash-flow return</td>
+</tr>
+</tbody>
+</table></div>
+<h2 class="text-2xl font-bold text-slate-900">Absolute return: the simplest view</h2>
+<p>Absolute return is the percentage difference between what you put in and what it is worth now. If &#8377;1 lakh becomes &#8377;1.20 lakh, the absolute return is 20%. It is easy to understand, but it leaves out time. A 20% gain in six months and a 20% gain over five years are clearly not the same result.</p>
+<p>Use it for a quick snapshot, especially when the holding period is short or you simply need to know the rupee and percentage gain. Do not use it alone to compare investments held for very different durations.</p>
+<h2 class="text-2xl font-bold text-slate-900">CAGR: turning a journey into an annual rate</h2>
+<p>CAGR means Compound Annual Growth Rate. It asks: if an investment had grown at one steady annual rate from the starting value to the ending value, what rate would that be? The formula is:</p>
+<div class="bg-slate-50 border border-slate-200 rounded-xl p-5 text-center font-semibold text-slate-900">CAGR = (Ending value &divide; Beginning value)<sup>1 / years</sup> &minus; 1</div>
+<p>Say &#8377;1 lakh becomes &#8377;1.72 lakh in five years. The absolute gain is 72%, but the CAGR is about 11.5% a year. CAGR makes it possible to compare that five-year result with another lump-sum investment held for a different number of years.</p>
+<p>It is a smoothing tool, not a record of the path. A fund can have a 12% CAGR while having experienced sharp ups and downs along the way. It also assumes one starting cash flow and one final value. Once you add more investments or withdrawals, CAGR becomes less meaningful.</p>
+<p>For a single purchase, try the <a class="text-blue-700 underline font-semibold" href="/cagr/">CAGR Calculator</a>. The difference between compounding and total growth is also explained in our <a class="text-blue-700 underline font-semibold" href="/blog/compound-interest-guide/">Compound Interest Guide</a>.</p>
+<h2 class="text-2xl font-bold text-slate-900">XIRR: designed for real-life cash flows</h2>
+<p>Investors rarely make one clean payment and wait. SIPs, top-ups, redemptions, dividends and transfers happen on different dates. XIRR, short for extended internal rate of return, uses the amount and date of every cash flow to calculate the annualised rate that makes those flows balance with today&rsquo;s value.</p>
+<p>For example, you invest &#8377;10,000 on the first day of each month, then after a year the account is worth &#8377;1,32,000. A simple total-return calculation treats every rupee as if it had been invested for the same duration. XIRR recognises that the first &#8377;10,000 had almost a year to grow while the last instalment had only a month.</p>
+<p>That makes XIRR a much fairer measure for SIPs and uneven investments. Use the <a class="text-blue-700 underline font-semibold" href="/xirr/">XIRR Calculator</a> when you have dated cash flows.</p>
+<h2 class="text-2xl font-bold text-slate-900">A practical comparison</h2>
+<p>Suppose two people each have a portfolio now worth &#8377;2 lakh. Person A invested &#8377;1.5 lakh five years ago and added nothing. CAGR describes that journey well. Person B invested &#8377;10,000 every month. Their money was not exposed for five full years, so XIRR is the better annualised measure. Looking only at current value or absolute gain would hide that difference.</p>
+<div class="bg-blue-50 border border-blue-100 rounded-xl p-5">
+<strong class="text-blue-900">Rule of thumb:</strong> one beginning amount and one ending amount: CAGR. Multiple dated amounts: XIRR. A quick total change with no annual comparison: absolute return.</div>
+<h2 class="text-2xl font-bold text-slate-900">Mistakes that distort return numbers</h2>
+<ul class="list-disc pl-6">
+<li>Calling a one-year absolute return &ldquo;annualised&rdquo; when the period was not exactly a year.</li>
+<li>Using CAGR for an SIP or portfolio with withdrawals.</li>
+<li>Forgetting to include a redemption, dividend or transfer in XIRR inputs.</li>
+<li>Comparing a portfolio XIRR with a benchmark CAGR without checking dates and cash flows.</li>
+<li>Reading a past return as a forecast.</li>
+<li>Ignoring fees, tax and inflation when making decisions.</li>
+</ul>
+<section class="not-prose mt-10 space-y-5">
+  <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6"><h2 class="text-2xl font-bold text-slate-900">Quick answer</h2><p class="mt-3 leading-relaxed">Use absolute return for a simple total change, CAGR for one starting amount and one ending value over time, and XIRR when money moved in or out on different dates. A return figure is useful only when it matches the cash-flow pattern behind it.</p></div>
+  <div class="grid sm:grid-cols-2 gap-4"><div class="bg-blue-50 border border-blue-100 rounded-xl p-5"><h3 class="font-bold text-blue-900">What you&rsquo;ll learn</h3><ul class="mt-3 text-sm leading-6 list-disc pl-5"><li>How each measure treats time</li><li>Which one fits SIPs and lump sums</li><li>What return figures leave out</li></ul></div><div class="bg-amber-50 border border-amber-100 rounded-xl p-5"><h3 class="font-bold text-amber-900">Important note</h3><p class="mt-3 text-sm leading-6">These measures describe past performance. They do not measure risk, liquidity, tax, inflation or future return.</p></div></div>
+</section>
+<h2 class="text-2xl font-bold text-slate-900">Start with the question you are answering</h2>
+<p>Investment return is the change in value after considering what you invested and, where relevant, when you invested it. A single percentage can look precise while hiding an important detail: did all the money stay invested for the same length of time? This is why return measurement matters when comparing funds, stocks, deposits or your own portfolio.</p>
+<h3 class="text-xl font-bold text-slate-900">Absolute return</h3>
+<p>Absolute return is the direct percentage gain or loss: (ending value minus beginning value) divided by beginning value. If ₹1 lakh becomes ₹1.5 lakh, the absolute return is 50%. It is clear and useful, but it does not tell you whether that happened in one year, five years or ten years.</p>
+<h3 class="text-xl font-bold text-slate-900">CAGR</h3>
+<p>CAGR converts a single start-to-finish journey into an annualised rate. For ₹1 lakh becoming ₹1.5 lakh in five years, CAGR is (1.5)<sup>1/5</sup> − 1, or about 8.45% a year. It is excellent for a lump sum, but it smooths the path; it cannot show the ups and downs between the two values.</p>
+<h3 class="text-xl font-bold text-slate-900">XIRR</h3>
+<p>XIRR extends the same idea to dated cash flows. A SIP is the classic case: each instalment was invested for a different period. Add every purchase as a negative cash flow, every redemption as a positive cash flow, and the current value as the final positive flow. XIRR finds the annual rate that makes those dated flows balance.</p>
+<h2 class="text-2xl font-bold text-slate-900">Worked scenarios</h2>
+<p><strong>Lump sum:</strong> You invest ₹1 lakh and it becomes ₹1.5 lakh after five years. Report 50% absolute return when discussing the total gain and 8.45% CAGR when comparing it with another five-year investment. XIRR will produce a similar answer because there is only one purchase and one final value.</p>
+<p><strong>SIP:</strong> You invest ₹10,000 at the start of each month for a year and the portfolio is worth ₹1.32 lakh at the end. Total contributions are ₹1.2 lakh, so the simple gain is ₹12,000. But the earliest ₹10,000 had almost a year to work while the latest had only weeks. XIRR is the fairer annualised measure.</p>
+<p><strong>Irregular portfolio:</strong> You buy ₹50,000 of a fund, add ₹25,000 six months later and withdraw ₹10,000 later in the year. CAGR no longer captures the timing. Record the dates and use the <a class="text-blue-700 underline font-semibold" href="/xirr/">XIRR Calculator</a>.</p>
+<h2 class="text-2xl font-bold text-slate-900">Decision table</h2>
+<div class="overflow-x-auto"><table class="w-full text-sm border-collapse"><caption class="text-left font-semibold text-slate-900 mb-2">Choosing the right return measure</caption><thead class="bg-slate-100"><tr><th class="p-3 text-left">Situation</th><th class="p-3 text-left">Best measure</th><th class="p-3 text-left">Reason</th></tr></thead><tbody><tr class="border-b"><td class="p-3">One stock bought once</td><td class="p-3">CAGR</td><td class="p-3">One starting cash flow and one ending value</td></tr><tr class="border-b"><td class="p-3">Monthly mutual fund SIP</td><td class="p-3">XIRR</td><td class="p-3">Different investment dates</td></tr><tr><td class="p-3">Quick six-month gain</td><td class="p-3">Absolute return</td><td class="p-3">Shows total change without annualising</td></tr></tbody></table></div>
+<h2 class="text-2xl font-bold text-slate-900">Where investors get confused</h2>
+<p>Calendar-year return measures January to December. Rolling return measures many overlapping holding periods and is often more revealing than one chosen start date. Neither replaces XIRR for your personal cash flows. For mutual funds, stocks, gold or real estate, first separate the asset&rsquo;s return from your own return; your buy and sell dates can make them different.</p>
+<p>For PPF and fixed deposits, the stated product rate can be more relevant than market-style CAGR, but cash-flow timing still matters when you add money periodically. Taxes and charges reduce the amount you actually keep. Inflation further reduces purchasing power; the <a class="text-blue-700 underline font-semibold" href="/real-return/">Real Return Calculator</a> can add that perspective.</p>
+<div class="bg-rose-50 border border-rose-100 rounded-xl p-5"><h3 class="font-bold text-rose-900">Warning: do not compare unmatched numbers</h3><p class="mt-2 text-sm leading-6">A portfolio XIRR and a fund&rsquo;s published CAGR may have different start dates, fees and cash flows. Treat them as different answers until the inputs are aligned.</p></div>
+<h2 class="text-2xl font-bold text-slate-900">Practical habits and myths</h2>
+<p><strong>Myth:</strong> the highest past return is automatically the best choice. <strong>Fact:</strong> return needs context: risk, costs, diversification, tax and your goal matter too. Keep transaction dates, include redemptions and fees, and compare like with like. The <a class="text-blue-700 underline font-semibold" href="/cagr/">CAGR Calculator</a> is useful for clean lump sums, while the <a class="text-blue-700 underline font-semibold" href="/sip/">SIP Calculator</a> helps plan regular contributions rather than judge past performance.</p>
+<h2 class="text-2xl font-bold text-slate-900">Better ways to review a portfolio</h2>
+<p>Record transaction dates and amounts consistently. Use the same valuation date when comparing alternatives. Then pair return with risk, costs, asset allocation and goal progress. A high return over a short window may say less than a lower but steadier result over a full cycle.</p>
+<p>For a goal built through regular contributions, pair your XIRR review with a projection in the <a class="text-blue-700 underline font-semibold" href="/sip/">SIP Calculator</a>. If you want to understand return after rising prices, use the <a class="text-blue-700 underline font-semibold" href="/real-return/">Real Return Calculator</a>. None of these measures guarantees what comes next; they simply make the past easier to interpret.</p>
+<h2 class="text-2xl font-bold text-slate-900">Frequently asked questions</h2>
+<div class="space-y-3">
+<details class="border rounded-xl p-4"><summary class="font-semibold">Is CAGR always better than absolute return?</summary><p class="mt-3">No. CAGR answers an annual-growth question; absolute return is useful for a simple holding-period result.</p></details><details class="border rounded-xl p-4"><summary class="font-semibold">Can I use XIRR for one investment?</summary><p class="mt-3">Yes, though CAGR is simpler when there is only one purchase and one ending value.</p></details><details class="border rounded-xl p-4"><summary class="font-semibold">Why is my XIRR negative?</summary><p class="mt-3">The value and cash-flow dates may imply a loss at the valuation date.</p></details><details class="border rounded-xl p-4"><summary class="font-semibold">What dates go into XIRR?</summary><p class="mt-3">Every purchase, withdrawal and the current portfolio value as the final positive cash flow.</p></details><details class="border rounded-xl p-4"><summary class="font-semibold">Does XIRR include risk?</summary><p class="mt-3">No. It measures return, not volatility or downside risk.</p></details><details class="border rounded-xl p-4"><summary class="font-semibold">Can CAGR be used for stocks?</summary><p class="mt-3">Yes for a single buy-and-hold position, adjusted for relevant cash flows.</p></details><details class="border rounded-xl p-4"><summary class="font-semibold">Should taxes be included?</summary><p class="mt-3">For your personal net result, include taxes and costs where practical.</p></details><details class="border rounded-xl p-4"><summary class="font-semibold">How often should I review returns?</summary><p class="mt-3">A scheduled review linked to your goals is usually more useful than reacting to daily changes.</p></details>
+</div>
+</div></article></main><div id="footer"></div>
+<script src="/js/search.js" defer></script><script>fetch("/navbar.html").then(r=>r.text()).then(t=>document.getElementById("navbar").innerHTML=t);fetch("/footer.html").then(r=>r.text()).then(t=>document.getElementById("footer").innerHTML=t);</script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Fee Calculator | International Money Transfer | ArthCalculator</title>
+    <meta name="description" content="Calculate the exact total fee for your international money transfer by combining fixed costs and percentage-based charges.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Ashish Kumar">
+    <link rel="canonical" href="https://arthcalculator.in/money-transfer/calculators/transfer-fee/">
+    <link rel="icon" href="/favicon.png">
+
+    <meta property="og:title" content="Transfer Fee Calculator">
+    <meta property="og:description" content="Calculate the exact total fee for your international money transfer by combining fixed costs and percentage-based charges.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://arthcalculator.in/money-transfer/calculators/transfer-fee/">
+    <meta property="og:site_name" content="ArthCalculator">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Transfer Fee Calculator | ArthCalculator">
+    <meta name="twitter:description" content="Calculate the exact total fee for your international money transfer by combining fixed costs and percentage-based charges.">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Organization","name":"ArthCalculator","url":"https://arthcalculator.in","logo":"https://arthcalculator.in/favicon.png"}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebPage","name":"Transfer Fee Calculator","url":"https://arthcalculator.in/money-transfer/calculators/transfer-fee/","description":"Calculate the exact total fee for your international money transfer by combining fixed costs and percentage-based charges."}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Transfer Fee Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Tool to calculate total transfer fees based on fixed and percentage inputs.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://arthcalculator.in/"},{"@type":"ListItem","position":2,"name":"Money Transfer","item":"https://arthcalculator.in/money-transfer/"},{"@type":"ListItem","position":3,"name":"Calculators","item":"https://arthcalculator.in/money-transfer/calculators/"},{"@type":"ListItem","position":4,"name":"Transfer Fee Calculator","item":"https://arthcalculator.in/money-transfer/calculators/transfer-fee/"}]}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type": "Question", "name": "What is a fixed transfer fee?", "acceptedAnswer": {"@type": "Answer", "text": "A fixed fee is a flat amount charged by a provider regardless of how much money you send. For example, a $5 flat fee applies whether you send $100 or $10,000."}}, {"@type": "Question", "name": "What is a percentage transfer fee?", "acceptedAnswer": {"@type": "Answer", "text": "A percentage fee scales with the size of your transfer. If the provider charges 1%, a $1,000 transfer incurs a $10 fee, while a $10,000 transfer incurs a $100 fee."}}, {"@type": "Question", "name": "Do providers charge both fixed and percentage fees?", "acceptedAnswer": {"@type": "Answer", "text": "Some do. It's common for a provider to charge a small fixed fee (to cover basic processing) plus a percentage fee (to cover variable costs or currency exchange risks)."}}, {"@type": "Question", "name": "Is it better to pay a fixed or percentage fee?", "acceptedAnswer": {"@type": "Answer", "text": "For small transfers, a percentage fee is usually cheaper. For large transfers, a fixed fee is almost always the more cost-effective option."}}, {"@type": "Question", "name": "Does this fee include the exchange rate markup?", "acceptedAnswer": {"@type": "Answer", "text": "No. This calculator only computes the upfront, explicitly stated fees. Exchange rate markups act as a separate, often hidden cost."}}, {"@type": "Question", "name": "Why do some providers advertise 'zero fees'?", "acceptedAnswer": {"@type": "Answer", "text": "Providers offering 'zero fees' typically mean they charge no upfront fixed or percentage fee. Instead, they make their profit entirely from the exchange rate markup."}}, {"@type": "Question", "name": "Are credit card fees included in standard transfer fees?", "acceptedAnswer": {"@type": "Answer", "text": "Usually not. If you fund your transfer with a credit card, the provider typically adds a supplemental percentage fee (often 1.5% to 3%) to cover their processing costs."}}, {"@type": "Question", "name": "How can I reduce my transfer fees?", "acceptedAnswer": {"@type": "Answer", "text": "You can reduce fees by using bank transfers instead of debit/credit cards to fund the payment, sending larger amounts less frequently to minimize fixed fees, and comparing multiple providers."}}]}
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); transition: all 0.3s ease; }
+        .card-shadow:hover { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); transform: translateY(-2px); }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen">
+
+<div id="navbar"></div>
+
+<header class="bg-white border-b border-slate-200 py-12 sm:py-16 text-center">
+    <div class="max-w-4xl mx-auto px-4">
+        <nav class="flex mb-6 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center" aria-label="Breadcrumb">
+            <ol class="flex list-none p-0 flex-wrap justify-center items-center">
+                <li class="flex items-center"><a href="/" class="hover:text-blue-600 transition-colors">Home</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                <li class="flex items-center"><a href="/money-transfer/" class="hover:text-blue-600 transition-colors">Money Transfer</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                <li class="flex items-center"><a href="/money-transfer/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                <li class="text-blue-600 font-bold">Transfer Fee Calculator</li>
+            </ol>
+        </nav>
+        <h1 class="text-3xl sm:text-5xl font-extrabold gradient-text pb-3 leading-tight">Transfer Fee Calculator</h1>
+        <p class="text-slate-600 mt-2 max-w-2xl mx-auto leading-relaxed text-sm sm:text-base">Calculate the exact total fee for your international money transfer by combining fixed costs and percentage-based charges.</p>
+    </div>
+</header>
+
+<div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="flex flex-col lg:flex-row gap-10">
+        
+        <!-- Sticky TOC -->
+        <aside class="lg:w-64 shrink-0 hidden lg:block">
+            <div class="sticky top-24 bg-white p-5 rounded-2xl border border-slate-200 card-shadow">
+                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path></svg>
+                    Contents
+                </h3>
+                <nav class="space-y-1 text-xs font-medium text-slate-600" aria-label="Page contents">
+                    <a href="#calculator" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all font-bold text-blue-600">Calculator</a>
+                    <a href="#understanding" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">Understanding the Math</a>
+                    <a href="#example" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">Practical Example</a>
+                    <a href="#faq" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">FAQs</a>
+                    <a href="#related" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">Related Resources</a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 min-w-0 space-y-10">
+            
+            <!-- Calculator App -->
+            <section id="calculator" class="scroll-mt-28 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 card-shadow">
+                
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">Transfer Amount</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 font-medium">$</span>
+                            <input type="number" id="sendAmount" class="w-full pl-8 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all" placeholder="1000" value="1000">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">Fixed Fee</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 font-medium">$</span>
+                            <input type="number" id="fixedFee" class="w-full pl-8 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all" placeholder="5.00" value="5.00">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">Percentage Fee (%)</label>
+                        <div class="relative">
+                            <input type="number" id="percentFee" class="w-full pl-4 pr-8 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all" placeholder="1.0" value="1.0">
+                            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 font-medium">%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-900 rounded-2xl p-6 text-white flex flex-col justify-center">
+                    <div class="text-slate-400 text-sm font-bold uppercase tracking-wider mb-2">Total Transfer Fee</div>
+                    <div class="text-4xl sm:text-5xl font-extrabold text-blue-400" id="resultFee">$15.00</div>
+                    
+                    <div class="mt-6 pt-6 border-t border-slate-700 space-y-3 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-slate-400">Fixed Fee Component:</span>
+                            <span class="font-medium" id="resFixed">$5.00</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-400">Percentage Component:</span>
+                            <span class="font-medium" id="resPercent">$10.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            </section>
+
+            <!-- Explanation -->
+            <section id="understanding" class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                <div class="border-b border-slate-100 pb-5 mb-6">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Education</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Understanding the Math</h2>
+                </div>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>Understanding how transfer providers compute this specific metric allows you to dissect their fee structures and uncover hidden costs.</p>
+                    <div class="p-5 bg-blue-50 rounded-xl border border-blue-100 my-6">
+                        <strong class="text-blue-900 block mb-2">The Formula:</strong>
+                        <div class="font-mono text-sm sm:text-base text-slate-800 bg-white p-3 border border-slate-200 rounded-lg text-center overflow-x-auto whitespace-nowrap">
+                            Total Transfer Fee = Fixed Fee + (Transfer Amount &times; (Percentage Fee / 100))
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mt-6">Step-by-Step Guide</h3>
+                    <ul class="list-decimal pl-5 space-y-2">
+                        <li><strong>Identify your variables:</strong> Gather the precise fee numbers, exchange rates, and principal amounts from your provider's quote.</li>
+                        <li><strong>Input the figures:</strong> Enter these values into the calculator above. Be sure to use the correct formatting for percentages and exchange rates.</li>
+                        <li><strong>Analyze the output:</strong> The calculator instantly applies the formula to determine the exact metric. Use this output to compare multiple providers objectively.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Example -->
+            <section id="example" class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                <div class="border-b border-slate-100 pb-5 mb-6">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Application</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Practical Example</h2>
+                </div>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed">
+                    <p>Imagine you are sending a remittance of $1,000. You compare two providers to find the best deal. Provider A charges a flat fee of $10, while Provider B charges a 2% variable fee. By using our mathematical formula, you can clearly evaluate the financial impact.</p>
+                    <p>For Provider A, the fee is a simple $10. For Provider B, 2% of $1,000 equals $20. In this scenario, despite Provider A charging a prominent upfront fixed fee, it is mathematically cheaper than Provider B's percentage-based approach.</p>
+                    <p>As the transfer size grows, the difference becomes starker. This is why utilizing objective calculators is crucial before confirming an international payment.</p>
+                </div>
+            </section>
+
+            <!-- FAQs -->
+            <section id="faq" class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                <div class="border-b border-slate-100 pb-5 mb-6">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Common Questions</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Frequently Asked Questions</h2>
+                </div>
+                <div class="space-y-3">
+                    
+                    <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">What is a fixed transfer fee?<svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">A fixed fee is a flat amount charged by a provider regardless of how much money you send. For example, a $5 flat fee applies whether you send $100 or $10,000.</div></details>
+                    <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">What is a percentage transfer fee?<svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">A percentage fee scales with the size of your transfer. If the provider charges 1%, a $1,000 transfer incurs a $10 fee, while a $10,000 transfer incurs a $100 fee.</div></details>
+                    <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">Do providers charge both fixed and percentage fees?<svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">Some do. It's common for a provider to charge a small fixed fee (to cover basic processing) plus a percentage fee (to cover variable costs or currency exchange risks).</div></details>
+                    <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">Is it better to pay a fixed or percentage fee?<svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">For small transfers, a percentage fee is usually cheaper. For large transfers, a fixed fee is almost always the more cost-effective option.</div></details>
+                    <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">Does this fee include the exchange rate markup?<svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">No. This calculator only computes the upfront, explicitly stated fees. Exchange rate markups act as a separate, often hidden cost.</div></details>
+                    <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">Why do some providers advertise 'zero fees'?<svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">Providers offering 'zero fees' typically mean they charge no upfront fixed or percentage fee. Instead, they make their profit entirely from the exchange rate markup.</div></details>
+                    <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">Are credit card fees included in standard transfer fees?<svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">Usually not. If you fund your transfer with a credit card, the provider typically adds a supplemental percentage fee (often 1.5% to 3%) to cover their processing costs.</div></details>
+                    <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">How can I reduce my transfer fees?<svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">You can reduce fees by using bank transfers instead of debit/credit cards to fund the payment, sending larger amounts less frequently to minimize fixed fees, and comparing multiple providers.</div></details>
+                </div>
+            </section>
+
+            <!-- Related -->
+            <section id="related" class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                <div class="border-b border-slate-100 pb-5 mb-6">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Explore Further</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Related Resources</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm mb-6">
+                    <a href="/money-transfer/calculators/" class="p-4 border border-slate-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 font-bold text-slate-800 hover:text-blue-600 transition-all">All Calculators →<span class="block text-xs font-normal text-slate-500 mt-1">View the complete suite</span></a>
+                    <a href="/money-transfer/exchange-rates/" class="p-4 border border-slate-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 font-bold text-slate-800 hover:text-blue-600 transition-all">Exchange Rate Guide →<span class="block text-xs font-normal text-slate-500 mt-1">How margins work</span></a>
+                    <a href="/money-transfer/country-guides/" class="p-4 border border-slate-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 font-bold text-slate-800 hover:text-blue-600 transition-all">Country Guides →<span class="block text-xs font-normal text-slate-500 mt-1">Corridor navigation hub</span></a>
+                    <a href="/money-transfer/" class="p-4 border border-slate-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 font-bold text-slate-800 hover:text-blue-600 transition-all">Money Transfer Hub →<span class="block text-xs font-normal text-slate-500 mt-1">Main directory</span></a>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="mt-8 bg-blue-50 p-6 rounded-3xl border border-blue-200 flex flex-col sm:flex-row items-center justify-between gap-4 card-shadow text-center sm:text-left">
+                <div>
+                    <div class="font-bold text-slate-900 text-lg">Compare Providers Instantly</div>
+                    <div class="text-xs text-slate-600 mt-1 max-w-md">Ready to see the total picture? Use our comprehensive comparison tool to see who offers the best actual rate for your specific corridor.</div>
+                </div>
+                <a href="/money-transfer/provider-comparisons/" class="px-8 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-sm transition-all shadow-md w-full sm:w-auto text-center shrink-0">Open Comparisons →</a>
+            </section>
+
+        
+        <!-- Disclaimer -->
+        <div class="mt-10 border-l-4 border-slate-300 bg-slate-50 p-4 sm:p-5 rounded-r-xl">
+            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed m-0">
+                <span class="font-bold text-slate-700">Disclaimer:</span> Exchange rates, transfer fees, transfer speeds, supported countries, and provider policies may change over time. Always verify the latest information directly with the official money transfer provider before making a transfer. ArthCalculator provides educational information only and does not provide financial, legal, or tax advice.
+            </p>
+        </div>
+    </main>
+    </div>
+</div>
+
+<div id="footer"></div>
+
+<script>
+
+            function calculate() {
+                const amount = parseFloat(document.getElementById('sendAmount').value) || 0;
+                const fixed = parseFloat(document.getElementById('fixedFee').value) || 0;
+                const percent = parseFloat(document.getElementById('percentFee').value) || 0;
+                
+                const percentVal = amount * (percent / 100);
+                const total = fixed + percentVal;
+                
+                document.getElementById('resultFee').innerText = '$' + total.toFixed(2);
+                document.getElementById('resFixed').innerText = '$' + fixed.toFixed(2);
+                document.getElementById('resPercent').innerText = '$' + percentVal.toFixed(2);
+            }
+            document.getElementById('sendAmount').addEventListener('input', calculate);
+            document.getElementById('fixedFee').addEventListener('input', calculate);
+            document.getElementById('percentFee').addEventListener('input', calculate);
+            calculate();
+        
+</script>
+
+<script src="/js/search.js" defer></script>
+<script>
+fetch("/navbar.html").then(r=>r.text()).then(d=>{document.getElementById("navbar").innerHTML=d;const b=document.getElementById("menuBtn"),m=document.getElementById("mobileMenu");if(b)b.addEventListener("click",()=>m.classList.toggle("hidden"));});
+fetch("/footer.html").then(r=>r.text()).then(d=>{document.getElementById("footer").innerHTML=d;});
+window.addEventListener("DOMContentLoaded",()=>{const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.intersectionRatio>0.1){document.querySelectorAll("aside nav a").forEach(a=>a.classList.remove("text-blue-600","font-bold"));const a=document.querySelector(`aside nav a[href="#${e.target.id}"]`);if(a)a.classList.add("text-blue-600","font-bold");}});},{threshold:[0.1,0.5],rootMargin:"-20% 0px -60% 0px"});document.querySelectorAll("main section[id]").forEach(s=>obs.observe(s));});
+</script>
+</body>
+</html>

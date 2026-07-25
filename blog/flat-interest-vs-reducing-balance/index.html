@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flat Interest vs Reducing Balance Interest: Which is Better?</title>
+<meta name="description" content="Understand the critical difference between flat interest and reducing balance interest. Learn how to convert flat rates to effective rates and avoid loan traps.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://arthcalculator.in/blog/flat-interest-vs-reducing-balance/">
+<link rel="icon" href="/favicon.ico">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Flat Interest vs Reducing Balance Interest Explained">
+<meta property="og:description" content="A comprehensive guide to flat vs reducing balance interest rates. Discover how lenders calculate your EMI and the true cost of your loan.">
+<meta property="og:url" content="https://arthcalculator.in/blog/flat-interest-vs-reducing-balance/">
+<meta property="og:site_name" content="ArthCalculator">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Flat vs Reducing Balance Interest">
+<meta name="twitter:description" content="Don't get tricked by flat interest rates. Learn the math behind reducing balance loans.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>body{font-family:Inter,sans-serif;background:#f8fafc}.prose p{margin:0 0 1rem;line-height:1.8}.prose h2{margin-top:2.8rem}.prose h3{margin-top:1.8rem}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "ArthCalculator",
+      "url": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Flat Interest vs Reducing Balance Interest Explained",
+      "url": "https://arthcalculator.in/blog/flat-interest-vs-reducing-balance/"
+    },
+    {
+      "@type": "Article",
+      "headline": "Flat Interest vs Reducing Balance Interest Explained",
+      "mainEntityOfPage": "https://arthcalculator.in/blog/flat-interest-vs-reducing-balance/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ArthCalculator"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://arthcalculator.in/blog/"},
+        {"@type": "ListItem", "position": 3, "name": "Flat Interest vs Reducing Balance", "item": "https://arthcalculator.in/blog/flat-interest-vs-reducing-balance/"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "What is a flat interest rate?", "acceptedAnswer": {"@type": "Answer", "text": "A flat interest rate is calculated on the entire original loan amount for the entire tenure, without accounting for the principal you repay each month."}},
+        {"@type": "Question", "name": "What is a reducing balance interest rate?", "acceptedAnswer": {"@type": "Answer", "text": "A reducing balance rate calculates interest only on the outstanding loan amount. As you pay your EMI, the principal drops, and so does the interest component."}},
+        {"@type": "Question", "name": "Why is a 7% flat rate more expensive than a 10% reducing rate?", "acceptedAnswer": {"@type": "Answer", "text": "Because flat interest ignores your monthly principal repayments. The effective interest rate of a 7% flat rate is actually closer to 12-13% on a reducing balance basis."}},
+        {"@type": "Question", "name": "How do I convert a flat rate to a reducing rate?", "acceptedAnswer": {"@type": "Answer", "text": "As a general rule of thumb, multiply the flat interest rate by 1.8 or 1.9 to estimate the equivalent reducing balance interest rate."}},
+        {"@type": "Question", "name": "Do car loans use flat or reducing interest?", "acceptedAnswer": {"@type": "Answer", "text": "Car loans are frequently advertised using flat interest rates to make them look cheaper, but legally and functionally, most modern financial institutions process them as reducing balance loans at a higher effective rate."}},
+        {"@type": "Question", "name": "Are home loans flat or reducing?", "acceptedAnswer": {"@type": "Answer", "text": "Home loans are almost universally calculated on a reducing balance basis. A flat rate on a 20-year home loan would be catastrophically expensive."}},
+        {"@type": "Question", "name": "Does prepayment help in a flat rate loan?", "acceptedAnswer": {"@type": "Answer", "text": "Rarely. Because the total interest is locked in at the beginning of the loan, prepaying a flat-rate loan does not usually save you future interest, and may even incur penalties."}},
+        {"@type": "Question", "name": "Is flat interest illegal?", "acceptedAnswer": {"@type": "Answer", "text": "It is not entirely illegal, but banking regulators worldwide strongly discourage it. Lenders are increasingly required to disclose the Effective Annual Rate (EAR) or Annual Percentage Rate (APR) to prevent deception."}},
+        {"@type": "Question", "name": "Which one gives a lower EMI?", "acceptedAnswer": {"@type": "Answer", "text": "If both rates were identically 10%, the reducing balance method would give a significantly lower EMI. However, lenders artificially lower the flat rate number to make the EMIs look comparable."}},
+        {"@type": "Question", "name": "What is Effective Interest Rate (EIR)?", "acceptedAnswer": {"@type": "Answer", "text": "EIR is the true mathematical interest rate you are paying on the outstanding balance. It exposes the hidden cost of flat interest rate loans."}}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="text-slate-700">
+<div id="navbar"></div>
+<main class="max-w-3xl mx-auto px-4 py-10 sm:py-16">
+<nav aria-label="Breadcrumb" class="text-sm text-slate-500 mb-8">
+  <a class="hover:text-blue-600" href="/">Home</a> <span aria-hidden="true">→</span> 
+  <a class="hover:text-blue-600" href="/blog/">Blog</a> <span aria-hidden="true">→</span> Flat vs Reducing Balance
+</nav>
+
+<article class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-10 shadow-sm">
+<header>
+  <p class="text-blue-600 font-semibold text-sm">Loan Analysis</p>
+  <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 mt-3">Flat Interest vs Reducing Balance Interest</h1>
+  <p class="text-lg text-slate-600 mt-5">When a lender offers you a "special 7% interest rate," are you actually getting a good deal, or are you stepping into a mathematical trap? Learn how to distinguish between flat and reducing balance interest to uncover the true cost of borrowing.</p>
+</header>
+
+<div class="prose mt-10">
+  <h2 class="text-2xl font-bold text-slate-900">The Illusion of Cheap Loans</h2>
+  <p>Imagine walking into a car dealership and being offered a vehicle loan at just 7% interest. A few hours later, you speak to your primary bank, and they offer you a personal loan at 11% interest. The choice seems obvious. 7% is vastly cheaper than 11%, right?</p>
+  <p>In the world of finance, taking numbers at face value can cost you lakhs of rupees. The 7% loan might actually be a <strong>flat interest rate</strong>, while the 11% loan is likely a <strong>reducing balance interest rate</strong>. Despite the higher advertised number, the 11% reducing balance loan is almost certainly the cheaper option.</p>
+  <p>Understanding the difference between these two calculation methods is the single most important skill you can develop before signing a loan agreement.</p>
+
+  <h2 class="text-2xl font-bold text-slate-900">What is Flat Interest?</h2>
+  <p>A flat interest rate is the simplest, most primitive way to calculate loan interest. The lender calculates the total interest on the <strong>full original loan amount</strong> for the <strong>entire tenure of the loan</strong>. It completely ignores the fact that you are paying back part of the principal every single month through your Equated Monthly Instalment (EMI).</p>
+  
+  <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 text-center font-semibold text-slate-900">
+    Total Interest (Flat) = Principal × Flat Rate × Tenure (in years)
+  </div>
+
+  <p>Let’s look at a practical example. You borrow ₹5,00,000 for 5 years at a flat rate of 8%.</p>
+  <ul class="list-disc pl-6">
+    <li><strong>Principal:</strong> ₹5,00,000</li>
+    <li><strong>Yearly Interest:</strong> 8% of ₹5,00,000 = ₹40,000</li>
+    <li><strong>Total Interest over 5 years:</strong> ₹40,000 × 5 = ₹2,00,000</li>
+    <li><strong>Total Amount Payable:</strong> ₹5,00,000 + ₹2,00,000 = ₹7,00,000</li>
+    <li><strong>Monthly EMI:</strong> ₹7,00,000 ÷ 60 months = ₹11,667</li>
+  </ul>
+  
+  <p>This calculation seems highly transparent and easy to understand. However, it contains a massive flaw: <strong>you don't hold the entire ₹5,00,000 for the whole 5 years</strong>. After your first EMI, you have paid back a portion of the principal. By year 4, you might only owe ₹1,50,000. Yet, the flat rate formula still charges you interest as if you had the full ₹5,00,000 in your pocket.</p>
+
+  <h2 class="text-2xl font-bold text-slate-900">What is Reducing Balance Interest?</h2>
+  <p>A reducing balance interest rate (also known as a declining balance rate) is the standard, fair method of calculating interest used by reputable financial institutions globally. In this method, interest is calculated <strong>only on the outstanding principal balance</strong> at the end of each month.</p>
+  <p>As you pay your EMI, a portion of it goes toward covering the month's interest, and the remainder pays down the principal. Because the principal shrinks every month, the amount of interest you are charged shrinks every month as well. This is exactly how <a class="text-blue-700 underline font-semibold" href="/blog/how-emi-is-calculated/">standard EMI amortization</a> works.</p>
+
+  <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 text-center font-semibold text-slate-900">
+    Monthly Interest = Outstanding Principal × (Annual Rate ÷ 12)
+  </div>
+
+  <p>Let's take the same ₹5,00,000 loan over 5 years, but this time apply an 8% reducing balance rate.</p>
+  <ul class="list-disc pl-6">
+    <li><strong>Principal:</strong> ₹5,00,000</li>
+    <li><strong>Month 1 Interest:</strong> ₹5,00,000 × (8% ÷ 12) = ₹3,333</li>
+    <li><strong>Standard EMI:</strong> ₹10,138</li>
+    <li><strong>Principal Repaid in Month 1:</strong> ₹10,138 - ₹3,333 = ₹6,805</li>
+    <li><strong>Outstanding Balance for Month 2:</strong> ₹5,00,000 - ₹6,805 = ₹4,93,195</li>
+  </ul>
+  <p>In month 2, you are only charged interest on ₹4,93,195, not the original ₹5,00,000. Over the 5-year tenure, your total interest paid will be just <strong>₹1,08,292</strong>. This is nearly half of the ₹2,00,000 interest charged by the 8% flat rate!</p>
+
+  <h2 class="text-2xl font-bold text-slate-900">Side-by-Side Comparison: Flat vs Reducing</h2>
+  <p>To fully grasp the magnitude of the difference, let’s compare a ₹10,00,000 loan over 5 years. We will look at a 10% Flat Rate versus a 10% Reducing Balance Rate.</p>
+
+  <div class="overflow-x-auto my-6">
+    <table class="w-full text-sm border-collapse border border-slate-200">
+      <caption class="text-left font-semibold text-slate-900 mb-2">₹10 Lakh Loan at 10% for 5 Years</caption>
+      <thead class="bg-slate-100">
+        <tr>
+          <th class="p-3 text-left border-b border-slate-200">Parameter</th>
+          <th class="p-3 text-left border-b border-slate-200">10% Flat Rate</th>
+          <th class="p-3 text-left border-b border-slate-200">10% Reducing Rate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b border-slate-200">
+          <td class="p-3 font-medium">Principal</td>
+          <td class="p-3">₹10,00,000</td>
+          <td class="p-3">₹10,00,000</td>
+        </tr>
+        <tr class="border-b border-slate-200">
+          <td class="p-3 font-medium">Total Interest Paid</td>
+          <td class="p-3 text-rose-600 font-bold">₹5,00,000</td>
+          <td class="p-3 text-emerald-600 font-bold">₹2,74,823</td>
+        </tr>
+        <tr class="border-b border-slate-200">
+          <td class="p-3 font-medium">Total Repayment</td>
+          <td class="p-3">₹15,00,000</td>
+          <td class="p-3">₹12,74,823</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-medium">Monthly EMI</td>
+          <td class="p-3 font-semibold">₹25,000</td>
+          <td class="p-3 font-semibold">₹21,247</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>With identical advertised interest rates, the flat rate loan forces you to pay a staggering <strong>₹2,25,177</strong> more in interest over five years. This is the definition of deceptive marketing.</p>
+
+  <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 my-6">
+    <strong class="text-blue-900">Practical tip:</strong> 
+    Never compare two loans solely by looking at the interest rate. Always ask the lender for the <strong>EMI amount</strong> and the <strong>Total Repayment Amount</strong>. Numbers don't lie, even when marketing brochures do. Use our <a class="text-blue-700 underline font-semibold" href="/emi/">EMI Calculator</a> to cross-verify the bank's quoted EMI.
+  </div>
+
+  <h2 class="text-2xl font-bold text-slate-900">How to Convert a Flat Rate to a Reducing Rate</h2>
+  <p>When a lender quotes a flat rate, you need a quick mental model to determine the actual effective interest rate (EIR) you are being charged. Because you are steadily paying off the principal over the loan tenure, your average outstanding balance over the life of the loan is roughly half of the original principal.</p>
+  
+  <p>Therefore, as a rapid rule of thumb, the effective reducing balance rate is usually <strong>between 1.7x and 1.9x the flat rate</strong>, depending on the tenure. A slightly more accurate formula for estimating the effective annual rate is:</p>
+  
+  <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 text-center font-semibold text-slate-900">
+    Effective Rate ≈ (2 × Number of Months × Flat Rate) ÷ (Number of Months + 1)
+  </div>
+
+  <p>If a dealer offers you an 8% flat rate on a 48-month (4-year) car loan:</p>
+  <ul class="list-disc pl-6 mb-4">
+    <li>Effective Rate ≈ (2 × 48 × 8) ÷ (49)</li>
+    <li>Effective Rate ≈ 768 ÷ 49 ≈ <strong>15.67%</strong></li>
+  </ul>
+  <p>Suddenly, that "cheap" 8% car loan reveals its true colors as a highly expensive 15.67% personal finance arrangement. A standard 11% reducing balance personal loan from your bank would be vastly cheaper.</p>
+
+  <h2 class="text-2xl font-bold text-slate-900">How Prepayments and Foreclosures Work</h2>
+  <h3 class="text-xl font-bold text-slate-900 mt-4">Prepaying a Reducing Balance Loan</h3>
+  <p>One of the greatest advantages of a reducing balance loan is the mathematical power of prepayment. When you make a lump-sum payment (part-prepayment) towards your loan, 100% of that money goes directly to reducing your outstanding principal balance. </p>
+  <p>Because future interest is calculated only on the remaining balance, a single large prepayment permanently destroys thousands of rupees of future interest that you would have otherwise been charged. You can use this to your advantage to slash years off your loan tenure.</p>
+  
+  <h3 class="text-xl font-bold text-slate-900 mt-4">Prepaying a Flat Interest Loan</h3>
+  <p>Flat rate loans behave entirely differently. Because the total interest for the entire tenure was calculated on day one and hard-coded into your repayment schedule, prepaying the loan <strong>often provides absolutely zero interest savings</strong>. </p>
+  <p>If you have a 5-year flat loan and decide to pay it off completely in Year 3, many lenders will still demand the full 5 years of interest you agreed to on day one, minus a small, heavily penalized "rebate" if you're lucky. Flat rate loans actively punish financial responsibility.</p>
+
+  <div class="bg-rose-50 border border-rose-100 rounded-xl p-5 not-prose my-6">
+    <h3 class="font-bold text-rose-900">Warning: The Prepayment Trap</h3>
+    <p class="mt-2 text-sm leading-6">If you anticipate receiving bonuses, selling property, or getting salary hikes that would allow you to pay off your debt early, <strong>never take a flat rate loan</strong>. You will be locked into paying the full interest schedule regardless of how fast you clear the debt.</p>
+  </div>
+
+  <h2 class="text-2xl font-bold text-slate-900">Where Are Flat Rates Still Used?</h2>
+  <p>While central banks and financial regulators strongly encourage transparency and reducing balance metrics, flat interest rates still lurk in specific corners of the financial market:</p>
+  <ul class="list-disc pl-6">
+    <li><strong>Vehicle Loans:</strong> Used car dealerships and two-wheeler showrooms frequently use flat rates. It allows salespeople to quote incredibly low single-digit interest rates (like 5% or 6%) that sound too good to pass up.</li>
+    <li><strong>Micro-finance and Consumer Durables:</strong> When you buy a smartphone or a refrigerator on "easy EMIs", the hidden interest or processing fees often mimic a flat rate calculation.</li>
+    <li><strong>Unsecured Private Lending:</strong> Unregulated private lenders or peer-to-peer applications sometimes use flat calculations to maximize their yield while appearing competitive.</li>
+  </ul>
+  <p>Conversely, <strong>Home Loans</strong> and major <strong>Bank Personal Loans</strong> are strictly governed and operate almost exclusively on a reducing balance mechanism. A flat rate on a 20-year home loan would result in catastrophic interest totals, and regulators prohibit such predatory structuring for housing.</p>
+
+  <h2 class="text-2xl font-bold text-slate-900">The Role of Processing Fees and "Zero Percent" EMI</h2>
+  <p>Sometimes, retailers offer "0% Interest EMI" schemes. If the interest is zero, does it matter if it is flat or reducing? The trap here lies in the <strong>processing fees</strong> and the <strong>loss of upfront cash discounts</strong>.</p>
+  <p>If a ₹50,000 laptop can be bought for ₹45,000 in cash, but costs ₹50,000 (plus a ₹1,000 processing fee) on a 6-month "0% EMI" scheme, you are effectively paying ₹6,000 for the privilege of borrowing ₹45,000 for six months. When you calculate the <a class="text-blue-700 underline font-semibold" href="/blog/cagr-vs-xirr-vs-absolute-return/">internal rate of return (IRR)</a> on that cash flow, the effective annualized interest rate often exceeds 24%. 0% EMI schemes are the ultimate disguise for flat-rate style profiteering.</p>
+
+  <section class="mt-10 not-prose">
+    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+      <h2 class="text-2xl font-bold text-slate-900">Quick Answer</h2>
+      <p class="mt-3 leading-relaxed"><strong>Never accept a flat interest rate loan if you can avoid it.</strong> Flat interest is calculated on the original borrowed amount for the entire tenure, ignoring your monthly repayments. This makes it substantially more expensive than a reducing balance loan. A 7% flat rate is roughly equivalent to a 13% reducing balance rate. Always ask the lender for the Effective Annual Rate (EAR) and confirm the exact EMI before signing.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-4 mt-5">
+      <div class="bg-blue-50 border border-blue-100 rounded-xl p-5">
+        <h3 class="font-bold text-blue-900">What you have learned</h3>
+        <ul class="mt-3 text-sm leading-6 list-disc pl-5">
+          <li>Flat rates ignore principal reduction.</li>
+          <li>Reducing rates charge interest only on what you owe today.</li>
+          <li>A flat rate is almost double the true effective rate.</li>
+          <li>Flat rates heavily penalize early loan foreclosure.</li>
+        </ul>
+      </div>
+      <div class="bg-amber-50 border border-amber-100 rounded-xl p-5">
+        <h3 class="font-bold text-amber-900">Important Note</h3>
+        <p class="mt-3 text-sm leading-6">Even with reducing balance loans, be mindful of processing fees, documentation charges, and mandatory insurance premiums, all of which push your real cost of borrowing higher than the advertised rate.</p>
+      </div>
+    </div>
+  </section>
+
+  <h2 class="text-2xl font-bold text-slate-900 mt-10">Frequently Asked Questions</h2>
+  <div class="space-y-3 mt-6">
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">What is a flat interest rate?</summary>
+      <p class="mt-3 text-sm">A flat interest rate is calculated on the entire original loan amount for the entire tenure, without accounting for the principal you repay each month.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">What is a reducing balance interest rate?</summary>
+      <p class="mt-3 text-sm">A reducing balance rate calculates interest only on the outstanding loan amount. As you pay your EMI, the principal drops, and so does the interest component.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">Why is a 7% flat rate more expensive than a 10% reducing rate?</summary>
+      <p class="mt-3 text-sm">Because flat interest ignores your monthly principal repayments. The effective interest rate of a 7% flat rate is actually closer to 12-13% on a reducing balance basis.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">How do I convert a flat rate to a reducing rate?</summary>
+      <p class="mt-3 text-sm">As a general rule of thumb, multiply the flat interest rate by 1.8 or 1.9 to estimate the equivalent reducing balance interest rate.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">Do car loans use flat or reducing interest?</summary>
+      <p class="mt-3 text-sm">Car loans are frequently advertised using flat interest rates to make them look cheaper, but legally and functionally, most modern financial institutions process them as reducing balance loans at a higher effective rate.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">Are home loans flat or reducing?</summary>
+      <p class="mt-3 text-sm">Home loans are almost universally calculated on a reducing balance basis. A flat rate on a 20-year home loan would be catastrophically expensive.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">Does prepayment help in a flat rate loan?</summary>
+      <p class="mt-3 text-sm">Rarely. Because the total interest is locked in at the beginning of the loan, prepaying a flat-rate loan does not usually save you future interest, and may even incur severe foreclosure penalties.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">Is flat interest illegal?</summary>
+      <p class="mt-3 text-sm">It is not entirely illegal, but banking regulators worldwide strongly discourage it. Lenders are increasingly required to disclose the Effective Annual Rate (EAR) or Annual Percentage Rate (APR) to prevent deception.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">Which one gives a lower EMI?</summary>
+      <p class="mt-3 text-sm">If both rates were identically 10%, the reducing balance method would give a significantly lower EMI. However, lenders artificially lower the flat rate number to make the EMIs look comparable.</p>
+    </details>
+    <details class="border rounded-xl p-4">
+      <summary class="font-semibold cursor-pointer">What is Effective Interest Rate (EIR)?</summary>
+      <p class="mt-3 text-sm">EIR is the true mathematical interest rate you are paying on the outstanding balance. It exposes the hidden cost of flat interest rate loans and includes the impact of compounding and processing fees.</p>
+    </details>
+  </div>
+</div>
+</article>
+</main>
+<div id="footer"></div>
+<script src="/js/search.js" defer></script>
+<script>
+fetch("/navbar.html").then(r=>r.text()).then(t=>document.getElementById("navbar").innerHTML=t);
+fetch("/footer.html").then(r=>r.text()).then(t=>document.getElementById("footer").innerHTML=t);
+</script>
+</body>
+</html>

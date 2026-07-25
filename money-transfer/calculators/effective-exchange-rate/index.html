@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effective Exchange Rate Calculator | International Money Transfer | ArthCalculator</title>
+    <meta name="description" content="Calculate the true effective exchange rate of your transfer by factoring in all upfront fees and hidden markups.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Ashish Kumar">
+    <link rel="canonical" href="https://arthcalculator.in/money-transfer/calculators/effective-exchange-rate/">
+    <link rel="icon" href="/favicon.png">
+
+    <meta property="og:title" content="Effective Exchange Rate Calculator">
+    <meta property="og:description" content="Calculate the true effective exchange rate of your transfer by factoring in all upfront fees and hidden markups.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://arthcalculator.in/money-transfer/calculators/effective-exchange-rate/">
+    <meta property="og:site_name" content="ArthCalculator">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Effective Exchange Rate Calculator | ArthCalculator">
+    <meta name="twitter:description" content="Calculate the true effective exchange rate of your transfer by factoring in all upfront fees and hidden markups.">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Organization","name":"ArthCalculator","url":"https://arthcalculator.in","logo":"https://arthcalculator.in/favicon.png"}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebPage","name":"Effective Exchange Rate Calculator","url":"https://arthcalculator.in/money-transfer/calculators/effective-exchange-rate/","description":"Calculate the true effective exchange rate of your transfer by factoring in all upfront fees and hidden markups."}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Effective Exchange Rate Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Tool to calculate the real effective exchange rate cutting through fees and markups.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://arthcalculator.in/"},{"@type":"ListItem","position":2,"name":"Money Transfer","item":"https://arthcalculator.in/money-transfer/"},{"@type":"ListItem","position":3,"name":"Calculators","item":"https://arthcalculator.in/money-transfer/calculators/"},{"@type":"ListItem","position":4,"name":"Effective Exchange Rate Calculator","item":"https://arthcalculator.in/money-transfer/calculators/effective-exchange-rate/"}]}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type": "Question", "name": "What is the effective exchange rate?", "acceptedAnswer": {"@type": "Answer", "text": "The effective exchange rate is the true, real-world conversion rate of your money. It ignores the advertised exchange rate and fees, and simply divides what arrived by what you paid."}}, {"@type": "Question", "name": "Why is the effective rate different from the advertised rate?", "acceptedAnswer": {"@type": "Answer", "text": "Advertised rates don't include the upfront fees. When you pay a fee, you are spending more money to get the same foreign amount, which mathematically lowers the true exchange rate you achieved."}}, {"@type": "Question", "name": "Why is this the strong metric for comparing providers?", "acceptedAnswer": {"@type": "Answer", "text": "Because it cuts through marketing jargon. Whether a provider charges high fees with a great rate, or zero fees with a terrible markup, the effective rate reveals the mathematical truth of who is offering the best value."}}, {"@type": "Question", "name": "Should I aim for a higher or lower effective rate?", "acceptedAnswer": {"@type": "Answer", "text": "If you are converting from your home currency to a foreign currency, you want the highest effective rate possible (meaning you are getting more foreign currency per unit of your home currency)."}}, {"@type": "Question", "name": "Does this calculation include intermediary bank fees?", "acceptedAnswer": {"@type": "Answer", "text": "If you use the final amount that actually landed in the recipient's bank account, then yes, it automatically factors in any intermediary bank fees that were deducted in transit."}}, {"@type": "Question", "name": "How does a zero-fee transfer affect the effective rate?", "acceptedAnswer": {"@type": "Answer", "text": "If a provider charges zero fees, the effective exchange rate is exactly equal to their advertised exchange rate. However, their advertised rate may still contain a heavy hidden markup."}}, {"@type": "Question", "name": "Can the effective rate change after I initiate the transfer?", "acceptedAnswer": {"@type": "Answer", "text": "If you use a service that doesn't lock the exchange rate or if intermediary banks take unexpected cuts, the final received amount will drop, lowering your effective exchange rate retroactively."}}, {"@type": "Question", "name": "How do I find the final received amount before sending?", "acceptedAnswer": {"@type": "Answer", "text": "Most digital providers (like Wise, Remitly, or OFX) will explicitly show you the locked final payout amount before you click send. You can plug that number into this calculator."}}]}
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); transition: all 0.3s ease; }
+        .card-shadow:hover { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); transform: translateY(-2px); }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen">
+
+<div id="navbar"></div>
+
+<header class="bg-white border-b border-slate-200 py-12 sm:py-16 text-center">
+    <div class="max-w-4xl mx-auto px-4">
+        <nav class="flex mb-6 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center" aria-label="Breadcrumb">
+            <ol class="flex list-none p-0 flex-wrap justify-center items-center">
+                <li class="flex items-center"><a href="/" class="hover:text-blue-600 transition-colors">Home</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                <li class="flex items-center"><a href="/money-transfer/" class="hover:text-blue-600 transition-colors">Money Transfer</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                <li class="flex items-center"><a href="/money-transfer/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                <li class="text-blue-600 font-bold">Effective Exchange Rate Calculator</li>
+            </ol>
+        </nav>
+        <h1 class="text-3xl sm:text-5xl font-extrabold gradient-text pb-3 leading-tight">Effective Exchange Rate Calculator</h1>
+        <p class="text-slate-600 mt-2 max-w-2xl mx-auto leading-relaxed text-sm sm:text-base">Calculate the true effective exchange rate of your transfer by factoring in all upfront fees and hidden markups.</p>
+    </div>
+</header>
+
+<div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="flex flex-col lg:flex-row gap-10">
+        
+        <!-- Sticky TOC -->
+        <aside class="lg:w-64 shrink-0 hidden lg:block">
+            <div class="sticky top-24 bg-white p-5 rounded-2xl border border-slate-200 card-shadow">
+                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path></svg>
+                    Contents
+                </h3>
+                <nav class="space-y-1 text-xs font-medium text-slate-600" aria-label="Page contents">
+                    <a href="#calculator" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all font-bold text-blue-600">Calculator</a>
+                    <a href="#understanding" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">Understanding the Math</a>
+                    <a href="#example" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">Practical Example</a>
+                    <a href="#faq" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">FAQs</a>
+                    <a href="#related" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">Related Resources</a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 min-w-0 space-y-10">
+            
+            <!-- Calculator App -->
+            <section id="calculator" class="scroll-mt-28 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 card-shadow">
+                
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">Total Amount Sent (Your Currency)</label>
+                        <input type="number" id="sendAmount" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all" placeholder="1000" value="1000">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">Final Amount Received (Foreign Currency)</label>
+                        <input type="number" id="receivedAmount" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all" placeholder="900" value="900">
+                    </div>
+                </div>
+                <div class="bg-slate-900 rounded-2xl p-6 text-white flex flex-col justify-center">
+                    <div class="text-slate-400 text-sm font-bold uppercase tracking-wider mb-2">Effective Exchange Rate</div>
+                    <div class="text-4xl sm:text-5xl font-extrabold text-blue-400" id="resultRate">0.9000</div>
+                    
+                    <div class="mt-6 pt-6 border-t border-slate-700 space-y-3 text-sm">
+                        <div class="text-slate-400">This rate represents exactly how much foreign currency you actually bought per unit of your base currency, accounting for all fees.</div>
+                    </div>
+                </div>
+            </div>
+        
+            </section>
+
+            <!-- Explanation -->
+            <section id="understanding" class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                <div class="border-b border-slate-100 pb-5 mb-6">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Education</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Understanding the Math</h2>
+                </div>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>Understanding how transfer providers compute this specific metric allows you to dissect their fee structures and uncover hidden costs.</p>
+                    <div class="p-5 bg-blue-50 rounded-xl border border-blue-100 my-6">
+                        <strong class="text-blue-900 block mb-2">The Formula:</strong>
+                        <div class="font-mono text-sm sm:text-base text-slate-800 bg-white p-3 border border-slate-200 rounded-lg text-center overflow-x-auto whitespace-nowrap">
+                            Effective Exchange Rate = Final Received Amount &divide; Total Amount Sent
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mt-6">Step-by-Step Guide</h3>
+                    <ul class="list-decimal pl-5 space-y-2">
+                        <li><strong>Identify your variables:</strong> Gather the precise fee numbers, exchange rates, and principal amounts from your provider's quote.</li>
+                        <li><strong>Input the figures:</strong> Enter these values into the calculator above. Be sure to use the correct formatting for percentages and exchange rates.</li>
+                        <li><strong>Analyze the output:</strong> The calculator instantly applies the formula to determine the exact metric. Use this output to compare multiple providers objectively.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Example -->
+            <section id="example" class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                <div class="border-b border-slate-100 pb-5 mb-6">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Application</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Practical Example</h2>
+                </div>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed">
+                    <p>Imagine you are comparing transfer estimates for a $1,000 transaction. Provider A displays a high upfront fee but utilizes an excellent exchange rate near the mid-market. Provider B advertises 'zero fees' but applies a significant, yet hidden, margin to the exchange rate.</p>
+                    <p>By inputting the exact quoted metrics into this calculator, the mathematical formula normalizes the data. It might reveal that Provider A's total true cost is $15, while Provider B's hidden markup effectively costs you $25.</p>
+                    <p>This objective calculation removes marketing jargon, enabling you to make a strictly numbers-based decision that preserves your principal.</p>
+                </div>
+            </section>
+
+            <!-- FAQs -->
+            <section id="faq" class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                <div class="border-b border-slate-100 pb-5 mb-6">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Common Questions</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Frequently Asked Questions</h2>
+                </div>
+                <div class="space-y-3">
+                    
+                    <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">What is the effective exchange rate?<svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">The effective exchange rate is the true, real-world conversion rate of your money. It ignores the advertised exchange rate and fees, and simply divides what arrived by what you paid.</div></details>
+                    <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">Why is the effective rate different from the advertised rate?<svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">Advertised rates don't include the upfront fees. When you pay a fee, you are spending more money to get the same foreign amount, which mathematically lowers the true exchange rate you achieved.</div></details>
+                    <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">Why is this the strong metric for comparing providers?<svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">Because it cuts through marketing jargon. Whether a provider charges high fees with a great rate, or zero fees with a terrible markup, the effective rate reveals the mathematical truth of who is offering the best value.</div></details>
+                    <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">Should I aim for a higher or lower effective rate?<svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">If you are converting from your home currency to a foreign currency, you want the highest effective rate possible (meaning you are getting more foreign currency per unit of your home currency).</div></details>
+                    <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">Does this calculation include intermediary bank fees?<svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">If you use the final amount that actually landed in the recipient's bank account, then yes, it automatically factors in any intermediary bank fees that were deducted in transit.</div></details>
+                    <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">How does a zero-fee transfer affect the effective rate?<svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">If a provider charges zero fees, the effective exchange rate is exactly equal to their advertised exchange rate. However, their advertised rate may still contain a heavy hidden markup.</div></details>
+                    <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">Can the effective rate change after I initiate the transfer?<svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">If you use a service that doesn't lock the exchange rate or if intermediary banks take unexpected cuts, the final received amount will drop, lowering your effective exchange rate retroactively.</div></details>
+                    <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">How do I find the final received amount before sending?<svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">Most digital providers (like Wise, Remitly, or OFX) will explicitly show you the locked final payout amount before you click send. You can plug that number into this calculator.</div></details>
+                </div>
+            </section>
+
+            <!-- Related -->
+            <section id="related" class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                <div class="border-b border-slate-100 pb-5 mb-6">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Explore Further</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Related Resources</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm mb-6">
+                    <a href="/money-transfer/calculators/" class="p-4 border border-slate-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 font-bold text-slate-800 hover:text-blue-600 transition-all">All Calculators &rarr;<span class="block text-xs font-normal text-slate-500 mt-1">View the complete suite</span></a>
+                    <a href="/money-transfer/exchange-rates/" class="p-4 border border-slate-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 font-bold text-slate-800 hover:text-blue-600 transition-all">Exchange Rate Guide &rarr;<span class="block text-xs font-normal text-slate-500 mt-1">How margins work</span></a>
+                    <a href="/money-transfer/provider-comparisons/" class="p-4 border border-slate-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 font-bold text-slate-800 hover:text-blue-600 transition-all">Provider Comparisons &rarr;<span class="block text-xs font-normal text-slate-500 mt-1">Head-to-head analysis</span></a>
+                    <a href="/money-transfer/" class="p-4 border border-slate-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 font-bold text-slate-800 hover:text-blue-600 transition-all">Money Transfer Hub &rarr;<span class="block text-xs font-normal text-slate-500 mt-1">Main directory</span></a>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="mt-8 bg-blue-50 p-6 rounded-3xl border border-blue-200 flex flex-col sm:flex-row items-center justify-between gap-4 card-shadow text-center sm:text-left">
+                <div>
+                    <div class="font-bold text-slate-900 text-lg">Compare Providers Instantly</div>
+                    <div class="text-xs text-slate-600 mt-1 max-w-md">Ready to see the total picture? Use our comprehensive comparison tool to see who offers the best actual rate for your specific corridor.</div>
+                </div>
+                <a href="/money-transfer/provider-comparisons/" class="px-8 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-sm transition-all shadow-md w-full sm:w-auto text-center shrink-0">Open Comparisons &rarr;</a>
+            </section>
+
+        
+        <!-- Disclaimer -->
+        <div class="mt-10 border-l-4 border-slate-300 bg-slate-50 p-4 sm:p-5 rounded-r-xl">
+            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed m-0">
+                <span class="font-bold text-slate-700">Disclaimer:</span> Exchange rates, transfer fees, transfer speeds, supported countries, and provider policies may change over time. Always verify the latest information directly with the official money transfer provider before making a transfer. ArthCalculator provides educational information only and does not provide financial, legal, or tax advice.
+            </p>
+        </div>
+    </main>
+    </div>
+</div>
+
+<div id="footer"></div>
+
+<script>
+
+            function calculate() {
+                const send = parseFloat(document.getElementById('sendAmount').value) || 0;
+                const received = parseFloat(document.getElementById('receivedAmount').value) || 0;
+                
+                let rate = 0;
+                if (send > 0) {
+                    rate = received / send;
+                }
+                
+                document.getElementById('resultRate').innerText = rate.toLocaleString(undefined, {minimumFractionDigits: 4, maximumFractionDigits: 4});
+            }
+            document.getElementById('sendAmount').addEventListener('input', calculate);
+            document.getElementById('receivedAmount').addEventListener('input', calculate);
+            calculate();
+        
+</script>
+
+<script src="/js/search.js" defer></script>
+<script>
+fetch("/navbar.html").then(r=>r.text()).then(d=>{document.getElementById("navbar").innerHTML=d;const b=document.getElementById("menuBtn"),m=document.getElementById("mobileMenu");if(b)b.addEventListener("click",()=>m.classList.toggle("hidden"));});
+fetch("/footer.html").then(r=>r.text()).then(d=>{document.getElementById("footer").innerHTML=d;});
+window.addEventListener("DOMContentLoaded",()=>{const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.intersectionRatio>0.1){document.querySelectorAll("aside nav a").forEach(a=>a.classList.remove("text-blue-600","font-bold"));const a=document.querySelector(`aside nav a[href="#${e.target.id}"]`);if(a)a.classList.add("text-blue-600","font-bold");}});},{threshold:[0.1,0.5],rootMargin:"-20% 0px -60% 0px"});document.querySelectorAll("main section[id]").forEach(s=>obs.observe(s));});
+</script>
+</body>
+</html>
