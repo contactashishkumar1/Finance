@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surcharge and Marginal Relief Calculator | ArthCalculator</title>
+    <meta name="description" content="Calculate Income Tax Surcharge and Marginal Relief for HNIs. Find out exactly how much tax you save when your income slightly exceeds ₹50 Lakhs, ₹1 Crore, or ₹2 Crores.">
+    <meta name="keywords" content="marginal relief calculator, income tax surcharge, tax on 50 lakh, tax on 1 crore, marginal relief formula, hni tax calculator, new tax regime surcharge">
+    <meta name="author" content="ArthCalculator">
+    <meta name="last-modified" content="2026-08-02">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/surcharge-marginal-relief-calculator/">
+    <link type="image/x-icon" rel="icon" href="/favicon.ico">
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Surcharge and Marginal Relief Calculator">
+    <meta property="og:description" content="Does your income slightly exceed ₹50L or ₹1Cr? Calculate your exact Surcharge and the Marginal Relief you are entitled to under the Income Tax Act.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/surcharge-marginal-relief-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Surcharge and Marginal Relief Calculator",
+      "url": "https://arthcalculator.in/surcharge-marginal-relief-calculator/",
+      "description": "Accurately compute income tax surcharge and marginal relief for High Net-Worth Individuals (HNIs) in India.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ArthCalculator",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://arthcalculator.in/logo.png"
+        }
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ArthCalculator",
+      "url": "https://arthcalculator.in",
+      "logo": "https://arthcalculator.in/logo.png"
+    }
+    </script>
+
+    <!-- Schema Markup: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"SoftwareApplication",
+      "name":"Surcharge & Marginal Relief Calculator",
+      "applicationCategory":"FinanceApplication",
+      "operatingSystem":"Web",
+      "offers":{
+        "@type":"Offer",
+        "price":"0",
+        "priceCurrency":"INR"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: HowTo -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to calculate Marginal Relief on Surcharge",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "text": "Enter your Net Taxable Income (after all deductions)."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Select the Tax Regime (New Regime is recommended for HNIs)."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "The calculator determines if your income crosses a surcharge threshold (₹50L, ₹1Cr, ₹2Cr)."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "It checks if the increase in tax is greater than the increase in income, and grants Marginal Relief accordingly."
+        }
+      ]
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://arthcalculator.in/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Income Tax Calculators",
+       "item": "https://arthcalculator.in/income-tax/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Surcharge & Marginal Relief Calculator",
+       "item": "https://arthcalculator.in/surcharge-marginal-relief-calculator/"
+      }
+     ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Surcharge in Income Tax?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Surcharge is an additional tax levied on the tax amount (not on income) for taxpayers earning a high income. It acts as a 'tax on tax'."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the Surcharge rates under the New Tax Regime?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For FY 2026-27 (New Regime), the surcharge rates are: 10% (Income > 50L to 1Cr), 15% (Income > 1Cr to 2Cr), and 25% (Income > 2Cr). The highest surcharge of 37% was abolished under the new regime."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Marginal Relief?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Marginal Relief is a tax benefit given to ensure that when your income slightly crosses a surcharge threshold (e.g., ₹50,00,100), the additional tax you pay is NOT more than the additional income you earned above that threshold."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Marginal Relief calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Marginal Relief = (Total Tax + Surcharge on actual income) - (Total Tax on threshold income + Surcharge on threshold) - (Actual Income - Threshold Income). If this value is positive, it is subtracted from your total tax liability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Health & Education Cess calculated before or after Marginal Relief?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Health and Education Cess at 4% is calculated AFTER deducting the Marginal Relief from the (Tax + Surcharge) amount."
+          }
+        }
+      ,
+        {
+          "@type": "Question",
+          "name": "Do I need to file an ITR if my income is below the basic exemption limit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually no, but you must file if you paid TDS and want a refund, or if you meet certain criteria like spending over ₹2 Lakhs on foreign travel or depositing over ₹1 Crore in a current account."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg.chevron { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+    <div id="navbar"></div>
+
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-violet-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/income-tax/" class="hover:text-violet-600 transition-colors">Income Tax</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-violet-600 font-bold" aria-current="page">Surcharge & Marginal Relief</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl text-pretty">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-[1.2] pb-1">Surcharge & Marginal Relief Calculator</h1>
+                    <p class="text-slate-500 text-sm font-medium mb-3">For High Net-Worth Individuals (HNIs) - FY 2026-27</p>
+                    
+                    <p class="text-slate-500 text-xs sm:text-base leading-relaxed text-pretty">
+                        Does your income slightly cross ₹50 Lakhs, ₹1 Crore, or ₹2 Crores? Compute the exact Surcharge levied on your tax, and find out how much Marginal Relief you are entitled to so you aren't penalized for earning a little extra.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+                        <a href="#calculator" class="text-violet-600 text-xs sm:text-sm font-semibold hover:underline">Calculate Relief</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#educational-content" class="text-violet-600 text-xs sm:text-sm font-semibold hover:underline">How it Works</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#faqs" class="text-violet-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4" id="calculator">
+        <div class="flex flex-col lg:flex-row gap-8 mb-16">
+            
+            <!-- Left Column: Calculator Inputs -->
+            <div class="w-full lg:w-3/5 bg-white rounded-2xl card-shadow border border-slate-100 p-6 sm:p-8 relative">
+                
+                <div id="loadingOverlay" class="absolute inset-0 bg-white/80 backdrop-blur-sm z-10 hidden flex flex-col justify-center items-center rounded-2xl">
+                    <div class="animate-spin rounded-full h-10 w-10 border-b-2 border-violet-600 mb-4"></div>
+                    <p class="text-slate-600 font-medium">Computing Marginal Relief...</p>
+                </div>
+
+                <div class="mb-8">
+                    <label class="block text-sm font-semibold text-slate-700 mb-2">Net Taxable Income (₹)</label>
+                    <p class="text-xs text-slate-400 mb-3">Your final income after standard deduction and all Chapter VI-A deductions.</p>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                            <span class="text-violet-600 font-bold">₹</span>
+                        </div>
+                        <input type="text" id="netIncome" class="block w-full pl-8 pr-4 py-4 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-lg font-bold focus:ring-2 focus:ring-violet-500 focus:border-violet-500 outline-none transition-all" value="51,00,000" inputmode="numeric">
+                    </div>
+                </div>
+
+                <div class="mb-8 p-5 bg-violet-50/50 border border-violet-100 rounded-xl">
+                    <label class="block text-sm font-semibold text-slate-700 mb-3">Select Tax Regime</label>
+                    <div class="grid grid-cols-2 gap-4">
+                        <label class="relative flex items-center justify-center p-4 border border-violet-200 rounded-xl cursor-pointer bg-white hover:border-violet-400 transition-all">
+                            <input type="radio" name="taxRegime" value="new" class="peer sr-only" checked>
+                            <span class="text-sm font-semibold text-slate-600 peer-checked:text-violet-700">New Tax Regime</span>
+                            <div class="absolute inset-0 border-2 border-transparent peer-checked:border-violet-600 rounded-xl pointer-events-none"></div>
+                        </label>
+                        <label class="relative flex items-center justify-center p-4 border border-slate-200 rounded-xl cursor-pointer bg-white hover:border-violet-400 transition-all opacity-70">
+                            <input type="radio" name="taxRegime" value="old" class="peer sr-only" disabled>
+                            <span class="text-sm font-semibold text-slate-600">Old Tax Regime</span>
+                            <div class="absolute -top-2 -right-2 bg-slate-200 text-slate-600 text-[9px] font-bold px-2 py-1 rounded">Soon</div>
+                        </label>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-3 text-center">Calculations are based on the default New Tax Regime (Latest FY 2026-27 Slabs).</p>
+                </div>
+
+                <div class="flex gap-4">
+                    <button id="calculateBtn" class="flex-1 bg-violet-600 hover:bg-violet-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-violet-200 transition-all active:scale-[0.98]">
+                        Calculate Relief
+                    </button>
+                    <button id="resetBtn" class="px-6 py-4 bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold rounded-xl transition-colors">
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Column: Results -->
+            <div class="w-full lg:w-2/5">
+                <div class="bg-gradient-to-br from-violet-50 to-white border border-violet-100 rounded-2xl card-shadow p-6 sm:p-8 sticky top-6 text-slate-800 flex flex-col h-full">
+                    
+                    <div class="mb-6 pb-6 border-b border-violet-200/60">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-sm font-medium text-slate-500 uppercase tracking-wider">Marginal Relief Granted</h3>
+                        </div>
+                        <div class="text-4xl sm:text-5xl font-bold text-green-600 mb-2 tracking-tight">
+                            <span class="text-3xl font-medium text-green-600/70">₹</span><span id="resMarginalRelief">0</span>
+                        </div>
+                        <p class="text-sm text-slate-600 font-medium" id="reliefStatusText">You saved this amount from being unfairly taxed.</p>
+                    </div>
+
+                    <div class="space-y-4 flex-grow mb-6">
+                        <div class="flex justify-between items-center pb-2 border-b border-violet-200/60">
+                            <span class="text-sm text-slate-600">Tax on Income</span>
+                            <span class="font-semibold text-slate-800" id="resBaseTax">₹0</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-2 border-b border-violet-200/60">
+                            <span class="text-sm text-slate-600">Surcharge (<span id="resSurchargeRate">0%</span>)</span>
+                            <span class="font-semibold text-red-600" id="resSurchargeAmt">+ ₹0</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-2 border-b border-violet-200/60">
+                            <span class="text-sm text-slate-600">Tax before Relief</span>
+                            <span class="font-semibold text-slate-800" id="resTaxBeforeRelief">₹0</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-2 border-b border-violet-200/60">
+                            <span class="text-sm text-violet-700 font-medium">Less: Marginal Relief</span>
+                            <span class="font-bold text-green-600" id="resReliefDeduction">- ₹0</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-2 border-b border-violet-200/60">
+                            <span class="text-sm text-slate-600">Add: Cess (4%)</span>
+                            <span class="font-semibold text-red-600" id="resCess">+ ₹0</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-violet-100/50 border border-violet-200 rounded-xl p-5 mb-4 text-center">
+                        <p class="text-xs text-violet-700 font-medium mb-1 uppercase tracking-wider">Final Tax Payable</p>
+                        <p class="text-3xl font-bold text-slate-800">₹<span id="resFinalTax">0</span></p>
+                    </div>
+
+                    <div id="noReliefWarning" class="hidden mt-4 bg-slate-100 border border-slate-200 rounded-lg p-3 text-xs text-slate-500 text-center">
+                        Marginal relief is not applicable at this income level.
+                    </div>
+
+                    <div class="mt-auto pt-4 border-t border-violet-200 flex justify-between items-center">
+                        <p class="text-[10px] text-slate-500 leading-tight w-4/5">
+                            Calculation assumes Individual under New Tax Regime slabs (Budget 2024 / FY 2026-27).
+                        </p>
+                        <button onclick="window.print()" class="text-slate-400 hover:text-violet-600 p-2 rounded-lg hover:bg-violet-100 transition-colors" aria-label="Print Report">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content (Mandatory) -->
+        <div id="educational-content" class="bg-white rounded-2xl card-shadow border border-slate-100 p-6 sm:p-10 mb-16">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-800 mb-6 border-b border-slate-200 pb-4">Understanding Surcharge & Marginal Relief</h2>
+                
+                <div class="prose prose-slate max-w-none text-slate-600">
+                    <p class="mb-6">
+                        The Indian tax system applies an additional tax, known as a <strong>Surcharge</strong>, on individuals earning high incomes. Surcharge is calculated as a percentage of the <em>income tax</em> computed, not as a percentage of the total income.
+                    </p>
+
+                    <h3 class="text-xl font-bold text-slate-800 mt-8 mb-4">Surcharge Rates (New Tax Regime)</h3>
+                    <p class="mb-4">As per the latest provisions (effective FY 2023-24 onwards and applicable to FY 2026-27), the highest surcharge rate of 37% was abolished under the New Tax Regime, capping the maximum surcharge at 25%.</p>
+                    
+                    <div class="overflow-x-auto mb-8">
+                        <table class="w-full text-left border-collapse min-w-[600px] border border-slate-200">
+                            <thead>
+                                <tr class="bg-slate-100 text-slate-700 text-sm">
+                                    <th class="p-4 border-b border-slate-200 font-semibold rounded-tl-xl">Net Taxable Income Range</th>
+                                    <th class="p-4 border-b border-slate-200 font-semibold">Surcharge Rate</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-sm">
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4 border-b border-slate-100 font-medium">Up to ₹50 Lakhs</td>
+                                    <td class="p-4 border-b border-slate-100 font-bold text-slate-400">Nil</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4 border-b border-slate-100 font-medium">More than ₹50 Lakhs up to ₹1 Crore</td>
+                                    <td class="p-4 border-b border-slate-100 font-bold text-violet-600">10%</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4 border-b border-slate-100 font-medium">More than ₹1 Crore up to ₹2 Crores</td>
+                                    <td class="p-4 border-b border-slate-100 font-bold text-violet-700">15%</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4 border-b border-slate-100 font-medium">More than ₹2 Crores</td>
+                                    <td class="p-4 border-b border-slate-100 font-bold text-violet-800">25%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-slate-800 mt-8 mb-4">The Problem: Disproportionate Taxation</h3>
+                    <p>
+                        Imagine your taxable income is ₹50,00,000. Under the new regime slabs, your tax is ₹11,90,000. Since income is exactly ₹50L, Surcharge is 0%. Total tax = <strong>₹11,90,000</strong>.
+                    </p>
+                    <p>
+                        Now, imagine you get a small bonus and your income becomes ₹51,00,000 (an increase of ₹1,00,000). <br>
+                        Tax on 51L = ₹12,20,000. <br>
+                        Since income crossed 50L, a 10% surcharge is applied on the tax (10% of 12.2L = ₹1,22,000). <br>
+                        Total Tax = 12,20,000 + 1,22,000 = <strong>₹13,42,000</strong>.
+                    </p>
+                    <div class="bg-red-50 text-red-800 p-4 rounded-xl border border-red-200 font-medium my-4">
+                        Notice the anomaly: Your income increased by just ₹1,00,000, but your tax increased by ₹1,52,000 (13.42L - 11.9L). You are losing more in tax than you actually earned!
+                    </div>
+
+                    <h3 class="text-xl font-bold text-slate-800 mt-8 mb-4">The Solution: Marginal Relief</h3>
+                    <p>
+                        To correct this anomaly, the Income Tax Act grants <strong>Marginal Relief</strong>. The law states that the <em>increase in tax payable</em> cannot exceed the <em>increase in income</em> above the threshold (50L, 1Cr, 2Cr).
+                    </p>
+                    
+                    <div class="bg-slate-100 border-l-4 border-violet-500 rounded-r-xl p-5 mb-8">
+                        <h4 class="font-semibold text-slate-800 mb-2">How Relief is Calculated (For 51L Income):</h4>
+                        <ol class="list-decimal pl-4 text-sm space-y-2">
+                            <li><strong>Increase in Income:</strong> ₹51,00,000 - ₹50,00,000 = ₹1,00,000</li>
+                            <li><strong>Tax on ₹51L (with 10% surcharge):</strong> ₹13,42,000</li>
+                            <li><strong>Tax on ₹50L (without surcharge):</strong> ₹11,90,000</li>
+                            <li><strong>Increase in Tax:</strong> ₹13,42,000 - ₹11,90,000 = ₹1,52,000</li>
+                            <li><strong>Marginal Relief:</strong> Increase in Tax (₹1.52L) - Increase in Income (₹1L) = <strong>₹52,000</strong></li>
+                        </ol>
+                        <p class="text-sm mt-3 font-semibold text-violet-700">Adjusted Tax = ₹13,42,000 - ₹52,000 = ₹12,90,000 (Plus 4% Cess).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQs (Mandatory) -->
+        <div id="faqs" class="mb-16">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-800 mb-8 text-center md:text-left">Frequently Asked Questions</h2>
+            <div class="max-w-4xl mx-auto space-y-4">
+                
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>What is Surcharge in Income Tax?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        Surcharge is an additional tax levied on the tax amount (not on the base income) for taxpayers earning a high income. It acts as a 'tax on tax'. It is applied before calculating the 4% Health and Education Cess.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>What are the Surcharge rates under the New Tax Regime?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        For FY 2026-27 (New Regime), the surcharge rates are: 10% (Income > 50L to 1Cr), 15% (Income > 1Cr to 2Cr), and 25% (Income > 2Cr). The highest surcharge of 37% was abolished under the new regime.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>What is Marginal Relief?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        Marginal Relief is a tax benefit given to ensure that when your income slightly crosses a surcharge threshold (e.g., ₹50,00,100), the additional tax you pay is NOT more than the additional income you earned above that threshold.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>At what income levels is Marginal Relief applicable?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        Marginal relief is applicable when your net taxable income is slightly above the surcharge thresholds: ₹50 Lakhs, ₹1 Crore, or ₹2 Crores. The relief phases out once the increase in income covers the impact of the surcharge.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>Is Health & Education Cess calculated before or after Marginal Relief?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        Health and Education Cess at 4% is calculated AFTER deducting the Marginal Relief from the (Base Tax + Surcharge) amount. Cess does not get the benefit of marginal relief.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>Do I have to claim Marginal Relief while filing ITR?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        No manual claiming is needed. The Income Tax Department's e-filing portal automatically calculates and applies the marginal relief when you file your Income Tax Return (ITR).
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>Does Marginal Relief apply to Section 87A rebate?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        Yes! A similar concept of marginal relief was introduced for incomes slightly exceeding ₹12,00,000 under the New Tax Regime to ensure tax payable doesn't exceed the income earned above ₹12L. However, this calculator specifically focuses on Surcharge marginal relief for HNIs.
+                    </div>
+                </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">8. Do I need to file an ITR if my income is below the basic exemption limit?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Usually no, but you must file if you paid TDS and want a refund, or if you meet certain criteria like spending over ₹2 Lakhs on foreign travel or depositing over ₹1 Crore in a current account.
+                        </div>
+                    </details>
+    
+
+            </div>
+        </div>
+
+        <!-- Related Calculators (Mandatory) -->
+        <div class="bg-slate-50 rounded-2xl p-6 sm:p-10 border border-slate-200 mb-16">
+            <h3 class="text-lg font-bold text-slate-800 mb-6">Related Tax Calculators</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <a href="/income-tax/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-violet-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-violet-600 text-sm mb-1">Income Tax Calculator</h4>
+                    <p class="text-xs text-slate-500">Comprehensive FY 2026-27 calculator</p>
+                </a>
+                <a href="/income-tax/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-violet-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-violet-600 text-sm mb-1">Old vs New Tax Regime</h4>
+                    <p class="text-xs text-slate-500">Compare tax slabs instantly</p>
+                </a>
+                <a href="/advance-tax-penalty-calculator/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-violet-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-violet-600 text-sm mb-1">Advance Tax Penalty</h4>
+                    <p class="text-xs text-slate-500">Calculate 234A/B/C interest</p>
+                </a>
+                <a href="/capital-gains-tax/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-violet-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-violet-600 text-sm mb-1">Capital Gains Tax</h4>
+                    <p class="text-xs text-slate-500">Calculate LTCG and STCG</p>
+                </a>
+                <a href="/44ada-calculator/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-violet-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-violet-600 text-sm mb-1">Section 44ADA</h4>
+                    <p class="text-xs text-slate-500">Presumptive tax for professionals</p>
+                </a>
+                <a href="/epf/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-violet-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-violet-600 text-sm mb-1">EPF Calculator</h4>
+                    <p class="text-xs text-slate-500">Provident fund corpus estimate</p>
+                </a>
+                <a href="/nps/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-violet-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-violet-600 text-sm mb-1">NPS Calculator</h4>
+                    <p class="text-xs text-slate-500">National Pension System planner</p>
+                </a>
+                <a href="/gratuity/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-violet-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-violet-600 text-sm mb-1">Gratuity Calculator</h4>
+                    <p class="text-xs text-slate-500">Calculate employee gratuity</p>
+                </a>
+            </div>
+        </div>
+
+    
+            <!-- Related Calculators (15 Internal Links) -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Financial & Tax Calculators</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="/advance-tax-penalty-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Advance Tax Penalty</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Sections 234A/B/C.</p>
+        </a>
+        
+        <a href="/professional-tax-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Professional Tax</h4>
+            <p class="text-[10px] text-slate-500 mt-1">State-wise PT deduction.</p>
+        </a>
+        
+        <a href="/income-tax/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Income Tax Calculator</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Old vs New Regime.</p>
+        </a>
+        
+        <a href="/80c-tax-saving/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 80C Calculator</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Maximize 1.5L deduction.</p>
+        </a>
+        
+        <a href="/80d-tax-saving-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 80D Calculator</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Health insurance tax benefits.</p>
+        </a>
+        
+        <a href="/tds-on-rent-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">TDS on Rent (194-IB)</h4>
+            <p class="text-[10px] text-slate-500 mt-1">TDS for tenants.</p>
+        </a>
+        
+        <a href="/tds-on-property-sale-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">TDS on Property</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Section 194-IA rules.</p>
+        </a>
+        
+        <a href="/44ad-presumptive-tax-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 44AD</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Presumptive business tax.</p>
+        </a>
+        
+        <a href="/surcharge-marginal-relief-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Surcharge & Relief</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Calculate marginal relief.</p>
+        </a>
+        
+        <a href="/capital-gains-exemption-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Capital Gains Exemption</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Sections 54, 54F, 54EC.</p>
+        </a>
+        
+        <a href="/44ae-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 44AE</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Transport presumptive tax.</p>
+        </a>
+        
+        <a href="/income-from-house-property-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">House Property Tax</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Section 24 deductions.</p>
+        </a>
+        
+        <a href="/future-value/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Future Value</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Calculate FV of money.</p>
+        </a>
+        
+        <a href="/cagr/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">CAGR Calculator</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Compound annual growth.</p>
+        </a>
+        
+        <a href="/sip/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">SIP Calculator</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Mutual fund investment.</p>
+        </a>
+        </div>
+            </section>
+
+    </main>
+
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/global.js" defer></script>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    <div id="footer"></div>
+
+    <script>
+        // Load Navbar and Footer
+        fetch("/navbar.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("navbar").innerHTML = data;
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+            if(btn){
+                btn.addEventListener("click", () => {
+                    menu.classList.toggle("hidden");
+                });
+            }
+        }).catch(() => {});
+
+        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; }).catch(() => {});
+
+        // Format Indian Currency
+        function formatINR(number) {
+            return new Intl.NumberFormat('en-IN').format(Math.round(number));
+        }
+
+        function parseInput(val) {
+            if(!val) return 0;
+            const parsed = parseFloat(val.replace(/,/g, ''));
+            return isNaN(parsed) ? 0 : parsed;
+        }
+
+        // New Tax Regime Slabs — FY 2025-26 (Budget 2025)
+        function calculateNewRegimeTax(income) {
+            if (income <= 400000) return 0;
+            let tax = 0;
+            
+            if (income > 2400000) {
+                tax += (income - 2400000) * 0.30;
+                income = 2400000;
+            }
+            if (income > 2000000) {
+                tax += (income - 2000000) * 0.25;
+                income = 2000000;
+            }
+            if (income > 1600000) {
+                tax += (income - 1600000) * 0.20;
+                income = 1600000;
+            }
+            if (income > 1200000) {
+                tax += (income - 1200000) * 0.15;
+                income = 1200000;
+            }
+            if (income > 800000) {
+                tax += (income - 800000) * 0.10;
+                income = 800000;
+            }
+            if (income > 400000) {
+                tax += (income - 400000) * 0.05;
+            }
+            return tax;
+        }
+
+        function getSurchargeRate(income) {
+            if (income > 20000000) return 0.25;
+            if (income > 10000000) return 0.15;
+            if (income > 5000000) return 0.10;
+            return 0;
+        }
+
+        function getThresholdBelow(income) {
+            if (income > 20000000) return 20000000;
+            if (income > 10000000) return 10000000;
+            if (income > 5000000) return 5000000;
+            return 0;
+        }
+
+        const inpIncome = document.getElementById('netIncome');
+        const btnCalculate = document.getElementById('calculateBtn');
+        const btnReset = document.getElementById('resetBtn');
+        const overlay = document.getElementById('loadingOverlay');
+
+        // Input formatting logic
+        inpIncome.addEventListener('input', function(e) {
+            const cursorPosition = this.selectionStart;
+            const oldLength = this.value.length;
+            let val = this.value.replace(/[^\d]/g, '');
+            if (val) {
+                this.value = formatINR(parseInt(val, 10));
+                const newLength = this.value.length;
+                this.setSelectionRange(cursorPosition + (newLength - oldLength), cursorPosition + (newLength - oldLength));
+            } else {
+                this.value = '';
+            }
+        });
+
+        function calculateRelief() {
+            overlay.classList.remove('hidden');
+            
+            setTimeout(() => {
+                const income = parseInput(inpIncome.value);
+                
+                // Base calculations for the entered income
+                const baseTax = calculateNewRegimeTax(income);
+                const surchargeRate = getSurchargeRate(income);
+                const surchargeAmt = baseTax * surchargeRate;
+                const taxWithSurcharge = baseTax + surchargeAmt;
+                
+                let marginalRelief = 0;
+                
+                // Only calculate marginal relief if surcharge is > 0
+                if (surchargeRate > 0) {
+                    const threshold = getThresholdBelow(income);
+                    
+                    if (threshold > 0) {
+                        const taxOnThreshold = calculateNewRegimeTax(threshold);
+                        const surchargeRateOnThreshold = getSurchargeRate(threshold);
+                        const surchargeOnThreshold = taxOnThreshold * surchargeRateOnThreshold;
+                        const totalTaxOnThreshold = taxOnThreshold + surchargeOnThreshold;
+                        
+                        const increaseInIncome = income - threshold;
+                        const increaseInTax = taxWithSurcharge - totalTaxOnThreshold;
+                        
+                        if (increaseInTax > increaseInIncome) {
+                            marginalRelief = increaseInTax - increaseInIncome;
+                        }
+                    }
+                }
+
+                const taxBeforeCess = taxWithSurcharge - marginalRelief;
+                const cess = taxBeforeCess * 0.04;
+                const finalTax = taxBeforeCess + cess;
+
+                // UI Updates
+                document.getElementById('resBaseTax').innerText = "₹" + formatINR(baseTax);
+                document.getElementById('resSurchargeRate').innerText = (surchargeRate * 100) + "%";
+                document.getElementById('resSurchargeAmt').innerText = "+ ₹" + formatINR(surchargeAmt);
+                document.getElementById('resTaxBeforeRelief').innerText = "₹" + formatINR(taxWithSurcharge);
+                
+                const reliefEl = document.getElementById('resMarginalRelief');
+                const deductionEl = document.getElementById('resReliefDeduction');
+                const statusText = document.getElementById('reliefStatusText');
+                const warningDiv = document.getElementById('noReliefWarning');
+
+                if (marginalRelief > 0) {
+                    reliefEl.innerText = formatINR(marginalRelief);
+                    deductionEl.innerText = "- ₹" + formatINR(marginalRelief);
+                    statusText.innerText = "You saved this amount from being unfairly taxed.";
+                    statusText.className = "text-sm text-green-300 font-medium";
+                    warningDiv.classList.add('hidden');
+                } else {
+                    reliefEl.innerText = "0";
+                    deductionEl.innerText = "- ₹0";
+                    statusText.innerText = "No marginal relief applicable.";
+                    statusText.className = "text-sm text-slate-400 font-medium";
+                    warningDiv.classList.remove('hidden');
+                }
+
+                document.getElementById('resCess').innerText = "+ ₹" + formatINR(cess);
+                document.getElementById('resFinalTax').innerText = formatINR(Math.round(finalTax));
+
+                overlay.classList.add('hidden');
+            }, 300);
+        }
+
+        btnCalculate.addEventListener('click', calculateRelief);
+
+        btnReset.addEventListener('click', () => {
+            inpIncome.value = "51,00,000";
+            calculateRelief();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Initialize
+        calculateRelief();
+
+    </script>
+</body>
+</html>

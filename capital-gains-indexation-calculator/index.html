@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capital Gains Indexation Calculator | Real Estate CII Calculator</title>
+    <meta name="description" content="Calculate Indexed Cost of Acquisition for real estate using the latest Cost Inflation Index (CII). Compare 12.5% tax vs 20% with indexation for grandfathered properties.">
+    <meta name="keywords" content="indexation calculator, capital gains indexation, cii calculator, cost inflation index, real estate tax calculator, 12.5% vs 20% tax, indexed cost of acquisition">
+    <meta name="author" content="ArthCalculator">
+    <meta name="last-modified" content="2026-08-02">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/capital-gains-indexation-calculator/">
+    <link type="image/x-icon" rel="icon" href="/favicon.ico">
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Capital Gains Indexation Calculator (Real Estate)">
+    <meta property="og:description" content="Calculate your property's Indexed Cost of Acquisition and find out if you should pay 12.5% without indexation or 20% with indexation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/capital-gains-indexation-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Capital Gains Indexation Calculator",
+      "url": "https://arthcalculator.in/capital-gains-indexation-calculator/",
+      "description": "Calculate the indexed cost of your property using historical CII data and compare capital gains tax regimes.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ArthCalculator",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://arthcalculator.in/logo.png"
+        }
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ArthCalculator",
+      "url": "https://arthcalculator.in",
+      "logo": "https://arthcalculator.in/logo.png"
+    }
+    </script>
+
+    <!-- Schema Markup: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"SoftwareApplication",
+      "name":"Capital Gains Indexation Calculator",
+      "applicationCategory":"FinanceApplication",
+      "operatingSystem":"Web",
+      "offers":{
+        "@type":"Offer",
+        "price":"0",
+        "priceCurrency":"INR"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: HowTo -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to calculate Indexed Cost of Acquisition",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "text": "Select the Financial Year in which you purchased the property."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Enter the original purchase price of the property."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Select the Financial Year of sale and enter the final sale value."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "If applicable, enter any cost of improvement and its respective year."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "The calculator will apply the Cost Inflation Index (CII) and compute your indexed cost, along with the tax payable under both 12.5% and 20% regimes."
+        }
+      ]
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://arthcalculator.in/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Real Estate Calculators",
+       "item": "https://arthcalculator.in/real-estate-calculators/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Capital Gains Indexation Calculator",
+       "item": "https://arthcalculator.in/capital-gains-indexation-calculator/"
+      }
+     ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Indexation in Capital Gains?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Indexation is a method used to adjust the purchase price of an asset (like property) for inflation over the holding period. This increases the 'purchase price' on paper, thereby reducing the taxable capital gain."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Indexed Cost of Acquisition calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The formula is: Indexed Cost = (Actual Cost × CII of the year of sale) / CII of the year of purchase. CII stands for Cost Inflation Index."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the new rules for property sold after July 2024?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For properties acquired before July 23, 2024, individuals and HUFs have a choice: pay 12.5% tax on Long Term Capital Gains (without indexation) OR pay 20% tax on Long Term Capital Gains (with indexation), whichever is lower."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the base year for CII?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The base year for calculating the Cost Inflation Index (CII) is currently 2001-02, which is assigned a value of 100. If you bought a property before 2001, the Fair Market Value (FMV) as of April 1, 2001, is used as the purchase price."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I claim indexation on Cost of Improvement?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, any significant structural improvement or addition made to the property can also be indexed from the year the improvement was made until the year of sale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are NRIs eligible for the grandfathering indexation benefit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, the grandfathering option (choice between 12.5% without indexation and 20% with indexation) is only available to resident Individuals and Hindu Undivided Families (HUFs)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does indexation apply to Short Term Capital Gains?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, indexation benefits are only applicable to Long Term Capital Assets. For real estate, a property must be held for more than 24 months to qualify as long term."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my Indexed Cost is higher than the Sale Value?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If the indexed cost is higher than the sale value, it results in a Long Term Capital Loss (LTCL). This loss can be carried forward for 8 years and set off against other Long Term Capital Gains."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg.chevron { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+    <div id="navbar"></div>
+
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-sky-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-sky-600 transition-colors">Real Estate</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-sky-600 font-bold" aria-current="page">Capital Gains Indexation Calculator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl text-pretty">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-[1.2] pb-1">Capital Gains Indexation Calculator</h1>
+                    <p class="text-slate-500 text-sm font-medium mb-3">Compare 12.5% vs 20% Tax Regimes for Real Estate (FY 2026-27)</p>
+                    
+                    <p class="text-slate-500 text-xs sm:text-base leading-relaxed text-pretty">
+                        Calculate your property's <strong>Indexed Cost of Acquisition</strong> using historical Cost Inflation Index (CII) data. See the impact of the latest budget rules offering a choice between a 12.5% rate (without indexation) and a 20% rate (with indexation) for properties bought before July 2024.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+                        <a href="#calculator" class="text-sky-600 text-xs sm:text-sm font-semibold hover:underline">Calculate Tax</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#educational-content" class="text-sky-600 text-xs sm:text-sm font-semibold hover:underline">How Indexation Works</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#faqs" class="text-sky-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4" id="calculator">
+        <div class="flex flex-col lg:flex-row gap-8 mb-16">
+            
+            <!-- Left Column: Calculator Inputs -->
+            <div class="w-full lg:w-3/5 bg-white rounded-2xl card-shadow border border-slate-100 p-6 sm:p-8 relative">
+                
+                <div id="loadingOverlay" class="absolute inset-0 bg-white/80 backdrop-blur-sm z-10 hidden flex flex-col justify-center items-center rounded-2xl">
+                    <div class="animate-spin rounded-full h-10 w-10 border-b-2 border-sky-600 mb-4"></div>
+                    <p class="text-slate-600 font-medium">Computing Capital Gains...</p>
+                </div>
+
+                <!-- Purchase Details -->
+                <div class="mb-8 border-b border-slate-100 pb-6">
+                    <h2 class="text-xl font-bold text-slate-800 mb-6">Property Purchase Details</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Financial Year of Purchase</label>
+                            <select id="yearPurchase" class="block w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-medium focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none transition-all cursor-pointer appearance-none">
+                                <!-- Options populated via JS -->
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Purchase Price (₹)</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                    <span class="text-slate-500 font-semibold">₹</span>
+                                </div>
+                                <input type="text" id="valPurchase" class="block w-full pl-8 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-medium focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none transition-all" value="50,00,000" inputmode="numeric">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Improvement Details -->
+                <div class="mb-8 border-b border-slate-100 pb-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-xl font-bold text-slate-800">Cost of Improvement</h2>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" id="toggleImprovement" class="sr-only peer">
+                            <div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-sky-500"></div>
+                            <span class="ml-3 text-sm font-medium text-slate-600">Add</span>
+                        </label>
+                    </div>
+                    
+                    <div id="improvementBox" class="grid grid-cols-1 md:grid-cols-2 gap-6 hidden">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Year of Improvement</label>
+                            <select id="yearImprovement" class="block w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-medium focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none transition-all cursor-pointer appearance-none">
+                                <!-- Options populated via JS -->
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Cost Incurred (₹)</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                    <span class="text-slate-500 font-semibold">₹</span>
+                                </div>
+                                <input type="text" id="valImprovement" class="block w-full pl-8 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-medium focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none transition-all" value="0" inputmode="numeric">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sale Details -->
+                <div class="mb-8">
+                    <h2 class="text-xl font-bold text-slate-800 mb-6">Property Sale Details</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Financial Year of Sale</label>
+                            <select id="yearSale" class="block w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-medium focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none transition-all cursor-pointer appearance-none">
+                                <!-- Options populated via JS -->
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Sale Value (₹)</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                    <span class="text-slate-500 font-semibold">₹</span>
+                                </div>
+                                <input type="text" id="valSale" class="block w-full pl-8 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-medium focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none transition-all" value="1,20,00,000" inputmode="numeric">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <button id="calculateBtn" class="flex-1 bg-sky-600 hover:bg-sky-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-sky-200 transition-all active:scale-[0.98]">
+                        Calculate Capital Gains
+                    </button>
+                    <button id="resetBtn" class="px-6 py-4 bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold rounded-xl transition-colors">
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Column: Results -->
+            <div class="w-full lg:w-2/5">
+                <div class="bg-gradient-to-br from-sky-50 to-white border border-sky-100 rounded-2xl card-shadow p-6 sm:p-8 sticky top-6 text-slate-800 flex flex-col h-full">
+                    
+                    <div class="mb-6 pb-6 border-b border-sky-200/60">
+                        <h3 class="text-sm font-medium text-slate-500 mb-2 uppercase tracking-wider">Final Tax Recommendation</h3>
+                        <div id="resRecommendation" class="text-2xl font-bold text-sky-700 mb-2">
+                            Pay 12.5% Tax (Without Indexation)
+                        </div>
+                        <p class="text-sm text-slate-600">You save <span id="resSavings" class="font-bold text-green-600">₹0</span> by choosing this option.</p>
+                    </div>
+
+                    <!-- Comparison Table -->
+                    <div class="space-y-4 flex-grow">
+                        
+                        <div class="grid grid-cols-3 gap-2 text-xs font-semibold text-slate-500 uppercase tracking-wider pb-2 border-b border-sky-200/60">
+                            <div>Particulars</div>
+                            <div class="text-right">12.5% Tax<br>(No Indexation)</div>
+                            <div class="text-right">20% Tax<br>(With Indexation)</div>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-2 text-sm items-center">
+                            <div class="text-slate-600">Sale Value</div>
+                            <div class="text-right font-medium" id="rsSale1">₹0</div>
+                            <div class="text-right font-medium" id="rsSale2">₹0</div>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-2 text-sm items-center">
+                            <div class="text-slate-600">Total Cost<br><span class="text-[10px] text-slate-500">(Acq + Imprv)</span></div>
+                            <div class="text-right font-medium text-red-600" id="rsCost1">- ₹0</div>
+                            <div class="text-right font-medium text-red-600" id="rsCost2">- ₹0</div>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-2 text-sm items-center pt-2 border-t border-sky-100">
+                            <div class="text-slate-700 font-semibold">Capital Gain</div>
+                            <div class="text-right font-bold text-slate-800" id="rsGain1">₹0</div>
+                            <div class="text-right font-bold text-slate-800" id="rsGain2">₹0</div>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-2 text-sm items-center pt-4 border-t border-sky-200 mt-4">
+                            <div class="text-sky-700 font-bold">Tax Payable</div>
+                            <div class="text-right font-bold text-sky-700 bg-sky-100 py-1 px-2 rounded" id="rsTax1">₹0</div>
+                            <div class="text-right font-bold text-sky-700 bg-sky-100 py-1 px-2 rounded" id="rsTax2">₹0</div>
+                        </div>
+
+                    </div>
+
+                    <div id="shortTermWarning" class="hidden mt-6 bg-amber-50 border border-amber-200 rounded-lg p-3 text-xs text-amber-800">
+                        <svg class="w-4 h-4 inline mr-1 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        Property held for less than 24 months qualifies as Short Term Capital Gain. Indexation and 12.5% rate do not apply. Tax is per income slab.
+                    </div>
+
+                    <div id="noIndexationWarning" class="hidden mt-6 bg-red-50 border border-red-200 rounded-lg p-3 text-xs text-red-800">
+                        <svg class="w-4 h-4 inline mr-1 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        Properties acquired on or after July 23, 2024 are NOT eligible for Indexation. Only the 12.5% flat tax rate applies.
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-sky-200 flex justify-between items-center">
+                        <p class="text-[10px] text-slate-500 leading-tight w-4/5">
+                            CII base year is 2001-02 (=100). Surcharge & Cess (4%) are excluded from above calculations for simplicity.
+                        </p>
+                        <button onclick="window.print()" class="text-slate-400 hover:text-sky-600 p-2 rounded-lg hover:bg-sky-100 transition-colors" aria-label="Print Report">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content (Mandatory) -->
+        <div id="educational-content" class="bg-white rounded-2xl card-shadow border border-slate-100 p-6 sm:p-10 mb-16">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-800 mb-6 border-b border-slate-200 pb-4">Understanding Capital Gains Indexation</h2>
+                
+                <div class="prose prose-slate max-w-none text-slate-600">
+                    <p class="mb-6">
+                        When you sell a property after holding it for a long term (more than 24 months), the profit you make is known as Long Term Capital Gain (LTCG). To ensure you aren't taxed purely on inflation, the government allows the use of a <strong>Cost Inflation Index (CII)</strong> to adjust your purchase price upward.
+                    </p>
+
+                    <h3 class="text-xl font-bold text-slate-800 mt-8 mb-4">The Grandfathering Rule (July 2024 Amendment)</h3>
+                    <p>
+                        In the Union Budget 2024, the government reduced the LTCG tax rate on real estate from 20% to 12.5%, but simultaneously removed the indexation benefit. However, following public feedback, an amendment was passed offering a choice for older properties:
+                    </p>
+                    <ul class="list-disc pl-5 space-y-2 mb-6">
+                        <li><strong>For properties bought BEFORE July 23, 2024:</strong> You can calculate tax both ways—(A) 12.5% without indexation, and (B) 20% with indexation. You are allowed to pay whichever tax amount is lower.</li>
+                        <li><strong>For properties bought ON OR AFTER July 23, 2024:</strong> Indexation is permanently removed. You must pay a flat 12.5% tax on your capital gains.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-slate-800 mt-8 mb-4">Historical Cost Inflation Index (CII) Table</h3>
+                    <div class="overflow-x-auto mb-8">
+                        <table class="w-full text-left border-collapse min-w-[600px] border border-slate-200">
+                            <thead>
+                                <tr class="bg-slate-100 text-slate-700 text-sm">
+                                    <th class="p-3 border-b border-slate-200 font-semibold">Financial Year</th>
+                                    <th class="p-3 border-b border-slate-200 font-semibold">CII Value</th>
+                                    <th class="p-3 border-b border-slate-200 font-semibold">Financial Year</th>
+                                    <th class="p-3 border-b border-slate-200 font-semibold">CII Value</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-sm">
+                                <tr>
+                                    <td class="p-3 border-b border-slate-100">2001-02</td><td class="p-3 border-b border-slate-100 font-medium">100</td>
+                                    <td class="p-3 border-b border-slate-100">2013-14</td><td class="p-3 border-b border-slate-100 font-medium">220</td>
+                                </tr>
+                                <tr class="bg-slate-50">
+                                    <td class="p-3 border-b border-slate-100">2002-03</td><td class="p-3 border-b border-slate-100 font-medium">105</td>
+                                    <td class="p-3 border-b border-slate-100">2014-15</td><td class="p-3 border-b border-slate-100 font-medium">240</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border-b border-slate-100">2003-04</td><td class="p-3 border-b border-slate-100 font-medium">109</td>
+                                    <td class="p-3 border-b border-slate-100">2015-16</td><td class="p-3 border-b border-slate-100 font-medium">254</td>
+                                </tr>
+                                <tr class="bg-slate-50">
+                                    <td class="p-3 border-b border-slate-100">2004-05</td><td class="p-3 border-b border-slate-100 font-medium">113</td>
+                                    <td class="p-3 border-b border-slate-100">2016-17</td><td class="p-3 border-b border-slate-100 font-medium">264</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border-b border-slate-100">2005-06</td><td class="p-3 border-b border-slate-100 font-medium">117</td>
+                                    <td class="p-3 border-b border-slate-100">2017-18</td><td class="p-3 border-b border-slate-100 font-medium">272</td>
+                                </tr>
+                                <tr class="bg-slate-50">
+                                    <td class="p-3 border-b border-slate-100">2006-07</td><td class="p-3 border-b border-slate-100 font-medium">122</td>
+                                    <td class="p-3 border-b border-slate-100">2018-19</td><td class="p-3 border-b border-slate-100 font-medium">280</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border-b border-slate-100">2007-08</td><td class="p-3 border-b border-slate-100 font-medium">129</td>
+                                    <td class="p-3 border-b border-slate-100">2019-20</td><td class="p-3 border-b border-slate-100 font-medium">289</td>
+                                </tr>
+                                <tr class="bg-slate-50">
+                                    <td class="p-3 border-b border-slate-100">2008-09</td><td class="p-3 border-b border-slate-100 font-medium">137</td>
+                                    <td class="p-3 border-b border-slate-100">2020-21</td><td class="p-3 border-b border-slate-100 font-medium">301</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border-b border-slate-100">2009-10</td><td class="p-3 border-b border-slate-100 font-medium">148</td>
+                                    <td class="p-3 border-b border-slate-100">2021-22</td><td class="p-3 border-b border-slate-100 font-medium">317</td>
+                                </tr>
+                                <tr class="bg-slate-50">
+                                    <td class="p-3 border-b border-slate-100">2010-11</td><td class="p-3 border-b border-slate-100 font-medium">167</td>
+                                    <td class="p-3 border-b border-slate-100">2022-23</td><td class="p-3 border-b border-slate-100 font-medium">331</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border-b border-slate-100">2011-12</td><td class="p-3 border-b border-slate-100 font-medium">184</td>
+                                    <td class="p-3 border-b border-slate-100">2023-24</td><td class="p-3 border-b border-slate-100 font-medium">348</td>
+                                </tr>
+                                <tr class="bg-slate-50">
+                                    <td class="p-3 border-b border-slate-100">2012-13</td><td class="p-3 border-b border-slate-100 font-medium">200</td>
+                                    <td class="p-3 border-b border-slate-100">2024-25</td><td class="p-3 border-b border-slate-100 font-bold text-sky-700">363</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-slate-800 mt-8 mb-4">How is Indexed Cost Calculated?</h3>
+                    <p>The standard formula provided by the Income Tax Department is:</p>
+                    <div class="bg-slate-100 p-4 rounded-xl border border-slate-200 font-mono text-sm text-center mb-6">
+                        Indexed Cost = (Original Cost × CII of Year of Sale) ÷ CII of Year of Purchase
+                    </div>
+                    <p>The same formula is applied to any Cost of Improvement, substituting the Year of Purchase with the Year of Improvement.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQs (Mandatory) -->
+        <div id="faqs" class="mb-16">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-800 mb-8 text-center md:text-left">Frequently Asked Questions</h2>
+            <div class="max-w-4xl mx-auto space-y-4">
+                
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>What is Indexation in Capital Gains?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        Indexation is a method used to adjust the purchase price of an asset (like property) for inflation over the holding period. This increases the 'purchase price' on paper, thereby reducing the taxable capital gain.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>How is Indexed Cost of Acquisition calculated?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        The formula is: Indexed Cost = (Actual Cost × CII of the year of sale) / CII of the year of purchase. CII stands for Cost Inflation Index.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>What are the new rules for property sold after July 2024?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        For properties acquired before July 23, 2024, individuals and HUFs have a choice: pay 12.5% tax on Long Term Capital Gains (without indexation) OR pay 20% tax on Long Term Capital Gains (with indexation), whichever is lower.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>What is the base year for CII?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        The base year for calculating the Cost Inflation Index (CII) is currently 2001-02, which is assigned a value of 100. If you bought a property before 2001, the Fair Market Value (FMV) as of April 1, 2001, is used as the base purchase price.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>Can I claim indexation on Cost of Improvement?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        Yes, any significant structural improvement or addition made to the property can also be indexed from the year the improvement was made until the year of sale.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>Are NRIs eligible for the grandfathering indexation benefit?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        No, the grandfathering option (choice between 12.5% without indexation and 20% with indexation) is only available to resident Individuals and Hindu Undivided Families (HUFs).
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>Does indexation apply to Short Term Capital Gains?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        No, indexation benefits are only applicable to Long Term Capital Assets. For real estate, a property must be held for more than 24 months to qualify as long term.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>What if my Indexed Cost is higher than the Sale Value?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        If the indexed cost is higher than the sale value, it results in a Long Term Capital Loss (LTCL). This loss can be carried forward for 8 years and set off against other Long Term Capital Gains. Note: Under the 12.5% regime, calculating capital losses via indexation is restricted.
+                    </div>
+                </details>
+
+            </div>
+        </div>
+
+        <!-- Related Calculators (Mandatory) -->
+        <div class="bg-slate-50 rounded-2xl p-6 sm:p-10 border border-slate-200 mb-16">
+            <h3 class="text-lg font-bold text-slate-800 mb-6">Related Real Estate & Tax Calculators</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <a href="/tds-on-property-sale-calculator/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-sky-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-sky-600 text-sm mb-1">TDS on Property Sale (194-IA)</h4>
+                    <p class="text-xs text-slate-500">Calculate 1% TDS on property purchase</p>
+                </a>
+                <a href="/capital-gains-tax/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-sky-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-sky-600 text-sm mb-1">Capital Gains Tax</h4>
+                    <p class="text-xs text-slate-500">General LTCG and STCG calculator</p>
+                </a>
+                <a href="/rent-vs-buy-calculator/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-sky-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-sky-600 text-sm mb-1">Rent vs Buy Calculator</h4>
+                    <p class="text-xs text-slate-500">Financial breakdown of owning vs renting</p>
+                </a>
+                <a href="/home-loan/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-sky-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-sky-600 text-sm mb-1">Home Loan Calculator</h4>
+                    <p class="text-xs text-slate-500">Calculate EMI and amortization</p>
+                </a>
+                <a href="/rental-yield/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-sky-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-sky-600 text-sm mb-1">Rental Yield Calculator</h4>
+                    <p class="text-xs text-slate-500">Find the true ROI on your property</p>
+                </a>
+                <a href="/property-appreciation/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-sky-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-sky-600 text-sm mb-1">Property Appreciation</h4>
+                    <p class="text-xs text-slate-500">Forecast future property values</p>
+                </a>
+                <a href="/home-affordability/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-sky-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-sky-600 text-sm mb-1">Home Affordability</h4>
+                    <p class="text-xs text-slate-500">How much house can you afford?</p>
+                </a>
+                <a href="/stamp-duty/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-sky-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-sky-600 text-sm mb-1">Stamp Duty Calculator</h4>
+                    <p class="text-xs text-slate-500">State-wise property registration cost</p>
+                </a>
+            </div>
+        </div>
+
+    
+            <!-- Related Calculators (15 Internal Links) -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Financial & Tax Calculators</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="/advance-tax-penalty-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Advance Tax Penalty</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Sections 234A/B/C.</p>
+        </a>
+        
+        <a href="/professional-tax-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Professional Tax</h4>
+            <p class="text-[10px] text-slate-500 mt-1">State-wise PT deduction.</p>
+        </a>
+        
+        <a href="/income-tax/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Income Tax Calculator</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Old vs New Regime.</p>
+        </a>
+        
+        <a href="/80c-tax-saving/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 80C Calculator</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Maximize 1.5L deduction.</p>
+        </a>
+        
+        <a href="/80d-tax-saving-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 80D Calculator</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Health insurance tax benefits.</p>
+        </a>
+        
+        <a href="/tds-on-rent-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">TDS on Rent (194-IB)</h4>
+            <p class="text-[10px] text-slate-500 mt-1">TDS for tenants.</p>
+        </a>
+        
+        <a href="/tds-on-property-sale-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">TDS on Property</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Section 194-IA rules.</p>
+        </a>
+        
+        <a href="/44ad-presumptive-tax-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 44AD</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Presumptive business tax.</p>
+        </a>
+        
+        <a href="/surcharge-marginal-relief-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Surcharge & Relief</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Calculate marginal relief.</p>
+        </a>
+        
+        <a href="/capital-gains-exemption-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Capital Gains Exemption</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Sections 54, 54F, 54EC.</p>
+        </a>
+        
+        <a href="/44ae-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 44AE</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Transport presumptive tax.</p>
+        </a>
+        
+        <a href="/income-from-house-property-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">House Property Tax</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Section 24 deductions.</p>
+        </a>
+        
+        <a href="/future-value/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Future Value</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Calculate FV of money.</p>
+        </a>
+        
+        <a href="/cagr/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">CAGR Calculator</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Compound annual growth.</p>
+        </a>
+        
+        <a href="/sip/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">SIP Calculator</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Mutual fund investment.</p>
+        </a>
+        </div>
+            </section>
+
+    </main>
+
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/global.js" defer></script>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    <div id="footer"></div>
+
+    <script>
+        // Load Navbar and Footer
+        fetch("/navbar.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("navbar").innerHTML = data;
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+            if(btn){
+                btn.addEventListener("click", () => {
+                    menu.classList.toggle("hidden");
+                });
+            }
+        }).catch(() => {});
+
+        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; }).catch(() => {});
+
+        // Format Indian Currency
+        function formatINR(number) {
+            return new Intl.NumberFormat('en-IN').format(Math.round(number));
+        }
+
+        function parseInput(val) {
+            const parsed = parseFloat(val.replace(/,/g, ''));
+            return isNaN(parsed) ? 0 : parsed;
+        }
+
+        // CII Data
+        const ciiData = {
+            '2001-02': 100, '2002-03': 105, '2003-04': 109, '2004-05': 113, '2005-06': 117,
+            '2006-07': 122, '2007-08': 129, '2008-09': 137, '2009-10': 148, '2010-11': 167,
+            '2011-12': 184, '2012-13': 200, '2013-14': 220, '2014-15': 240, '2015-16': 254,
+            '2016-17': 264, '2017-18': 272, '2018-19': 280, '2019-20': 289, '2020-21': 301,
+            '2021-22': 317, '2022-23': 331, '2023-24': 348, '2024-25': 363, '2025-26': 363, '2026-27': 363 // using latest notified for future
+        };
+
+        const years = Object.keys(ciiData);
+
+        // DOM Elements
+        const selPurchase = document.getElementById('yearPurchase');
+        const selSale = document.getElementById('yearSale');
+        const selImprovement = document.getElementById('yearImprovement');
+        
+        const inpPurchase = document.getElementById('valPurchase');
+        const inpSale = document.getElementById('valSale');
+        const inpImprovement = document.getElementById('valImprovement');
+        
+        const toggleImprovement = document.getElementById('toggleImprovement');
+        const boxImprovement = document.getElementById('improvementBox');
+
+        const btnCalculate = document.getElementById('calculateBtn');
+        const btnReset = document.getElementById('resetBtn');
+        const overlay = document.getElementById('loadingOverlay');
+
+        // Populate Selects
+        let optionsHTML = '';
+        years.forEach(yr => {
+            optionsHTML += `<option value="${yr}">${yr} (CII: ${ciiData[yr]})</option>`;
+        });
+        
+        selPurchase.innerHTML = optionsHTML;
+        selImprovement.innerHTML = optionsHTML;
+        selSale.innerHTML = optionsHTML;
+
+        // Default selections
+        selPurchase.value = '2010-11';
+        selImprovement.value = '2015-16';
+        selSale.value = '2024-25';
+
+        // Toggles
+        toggleImprovement.addEventListener('change', (e) => {
+            if(e.target.checked) {
+                boxImprovement.classList.remove('hidden');
+            } else {
+                boxImprovement.classList.add('hidden');
+                inpImprovement.value = '0';
+            }
+        });
+
+        // Input formatting logic
+        [inpPurchase, inpSale, inpImprovement].forEach(input => {
+            input.addEventListener('input', function(e) {
+                const cursorPosition = this.selectionStart;
+                const oldLength = this.value.length;
+                let val = this.value.replace(/[^\d]/g, '');
+                if (val) {
+                    this.value = formatINR(parseInt(val, 10));
+                    const newLength = this.value.length;
+                    this.setSelectionRange(cursorPosition + (newLength - oldLength), cursorPosition + (newLength - oldLength));
+                }
+            });
+        });
+
+        function extractStartYear(fyString) {
+            return parseInt(fyString.split('-')[0]);
+        }
+
+        function calculateGains() {
+            overlay.classList.remove('hidden');
+            
+            setTimeout(() => {
+                const yrPurch = selPurchase.value;
+                const yrSale = selSale.value;
+                const yrImprv = selImprovement.value;
+                
+                const valPurch = parseInput(inpPurchase.value);
+                const valSale = parseInput(inpSale.value);
+                const valImprv = toggleImprovement.checked ? parseInput(inpImprovement.value) : 0;
+
+                const ciiPurch = ciiData[yrPurch];
+                const ciiSale = ciiData[yrSale];
+                const ciiImprv = ciiData[yrImprv];
+
+                const startPurch = extractStartYear(yrPurch);
+                const startSale = extractStartYear(yrSale);
+
+                // Warning Flags
+                let isShortTerm = (startSale - startPurch) < 2; // Rough approximation for 24 months
+                let isGrandfathered = startPurch < 2024; // Bought before July 2024 roughly falls in FYs before 2024-25
+
+                const divSTWarning = document.getElementById('shortTermWarning');
+                const divNoIdxWarning = document.getElementById('noIndexationWarning');
+                
+                divSTWarning.classList.add('hidden');
+                divNoIdxWarning.classList.add('hidden');
+
+                if (isShortTerm) {
+                    divSTWarning.classList.remove('hidden');
+                } else if (!isGrandfathered) {
+                    divNoIdxWarning.classList.remove('hidden');
+                }
+
+                // 1. Regime 1: 12.5% WITHOUT Indexation
+                const totalCost1 = valPurch + valImprv;
+                const gain1 = Math.max(0, valSale - totalCost1);
+                const tax1 = gain1 * 0.125;
+
+                // 2. Regime 2: 20% WITH Indexation
+                let indexedPurch = Math.round((valPurch * ciiSale) / ciiPurch);
+                let indexedImprv = 0;
+                
+                if(valImprv > 0) {
+                    // Improvement can't be before purchase in real logic, but if so, cap it mathematically or just calculate.
+                    const actualCiiImprv = Math.max(ciiPurch, ciiImprv); 
+                    indexedImprv = Math.round((valImprv * ciiSale) / actualCiiImprv);
+                }
+
+                const totalCost2 = indexedPurch + indexedImprv;
+                const gain2 = Math.max(0, valSale - totalCost2);
+                const tax2 = gain2 * 0.20;
+
+                // UI Updates
+                document.getElementById('rsSale1').innerText = "₹" + formatINR(valSale);
+                document.getElementById('rsSale2').innerText = "₹" + formatINR(valSale);
+
+                document.getElementById('rsCost1').innerText = "- ₹" + formatINR(totalCost1);
+                document.getElementById('rsCost2').innerText = "- ₹" + formatINR(totalCost2);
+
+                document.getElementById('rsGain1').innerText = "₹" + formatINR(gain1);
+                document.getElementById('rsGain2').innerText = "₹" + formatINR(gain2);
+
+                document.getElementById('rsTax1').innerText = "₹" + formatINR(tax1);
+                document.getElementById('rsTax2').innerText = "₹" + formatINR(tax2);
+
+                // Recommendation
+                const resRec = document.getElementById('resRecommendation');
+                const resSav = document.getElementById('resSavings');
+
+                if (isShortTerm) {
+                    resRec.innerText = "Short Term Gain Applies";
+                    resRec.className = "text-2xl font-bold text-amber-600 mb-2";
+                    resSav.parentElement.classList.add('hidden');
+                } else if (!isGrandfathered) {
+                    resRec.innerText = "Pay ₹" + formatINR(tax1) + " (Flat 12.5%)";
+                    resRec.className = "text-2xl font-bold text-red-600 mb-2";
+                    resSav.parentElement.classList.add('hidden');
+                } else {
+                    resSav.parentElement.classList.remove('hidden');
+                    if (tax1 < tax2) {
+                        resRec.innerText = "Pay 12.5% Tax (No Indexation)";
+                        resRec.className = "text-2xl font-bold text-sky-700 mb-2";
+                        resSav.innerText = "₹" + formatINR(tax2 - tax1);
+                        document.getElementById('rsTax1').classList.add('bg-sky-200', 'ring-2', 'ring-sky-400');
+                        document.getElementById('rsTax2').classList.remove('bg-sky-200', 'ring-2', 'ring-sky-400');
+                    } else {
+                        resRec.innerText = "Pay 20% Tax (With Indexation)";
+                        resRec.className = "text-2xl font-bold text-green-600 mb-2";
+                        resSav.innerText = "₹" + formatINR(tax1 - tax2);
+                        document.getElementById('rsTax2').classList.add('bg-green-100', 'ring-2', 'ring-green-400', 'text-green-700');
+                        document.getElementById('rsTax2').classList.remove('text-sky-700', 'bg-sky-100');
+                        document.getElementById('rsTax1').classList.remove('bg-sky-200', 'ring-2', 'ring-sky-400');
+                    }
+                }
+
+                overlay.classList.add('hidden');
+            }, 300);
+        }
+
+        btnCalculate.addEventListener('click', calculateGains);
+
+        btnReset.addEventListener('click', () => {
+            selPurchase.value = '2010-11';
+            selImprovement.value = '2015-16';
+            selSale.value = '2024-25';
+            
+            inpPurchase.value = "50,00,000";
+            inpSale.value = "1,20,00,000";
+            inpImprovement.value = "0";
+            
+            toggleImprovement.checked = false;
+            boxImprovement.classList.add('hidden');
+            
+            calculateGains();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Initialize
+        calculateGains();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Tax Penalty Calculator | Sections 234A, 234B, 234C</title>
+    <meta name="description" content="Calculate exact interest penalties under Section 234A, 234B, and 234C for late payment of advance tax or late ITR filing in India.">
+    <meta name="keywords" content="advance tax penalty calculator, section 234a calculator, section 234b calculator, section 234c calculator, interest on late tax payment">
+    <meta name="author" content="ArthCalculator">
+    <meta name="last-modified" content="2026-08-02">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/advance-tax-penalty-calculator/">
+    <link type="image/x-icon" rel="icon" href="/favicon.ico">
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Advance Tax Penalty Calculator (234A, 234B, 234C)">
+    <meta property="og:description" content="Missed an advance tax installment? Calculate your exact penalty and interest liability instantly.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/advance-tax-penalty-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Advance Tax Penalty Calculator",
+      "url": "https://arthcalculator.in/advance-tax-penalty-calculator/",
+      "description": "Calculate interest under section 234A, 234B, 234C for advance tax defaults.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ArthCalculator",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://arthcalculator.in/logo.png"
+        }
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ArthCalculator",
+      "url": "https://arthcalculator.in",
+      "logo": "https://arthcalculator.in/logo.png"
+    }
+    </script>
+
+    <!-- Schema Markup: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"SoftwareApplication",
+      "name":"Advance Tax Penalty Calculator",
+      "applicationCategory":"FinanceApplication",
+      "operatingSystem":"Web",
+      "offers":{
+        "@type":"Offer",
+        "price":"0",
+        "priceCurrency":"INR"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: HowTo -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to calculate Advance Tax Penalty (234A, 234B, 234C)",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "text": "Enter your Total Assessed Tax Liability for the financial year."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Subtract any TDS or TCS already deducted."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Input the advance tax payments you made in June, September, December, and March."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Provide your ITR filing date. The calculator will automatically apply the 1% per month penalty rules."
+        }
+      ]
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://arthcalculator.in/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Income Tax Calculators",
+       "item": "https://arthcalculator.in/income-tax/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Advance Tax Penalty Calculator",
+       "item": "https://arthcalculator.in/advance-tax-penalty-calculator/"
+      }
+     ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Section 234C penalty?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Section 234C levies an interest of 1% per month for deferment or delay in paying advance tax installments (due on 15th June, 15th Sept, 15th Dec, 15th March). It is usually calculated for 3 months per missed installment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Section 234B penalty?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If your total advance tax paid by 31st March is less than 90% of your assessed tax, Section 234B levies a 1% per month interest from April 1st of the assessment year until the date you pay the remaining tax."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Section 234A penalty?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Section 234A applies if you file your Income Tax Return (ITR) after the due date (usually 31st July). The penalty is 1% per month on the outstanding tax liability from the due date until the actual date of filing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are senior citizens exempt from advance tax?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A resident senior citizen (aged 60 or above) who does not have any income from a business or profession is exempt from paying advance tax. Penalties under 234B and 234C will not apply."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Advance Tax calculated for Presumptive Taxation (44AD/44ADA)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Taxpayers opting for presumptive taxation schemes (Section 44AD or 44ADA) only need to pay 100% of their advance tax in a single installment by 15th March. They are exempt from the June, September, and December installments."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my tax liability is less than ₹10,000?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If your total estimated tax liability (after subtracting TDS/TCS) is less than ₹10,000 for the financial year, you are not required to pay advance tax. No 234B or 234C penalties will be charged."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the 12% and 36% rule in Section 234C?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To provide relief, if the advance tax paid by 15th June is at least 12% (instead of 15%), and by 15th September is at least 36% (instead of 45%), no interest under 234C is levied for those respective quarters."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is 'part of a month' calculated for 234A and 234B?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Any fraction of a month is considered a full month. For example, if your ITR due date is 31st July, and you file it on 5th August (5 days late), you will be charged a full 1 month's interest under Section 234A."
+          }
+        }
+      ,
+        {
+          "@type": "Question",
+          "name": "Do I need to file an ITR if my income is below the basic exemption limit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually no, but you must file if you paid TDS and want a refund, or if you meet certain criteria like spending over ₹2 Lakhs on foreign travel or depositing over ₹1 Crore in a current account."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between Old and New Tax Regime?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Old Regime allows deductions like 80C, 80D, HRA, etc., while the New Regime has lower slab rates but does not allow most deductions. From FY 2023-24, the New Regime is the default."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I switch back to the Old Tax Regime?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Salaried individuals can choose between the regimes every year. However, individuals with business income can switch only once in their lifetime."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I forget to file my ITR on time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You may have to pay a late fee under Section 234F (up to ₹5,000), interest under Section 234A on any pending tax, and you will not be allowed to carry forward certain losses."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #1e3a8a 0%, #172554 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg.chevron { transform: rotate(180deg); }
+        input[type="date"]::-webkit-calendar-picker-indicator { cursor: pointer; opacity: 0.6; transition: 0.2s; }
+        input[type="date"]::-webkit-calendar-picker-indicator:hover { opacity: 1; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+    <div id="navbar"></div>
+
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/income-tax/" class="hover:text-blue-600 transition-colors">Income Tax</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold" aria-current="page">Advance Tax Penalty (234A/B/C)</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl text-pretty">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-[1.2] pb-1">Advance Tax Penalty Calculator</h1>
+                    <p class="text-slate-500 text-sm font-medium mb-3">Calculate interest under Sections 234A, 234B, and 234C.</p>
+                    
+                    <p class="text-slate-500 text-xs sm:text-base leading-relaxed text-pretty">
+                        Missed an advance tax installment? Or filing your ITR late? The Income Tax Department imposes a <strong>1% per month compounding interest</strong> across three different sections. Enter your tax liability and payment history below to calculate your exact penalty breakdown instantly.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+                        <a href="#calculator" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Calculate Penalty</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#educational-content" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Section Rules</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#faqs" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
+                    </div>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0 flex flex-col gap-2">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-bold px-4 py-2 rounded-full border border-blue-100 shadow-sm block text-center uppercase">FY 2026-27 Active</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4" id="calculator">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-6 space-y-6">
+                
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    
+                    <h2 class="text-md sm:text-lg font-semibold mb-4 flex items-center text-slate-700 border-b pb-3">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        Tax Liability
+                    </h2>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1" for="totalTaxLiability">
+                                Total Estimated Tax for FY
+                            </label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <span class="text-slate-400 font-medium text-sm">₹</span>
+                                </div>
+                                <input type="text" id="totalTaxLiability" value="5,00,000" class="block w-full pl-7 pr-3 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 text-slate-800 font-semibold text-sm transition-colors">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1" for="tdsDeducted">
+                                Total TDS/TCS Deducted
+                            </label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <span class="text-slate-400 font-medium text-sm">₹</span>
+                                </div>
+                                <input type="text" id="tdsDeducted" value="1,50,000" class="block w-full pl-7 pr-3 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 text-slate-800 font-semibold text-sm transition-colors">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exemptions Toggle -->
+                    <div class="flex flex-col gap-3 mb-6 bg-slate-50 p-4 rounded-xl border border-slate-200">
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" id="isSeniorCitizen" class="mt-1 w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
+                            <div>
+                                <span class="block text-sm font-semibold text-slate-700">I am a Senior Citizen (60+ years)</span>
+                                <span class="block text-[10px] text-slate-500">With no business/professional income (Exempt from Advance Tax)</span>
+                            </div>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" id="isPresumptive" class="mt-1 w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
+                            <div>
+                                <span class="block text-sm font-semibold text-slate-700">I opted for Presumptive Taxation (44AD/44ADA)</span>
+                                <span class="block text-[10px] text-slate-500">Exempt from Jun, Sep, Dec installments. Pay 100% by March.</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <h2 class="text-md sm:text-lg font-semibold mb-4 flex items-center text-slate-700 border-b pb-3">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Advance Tax Paid History
+                    </h2>
+                    
+                    <div class="space-y-3 mb-6" id="installmentsWrapper">
+                        <div class="flex items-center justify-between bg-slate-50 p-3 rounded-lg border border-slate-200">
+                            <label class="text-xs font-semibold text-slate-700 w-1/2">Paid by 15th June (Q1)</label>
+                            <div class="relative w-1/2">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <span class="text-slate-400 font-medium text-xs">₹</span>
+                                </div>
+                                <input type="text" id="paidQ1" value="0" class="block w-full pl-6 pr-3 py-1.5 bg-white border border-slate-200 rounded-md focus:ring-2 focus:ring-blue-500 text-slate-800 font-semibold text-sm transition-colors text-right">
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between bg-slate-50 p-3 rounded-lg border border-slate-200">
+                            <label class="text-xs font-semibold text-slate-700 w-1/2">Paid by 15th Sept (Q2)</label>
+                            <div class="relative w-1/2">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <span class="text-slate-400 font-medium text-xs">₹</span>
+                                </div>
+                                <input type="text" id="paidQ2" value="0" class="block w-full pl-6 pr-3 py-1.5 bg-white border border-slate-200 rounded-md focus:ring-2 focus:ring-blue-500 text-slate-800 font-semibold text-sm transition-colors text-right">
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between bg-slate-50 p-3 rounded-lg border border-slate-200">
+                            <label class="text-xs font-semibold text-slate-700 w-1/2">Paid by 15th Dec (Q3)</label>
+                            <div class="relative w-1/2">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <span class="text-slate-400 font-medium text-xs">₹</span>
+                                </div>
+                                <input type="text" id="paidQ3" value="0" class="block w-full pl-6 pr-3 py-1.5 bg-white border border-slate-200 rounded-md focus:ring-2 focus:ring-blue-500 text-slate-800 font-semibold text-sm transition-colors text-right">
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between bg-slate-50 p-3 rounded-lg border border-slate-200">
+                            <label class="text-xs font-semibold text-slate-700 w-1/2">Paid by 15th March (Q4)</label>
+                            <div class="relative w-1/2">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <span class="text-slate-400 font-medium text-xs">₹</span>
+                                </div>
+                                <input type="text" id="paidQ4" value="0" class="block w-full pl-6 pr-3 py-1.5 bg-white border border-slate-200 rounded-md focus:ring-2 focus:ring-blue-500 text-slate-800 font-semibold text-sm transition-colors text-right">
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between bg-slate-50 p-3 rounded-lg border border-slate-200">
+                            <label class="text-xs font-semibold text-slate-700 w-1/2 leading-tight">Paid between 16th to 31st March</label>
+                            <div class="relative w-1/2">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <span class="text-slate-400 font-medium text-xs">₹</span>
+                                </div>
+                                <input type="text" id="paidQ4Late" value="0" class="block w-full pl-6 pr-3 py-1.5 bg-white border border-slate-200 rounded-md focus:ring-2 focus:ring-blue-500 text-slate-800 font-semibold text-sm transition-colors text-right" title="Counts for 234B but NOT for 234C">
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="text-md sm:text-lg font-semibold mb-4 mt-6 flex items-center text-slate-700 border-b pb-3">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        Filing Details (For 234A)
+                    </h2>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1" for="dueDateFiling">
+                                Due Date of Filing ITR
+                            </label>
+                            <input type="date" id="dueDateFiling" class="block w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 text-sm text-slate-800 font-medium">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1" for="actualDateFiling">
+                                Date of Actual Filing/Payment
+                            </label>
+                            <input type="date" id="actualDateFiling" class="block w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 text-sm text-slate-800 font-medium">
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 mt-6">
+                        <button id="calculateBtn" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl shadow-md transition-all active:transform active:scale-95 flex justify-center items-center gap-2">
+                            Calculate Penalty
+                        </button>
+                        <button id="resetBtn" class="bg-white border border-slate-300 hover:bg-slate-50 text-slate-600 font-semibold py-3 px-6 rounded-xl shadow-sm transition-all active:transform active:scale-95">
+                            Reset
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow h-full flex flex-col relative overflow-hidden" id="resultContainer">
+                    <div id="loadingOverlay" class="absolute inset-0 bg-white/90 backdrop-blur-sm z-10 flex flex-col items-center justify-center hidden">
+                        <div class="w-10 h-10 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mb-3"></div>
+                        <p class="text-sm font-medium text-slate-500">Analyzing defaults...</p>
+                    </div>
+
+                    <h3 class="text-sm font-bold tracking-wider text-slate-400 uppercase mb-4 flex items-center justify-between">
+                        Penalty Breakdown
+                    </h3>
+
+                    <!-- Safe Harbor / Exempt Msg -->
+                    <div id="msgExempt" class="hidden bg-green-50 border border-green-200 rounded-xl p-4 mb-5">
+                        <div class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div>
+                                <h4 class="font-bold text-green-800 text-sm">Exempt from Advance Tax!</h4>
+                                <p class="text-xs text-green-700 mt-1" id="msgExemptText">Because Assessed Tax is below ₹10,000.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="resultsContent">
+                        
+                        <!-- Primary Result -->
+                        <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 mb-5 shadow-lg text-center relative overflow-hidden">
+                            <p class="text-slate-300 font-medium text-sm mb-1 relative z-10">Total Interest Penalty to Pay</p>
+                            <div class="flex justify-center items-end gap-1 mb-1 relative z-10">
+                                <span class="text-white text-4xl sm:text-5xl font-bold font-mono tracking-tight">₹<span id="resTotalPenalty">0</span></span>
+                            </div>
+                            <div class="inline-block px-3 py-1 mt-2 relative z-10">
+                                <span class="text-blue-300 text-[10px] font-semibold" id="resAssessedTaxText">Assessed Tax Liability: ₹0</span>
+                            </div>
+                        </div>
+
+                        <!-- Breakdown Grid -->
+                        <div class="space-y-3 mb-6">
+                            
+                            <div class="bg-blue-50 p-4 rounded-xl border border-blue-100 flex justify-between items-center group hover:bg-blue-100 transition-colors">
+                                <div>
+                                    <p class="text-sm font-bold text-blue-900">Section 234C</p>
+                                    <p class="text-[10px] text-blue-700">Deferment of Installments (Q1-Q4)</p>
+                                </div>
+                                <span class="font-bold text-blue-800 text-lg">₹<span id="res234C">0</span></span>
+                            </div>
+
+                            <div class="bg-red-50 p-4 rounded-xl border border-red-100 flex justify-between items-center group hover:bg-red-100 transition-colors">
+                                <div>
+                                    <p class="text-sm font-bold text-red-900">Section 234B</p>
+                                    <p class="text-[10px] text-red-700">Default in Payment (< 90% paid by Mar 31)</p>
+                                </div>
+                                <span class="font-bold text-red-800 text-lg">₹<span id="res234B">0</span></span>
+                            </div>
+
+                            <div class="bg-amber-50 p-4 rounded-xl border border-amber-100 flex justify-between items-center group hover:bg-amber-100 transition-colors">
+                                <div>
+                                    <p class="text-sm font-bold text-amber-900">Section 234A</p>
+                                    <p class="text-[10px] text-amber-700">Delay in Filing Return</p>
+                                </div>
+                                <span class="font-bold text-amber-800 text-lg">₹<span id="res234A">0</span></span>
+                            </div>
+                        </div>
+
+                        <!-- Actionable Recommendation -->
+                        <div class="bg-slate-50 border-l-4 border-slate-400 p-4 rounded-r-xl mt-auto">
+                            <h4 class="font-bold text-slate-700 text-sm flex items-center gap-2 mb-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                IT Act Rounding Rule
+                            </h4>
+                            <p class="text-[11px] text-slate-500 leading-relaxed">
+                                As per Rule 119A, any fraction of a month is considered a full month. The principal amount is rounded down to the nearest multiple of ₹100 before calculating the interest percentage.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content Section -->
+        <div id="educational-content" class="bg-white rounded-2xl border border-slate-200 card-shadow p-6 sm:p-10 mb-16">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6 border-b pb-4">Understanding Advance Tax Penalties</h2>
+            
+            <div class="prose prose-slate max-w-none">
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    If your estimated tax liability for the year (after deducting TDS) exceeds <strong>₹10,000</strong>, you are legally required to pay tax in advance during the financial year itself. Failing to do so triggers compounding interest penalties under Sections 234A, 234B, and 234C of the Income Tax Act.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-blue-50 p-5 rounded-xl border border-blue-100">
+                        <h3 class="text-md font-bold text-blue-900 mb-2 border-b border-blue-200 pb-2">Section 234C</h3>
+                        <p class="text-xs text-blue-800 font-semibold mb-1">For Shortfall in Installments</p>
+                        <p class="text-xs text-blue-700 leading-relaxed">
+                            Levied at 1% per month if you fail to pay 15%, 45%, 75%, and 100% of your tax by the 15th of Jun, Sep, Dec, and Mar respectively. Interest is charged for 3 months for the first three installments, and 1 month for the final installment.
+                        </p>
+                    </div>
+                    <div class="bg-red-50 p-5 rounded-xl border border-red-100">
+                        <h3 class="text-md font-bold text-red-900 mb-2 border-b border-red-200 pb-2">Section 234B</h3>
+                        <p class="text-xs text-red-800 font-semibold mb-1">For Default in Payment</p>
+                        <p class="text-xs text-red-700 leading-relaxed">
+                            Levied at 1% per month from 1st April of the Assessment Year if the total advance tax you paid by 31st March is less than <strong>90%</strong> of your final assessed tax. It runs until the date you pay the remaining tax.
+                        </p>
+                    </div>
+                    <div class="bg-amber-50 p-5 rounded-xl border border-amber-100">
+                        <h3 class="text-md font-bold text-amber-900 mb-2 border-b border-amber-200 pb-2">Section 234A</h3>
+                        <p class="text-xs text-amber-800 font-semibold mb-1">For Delay in Filing ITR</p>
+                        <p class="text-xs text-amber-700 leading-relaxed">
+                            Levied at 1% per month for filing your Income Tax Return after the due date (usually 31st July). Interest is calculated on the outstanding tax amount starting from the day after the due date until the actual date of filing.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 border-l-4 border-slate-500 p-5 rounded-r-xl mb-8">
+                    <h4 class="font-bold text-slate-800 text-sm mb-2">Important Rules & Exemptions</h4>
+                    <ul class="text-sm text-slate-600 space-y-2 list-disc pl-5">
+                        <li><strong>Senior Citizens:</strong> Residents aged 60 or above with no business income are entirely exempt from advance tax.</li>
+                        <li><strong>Presumptive Taxation:</strong> Taxpayers under 44AD or 44ADA need to pay 100% advance tax only by 15th March. No penalties for Jun/Sep/Dec.</li>
+                        <li><strong>Safe Harbor Rule (12% & 36%):</strong> If the shortfall in the first installment is only because you paid 12% instead of 15%, no 234C is charged. Similarly, 36% instead of 45% for the second installment is excused.</li>
+                        <li><strong>Rounding Off (Rule 119A):</strong> The tax amount is rounded down to the nearest multiple of 100 before applying the 1% interest.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQs -->
+        <div id="faqs" class="mb-16">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6 border-b pb-4">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>Is it mandatory to pay advance tax if my tax is deducted at source (TDS)?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        If your employer or client has deducted sufficient TDS such that your remaining estimated tax liability is less than ₹10,000 for the year, you do not need to pay advance tax. However, if your outstanding liability exceeds ₹10,000 even after TDS, advance tax rules apply to you.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>How is 'part of a month' treated for 234A and 234B?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        Under Income Tax rules, any fraction of a month is treated as a full month. For example, if you delay filing your return by just 3 days past the July 31st deadline, you will be charged a full 1% interest for the month of August.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>What if I receive unexpected Capital Gains in December?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        Capital gains and windfall income (like lotteries) cannot be reasonably estimated. Therefore, no 234C penalty is levied if you pay the entire advance tax on such capital gains in the remaining installments following the date of the gain.
+                    </div>
+                </details>
+                
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>Can the Assessing Officer waive these penalties?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        Generally, sections 234A, 234B, and 234C are mandatory in nature, and the Assessing Officer has no power to waive them off. They are calculated automatically by the income tax portal.
+                    </div>
+                </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">5. Do I need to file an ITR if my income is below the basic exemption limit?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Usually no, but you must file if you paid TDS and want a refund, or if you meet certain criteria like spending over ₹2 Lakhs on foreign travel or depositing over ₹1 Crore in a current account.
+                        </div>
+                    </details>
+    
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">6. What is the difference between Old and New Tax Regime?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            The Old Regime allows deductions like 80C, 80D, HRA, etc., while the New Regime has lower slab rates but does not allow most deductions. From FY 2023-24, the New Regime is the default.
+                        </div>
+                    </details>
+    
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">7. Can I switch back to the Old Tax Regime?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Salaried individuals can choose between the regimes every year. However, individuals with business income can switch only once in their lifetime.
+                        </div>
+                    </details>
+    
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">8. What happens if I forget to file my ITR on time?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            You may have to pay a late fee under Section 234F (up to ₹5,000), interest under Section 234A on any pending tax, and you will not be allowed to carry forward certain losses.
+                        </div>
+                    </details>
+    
+
+            </div>
+        </div>
+
+        <!-- Related Calculators (Mandatory) -->
+        <div class="bg-slate-50 rounded-2xl p-6 sm:p-10 border border-slate-200 mb-16">
+            <h3 class="text-lg font-bold text-slate-800 mb-6">Related Tax Calculators</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <a href="/income-tax/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-blue-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-blue-600 text-sm mb-1">Income Tax Calculator</h4>
+                    <p class="text-xs text-slate-500">Comprehensive FY 2026-27 calculator</p>
+                </a>
+                <a href="/tds-late-payment-penalty-calculator/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-blue-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-blue-600 text-sm mb-1">TDS Late Payment Penalty</h4>
+                    <p class="text-xs text-slate-500">Calculate 201(1A) & 234E late fees</p>
+                </a>
+                <a href="/income-tax/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-blue-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-blue-600 text-sm mb-1">Old vs New Tax Regime</h4>
+                    <p class="text-xs text-slate-500">Compare tax slabs instantly</p>
+                </a>
+                <a href="/44ada-calculator/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-blue-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-blue-600 text-sm mb-1">Section 44ADA Calculator</h4>
+                    <p class="text-xs text-slate-500">Presumptive taxation for freelancers</p>
+                </a>
+                <a href="/80c-tax-saving/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-blue-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-blue-600 text-sm mb-1">80C Tax Saving</h4>
+                    <p class="text-xs text-slate-500">Maximize your 1.5L deduction limit</p>
+                </a>
+                <a href="/capital-gains-tax/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-blue-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-blue-600 text-sm mb-1">Capital Gains Tax</h4>
+                    <p class="text-xs text-slate-500">Calculate LTCG and STCG</p>
+                </a>
+            </div>
+        </div>
+
+    
+            <!-- Related Calculators (15 Internal Links) -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Financial & Tax Calculators</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="/advance-tax-penalty-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Advance Tax Penalty</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Sections 234A/B/C.</p>
+        </a>
+        
+        <a href="/professional-tax-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Professional Tax</h4>
+            <p class="text-[10px] text-slate-500 mt-1">State-wise PT deduction.</p>
+        </a>
+        
+        <a href="/income-tax/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Income Tax Calculator</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Old vs New Regime.</p>
+        </a>
+        
+        <a href="/80c-tax-saving/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 80C Calculator</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Maximize 1.5L deduction.</p>
+        </a>
+        
+        <a href="/80d-tax-saving-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 80D Calculator</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Health insurance tax benefits.</p>
+        </a>
+        
+        <a href="/tds-on-rent-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">TDS on Rent (194-IB)</h4>
+            <p class="text-[10px] text-slate-500 mt-1">TDS for tenants.</p>
+        </a>
+        
+        <a href="/tds-on-property-sale-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">TDS on Property</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Section 194-IA rules.</p>
+        </a>
+        
+        <a href="/44ad-presumptive-tax-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 44AD</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Presumptive business tax.</p>
+        </a>
+        
+        <a href="/surcharge-marginal-relief-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Surcharge & Relief</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Calculate marginal relief.</p>
+        </a>
+        
+        <a href="/capital-gains-exemption-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Capital Gains Exemption</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Sections 54, 54F, 54EC.</p>
+        </a>
+        
+        <a href="/44ae-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 44AE</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Transport presumptive tax.</p>
+        </a>
+        
+        <a href="/income-from-house-property-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">House Property Tax</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Section 24 deductions.</p>
+        </a>
+        
+        <a href="/future-value/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Future Value</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Calculate FV of money.</p>
+        </a>
+        
+        <a href="/cagr/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">CAGR Calculator</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Compound annual growth.</p>
+        </a>
+        
+        <a href="/sip/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">SIP Calculator</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Mutual fund investment.</p>
+        </a>
+        </div>
+            </section>
+
+    </main>
+
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/global.js" defer></script>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    <div id="footer"></div>
+
+    <script>
+        // Load Navbar and Footer
+        fetch("/navbar.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("navbar").innerHTML = data;
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+            if(btn){
+                btn.addEventListener("click", () => {
+                    menu.classList.toggle("hidden");
+                });
+            }
+        }).catch(() => {});
+
+        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; }).catch(() => {});
+
+        // Format Indian Currency
+        function formatINR(number) {
+            return new Intl.NumberFormat('en-IN').format(Math.round(number));
+        }
+
+        // Parse formatted input
+        function parseInput(val) {
+            const parsed = parseFloat(val.replace(/,/g, ''));
+            return isNaN(parsed) ? 0 : parsed;
+        }
+
+        function getMonthDifference(date1, date2) {
+            const d1 = new Date(date1);
+            const d2 = new Date(date2);
+            if (d2 <= d1) return 0;
+            const diff = (d2.getFullYear() - d1.getFullYear()) * 12 + (d2.getMonth() - d1.getMonth());
+            return diff + 1; // Part of a month is a full month
+        }
+
+        function roundDown100(val) {
+            if (val <= 0) return 0;
+            return Math.floor(val / 100) * 100;
+        }
+
+        // DOM Elements
+        const inpTotalTax = document.getElementById('totalTaxLiability');
+        const inpTds = document.getElementById('tdsDeducted');
+        
+        const chkSenior = document.getElementById('isSeniorCitizen');
+        const chkPresumptive = document.getElementById('isPresumptive');
+        
+        const inpQ1 = document.getElementById('paidQ1');
+        const inpQ2 = document.getElementById('paidQ2');
+        const inpQ3 = document.getElementById('paidQ3');
+        const inpQ4 = document.getElementById('paidQ4');
+        const inpQ4Late = document.getElementById('paidQ4Late');
+        
+        const inpDueFiling = document.getElementById('dueDateFiling');
+        const inpActFiling = document.getElementById('actualDateFiling');
+        
+        const btnCalculate = document.getElementById('calculateBtn');
+        const btnReset = document.getElementById('resetBtn');
+        const overlay = document.getElementById('loadingOverlay');
+
+        // Output Elements
+        const outTotal = document.getElementById('resTotalPenalty');
+        const outAssessedText = document.getElementById('resAssessedTaxText');
+        const out234C = document.getElementById('res234C');
+        const out234B = document.getElementById('res234B');
+        const out234A = document.getElementById('res234A');
+        
+        const msgExempt = document.getElementById('msgExempt');
+        const msgExemptText = document.getElementById('msgExemptText');
+        const resultsContent = document.getElementById('resultsContent');
+
+        // Input formatting logic
+        const moneyInputs = [inpTotalTax, inpTds, inpQ1, inpQ2, inpQ3, inpQ4, inpQ4Late];
+        moneyInputs.forEach(input => {
+            input.addEventListener('input', function(e) {
+                const cursorPosition = this.selectionStart;
+                const oldLength = this.value.length;
+                let val = this.value.replace(/[^\d]/g, '');
+                if (val) {
+                    this.value = formatINR(parseInt(val, 10));
+                    const newLength = this.value.length;
+                    this.setSelectionRange(cursorPosition + (newLength - oldLength), cursorPosition + (newLength - oldLength));
+                }
+            });
+        });
+
+        // Set default dates
+        const currentYear = new Date().getFullYear();
+        inpDueFiling.value = currentYear + "-07-31"; // July 31
+        
+        // Hide installments if presumptive is checked
+        chkPresumptive.addEventListener('change', function() {
+            const wrappers = document.querySelectorAll('#installmentsWrapper > div');
+            if(this.checked) {
+                wrappers[0].classList.add('hidden');
+                wrappers[1].classList.add('hidden');
+                wrappers[2].classList.add('hidden');
+            } else {
+                wrappers[0].classList.remove('hidden');
+                wrappers[1].classList.remove('hidden');
+                wrappers[2].classList.remove('hidden');
+            }
+        });
+
+        function calculatePenalties() {
+            overlay.classList.remove('hidden');
+            
+            setTimeout(() => {
+                const totalTax = parseInput(inpTotalTax.value);
+                const tds = parseInput(inpTds.value);
+                const assessedTaxRaw = totalTax - tds;
+                const assessedTax = assessedTaxRaw > 0 ? assessedTaxRaw : 0;
+                
+                outAssessedText.innerText = "Assessed Tax Liability: ₹" + formatINR(assessedTax);
+
+                const isSenior = chkSenior.checked;
+                const isPresumptive = chkPresumptive.checked;
+                
+                // Exemption Check
+                if (assessedTax < 10000 || isSenior) {
+                    resultsContent.classList.add('hidden');
+                    msgExempt.classList.remove('hidden');
+                    msgExemptText.innerText = isSenior ? "Senior Citizens without business income are exempt from advance tax." : "Because Assessed Tax is below ₹10,000.";
+                    overlay.classList.add('hidden');
+                    return;
+                } else {
+                    resultsContent.classList.remove('hidden');
+                    msgExempt.classList.add('hidden');
+                }
+
+                // Parse Payments
+                const p1 = isPresumptive ? 0 : parseInput(inpQ1.value);
+                const p2 = isPresumptive ? 0 : parseInput(inpQ2.value);
+                const p3 = isPresumptive ? 0 : parseInput(inpQ3.value);
+                const p4 = parseInput(inpQ4.value);
+                const p4Late = parseInput(inpQ4Late.value);
+
+                const cumulativeQ1 = p1;
+                const cumulativeQ2 = p1 + p2;
+                const cumulativeQ3 = p1 + p2 + p3;
+                const cumulativeQ4 = p1 + p2 + p3 + p4; // Total paid by 15th March
+                const totalAdvanceTaxPaid = cumulativeQ4 + p4Late; // Total paid by 31st March
+
+                let penalty234C = 0;
+                let penalty234B = 0;
+                let penalty234A = 0;
+
+                const roundedAssessedTax = roundDown100(assessedTax);
+
+                // --- Section 234C ---
+                if (isPresumptive) {
+                    // Only 1 installment: 100% by 15th March
+                    const shortfall = roundedAssessedTax - cumulativeQ4;
+                    if (shortfall > 0) {
+                        penalty234C = roundDown100(shortfall) * 0.01 * 1;
+                    }
+                } else {
+                    // Q1: 15% (Safe Harbor 12%)
+                    let short1 = (roundedAssessedTax * 0.15) - cumulativeQ1;
+                    if (cumulativeQ1 < (roundedAssessedTax * 0.12) && short1 > 0) {
+                        penalty234C += roundDown100(short1) * 0.01 * 3;
+                    }
+                    
+                    // Q2: 45% (Safe Harbor 36%)
+                    let short2 = (roundedAssessedTax * 0.45) - cumulativeQ2;
+                    if (cumulativeQ2 < (roundedAssessedTax * 0.36) && short2 > 0) {
+                        penalty234C += roundDown100(short2) * 0.01 * 3;
+                    }
+
+                    // Q3: 75%
+                    let short3 = (roundedAssessedTax * 0.75) - cumulativeQ3;
+                    if (short3 > 0) {
+                        penalty234C += roundDown100(short3) * 0.01 * 3;
+                    }
+
+                    // Q4: 100%
+                    let short4 = roundedAssessedTax - cumulativeQ4;
+                    if (short4 > 0) {
+                        penalty234C += roundDown100(short4) * 0.01 * 1;
+                    }
+                }
+
+                // --- Section 234B ---
+                // If total paid by 31 March < 90% of assessed tax
+                if (totalAdvanceTaxPaid < (assessedTax * 0.90)) {
+                    const shortfall234B = roundedAssessedTax - totalAdvanceTaxPaid;
+                    if (shortfall234B > 0) {
+                        // Calculate months from April 1st of AY to Date of Filing (or today)
+                        // Assume filing date is in the assessment year. 
+                        const actFilingStr = inpActFiling.value;
+                        if(actFilingStr) {
+                            const actD = new Date(actFilingStr);
+                            // April 1st of AY. (Assuming the user inputs dates correctly)
+                            // We simplify by asking the user to provide the actual filing date.
+                            // If due date was 31 July (AY), April 1 of AY is that same year.
+                            const ayYear = new Date(inpDueFiling.value).getFullYear();
+                            const april1 = new Date(ayYear, 3, 1); // April is month 3
+                            
+                            const months234B = getMonthDifference(april1, actD);
+                            if(months234B > 0) {
+                                penalty234B = roundDown100(shortfall234B) * 0.01 * months234B;
+                            }
+                        }
+                    }
+                }
+
+                // --- Section 234A ---
+                const dueStr = inpDueFiling.value;
+                const actStr = inpActFiling.value;
+                if (dueStr && actStr) {
+                    const dueD = new Date(dueStr);
+                    const actD = new Date(actStr);
+                    if (actD > dueD) {
+                        const months234A = getMonthDifference(dueD, actD);
+                        // Penalty on Assessed Tax - Advance Tax
+                        const shortfall234A = roundedAssessedTax - totalAdvanceTaxPaid;
+                        if (shortfall234A > 0) {
+                            penalty234A = roundDown100(shortfall234A) * 0.01 * months234A;
+                        }
+                    }
+                }
+
+                const totalPenalty = penalty234A + penalty234B + penalty234C;
+
+                // Update UI
+                out234C.innerText = formatINR(penalty234C);
+                out234B.innerText = formatINR(penalty234B);
+                out234A.innerText = formatINR(penalty234A);
+                outTotal.innerText = formatINR(totalPenalty);
+
+                overlay.classList.add('hidden');
+                document.getElementById('resultContainer').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 500);
+        }
+
+        btnCalculate.addEventListener('click', calculatePenalties);
+
+        btnReset.addEventListener('click', () => {
+            inpTotalTax.value = "5,00,000";
+            inpTds.value = "1,50,000";
+            chkSenior.checked = false;
+            chkPresumptive.checked = false;
+            chkPresumptive.dispatchEvent(new Event('change')); // Trigger visibility
+            
+            inpQ1.value = "0";
+            inpQ2.value = "0";
+            inpQ3.value = "0";
+            inpQ4.value = "0";
+            inpQ4Late.value = "0";
+            
+            inpDueFiling.value = currentYear + "-07-31";
+            inpActFiling.value = "";
+            
+            calculatePenalties();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Initial Calc
+        calculatePenalties();
+
+    </script>
+</body>
+</html>

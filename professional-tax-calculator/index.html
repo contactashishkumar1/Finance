@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Tax Calculator (State-wise) 2026</title>
+    <meta name="description" content="Calculate your state-wise Professional Tax (PT) for Maharashtra, Karnataka, Telangana, Tamil Nadu, West Bengal, Gujarat, MP & Odisha for FY 2025-26.">
+    <meta name="keywords" content="Professional Tax Calculator, PT Calculator Maharashtra, PT slabs 2026, State Tax Calculator, Salary Professional Tax">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/professional-tax-calculator/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Professional Tax Calculator (State-wise) 2026">
+    <meta property="og:description" content="Find out exactly how much Professional Tax will be deducted from your salary based on state-wise slabs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/professional-tax-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta name="author" content="ArthCalculator">
+    <meta name="last-modified" content="2026-08-01">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Professional Tax Calculator 2026",
+      "description": "A financial tool to calculate state-wise Professional Tax deductions.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ArthCalculator",
+        "url": "https://arthcalculator.in"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Professional Tax Calculator",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://arthcalculator.in/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Financial Calculators",
+       "item": "https://arthcalculator.in/calculators/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Professional Tax Calculator",
+       "item": "https://arthcalculator.in/professional-tax-calculator/"
+      }
+     ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Professional Tax applicable in Delhi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, Professional Tax is not levied by the government of Delhi, Haryana, Punjab, Rajasthan, or Uttar Pradesh."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the maximum limit for Professional Tax?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As per Article 276(2) of the Indian Constitution, the maximum limit for Professional Tax is ₹2,500 per annum."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Professional Tax deductible from Income Tax?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, under Section 16(iii) of the Income Tax Act, the Professional Tax paid during the year is allowed as a deduction from your Gross Salary."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is ₹300 deducted in February for Maharashtra?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To match the ₹2,500 annual limit, Maharashtra deducts ₹200 for 11 months and ₹300 in the last month (February)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are women exempted from Professional Tax in Maharashtra?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, women earning up to ₹10,000 per month are exempted from paying Professional Tax in Maharashtra."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who collects Professional Tax?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Professional Tax is a state-level tax collected by the Commercial Tax Department of the respective State Government."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do freelancers pay Professional Tax?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, freelancers and self-employed professionals must register and pay PT if they fall under the income slabs of a state that levies it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it mandatory to deduct PT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For salaried employees, it is the employer's statutory responsibility to deduct PT and remit it to the state government."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            -webkit-tap-highlight-color: transparent;
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+        input[type="range"] {
+            accent-color: #2563eb;
+            height: 6px;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        details summary {
+            list-style: none;
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary svg {
+            transform: rotate(180deg);
+        }
+        .formula-box {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
+        table th {
+            background-color: #f8fafc;
+        }
+    </style>
+
+    <!-- Schema Markup: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ArthCalculator",
+      "url": "https://arthcalculator.in",
+      "logo": "https://arthcalculator.in/logo.png"
+    }
+    </script>
+
+    <!-- Schema Markup: HowTo -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to use the Professional Tax Calculator (State-wise) 2026",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "text": "Enter your financial details in the input fields."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Review the computed results and visualizations."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Analyze the recommendations and insights provided."
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+<div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600">Professional Tax Calculator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Professional Tax Calculator (State-wise) 2026</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Calculate exact Professional Tax deductions from your salary for Maharashtra, Karnataka, Telangana, Tamil Nadu, and more. Max cap ₹2,500/year.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+                        <a href="#about" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">About</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#formula" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Rules</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#example" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Example</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#faqs" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
+                    </div>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">Updated Slabs</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow relative">
+                    <div id="loadingOverlay" class="absolute inset-0 bg-white/80 backdrop-blur-sm z-10 hidden flex-col justify-center items-center rounded-2xl">
+                        <div class="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-600 mb-4"></div>
+                    </div>
+
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Employment Details
+                    </h2>
+
+                    <div class="mb-6">
+                        <label class="text-xs font-medium text-slate-600 block mb-2">Select State</label>
+                        <select id="stateSelect" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-slate-800 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                            <option value="MH">Maharashtra</option>
+                            <option value="KA">Karnataka</option>
+                            <option value="TS">Telangana</option>
+                            <option value="WB">West Bengal</option>
+                            <option value="TN">Tamil Nadu</option>
+                            <option value="GJ">Gujarat</option>
+                            <option value="MP">Madhya Pradesh</option>
+                            <option value="OD">Odisha</option>
+                            <option value="NA">Delhi, UP, Haryana, Punjab (Not Applicable)</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="text-xs font-medium text-slate-600 block mb-2">Gender</label>
+                        <select id="genderSelect" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-slate-800 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-6" id="monthSection">
+                        <label class="text-xs font-medium text-slate-600 block mb-2">Calculation Month</label>
+                        <select id="monthSelect" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-slate-800 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                            <option value="normal">Normal Month</option>
+                            <option value="february">February (For MH)</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-xs font-medium text-slate-600">Gross Monthly Salary (₹)</label>
+                            <input type="number" id="salaryInput" value="50000" min="0" class="w-24 px-2 py-1 text-sm border border-slate-200 rounded-lg text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                        </div>
+                        <input type="range" id="salaryRange" min="0" max="500000" step="1000" value="50000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2">
+                        Calculate Tax
+                    </button>
+                </div>
+
+                <!-- Summary Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-blue-600 p-5 rounded-2xl text-white shadow-lg shadow-blue-200">
+                        <p class="text-blue-100 text-[10px] sm:text-xs font-medium uppercase mb-1">State Selection</p>
+                        <h3 id="selStateMobile" class="text-lg sm:text-xl font-bold leading-tight">Maharashtra</h3>
+                    </div>
+                    <div class="bg-indigo-600 p-5 rounded-2xl text-white shadow-lg shadow-indigo-200">
+                        <p class="text-indigo-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Annual Cap</p>
+                        <h3 class="text-lg sm:text-xl font-bold leading-tight">₹2,500</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Tax Output</h2>
+                    <div class="flex flex-col justify-between items-start mb-8 gap-4">
+                        <div class="w-full">
+                            <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Monthly Professional Tax</h2>
+                            <div class="mt-1 flex items-center gap-4">
+                                <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight block break-words" id="resPT">₹0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar (Visualizing Salary vs PT) -->
+                    <div class="mb-10">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-emerald-600 font-bold uppercase text-xs">Net Salary</span>
+                            <span class="text-red-500 font-bold uppercase text-xs">PT Deduction</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                            <div id="barSalary" class="h-full bg-emerald-500 transition-all duration-700 ease-out" style="width: 99%"></div>
+                            <div id="barPT" class="h-full bg-red-500 transition-all duration-700 ease-out" style="width: 1%"></div>
+                        </div>
+                    </div>
+
+                    <hr class="border-slate-100 mb-6">
+
+                    <div class="space-y-4 text-sm mb-8">
+                        <div class="flex justify-between items-center pb-3 border-b border-slate-100">
+                            <span class="text-slate-600 font-medium">Gross Salary</span>
+                            <span class="font-bold text-slate-800" id="resGross">₹0</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-3 border-b border-slate-100 bg-slate-50 p-2 rounded -mx-2">
+                            <span class="text-slate-700 font-bold">Estimated Annual PT</span>
+                            <span class="font-bold text-red-600" id="resAnnual">₹0</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            Tax Insights
+                        </h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-blue-800 font-medium">
+                            <li class="flex items-center gap-2">✅ Deductible under Sec 16(iii)</li>
+                            <li class="flex items-center gap-2">✅ Max constitutional limit ₹2,500/year</li>
+                            <li class="flex items-center gap-2">✅ Employer automatically deducts this</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">Calculation Logic</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                        PT = State Slab Rate (Based on Gross Monthly Salary)
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-2 mb-6 text-xs sm:text-sm">
+                        <p><strong>Maharashtra:</strong> ₹200/mo (₹300 in Feb). Women < ₹10k/mo are exempt.</p>
+                        <p><strong>Karnataka:</strong> ₹200/mo for salaries above ₹25,000.</p>
+                        <p><strong>Telangana:</strong> ₹150/mo for ₹15k-20k, ₹200/mo for >₹20k.</p>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="example">Step-by-Step Example</h3>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed">
+                        If you earn ₹50,000 in Maharashtra:
+                        <ul class="list-disc ml-5 mt-2 space-y-1 text-xs sm:text-sm font-medium">
+                            <li>Check Slab: Salary > ₹10,000.</li>
+                            <li>Monthly Deduction (Mar-Jan): <strong>₹200</strong></li>
+                            <li>February Deduction: <strong>₹300</strong></li>
+                            <li>Total Annual Tax = (₹200 × 11) + ₹300 = <strong>₹2,500</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-12 mb-12">
+            
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow" id="about">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">What is Professional Tax?</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                    Professional Tax is a direct tax levied on income earned by salaried employees, professionals, and freelancers by the respective State Governments in India. Despite its name, it applies not just to professionals like doctors and lawyers, but to any individual earning an income. It is deductible from your gross taxable income under <a href="/income-tax/" class="text-blue-600 font-semibold hover:underline">Income Tax rules</a>.
+                </p>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-10 mb-4">State-wise Applicability</h3>
+                <div class="overflow-x-auto mt-6">
+                    <table class="w-full text-left border-collapse border border-slate-100 text-sm">
+                        <thead>
+                            <tr class="bg-slate-50">
+                                <th class="p-4 border-b font-bold text-slate-700">States Where Applicable</th>
+                                <th class="p-4 border-b font-bold text-slate-700">States Where Exempt</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">Maharashtra, Karnataka, West Bengal</td>
+                                <td class="p-4 border-b font-medium text-emerald-600">Delhi, Haryana, Punjab</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">Tamil Nadu, Telangana, Andhra Pradesh</td>
+                                <td class="p-4 border-b font-medium text-emerald-600">Uttar Pradesh, Rajasthan</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">Gujarat, Madhya Pradesh, Odisha</td>
+                                <td class="p-4 border-b font-medium text-emerald-600">Uttarakhand, Himachal Pradesh</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-10 mb-4">How the Calculation Works</h3>
+                <p class="text-slate-600 text-sm mb-6 leading-relaxed">Unlike income tax, PT operates on a predefined slab system that varies from state to state. Our calculator cross-references your inputted gross salary and gender against the latest state government gazette slabs to determine your monthly deduction. For example, if you live in Maharashtra, the tool automatically adjusts the calculation for the month of February.</p>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">Eligibility and Latest Rules</h3>
+                <p class="text-slate-600 text-sm mb-6 leading-relaxed">Every person practicing any profession or calling is liable to pay PT, subject to the exemption threshold. Recently, Karnataka removed PT for salaries below ₹25,000, and Gujarat also adjusted its slabs to provide relief to lower-income earners.</p>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">Benefits of Section 16(iii) Deduction</h3>
+                <ul class="list-disc ml-5 text-slate-600 text-sm mb-6 space-y-2">
+                    <li>100% of the PT paid during the financial year can be deducted from your taxable salary.</li>
+                    <li>This reduces your overall income tax liability regardless of whether you choose the Old or New Tax Regime.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">Limitations and Important Notes</h3>
+                <ul class="list-disc ml-5 text-slate-600 text-sm mb-6 space-y-2">
+                    <li>The maximum PT any state can charge is strictly capped at ₹2,500 per year by the Constitution of India.</li>
+                    <li>If you work in multiple states during a year, your total PT deduction might exceed ₹2,500 across different employers, but you can claim the full deducted amount in your ITR.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">Common Mistakes & Tips</h3>
+                <p class="text-slate-600 text-sm mb-6 leading-relaxed">Freelancers often forget to register for PT in states where it is mandatory, leading to penalties. Remember to track PT payments to reduce your <a href="/surcharge-marginal-relief-calculator/" class="text-blue-600 font-semibold hover:underline">tax surcharge</a> and overall burden.</p>
+            </section>
+
+            <section class="bg-slate-900 p-6 sm:p-10 rounded-2xl text-white">
+                <h2 class="text-2xl font-bold mb-6">Why is it Important to Calculate Professional Tax?</h2>
+                <p class="text-slate-300 text-sm mb-8 leading-relaxed">
+                    Knowing your exact PT deduction helps you calculate your exact in-hand take-home salary. It ensures your employer is deducting the correct legal amount and not overcharging you.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-emerald-400 font-bold mb-2">Accurate Salary Planning</h4>
+                        <p class="text-xs text-slate-400 mb-3">Plan your monthly budget by knowing the exact statutory deductions.</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-blue-400 font-bold mb-2">Claim Full Deductions</h4>
+                        <p class="text-xs text-slate-400 mb-3">Ensure you claim the exact PT amount in your ITR under Section 16.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="max-w-4xl mx-auto" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">1. Is Professional Tax applicable in Delhi?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            No, Professional Tax is not levied by the government of Delhi, Haryana, Punjab, Rajasthan, or Uttar Pradesh.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">2. What is the maximum limit for Professional Tax?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            As per Article 276(2) of the Indian Constitution, the maximum limit for Professional Tax is ₹2,500 per annum.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">3. Is Professional Tax deductible from Income Tax?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Yes, under Section 16(iii) of the Income Tax Act, the Professional Tax paid during the year is allowed as a deduction from your Gross Salary.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">4. Why is ₹300 deducted in February for Maharashtra?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            To match the ₹2,500 annual limit, Maharashtra deducts ₹200 for 11 months and ₹300 in the last month (February).
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">5. Are women exempted from Professional Tax in Maharashtra?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Yes, women earning up to ₹10,000 per month are exempted from paying Professional Tax in Maharashtra.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">6. Who collects Professional Tax?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Professional Tax is a state-level tax collected by the Commercial Tax Department of the respective State Government.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">7. Do freelancers pay Professional Tax?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Yes, freelancers and self-employed professionals must register and pay PT if they fall under the income slabs of a state that levies it.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">8. Is it mandatory to deduct PT?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            For salaried employees, it is the employer's statutory responsibility to deduct PT and remit it to the state government.
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Financial & Tax Calculators</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <a href="/advance-tax-penalty-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Advance Tax Penalty</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Sections 234A/B/C.</p>
+                    </a>
+                    <a href="/gst-late-fee-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">GST Late Fee</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">GSTR Penalty calculator.</p>
+                    </a>
+                    <a href="/income-tax/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Income Tax Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Old vs New Regime.</p>
+                    </a>
+                    <a href="/80c-tax-saving/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 80C Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Maximize 1.5L deduction.</p>
+                    </a>
+                    <a href="/80d-tax-saving-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 80D Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Health insurance tax benefits.</p>
+                    </a>
+                    <a href="/tds-on-rent-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">TDS on Rent (194-IB)</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">TDS for tenants.</p>
+                    </a>
+                    <a href="/tds-on-property-sale-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">TDS on Property</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Section 194-IA rules.</p>
+                    </a>
+                    <a href="/44ad-presumptive-tax-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 44AD</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Presumptive business tax.</p>
+                    </a>
+                    <a href="/surcharge-marginal-relief-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Surcharge & Relief</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Calculate marginal relief.</p>
+                    </a>
+                    <a href="/capital-gains-exemption-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Capital Gains Exemption</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Sections 54, 54F, 54EC.</p>
+                    </a>
+                    <a href="/44ae-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 44AE</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Transport presumptive tax.</p>
+                    </a>
+                    <a href="/income-from-house-property-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">House Property Tax</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Section 24 deductions.</p>
+                    </a>
+                    <a href="/future-value/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Future Value</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Calculate FV of money.</p>
+                    </a>
+                    <a href="/cagr/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">CAGR Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Compound annual growth.</p>
+                    </a>
+                    <a href="/sip/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">SIP Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Mutual fund investment.</p>
+                    </a>
+                </div>
+            </section>
+
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed">
+                <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
+                Projections are based on current official rules. Legal tax liability may vary. Please consult a Chartered Accountant for formal tax filing or legal advice.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/global.js" defer></script>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+<div id="footer"></div>
+
+
+    
+    <script>
+        const elements = {
+            stateSelect: document.getElementById('stateSelect'),
+            genderSelect: document.getElementById('genderSelect'),
+            monthSection: document.getElementById('monthSection'),
+            monthSelect: document.getElementById('monthSelect'),
+            salaryInput: document.getElementById('salaryInput'),
+            salaryRange: document.getElementById('salaryRange'),
+            calcBtn: document.getElementById('calcBtn'),
+            selStateMobile: document.getElementById('selStateMobile'),
+            resPT: document.getElementById('resPT'),
+            resGross: document.getElementById('resGross'),
+            resAnnual: document.getElementById('resAnnual'),
+            barSalary: document.getElementById('barSalary'),
+            barPT: document.getElementById('barPT'),
+            loadingOverlay: document.getElementById('loadingOverlay')
+        };
+
+        function formatIndian(val) {
+            return new Intl.NumberFormat('en-IN').format(Math.round(val));
+        }
+
+        function syncInputs(input, range) {
+            input.addEventListener('input', () => { range.value = input.value; updateUI(); });
+            range.addEventListener('input', () => { input.value = range.value; updateUI(); });
+        }
+        syncInputs(elements.salaryInput, elements.salaryRange);
+
+        function updateUI() {
+            if (elements.stateSelect.value === 'MH') {
+                elements.monthSection.style.display = 'block';
+            } else {
+                elements.monthSection.style.display = 'none';
+            }
+        }
+        elements.stateSelect.addEventListener('change', updateUI);
+
+        function getPT(state, salary, gender, month) {
+            let pt = 0;
+            switch(state) {
+                case 'MH':
+                    if (gender === 'female' && salary <= 10000) return 0;
+                    if (salary <= 7500) return 0;
+                    if (salary > 7500 && salary <= 10000) return 175;
+                    if (salary > 10000) {
+                        return month === 'february' ? 300 : 200;
+                    }
+                    break;
+                case 'KA':
+                    if (salary >= 25000) return 200;
+                    break;
+                case 'TS':
+                    if (salary > 15000 && salary <= 20000) return 150;
+                    if (salary > 20000) return 200;
+                    break;
+                case 'WB':
+                    if (salary > 10000 && salary <= 15000) return 110;
+                    if (salary > 15000 && salary <= 25000) return 130;
+                    if (salary > 25000 && salary <= 40000) return 150;
+                    if (salary > 40000) return 200;
+                    break;
+                case 'TN':
+                    if (salary > 21000) return 208; // Roughly 2500/12
+                    break;
+                case 'GJ':
+                    if (salary > 12000) return 200;
+                    break;
+                case 'MP':
+                    if (salary > 22500 && salary <= 30000) return 125;
+                    if (salary > 30000 && salary <= 40000) return 166;
+                    if (salary > 40000) return 208;
+                    break;
+                case 'OD':
+                    if (salary > 160000/12 && salary <= 300000/12) return 125;
+                    if (salary > 300000/12) return 200;
+                    break;
+                case 'NA':
+                    return 0;
+            }
+            return pt;
+        }
+
+        function calculate() {
+            elements.loadingOverlay.classList.remove('hidden');
+            elements.loadingOverlay.classList.add('flex');
+
+            setTimeout(() => {
+                const state = elements.stateSelect.value;
+                const stateName = elements.stateSelect.options[elements.stateSelect.selectedIndex].text;
+                const gender = elements.genderSelect.value;
+                const month = elements.monthSelect.value;
+                const salary = parseFloat(elements.salaryInput.value) || 0;
+
+                const pt = getPT(state, salary, gender, month);
+                let annual = pt * 12;
+                if(state === 'MH' && salary > 10000) {
+                    annual = 2500; 
+                }
+
+                elements.selStateMobile.innerText = stateName.split(' ')[0];
+                elements.resPT.innerText = `₹${formatIndian(pt)}`;
+                elements.resGross.innerText = `₹${formatIndian(salary)}`;
+                elements.resAnnual.innerText = `₹${formatIndian(annual)}`;
+
+                let pPT = 0;
+                if(salary > 0) {
+                    pPT = (pt / salary) * 100;
+                }
+                if (pPT > 100) pPT = 100;
+                
+                elements.barPT.style.width = `${pPT}%`;
+                elements.barSalary.style.width = `${100 - pPT}%`;
+
+                elements.loadingOverlay.classList.add('hidden');
+                elements.loadingOverlay.classList.remove('flex');
+            }, 300);
+        }
+
+        elements.calcBtn.addEventListener('click', calculate);
+        
+        window.addEventListener('DOMContentLoaded', () => {
+            updateUI();
+            calculate();
+        });
+    </script>
+</body>
+</html>

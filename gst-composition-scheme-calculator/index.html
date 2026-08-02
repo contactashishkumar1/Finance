@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GST Composition Scheme Calculator 2026: Tax & Eligibility Check</title>
+    <meta name="description" content="Calculate your exact GST liability under the Composition Scheme (1%, 5%, or 6%). Check eligibility limits for traders, restaurants, and service providers.">
+    <meta name="keywords" content="GST Composition Scheme Calculator, Composition Scheme Limit 2026, 1% GST Calculator, Composition vs Regular GST, Section 10 GST">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/gst-composition-scheme-calculator/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="GST Composition Scheme Calculator (2026)">
+    <meta property="og:description" content="Check eligibility and calculate GST payable for Traders, Restaurants, and Service Providers.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/gst-composition-scheme-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta name="author" content="ArthCalculator">
+    <meta name="last-modified" content="2026-08-01">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "GST Composition Scheme Calculator 2026",
+      "description": "A financial tool to calculate GST payable under the Composition Scheme and verify eligibility limits.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ArthCalculator",
+        "url": "https://arthcalculator.in"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "GST Composition Calculator",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://arthcalculator.in/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Financial Calculators",
+       "item": "https://arthcalculator.in/calculators/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "GST Composition Scheme Calculator",
+       "item": "https://arthcalculator.in/gst-composition-scheme-calculator/"
+      }
+     ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the GST Composition Scheme?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is a simplified tax scheme for small taxpayers. Instead of filing monthly returns and matching invoices, they pay tax at a nominal flat rate (1%, 5%, or 6%) on their turnover and file a quarterly statement (CMP-08)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the turnover limit for the Composition Scheme?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For traders and manufacturers, the limit is ₹1.5 Crore (₹75 Lakhs for special category states). For service providers, the limit is ₹50 Lakhs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a composition dealer claim Input Tax Credit (ITC)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, a composition dealer cannot claim Input Tax Credit (ITC) on their purchases. They also cannot issue a Tax Invoice or collect GST from their customers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a composition dealer make inter-state sales?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, composition dealers are not allowed to make inter-state (out of state) outward supplies of goods or services. However, they can purchase goods from other states."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I sell through an e-commerce operator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Starting October 2023, composition dealers are allowed to sell goods through e-commerce operators within their own state (intra-state)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the rates for different businesses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Traders/Manufacturers pay 1% (0.5% CGST + 0.5% SGST). Restaurants pay 5% (2.5% + 2.5%). Service providers pay 6% (3% + 3%)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What bill does a composition dealer issue?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They must issue a 'Bill of Supply' instead of a 'Tax Invoice'. The bill must strictly contain the words 'Composition taxable person, not eligible to collect tax on supplies'."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who cannot opt for the Composition Scheme?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Manufacturers of ice cream, pan masala, tobacco, aerated water, and bricks cannot opt for this scheme, regardless of their turnover."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            -webkit-tap-highlight-color: transparent;
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+        input[type="range"] {
+            accent-color: #2563eb;
+            height: 6px;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        details summary {
+            list-style: none;
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary svg {
+            transform: rotate(180deg);
+        }
+        .formula-box {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
+        table th {
+            background-color: #f8fafc;
+        }
+    </style>
+
+    <!-- Schema Markup: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ArthCalculator",
+      "url": "https://arthcalculator.in",
+      "logo": "https://arthcalculator.in/logo.png"
+    }
+    </script>
+
+    <!-- Schema Markup: HowTo -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to use the GST Composition Scheme Calculator 2026: Tax & Eligibility Check",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "text": "Enter your financial details in the input fields."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Review the computed results and visualizations."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Analyze the recommendations and insights provided."
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+<div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600">GST Composition Scheme Calculator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">GST Composition Scheme Calculator (2026)</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Check your eligibility and calculate exact GST payable under the Composition Scheme (1%, 5%, or 6%). Instantly know your tax burden compared to regular GST.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+                        <a href="#about" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Rules</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#formula" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Formula</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#faqs" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
+                    </div>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">Updated Limits 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow relative">
+                    <div id="loadingOverlay" class="absolute inset-0 bg-white/80 backdrop-blur-sm z-10 hidden flex-col justify-center items-center rounded-2xl">
+                        <div class="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-600 mb-4"></div>
+                    </div>
+
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                        Business Details
+                    </h2>
+
+                    <div class="mb-6">
+                        <label class="text-xs font-medium text-slate-600 block mb-2">Business Type</label>
+                        <select id="bizType" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-slate-800 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none bg-blue-50">
+                            <option value="trader">Trader / Manufacturer (1%)</option>
+                            <option value="restaurant">Restaurant - No Alcohol (5%)</option>
+                            <option value="service">Service Provider (6%)</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="text-xs font-medium text-slate-600 block mb-2">State Category</label>
+                        <select id="stateType" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-slate-800 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                            <option value="normal">Normal States (Max Limit: ₹1.5 Cr)</option>
+                            <option value="special">Special Category States (Max Limit: ₹75 Lakhs)</option>
+                        </select>
+                        <p class="text-[10px] text-slate-400 mt-1">Special: Arunachal, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim, Tripura, Himachal.</p>
+                    </div>
+
+                    <div class="mb-8">
+                        <label class="text-xs font-medium text-slate-600 block mb-2">Annual Aggregate Turnover (₹)</label>
+                        <input type="number" id="turnoverInput" value="4500000" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-slate-800 text-sm font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none text-blue-600">
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2">
+                        Calculate Tax & Check
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Eligibility & Tax Output</h2>
+                    <div class="flex flex-col justify-between items-start mb-6 gap-4">
+                        <div class="w-full">
+                            <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Status</h2>
+                            <div class="mt-1 flex items-center gap-4">
+                                <span class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight block break-words" id="resStatus">Checking...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="taxSection" class="hidden">
+                        <div class="w-full mb-8">
+                            <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Total GST Payable (Self-Funded)</h2>
+                            <div class="mt-1 flex items-center gap-4">
+                                <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 tracking-tight block break-words" id="resTotalTax">₹0</span>
+                            </div>
+                            <p class="text-[10px] text-red-500 mt-1 font-semibold">Note: This cannot be collected from the customer.</p>
+                        </div>
+
+                        <hr class="border-slate-100 mb-6">
+
+                        <!-- Breakdown Table -->
+                        <div class="space-y-4 text-sm mb-8">
+                            <div class="flex justify-between items-center pb-3 border-b border-slate-100">
+                                <span class="text-slate-600 font-medium">Applicable Rate</span>
+                                <span class="font-bold text-slate-800" id="resRate">0%</span>
+                            </div>
+                            <div class="flex justify-between items-center pb-3 border-b border-slate-100">
+                                <span class="text-slate-600 font-medium">CGST Component (Half)</span>
+                                <span class="font-bold text-slate-600" id="resCGST">₹0</span>
+                            </div>
+                            <div class="flex justify-between items-center pb-3 border-b border-slate-100">
+                                <span class="text-slate-600 font-medium">SGST Component (Half)</span>
+                                <span class="font-bold text-slate-600" id="resSGST">₹0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            Tax Insights
+                        </h4>
+                        <ul class="grid grid-cols-1 gap-3 text-xs md:text-sm text-blue-800 font-medium">
+                            <li class="flex items-start gap-2">✅ Return Filing: Quarterly statement (CMP-08) and Annual return (GSTR-4).</li>
+                            <li class="flex items-start gap-2">🚫 ITC Blocked: You cannot claim Input Tax Credit on your purchases.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">Calculation Rule</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm leading-relaxed" id="formulaBox">
+                        GST Payable = (Turnover × Composition Rate) <br> <span class="text-xs">Pay out of pocket.</span>
+                    </div>
+                    
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="example">Step-by-Step Example</h3>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed">
+                        If a Trader has a turnover of ₹45,00,000:
+                        <ul class="list-disc ml-5 mt-2 space-y-1 text-xs sm:text-sm font-medium">
+                            <li>Check Limit: 45L < 1.5 Cr (Eligible ✅)</li>
+                            <li>Applicable Rate = 1%</li>
+                            <li>Tax = 1% of ₹45,00,000 = <strong>₹45,000</strong></li>
+                            <li>CGST = ₹22,500 | SGST = ₹22,500</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-12 mb-12">
+            
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow" id="about">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">What is the GST Composition Scheme?</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                    Under <a href="/gst/" class="text-blue-600 font-semibold hover:underline">GST</a>, the Composition Scheme (Section 10) was introduced to reduce the compliance burden on small businesses. Instead of filing monthly GSTR-1 and GSTR-3B, calculating output taxes, matching input tax credits, and issuing complex tax invoices, small taxpayers can simply pay a flat percentage (like 1%) of their turnover to the government.
+                </p>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-10 mb-4">Turnover Limits Table (2026 Rules)</h3>
+                <div class="overflow-x-auto mt-6">
+                    <table class="w-full text-left border-collapse border border-slate-100 text-sm">
+                        <thead>
+                            <tr class="bg-slate-50">
+                                <th class="p-4 border-b font-bold text-slate-700">Business Type</th>
+                                <th class="p-4 border-b font-bold text-slate-700">Normal States Limit</th>
+                                <th class="p-4 border-b font-bold text-slate-700">Special States Limit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">Traders & Manufacturers</td>
+                                <td class="p-4 border-b font-semibold text-slate-700">₹1.5 Crore</td>
+                                <td class="p-4 border-b font-semibold text-blue-600">₹75 Lakhs</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">Restaurants (No Alcohol)</td>
+                                <td class="p-4 border-b font-semibold text-slate-700">₹1.5 Crore</td>
+                                <td class="p-4 border-b font-semibold text-blue-600">₹75 Lakhs</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">Service Providers</td>
+                                <td class="p-4 border-b font-semibold text-red-500">₹50 Lakhs</td>
+                                <td class="p-4 border-b font-semibold text-red-500">₹50 Lakhs</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-10 mb-4">Strict Limitations</h3>
+                <ul class="list-disc ml-5 text-slate-600 text-sm mb-6 space-y-2">
+                    <li><strong>No Input Tax Credit (ITC):</strong> You cannot reduce your tax liability using the tax paid on your purchases.</li>
+                    <li><strong>No Tax Collection:</strong> You cannot issue a "Tax Invoice" or charge GST to your customers. The tax comes out of your own pocket/profit margin.</li>
+                    <li><strong>No Inter-state Sales:</strong> You cannot sell goods outside your registered state (though you can buy from outside).</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">Composition vs Regular GST</h3>
+                <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                    If you are a B2C business (selling directly to end consumers who don't care about ITC), composition is excellent. It allows you to price your goods cheaper since you don't add 18% GST on top. 
+                    However, if you are a B2B business (selling to other GST registered businesses), composition is terrible because your buyers cannot claim ITC on purchases from you, meaning they will prefer buying from regular dealers.
+                </p>
+            </section>
+
+            <section class="bg-slate-900 p-6 sm:p-10 rounded-2xl text-white">
+                <h2 class="text-2xl font-bold mb-6">Penalties & Late Fees</h2>
+                <p class="text-slate-300 text-sm mb-8 leading-relaxed">
+                    Composition dealers must file CMP-08 by the 18th of the month following the quarter. They must also file an annual return GSTR-4 by April 30th.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-red-400 font-bold mb-2">Late Filing Fees</h4>
+                        <p class="text-xs text-slate-400 mb-3">Check exact late fees using our <a href="/rcm-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+<h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">RCM Calculator</h4>
+<p class="text-[10px] text-slate-500 mt-1">Reverse Charge Mechanism tax.</p>
+</a>
+                    <a href="/gst-late-fee-calculator/" class="text-red-400 font-semibold hover:underline">GST Late Fee Calculator</a>. Maximum late fee is capped per the latest amnesties.</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-emerald-400 font-bold mb-2">Interest on Delay</h4>
+                        <p class="text-xs text-slate-400 mb-3">If you delay the tax payment in CMP-08, interest is charged at 18% per annum on the outstanding amount.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="max-w-4xl mx-auto" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">1. What is the GST Composition Scheme?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            It is a simplified tax scheme for small taxpayers. Instead of filing monthly returns and matching invoices, they pay tax at a nominal flat rate (1%, 5%, or 6%) on their turnover and file a quarterly statement (CMP-08).
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">2. What is the turnover limit for the Composition Scheme?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            For traders and manufacturers, the limit is ₹1.5 Crore (₹75 Lakhs for special category states). For service providers, the limit is ₹50 Lakhs.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">3. Can a composition dealer claim Input Tax Credit (ITC)?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            No, a composition dealer cannot claim Input Tax Credit (ITC) on their purchases. They also cannot issue a Tax Invoice or collect GST from their customers.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">4. Can a composition dealer make inter-state sales?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            No, composition dealers are not allowed to make inter-state (out of state) outward supplies of goods or services. However, they can purchase goods from other states.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">5. Can I sell through an e-commerce operator?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Starting October 2023, composition dealers are allowed to sell goods through e-commerce operators within their own state (intra-state).
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">6. What are the rates for different businesses?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Traders/Manufacturers pay 1% (0.5% CGST + 0.5% SGST). Restaurants pay 5% (2.5% + 2.5%). Service providers pay 6% (3% + 3%).
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">7. What bill does a composition dealer issue?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            They must issue a 'Bill of Supply' instead of a 'Tax Invoice'. The bill must strictly contain the words 'Composition taxable person, not eligible to collect tax on supplies'.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">8. Who cannot opt for the Composition Scheme?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Manufacturers of ice cream, pan masala, tobacco, aerated water, and bricks cannot opt for this scheme, regardless of their turnover.
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Related GST & Tax Calculators</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <a href="/rcm-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+<h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">RCM Calculator</h4>
+<p class="text-[10px] text-slate-500 mt-1">Reverse Charge Mechanism tax.</p>
+</a>
+                    <a href="/gst-late-fee-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">GST Late Fee</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Calculate GSTR-4 late fees.</p>
+                    </a>
+                    <a href="/eway-bill-validity-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">E-Way Bill Validity</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Check expiry by distance.</p>
+                    </a>
+                    <a href="/44ad-presumptive-tax-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 44AD Tax</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Income Tax for small biz.</p>
+                    </a>
+                    <a href="/44ada-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 44ADA Tax</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">For Service Providers (50%).</p>
+                    </a>
+                    <a href="/advance-tax-penalty-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Advance Tax Penalty</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Sections 234A/B/C.</p>
+                    </a>
+                    <a href="/professional-tax-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Professional Tax</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">State-wise PT deduction.</p>
+                    </a>
+                    <a href="/income-tax/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Income Tax Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Old vs New Regime.</p>
+                    </a>
+                    <a href="/tds-on-rent-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">TDS on Rent</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Section 194-IB Rules.</p>
+                    </a>
+                    <a href="/80c-tax-saving/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">80C Tax Saving</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Maximize 1.5L limit.</p>
+                    </a>
+                    <a href="/surcharge-marginal-relief-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Surcharge & Relief</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Calculate marginal relief.</p>
+                    </a>
+                    <a href="/capital-gains-exemption-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Capital Gains Exemption</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Sections 54, 54F, 54EC.</p>
+                    </a>
+                    <a href="/income-from-house-property-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">House Property Tax</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Section 24 Deductions.</p>
+                    </a>
+                    <a href="/tds-late-payment-penalty-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">TDS Delay Penalty</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Section 234E & 201(1A).</p>
+                    </a>
+                    <a href="/80d-tax-saving-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">80D Tax Saving</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Health insurance benefits.</p>
+                    </a>
+                    <a href="/44ae-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 44AE Tax</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Transport business tax.</p>
+                    </a>
+                </div>
+            </section>
+
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed">
+                <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
+                Calculations are based on Section 10 of the CGST Act. Eligibility checks are illustrative. Certain businesses (like pan masala, ice cream manufacturers) are completely barred from this scheme regardless of turnover.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/global.js" defer></script>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+<div id="footer"></div>
+
+
+    
+    <script>
+        const elements = {
+            bizType: document.getElementById('bizType'),
+            stateType: document.getElementById('stateType'),
+            turnoverInput: document.getElementById('turnoverInput'),
+            calcBtn: document.getElementById('calcBtn'),
+            resStatus: document.getElementById('resStatus'),
+            taxSection: document.getElementById('taxSection'),
+            resTotalTax: document.getElementById('resTotalTax'),
+            resRate: document.getElementById('resRate'),
+            resCGST: document.getElementById('resCGST'),
+            resSGST: document.getElementById('resSGST'),
+            loadingOverlay: document.getElementById('loadingOverlay')
+        };
+
+        function formatIndian(val) {
+            return new Intl.NumberFormat('en-IN').format(Math.round(val));
+        }
+
+        function calculate() {
+            elements.loadingOverlay.classList.remove('hidden');
+            elements.loadingOverlay.classList.add('flex');
+
+            setTimeout(() => {
+                const biz = elements.bizType.value;
+                const state = elements.stateType.value;
+                const turnover = parseFloat(elements.turnoverInput.value) || 0;
+
+                let limit = 15000000; // 1.5 Cr
+                let rate = 0;
+
+                if(biz === 'trader') {
+                    if(state === 'special') limit = 7500000;
+                    rate = 0.01; // 1%
+                } else if(biz === 'restaurant') {
+                    if(state === 'special') limit = 7500000;
+                    rate = 0.05; // 5%
+                } else if(biz === 'service') {
+                    limit = 5000000; // 50 Lakhs flat for service providers
+                    rate = 0.06; // 6%
+                }
+
+                if(turnover > limit) {
+                    elements.resStatus.innerText = "NOT ELIGIBLE ❌";
+                    elements.resStatus.className = "text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight block break-words text-red-600";
+                    elements.taxSection.classList.add('hidden');
+                } else {
+                    elements.resStatus.innerText = "ELIGIBLE ✅";
+                    elements.resStatus.className = "text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight block break-words text-emerald-600";
+                    elements.taxSection.classList.remove('hidden');
+
+                    const totalTax = turnover * rate;
+                    const halfTax = totalTax / 2;
+
+                    elements.resTotalTax.innerText = `₹${formatIndian(totalTax)}`;
+                    elements.resRate.innerText = `${(rate * 100).toFixed(1)}%`;
+                    elements.resCGST.innerText = `₹${formatIndian(halfTax)}`;
+                    elements.resSGST.innerText = `₹${formatIndian(halfTax)}`;
+                }
+
+                elements.loadingOverlay.classList.add('hidden');
+                elements.loadingOverlay.classList.remove('flex');
+            }, 300);
+        }
+
+        elements.calcBtn.addEventListener('click', calculate);
+        
+        window.addEventListener('DOMContentLoaded', () => {
+            calculate();
+        });
+    </script>
+</body>
+</html>
