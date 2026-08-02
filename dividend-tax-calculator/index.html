@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dividend Tax Calculator 2026: TDS & Section 57 Deductions</title>
+    <meta name="description" content="Calculate your exact tax liability on Dividend income. Know the Section 57 20% interest deduction rules and the 10% TDS deductions under Section 194.">
+    <meta name="keywords" content="Dividend Tax Calculator, Tax on Dividend India, Section 57 Deduction, TDS on Dividend Section 194, Dividend Tax Slab">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/dividend-tax-calculator/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Dividend Tax Calculator (2026 Rules)">
+    <meta property="og:description" content="Dividend is no longer tax-free! Calculate your exact slab tax, allowable interest deduction, and TDS on stock market dividends.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/dividend-tax-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta name="author" content="ArthCalculator">
+    <meta name="last-modified" content="2026-08-01">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Dividend Tax Calculator",
+      "description": "Calculate your Net Taxable Dividend after Section 57 deductions and compute the actual tax impact on your overall slab.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ArthCalculator",
+        "url": "https://arthcalculator.in"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Dividend Tax Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://arthcalculator.in/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Stock Market Calculators",
+       "item": "https://arthcalculator.in/stock-market-calculators/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Dividend Tax",
+       "item": "https://arthcalculator.in/dividend-tax-calculator/"
+      }
+     ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Dividend income tax-free in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Before April 2020, companies paid Dividend Distribution Tax (DDT) and dividends were tax-free in the hands of investors up to ₹10 Lakhs. Since April 1, 2020, DDT is abolished and dividend income is fully taxable in the hands of investors at their applicable slab rates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the tax rate on dividend income?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no fixed rate. Dividend income is added to your 'Income from Other Sources' and taxed at the slab rate applicable to your total income. If your total income falls in the 30% bracket, your dividend is taxed at 30%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Section 57 deduction for Dividend?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under Section 57 of the Income Tax Act, you can claim a deduction for the interest expense on any loan you took to invest in those shares. However, this deduction is capped at a maximum of 20% of the gross dividend income."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I claim deduction for Demat charges or broker commissions against dividend?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The Income Tax Act explicitly states that no deduction shall be allowed for any other expense (like commission, broker fee, or demat AMC) against dividend income, except for interest on loan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When does the company deduct TDS on dividend?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under Section 194, if the total dividend paid to a resident shareholder in a financial year exceeds ₹5,000, the company must deduct 10% TDS before paying the dividend."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my total income is below the taxable limit but TDS was deducted?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If your total income (including the dividend) is below the basic exemption limit (e.g., ₹4 Lakhs), you will have zero tax liability. You can claim a refund of the 10% TDS deducted by filing your Income Tax Return (ITR)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I prevent TDS deduction on my dividend?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If your total estimated income for the year is below the basic exemption limit, you can submit Form 15G (or Form 15H for senior citizens) to the company or registrar. They will then pay the dividend without deducting TDS."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Advance Tax applicable on dividend income?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, if your total estimated tax liability for the year (after TDS) exceeds ₹10,000, you must pay advance tax. However, since dividends cannot be accurately estimated in advance, interest under Section 234C is not levied if you pay the advance tax in the quarter immediately following the declaration of the dividend."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            -webkit-tap-highlight-color: transparent;
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        details summary {
+            list-style: none;
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary svg {
+            transform: rotate(180deg);
+        }
+        .formula-box {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
+    </style>
+
+    <!-- Schema Markup: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ArthCalculator",
+      "url": "https://arthcalculator.in",
+      "logo": "https://arthcalculator.in/logo.png"
+    }
+    </script>
+
+    <!-- Schema Markup: HowTo -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to use the Dividend Tax Calculator 2026: TDS & Section 57 Deductions",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "text": "Enter your financial details in the input fields."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Review the computed results and visualizations."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Analyze the recommendations and insights provided."
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+<div id="navbar"></div>
+
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600">Dividend Tax Calculator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Dividend Tax Calculator (2026)</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Calculate exactly how much tax you owe on your stock market dividends. Find your net taxable dividend after applying the Section 57 interest deduction.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+                        <a href="#about" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Sec 57 & TDS Rules</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#faqs" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
+                    </div>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">10% TDS Sec 194</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow relative">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Income Profile
+                    </h2>
+
+                    <div class="mb-4">
+                        <label class="text-xs font-medium text-slate-600 block mb-1">Your Other Taxable Income (₹)</label>
+                        <input type="number" id="inpOther" value="1200000" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-slate-800 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none bg-blue-50">
+                        <p class="text-[10px] text-slate-400 mt-1">Salary, Business Profit, Capital Gains (excluding dividend).</p>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="text-xs font-medium text-slate-600 block mb-1">Gross Dividend Received (₹)</label>
+                        <input type="number" id="inpDiv" value="100000" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-slate-800 text-sm font-bold focus:ring-2 focus:ring-emerald-500 focus:outline-none text-emerald-700 bg-emerald-50">
+                    </div>
+
+                    <h2 class="text-md sm:text-lg font-semibold mb-4 flex items-center text-slate-700 pt-4 border-t border-slate-100">
+                        <svg class="w-5 h-5 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        Deductions & Regime
+                    </h2>
+
+                    <div class="mb-4">
+                        <label class="text-xs font-medium text-slate-600 block mb-1">Interest paid on loan taken to buy these shares (₹)</label>
+                        <input type="number" id="inpInterest" value="30000" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-slate-800 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                        <p class="text-[10px] text-slate-400 mt-1">Sec 57 caps this deduction at Max 20% of Dividend.</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="text-xs font-medium text-slate-600 block mb-2">Tax Regime</label>
+                        <select id="inpRegime" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-slate-800 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                            <option value="new">New Tax Regime (Default)</option>
+                            <option value="old">Old Tax Regime</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-8" id="ageDiv" style="display:none;">
+                        <label class="text-xs font-medium text-slate-600 block mb-2">Age Group</label>
+                        <select id="inpAge" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-slate-800 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                            <option value="normal">Below 60 Years</option>
+                            <option value="senior">60 - 80 Years</option>
+                            <option value="super">Above 80 Years</option>
+                        </select>
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2">
+                        Calculate Dividend Tax
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-center">
+                    <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2">Actual Tax Paid on Dividend</h2>
+                    <span class="text-4xl sm:text-5xl font-extrabold text-blue-600 tracking-tight block break-words" id="resDivTax">₹0</span>
+                    <p class="text-xs text-slate-500 mt-3">You fell into the <span id="resSlab" class="font-bold text-slate-700">0%</span> marginal tax slab.</p>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Tax Computation Breakdown</h2>
+                    
+                    <div class="space-y-4 text-sm mb-6">
+                        <div class="flex justify-between items-center pb-2 border-b border-slate-100">
+                            <span class="text-slate-600">Gross Dividend</span>
+                            <span class="font-bold text-slate-800" id="resGross">₹0</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-2 border-b border-slate-100 text-indigo-700">
+                            <span class="font-medium">Less: Sec 57 Interest Exp Deduction <span class="text-[10px] text-slate-400 block">(Max 20% of Dividend)</span></span>
+                            <span class="font-bold" id="resDed">- ₹0</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-2 border-b border-slate-100 bg-slate-50 p-2 rounded -mx-2">
+                            <span class="font-bold text-slate-700">Net Taxable Dividend</span>
+                            <span class="font-extrabold text-slate-900" id="resNet">₹0</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-emerald-50 border border-emerald-100 rounded-xl p-5 mb-6">
+                        <h4 class="text-emerald-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                            TDS Analysis (Section 194)
+                        </h4>
+                        <div class="space-y-2 text-sm text-emerald-800">
+                            <div class="flex justify-between items-center">
+                                <span>TDS Deducted by Company (10%)</span>
+                                <span class="font-bold" id="resTDS">₹0</span>
+                            </div>
+                            <p id="tdsMsg" class="text-xs text-emerald-600 mt-2 font-medium">If Dividend < ₹5,000, no TDS is deducted.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-red-50 text-red-900 rounded-lg text-sm font-semibold flex justify-between items-center border border-red-100" id="balanceBox">
+                        <span>Balance Tax to Pay (after TDS)</span>
+                        <span class="text-lg" id="resBalance">₹0</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-12 mb-12">
+            
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow" id="about">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Dividend Taxation Rules (Post 2020)</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                    Prior to April 2020, domestic companies were required to pay Dividend Distribution Tax (DDT), and the dividends were completely tax-free for the investor (up to ₹10 Lakhs). In the Finance Act 2020, DDT was abolished. Now, the classic classical system is back: Dividend is taxed in the hands of the shareholders as <strong>Income from Other Sources</strong>.
+                </p>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-10 mb-4">Section 57: The 20% Deduction Rule</h3>
+                <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                    Normally, you are taxed on whatever dividend you receive. However, if you took a loan (like a margin funding loan or personal loan) specifically to buy those shares, you are allowed to deduct the interest you paid on that loan from the dividend income.
+                </p>
+                <div class="p-5 bg-slate-50 border-l-4 border-blue-500 rounded-r-xl mb-6">
+                    <p class="text-slate-700 text-sm font-medium"><strong>CRITICAL RESTRICTION:</strong> The maximum deduction you can claim for interest is strictly capped at <strong>20% of the Gross Dividend Income</strong>. Also, no other expense (brokerage, AMC, commission) is allowed as a deduction against dividend.</p>
+                </div>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-10 mb-4">Section 194: TDS on Dividend</h3>
+                <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                    To ensure tax compliance, the company paying the dividend will deduct a 10% Tax Deducted at Source (TDS) if the total dividend paid to you in the entire financial year exceeds <strong>₹5,000</strong>. If your total income for the year is below the taxable limit, you must submit Form 15G or 15H to prevent this TDS, or claim it as a refund while filing your ITR.
+                </p>
+            </section>
+
+            <section class="max-w-4xl mx-auto" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">1. Is Dividend income tax-free in India?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            No. Before April 2020, companies paid Dividend Distribution Tax (DDT) and dividends were tax-free in the hands of investors up to ₹10 Lakhs. Since April 1, 2020, DDT is abolished and dividend income is fully taxable in the hands of investors at their applicable slab rates.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">2. What is the tax rate on dividend income?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            There is no fixed rate. Dividend income is added to your 'Income from Other Sources' and taxed at the slab rate applicable to your total income. If your total income falls in the 30% bracket, your dividend is taxed at 30%.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">3. What is Section 57 deduction for Dividend?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Under Section 57 of the Income Tax Act, you can claim a deduction for the interest expense on any loan you took to invest in those shares. However, this deduction is capped at a maximum of 20% of the gross dividend income.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">4. Can I claim deduction for Demat charges or broker commissions?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            No. The Income Tax Act explicitly states that no deduction shall be allowed for any other expense (like commission, broker fee, or demat AMC) against dividend income, except for interest on loan.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">5. When does the company deduct TDS on dividend?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Under Section 194, if the total dividend paid to a resident shareholder in a financial year exceeds ₹5,000, the company must deduct 10% TDS before paying the dividend.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">6. What if my total income is below the taxable limit but TDS was deducted?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            If your total income (including the dividend) is below the basic exemption limit (e.g., ₹4 Lakhs), you will have zero tax liability. You can claim a refund of the 10% TDS deducted by filing your Income Tax Return (ITR).
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">7. How can I prevent TDS deduction on my dividend?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            If your total estimated income for the year is below the basic exemption limit, you can submit Form 15G (or Form 15H for senior citizens) to the company or registrar. They will then pay the dividend without deducting TDS.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">8. Is Advance Tax applicable on dividend income?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Yes, if your total estimated tax liability for the year (after TDS) exceeds ₹10,000, you must pay advance tax. However, since dividends cannot be accurately estimated in advance, interest under Section 234C is not levied if you pay the advance tax in the quarter immediately following the declaration of the dividend.
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Stock Market Tax Calculators</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <a href="/income-tax/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Income Tax Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Old vs New Regime.</p>
+                    </a>
+                    <a href="/set-off-carry-forward-losses-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Loss Set Off</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Adjust STCL and LTCL.</p>
+                    </a>
+                    <a href="/surcharge-marginal-relief-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Surcharge & Relief</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">High net-worth income tax.</p>
+                    </a>
+                    <a href="/capital-gains-indexation-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Indexation Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Real Estate Capital Gains.</p>
+                    </a>
+                    <a href="/crypto-tax-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Crypto Tax India</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Calculate 30% tax & TDS.</p>
+                    </a>
+                    <a href="/clubbing-of-income-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Clubbing of Income</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Section 64 rules.</p>
+                    </a>
+                    <a href="/tds-on-property-sale-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">TDS on Property Sale</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Section 194-IA Rules.</p>
+                    </a>
+                    <a href="/advance-tax-penalty-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Advance Tax Penalty</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Calculate Sec 234A/B/C.</p>
+                    </a>
+                    <a href="/tds-late-payment-penalty-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">TDS Delay Penalty</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Section 234E Penalty.</p>
+                    </a>
+                </div>
+            </section>
+
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed">
+                <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
+                This calculator provides an estimate of the marginal tax impact of dividend income on your overall tax slab based on the Income Tax Act 1961. Surcharge (if applicable on very high incomes) is not computed here. Please consult a CA before filing your final Income Tax Return.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/global.js" defer></script>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+<div id="footer"></div>
+
+
+    
+    <script>
+        const inpRegime = document.getElementById('inpRegime');
+        const ageDiv = document.getElementById('ageDiv');
+
+        inpRegime.addEventListener('change', () => {
+            if(inpRegime.value === 'old') {
+                ageDiv.style.display = 'block';
+            } else {
+                ageDiv.style.display = 'none';
+            }
+        });
+
+        function formatIndian(val) {
+            return new Intl.NumberFormat('en-IN').format(Math.round(val));
+        }
+
+        // New Tax Regime Slabs — FY 2025-26 (Budget 2025)
+        function calcNewRegimeTax(income) {
+            if(income <= 400000) return 0;
+            let tax = 0;
+            if(income > 2400000) { tax += (income - 2400000) * 0.30; income = 2400000; }
+            if(income > 2000000) { tax += (income - 2000000) * 0.25; income = 2000000; }
+            if(income > 1600000) { tax += (income - 1600000) * 0.20; income = 1600000; }
+            if(income > 1200000) { tax += (income - 1200000) * 0.15; income = 1200000; }
+            if(income > 800000) { tax += (income - 800000) * 0.10; income = 800000; }
+            if(income > 400000) { tax += (income - 400000) * 0.05; }
+            
+            // Rebate 87A for New Regime — ₹60,000 (income ≤ ₹12 Lakhs)
+            if(income <= 1200000 && tax > 0) {
+                tax = Math.max(0, tax - 60000);
+            }
+            return tax + (tax * 0.04); // Cess
+        }
+
+        function calcOldRegimeTax(income, exemptLimit) {
+            if(income <= exemptLimit) return 0;
+            let tax = 0;
+            if(income > 1000000) { tax += (income - 1000000) * 0.30; income = 1000000; }
+            if(income > 500000) { tax += (income - 500000) * 0.20; income = 500000; }
+            if(income > exemptLimit) { tax += (income - exemptLimit) * 0.05; }
+            
+            // Rebate 87A for Old Regime (up to 5 Lakhs)
+            if(income <= 500000 && tax > 0) {
+                tax = Math.max(0, tax - 12500);
+            }
+            return tax + (tax * 0.04); // Cess
+        }
+
+        document.getElementById('calcBtn').addEventListener('click', () => {
+            const other = parseFloat(document.getElementById('inpOther').value) || 0;
+            const div = parseFloat(document.getElementById('inpDiv').value) || 0;
+            const interest = parseFloat(document.getElementById('inpInterest').value) || 0;
+            const regime = document.getElementById('inpRegime').value;
+            const age = document.getElementById('inpAge').value;
+
+            // Section 57 Deduction
+            const maxDed = div * 0.20;
+            const allowedDed = Math.min(interest, maxDed);
+            const netDiv = Math.max(0, div - allowedDed);
+
+            // TDS Section 194
+            let tds = 0;
+            let tdsMsg = "Dividend > ₹5,000, hence 10% TDS applies.";
+            if(div > 5000) {
+                tds = div * 0.10;
+            } else {
+                tdsMsg = "Dividend <= ₹5,000, hence NO TDS is deducted.";
+            }
+
+            // Calculate Base Tax (without Div) and Total Tax (with Div)
+            let baseTax = 0;
+            let newTax = 0;
+            let exemptLimit = 250000;
+
+            if (regime === 'old') {
+                if(age === 'senior') exemptLimit = 300000;
+                else if(age === 'super') exemptLimit = 500000;
+                baseTax = calcOldRegimeTax(other, exemptLimit);
+                newTax = calcOldRegimeTax(other + netDiv, exemptLimit);
+            } else {
+                baseTax = calcNewRegimeTax(other);
+                newTax = calcNewRegimeTax(other + netDiv);
+            }
+
+            const taxOnDiv = Math.max(0, newTax - baseTax);
+            
+            let marginalRate = 0;
+            if(netDiv > 0) {
+                marginalRate = (taxOnDiv / netDiv) * 100;
+            }
+
+            // Determine Balance Payable/Refund
+            let balance = taxOnDiv - tds;
+
+            // Update UI
+            document.getElementById('resGross').innerText = `₹${formatIndian(div)}`;
+            document.getElementById('resDed').innerText = `- ₹${formatIndian(allowedDed)}`;
+            document.getElementById('resNet').innerText = `₹${formatIndian(netDiv)}`;
+            document.getElementById('resDivTax').innerText = `₹${formatIndian(taxOnDiv)}`;
+            document.getElementById('resSlab').innerText = `${marginalRate.toFixed(1)}%`;
+            
+            document.getElementById('resTDS').innerText = `₹${formatIndian(tds)}`;
+            document.getElementById('tdsMsg').innerText = tdsMsg;
+
+            const balBox = document.getElementById('balanceBox');
+            const resBal = document.getElementById('resBalance');
+            
+            if(balance > 0) {
+                balBox.className = "p-4 bg-red-50 text-red-900 rounded-lg text-sm font-semibold flex justify-between items-center border border-red-100 mt-6";
+                balBox.children[0].innerText = "Balance Tax to Pay (after TDS)";
+                resBal.innerText = `₹${formatIndian(balance)}`;
+                resBal.className = "text-lg text-red-700";
+            } else if (balance < 0) {
+                balBox.className = "p-4 bg-emerald-50 text-emerald-900 rounded-lg text-sm font-semibold flex justify-between items-center border border-emerald-100 mt-6";
+                balBox.children[0].innerText = "Tax Refund Claimable (from excess TDS)";
+                resBal.innerText = `₹${formatIndian(Math.abs(balance))}`;
+                resBal.className = "text-lg text-emerald-700";
+            } else {
+                balBox.className = "p-4 bg-slate-50 text-slate-900 rounded-lg text-sm font-semibold flex justify-between items-center border border-slate-200 mt-6";
+                balBox.children[0].innerText = "TDS exactly covers your tax liability";
+                resBal.innerText = `₹0`;
+                resBal.className = "text-lg";
+            }
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('calcBtn').click();
+        });
+    </script>
+</body>
+</html>

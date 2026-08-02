@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDS on Rent (Section 194-IB) Calculator | ArthCalculator</title>
+    <meta name="description" content="Calculate TDS on rent under Section 194-IB if your monthly rent exceeds ₹50,000. Find out the exact 5% or 20% TDS to deduct and pay to the government.">
+    <meta name="keywords" content="tds on rent calculator, section 194-ib calculator, 194-ib tds rate, rent tds calculator, landlord pan tds, tenant rent tds deduction">
+    <meta name="author" content="ArthCalculator">
+    <meta name="last-modified" content="2026-08-02">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/tds-on-rent-calculator/">
+    <link type="image/x-icon" rel="icon" href="/favicon.ico">
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="TDS on Rent (194-IB) Calculator">
+    <meta property="og:description" content="Paying rent above ₹50,000/month? You must deduct TDS under Section 194-IB. Calculate the exact TDS amount and your final month's rent payment here.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/tds-on-rent-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "TDS on Rent (Section 194-IB) Calculator",
+      "url": "https://arthcalculator.in/tds-on-rent-calculator/",
+      "description": "Calculate the 5% or 20% TDS to be deducted on rent exceeding ₹50,000 per month.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ArthCalculator",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://arthcalculator.in/logo.png"
+        }
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ArthCalculator",
+      "url": "https://arthcalculator.in",
+      "logo": "https://arthcalculator.in/logo.png"
+    }
+    </script>
+
+    <!-- Schema Markup: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"SoftwareApplication",
+      "name":"TDS on Rent (194-IB) Calculator",
+      "applicationCategory":"FinanceApplication",
+      "operatingSystem":"Web",
+      "offers":{
+        "@type":"Offer",
+        "price":"0",
+        "priceCurrency":"INR"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: HowTo -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to calculate TDS on Rent under Section 194-IB",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "text": "Enter your monthly rent amount."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Select the number of months you paid rent in the current financial year."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Select whether the landlord has provided their PAN card details."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "The calculator will compute the TDS (5% or 20%) and show the adjusted net rent you should pay in the final month."
+        }
+      ]
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://arthcalculator.in/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Income Tax Calculators",
+       "item": "https://arthcalculator.in/income-tax/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "TDS on Rent (194-IB) Calculator",
+       "item": "https://arthcalculator.in/tds-on-rent-calculator/"
+      }
+     ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is required to deduct TDS under Section 194-IB?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Any individual or HUF who is NOT liable to tax audit, and pays a monthly rent exceeding ₹50,000, must deduct TDS under Section 194-IB."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the rate of TDS under Section 194-IB?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The TDS rate is 5% if the landlord has provided a PAN. If the landlord does not provide a PAN, the TDS rate increases to 20%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I deduct TDS under 194-IB?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TDS is to be deducted only once in a Financial Year. It is deducted from the rent paid in the last month of the financial year (March), or in the last month of tenancy if the property is vacated during the year."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if the TDS amount is more than the last month's rent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If the landlord does not provide a PAN, the TDS is calculated at 20%. However, the law specifies that the TDS amount cannot exceed the rent payable for the last month. The calculator automatically handles this cap."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a TAN to deduct TDS under 194-IB?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, you do not need a TAN (Tax Deduction and Collection Account Number) to deduct TDS under Section 194-IB. You can use your PAN and the landlord's PAN to file Form 26QC."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I deposit the TDS to the government?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You must deposit the deducted TDS within 30 days from the end of the month in which the deduction is made, by filling out Form 26QC on the Income Tax e-filing portal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I fail to deduct or deposit TDS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Failure to deduct TDS attracts interest at 1% per month. Failure to deposit deducted TDS attracts interest at 1.5% per month. There is also a late filing fee of ₹200 per day under Section 234E."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to issue a TDS certificate to the landlord?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, after filing Form 26QC, you must download Form 16C from the TRACES portal and provide it to your landlord within 15 days as proof of tax deduction."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg.chevron { transform: rotate(180deg); }
+        
+        /* Custom Checkbox as Switch */
+        .switch { position: relative; display: inline-block; width: 50px; height: 26px; }
+        .switch input { opacity: 0; width: 0; height: 0; }
+        .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #cbd5e1; transition: .4s; border-radius: 34px; }
+        .slider:before { position: absolute; content: ""; height: 18px; width: 18px; left: 4px; bottom: 4px; background-color: white; transition: .4s; border-radius: 50%; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+        input:checked + .slider { background-color: #2563eb; }
+        input:checked + .slider:before { transform: translateX(24px); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+    <div id="navbar"></div>
+
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/income-tax/" class="hover:text-blue-600 transition-colors">Income Tax</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold" aria-current="page">TDS on Rent (194-IB)</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl text-pretty">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-[1.2] pb-1">TDS on Rent (Sec 194-IB) Calculator</h1>
+                    <p class="text-slate-500 text-sm font-medium mb-3">Calculate 5% or 20% TDS on Rent exceeding ₹50,000.</p>
+                    
+                    <p class="text-slate-500 text-xs sm:text-base leading-relaxed text-pretty">
+                        If you are an individual/HUF paying monthly rent over ₹50,000, you are legally required to deduct TDS from your landlord's rent once a year (usually in March or when vacating). Use this calculator to find the exact TDS amount and how much rent to actually pay your landlord in the final month.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+                        <a href="#calculator" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Calculate TDS</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#educational-content" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">194-IB Rules</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#faqs" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4" id="calculator">
+        <div class="flex flex-col lg:flex-row gap-8 mb-16">
+            
+            <!-- Left Column: Calculator Inputs -->
+            <div class="w-full lg:w-3/5 bg-white rounded-2xl card-shadow border border-slate-100 p-6 sm:p-8 relative">
+                
+                <div id="loadingOverlay" class="absolute inset-0 bg-white/80 backdrop-blur-sm z-10 hidden flex flex-col justify-center items-center rounded-2xl">
+                    <div class="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-600 mb-4"></div>
+                    <p class="text-slate-600 font-medium">Computing TDS...</p>
+                </div>
+
+                <div class="mb-8">
+                    <label class="block text-sm font-semibold text-slate-700 mb-2">Monthly Rent Paid (₹)</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                            <span class="text-slate-500 font-semibold">₹</span>
+                        </div>
+                        <input type="text" id="monthlyRent" class="block w-full pl-8 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-medium focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all" value="60,000" inputmode="numeric">
+                    </div>
+                    <p id="rentWarning" class="text-xs text-red-500 font-medium mt-2 hidden">Since rent is ₹50,000 or below, TDS deduction is NOT required under Section 194-IB.</p>
+                </div>
+
+                <div class="mb-8">
+                    <label class="block text-sm font-semibold text-slate-700 mb-2">Number of Months Rent Paid</label>
+                    <p class="text-xs text-slate-400 mb-3">Number of months you occupied the property in the current financial year (Max 12).</p>
+                    <input type="range" id="monthsSlider" min="1" max="12" value="12" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
+                    <div class="flex justify-between text-xs text-slate-400 font-medium mt-2 px-1">
+                        <span>1 Month</span>
+                        <span id="monthsDisplay" class="text-blue-600 font-bold text-base">12 Months</span>
+                        <span>12 Months</span>
+                    </div>
+                </div>
+
+                <div class="mb-8 p-5 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-between">
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700">Landlord's PAN Provided?</label>
+                        <p class="text-xs text-slate-500 mt-1">If PAN is missing, TDS is deducted at 20% instead of 5%.</p>
+                    </div>
+                    <label class="switch flex-shrink-0 ml-4">
+                        <input type="checkbox" id="panProvided" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="flex gap-4">
+                    <button id="calculateBtn" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-blue-200 transition-all active:scale-[0.98]">
+                        Calculate Rent TDS
+                    </button>
+                    <button id="resetBtn" class="px-6 py-4 bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold rounded-xl transition-colors">
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Column: Results -->
+            <!-- Right Column: Results -->
+            <div class="w-full lg:w-2/5">
+                <div class="bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-2xl card-shadow p-6 sm:p-8 sticky top-6 text-slate-800 flex flex-col h-full">
+                    
+                    <div class="mb-6 pb-6 border-b border-blue-200/60">
+                        <h3 class="text-sm font-medium text-slate-500 mb-2 uppercase tracking-wider">Total TDS to Deduct</h3>
+                        <div class="text-4xl sm:text-5xl font-bold text-blue-700 mb-2 tracking-tight">
+                            <span class="text-3xl font-medium text-slate-500">₹</span><span id="resTDS">36,000</span>
+                        </div>
+                        <p class="text-sm text-slate-600">Applicable Rate: <span id="resRate" class="font-bold text-blue-700">5%</span></p>
+                    </div>
+
+                    <div class="space-y-4 flex-grow mb-6">
+                        <div class="flex justify-between items-center pb-3 border-b border-blue-200/60">
+                            <span class="text-sm text-slate-600">Total Rent Paid (for FY)</span>
+                            <span class="font-semibold text-slate-800" id="resTotalRent">₹7,20,000</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-3 border-b border-blue-200/60">
+                            <span class="text-sm text-slate-600">Rent for the Last Month</span>
+                            <span class="font-semibold text-slate-800" id="resLastMonthRent">₹60,000</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-100/50 border border-blue-200 rounded-xl p-5 mb-4 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-blue-300 rounded-full blur-2xl opacity-40 -mr-10 -mt-10"></div>
+                        <p class="text-xs text-blue-700 font-medium mb-1">Final Month Payout to Landlord</p>
+                        <p class="text-2xl font-bold text-slate-800 mb-2">₹<span id="resNetRent">24,000</span></p>
+                        <p class="text-xs text-slate-600 leading-tight">
+                            Deduct the total TDS from your final month's rent. Pay the remaining amount to the landlord, and deposit the TDS to the govt via Form 26QC.
+                        </p>
+                    </div>
+
+                    <div id="tdsCapWarning" class="hidden bg-amber-50 border border-amber-200 rounded-lg p-3 text-xs text-amber-800 mb-4">
+                        <svg class="w-4 h-4 inline mr-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        TDS capped at the last month's rent (₹<span id="capRentValue"></span>). Per Section 194-IB, if PAN is missing, TDS cannot exceed the rent of the last month.
+                    </div>
+
+                    <div class="mt-auto pt-4 border-t border-blue-200 flex justify-between items-center">
+                        <p class="text-[10px] text-slate-500 leading-tight w-4/5">
+                            Calculations are based on the Income Tax Act 1961. Deposit TDS via Form 26QC within 30 days.
+                        </p>
+                        <button onclick="window.print()" class="text-slate-400 hover:text-blue-600 p-2 rounded-lg hover:bg-blue-100 transition-colors" aria-label="Print Report">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content (Mandatory) -->
+        <div id="educational-content" class="bg-white rounded-2xl card-shadow border border-slate-100 p-6 sm:p-10 mb-16">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-800 mb-6 border-b border-slate-200 pb-4">Understanding Section 194-IB (TDS on Rent)</h2>
+                
+                <div class="prose prose-slate max-w-none text-slate-600">
+                    <p class="mb-6">
+                        To bring high-value rental transactions under the tax net, the government introduced <strong>Section 194-IB</strong>. Under this section, individuals or HUFs who pay a monthly rent of more than ₹50,000 are required to deduct Tax at Source (TDS) and deposit it with the government.
+                    </p>
+
+                    <h3 class="text-xl font-bold text-slate-800 mt-8 mb-4">TDS Rates & Penalties</h3>
+                    <div class="overflow-x-auto mb-8">
+                        <table class="w-full text-left border-collapse min-w-[600px] border border-slate-200">
+                            <thead>
+                                <tr class="bg-slate-100 text-slate-700 text-sm">
+                                    <th class="p-4 border-b border-slate-200 font-semibold rounded-tl-xl">Scenario</th>
+                                    <th class="p-4 border-b border-slate-200 font-semibold">TDS Rate</th>
+                                    <th class="p-4 border-b border-slate-200 font-semibold rounded-tr-xl">Action Required</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-sm">
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4 border-b border-slate-100 font-medium">Rent is ≤ ₹50,000/month</td>
+                                    <td class="p-4 border-b border-slate-100 font-bold text-slate-400">0%</td>
+                                    <td class="p-4 border-b border-slate-100">No TDS deduction required.</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4 border-b border-slate-100 font-medium">Rent > ₹50,000/month & PAN Provided</td>
+                                    <td class="p-4 border-b border-slate-100 font-bold text-blue-600">5%</td>
+                                    <td class="p-4 border-b border-slate-100">Deduct 5% from total annual rent in the final month.</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4 border-b border-slate-100 font-medium">Rent > ₹50,000/month & PAN NOT Provided</td>
+                                    <td class="p-4 border-b border-slate-100 font-bold text-red-600">20%</td>
+                                    <td class="p-4 border-b border-slate-100">Deduct 20% (capped at 1 month's rent). Landlord loses out heavily.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-slate-800 mt-8 mb-4">When and How to Deduct TDS</h3>
+                    <p class="mb-4">Unlike business TDS which is deducted monthly, Section 194-IB is designed to be easy for common individuals. You only need to deduct TDS <strong>once in a financial year</strong>.</p>
+                    <ul class="list-disc pl-5 space-y-3 mb-6">
+                        <li><strong>Deduction Time:</strong> You must deduct the entire year's TDS amount from the rent paid for the month of <strong>March</strong> (the last month of the financial year).</li>
+                        <li><strong>Vacating Property:</strong> If you vacate the property in the middle of the year (e.g., November), you must deduct the TDS from the rent paid in November (the last month of your tenancy).</li>
+                        <li><strong>No TAN Required:</strong> You do not need a Tax Deduction Account Number (TAN). You can file Form 26QC using just your PAN and your landlord's PAN.</li>
+                    </ul>
+
+                    <div class="bg-slate-100 border-l-4 border-blue-500 rounded-r-xl p-5 mb-8">
+                        <h4 class="font-semibold text-slate-800 mb-2">Example Calculation</h4>
+                        <p class="text-sm">
+                            Suppose you pay a rent of ₹60,000 per month for 12 months. <br>
+                            Total Rent = ₹7,20,000. <br>
+                            TDS @ 5% = ₹36,000. <br>
+                            For 11 months (April to Feb), you pay the landlord the full ₹60,000. <br>
+                            In March, you deduct the ₹36,000 TDS. The rent you pay the landlord for March will be: <strong>₹60,000 - ₹36,000 = ₹24,000</strong>.<br>
+                            You then deposit the ₹36,000 to the government via Form 26QC before April 30.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQs (Mandatory) -->
+        <div id="faqs" class="mb-16">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-800 mb-8 text-center md:text-left">Frequently Asked Questions</h2>
+            <div class="max-w-4xl mx-auto space-y-4">
+                
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>Who is required to deduct TDS under Section 194-IB?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        Any individual or HUF who is NOT liable to tax audit, and pays a monthly rent exceeding ₹50,000, must deduct TDS under Section 194-IB.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>What is the rate of TDS under Section 194-IB?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        The TDS rate is 5% if the landlord has provided a PAN. If the landlord does not provide a PAN, the TDS rate increases to 20%.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>When should I deduct TDS under 194-IB?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        TDS is to be deducted only once in a Financial Year. It is deducted from the rent paid in the last month of the financial year (March), or in the last month of tenancy if the property is vacated during the year.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>What if the TDS amount is more than the last month's rent?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        If the landlord does not provide a PAN, the TDS is calculated at 20%. However, the law specifies that the TDS amount cannot exceed the rent payable for the last month. The calculator automatically handles this cap.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>Do I need a TAN to deduct TDS under 194-IB?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        No, you do not need a TAN (Tax Deduction and Collection Account Number) to deduct TDS under Section 194-IB. You can use your PAN and the landlord's PAN to file Form 26QC.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>How do I deposit the TDS to the government?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        You must deposit the deducted TDS within 30 days from the end of the month in which the deduction is made, by filling out Form 26QC on the Income Tax e-filing portal.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>What happens if I fail to deduct or deposit TDS?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        Failure to deduct TDS attracts interest at 1% per month. Failure to deposit deducted TDS attracts interest at 1.5% per month. There is also a late filing fee of ₹200 per day under Section 234E.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 font-semibold text-slate-800 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl">
+                        <span>Do I need to issue a TDS certificate to the landlord?</span>
+                        <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
+                        Yes, after filing Form 26QC and paying the tax, you must download Form 16C from the TRACES portal and provide it to your landlord within 15 days as proof of tax deduction.
+                    </div>
+                </details>
+
+            </div>
+        </div>
+
+        <!-- Related Calculators (Mandatory) -->
+        <div class="bg-slate-50 rounded-2xl p-6 sm:p-10 border border-slate-200 mb-16">
+            <h3 class="text-lg font-bold text-slate-800 mb-6">Related Tax Calculators</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <a href="/hra/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-blue-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-blue-600 text-sm mb-1">HRA Calculator</h4>
+                    <p class="text-xs text-slate-500">Calculate House Rent Exemption</p>
+                </a>
+                <a href="/tds-late-payment-penalty-calculator/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-blue-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-blue-600 text-sm mb-1">TDS Late Penalty</h4>
+                    <p class="text-xs text-slate-500">Calculate 234E & 201(1A) penalty</p>
+                </a>
+                <a href="/income-tax/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-blue-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-blue-600 text-sm mb-1">Income Tax Calculator</h4>
+                    <p class="text-xs text-slate-500">Comprehensive FY 2026-27 calculator</p>
+                </a>
+                <a href="/capital-gains-tax/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-blue-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-blue-600 text-sm mb-1">Capital Gains Tax</h4>
+                    <p class="text-xs text-slate-500">Calculate LTCG and STCG</p>
+                </a>
+                <a href="/tds-on-property-sale-calculator/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-blue-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-blue-600 text-sm mb-1">TDS on Property Sale</h4>
+                    <p class="text-xs text-slate-500">Calculate 194-IA 1% TDS</p>
+                </a>
+                <a href="/rent-vs-buy-calculator/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-blue-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-blue-600 text-sm mb-1">Rent vs Buy Calculator</h4>
+                    <p class="text-xs text-slate-500">Financial breakdown of housing</p>
+                </a>
+                <a href="/80c-tax-saving/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-blue-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-blue-600 text-sm mb-1">Section 80C Calculator</h4>
+                    <p class="text-xs text-slate-500">Maximize your 1.5L deduction limit</p>
+                </a>
+                <a href="/income-tax/" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:border-blue-300 group">
+                    <h4 class="font-semibold text-slate-700 group-hover:text-blue-600 text-sm mb-1">Old vs New Tax Regime</h4>
+                    <p class="text-xs text-slate-500">Compare tax slabs instantly</p>
+                </a>
+            </div>
+        </div>
+
+    
+            <!-- Related Calculators (15 Internal Links) -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Financial & Tax Calculators</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="/advance-tax-penalty-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Advance Tax Penalty</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Sections 234A/B/C.</p>
+        </a>
+        
+        <a href="/professional-tax-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Professional Tax</h4>
+            <p class="text-[10px] text-slate-500 mt-1">State-wise PT deduction.</p>
+        </a>
+        
+        <a href="/income-tax/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Income Tax Calculator</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Old vs New Regime.</p>
+        </a>
+        
+        <a href="/80c-tax-saving/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 80C Calculator</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Maximize 1.5L deduction.</p>
+        </a>
+        
+        <a href="/80d-tax-saving-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 80D Calculator</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Health insurance tax benefits.</p>
+        </a>
+        
+        <a href="/tds-on-rent-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">TDS on Rent (194-IB)</h4>
+            <p class="text-[10px] text-slate-500 mt-1">TDS for tenants.</p>
+        </a>
+        
+        <a href="/tds-on-property-sale-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">TDS on Property</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Section 194-IA rules.</p>
+        </a>
+        
+        <a href="/44ad-presumptive-tax-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 44AD</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Presumptive business tax.</p>
+        </a>
+        
+        <a href="/surcharge-marginal-relief-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Surcharge & Relief</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Calculate marginal relief.</p>
+        </a>
+        
+        <a href="/capital-gains-exemption-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Capital Gains Exemption</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Sections 54, 54F, 54EC.</p>
+        </a>
+        
+        <a href="/44ae-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 44AE</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Transport presumptive tax.</p>
+        </a>
+        
+        <a href="/income-from-house-property-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">House Property Tax</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Section 24 deductions.</p>
+        </a>
+        
+        <a href="/future-value/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Future Value</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Calculate FV of money.</p>
+        </a>
+        
+        <a href="/cagr/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">CAGR Calculator</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Compound annual growth.</p>
+        </a>
+        
+        <a href="/sip/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+            <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">SIP Calculator</h4>
+            <p class="text-[10px] text-slate-500 mt-1">Mutual fund investment.</p>
+        </a>
+        </div>
+            </section>
+
+    </main>
+
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/global.js" defer></script>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    <div id="footer"></div>
+
+    <script>
+        // Load Navbar and Footer
+        fetch("/navbar.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("navbar").innerHTML = data;
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+            if(btn){
+                btn.addEventListener("click", () => {
+                    menu.classList.toggle("hidden");
+                });
+            }
+        }).catch(() => {});
+
+        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; }).catch(() => {});
+
+        // Format Indian Currency
+        function formatINR(number) {
+            return new Intl.NumberFormat('en-IN').format(Math.round(number));
+        }
+
+        function parseInput(val) {
+            const parsed = parseFloat(val.replace(/,/g, ''));
+            return isNaN(parsed) ? 0 : parsed;
+        }
+
+        // DOM Elements
+        const inpRent = document.getElementById('monthlyRent');
+        const sliderMonths = document.getElementById('monthsSlider');
+        const displayMonths = document.getElementById('monthsDisplay');
+        const togglePan = document.getElementById('panProvided');
+        
+        const btnCalculate = document.getElementById('calculateBtn');
+        const btnReset = document.getElementById('resetBtn');
+        const overlay = document.getElementById('loadingOverlay');
+
+        // Output elements
+        const outTDS = document.getElementById('resTDS');
+        const outRate = document.getElementById('resRate');
+        const outTotalRent = document.getElementById('resTotalRent');
+        const outLastMonthRent = document.getElementById('resLastMonthRent');
+        const outNetRent = document.getElementById('resNetRent');
+        const warnRent = document.getElementById('rentWarning');
+        
+        const divCapWarning = document.getElementById('tdsCapWarning');
+        const outCapRent = document.getElementById('capRentValue');
+
+        // Input formatting logic
+        inpRent.addEventListener('input', function(e) {
+            const cursorPosition = this.selectionStart;
+            const oldLength = this.value.length;
+            let val = this.value.replace(/[^\d]/g, '');
+            if (val) {
+                this.value = formatINR(parseInt(val, 10));
+                const newLength = this.value.length;
+                this.setSelectionRange(cursorPosition + (newLength - oldLength), cursorPosition + (newLength - oldLength));
+            }
+        });
+
+        sliderMonths.addEventListener('input', function(e) {
+            displayMonths.innerText = `${this.value} Month${this.value > 1 ? 's' : ''}`;
+        });
+
+        function calculateTDS() {
+            overlay.classList.remove('hidden');
+            
+            setTimeout(() => {
+                const rent = parseInput(inpRent.value);
+                const months = parseInt(sliderMonths.value, 10);
+                const hasPan = togglePan.checked;
+
+                const totalRent = rent * months;
+                let tdsRate = 0;
+                let tdsAmount = 0;
+                let isCapped = false;
+
+                if (rent > 50000) {
+                    warnRent.classList.add('hidden');
+                    tdsRate = hasPan ? 0.05 : 0.20;
+                    tdsAmount = totalRent * tdsRate;
+                    
+                    // Cap TDS if no PAN
+                    if (!hasPan && tdsAmount > rent) {
+                        tdsAmount = rent;
+                        isCapped = true;
+                    }
+                } else {
+                    warnRent.classList.remove('hidden');
+                }
+
+                const netRentLastMonth = Math.max(0, rent - tdsAmount);
+
+                // UI Updates
+                outTDS.innerText = formatINR(tdsAmount);
+                outRate.innerText = tdsRate === 0 ? "0% (Not Applicable)" : (hasPan ? "5%" : "20%");
+                if(isCapped) {
+                    outRate.innerText = "20% (Capped at 1 Month Rent)";
+                }
+                
+                outTotalRent.innerText = "₹" + formatINR(totalRent);
+                outLastMonthRent.innerText = "₹" + formatINR(rent);
+                outNetRent.innerText = formatINR(netRentLastMonth);
+
+                if (isCapped) {
+                    divCapWarning.classList.remove('hidden');
+                    outCapRent.innerText = formatINR(rent);
+                } else {
+                    divCapWarning.classList.add('hidden');
+                }
+
+                overlay.classList.add('hidden');
+            }, 300);
+        }
+
+        btnCalculate.addEventListener('click', calculateTDS);
+
+        btnReset.addEventListener('click', () => {
+            inpRent.value = "60,000";
+            sliderMonths.value = "12";
+            displayMonths.innerText = "12 Months";
+            togglePan.checked = true;
+            warnRent.classList.add('hidden');
+            divCapWarning.classList.add('hidden');
+            
+            calculateTDS();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Initialize
+        calculateTDS();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GST Late Fee & Penalty Calculator 2026: Calculate GSTR Penalty</title>
+    <meta name="description" content="Calculate GST late fees and interest under Section 50 for delayed filing of GSTR-1, GSTR-3B, GSTR-4. Accurate penalty calculation for 2026.">
+    <meta name="keywords" content="GST Late Fee Calculator, GSTR-3B Penalty, GST Interest Calculator, GST Fine 2026, Section 50 Interest">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/gst-late-fee-calculator/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="GST Late Fee & Penalty Calculator (2026)">
+    <meta property="og:description" content="Calculate exact GST late fees and interest for delayed filing. Supports Nil returns and maximum capping limits.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/gst-late-fee-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta name="author" content="ArthCalculator">
+    <meta name="last-modified" content="2026-08-01">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "GST Late Fee & Penalty Calculator (2026)",
+      "description": "A financial tool to calculate GST late fees and interest under Section 50.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ArthCalculator",
+        "url": "https://arthcalculator.in"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "GST Late Fee & Penalty Calculator",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://arthcalculator.in/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Financial Calculators",
+       "item": "https://arthcalculator.in/calculators/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "GST Late Fee Calculator",
+       "item": "https://arthcalculator.in/gst-late-fee-calculator/"
+      }
+     ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the late fee for Nil GSTR-3B?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a Nil return, the late fee is ₹20 per day (₹10 CGST + ₹10 SGST), capped at a maximum of ₹500."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a late fee for GSTR-1?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, GSTR-1 late fees are strictly enforced and automatically populate in the subsequent GSTR-3B return."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I pay GST late fees using ITC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, GST late fees and interest must be paid strictly in cash through the electronic cash ledger. Input Tax Credit cannot be utilized for this purpose."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is interest charged on the gross tax liability?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, as per Section 50(1) amendment, interest is only charged on the net cash tax liability, provided the return is filed after the due date but before any notice is issued."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the maximum late fee for turnover below ₹1.5 Cr?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The maximum late fee is capped at ₹2,000 (₹1,000 CGST + ₹1,000 SGST) per return for taxpayers with turnover up to ₹1.5 Crore."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate delay days?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Delay days are calculated starting from the day immediately following the due date until the actual date of filing the return."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the government ever waive these fees?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The CBIC occasionally introduces GST Amnesty Schemes that cap or waive late fees for past periods. However, under normal circumstances, the fees are mandatory and auto-calculated by the portal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a penalty for late filing of GSTR-9?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, for the annual return GSTR-9, the late fee is ₹200 per day (₹100 CGST + ₹100 SGST), capped at 0.5% of the turnover in the State/UT."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            -webkit-tap-highlight-color: transparent;
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+        input[type="range"] {
+            accent-color: #2563eb;
+            height: 6px;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        details summary {
+            list-style: none;
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary svg {
+            transform: rotate(180deg);
+        }
+        .formula-box {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
+        table th {
+            background-color: #f8fafc;
+        }
+    </style>
+
+    <!-- Schema Markup: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ArthCalculator",
+      "url": "https://arthcalculator.in",
+      "logo": "https://arthcalculator.in/logo.png"
+    }
+    </script>
+
+    <!-- Schema Markup: HowTo -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to use the GST Late Fee & Penalty Calculator 2026: Calculate GSTR Penalty",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "text": "Enter your financial details in the input fields."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Review the computed results and visualizations."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Analyze the recommendations and insights provided."
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+<div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600">GST Late Fee Calculator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">GST Late Fee & Penalty Calculator (2026)</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Instantly calculate your GST late fees and 18% p.a. interest under Section 50. Accurate capping rules applied based on turnover and return type.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+                        <a href="#about" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">About</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#formula" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Rules</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#example" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Example</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#faqs" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
+                    </div>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">Updated Rules</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <!-- Calculator Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow relative">
+                    <div id="loadingOverlay" class="absolute inset-0 bg-white/80 backdrop-blur-sm z-10 hidden flex-col justify-center items-center rounded-2xl">
+                        <div class="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-600 mb-4"></div>
+                    </div>
+
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Filing Details
+                    </h2>
+
+                    <div class="mb-6 grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="text-xs font-medium text-slate-600 block mb-2">Original Due Date</label>
+                            <input type="date" id="dueDate" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-slate-800 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="text-xs font-medium text-slate-600 block mb-2">Actual Filing Date</label>
+                            <input type="date" id="filingDate" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-slate-800 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="text-xs font-medium text-slate-600 block mb-2">Return Type</label>
+                        <select id="returnType" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-slate-800 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                            <option value="3b">GSTR-3B / GSTR-1</option>
+                            <option value="4">GSTR-4 (Composition)</option>
+                            <option value="9">GSTR-9 (Annual)</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="text-xs font-medium text-slate-600 block mb-2">Is it a Nil Return?</label>
+                        <select id="nilReturn" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-slate-800 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                            <option value="no">No, Normal Return</option>
+                            <option value="yes">Yes, Nil Return</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-6" id="turnoverSection">
+                        <label class="text-xs font-medium text-slate-600 block mb-2">Preceding FY Turnover</label>
+                        <select id="turnover" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-slate-800 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                            <option value="upto1.5">Up to ₹1.5 Crore</option>
+                            <option value="1.5to5">₹1.5 Crore to ₹5 Crore</option>
+                            <option value="above5">Above ₹5 Crore</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-8" id="taxLiabilitySection">
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-xs font-medium text-slate-600">Net Cash Liability (₹)</label>
+                            <input type="number" id="taxLiabilityInput" value="10000" min="0" class="w-24 px-2 py-1 text-sm border border-slate-200 rounded-lg text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                        </div>
+                        <input type="range" id="taxLiabilityRange" min="0" max="1000000" step="1000" value="10000" class="w-full py-2 cursor-pointer">
+                        <p class="text-[10px] text-slate-400 mt-1">Needed for 18% p.a. interest calculation</p>
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2 mt-6">
+                        Calculate Penalty
+                    </button>
+                </div>
+
+                <!-- Summary Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-blue-600 p-5 rounded-2xl text-white shadow-lg shadow-blue-200">
+                        <p class="text-blue-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Delay Period</p>
+                        <h3 id="delayDaysMobile" class="text-lg sm:text-xl font-bold leading-tight">0 Days</h3>
+                    </div>
+                    <div class="bg-indigo-600 p-5 rounded-2xl text-white shadow-lg shadow-indigo-200">
+                        <p class="text-indigo-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Total Cap Limit</p>
+                        <h3 id="maxCapMobile" class="text-lg sm:text-xl font-bold leading-tight">₹0</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Penalty Breakdown</h2>
+                    <div class="flex flex-col justify-between items-start mb-8 gap-4">
+                        <div class="w-full">
+                            <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Total Payable Amount</h2>
+                            <div class="mt-1 flex items-center gap-4">
+                                <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-red-600 tracking-tight block break-words" id="resTotalPayable">₹0</span>
+                                <span id="capAppliedBadge" class="hidden bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-1 rounded">Cap Applied</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar (Visualizing Late Fee vs Interest) -->
+                    <div class="mb-10">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-blue-600 font-bold uppercase text-xs">Late Fee (<span id="pctLateFee">0</span>%)</span>
+                            <span class="text-orange-500 font-bold uppercase text-xs">Interest (<span id="pctInterest">0</span>%)</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                            <div id="barLateFee" class="h-full bg-blue-500 transition-all duration-700 ease-out" style="width: 100%"></div>
+                            <div id="barInterest" class="h-full bg-orange-400 transition-all duration-700 ease-out" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <hr class="border-slate-100 mb-6">
+
+                    <!-- Breakdown Table -->
+                    <div class="space-y-4 text-sm mb-8">
+                        <div class="flex justify-between items-center pb-3 border-b border-slate-100">
+                            <span class="text-slate-600 font-medium">Late Fee (CGST)</span>
+                            <span class="font-bold text-slate-800" id="resCGST">₹0</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-3 border-b border-slate-100">
+                            <span class="text-slate-600 font-medium">Late Fee (SGST)</span>
+                            <span class="font-bold text-slate-800" id="resSGST">₹0</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-3 border-b border-slate-100 bg-slate-50 p-2 rounded -mx-2">
+                            <span class="text-slate-700 font-bold">Total Late Fee</span>
+                            <span class="font-bold text-slate-900" id="resTotalLateFee">₹0</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-3 border-b border-slate-100">
+                            <span class="text-slate-600 font-medium">Interest u/s 50 (18% p.a.)</span>
+                            <span class="font-bold text-orange-600" id="resInterest">+ ₹0</span>
+                        </div>
+                    </div>
+
+                    <!-- Key Highlights Box -->
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            Tax Insights
+                        </h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-blue-800 font-medium">
+                            <li class="flex items-center gap-2">✅ Late fees must be paid in cash</li>
+                            <li class="flex items-center gap-2">✅ Interest applies only on cash liability</li>
+                            <li class="flex items-center gap-2">✅ Capping provides relief to MSMEs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Formula and Example -->
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">Calculation Formula</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                        Interest = (Cash Liability × 18% × Delay Days) / 365
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-2 mb-6 text-xs sm:text-sm">
+                        <p><strong>Nil Return:</strong> ₹20/day (₹10 CGST + ₹10 SGST), capped at ₹500.</p>
+                        <p><strong>Normal Return:</strong> ₹50/day (₹25 CGST + ₹25 SGST).</p>
+                        <p><strong>Max Cap:</strong> Capped between ₹2,000 to ₹10,000 based on turnover.</p>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="example">Step-by-Step Example</h3>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed">
+                        If you file GSTR-3B 10 days late with a cash liability of ₹10,000 (Turnover < 1.5 Cr):
+                        <ul class="list-disc ml-5 mt-2 space-y-1 text-xs sm:text-sm font-medium">
+                            <li>Late Fee = 10 days × ₹50 = <strong>₹500</strong></li>
+                            <li>Interest = (10,000 × 18% × 10)/365 = <strong>₹49</strong></li>
+                            <li>Total Payable = <strong>₹549</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparative Content -->
+        <div class="space-y-12 mb-12">
+            
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow" id="about">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">What is GST Late Fee?</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                    A GST late fee is a penalty charged by the government for delayed filing of returns like GSTR-1, GSTR-3B, or GSTR-4. It is essential for compliance and avoiding compounded interest. The late fee is calculated daily, and under Section 50, an 18% per annum interest is also levied on the net cash tax liability. Always check your <a href="/tds-calculator/" class="text-blue-600 font-semibold hover:underline">TDS</a> and <a href="/gst-profit-calculator/" class="text-blue-600 font-semibold hover:underline">GST Profit</a> margins to ensure sufficient cash flow.
+                </p>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-10 mb-4">GST Penalty Rates Comparison</h3>
+                <div class="overflow-x-auto mt-6">
+                    <table class="w-full text-left border-collapse border border-slate-100 text-sm">
+                        <thead>
+                            <tr class="bg-slate-50">
+                                <th class="p-4 border-b font-bold text-slate-700">Return Type</th>
+                                <th class="p-4 border-b font-bold text-slate-700">Late Fee Per Day</th>
+                                <th class="p-4 border-b font-bold text-slate-700">Maximum Cap</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">Nil Return (GSTR-3B / 1)</td>
+                                <td class="p-4 border-b font-semibold text-blue-600">₹20 / day</td>
+                                <td class="p-4 border-b font-semibold text-slate-700">₹500</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">Turnover < 1.5 Cr</td>
+                                <td class="p-4 border-b font-semibold text-blue-600">₹50 / day</td>
+                                <td class="p-4 border-b font-semibold text-slate-700">₹2,000</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">Turnover 1.5 - 5 Cr</td>
+                                <td class="p-4 border-b font-semibold text-blue-600">₹50 / day</td>
+                                <td class="p-4 border-b font-semibold text-slate-700">₹5,000</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">Turnover > 5 Cr</td>
+                                <td class="p-4 border-b font-semibold text-blue-600">₹50 / day</td>
+                                <td class="p-4 border-b font-semibold text-slate-700">₹10,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-10 mb-4">How the Calculation Works</h3>
+                <p class="text-slate-600 text-sm mb-6 leading-relaxed">The tool calculates the exact number of delay days between the original due date and the actual filing date. It multiplies the delay days by the daily penalty rate (₹20 for Nil, ₹50 for normal). If the total exceeds the government-mandated cap based on your turnover, the tool automatically restricts the late fee to the maximum cap. Interest at 18% p.a. is calculated exclusively on the net cash liability.</p>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">Eligibility and Latest Rules</h3>
+                <p class="text-slate-600 text-sm mb-6 leading-relaxed">Under the CBIC's rationalization scheme introduced in recent budgets, maximum late fees were capped to provide relief to MSMEs. Any registered taxpayer filing GSTR-1, GSTR-3B, or GSTR-4 after the due date is liable for these fees. Notice that GSTR-1 late fees are now auto-populated in the subsequent GSTR-3B return.</p>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">Benefits of the Capping Rule</h3>
+                <ul class="list-disc ml-5 text-slate-600 text-sm mb-6 space-y-2">
+                    <li>Prevents exorbitant penalties that exceed the actual tax liability.</li>
+                    <li>Reduces the compliance burden for small businesses with turnover less than ₹1.5 Crore.</li>
+                    <li>Encourages taxpayers to clear backlog returns without fear of massive fines.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">Limitations and Important Notes</h3>
+                <ul class="list-disc ml-5 text-slate-600 text-sm mb-6 space-y-2">
+                    <li>Late fees must be paid in cash; you cannot use Input Tax Credit (ITC) to set off late fees.</li>
+                    <li>Interest under Section 50 is calculated ONLY on the tax paid through the electronic cash ledger, not on the portion paid via ITC (unless proceedings under Sec 73/74 are initiated).</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">Common Mistakes & Tips</h3>
+                <p class="text-slate-600 text-sm mb-6 leading-relaxed">A very common mistake is assuming that filing a Nil return requires no late fee. Even Nil returns attract a ₹20/day penalty. Always file Nil returns on time using the SMS facility if applicable. Tip: Maintain a compliance calendar and integrate it with your <a href="/advance-tax-penalty-calculator/" class="text-blue-600 hover:underline font-semibold">advance tax</a> deadlines.</p>
+            </section>
+
+            <section class="bg-slate-900 p-6 sm:p-10 rounded-2xl text-white">
+                <h2 class="text-2xl font-bold mb-6">Why is it Important to Calculate GST Penalties?</h2>
+                <p class="text-slate-300 text-sm mb-8 leading-relaxed">
+                    Calculating your GST penalties accurately helps you maintain a clean compliance record and prevents unexpected cash outflows. The government has capped maximum late fees to protect small businesses, but the 18% interest on cash liability has no cap and compounds quickly.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-emerald-400 font-bold mb-2">Avoid Cash Flow Drain</h4>
+                        <p class="text-xs text-slate-400 mb-3">Interest accumulates daily. Pay on time to protect working capital.</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-blue-400 font-bold mb-2">Maintain Compliance Rating</h4>
+                        <p class="text-xs text-slate-400 mb-3">Consistent late filing can flag your GSTIN for departmental audit.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">1. What is the late fee for Nil GSTR-3B?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            For a Nil return, the late fee is ₹20 per day (₹10 CGST + ₹10 SGST), capped at a maximum of ₹500.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">2. Is there a late fee for GSTR-1?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Yes, GSTR-1 late fees are strictly enforced and automatically populate in the subsequent GSTR-3B return.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">3. Can I pay GST late fees using ITC?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            No, GST late fees and interest must be paid strictly in cash through the electronic cash ledger. Input Tax Credit cannot be utilized for this purpose.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">4. Is interest charged on the gross tax liability?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            No, as per Section 50(1) amendment, interest is only charged on the net cash tax liability, provided the return is filed after the due date but before any notice is issued.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">5. What is the maximum late fee for turnover below ₹1.5 Cr?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            The maximum late fee is capped at ₹2,000 (₹1,000 CGST + ₹1,000 SGST) per return for taxpayers with turnover up to ₹1.5 Crore.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">6. How do I calculate delay days?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Delay days are calculated starting from the day immediately following the due date until the actual date of filing the return.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">7. Does the government ever waive these fees?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            The CBIC occasionally introduces GST Amnesty Schemes that cap or waive late fees for past periods. However, under normal circumstances, the fees are mandatory and auto-calculated by the portal.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">8. Is there a penalty for late filing of GSTR-9?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Yes, for the annual return GSTR-9, the late fee is ₹200 per day (₹100 CGST + ₹100 SGST), capped at 0.5% of the turnover in the State/UT.
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Related Calculators (15 Internal Links) -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Financial & Tax Calculators</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <a href="/advance-tax-penalty-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Advance Tax Penalty</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Sections 234A/B/C.</p>
+                    </a>
+                    <a href="/professional-tax-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Professional Tax</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">State-wise PT deduction.</p>
+                    </a>
+                    <a href="/income-tax/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Income Tax Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Old vs New Regime.</p>
+                    </a>
+                    <a href="/80c-tax-saving/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 80C Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Maximize 1.5L deduction.</p>
+                    </a>
+                    <a href="/80d-tax-saving-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 80D Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Health insurance tax benefits.</p>
+                    </a>
+                    <a href="/tds-on-rent-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">TDS on Rent (194-IB)</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">TDS for tenants.</p>
+                    </a>
+                    <a href="/tds-on-property-sale-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">TDS on Property</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Section 194-IA rules.</p>
+                    </a>
+                    <a href="/44ad-presumptive-tax-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 44AD</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Presumptive business tax.</p>
+                    </a>
+                    <a href="/surcharge-marginal-relief-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Surcharge & Relief</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Calculate marginal relief.</p>
+                    </a>
+                    <a href="/capital-gains-exemption-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Capital Gains Exemption</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Sections 54, 54F, 54EC.</p>
+                    </a>
+                    <a href="/44ae-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Section 44AE</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Transport presumptive tax.</p>
+                    </a>
+                    <a href="/income-from-house-property-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">House Property Tax</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Section 24 deductions.</p>
+                    </a>
+                    <a href="/future-value/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Future Value</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Calculate FV of money.</p>
+                    </a>
+                    <a href="/cagr/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">CAGR Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Compound annual growth.</p>
+                    </a>
+                    <a href="/sip/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">SIP Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Mutual fund investment.</p>
+                    </a>
+                </div>
+            </section>
+
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed">
+                <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
+                Projections are based on current official rules. Legal tax liability may vary. Please consult a Chartered Accountant for formal tax filing or legal advice.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/global.js" defer></script>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+<div id="footer"></div>
+
+
+    
+    <script>
+        const elements = {
+            dueDate: document.getElementById('dueDate'),
+            filingDate: document.getElementById('filingDate'),
+            returnType: document.getElementById('returnType'),
+            nilReturn: document.getElementById('nilReturn'),
+            turnoverSection: document.getElementById('turnoverSection'),
+            turnover: document.getElementById('turnover'),
+            taxLiabilitySection: document.getElementById('taxLiabilitySection'),
+            taxLiabilityInput: document.getElementById('taxLiabilityInput'),
+            taxLiabilityRange: document.getElementById('taxLiabilityRange'),
+            calcBtn: document.getElementById('calcBtn'),
+            delayDaysMobile: document.getElementById('delayDaysMobile'),
+            maxCapMobile: document.getElementById('maxCapMobile'),
+            resTotalPayable: document.getElementById('resTotalPayable'),
+            capAppliedBadge: document.getElementById('capAppliedBadge'),
+            resCGST: document.getElementById('resCGST'),
+            resSGST: document.getElementById('resSGST'),
+            resTotalLateFee: document.getElementById('resTotalLateFee'),
+            resInterest: document.getElementById('resInterest'),
+            pctLateFee: document.getElementById('pctLateFee'),
+            pctInterest: document.getElementById('pctInterest'),
+            barLateFee: document.getElementById('barLateFee'),
+            barInterest: document.getElementById('barInterest'),
+            loadingOverlay: document.getElementById('loadingOverlay')
+        };
+
+        const today = new Date();
+        elements.filingDate.valueAsDate = today;
+        const lastMonth = new Date(today.getFullYear(), today.getMonth(), 20);
+        elements.dueDate.valueAsDate = lastMonth;
+
+        function formatIndian(val) {
+            return new Intl.NumberFormat('en-IN').format(Math.round(val));
+        }
+
+        function syncInputs(input, range) {
+            input.addEventListener('input', () => { range.value = input.value; updateUI(); });
+            range.addEventListener('input', () => { input.value = range.value; updateUI(); });
+        }
+        syncInputs(elements.taxLiabilityInput, elements.taxLiabilityRange);
+
+        function updateUI() {
+            if (elements.nilReturn.value === 'yes') {
+                elements.taxLiabilitySection.style.display = 'none';
+                elements.taxLiabilityInput.value = "0";
+                elements.turnoverSection.style.display = 'none';
+            } else {
+                elements.taxLiabilitySection.style.display = 'block';
+                if (elements.returnType.value === '9' || elements.returnType.value === '4') {
+                    elements.turnoverSection.style.display = 'none';
+                } else {
+                    elements.turnoverSection.style.display = 'block';
+                }
+            }
+        }
+
+        elements.nilReturn.addEventListener('change', updateUI);
+        elements.returnType.addEventListener('change', updateUI);
+
+        function calculate() {
+            elements.loadingOverlay.classList.remove('hidden');
+            elements.loadingOverlay.classList.add('flex');
+
+            setTimeout(() => {
+                const dueD = new Date(elements.dueDate.value);
+                const fileD = new Date(elements.filingDate.value);
+                
+                let delayDays = 0;
+                if (fileD > dueD) {
+                    const diffTime = Math.abs(fileD - dueD);
+                    delayDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                }
+
+                const isNil = elements.nilReturn.value === 'yes';
+                const rType = elements.returnType.value;
+                const turn = elements.turnover.value;
+                const taxLia = parseFloat(elements.taxLiabilityInput.value) || 0;
+
+                let lateFeePerDay = 0;
+                let maxCap = 0;
+
+                if (isNil) {
+                    lateFeePerDay = 20;
+                    maxCap = 500;
+                } else {
+                    if (rType === '3b' || rType === '4') {
+                        lateFeePerDay = 50;
+                        if (rType === '4') maxCap = 500;
+                        else {
+                            if (turn === 'upto1.5') maxCap = 2000;
+                            else if (turn === '1.5to5') maxCap = 5000;
+                            else maxCap = 10000;
+                        }
+                    } else if (rType === '9') {
+                        lateFeePerDay = 200;
+                        maxCap = 10000;
+                    }
+                }
+
+                let totalLateFee = delayDays * lateFeePerDay;
+                let capApplied = false;
+                
+                if (totalLateFee > maxCap) {
+                    totalLateFee = maxCap;
+                    capApplied = true;
+                }
+
+                const cgst = totalLateFee / 2;
+                const sgst = totalLateFee / 2;
+
+                let interest = 0;
+                if (delayDays > 0 && taxLia > 0) {
+                    interest = (taxLia * 0.18 * delayDays) / 365;
+                }
+
+                const totalPayable = totalLateFee + interest;
+
+                elements.delayDaysMobile.innerText = `${delayDays} Days`;
+                elements.maxCapMobile.innerText = `₹${formatIndian(maxCap)}`;
+                elements.resTotalPayable.innerText = `₹${formatIndian(totalPayable)}`;
+                elements.resCGST.innerText = `₹${formatIndian(cgst)}`;
+                elements.resSGST.innerText = `₹${formatIndian(sgst)}`;
+                elements.resTotalLateFee.innerText = `₹${formatIndian(totalLateFee)}`;
+                elements.resInterest.innerText = `+ ₹${formatIndian(interest)}`;
+
+                if (capApplied) elements.capAppliedBadge.classList.remove('hidden');
+                else elements.capAppliedBadge.classList.add('hidden');
+
+                let pLate = 0, pInt = 0;
+                if(totalPayable > 0) {
+                    pLate = (totalLateFee / totalPayable) * 100;
+                    pInt = (interest / totalPayable) * 100;
+                }
+                elements.pctLateFee.innerText = pLate.toFixed(0);
+                elements.pctInterest.innerText = pInt.toFixed(0);
+                elements.barLateFee.style.width = `${pLate}%`;
+                elements.barInterest.style.width = `${pInt}%`;
+
+                elements.loadingOverlay.classList.add('hidden');
+                elements.loadingOverlay.classList.remove('flex');
+            }, 300);
+        }
+
+        elements.calcBtn.addEventListener('click', calculate);
+        
+        window.addEventListener('DOMContentLoaded', () => {
+            updateUI();
+            calculate();
+        });
+    </script>
+</body>
+</html>
