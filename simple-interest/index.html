@@ -68,10 +68,58 @@
         },
         {
           "@type": "Question",
-          "name": "How is simple interest calculated?",
+          "name": "How do you calculate simple interest?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Simple interest is calculated using the formula: (Principal × Rate × Time) / 100."
+            "text": "Use the formula (P × R × T) / 100. For monthly calculations, divide the resulting amount by 12."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between simple interest and compound interest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simple interest stays flat on the principal. Compound interest reinvests previous interest to earn more returns, growing exponentially over time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is simple interest used?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is commonly used for personal loans between friends/family, short-term business credit, car loans (in some cases), and consumer durable loans."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is principal amount?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The principal is the starting sum of money that you either borrow from a lender or invest into a financial product."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do banks calculate simple interest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most modern banks use \"Compound Interest\" or \"Reducing Balance\" methods. Simple interest is usually reserved for very specific short-term overdrafts or specific credit instruments."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can simple interest be negative?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, interest itself is a positive charge. However, if you adjust for Inflation, your real rate of return can be negative if inflation is higher than the simple interest rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is simple interest used in EMI loans?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Generally, no. EMIs are calculated using the reducing balance method. Use our EMI Calculator to see exactly how your loan installments are broken down."
           }
         }
       }
@@ -268,6 +316,20 @@
                     </div>
                     <p class="flex justify-between border-t pt-2 mt-4 font-extrabold text-slate-900 text-lg"><span>Total Amount:</span> <span>₹2,72,000</span></p>
                 </div>
+            </section>
+            
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 mt-2">Limitations of this Calculator</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm mb-6">
+                    <li><strong>No Compounding:</strong> It strictly calculates flat interest without reinvestment, meaning it will vastly underestimate returns for long-term investments like mutual funds or FDs.</li>
+                    <li><strong>No Partial Payments:</strong> It does not account for cases where you might pay back a portion of the loan mid-tenure (unlike EMI schedules).</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mb-4 mt-6">Common Mistakes</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm">
+                    <li><strong>Using This for Home Loans:</strong> Home loans and personal EMIs use a "reducing balance" method where interest decreases over time. Using simple interest for an EMI loan will give you an incorrect, much higher interest value.</li>
+                    <li><strong>Mismatched Time Periods:</strong> If the interest rate is "per month," the time period must be in "months," not years. Ensure your rate and time match the same frequency.</li>
+                </ul>
             </section>
 
             <section class="max-w-4xl mx-auto py-10" id="faqs">

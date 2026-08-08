@@ -49,7 +49,7 @@
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
         { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
         { "@type": "ListItem", "position": 3, "name": "Car Loan", "item": "https://arthcalculator.in/car-loan" }
-      }
+      ]
     }
     </script>
 
@@ -60,21 +60,69 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How is car loan EMI calculated?",
+          "name": "What is the typical interest rate for car loans in India?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Car loan EMI is calculated using the formula [P x R x (1+R)^N]/[(1+R)^N-1], where P is the loan amount, R is the monthly interest rate, and N is the number of months."
+            "text": "In 2026, car loan rates in India generally range from 8.5% to 12%, depending on the bank, your credit score, and whether the car is new or used."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I prepay a car loan?",
+          "name": "How much down payment is required?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, most lenders allow prepayment, though unlike home loans, some car loans may attract a small prepayment penalty depending on the bank's policy."
+            "text": "Most banks require a minimum down payment of 10-20% of the on-road price. Some premium salary accounts may offer 100% on-road funding."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a longer tenure better for a car loan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A longer tenure (7 years) makes the EMI affordable but you end up paying significantly more interest. Since cars are depreciating assets, a 3-5 year tenure is usually recommended."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use my SIP savings to pay for a car?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. If you have been investing in a SIP for 3-5 years, using that corpus for a higher down payment can save you lakhs in loan interest."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What documents are required for a car loan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Typically: ID proof, Address proof, Salary slips (3 months), ITR (2 years), and Bank statements (6 months)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the down payment affect the interest rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, a higher down payment lowers the loan-to-value ratio, making the loan less risky for banks, which may help you negotiate a slightly lower interest rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I miss a car loan EMI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Missing an EMI incurs a bounce charge, late payment penalties (usually 2% per month), and severely negatively impacts your CIBIL score."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it better to take a car loan from a dealer or a bank?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dealerships offer convenience but may have higher hidden markups. Getting pre-approved from your own bank usually provides better interest rates and transparency."
           }
         }
-      }
+      ]
     }
     </script>
 
@@ -308,6 +356,20 @@
                 </div>
             </section>
 
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 mt-2">Limitations of this Calculator</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm mb-6">
+                    <li><strong>Excludes Hidden Charges:</strong> The calculated EMI only accounts for principal and interest. It does not include bank processing fees, document charges, or mandatory credit shield insurance which banks often add to your loan amount.</li>
+                    <li><strong>Fixed Rate Assumption:</strong> It assumes a fixed interest rate throughout the tenure. Some auto loans have floating rates tied to the repo rate, meaning your EMI or tenure could increase in the future.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mb-4 mt-6">Common Mistakes</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm">
+                    <li><strong>Opting for 100% On-Road Funding:</strong> While tempting, borrowing the entire cost of the car results in a massive interest burden. Always try to pay at least 20% down.</li>
+                    <li><strong>Stretching Tenure to 7 Years:</strong> Taking a 7-year loan lowers the EMI, but cars depreciate fast. You might find yourself owing more on the loan than the car is worth (being "underwater") after 4 years.</li>
+                </ul>
+            </section>
+
             <section class="max-w-4xl mx-auto py-10" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
                 <div class="space-y-4">
@@ -316,6 +378,9 @@
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Is a longer tenure better for a car loan?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">A longer tenure (7 years) makes the EMI affordable but you end up paying significantly more interest. Since cars are depreciating assets, a 3-5 year tenure is usually recommended.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Can I use my SIP savings to pay for a car?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">Yes. If you have been investing in a <a href="/sip/" class="text-blue-600 underline">SIP</a> for 3-5 years, using that corpus for a higher down payment can save you lakhs in loan interest.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What documents are required for a car loan?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">Typically: ID proof, Address proof, Salary slips (3 months), ITR (2 years), and Bank statements (6 months).</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Does the down payment affect the interest rate?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">Yes, a higher down payment lowers the loan-to-value ratio, making the loan less risky for banks, which may help you negotiate a slightly lower interest rate.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What happens if I miss a car loan EMI?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">Missing an EMI incurs a bounce charge, late payment penalties (usually 2% per month), and severely negatively impacts your CIBIL score.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Is it better to take a car loan from a dealer or a bank?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">Dealerships offer convenience but may have higher hidden markups. Getting pre-approved from your own bank usually provides better interest rates and transparency.</div></details>
                 </div>
             </section>
 

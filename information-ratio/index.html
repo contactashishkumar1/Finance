@@ -75,6 +75,54 @@
             "@type": "Answer",
             "text": "Generally, an Information Ratio of 0.5 is considered good, 0.75 is very good, and 1.0 or higher is considered exceptional performance."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Information Ratio different from Sharpe Ratio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Sharpe Ratio compares total return to the risk-free rate using total volatility (standard deviation). The Information Ratio compares active return to a benchmark using active risk (tracking error). IR is strictly for evaluating active management."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can an index fund have a high Information Ratio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In theory, an index fund has an IR of zero because its active return is zero (it matches the benchmark). In practice, due to expense ratios, index funds usually have slightly negative active returns and IRs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a \"Good\" Beta for a stock?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not necessarily. If a manager takes more active risk (high tracking error) and generates significantly higher active returns, the IR will increase. The IR only drops if the increase in risk doesn't lead to a proportional increase in return."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the 'Fundamental Law of Active Management'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It states that the Information Ratio depends on the Information Coefficient (skill) and the breadth (number of independent investment decisions). Basically: Skill x Square Root of Breadth."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I only invest in funds with IR > 1.0?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An IR of 1.0 is extremely rare long-term. In the Indian market, an IR consistently between 0.5 and 0.8 is considered very strong. Don't chase outlier numbers that may not be sustainable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can IR be negative?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A negative Information Ratio means the manager underperformed the benchmark index during the period. This indicates that the manager's active decisions actually destroyed value."
+          }
         }
       }
     }
@@ -393,7 +441,7 @@
                 <p class="text-slate-600 text-sm mb-8 leading-relaxed">
                     When comparing two active mutual funds in the same category (e.g., Large Cap), the fund with the higher Information Ratio is generally the better choice. Follow these steps:
                 </p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
                     <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
                         <h4 class="text-emerald-600 font-bold mb-2">Check the Time Period</h4>
                         <p class="text-xs text-slate-500 mb-3 text-pretty">Always look at IR over a 3-year or 5-year period. Short-term IR can be skewed by lucky market movements.</p>
@@ -405,6 +453,26 @@
                         <p class="text-sm font-bold text-slate-800">Focus: Relative Performance</p>
                     </div>
                 </div>
+
+                <h3 class="text-xl font-bold text-slate-900 mb-4">Benefits of Using the Information Ratio</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm mb-6">
+                    <li><strong>Separates Luck from Skill:</strong> Helps identify if a manager is genuinely skilled or just taking excessive risks in a bull market.</li>
+                    <li><strong>Focuses on Active Risk:</strong> Unlike Sharpe Ratio which looks at total volatility, IR penalizes a manager specifically for deviating from the benchmark without generating excess returns.</li>
+                    <li><strong>Apples-to-Apples Comparison:</strong> Allows you to compare managers across different asset classes if they are measured against their respective benchmarks.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mb-4">Limitations of the Calculator</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm mb-6">
+                    <li><strong>Historical Bias:</strong> Information Ratio relies on past performance and tracking error, which do not guarantee future results.</li>
+                    <li><strong>Benchmark Dependent:</strong> If you use the wrong benchmark (e.g., comparing a Mid Cap fund to the Nifty 50), the Information Ratio will be misleading.</li>
+                    <li><strong>Ignores Risk-Free Rate:</strong> IR does not factor in the baseline risk-free return, which is why it should be used alongside the Sharpe and Treynor ratios.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mb-4">Common Mistakes</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm">
+                    <li><strong>Using Short Timeframes:</strong> Evaluating IR over a 6-month or 1-year period can yield wildly inaccurate results due to temporary market anomalies.</li>
+                    <li><strong>Ignoring Negative Ratios:</strong> A negative IR means the manager is destroying value. Avoid these funds regardless of how good their marketing looks.</li>
+                </ul>
             </section>
 
             <section class="max-w-4xl mx-auto" id="faqs">

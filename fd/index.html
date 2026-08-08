@@ -61,10 +61,18 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is the difference between cumulative and non-cumulative FD?",
+          "name": "Cumulative vs Non-Cumulative FD: What's the difference?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In a cumulative FD, interest is reinvested and paid at maturity, benefiting from compounding. In a non-cumulative FD, interest is paid out at regular intervals (monthly/quarterly) for regular income."
+            "text": "Cumulative FDs reinvest your interest, paying a lump sum at maturity (wealth creation). Non-cumulative FDs pay out interest monthly or quarterly (regular income)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do Senior Citizens get higher interest rates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, in India, most banks offer an additional 0.50% interest rate to individuals aged 60 and above on all FD tenures."
           }
         },
         {
@@ -72,7 +80,47 @@
           "name": "How is TDS calculated on FD interest?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Banks deduct TDS at 10% if interest exceeds ₹40,000 (₹50,000 for senior citizens) in a financial year. If PAN is not provided, TDS is 20%."
+            "text": "TDS is 10% if interest exceeds ₹40,000 (₹50,000 for Seniors). If PAN is not provided, 20% is deducted. Submit Form 15G/15H to avoid TDS if your total income is below the taxable limit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a Tax Saving FD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It has a 5-year lock-in period and allows deductions up to ₹1.5 Lakh under Section 80C. However, the interest earned remains taxable as per your slab."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I get a loan against my FD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, most banks offer up to 90-95% of the FD value as a loan or overdraft. The interest rate is usually 1-2% higher than the FD rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the minimum amount for an FD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually ₹1,000 to ₹5,000 for standard banks. However, some digital banks allow starting an FD with as low as ₹100."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does compounding frequency affect my final returns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Monthly compounding gives a higher yield than quarterly or yearly compounding because interest earns interest more frequently."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which is the best tenure for FD in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The \"best\" tenure depends on when you need the money. Historically, 1-year to 3-year tenures often offer the highest relative interest rates."
           }
         }
       ]
@@ -447,6 +495,21 @@
                 </div>
             </section>
 
+            <!-- Limitations & Mistakes -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow mb-10 mt-10">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 mt-2">Limitations of this Calculator</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm mb-6">
+                    <li><strong>Does not automatically calculate TDS:</strong> This calculator gives you the gross maturity amount and interest. It does not automatically subtract the 10% TDS which banks deduct before payout.</li>
+                    <li><strong>Assumes fixed compounding rates:</strong> The calculation assumes a constant compounding frequency for the entire tenure, which might differ slightly for specific bank rules.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mb-4 mt-6">Common Mistakes</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm">
+                    <li><strong>Ignoring Post-Tax Returns:</strong> FD interest is fully taxable at your income tax slab rate. Comparing a 7% FD directly against a tax-free instrument without adjusting for your tax bracket is a major mistake.</li>
+                    <li><strong>Auto-Renewing blindly:</strong> Banks often auto-renew FDs at the prevailing (sometimes lower) interest rate instead of the rate you originally locked in. Always review rates at maturity.</li>
+                </ul>
+            </section>
+
             <!-- FAQ Section -->
             <section class="max-w-4xl mx-auto" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">FD Frequently Asked Questions (2026)</h2>
@@ -521,24 +584,6 @@
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
                             The "best" tenure depends on when you need the money. Historically, 1-year to 3-year tenures often offer the highest relative interest rates.
-                        </div>
-                    </details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">9. FD vs Savings Account: Which is better?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Savings accounts offer liquidity (access anytime) but low returns. FDs offer higher returns but lock your funds for a fixed duration.
-                        </div>
-                    </details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">10. Can interest rate change after opening an FD?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            No. The interest rate on a Fixed Deposit remains constant throughout the tenure, even if the bank's market rates change later.
                         </div>
                     </details>
                 </div>

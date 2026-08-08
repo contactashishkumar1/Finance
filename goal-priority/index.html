@@ -66,18 +66,66 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is financial goal prioritization?",
+          "name": "Should I prioritize a house or retirement?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Goal prioritization is the process of ranking your financial objectives—like retirement, child education, and buying a car—to ensure that your limited resources are first allocated to your most critical needs."
+            "text": "Generally, retirement is the only goal you cannot take a loan for. While a house provides emotional security, retirement is critical. A balanced planner allocates a higher portion to retirement while using a home loan as leverage for property."
           }
         },
         {
           "@type": "Question",
-          "name": "How does the Goal Priority Planner work?",
+          "name": "How many goals can I plan at once?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It calculates the SIP required for each of your goals based on their respective timelines and then groups them by priority level to show your total monthly commitment."
+            "text": "Most financial experts suggest having no more than 3-5 active SIP-based goals. Having too many goals leads to small, fragmented investments that lack the 'wow' factor of a concentrated wealth-building engine."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this planner factor in inflation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The calculator uses the targets you provide. For the most accurate result, you should manually calculate your future goal target using an inflation rate of 6-7% p.a. before entering it here."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I can't meet the required SIP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This is exactly why prioritization matters. If your budget is ₹20,000 but the planner asks for ₹30,000, you fund the P1 goal fully, the P2 goal partially, and postpone the P3 goal entirely."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should short-term goals be in equity?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Any goal with a priority timeline of less than 3 years should ideally be in Debt or Liquid funds to protect the principal, even if the expected ROI is lower."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should I re-prioritize?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Re-evaluate your priority list once a year or during major life events like marriage, birth of a child, or a significant career change."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I reach my goals faster?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, by using the 'Step-Up' strategy. Increase your SIP contribution by 10% every year. This significantly reduces the total time required to hit high-value targets."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is tax accounted for in this planner?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The calculator provides pre-tax figures. Remember that Long Term Capital Gains (LTCG) in India (above ₹1.25 Lakh) are taxed at 12.5% as of the latest 2026 guidelines."
           }
         }
       ]
@@ -437,6 +485,21 @@
                 </div>
             </section>
 
+            <!-- Limitations & Mistakes -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow mb-10">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 mt-2">Limitations of this Calculator</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm mb-6">
+                    <li><strong>Does Not Account for Sequence of Returns Risk:</strong> The planner assumes a flat, predictable return year-over-year. In reality, market volatility (sequence of returns) can significantly impact your corpus if the market crashes right before a goal target date.</li>
+                    <li><strong>Static Inflation Needs:</strong> The "Target Amount" you input must be the future inflated cost of the goal. The calculator itself does not auto-inflate the current cost of your goals.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mb-4 mt-6">Common Mistakes</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm">
+                    <li><strong>Delaying Critical Goals:</strong> Many investors fund their short-term "Desirable" lifestyle goals first, pushing "Critical" retirement planning to their 40s. The math shows this is incredibly difficult to catch up from.</li>
+                    <li><strong>Overestimating Risk Tolerance for Short-Term Goals:</strong> Putting funds meant for an essential 2-year goal (like a child's college admission) into volatile mid-cap equity mutual funds just to mathematically reduce the SIP amount, exposing the capital to severe crash risk.</li>
+                </ul>
+            </section>
+
             <!-- FAQ Section -->
             <section class="max-w-4xl mx-auto" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Priority Planner Frequently Asked Questions</h2>
@@ -497,7 +560,7 @@
                     </details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">7. Can I reaching my goals faster?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">7. Can I reach my goals faster?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">

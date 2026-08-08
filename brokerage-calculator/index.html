@@ -158,6 +158,30 @@
             "@type": "Answer",
             "text": "Intraday has lower STT (0.025%) but charges brokerage on both buy/sell. Delivery has no brokerage but higher STT (0.1%)."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How to reduce trading charges?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can reduce charges by choosing a discount broker, avoiding overtrading, and trading in larger position sizes to minimize the impact of flat per-order fees."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do charges differ for options trading?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, F&O (Futures & Options) trading has a completely different charge structure. Brokerage is usually a flat ₹20 per executed order, and STT is applied differently (e.g., 0.125% on the premium for options)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the break-even point in trading?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The break-even point is the exact price your stock needs to reach for your gross profit to cover all brokerage, STT, and exchange taxes, leaving your net profit at exactly zero."
+          }
         }
       }
     }
@@ -454,6 +478,20 @@
                 </div>
             </section>
 
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty mb-12">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 mt-2">Limitations of this Calculator</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm mb-6">
+                    <li><strong>Statutory Rate Changes:</strong> SEBI, NSE, and Government tax rates (STT/GST) change occasionally. While we keep this updated for 2026, mid-year budget revisions may temporarily cause slight differences.</li>
+                    <li><strong>Broker-Specific Rounding:</strong> Different brokers use slightly different rounding mechanisms for paise (e.g., rounding up vs truncating), which might cause a ₹1-₹2 variation in the final contract note.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mb-4 mt-6">Common Mistakes</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm">
+                    <li><strong>Ignoring DP Charges:</strong> Many investors forget that selling delivery shares incurs a flat DP charge (around ₹15.93) per stock per day, regardless of whether you sell 1 share or 1000 shares.</li>
+                    <li><strong>Assuming 'Free' means ₹0 Cost:</strong> "Zero Brokerage" on delivery does NOT mean zero charges. You still have to pay 0.1% STT, 18% GST on exchange fees, Stamp Duty, and SEBI charges, which can be substantial on large amounts.</li>
+                </ul>
+            </section>
+
             <section class="max-w-4xl mx-auto py-10" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
                 <div class="space-y-4 text-pretty">
@@ -463,6 +501,8 @@
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Is delivery trade really free?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty">The "Brokerage" component is zero for many brokers. However, you still pay STT (0.1%), Stamp Duty, and DP charges which go to the government and the depository.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Which trade type is cheaper?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">Intraday has lower STT (0.025%) but charges brokerage on both buy/sell. Delivery has no brokerage but higher STT (0.1%). Use the calculator above to compare specific amounts.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How to reduce trading charges?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">You can reduce charges by choosing a discount broker, avoiding overtrading, and trading in larger position sizes to minimize the impact of flat per-order fees.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Do charges differ for options trading?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">Yes, F&O (Futures & Options) trading has a completely different charge structure. Brokerage is usually a flat ₹20 per executed order, and STT is applied differently (e.g., 0.125% on the premium for options).</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">What is the break-even point in trading?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">The break-even point is the exact price your stock needs to reach for your gross profit to cover all brokerage, STT, and exchange taxes, leaving your net profit at exactly zero.</div></details>
                 </div>
             </section>
 
