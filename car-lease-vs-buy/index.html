@@ -21,69 +21,73 @@
 
     <!-- JSON-LD SEO Schemas -->
     <script type="application/ld+json">
+    
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "WebPage",
+      "name": "Corporate Car Lease vs Buy Analysis",
+      "description": "Financial decision tool to compare the TCO of corporate car leasing versus individual car loans in India.",
+      "url": "https://arthcalculator.in/car-lease-vs-buy/"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Car Lease vs Buy Optimizer",
+      "operatingSystem": "All",
+      "applicationCategory": "FinanceApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "Organization",
-          "name": "ArthCalculator",
-          "url": "https://arthcalculator.in",
-          "logo": "https://arthcalculator.in/logo.png"
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://arthcalculator.in/"
         },
         {
-          "@type": "WebPage",
-          "name": "Corporate Car Lease vs Buy Analysis",
-          "description": "Financial decision tool to compare the TCO of corporate car leasing versus individual car loans in India.",
-          "url": "https://arthcalculator.in/car-lease-vs-buy/"
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Calculators",
+          "item": "https://arthcalculator.in/calculators/"
         },
         {
-          "@type": "SoftwareApplication",
-          "name": "Car Lease vs Buy Optimizer",
-          "operatingSystem": "All",
-          "applicationCategory": "FinanceApplication",
-          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Car Lease vs Buy"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does corporate car leasing save tax?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The lease rental is deducted from your gross salary before income tax is calculated, effectively reducing your taxable income by the total rental amount."
+          }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
-            { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
-            { "@type": "ListItem", "position": 3, "name": "Car Lease vs Buy" }
-          ]
-        },
-        {
-          "@type": "HowTo",
-          "name": "How to compare Car Lease vs Loan Savings",
-          "step": [
-            { "@type": "HowToStep", "name": "Price Entry", "text": "Enter the car's ex-showroom price and your current tax slab." },
-            { "@type": "HowToStep", "name": "Lease Quote", "text": "Input the monthly lease rental offered by your corporate provider." },
-            { "@type": "HowToStep", "name": "Loan Comparison", "text": "Input the down payment and interest rate for a standard car loan." },
-            { "@type": "HowToStep", "name": "Review Net Outflow", "text": "Check the net effective monthly cost after tax savings to find the winner." }
-          ]
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "How does corporate car leasing save tax?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The lease rental is deducted from your gross salary before income tax is calculated, effectively reducing your taxable income by the total rental amount."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What is the perquisite tax on company cars?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "For a company-provided car used for both private and official use, a flat monthly amount (₹1,800 for <1.6L engine, ₹2,400 for >1.6L) is added to your taxable income."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "What is the perquisite tax on company cars?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a company-provided car used for both private and official use, a flat monthly amount (\u20b91,800 for <1.6L engine, \u20b92,400 for >1.6L) is added to your taxable income."
+          }
         }
       ]
     }
+  ]
+}
+
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>

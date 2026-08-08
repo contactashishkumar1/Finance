@@ -21,14 +21,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>body{font-family:Inter,sans-serif;background:#f8fafc}.prose p{margin:0 0 1rem;line-height:1.8}.prose h2{margin-top:2.8rem}.prose h3{margin-top:1.8rem}</style>
 <script type="application/ld+json">
+
 {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Organization",
-      "name": "ArthCalculator",
-      "url": "https://arthcalculator.in/"
-    },
     {
       "@type": "WebPage",
       "name": "Simple Interest vs Compound Interest Explained",
@@ -37,37 +33,119 @@
     {
       "@type": "Article",
       "headline": "Simple Interest vs Compound Interest Explained",
-      "mainEntityOfPage": "https://arthcalculator.in/blog/simple-vs-compound-interest/",
-      "publisher": {
-        "@type": "Organization",
-        "name": "ArthCalculator"
-      }
+      "mainEntityOfPage": "https://arthcalculator.in/blog/simple-vs-compound-interest/"
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/"},
-        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://arthcalculator.in/blog/"},
-        {"@type": "ListItem", "position": 3, "name": "Simple vs Compound Interest", "item": "https://arthcalculator.in/blog/simple-vs-compound-interest/"}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://arthcalculator.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://arthcalculator.in/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Simple vs Compound Interest",
+          "item": "https://arthcalculator.in/blog/simple-vs-compound-interest/"
+        }
       ]
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
-        {"@type": "Question", "name": "What is the main difference between simple and compound interest?", "acceptedAnswer": {"@type": "Answer", "text": "Simple interest is calculated only on the initial principal amount. Compound interest is calculated on both the initial principal and the accumulated interest from previous periods."}},
-        {"@type": "Question", "name": "Which type of interest is better for investments?", "acceptedAnswer": {"@type": "Answer", "text": "Compound interest is significantly better for investments because it allows your wealth to grow exponentially as you earn interest on your previously earned interest."}},
-        {"@type": "Question", "name": "Which type of interest is better when taking a loan?", "acceptedAnswer": {"@type": "Answer", "text": "From a mathematical perspective, a simple interest loan is cheaper for the borrower. However, almost all modern banks use compound interest (reducing balance method) for long-term loans."}},
-        {"@type": "Question", "name": "Do banks offer simple interest on Fixed Deposits?", "acceptedAnswer": {"@type": "Answer", "text": "Most bank Fixed Deposits (FDs) use compound interest (usually compounded quarterly). However, some short-term deposits or specific senior citizen schemes may offer simple interest payouts."}},
-        {"@type": "Question", "name": "How does compounding frequency affect my returns?", "acceptedAnswer": {"@type": "Answer", "text": "The more frequently interest is compounded (e.g., daily vs annually), the higher your effective yield will be, because your interest is added to the principal faster, accelerating the growth."}},
-        {"@type": "Question", "name": "What is the formula for simple interest?", "acceptedAnswer": {"@type": "Answer", "text": "The formula is SI = P × R × T / 100, where P is Principal, R is the annual Rate, and T is the Time in years."}},
-        {"@type": "Question", "name": "What is the formula for compound interest?", "acceptedAnswer": {"@type": "Answer", "text": "The formula is A = P(1 + r/n)^(nt), where A is the final amount, P is the principal, r is the annual rate (decimal), n is compounding periods per year, and t is time in years."}},
-        {"@type": "Question", "name": "Can simple interest ever generate more money than compound interest?", "acceptedAnswer": {"@type": "Answer", "text": "If all variables (Principal, Rate, Time) are identical and the time is greater than one compounding period, compound interest will always yield more than simple interest."}},
-        {"@type": "Question", "name": "How does the Rule of 72 relate to compound interest?", "acceptedAnswer": {"@type": "Answer", "text": "The Rule of 72 is a mental shortcut to estimate how long it takes an investment to double under compound interest. You simply divide 72 by the annual interest rate."}},
-        {"@type": "Question", "name": "Are mutual funds simple or compound interest?", "acceptedAnswer": {"@type": "Answer", "text": "Mutual funds do not pay 'interest' per se; they generate returns based on market performance. However, because returns are reinvested, the mathematical effect on your wealth mirrors compound interest."}}
+        {
+          "@type": "Question",
+          "name": "What is the main difference between simple and compound interest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simple interest is calculated only on the initial principal amount. Compound interest is calculated on both the initial principal and the accumulated interest from previous periods."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which type of interest is better for investments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Compound interest is significantly better for investments because it allows your wealth to grow exponentially as you earn interest on your previously earned interest."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which type of interest is better when taking a loan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "From a mathematical perspective, a simple interest loan is cheaper for the borrower. However, almost all modern banks use compound interest (reducing balance method) for long-term loans."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do banks offer simple interest on Fixed Deposits?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most bank Fixed Deposits (FDs) use compound interest (usually compounded quarterly). However, some short-term deposits or specific senior citizen schemes may offer simple interest payouts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does compounding frequency affect my returns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The more frequently interest is compounded (e.g., daily vs annually), the higher your effective yield will be, because your interest is added to the principal faster, accelerating the growth."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the formula for simple interest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The formula is SI = P \u00d7 R \u00d7 T / 100, where P is Principal, R is the annual Rate, and T is the Time in years."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the formula for compound interest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The formula is A = P(1 + r/n)^(nt), where A is the final amount, P is the principal, r is the annual rate (decimal), n is compounding periods per year, and t is time in years."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can simple interest ever generate more money than compound interest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If all variables (Principal, Rate, Time) are identical and the time is greater than one compounding period, compound interest will always yield more than simple interest."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the Rule of 72 relate to compound interest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Rule of 72 is a mental shortcut to estimate how long it takes an investment to double under compound interest. You simply divide 72 by the annual interest rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are mutual funds simple or compound interest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mutual funds do not pay 'interest' per se; they generate returns based on market performance. However, because returns are reinvested, the mathematical effect on your wealth mirrors compound interest."
+          }
+        }
       ]
     }
   ]
 }
+
 </script>
 </head>
 <body class="text-slate-700">

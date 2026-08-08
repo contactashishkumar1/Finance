@@ -21,14 +21,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>body{font-family:Inter,sans-serif;background:#f8fafc}.prose p{margin:0 0 1rem;line-height:1.8}.prose h2{margin-top:2.8rem}.prose h3{margin-top:1.8rem}</style>
 <script type="application/ld+json">
+
 {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Organization",
-      "name": "ArthCalculator",
-      "url": "https://arthcalculator.in/"
-    },
     {
       "@type": "WebPage",
       "name": "Time Value of Money Explained",
@@ -37,37 +33,119 @@
     {
       "@type": "Article",
       "headline": "Time Value of Money (TVM) Explained with Examples",
-      "mainEntityOfPage": "https://arthcalculator.in/blog/time-value-of-money/",
-      "publisher": {
-        "@type": "Organization",
-        "name": "ArthCalculator"
-      }
+      "mainEntityOfPage": "https://arthcalculator.in/blog/time-value-of-money/"
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/"},
-        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://arthcalculator.in/blog/"},
-        {"@type": "ListItem", "position": 3, "name": "Time Value of Money", "item": "https://arthcalculator.in/blog/time-value-of-money/"}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://arthcalculator.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://arthcalculator.in/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Time Value of Money",
+          "item": "https://arthcalculator.in/blog/time-value-of-money/"
+        }
       ]
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
-        {"@type": "Question", "name": "What is the Time Value of Money (TVM)?", "acceptedAnswer": {"@type": "Answer", "text": "The Time Value of Money is the core financial principle that a sum of money is worth more today than the exact same sum of money in the future. This is due to its potential earning capacity (interest) and the destructive force of inflation."}},
-        {"@type": "Question", "name": "Why is money today worth more than money tomorrow?", "acceptedAnswer": {"@type": "Answer", "text": "If you have ₹10,000 today, you can invest it at 10% and have ₹11,000 next year. If you wait until next year to receive the ₹10,000, you have permanently lost the opportunity to earn that ₹1,000 in interest."}},
-        {"@type": "Question", "name": "What is Future Value (FV)?", "acceptedAnswer": {"@type": "Answer", "text": "Future Value is the amount that a current sum of money will grow to at a specified future date, assuming a specific interest rate (compounding). It tells you what today's money will become."}},
-        {"@type": "Question", "name": "What is Present Value (PV)?", "acceptedAnswer": {"@type": "Answer", "text": "Present Value is the exact opposite of Future Value. It tells you what a future sum of money is actually worth right now, today, when discounted back by a specific interest rate or inflation rate."}},
-        {"@type": "Question", "name": "How does inflation relate to TVM?", "acceptedAnswer": {"@type": "Answer", "text": "Inflation is the negative application of TVM. While compound interest increases the Future Value of your money, inflation decreases the Future Purchasing Power of your money. TVM calculates both sides."}},
-        {"@type": "Question", "name": "What is the Discount Rate?", "acceptedAnswer": {"@type": "Answer", "text": "The discount rate is the interest rate used to calculate Present Value. It represents the rate of return you could have earned if you had the money today, or it represents the inflation rate degrading the money."}},
-        {"@type": "Question", "name": "Why is TVM important in real life?", "acceptedAnswer": {"@type": "Answer", "text": "TVM is the math behind every financial decision. It is how banks calculate your home loan EMI, how insurance companies price your life insurance policies, and how investors decide if a business is worth buying."}},
-        {"@type": "Question", "name": "Does TVM apply to salaries?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. If your company promises you a ₹5 Lakh bonus, but delays paying it for 2 years, they are mathematically stealing from you. The Present Value of that ₹5 Lakhs is much lower due to the 2 years of lost investment potential."}},
-        {"@type": "Question", "name": "Is compounding the same as TVM?", "acceptedAnswer": {"@type": "Answer", "text": "Compounding is the mathematical engine that drives TVM. TVM is the philosophy, and compound interest is the formula used to calculate the exact values across time."}},
-        {"@type": "Question", "name": "What are the 5 variables in a TVM calculation?", "acceptedAnswer": {"@type": "Answer", "text": "The five variables are: Present Value (PV), Future Value (FV), Number of Periods (n), Interest Rate (r), and Payment amount (PMT - used for recurring investments like SIPs or EMIs)."}}
+        {
+          "@type": "Question",
+          "name": "What is the Time Value of Money (TVM)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Time Value of Money is the core financial principle that a sum of money is worth more today than the exact same sum of money in the future. This is due to its potential earning capacity (interest) and the destructive force of inflation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is money today worth more than money tomorrow?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you have \u20b910,000 today, you can invest it at 10% and have \u20b911,000 next year. If you wait until next year to receive the \u20b910,000, you have permanently lost the opportunity to earn that \u20b91,000 in interest."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Future Value (FV)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Future Value is the amount that a current sum of money will grow to at a specified future date, assuming a specific interest rate (compounding). It tells you what today's money will become."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Present Value (PV)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Present Value is the exact opposite of Future Value. It tells you what a future sum of money is actually worth right now, today, when discounted back by a specific interest rate or inflation rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does inflation relate to TVM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Inflation is the negative application of TVM. While compound interest increases the Future Value of your money, inflation decreases the Future Purchasing Power of your money. TVM calculates both sides."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Discount Rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The discount rate is the interest rate used to calculate Present Value. It represents the rate of return you could have earned if you had the money today, or it represents the inflation rate degrading the money."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is TVM important in real life?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TVM is the math behind every financial decision. It is how banks calculate your home loan EMI, how insurance companies price your life insurance policies, and how investors decide if a business is worth buying."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does TVM apply to salaries?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. If your company promises you a \u20b95 Lakh bonus, but delays paying it for 2 years, they are mathematically stealing from you. The Present Value of that \u20b95 Lakhs is much lower due to the 2 years of lost investment potential."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is compounding the same as TVM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Compounding is the mathematical engine that drives TVM. TVM is the philosophy, and compound interest is the formula used to calculate the exact values across time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the 5 variables in a TVM calculation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The five variables are: Present Value (PV), Future Value (FV), Number of Periods (n), Interest Rate (r), and Payment amount (PMT - used for recurring investments like SIPs or EMIs)."
+          }
+        }
       ]
     }
   ]
 }
+
 </script>
 </head>
 <body class="text-slate-700">

@@ -28,67 +28,75 @@
     </style>
 
     <script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "WebPage",
+      "name": "XIRR vs CAGR: Calculating Mutual Fund Returns",
+      "url": "https://arthcalculator.in/blog/xirr-vs-cagr-for-mutual-fund-returns/"
+    },
+    {
+      "@type": "Article",
+      "headline": "XIRR vs CAGR: Calculating Mutual Fund Returns",
+      "mainEntityOfPage": "https://arthcalculator.in/blog/xirr-vs-cagr-for-mutual-fund-returns/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "Organization",
-          "name": "ArthCalculator",
-          "url": "https://arthcalculator.in/"
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://arthcalculator.in/"
         },
         {
-          "@type": "WebPage",
-          "name": "XIRR vs CAGR: Calculating Mutual Fund Returns",
-          "url": "https://arthcalculator.in/blog/xirr-vs-cagr-for-mutual-fund-returns/"
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://arthcalculator.in/blog/"
         },
         {
-          "@type": "Article",
-          "headline": "XIRR vs CAGR: Calculating Mutual Fund Returns",
-          "mainEntityOfPage": "https://arthcalculator.in/blog/xirr-vs-cagr-for-mutual-fund-returns/",
-          "publisher": {
-            "@type": "Organization",
-            "name": "ArthCalculator"
+          "@type": "ListItem",
+          "position": 3,
+          "name": "XIRR vs CAGR",
+          "item": "https://arthcalculator.in/blog/xirr-vs-cagr-for-mutual-fund-returns/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why can't I use CAGR for my SIP investments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CAGR assumes you invested a single lump-sum amount at the beginning of the period. Because a SIP involves multiple investments at different times (each having a different holding period), CAGR will give you a wildly incorrect and inflated result. You must use XIRR for SIPs."
           }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
-            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://arthcalculator.in/blog/" },
-            { "@type": "ListItem", "position": 3, "name": "XIRR vs CAGR", "item": "https://arthcalculator.in/blog/xirr-vs-cagr-for-mutual-fund-returns/" }
-          ]
+          "@type": "Question",
+          "name": "What is Absolute Return?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolute return is simply how much money you made divided by how much you invested, completely ignoring the time it took. A 50% absolute return is amazing if achieved in 1 year, but terrible if it took 10 years."
+          }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Why can't I use CAGR for my SIP investments?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "CAGR assumes you invested a single lump-sum amount at the beginning of the period. Because a SIP involves multiple investments at different times (each having a different holding period), CAGR will give you a wildly incorrect and inflated result. You must use XIRR for SIPs."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What is Absolute Return?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Absolute return is simply how much money you made divided by how much you invested, completely ignoring the time it took. A 50% absolute return is amazing if achieved in 1 year, but terrible if it took 10 years."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is XIRR the same as annualized return?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, XIRR effectively calculates the annualized return (the average yearly growth rate) of a series of irregular cash flows occurring at different intervals."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "Is XIRR the same as annualized return?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, XIRR effectively calculates the annualized return (the average yearly growth rate) of a series of irregular cash flows occurring at different intervals."
+          }
         }
       ]
     }
+  ]
+}
+
     </script>
 </head>
 <body class="text-slate-700">

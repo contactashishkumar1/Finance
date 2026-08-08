@@ -21,14 +21,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>body{font-family:Inter,sans-serif;background:#f8fafc}.prose p{margin:0 0 1rem;line-height:1.8}.prose h2{margin-top:2.8rem}.prose h3{margin-top:1.8rem}</style>
 <script type="application/ld+json">
+
 {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Organization",
-      "name": "ArthCalculator",
-      "url": "https://arthcalculator.in/"
-    },
     {
       "@type": "WebPage",
       "name": "Fixed vs Floating Interest Rate Explained",
@@ -37,37 +33,119 @@
     {
       "@type": "Article",
       "headline": "Fixed vs Floating Interest Rate Explained",
-      "mainEntityOfPage": "https://arthcalculator.in/blog/fixed-vs-floating-interest-rate/",
-      "publisher": {
-        "@type": "Organization",
-        "name": "ArthCalculator"
-      }
+      "mainEntityOfPage": "https://arthcalculator.in/blog/fixed-vs-floating-interest-rate/"
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/"},
-        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://arthcalculator.in/blog/"},
-        {"@type": "ListItem", "position": 3, "name": "Fixed vs Floating Rate", "item": "https://arthcalculator.in/blog/fixed-vs-floating-interest-rate/"}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://arthcalculator.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://arthcalculator.in/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Fixed vs Floating Rate",
+          "item": "https://arthcalculator.in/blog/fixed-vs-floating-interest-rate/"
+        }
       ]
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
-        {"@type": "Question", "name": "What is a fixed interest rate?", "acceptedAnswer": {"@type": "Answer", "text": "A fixed interest rate remains unchanged for the entire duration of the loan. Your monthly EMI is locked in, providing complete certainty regarding your future cash outflows."}},
-        {"@type": "Question", "name": "What is a floating interest rate?", "acceptedAnswer": {"@type": "Answer", "text": "A floating (or variable) interest rate fluctuates based on the broader market conditions, specifically the RBI repo rate. When the central bank raises rates, your loan interest goes up, and vice versa."}},
-        {"@type": "Question", "name": "Why are fixed rates usually higher than floating rates?", "acceptedAnswer": {"@type": "Answer", "text": "Banks charge a premium for fixed rates (often 1-2% higher) because they are taking on the 'interest rate risk'. If market rates spike in the future, the bank is protected by the premium you paid upfront."}},
-        {"@type": "Question", "name": "Which rate is better for a home loan?", "acceptedAnswer": {"@type": "Answer", "text": "For long-term home loans, a floating rate is almost always recommended in India. It is initially cheaper, lacks prepayment penalties, and historically balances out over a 20-year economic cycle."}},
-        {"@type": "Question", "name": "Can I switch from a fixed to a floating rate?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, most banks allow you to switch (convert) your loan from fixed to floating (or vice versa), but they will charge a conversion fee, which is usually a percentage of the outstanding principal."}},
-        {"@type": "Question", "name": "Do floating rate loans have prepayment penalties?", "acceptedAnswer": {"@type": "Answer", "text": "No. The Reserve Bank of India (RBI) mandates that banks cannot charge foreclosure or prepayment penalties on floating-rate home loans taken by individuals."}},
-        {"@type": "Question", "name": "Do fixed rate loans have prepayment penalties?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Unlike floating rates, banks can and will charge heavy prepayment penalties (often 2% to 4%) if you try to close a fixed-rate loan early."}},
-        {"@type": "Question", "name": "What happens to my EMI when a floating rate goes up?", "acceptedAnswer": {"@type": "Answer", "text": "When the rate increases, banks usually prefer to extend your loan tenure rather than increasing your EMI. However, if you are nearing retirement, they may be forced to increase the EMI amount."}},
-        {"@type": "Question", "name": "Are personal loans fixed or floating?", "acceptedAnswer": {"@type": "Answer", "text": "Personal loans and auto loans are almost exclusively offered at fixed interest rates, as they are short-term, unsecured forms of credit."}},
-        {"@type": "Question", "name": "What is a hybrid or mixed interest rate?", "acceptedAnswer": {"@type": "Answer", "text": "A hybrid loan offers a fixed interest rate for the first few years (e.g., 2 to 5 years). After the initial fixed period ends, the loan automatically converts into a floating rate loan for the remaining tenure."}}
+        {
+          "@type": "Question",
+          "name": "What is a fixed interest rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A fixed interest rate remains unchanged for the entire duration of the loan. Your monthly EMI is locked in, providing complete certainty regarding your future cash outflows."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a floating interest rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A floating (or variable) interest rate fluctuates based on the broader market conditions, specifically the RBI repo rate. When the central bank raises rates, your loan interest goes up, and vice versa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why are fixed rates usually higher than floating rates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Banks charge a premium for fixed rates (often 1-2% higher) because they are taking on the 'interest rate risk'. If market rates spike in the future, the bank is protected by the premium you paid upfront."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which rate is better for a home loan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For long-term home loans, a floating rate is almost always recommended in India. It is initially cheaper, lacks prepayment penalties, and historically balances out over a 20-year economic cycle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I switch from a fixed to a floating rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, most banks allow you to switch (convert) your loan from fixed to floating (or vice versa), but they will charge a conversion fee, which is usually a percentage of the outstanding principal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do floating rate loans have prepayment penalties?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The Reserve Bank of India (RBI) mandates that banks cannot charge foreclosure or prepayment penalties on floating-rate home loans taken by individuals."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do fixed rate loans have prepayment penalties?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Unlike floating rates, banks can and will charge heavy prepayment penalties (often 2% to 4%) if you try to close a fixed-rate loan early."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to my EMI when a floating rate goes up?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When the rate increases, banks usually prefer to extend your loan tenure rather than increasing your EMI. However, if you are nearing retirement, they may be forced to increase the EMI amount."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are personal loans fixed or floating?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Personal loans and auto loans are almost exclusively offered at fixed interest rates, as they are short-term, unsecured forms of credit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a hybrid or mixed interest rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A hybrid loan offers a fixed interest rate for the first few years (e.g., 2 to 5 years). After the initial fixed period ends, the loan automatically converts into a floating rate loan for the remaining tenure."
+          }
+        }
       ]
     }
   ]
 }
+
 </script>
 </head>
 <body class="text-slate-700">
