@@ -54,10 +54,50 @@
         },
         {
           "@type": "Question",
+          "name": "Can I claim HRA if I live in my own house?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. HRA exemption is only applicable if you are paying rent. If you own the house you live in, the entire HRA amount received from your employer will be fully taxable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need rent receipts for HRA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Employers usually require monthly rent receipts as proof to calculate your TDS correctly. If your rent exceeds ₹1,00,000 annually, providing the landlord's PAN is mandatory."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Is HRA allowed in the new tax regime?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, HRA tax exemption is only available under the Old Tax Regime. The New Tax Regime does not allow most deductions or exemptions."
+            "text": "No. The New Tax Regime offers lower slab rates but removes almost all exemptions, including HRA. You must choose the Old Regime to claim HRA benefits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I claim HRA and home loan interest both?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, if you own a house in one city and pay rent in another due to employment, you can claim both HRA exemption and Section 24 home loan interest deduction."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is PAN of landlord mandatory for HRA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, if your annual rent exceeds ₹1,00,000, it is mandatory to provide the PAN of your landlord to your employer to claim the HRA exemption."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I pay rent to my parents and claim HRA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can pay rent to your parents and claim HRA. However, the rent you pay will be added to your parents' taxable income, and you cannot pay rent to your spouse."
           }
         }
       ]
@@ -308,44 +348,80 @@
                 </div>
             </section>
 
+            <!-- Limitations & Mistakes -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow mb-10">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 mt-2">Limitations of this Calculator</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm mb-6">
+                    <li><strong>Only Applicable for Old Tax Regime:</strong> This calculator assumes you are opting for the Old Tax Regime. The New Tax Regime does not allow any HRA exemptions.</li>
+                    <li><strong>Does Not Check PAN Requirements:</strong> The calculator does not warn you if your rent crosses the ₹1,00,000 limit where submitting your landlord's PAN becomes legally mandatory.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mb-4 mt-6">Common Mistakes</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm">
+                    <li><strong>Submitting Fake Rent Receipts:</strong> Creating fake rent receipts without actually transferring money to a valid account. The Income Tax Department tracks banking transactions; cash receipts are highly scrutinized.</li>
+                    <li><strong>Claiming HRA while living in own house:</strong> Claiming HRA just because you receive it, even though you live in a house owned by yourself or your spouse. This is illegal and leads to heavy penalties upon assessment.</li>
+                </ul>
+            </section>
+
             <!-- FAQ Section -->
             <section class="max-w-4xl mx-auto" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
                 <div class="space-y-4">
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 text-sm sm:text-base">What is HRA exemption?</span>
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base">1. What is HRA exemption?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">HRA exemption is the tax-free part of the House Rent Allowance component of your salary. It is designed to lower the tax burden for individuals paying rent for their residential accommodation.</div>
                     </details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 text-sm sm:text-base">How is HRA calculated in India?</span>
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base">2. How is HRA calculated in India?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">It is the lowest of three amounts: Actual HRA received, Rent paid minus 10% of basic salary, or a fixed percentage of salary (50% for metros and 40% for non-metros).</div>
                     </details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 text-sm sm:text-base">Can I claim HRA if I live in my own house?</span>
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base">3. Can I claim HRA if I live in my own house?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">No. HRA exemption is only applicable if you are paying rent. If you own the house you live in, the entire HRA amount received from your employer will be fully taxable.</div>
                     </details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 text-sm sm:text-base">Do I need rent receipts for HRA?</span>
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base">4. Do I need rent receipts for HRA?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Yes. Employers usually require monthly rent receipts as proof to calculate your TDS correctly. If your rent exceeds ₹1,00,000 annually, providing the landlord's PAN is mandatory.</div>
                     </details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 text-sm sm:text-base">Is HRA allowed in the new tax regime?</span>
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base">5. Is HRA allowed in the new tax regime?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">No. The New Tax Regime (FY 2025-26) offers lower slab rates but removes almost all exemptions, including HRA. You must choose the Old Regime to claim HRA benefits.</div>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">No. The New Tax Regime offers lower slab rates but removes almost all exemptions, including HRA. You must choose the Old Regime to claim HRA benefits.</div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base">6. Can I claim HRA and home loan interest both?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Yes, if you own a house in one city and pay rent in another due to employment, you can claim both HRA exemption and Section 24 home loan interest deduction.</div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base">7. Is PAN of landlord mandatory for HRA?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Yes, if your annual rent exceeds ₹1,00,000, it is mandatory to provide the PAN of your landlord to your employer to claim the HRA exemption.</div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base">8. Can I pay rent to my parents and claim HRA?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Yes, you can pay rent to your parents and claim HRA. However, the rent you pay will be added to your parents' taxable income, and you cannot pay rent to your spouse.</div>
                     </details>
                 </div>
             </section>

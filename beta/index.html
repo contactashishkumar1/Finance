@@ -113,6 +113,38 @@
             "@type": "Answer",
             "text": "Yes. A negative beta means the stock moves inversely to the market. Gold-related assets often exhibit this behavior."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Beta predict future stock prices?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, Beta only measures historical volatility. It helps you understand how a stock might react to market movements but doesn't guarantee specific targets."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often does Beta change?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Beta is a dynamic metric. It can change daily as new price data is added and older data falls off the calculation window. However, significant changes usually happen over months or years."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I find historical Volatility?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most financial portals (like NSE India, Moneycontrol, or Screener) provide the annualized volatility (standard deviation) of stocks which you can input here."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a Beta of 1 mean zero risk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. A Beta of 1 simply means the stock has the same risk as the overall market. If the market crashes by 20%, a stock with a Beta of 1 is also expected to crash by roughly 20%."
+          }
         }
       }
     }
@@ -367,6 +399,25 @@
                         Advanced risk balancing strategies utilize beta to compute the cost of equity within the Capital Asset Pricing Model (CAPM framework). By mapping a stock's customized volatility metric, financial planners and Chartered Accountants can accurately determine hurdle rates for equity valuation modeling. Tracking these risk parameters protects long-term compounding structures, helping individuals optimize asset distribution models across diverse asset classes while matching their risk tolerance levels perfectly.
                     </p>
                 </div>
+                
+                <h3 class="text-xl font-bold text-slate-900 mb-4 mt-8">Benefits of Using Beta</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm mb-6">
+                    <li><strong>Objective Risk Measurement:</strong> Removes emotion by providing a strict mathematical representation of how volatile an asset is.</li>
+                    <li><strong>CAPM Integration:</strong> Essential for calculating the Expected Return of a stock using the Capital Asset Pricing Model.</li>
+                    <li><strong>Portfolio Structuring:</strong> Helps investors construct balanced portfolios by mixing high-beta growth stocks with low-beta defensive anchors.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mb-4 mt-6">Limitations of the Calculator</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm mb-6">
+                    <li><strong>Backward Looking:</strong> Beta relies purely on historical price data. It assumes past volatility will accurately predict future market behavior, which is not always true.</li>
+                    <li><strong>Ignores Idiosyncratic Risk:</strong> Beta only measures market (systematic) risk. It completely ignores risks specific to the company itself, such as management changes or new regulations.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mb-4 mt-6">Common Mistakes</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm">
+                    <li><strong>Confusing Low Beta with No Risk:</strong> A stock with a Beta of 0.5 can still crash if the underlying company goes bankrupt. Low beta only means it is less sensitive to broader market swings.</li>
+                    <li><strong>Using the Wrong Benchmark:</strong> Comparing a small-cap IT stock against the Nifty 50 might give a misleading Beta. It should ideally be compared against the Nifty IT index.</li>
+                </ul>
             </section>
 
             <section class="max-w-4xl mx-auto py-10 text-pretty" id="faqs">
@@ -377,6 +428,9 @@
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty text-pretty">3. What is a "Good" Beta for a stock?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">There is no single "good" beta. It depends on your risk appetite. For long-term wealth building, a mix of 1.0 to 1.3 is often preferred, while retirees may prefer beta below 0.8 for protection.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty text-pretty">4. Can a stock have a negative Beta?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">Yes. A negative beta means the stock moves inversely to the market. Gold-related assets or inverse ETFs often exhibit this behavior.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">5. Does Beta predict future stock prices?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">No, Beta only measures historical volatility. It helps you understand how a stock might react to market movements but doesn't guarantee specific targets.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">6. How often does Beta change?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Beta is a dynamic metric. It can change daily as new price data is added and older data falls off the calculation window. However, significant changes usually happen over months or years.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">7. Where can I find historical Volatility?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Most financial portals (like NSE India, Moneycontrol, or Screener) provide the annualized volatility (standard deviation) of stocks which you can input here.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">8. Does a Beta of 1 mean zero risk?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">No. A Beta of 1 simply means the stock has the same risk as the overall market. If the market crashes by 20%, a stock with a Beta of 1 is also expected to crash by roughly 20%.</div></details>
                 </div>
             </section>
 

@@ -7,7 +7,21 @@ def generate_sitemap():
     sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
 
     html_files = []
+    
+    # Exclude these 6 redirect directories from the sitemap
+    exclude_dirs = [
+        "step-up-loan-emi-planner",
+        "lrs-tcs-refund-calculator",
+        "health-insurance-top-up-vs-base-plan-evaluator",
+        "mutual-fund-portfolio-overlap-estimator",
+        "risk-reward",
+        "irr"
+    ]
+
     for root, dirs, files in os.walk("."):
+        # Don't traverse into excluded directories
+        dirs[:] = [d for d in dirs if d not in exclude_dirs]
+        
         for file in files:
             if file.endswith(".html"):
                 path = os.path.join(root, file)
@@ -18,7 +32,13 @@ def generate_sitemap():
                 if url_path == "/": url_path = ""
                 
                 full_url = "https://arthcalculator.in" + url_path
-                sitemap += f'  <url>\n    <loc>{full_url}</loc>\n  </url>\n'
+                html_files.append(full_url)
+                
+    # Sort the URLs alphabetically so git diffs are clean
+    html_files.sort()
+    
+    for full_url in html_files:
+        sitemap += f'  <url>\n    <loc>{full_url}</loc>\n  </url>\n'
 
     sitemap += '</urlset>'
 

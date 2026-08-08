@@ -56,7 +56,80 @@
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
         { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
         { "@type": "ListItem", "position": 3, "name": "ROI Calculator", "item": "https://arthcalculator.in/roi-calculator/" }
-      }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a good ROI for an investment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In India, a long-term ROI that beats inflation (approx 6%) and Fixed Deposit rates (approx 7%) is considered good. For equity investments, a 12-15% annual return is generally the target."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate ROI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Subtract the initial cost from the final value to find your profit. Divide that profit by the initial cost and multiply by 100 to get the percentage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is ROI better than CAGR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ROI is simpler for quick snapshots, but CAGR is much better for comparing investments over different durations because it accounts for the time value of money."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can ROI be negative?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. If your final value is less than your initial investment, your ROI will be a negative percentage, representing a loss."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does ROI account for time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The basic ROI formula does not account for time. Doubling your money in 1 year or 10 years both give a 100% ROI. However, you can calculate an Annualized ROI if you know the holding period."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use ROI for a business project?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, ROI is widely used in corporate finance to measure the profitability of capital expenditures (CapEx) or marketing campaigns."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I include taxes when calculating ROI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a true net ROI, you must deduct taxes, brokerage fees, and any other overhead costs from your final value before calculating."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a good ROI for a small business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A good ROI for a small business typically ranges from 15% to 30%, depending heavily on the industry risk and the owner's sweat equity."
+          }
+        }
+      ]
     }
     </script>
 
@@ -277,6 +350,20 @@
                     </div>
                 </div>
             </section>
+            
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 mt-2">Limitations of this Calculator</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm mb-6">
+                    <li><strong>Ignores Time Value of Money:</strong> Basic ROI treats ₹1 Lakh earned today exactly the same as ₹1 Lakh earned 5 years from now.</li>
+                    <li><strong>No Cash Flow Consideration:</strong> It only looks at the start and end values, ignoring intermediate cash flows like dividends, maintenance costs, or partial withdrawals.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mb-4 mt-6">Common Mistakes</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm">
+                    <li><strong>Forgetting to Deduct Costs:</strong> Calculating ROI on Gross Revenue instead of Net Profit is a fatal error. You must subtract your initial investment and overheads.</li>
+                    <li><strong>Comparing Short vs Long Term:</strong> Comparing a 1-month trade with 5% ROI against a 1-year FD with 7% ROI without annualizing them will lead to poor capital allocation.</li>
+                </ul>
+            </section>
 
             <section class="max-w-4xl mx-auto py-10 text-pretty" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
@@ -285,6 +372,10 @@
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">How do I calculate ROI?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Subtract the initial cost from the final value to find your profit. Divide that profit by the initial cost and multiply by 100 to get the percentage.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Is ROI better than CAGR?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">ROI is simpler for quick snapshots, but <a href="/cagr/" class="text-blue-600 underline">CAGR</a> is much better for comparing investments over different durations because it accounts for the time value of money.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty text-pretty text-pretty text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">Can ROI be negative?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Yes. If your final value is less than your initial investment, your ROI will be a negative percentage, representing a loss.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Does ROI account for time?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">The basic ROI formula does not account for time. Doubling your money in 1 year or 10 years both give a 100% ROI. However, you can calculate an Annualized ROI if you know the holding period.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Can I use ROI for a business project?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Yes, ROI is widely used in corporate finance to measure the profitability of capital expenditures (CapEx) or marketing campaigns.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Should I include taxes when calculating ROI?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">For a true net ROI, you must deduct taxes, brokerage fees, and any other overhead costs from your final value before calculating.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What is a good ROI for a small business?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">A good ROI for a small business typically ranges from 15% to 30%, depending heavily on the industry risk and the owner's sweat equity.</div></details>
                 </div>
             </section>
 

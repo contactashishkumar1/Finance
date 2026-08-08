@@ -104,53 +104,85 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is inflation?",
+          "name": "1. What inflation rate should I assume for India?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Inflation is the rate at which the general level of prices for goods and services is rising, and, subsequently, purchasing power is falling. It's a key factor when planning for long-term goals using a SIP Calculator."
+            "text": "Historically, 6% is a safe average for long-term planning. For medical or education, assume 8-10%."
           }
         },
         {
           "@type": "Question",
-          "name": "What is purchasing power?",
+          "name": "2. What is the \"Rule of 72\" in inflation?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Purchasing power is the value of a currency expressed in terms of the amount of goods or services that one unit of money can buy."
+            "text": "Divide 72 by the inflation rate. At 6% inflation, costs double every 12 years (72/6)."
           }
         },
         {
           "@type": "Question",
-          "name": "What is real return?",
+          "name": "3. How accurate are inflation calculators?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Real return is the annual percentage of profit earned on an investment, adjusted for inflation. Formula: Real Return = Nominal Return - Inflation Rate."
+            "text": "They are mathematically exact based on your inputs. However, actual market inflation varies year-on-year."
           }
         },
         {
           "@type": "Question",
-          "name": "How to beat inflation in India?",
+          "name": "4. Is CAGR better than FD to beat inflation?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The best way to beat inflation in India is by investing in assets like equity mutual funds through a Systematic Investment Plan (SIP) or lumpsum investments that historically offer returns higher than 10-12%."
+            "text": "Equity CAGR (12-15%) usually beats inflation easily, whereas FDs (7%) barely provide any real growth after tax."
           }
         },
         {
           "@type": "Question",
-          "name": "Is Fixed Deposit (FD) safe against inflation?",
+          "name": "5. What is lifestyle inflation?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "While FDs are safe in terms of capital protection, they often provide negative real returns because the interest rate (post-tax) is frequently lower than the inflation rate."
+            "text": "This occurs when your spending increases as your income grows, often faster than the actual inflation rate."
           }
         },
         {
           "@type": "Question",
-          "name": "What inflation rate to assume for financial planning in India?",
+          "name": "6. Why does the RBI raise interest rates when inflation is high?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "For standard lifestyle expenses, 6% is a safe assumption. However, for education and healthcare, it is recommended to assume an inflation rate of 8-10%."
+            "text": "Higher rates reduce the money supply and demand, which helps cool down rising prices."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "7. Does inflation affect my EMI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Indirectly, yes. High inflation leads to repo rate hikes, which increases floating-rate loan EMIs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "8. What is \"Purchasing Power\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is the amount of goods or services that one unit of currency can buy. It falls as inflation rises."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "9. Is zero inflation good?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Generally, moderate inflation (4-6%) is considered healthy for an economy as it encourages spending and investment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "10. Can I calculate inflation for a single month?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, set the years to 1 in our tool to see the annual impact, or divide the rate by 12 for a rough monthly estimate."
           }
         }
-      }
+      ]    }
     }
     </script>
 
@@ -399,6 +431,20 @@
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Inflation Formula Used</h2>
                 <div class="formula-box text-blue-800 text-center mb-6 text-sm">FV = PV × (1 + r)<sup>n</sup></div>
                 <p class="text-xs text-slate-500 font-medium"><strong>FV:</strong> Future Value | <strong>PV:</strong> Present Value | <strong>r:</strong> Inflation Rate | <strong>n:</strong> Years</p>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 mt-2">Limitations of this Calculator</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm mb-6">
+                    <li><strong>Uniform Rate Assumption:</strong> It assumes inflation stays exactly the same every year. In reality, India's CPI fluctuates significantly year over year based on crude prices, monsoons, and RBI policies.</li>
+                    <li><strong>Doesn't Account for Sectoral Inflation:</strong> While average CPI might be 6%, medical and education inflation in India often runs in double digits (10-12%). A single rate doesn't capture these nuances.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mb-4 mt-6">Common Mistakes</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm">
+                    <li><strong>Confusing Inflation with Lifestyle Creep:</strong> A 6% inflation rate covers the rising cost of the *same* lifestyle. If you also upgrade your lifestyle (better cars, costlier vacations), your required future cost will far exceed this calculation.</li>
+                    <li><strong>Ignoring Taxes on Returns:</strong> Assuming an 8% FD will easily beat 6% inflation without realizing that after a 30% income tax slab, the real return is actually negative.</li>
+                </ul>
             </section>
 
             <section class="max-w-4xl mx-auto py-10" id="faqs">

@@ -60,8 +60,56 @@
             "@type": "Answer",
             "text": "A good portfolio return should ideally beat inflation (approx 6%) and Fixed Deposit rates (approx 7%). For long-term equity heavy portfolios, 12-15% is considered healthy."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Does diversification increase returns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Diversification primarily reduces risk (volatility). While it might slightly lower potential peak returns compared to a single lucky stock, it ensures long-term survival and consistent wealth growth."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Difference between CAGR and Absolute Return?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolute return is total profit %. CAGR is the smoothed annual growth rate. If you double money in 10 years, Absolute is 100%, but CAGR is 7.2%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should I review my portfolio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A semi-annual or annual review is best. Over-monitoring leads to panic-selling, while under-monitoring leads to carrying obsolete or bad assets. Check your Net Worth regularly for better context."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I include my EPF or PPF in my portfolio return?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. To get a true picture of your wealth growth, you should include debt instruments like EPF, PPF, and FDs. They lower your overall return but accurately reflect your total capital safety."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Asset Allocation Weight leakage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is when a high-performing asset grows so much that it dominates your portfolio (e.g. from 10% to 40%). This increases your risk if that single asset crashes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I track real estate returns in this calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Enter the total purchase price + registration costs as 'Invested' and the current estimated market value as 'Value' to see how your property is dragging or boosting your overall portfolio."
+          }
         }
-      }
+      ]
     }
     </script>
 
@@ -292,6 +340,20 @@
                 </div>
             </section>
 
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow mb-10">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 mt-2">Limitations of this Calculator</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm mb-6">
+                    <li><strong>Does Not Account for Cash Drag:</strong> This tool assumes all your entered capital is fully invested. It does not account for the cash lying idle in your savings account, which actually brings down your true net worth CAGR.</li>
+                    <li><strong>Simplistic Time-Weighting:</strong> The calculator asks for an average "Years" figure for each asset block. If you made monthly SIPs into an asset, simply entering the total years since the first SIP will artificially lower the calculated CAGR. (Use our XIRR tool for precise SIP returns).</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mb-4 mt-6">Common Mistakes</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm">
+                    <li><strong>Ignoring Losers:</strong> Investors often only input their winning stocks or funds into the calculator and conveniently ignore the assets that are in the red, leading to a false sense of high performance.</li>
+                    <li><strong>Over-Diversification:</strong> Holding 30 different mutual funds does not increase returns, it just guarantees average performance while making portfolio tracking extremely tedious. Keep it under 5-7 core funds.</li>
+                </ul>
+            </section>
+
             <!-- FAQ Section -->
             <section class="max-w-4xl mx-auto py-10" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
@@ -301,6 +363,9 @@
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Does diversification increase returns?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Diversification primarily reduces risk (volatility). While it might slightly lower potential peak returns compared to a single lucky stock, it ensures long-term survival and consistent wealth growth.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Difference between CAGR and Absolute Return?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Absolute return is total profit %. CAGR is the smoothed annual growth rate. If you double money in 10 years, Absolute is 100%, but CAGR is 7.2%.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How often should I review my portfolio?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">A semi-annual or annual review is best. Over-monitoring leads to panic-selling, while under-monitoring leads to carrying obsolete or bad assets. Check your <a href="/net-worth/" class="text-blue-600 underline">Net Worth</a> regularly for better context.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Should I include my EPF or PPF in my portfolio return?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Yes. To get a true picture of your wealth growth, you should include debt instruments like EPF, PPF, and FDs. They lower your overall return but accurately reflect your total capital safety.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">What is Asset Allocation Weight leakage?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">It is when a high-performing asset grows so much that it dominates your portfolio (e.g. from 10% to 40%). This increases your risk if that single asset crashes.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Can I track real estate returns in this calculator?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Yes. Enter the total purchase price + registration costs as "Invested" and the current estimated market value as "Value" to see how your property is dragging or boosting your overall portfolio.</div></details>
                 </div>
             </section>
 

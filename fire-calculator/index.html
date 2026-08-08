@@ -164,6 +164,22 @@
             "@type": "Answer",
             "text": "A robust FIRE plan must include a separate emergency fund and comprehensive health insurance coverage outside of your 'FIRE Number' to handle medical inflation."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Lean FIRE vs Fat FIRE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lean FIRE means retiring with a minimalist lifestyle and a smaller corpus. Fat FIRE means retiring with a large corpus to maintain a luxurious, high-spending lifestyle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I buy a house before hitting FIRE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is highly recommended to have a paid-off primary residence before you pull the trigger on FIRE, to eliminate rent uncertainty and reduce monthly outflows."
+          }
         }
       }
     }
@@ -416,7 +432,37 @@
                 </div>
             </section>
 
-            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 mt-2">Limitations of this Calculator</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm mb-6">
+                    <li><strong>Static Inflation:</strong> It assumes a constant 6% inflation rate. Real inflation fluctuates, and healthcare/education inflation is typically much higher than average.</li>
+                    <li><strong>Static Market Returns:</strong> Assumes a flat annualized return. In reality, sequence of returns risk (a market crash just after you retire) can drastically alter outcomes.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mb-4 mt-6">Common Mistakes</h3>
+                <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm">
+                    <li><strong>Underestimating Lifestyle Inflation:</strong> As you earn more, you spend more. If you calculate FIRE based on your 25-year-old bachelor expenses, you will be severely underfunded when you are 40 with a family.</li>
+                    <li><strong>Ignoring Taxes:</strong> The 4% you withdraw is often taxable. Your FIRE corpus needs to account for long-term capital gains tax deductions.</li>
+                </ul>
+            </section>
+
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is the FIRE movement?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">It is a financial strategy focused on extreme saving and investing to gain financial freedom and retire decades before the traditional age of 60.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">How much money do I need to retire early?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">A safe estimate is 25 to 30 times your annual expenses. If you spend ₹6 Lakhs a year, you need at least ₹1.5 Crore to ₹1.8 Crore invested.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Is FIRE possible with a normal salary in India?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Yes, but it requires a very high savings rate (usually >40%) and avoiding lifestyle inflation. Starting early and using SIPs is the most practical path.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">How long does it take to reach financial independence?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">It primarily depends on your 'Savings Rate.' If you save 50% of your income, you can technically retire in approximately 17 years. If you save 70%, it can take less than 10 years.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What are the best investments for FIRE?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Most FIRE seekers use a mix of broad market Index Funds, Equity Mutual Funds for growth, and Debt funds/PPF for stability as they get closer to their early retirement date.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Does FIRE account for medical emergencies?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">A robust FIRE plan must include a separate emergency fund and comprehensive health insurance coverage outside of your 'FIRE Number' to handle medical inflation.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is Lean FIRE vs Fat FIRE?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Lean FIRE means retiring with a minimalist lifestyle and a smaller corpus. Fat FIRE means retiring with a large corpus to maintain a luxurious, high-spending lifestyle.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Should I buy a house before hitting FIRE?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">It is highly recommended to have a paid-off primary residence before you pull the trigger on FIRE, to eliminate rent uncertainty and reduce monthly outflows.</div></details>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center text-pretty max-w-6xl mx-auto mb-12">
                 <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider md:text-left text-pretty">Related Financial Tools</h2>
                 <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7 gap-4 text-pretty">
                     <a href="/sip/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center text-pretty">
