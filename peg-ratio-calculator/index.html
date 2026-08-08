@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEG Ratio Calculator (2026) – Price/Earnings-to-Growth</title>
+    <meta name="description" content="Calculate Price/Earnings-to-Growth (PEG) ratio for 2026 stock analysis. Evaluate P/E ratio, EPS growth rate %, and determine overvalued vs undervalued stocks.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/peg-ratio-calculator/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PEG Ratio Calculator (2026)">
+    <meta property="og:description" content="Calculate PEG Ratio to find growth stocks at reasonable prices (GARP).">
+    <meta property="og:url" content="https://arthcalculator.in/peg-ratio-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "PEG Ratio Calculator",
+      "url": "https://arthcalculator.in/peg-ratio-calculator/",
+      "description": "Calculate PEG Ratio to find growth stocks at reasonable prices (GARP).",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "PEG Ratio Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://arthcalculator.in/peg-ratio-calculator/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "PEG Ratio Calculator",
+        "item": "https://arthcalculator.in/peg-ratio-calculator/"
+      }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the PEG Ratio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The PEG Ratio (Price/Earnings-to-Growth) is a valuation metric that adjusts a stock's P/E ratio by factoring in its expected earnings per share (EPS) growth rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the PEG Ratio calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Formula: PEG Ratio = (P/E Ratio) / (Annual EPS Growth Rate %). For example, a stock with P/E of 25 and EPS growth of 25% has a PEG ratio of 1.0."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is considered a good PEG Ratio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A PEG ratio below 1.0 indicates an undervalued stock relative to its earnings growth. A PEG ratio of 1.0 represents fair valuation, while a PEG above 1.5 suggests overvaluation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is PEG ratio better than P/E ratio alone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "P/E ratio ignores growth. High-growth companies often trade at high P/E ratios (e.g. 40x). The PEG ratio clarifies whether a high P/E is justified by high EPS growth."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is GARP Investing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GARP (Growth At A Reasonable Price) is an investment strategy popularized by Peter Lynch that targets stocks with strong EPS growth trading at a PEG ratio ≤ 1.0."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should trailing EPS growth or forward EPS growth be used?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Institutional investors prefer Forward PEG using estimated 3-5 year forward EPS growth rates rather than historical trailing growth."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can PEG ratio be negative?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If a company has negative earnings or declining EPS growth, the resulting negative PEG ratio is meaningless and cannot be used for valuation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does PEG ratio account for dividend yield?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Dividend-Adjusted PEG Ratio (PEGY) includes dividend yield: PEGY = (P/E) / (EPS Growth Rate + Dividend Yield %)."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-blue-200">
+    <div id="navbar"></div>
+    <script>
+        fetch("/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+                const menuBtn = document.getElementById("menuBtn");
+                const mobileMenu = document.getElementById("mobileMenu");
+                if(menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                    });
+                }
+            });
+    </script>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+            <ol class="flex list-none p-0">
+                <li class="flex items-center">
+                    <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="text-blue-600 font-bold">PEG Ratio Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">PEG Ratio <span class="text-blue-600">Calculator (2026)</span></h1>
+            <p class="text-lg text-slate-600 mb-6">
+                Calculate Price/Earnings-to-Growth (PEG) ratio to find growth stocks trading at reasonable valuations (GARP).
+            </p>
+        </div>
+
+        <!-- Calculator Interface -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+            
+            <!-- Inputs -->
+            <div class="lg:col-span-6 bg-white rounded-2xl p-6 md:p-8 card-shadow border border-slate-100 space-y-6">
+                <h2 class="text-xl font-bold text-slate-800 border-b pb-3">Stock Valuation Inputs</h2>
+
+                <!-- Current P/E Ratio -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Price to Earnings (P/E) Ratio</label>
+                        <div class="relative">
+                            <input type="number" id="peInput" value="24.0" min="1" max="200" step="0.5" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-8 font-bold">
+                            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium text-xs">x</span>
+                        </div>
+                    </div>
+                    <input type="range" id="peRange" min="1" max="150" step="0.5" value="24.0" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <!-- Expected EPS Growth Rate (%) -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Expected EPS Growth Rate (p.a.)</label>
+                        <div class="relative">
+                            <input type="number" id="growthInput" value="30.0" min="1" max="100" step="0.5" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-7 font-bold">
+                            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium text-xs">%</span>
+                        </div>
+                    </div>
+                    <input type="range" id="growthRange" min="1" max="100" step="0.5" value="30.0" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <!-- Dividend Yield (%) (Optional) -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Annual Dividend Yield (%)</label>
+                        <div class="relative">
+                            <input type="number" id="divYieldInput" value="1.5" min="0" max="15" step="0.1" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-7 font-bold">
+                            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium text-xs">%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Output Display -->
+            <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+                
+                <div class="bg-blue-600 text-white rounded-2xl p-6 md:p-8 card-shadow">
+                    <p class="text-blue-100 text-xs font-bold uppercase tracking-wider mb-2">Calculated PEG Ratio</p>
+                    <h3 class="text-4xl md:text-5xl font-black mb-4" id="pegVal">0.80</h3>
+                    
+                    <div class="border-t border-blue-500/50 pt-4 grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <p class="text-blue-200 text-xs">Dividend-Adjusted PEGY</p>
+                            <p class="text-xl font-bold text-white mt-1" id="pegyVal">0.76</p>
+                        </div>
+                        <div>
+                            <p class="text-blue-200 text-xs">Valuation Status</p>
+                            <p class="text-xl font-bold text-emerald-300 mt-1" id="valuationStatusVal">UNDERVALUED (< 1.0)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-slate-100 space-y-3 text-sm">
+                    <h4 class="font-bold text-slate-800 border-b pb-2">GARP Investing Screen</h4>
+                    <div class="flex justify-between text-xs">
+                        <span class="text-slate-600">Peter Lynch GARP Rating</span>
+                        <span class="font-bold text-emerald-600" id="garpRatingDisp">Attractive Growth Buy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content Section -->
+        <article class="bg-white rounded-2xl p-6 md:p-10 card-shadow border border-slate-100 mb-16 prose prose-slate max-w-none">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">PEG Ratio Valuation Rules (2026)</h2>
+            <p>
+                The PEG ratio adjusts a stock's earnings multiple based on expected EPS growth rate, preventing investors from discarding fast-growing companies trading at high P/E ratios.
+            </p>
+
+            <div class="my-6 overflow-x-auto not-prose">
+                <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden text-sm">
+                    <thead class="bg-slate-100">
+                        <tr>
+                            <th class="p-3.5 border-b font-bold text-slate-700">PEG Ratio Range</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Valuation Verdict</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Peter Lynch Insight</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 bg-white">
+                        <tr>
+                            <td class="p-3.5 font-bold text-emerald-600">< 1.0</td>
+                            <td class="p-3.5 font-semibold text-emerald-600">Undervalued (Bargain Growth)</td>
+                            <td class="p-3.5 text-slate-700">Growth rate exceeds P/E multiple; prime GARP candidate</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">1.0 = 1.0</td>
+                            <td class="p-3.5 font-semibold text-slate-800">Fairly Valued</td>
+                            <td class="p-3.5 text-slate-700">Stock price accurately reflects expected EPS growth rate</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-rose-600">> 1.5</td>
+                            <td class="p-3.5 font-semibold text-rose-600">Overvalued</td>
+                            <td class="p-3.5 text-rose-600 font-bold">P/E ratio is too high relative to realistic EPS growth</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            
+            
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Price/Earnings-to-Growth (PEG) Valuation Rules</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Undervalued (PEG < 1.0):</strong> Stock P/E ratio is lower than its expected annual EPS growth rate (Peter Lynch GARP bargain).</li>
+            <li><strong>Fairly Valued (PEG = 1.0):</strong> Stock price accurately reflects earnings growth prospects.</li>
+            <li><strong>Overvalued (PEG > 1.5):</strong> P/E multiple is excessively inflated relative to realistic EPS growth.</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">GARP (Growth At A Reasonable Price) Strategy</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Overcoming High P/E Bias:</strong> A stock with P/E of 30x growing EPS at 35% (PEG 0.85) is CHEAPER than a stock with P/E of 15x growing EPS at 5% (PEG 3.0).</li>
+            <li><strong>PEGY Adjustment:</strong> Includes dividend yield: PEGY = P/E / (EPS Growth Rate + Dividend Yield %).</li>
+        </ul>
+
+        <div class="mt-8 p-5 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl not-prose">
+            <h4 class="text-base font-bold text-blue-900 mb-1">PEG Growth Screen</h4>
+            <p class="text-xs text-blue-800 leading-relaxed">
+                Use 3-5 year projected Forward EPS Growth rates rather than past trailing growth to calculate forward PEG for high-tech and mid-cap growth stocks.
+            </p>
+        </div>
+
+            <div class="mt-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl not-prose">
+                <h3 class="text-lg font-bold text-slate-800 mb-2">Explore Related Financial Tools & Calculators</h3>
+                <p class="text-xs text-slate-500 mb-4">Compare options across loan EMIs, tax savings, and compounding growth:</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-medium">
+                    <a href="/piotroski-score-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Piotroski F-Score</a>
+                    <a href="/dividend-discount-model/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">DDM Valuation</a>
+                    <a href="/dcf-valuation-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">DCF Valuation</a>
+                    <a href="/eps-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">EPS Calculator</a>
+                    <a href="/roce-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">ROCE Calculator</a>
+                    <a href="/roe-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">ROE Calculator</a>
+                    <a href="/sip/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SIP Calculator</a>
+                    <a href="/income-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Income Tax Tool</a>
+                    <a href="/capital-gains-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Capital Gains Tax</a>
+                    <a href="/lumpsum/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Lumpsum Calculator</a>
+                    <a href="/inflation/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Inflation Calculator</a>
+                    <a href="/cagr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">CAGR Calculator</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- FAQs -->
+        <div class="mb-16" id="faqs">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is the PEG Ratio?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        The PEG Ratio (Price/Earnings-to-Growth) is a valuation metric that adjusts a stock's P/E ratio by factoring in its expected earnings per share (EPS) growth rate.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How is the PEG Ratio calculated?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Formula: PEG Ratio = (P/E Ratio) / (Annual EPS Growth Rate %). For example, a stock with P/E of 25 and EPS growth of 25% has a PEG ratio of 1.0.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is considered a good PEG Ratio?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        A PEG ratio below 1.0 indicates an undervalued stock relative to its earnings growth. A PEG ratio of 1.0 represents fair valuation, while a PEG above 1.5 suggests overvaluation.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Why is PEG ratio better than P/E ratio alone?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        P/E ratio ignores growth. High-growth companies often trade at high P/E ratios (e.g. 40x). The PEG ratio clarifies whether a high P/E is justified by high EPS growth.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is GARP Investing?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        GARP (Growth At A Reasonable Price) is an investment strategy popularized by Peter Lynch that targets stocks with strong EPS growth trading at a PEG ratio ≤ 1.0.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Should trailing EPS growth or forward EPS growth be used?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Institutional investors prefer Forward PEG using estimated 3-5 year forward EPS growth rates rather than historical trailing growth.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Can PEG ratio be negative?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        If a company has negative earnings or declining EPS growth, the resulting negative PEG ratio is meaningless and cannot be used for valuation.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Does PEG ratio account for dividend yield?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        The Dividend-Adjusted PEG Ratio (PEGY) includes dividend yield: PEGY = (P/E) / (EPS Growth Rate + Dividend Yield %).
+                    </div>
+                </details>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global JS Hooks for Linking & Search -->
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        const elements = {
+            peInput: document.getElementById('peInput'),
+            peRange: document.getElementById('peRange'),
+            growthInput: document.getElementById('growthInput'),
+            growthRange: document.getElementById('growthRange'),
+            divYieldInput: document.getElementById('divYieldInput'),
+            
+            pegVal: document.getElementById('pegVal'),
+            pegyVal: document.getElementById('pegyVal'),
+            valuationStatusVal: document.getElementById('valuationStatusVal'),
+            garpRatingDisp: document.getElementById('garpRatingDisp')
+        };
+
+        function calculatePeg() {
+            const pe = parseFloat(elements.peInput.value) || 1;
+            const growth = parseFloat(elements.growthInput.value) || 1;
+            const divYield = parseFloat(elements.divYieldInput.value) || 0;
+
+            const peg = pe / growth;
+            const pegy = pe / (growth + divYield);
+
+            elements.pegVal.textContent = peg.toFixed(2);
+            elements.pegyVal.textContent = pegy.toFixed(2);
+
+            if (peg < 1.0) {
+                elements.valuationStatusVal.textContent = "UNDERVALUED (< 1.0)";
+                elements.valuationStatusVal.className = "text-xl font-bold text-emerald-300";
+                elements.garpRatingDisp.textContent = "Attractive Growth Buy (Peter Lynch GARP)";
+                elements.garpRatingDisp.className = "font-bold text-emerald-600";
+            } else if (peg <= 1.2) {
+                elements.valuationStatusVal.textContent = "FAIRLY VALUED (~ 1.0)";
+                elements.valuationStatusVal.className = "text-xl font-bold text-white";
+                elements.garpRatingDisp.textContent = "Fair Valuation Target";
+                elements.garpRatingDisp.className = "font-bold text-blue-600";
+            } else {
+                elements.valuationStatusVal.textContent = "OVERVALUED (> 1.2)";
+                elements.valuationStatusVal.className = "text-xl font-bold text-rose-300";
+                elements.garpRatingDisp.textContent = "Expensive relative to EPS Growth";
+                elements.garpRatingDisp.className = "font-bold text-rose-600";
+            }
+        }
+
+        function setupSync(input, range) {
+            input.addEventListener('input', () => { range.value = input.value; calculatePeg(); });
+            range.addEventListener('input', () => { input.value = range.value; calculatePeg(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.peInput, elements.peRange);
+            setupSync(elements.growthInput, elements.growthRange);
+            elements.divYieldInput.addEventListener('input', calculatePeg);
+            
+            calculatePeg();
+        });
+    </script>
+</body>
+</html>

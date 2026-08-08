@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piotroski F-Score Calculator (2026) – 9-Point Value Stock Screen</title>
+    <meta name="description" content="Calculate Joseph Piotroski 9-point F-Score in 2026. Screen value stocks for fundamental strength, profitability, liquidity, and operating efficiency.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/piotroski-score-calculator/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Piotroski F-Score Calculator (2026)">
+    <meta property="og:description" content="Calculate Piotroski 9-point F-Score to screen value stocks in India.">
+    <meta property="og:url" content="https://arthcalculator.in/piotroski-score-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Piotroski F-Score Calculator",
+      "url": "https://arthcalculator.in/piotroski-score-calculator/",
+      "description": "Calculate Piotroski 9-point F-Score to screen value stocks in India.",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Piotroski F-Score Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://arthcalculator.in/piotroski-score-calculator/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Piotroski F-Score",
+        "item": "https://arthcalculator.in/piotroski-score-calculator/"
+      }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Piotroski F-Score?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Piotroski F-Score is a 9-point scoring system developed by Stanford Accounting Professor Joseph Piotroski to evaluate the financial strength of value stocks across Profitability, Leverage/Liquidity, and Operating Efficiency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What score range indicates a strong company?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A score of 8 or 9 indicates high financial health and turnaround potential. A score of 0 to 4 indicates weak fundamentals and high financial distress risk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the 4 Profitability Criteria?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1. Positive Net Income (+1), 2. Positive Operating Cash Flow (+1), 3. Higher Return on Assets (ROA) YoY (+1), 4. Cash Flow from Operations > Net Income (+1)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the 3 Leverage and Liquidity Criteria?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "5. Lower Long-term Debt Ratio YoY (+1), 6. Higher Current Ratio YoY (+1), 7. Zero Share Dilution / No new equity shares issued (+1)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the 2 Operating Efficiency Criteria?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "8. Higher Gross Margin percentage YoY (+1), 9. Higher Asset Turnover ratio YoY (+1)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is Cash Flow > Net Income important?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This rule ensures earnings quality, confirming that profits are supported by real cash inflow rather than aggressive accrual accounting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Piotroski F-Score outperform market indices?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Academic studies by Joseph Piotroski showed that buying high F-Score (8-9) value stocks and shorting low F-Score (0-2) stocks generated an annual outperformance of 7.5% over benchmark indices."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which type of stocks is Piotroski F-Score best suited for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is best suited for low price-to-book (P/B) value stocks, small-cap value companies, and turnaround candidates."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-blue-200">
+    <div id="navbar"></div>
+    <script>
+        fetch("/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+                const menuBtn = document.getElementById("menuBtn");
+                const mobileMenu = document.getElementById("mobileMenu");
+                if(menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                    });
+                }
+            });
+    </script>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+            <ol class="flex list-none p-0">
+                <li class="flex items-center">
+                    <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="text-blue-600 font-bold">Piotroski F-Score</li>
+            </ol>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Piotroski F-Score <span class="text-blue-600">Calculator (2026)</span></h1>
+            <p class="text-lg text-slate-600 mb-6">
+                Screen value stocks using Joseph Piotroski's 9-point fundamental financial checklist.
+            </p>
+        </div>
+
+        <!-- Calculator Interface -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+            
+            <!-- Inputs Checklist -->
+            <div class="lg:col-span-7 bg-white rounded-2xl p-6 md:p-8 card-shadow border border-slate-100 space-y-6">
+                <h2 class="text-xl font-bold text-slate-800 border-b pb-3">9-Point Fundamental Checklist</h2>
+
+                <!-- Profitability (4 points) -->
+                <div class="space-y-3">
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-blue-600">Group A: Profitability Signals (4 Points)</h3>
+                    
+                    <label class="flex items-center space-x-3 text-sm font-medium text-slate-700 cursor-pointer">
+                        <input type="checkbox" class="f-check w-5 h-5 text-blue-600 rounded" checked>
+                        <span>1. Positive Net Income in current year (+1)</span>
+                    </label>
+                    <label class="flex items-center space-x-3 text-sm font-medium text-slate-700 cursor-pointer">
+                        <input type="checkbox" class="f-check w-5 h-5 text-blue-600 rounded" checked>
+                        <span>2. Positive Operating Cash Flow (CFO) (+1)</span>
+                    </label>
+                    <label class="flex items-center space-x-3 text-sm font-medium text-slate-700 cursor-pointer">
+                        <input type="checkbox" class="f-check w-5 h-5 text-blue-600 rounded" checked>
+                        <span>3. Higher Return on Assets (ROA) YoY (+1)</span>
+                    </label>
+                    <label class="flex items-center space-x-3 text-sm font-medium text-slate-700 cursor-pointer">
+                        <input type="checkbox" class="f-check w-5 h-5 text-blue-600 rounded" checked>
+                        <span>4. Cash Flow from Operations > Net Income (Quality Earnings) (+1)</span>
+                    </label>
+                </div>
+
+                <!-- Leverage & Liquidity (3 points) -->
+                <div class="space-y-3 border-t pt-4">
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-blue-600">Group B: Leverage & Liquidity Signals (3 Points)</h3>
+                    
+                    <label class="flex items-center space-x-3 text-sm font-medium text-slate-700 cursor-pointer">
+                        <input type="checkbox" class="f-check w-5 h-5 text-blue-600 rounded" checked>
+                        <span>5. Decreased Long-term Debt Ratio YoY (+1)</span>
+                    </label>
+                    <label class="flex items-center space-x-3 text-sm font-medium text-slate-700 cursor-pointer">
+                        <input type="checkbox" class="f-check w-5 h-5 text-blue-600 rounded" checked>
+                        <span>6. Higher Current Ratio YoY (+1)</span>
+                    </label>
+                    <label class="flex items-center space-x-3 text-sm font-medium text-slate-700 cursor-pointer">
+                        <input type="checkbox" class="f-check w-5 h-5 text-blue-600 rounded" checked>
+                        <span>7. No New Shares Issued (Zero Dilution) (+1)</span>
+                    </label>
+                </div>
+
+                <!-- Operating Efficiency (2 points) -->
+                <div class="space-y-3 border-t pt-4">
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-blue-600">Group C: Operating Efficiency Signals (2 Points)</h3>
+                    
+                    <label class="flex items-center space-x-3 text-sm font-medium text-slate-700 cursor-pointer">
+                        <input type="checkbox" class="f-check w-5 h-5 text-blue-600 rounded" checked>
+                        <span>8. Higher Gross Margin Percentage YoY (+1)</span>
+                    </label>
+                    <label class="flex items-center space-x-3 text-sm font-medium text-slate-700 cursor-pointer">
+                        <input type="checkbox" class="f-check w-5 h-5 text-blue-600 rounded">
+                        <span>9. Higher Asset Turnover Ratio YoY (+1)</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Output Display -->
+            <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+                
+                <div class="bg-blue-600 text-white rounded-2xl p-6 md:p-8 card-shadow">
+                    <p class="text-blue-100 text-xs font-bold uppercase tracking-wider mb-2">Total Piotroski F-Score</p>
+                    <h3 class="text-5xl md:text-6xl font-black mb-4" id="fScoreVal">8 / 9</h3>
+                    
+                    <div class="border-t border-blue-500/50 pt-4 text-sm">
+                        <p class="text-blue-200 text-xs">Fundamental Quality Status</p>
+                        <p class="text-xl font-bold text-emerald-300 mt-1" id="fScoreStatusVal">HIGH FINANCIAL STRENGTH (8-9)</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-slate-100 space-y-3 text-sm">
+                    <h4 class="font-bold text-slate-800 border-b pb-2">Category Score Breakdown</h4>
+                    <div class="flex justify-between text-xs">
+                        <span class="text-slate-600">Profitability Signals</span>
+                        <span class="font-bold text-slate-800" id="profScoreVal">4 / 4</span>
+                    </div>
+                    <div class="flex justify-between text-xs">
+                        <span class="text-slate-600">Leverage & Liquidity</span>
+                        <span class="font-bold text-slate-800" id="levScoreVal">3 / 3</span>
+                    </div>
+                    <div class="flex justify-between text-xs border-t pt-2">
+                        <span class="text-slate-600">Operating Efficiency</span>
+                        <span class="font-bold text-blue-600" id="effScoreVal">1 / 2</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content Section -->
+        <article class="bg-white rounded-2xl p-6 md:p-10 card-shadow border border-slate-100 mb-16 prose prose-slate max-w-none">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">Piotroski F-Score Grading Matrix (2026)</h2>
+            <p>
+                The F-Score ranks value stocks from 0 to 9 to separate fundamentally improving turnarounds from value traps.
+            </p>
+
+            <div class="my-6 overflow-x-auto not-prose">
+                <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden text-sm">
+                    <thead class="bg-slate-100">
+                        <tr>
+                            <th class="p-3.5 border-b font-bold text-slate-700">F-Score Range</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Financial Condition</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Investment Strategy</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 bg-white">
+                        <tr>
+                            <td class="p-3.5 font-bold text-emerald-600">8 - 9 Points</td>
+                            <td class="p-3.5 font-semibold text-emerald-600">Strong Fundamentals</td>
+                            <td class="p-3.5 text-slate-700">Prime long buy candidate with high turnaround upside</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">5 - 7 Points</td>
+                            <td class="p-3.5 font-semibold text-slate-800">Average Health</td>
+                            <td class="p-3.5 text-slate-700">Stable company; requires sector catalyst verification</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-rose-600">0 - 4 Points</td>
+                            <td class="p-3.5 font-semibold text-rose-600">Weak / Value Trap</td>
+                            <td class="p-3.5 text-rose-600 font-bold">Avoid or short candidate due to deteriorating balance sheet</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            
+            
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Piotroski 9-Point Fundamental Score Matrix</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Strong Value Stocks (8-9 Points):</strong> High financial health, improving profit margins, strengthening balance sheet.</li>
+            <li><strong>Moderate Health (5-7 Points):</strong> Stable corporate performance; requires industry catalyst.</li>
+            <li><strong>Weak / Value Trap (0-4 Points):</strong> Deteriorating cash flows, high debt, earnings dilution risk.</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">9 Specific Checklist Rules Across 3 Groups</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Profitability (4 pts):</strong> Positive Net Income (+1), Positive Operating Cash Flow (+1), Higher ROA YoY (+1), CFO > Net Income (+1).</li>
+            <li><strong>Leverage/Liquidity (3 pts):</strong> Lower Long-term Debt YoY (+1), Higher Current Ratio YoY (+1), Zero Share Dilution (+1).</li>
+            <li><strong>Operating Efficiency (2 pts):</strong> Higher Gross Margin YoY (+1), Higher Asset Turnover YoY (+1).</li>
+        </ul>
+
+        <div class="mt-8 p-5 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl not-prose">
+            <h4 class="text-base font-bold text-blue-900 mb-1">Piotroski Outperformance Fact</h4>
+            <p class="text-xs text-blue-800 leading-relaxed">
+                Joseph Piotroski's landmark study demonstrated that buying high F-Score (8-9) low Price-to-Book value stocks delivered a 7.5% annual outperformance over market benchmarks!
+            </p>
+        </div>
+
+            <div class="mt-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl not-prose">
+                <h3 class="text-lg font-bold text-slate-800 mb-2">Explore Related Financial Tools & Calculators</h3>
+                <p class="text-xs text-slate-500 mb-4">Compare options across loan EMIs, tax savings, and compounding growth:</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-medium">
+                    <a href="/peg-ratio-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">PEG Ratio Tool</a>
+                    <a href="/dividend-discount-model/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">DDM Valuation</a>
+                    <a href="/dcf-valuation-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">DCF Valuation</a>
+                    <a href="/altman-z-score/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Altman Z-Score</a>
+                    <a href="/roce-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">ROCE Calculator</a>
+                    <a href="/roe-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">ROE Calculator</a>
+                    <a href="/sip/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SIP Calculator</a>
+                    <a href="/income-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Income Tax Tool</a>
+                    <a href="/capital-gains-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Capital Gains Tax</a>
+                    <a href="/lumpsum/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Lumpsum Calculator</a>
+                    <a href="/inflation/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Inflation Calculator</a>
+                    <a href="/cagr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">CAGR Calculator</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- FAQs -->
+        <div class="mb-16" id="faqs">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is the Piotroski F-Score?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        The Piotroski F-Score is a 9-point scoring system developed by Stanford Accounting Professor Joseph Piotroski to evaluate the financial strength of value stocks across Profitability, Leverage/Liquidity, and Operating Efficiency.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What score range indicates a strong company?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        A score of 8 or 9 indicates high financial health and turnaround potential. A score of 0 to 4 indicates weak fundamentals and high financial distress risk.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What are the 4 Profitability Criteria?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        1. Positive Net Income (+1), 2. Positive Operating Cash Flow (+1), 3. Higher Return on Assets (ROA) YoY (+1), 4. Cash Flow from Operations > Net Income (+1).
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What are the 3 Leverage and Liquidity Criteria?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        5. Lower Long-term Debt Ratio YoY (+1), 6. Higher Current Ratio YoY (+1), 7. Zero Share Dilution / No new equity shares issued (+1).
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What are the 2 Operating Efficiency Criteria?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        8. Higher Gross Margin percentage YoY (+1), 9. Higher Asset Turnover ratio YoY (+1).
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Why is Cash Flow > Net Income important?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        This rule ensures earnings quality, confirming that profits are supported by real cash inflow rather than aggressive accrual accounting.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Can Piotroski F-Score outperform market indices?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Academic studies by Joseph Piotroski showed that buying high F-Score (8-9) value stocks and shorting low F-Score (0-2) stocks generated an annual outperformance of 7.5% over benchmark indices.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Which type of stocks is Piotroski F-Score best suited for?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        It is best suited for low price-to-book (P/B) value stocks, small-cap value companies, and turnaround candidates.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global JS Hooks for Linking & Search -->
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        const checkboxes = document.querySelectorAll('.f-check');
+        const fScoreVal = document.getElementById('fScoreVal');
+        const fScoreStatusVal = document.getElementById('fScoreStatusVal');
+        const profScoreVal = document.getElementById('profScoreVal');
+        const levScoreVal = document.getElementById('levScoreVal');
+        const effScoreVal = document.getElementById('effScoreVal');
+
+        function calculateFScore() {
+            let totalScore = 0;
+            let profScore = 0;
+            let levScore = 0;
+            let effScore = 0;
+
+            checkboxes.forEach((cb, index) => {
+                if (cb.checked) {
+                    totalScore++;
+                    if (index < 4) profScore++;
+                    else if (index < 7) levScore++;
+                    else effScore++;
+                }
+            });
+
+            fScoreVal.textContent = totalScore + " / 9";
+            profScoreVal.textContent = profScore + " / 4";
+            levScoreVal.textContent = levScore + " / 3";
+            effScoreVal.textContent = effScore + " / 2";
+
+            if (totalScore >= 8) {
+                fScoreStatusVal.textContent = "HIGH FINANCIAL STRENGTH (8-9)";
+                fScoreStatusVal.className = "text-xl font-bold text-emerald-300";
+            } else if (totalScore >= 5) {
+                fScoreStatusVal.textContent = "MODERATE STRENGTH (5-7)";
+                fScoreStatusVal.className = "text-xl font-bold text-white";
+            } else {
+                fScoreStatusVal.textContent = "WEAK / DISTRESS RISK (0-4)";
+                fScoreStatusVal.className = "text-xl font-bold text-rose-300";
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            checkboxes.forEach(cb => cb.addEventListener('change', calculateFScore));
+            calculateFScore();
+        });
+    </script>
+</body>
+</html>

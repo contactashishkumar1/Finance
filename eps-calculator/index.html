@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPS Calculator (2026) – EPFO Pension Scheme Calculation</title>
+    <meta name="description" content="Calculate monthly EPS (Employees' Pension Scheme) pension payout under EPFO rules for 2026. Calculate pensionable salary, service years, and higher pension option.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/eps-calculator/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="EPS Calculator (2026)">
+    <meta property="og:description" content="Calculate monthly EPFO Employees' Pension Scheme (EPS) payout in India.">
+    <meta property="og:url" content="https://arthcalculator.in/eps-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "EPS Calculator",
+      "url": "https://arthcalculator.in/eps-calculator/",
+      "description": "Calculate monthly EPFO Employees' Pension Scheme (EPS) payout in India.",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "EPS Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://arthcalculator.in/eps-calculator/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "EPS Pension Calculator",
+        "item": "https://arthcalculator.in/eps-calculator/"
+      }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is EPS (Employees' Pension Scheme)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "EPS-95 is a social security pension scheme administered by EPFO. Out of the employer's 12% EPF contribution, 8.33% (up to ₹1,250/mo) goes into the EPS account to provide monthly pension after age 58."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the formula to calculate EPS Monthly Pension?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Monthly Pension = (Pensionable Salary * Pensionable Service) / 70."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the statutory wage ceiling for EPS pensionable salary?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The standard statutory wage ceiling is ₹15,000 per month. However, employees who opted for Supreme Court's Higher Pension Scheme can calculate pension on actual basic salary."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the 2-year bonus rule for EPS pensionable service?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If an employee completes 20 or more years of continuous eligible service under EPS, 2 bonus years are added to their total pensionable service."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Minimum service required to be eligible for EPS pension?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An employee must complete at least 10 years of eligible service to qualify for a monthly pension at age 58."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I claim early EPS pension before age 58?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, early pension can be claimed between ages 50 and 58, but the pension amount is reduced by 4% for every year claimed before 58."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to EPS if service is less than 10 years?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If service is less than 10 years, the member is not eligible for monthly pension but can withdraw the full accumulated EPS amount using Form 10C."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is EPS monthly pension taxable in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, monthly EPS pension received after retirement is treated as 'Salary Income' and taxed according to the individual's income tax slab."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-blue-200">
+    <div id="navbar"></div>
+    <script>
+        fetch("/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+                const menuBtn = document.getElementById("menuBtn");
+                const mobileMenu = document.getElementById("mobileMenu");
+                if(menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                    });
+                }
+            });
+    </script>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+            <ol class="flex list-none p-0">
+                <li class="flex items-center">
+                    <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="text-blue-600 font-bold">EPS Pension Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">EPS Pension <span class="text-blue-600">Calculator (2026)</span></h1>
+            <p class="text-lg text-slate-600 mb-6">
+                Calculate your monthly EPFO Employees' Pension Scheme (EPS) payout at retirement under standard & higher pension rules.
+            </p>
+        </div>
+
+        <!-- Calculator Interface -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+            
+            <!-- Inputs -->
+            <div class="lg:col-span-6 bg-white rounded-2xl p-6 md:p-8 card-shadow border border-slate-100 space-y-6">
+                <h2 class="text-xl font-bold text-slate-800 border-b pb-3">EPFO Service Details</h2>
+
+                <!-- Pension Option -->
+                <div>
+                    <label class="font-semibold text-slate-700 text-sm block mb-2">Pension Scheme Type</label>
+                    <div class="grid grid-cols-2 gap-3" id="pensionTypeGroup">
+                        <button class="py-2.5 text-xs font-bold rounded-lg border border-slate-200 p-btn active bg-blue-600 text-white" data-type="standard">Standard Cap (₹15,000)</button>
+                        <button class="py-2.5 text-xs font-bold rounded-lg border border-slate-200 p-btn bg-slate-50 text-slate-700" data-type="higher">Higher Pension (Actual Wage)</button>
+                    </div>
+                </div>
+
+                <!-- Average Basic Salary -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Average Basic + DA (Last 60 Mos)</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
+                            <input type="number" id="salaryInput" value="15000" min="1000" step="1000" class="w-36 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                        </div>
+                    </div>
+                    <input type="range" id="salaryRange" min="5000" max="150000" step="1000" value="15000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <!-- Total EPS Service Years -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Total EPS Service</label>
+                        <div class="relative">
+                            <input type="number" id="serviceYearsInput" value="25" min="1" max="35" step="1" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-8 font-bold">
+                            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium text-xs">Yrs</span>
+                        </div>
+                    </div>
+                    <input type="range" id="serviceYearsRange" min="1" max="35" step="1" value="25" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <!-- Age at Retirement -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Retirement Age</label>
+                        <div class="relative">
+                            <input type="number" id="retireAgeInput" value="58" min="50" max="58" step="1" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-8 font-bold">
+                            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium text-xs">Yrs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Output Display -->
+            <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+                
+                <div class="bg-blue-600 text-white rounded-2xl p-6 md:p-8 card-shadow">
+                    <p class="text-blue-100 text-xs font-bold uppercase tracking-wider mb-2">Estimated Monthly EPS Pension</p>
+                    <h3 class="text-4xl md:text-5xl font-black mb-4" id="monthlyPensionVal">₹0</h3>
+                    
+                    <div class="border-t border-blue-500/50 pt-4 grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <p class="text-blue-200 text-xs">Pensionable Salary Used</p>
+                            <p class="text-xl font-bold text-white mt-1" id="pensionSalaryDisp">₹15,000</p>
+                        </div>
+                        <div>
+                            <p class="text-blue-200 text-xs">Effective Pension Service</p>
+                            <p class="text-xl font-bold text-emerald-300 mt-1" id="effectiveServiceDisp">27 Years</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-slate-100 space-y-3 text-sm">
+                    <h4 class="font-bold text-slate-800 border-b pb-2">EPFO Service Bonus & Rules</h4>
+                    <div class="flex justify-between">
+                        <span class="text-slate-600">Service Bonus (≥20 Yrs Service)</span>
+                        <span class="font-bold text-emerald-600" id="bonusYearsDisp">+2 Years Added</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-600">Early Retirement Deduction</span>
+                        <span class="font-bold text-slate-800" id="earlyFactorDisp">0% (Age 58)</span>
+                    </div>
+                    <div class="flex justify-between border-t pt-2">
+                        <span class="font-bold text-slate-800">Annual Pension Income</span>
+                        <span class="font-black text-blue-600 text-base" id="annualPensionDisp">₹0 / year</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content Section -->
+        <article class="bg-white rounded-2xl p-6 md:p-10 card-shadow border border-slate-100 mb-16 prose prose-slate max-w-none">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">EPFO Employees' Pension Scheme (EPS-95) Rules (2026)</h2>
+            <p>
+                The Employees' Pension Scheme (EPS) is managed by the Employees' Provident Fund Organisation (EPFO) for organized sector employees in India.
+            </p>
+
+            <div class="my-6 overflow-x-auto not-prose">
+                <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden text-sm">
+                    <thead class="bg-slate-100">
+                        <tr>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Parameter</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Standard EPS Scheme</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Higher Pension Scheme (Supreme Court Order)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 bg-white">
+                        <tr>
+                            <td class="p-3.5 font-medium text-slate-800">Wage Ceiling</td>
+                            <td class="p-3.5 text-blue-600 font-bold">₹15,000 / month</td>
+                            <td class="p-3.5 text-emerald-600 font-bold">Actual Basic + DA (No Cap)</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-medium text-slate-800">Employer EPS Contribution</td>
+                            <td class="p-3.5 text-slate-700">8.33% of ₹15k (Max ₹1,250/mo)</td>
+                            <td class="p-3.5 text-slate-700">8.33% of Actual Basic + 1.16% Additional</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-medium text-slate-800">Max Monthly Pension</td>
+                            <td class="p-3.5 text-slate-700">₹7,500 / month</td>
+                            <td class="p-3.5 text-emerald-600 font-bold">Proportional to Actual High Salary</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            
+            
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Basic vs Diluted Earnings Per Share (EPS)</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Basic EPS:</strong> (Net Profit After Tax - Preferred Dividends) / Weighted Average Outstanding Common Shares.</li>
+            <li><strong>Diluted EPS:</strong> Factors in potential share dilution from convertible debentures, stock options (ESOPs), and warrants.</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Role of EPS in Stock Valuation Metrics</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>P/E Ratio Backbone:</strong> Price-to-Earnings = Stock Price / EPS. High EPS growth drives stock price appreciation.</li>
+            <li><strong>Earnings Quality Audit:</strong> Ensure EPS growth is driven by core operational revenue rather than one-off asset sales or share buybacks.</li>
+        </ul>
+
+        <div class="mt-8 p-5 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl not-prose">
+            <h4 class="text-base font-bold text-blue-900 mb-1">EPS Growth Benchmark</h4>
+            <p class="text-xs text-blue-800 leading-relaxed">
+                Target companies demonstrating consistent 15%+ YoY EPS growth over 5 consecutive years for long-term compounder portfolios.
+            </p>
+        </div>
+
+            <div class="mt-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl not-prose">
+                <h3 class="text-lg font-bold text-slate-800 mb-2">Explore Related Financial Tools & Calculators</h3>
+                <p class="text-xs text-slate-500 mb-4">Compare options across loan EMIs, tax savings, and compounding growth:</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-medium">
+                    <a href="/epf/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">EPF Calculator</a>
+                    <a href="/esi-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">ESI Calculator</a>
+                    <a href="/gratuity-exemption-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Gratuity Exemption</a>
+                    <a href="/superannuation-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Superannuation</a>
+                    <a href="/nps-vs-epf-vs-ppf/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">NPS vs EPF vs PPF</a>
+                    <a href="/sip/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SIP Calculator</a>
+                    <a href="/income-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Income Tax Tool</a>
+                    <a href="/capital-gains-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Capital Gains Tax</a>
+                    <a href="/lumpsum/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Lumpsum Calculator</a>
+                    <a href="/inflation/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Inflation Calculator</a>
+                    <a href="/cagr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">CAGR Calculator</a>
+                    <a href="/80c-tax-saving/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">80C Tax Saving</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- FAQs -->
+        <div class="mb-16" id="faqs">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is EPS (Employees' Pension Scheme)?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        EPS-95 is a social security pension scheme administered by EPFO. Out of the employer's 12% EPF contribution, 8.33% (up to ₹1,250/mo) goes into the EPS account to provide monthly pension after age 58.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is the formula to calculate EPS Monthly Pension?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Monthly Pension = (Pensionable Salary * Pensionable Service) / 70.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is the statutory wage ceiling for EPS pensionable salary?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        The standard statutory wage ceiling is ₹15,000 per month. However, employees who opted for Supreme Court's Higher Pension Scheme can calculate pension on actual basic salary.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is the 2-year bonus rule for EPS pensionable service?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        If an employee completes 20 or more years of continuous eligible service under EPS, 2 bonus years are added to their total pensionable service.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Minimum service required to be eligible for EPS pension?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        An employee must complete at least 10 years of eligible service to qualify for a monthly pension at age 58.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Can I claim early EPS pension before age 58?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Yes, early pension can be claimed between ages 50 and 58, but the pension amount is reduced by 4% for every year claimed before 58.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What happens to EPS if service is less than 10 years?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        If service is less than 10 years, the member is not eligible for monthly pension but can withdraw the full accumulated EPS amount using Form 10C.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Is EPS monthly pension taxable in India?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Yes, monthly EPS pension received after retirement is treated as 'Salary Income' and taxed according to the individual's income tax slab.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global JS Hooks for Linking & Search -->
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        const elements = {
+            salaryInput: document.getElementById('salaryInput'),
+            salaryRange: document.getElementById('salaryRange'),
+            serviceYearsInput: document.getElementById('serviceYearsInput'),
+            serviceYearsRange: document.getElementById('serviceYearsRange'),
+            retireAgeInput: document.getElementById('retireAgeInput'),
+            pensionBtns: document.querySelectorAll('.p-btn'),
+            
+            monthlyPensionVal: document.getElementById('monthlyPensionVal'),
+            pensionSalaryDisp: document.getElementById('pensionSalaryDisp'),
+            effectiveServiceDisp: document.getElementById('effectiveServiceDisp'),
+            bonusYearsDisp: document.getElementById('bonusYearsDisp'),
+            earlyFactorDisp: document.getElementById('earlyFactorDisp'),
+            annualPensionDisp: document.getElementById('annualPensionDisp')
+        };
+
+        let pType = 'standard';
+
+        elements.pensionBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                elements.pensionBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-blue-600', 'text-white');
+                    b.classList.add('bg-slate-50', 'text-slate-700');
+                });
+                e.target.classList.remove('bg-slate-50', 'text-slate-700');
+                e.target.classList.add('active', 'bg-blue-600', 'text-white');
+                
+                pType = e.target.dataset.type;
+                if (pType === 'standard') {
+                    elements.salaryInput.value = 15000;
+                    elements.salaryRange.value = 15000;
+                } else {
+                    elements.salaryInput.value = 60000;
+                    elements.salaryRange.value = 60000;
+                }
+                calculateEps();
+            });
+        });
+
+        function formatIndian(val) {
+            return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+        }
+
+        function calculateEps() {
+            let rawSalary = parseFloat(elements.salaryInput.value) || 0;
+            let pensionableSalary = pType === 'standard' ? Math.min(15000, rawSalary) : rawSalary;
+            
+            const serviceYears = parseInt(elements.serviceYearsInput.value) || 0;
+            const retireAge = parseInt(elements.retireAgeInput.value) || 58;
+
+            let bonusYears = serviceYears >= 20 ? 2 : 0;
+            let effectiveService = Math.min(35, serviceYears + bonusYears);
+
+            let basePension = (pensionableSalary * effectiveService) / 70;
+
+            // Early retirement penalty: 4% per year before age 58
+            let ageDiff = Math.max(0, 58 - retireAge);
+            let earlyPenaltyPct = ageDiff * 0.04;
+            let finalPension = basePension * (1 - earlyPenaltyPct);
+
+            elements.monthlyPensionVal.textContent = formatIndian(finalPension);
+            elements.pensionSalaryDisp.textContent = formatIndian(pensionableSalary);
+            elements.effectiveServiceDisp.textContent = `${effectiveService} Years (${serviceYears} + ${bonusYears} Bonus)`;
+            elements.bonusYearsDisp.textContent = bonusYears > 0 ? "+2 Years Added (≥20 Yrs)" : "0 Years";
+            elements.earlyFactorDisp.textContent = ageDiff > 0 ? `-${ageDiff * 4}% (${ageDiff} Yrs Early)` : "0% (Age 58)";
+            elements.annualPensionDisp.textContent = formatIndian(finalPension * 12) + " / year";
+        }
+
+        function setupSync(input, range) {
+            input.addEventListener('input', () => { range.value = input.value; calculateEps(); });
+            range.addEventListener('input', () => { input.value = range.value; calculateEps(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.salaryInput, elements.salaryRange);
+            setupSync(elements.serviceYearsInput, elements.serviceYearsRange);
+            elements.retireAgeInput.addEventListener('input', calculateEps);
+            
+            calculateEps();
+        });
+    </script>
+</body>
+</html>

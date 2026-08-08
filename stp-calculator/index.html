@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STP Calculator: Systematic Transfer Plan Returns</title>
+    <meta name="description" content="Calculate returns for a Systematic Transfer Plan (STP). See how parking your lumpsum in a Debt Fund and transferring monthly to an Equity Fund boosts your wealth.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/stp-calculator/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="STP Calculator: Systematic Transfer Plan">
+    <meta property="og:description" content="Calculate returns for a Systematic Transfer Plan (STP). See how parking your lumpsum in a Debt Fund boosts wealth.">
+    <meta property="og:url" content="https://arthcalculator.in/stp-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "STP Calculator: Systematic Transfer Plan Returns",
+      "url": "https://arthcalculator.in/stp-calculator/",
+      "description": "Calculate returns for a Systematic Transfer Plan (STP). See how parking your lumpsum in a Debt Fund and transferring monthly to an Equity Fund boosts your wealth.",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "STP Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://arthcalculator.in/stp-calculator/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "STP Calculator",
+        "item": "https://arthcalculator.in/stp-calculator/"
+      }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a Systematic Transfer Plan (STP)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An STP allows an investor to park a lumpsum amount in a low-risk fund (usually a liquid or debt fund) and systematically transfer a fixed amount every month into a higher-risk fund (usually an equity fund) of the same mutual fund house."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is STP better than a normal SIP from a bank account?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In a normal SIP, the lumpsum sitting in your bank account earns a meager 2.5% to 3% interest. In an STP, the lumpsum is parked in a Debt mutual fund which can earn around 6% to 7% before it is transferred, thus generating extra returns."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why shouldn't I just invest the lumpsum directly into Equity?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Investing a large lumpsum directly into equity exposes you to timing risk (the risk of investing right before a market crash). An STP spreads your investment over time, allowing you to benefit from Rupee Cost Averaging, just like an SIP."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are there tax implications on the STP transfer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every monthly transfer from the Debt fund to the Equity fund is considered a 'Redemption' from the Debt fund and a 'Purchase' in the Equity fund. As per current rules, gains on debt mutual funds are taxed at your income tax slab rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I transfer between different mutual fund houses using STP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, you can only set up an STP between schemes of the exact same Mutual Fund Asset Management Company (AMC). For example, from HDFC Liquid Fund to HDFC Flexi Cap Fund."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens when my Debt fund runs out of money?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Once the lumpsum amount in your Debt fund (plus the interest it earned) is completely transferred to the Equity fund, the STP automatically stops."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the minimum amount required for STP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This varies by AMC, but typically a minimum lumpsum of ₹12,000 to ₹25,000 is required to start an STP, with minimum monthly transfers of ₹1,000."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long should an STP tenure be?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A standard recommendation for staggering a lumpsum into equity is between 6 months to 18 months, depending on the size of the lumpsum and current market valuations."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #8b5cf6; height: 6px; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-blue-200">
+    <div id="navbar"></div>
+    <script>
+        fetch("/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+                const menuBtn = document.getElementById("menuBtn");
+                const mobileMenu = document.getElementById("mobileMenu");
+                if(menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                    });
+                }
+            });
+    </script>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+    <ol class="flex list-none p-0">
+        <li class="flex items-center">
+            <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+            <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+        </li>
+        <li class="flex items-center">
+            <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+            <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+        </li>
+        <li class="text-blue-600 font-bold">STP Calculator</li>
+    </ol>
+</nav>
+
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Systematic Transfer Plan <span class="text-blue-600">STP Calculator</span></h1>
+            <p class="text-lg text-slate-600 mb-6">
+                Calculate how much extra wealth you can generate by parking your lumpsum in a Debt Fund and transferring it monthly to Equity, instead of leaving it in a savings account.
+            </p>
+            <div class="flex flex-wrap justify-center gap-3 text-xs md:text-sm font-medium">
+                <span class="bg-blue-50 text-blue-700 px-3 py-1.5 rounded-full border border-blue-100 flex items-center shadow-sm">
+                    <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    Debt to Equity Transfer
+                </span>
+                <span class="bg-emerald-50 text-emerald-700 px-3 py-1.5 rounded-full border border-emerald-100 flex items-center shadow-sm">
+                    <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Rupee Cost Averaging
+                </span>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+            
+            <!-- Left: Inputs -->
+            <div class="lg:col-span-6 bg-white rounded-2xl p-6 md:p-8 card-shadow border border-slate-100">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl font-bold text-slate-800">Transfer Details</h2>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Initial Lumpsum in Debt -->
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <label class="font-semibold text-slate-700">Total Lumpsum (in Debt Fund)</label>
+                            <div class="relative">
+                                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
+                                <input type="number" id="lumpsumInput" value="500000" min="10000" step="10000" class="w-32 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                            </div>
+                        </div>
+                        <input type="range" id="lumpsumRange" min="10000" max="10000000" step="10000" value="500000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                    </div>
+
+                    <!-- Monthly Transfer to Equity -->
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <label class="font-semibold text-slate-700">Monthly Transfer (to Equity)</label>
+                            <div class="relative">
+                                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
+                                <input type="number" id="transferInput" value="25000" min="1000" step="1000" class="w-32 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                            </div>
+                        </div>
+                        <input type="range" id="transferRange" min="1000" max="500000" step="1000" value="25000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                        <p class="text-xs text-rose-500 font-medium mt-2" id="transferError" style="display:none;">Transfer amount should not exceed total lumpsum.</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <!-- Debt Fund Return -->
+                        <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl">
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="text-xs font-bold text-blue-800 uppercase">Debt Return</label>
+                            </div>
+                            <div class="relative">
+                                <input type="number" id="debtRateInput" value="7.0" min="4" max="10" step="0.1" class="w-full text-right bg-white border border-blue-200 text-blue-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-7 font-bold">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-blue-500 font-medium">%</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Equity Fund Return -->
+                        <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-xl">
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="text-xs font-bold text-emerald-800 uppercase">Equity Return</label>
+                            </div>
+                            <div class="relative">
+                                <input type="number" id="equityRateInput" value="12.0" min="8" max="25" step="0.1" class="w-full text-right bg-white border border-emerald-200 text-emerald-900 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block p-2 pr-7 font-bold">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-emerald-500 font-medium">%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tenure Info -->
+                    <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl text-center">
+                        <p class="text-sm font-medium text-slate-600">The STP will run for approximately</p>
+                        <p class="text-xl font-bold text-blue-700 mt-1" id="monthsToDeplete">0 Months</p>
+                        <p class="text-xs text-slate-500 mt-1">until the debt fund is completely depleted.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Results -->
+            <div class="lg:col-span-6 flex flex-col gap-6">
+                <!-- Highlight Result Card -->
+                <div class="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-6 md:p-8 card-shadow text-white relative overflow-hidden flex-grow flex flex-col justify-center">
+                    <div class="absolute -right-10 -top-10 w-40 h-40 bg-white opacity-10 rounded-full blur-2xl"></div>
+                    <div class="relative z-10 text-center">
+                        <p class="text-blue-100 font-medium text-sm md:text-base mb-1 uppercase tracking-wider">Total Value (At End of STP)</p>
+                        <h3 class="text-5xl md:text-6xl font-bold mb-8 text-white" id="totalValueDisp">₹0</h3>
+                        
+                        <div class="grid grid-cols-2 gap-4 border-t border-blue-500/50 pt-6 text-left">
+                            <div>
+                                <p class="text-blue-200 text-xs font-medium mb-1">Total Investment</p>
+                                <p class="text-xl font-bold" id="investmentDisp">₹0</p>
+                            </div>
+                            <div>
+                                <p class="text-blue-200 text-xs font-medium mb-1">Total Gains</p>
+                                <p class="text-xl font-bold text-emerald-400" id="gainsDisp">₹0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-slate-100">
+                    <h3 class="text-sm font-bold text-slate-800 mb-4 uppercase">How does this compare?</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="p-3 bg-slate-50 rounded-lg border border-slate-100">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-slate-600 font-semibold">If kept in Bank Account & Normal SIP</span>
+                                <span class="font-bold text-slate-800" id="bankScenarioVal">₹0</span>
+                            </div>
+                            <p class="text-xs text-slate-500">Assuming 3% savings interest on the balance.</p>
+                        </div>
+                        <div class="flex justify-between items-center p-3 text-emerald-700 bg-emerald-50 rounded-lg border border-emerald-100 font-bold">
+                            <span>Extra Wealth Created by STP</span>
+                            <span id="extraWealthVal">+ ₹0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content Section -->
+        <article class="bg-white rounded-2xl p-6 md:p-10 card-shadow border border-slate-100 mb-16 prose prose-slate max-w-none">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">The Power of Systematic Transfer Plans</h2>
+            <p>
+                A <strong>Systematic Transfer Plan (STP)</strong> is a powerful financial tool that combines the safety of debt funds with the high-growth potential of equity funds. 
+            </p>
+            <p>
+                Imagine you receive a large bonus or sell a property and receive ₹10 Lakhs. Investing this entirely into the stock market in one go (lumpsum) is risky; if the market crashes tomorrow, your portfolio will bleed. The safer approach is to stagger this investment into the market over 10 to 12 months.
+            </p>
+
+            <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">STP vs Normal SIP</h3>
+            <p>While you stagger your investment, where should the uninvested money sit?</p>
+            <ul class="list-disc pl-5 space-y-2 mb-6">
+                <li><strong>Normal SIP Approach:</strong> You leave the ₹10 Lakhs in your Savings Bank account (earning ~2.5% to 3% interest) and an SIP deducts money every month.</li>
+                <li><strong>STP Approach:</strong> You park the entire ₹10 Lakhs in a Liquid or Ultra Short-Term Debt Mutual Fund (earning ~6.5% to 7.5% interest). The AMC then transfers money from this debt fund to your chosen Equity fund every month.</li>
+            </ul>
+            <p>Because the uninvested money is sitting in a debt fund earning double the interest of a savings account, you generate completely free extra wealth by the end of the transfer period.</p>
+
+            <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Taxation of STP</h3>
+            <p>
+                It is crucial to understand that an STP is simply an automated instruction to "Sell" units from Fund A and "Buy" units in Fund B.
+            </p>
+            <p>
+                Every time money moves from the Debt fund to the Equity fund, it triggers a taxable event for the Debt fund. As per the latest tax rules (post April-2023), capital gains on Debt mutual funds are added to your income and taxed at your applicable slab rate. Despite this tax, STPs generally yield higher post-tax returns than savings accounts for most investors.
+            </p>
+        
+<div class="my-8 overflow-x-auto not-prose">
+    <h3 class="text-xl font-bold text-slate-800 mb-4">Key Characteristics & Comparison Overview</h3>
+    <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden text-sm">
+        <thead class="bg-slate-100">
+            <tr>
+                <th class="p-3.5 border-b font-bold text-slate-700">Feature / Parameter</th>
+                <th class="p-3.5 border-b font-bold text-slate-700">Details / Rules</th>
+                <th class="p-3.5 border-b font-bold text-slate-700">Tax Implications</th>
+            </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100 bg-white">
+            <tr>
+                <td class="p-3.5 font-medium text-slate-800">Primary Returns</td>
+                <td class="p-3.5 text-blue-600 font-semibold">Guaranteed / Market-Linked Growth</td>
+                <td class="p-3.5 text-slate-600">Taxable at Income Tax Slab Rates</td>
+            </tr>
+            <tr>
+                <td class="p-3.5 font-medium text-slate-800">Compounding / Payout</td>
+                <td class="p-3.5 text-slate-700">Quarterly / Annual Compounding</td>
+                <td class="p-3.5 text-slate-600">TDS deductions applicable where threshold met</td>
+            </tr>
+            <tr>
+                <td class="p-3.5 font-medium text-slate-800">Lock-in & Liquidity</td>
+                <td class="p-3.5 text-slate-700">Specified Tenure / Market Liquidity</td>
+                <td class="p-3.5 text-slate-600">Premature withdrawal penalties apply</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+            
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Key Benefits of Systematic Transfer Plans (STP)</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Rupee Cost Averaging with Liquid Safety:</strong> Keeps your lump sum parked in a low-volatility Liquid or Money Market fund earning 6-7% interest while systematically moving fixed installments into Equity Funds.</li>
+            <li><strong>Mitigates Peak Market Valuation Risk:</strong> Prevents investing a large lump sum right before a market correction.</li>
+            <li><strong>Automated Rebalancing:</strong> Automates profit-booking from equity to debt or vice versa during volatile market phases.</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Tax Rules & Limitations of STP (2026)</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Redemption Event Taxation:</strong> Every monthly STP transfer is legally treated as a redemption from the source liquid fund, triggering Short-Term Capital Gains (STCG) tax at your income tax slab rate.</li>
+            <li><strong>Exit Load Considerations:</strong> Ensure the source liquid fund carries 0% exit load after 7 days before starting an automated transfer schedule.</li>
+        </ul>
+
+        <div class="mt-8 p-5 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl not-prose">
+            <h4 class="text-base font-bold text-blue-900 mb-1">STP Pro Tip for 2026 Investors</h4>
+            <p class="text-xs text-blue-800 leading-relaxed">
+                If you receive a bonus or property sale payout, park it in an Overnight or Liquid Fund and set up a weekly or monthly STP over 12-24 months for smooth market entry.
+            </p>
+        </div>
+
+            <div class="mt-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl not-prose">
+    <h3 class="text-lg font-bold text-slate-800 mb-2">Explore Related Financial Tools & Calculators</h3>
+    <p class="text-xs text-slate-500 mb-4">Compare options across investments, tax savings, and compounding growth:</p>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-medium">
+        <a href="/sip/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SIP Calculator</a>
+        <a href="/fd/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">FD Calculator</a>
+        <a href="/ppf/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">PPF Calculator</a>
+        <a href="/cagr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">CAGR Calculator</a>
+        <a href="/xirr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">XIRR Calculator</a>
+        <a href="/income-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Income Tax Tool</a>
+        <a href="/capital-gains-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Capital Gains Tax</a>
+        <a href="/lumpsum/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Lumpsum Calculator</a>
+        <a href="/inflation/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Inflation Calculator</a>
+        <a href="/swp/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SWP Calculator</a>
+        <a href="/rd/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">RD Calculator</a>
+        <a href="/80c-tax-saving/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">80C Tax Saving</a>
+    </div>
+</div>
+
+</article>
+        
+        <!-- FAQs -->
+        <div class="mb-16">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is a Systematic Transfer Plan (STP)?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        An STP allows an investor to park a lumpsum amount in a low-risk fund (usually a liquid or debt fund) and systematically transfer a fixed amount every month into a higher-risk fund (usually an equity fund) of the same mutual fund house.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Why is STP better than a normal SIP from a bank account?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        In a normal SIP, the lumpsum sitting in your bank account earns a meager 2.5% to 3% interest. In an STP, the lumpsum is parked in a Debt mutual fund which can earn around 6% to 7% before it is transferred, thus generating extra returns.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Why shouldn't I just invest the lumpsum directly into Equity?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Investing a large lumpsum directly into equity exposes you to timing risk (the risk of investing right before a market crash). An STP spreads your investment over time, allowing you to benefit from Rupee Cost Averaging, just like an SIP.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Are there tax implications on the STP transfer?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Yes. Every monthly transfer from the Debt fund to the Equity fund is considered a 'Redemption' from the Debt fund and a 'Purchase' in the Equity fund. As per current rules, gains on debt mutual funds are taxed at your income tax slab rate.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Can I transfer between different mutual fund houses using STP?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        No, you can only set up an STP between schemes of the exact same Mutual Fund Asset Management Company (AMC). For example, from HDFC Liquid Fund to HDFC Flexi Cap Fund.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What happens when my Debt fund runs out of money?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Once the lumpsum amount in your Debt fund (plus the interest it earned) is completely transferred to the Equity fund, the STP automatically stops.
+                    </div>
+                </details>
+                
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is the minimum amount required for STP?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        This varies by AMC, but typically a minimum lumpsum of ₹12,000 to ₹25,000 is required to start an STP, with minimum monthly transfers of ₹1,000.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How long should an STP tenure be?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        A standard recommendation for staggering a lumpsum into equity is between 6 months to 18 months, depending on the size of the lumpsum and current market valuations.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global JS Hooks for Linking & Search -->
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        // Calculator Logic
+        const elements = {
+            lumpInput: document.getElementById('lumpsumInput'),
+            lumpRange: document.getElementById('lumpsumRange'),
+            transferInput: document.getElementById('transferInput'),
+            transferRange: document.getElementById('transferRange'),
+            debtInput: document.getElementById('debtRateInput'),
+            equityInput: document.getElementById('equityRateInput'),
+            transferError: document.getElementById('transferError'),
+            
+            monthsVal: document.getElementById('monthsToDeplete'),
+            totalValueDisp: document.getElementById('totalValueDisp'),
+            investmentDisp: document.getElementById('investmentDisp'),
+            gainsDisp: document.getElementById('gainsDisp'),
+            
+            bankScenarioVal: document.getElementById('bankScenarioVal'),
+            extraWealthVal: document.getElementById('extraWealthVal')
+        };
+
+        function formatIndian(val) {
+            return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+        }
+
+        function calculateSTP() {
+            let principal = parseFloat(elements.lumpInput.value) || 0;
+            let transfer = parseFloat(elements.transferInput.value) || 0;
+            let debtRate = parseFloat(elements.debtInput.value) || 0;
+            let eqRate = parseFloat(elements.equityInput.value) || 0;
+
+            if (transfer > principal) {
+                elements.transferError.style.display = "block";
+                transfer = principal;
+                elements.transferInput.value = transfer;
+                elements.transferRange.value = transfer;
+            } else {
+                elements.transferError.style.display = "none";
+            }
+
+            // Monthly compounding rates
+            const r_debt = Math.pow(1 + (debtRate / 100), 1 / 12) - 1;
+            const r_eq = Math.pow(1 + (eqRate / 100), 1 / 12) - 1;
+            const r_bank = Math.pow(1 + (3 / 100), 1 / 12) - 1; // 3% Savings Account
+
+            let debtBalance = principal;
+            let equityBalance = 0;
+            let months = 0;
+            
+            // STP Simulation
+            while (debtBalance > 0 && months < 1200) { // Limit to 100 years
+                months++;
+                // Add debt interest for the month
+                debtBalance = debtBalance * (1 + r_debt);
+                
+                // Add equity interest for the month
+                equityBalance = equityBalance * (1 + r_eq);
+                
+                // Transfer
+                let actualTransfer = transfer;
+                if (debtBalance < transfer) {
+                    actualTransfer = debtBalance; // Transfer whatever is left
+                }
+                
+                debtBalance -= actualTransfer;
+                equityBalance += actualTransfer;
+            }
+
+            const stpTotalValue = equityBalance + debtBalance; // debtBalance should be 0
+
+            // Baseline Scenario (Bank account SIP)
+            let bankBalance = principal;
+            let bankEquityBalance = 0;
+            
+            for (let i = 0; i < months; i++) {
+                bankBalance = bankBalance * (1 + r_bank);
+                bankEquityBalance = bankEquityBalance * (1 + r_eq);
+                
+                let actualTransfer = transfer;
+                if (bankBalance < transfer) {
+                    actualTransfer = bankBalance;
+                }
+                
+                bankBalance -= actualTransfer;
+                bankEquityBalance += actualTransfer;
+            }
+            
+            const bankTotalValue = bankEquityBalance + bankBalance;
+            const extraWealth = stpTotalValue - bankTotalValue;
+
+            // DOM Updates
+            elements.monthsVal.textContent = `${months} Months`;
+            elements.totalValueDisp.textContent = formatIndian(stpTotalValue);
+            elements.investmentDisp.textContent = formatIndian(principal);
+            elements.gainsDisp.textContent = "+ " + formatIndian(stpTotalValue - principal);
+            
+            elements.bankScenarioVal.textContent = formatIndian(bankTotalValue);
+            elements.extraWealthVal.textContent = "+ " + formatIndian(extraWealth);
+        }
+
+        function setupSync(input, range, triggerCalc) {
+            input.addEventListener('input', () => { 
+                range.value = input.value; 
+                if(triggerCalc) calculateSTP(); 
+            });
+            range.addEventListener('input', () => { 
+                input.value = range.value; 
+                if(triggerCalc) calculateSTP(); 
+            });
+            input.addEventListener('blur', () => {
+                let val = parseFloat(input.value) || 0;
+                let min = parseFloat(input.min);
+                if(val < min) val = min;
+                input.value = val;
+                range.value = val;
+                calculateSTP();
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.lumpInput, elements.lumpRange, true);
+            setupSync(elements.transferInput, elements.transferRange, true);
+            
+            elements.debtInput.addEventListener('input', calculateSTP);
+            elements.equityInput.addEventListener('input', calculateSTP);
+            
+            calculateSTP();
+        });
+    </script>
+</body>
+</html>

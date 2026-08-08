@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Property Rental Yield Calculator (2026) – Cap Rate & Cash-on-Cash</title>
+    <meta name="description" content="Calculate Gross Rental Yield, Net Rental Yield, Cap Rate, and Cash-on-Cash Return for commercial real estate in India for 2026.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/commercial-property-rental-yield/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Commercial Property Rental Yield Calculator (2026)">
+    <meta property="og:description" content="Calculate Cap Rate and Net Rental Yield for commercial real estate in India.">
+    <meta property="og:url" content="https://arthcalculator.in/commercial-property-rental-yield/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Commercial Property Rental Yield Calculator",
+      "url": "https://arthcalculator.in/commercial-property-rental-yield/",
+      "description": "Calculate Cap Rate and Net Rental Yield for commercial real estate in India.",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Commercial Property Rental Yield Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://arthcalculator.in/commercial-property-rental-yield/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Rental Yield Calculator",
+        "item": "https://arthcalculator.in/commercial-property-rental-yield/"
+      }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a good commercial property rental yield in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A gross commercial rental yield of 7.0% to 9.5% per annum is considered attractive in prime Indian commercial hubs (office spaces, retail shops, warehouses)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between Gross Rental Yield and Net Rental Yield?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gross Yield = (Annual Rent / Purchase Price) * 100. Net Yield = ((Annual Rent - Property Tax - Maintenance - Vacancy Loss) / Total Property Investment) * 100."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Cap Rate (Capitalization Rate)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cap Rate measures the net operating income (NOI) of a commercial property relative to its total asset purchase value: Cap Rate = NOI / Property Cost."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Section 24(a) Standard Deduction on Rental Income?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under Income Tax Section 24(a), a statutory 30% deduction is granted on net annual rental value for repairs and maintenance without needing actual bills."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is GST applicable on commercial property rent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, commercial property rent attracts 18% GST if the landlord's total annual turnover exceeds ₹20 Lakhs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Cash-on-Cash Return?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cash-on-Cash Return measures pre-tax annual cash flow relative to the actual out-of-pocket cash down payment invested in a leveraged property."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why are commercial rental yields higher than residential yields in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Commercial properties offer longer lease lock-in periods (3 to 9 years), corporate tenants, and annual escalation clauses (5% to 15% every 3 years)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a Triple Net Lease (NNN)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In a Triple Net Lease, the corporate tenant agrees to pay all property taxes, building insurance, and maintenance costs in addition to rent."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-blue-200">
+    <div id="navbar"></div>
+    <script>
+        fetch("/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+                const menuBtn = document.getElementById("menuBtn");
+                const mobileMenu = document.getElementById("mobileMenu");
+                if(menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                    });
+                }
+            });
+    </script>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+            <ol class="flex list-none p-0">
+                <li class="flex items-center">
+                    <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="text-blue-600 font-bold">Rental Yield Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Commercial Property <span class="text-blue-600">Rental Yield Calculator (2026)</span></h1>
+            <p class="text-lg text-slate-600 mb-6">
+                Calculate Gross & Net Rental Yield, Cap Rate, and Net Operating Income (NOI) for commercial real estate in India.
+            </p>
+        </div>
+
+        <!-- Calculator Interface -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+            
+            <!-- Inputs -->
+            <div class="lg:col-span-6 bg-white rounded-2xl p-6 md:p-8 card-shadow border border-slate-100 space-y-6">
+                <h2 class="text-xl font-bold text-slate-800 border-b pb-3">Property Financial Inputs</h2>
+
+                <!-- Total Property Cost -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Property Purchase Cost (incl Stamp Duty)</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
+                            <input type="number" id="propCostInput" value="20000000" min="1000000" step="500000" class="w-36 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                        </div>
+                    </div>
+                    <input type="range" id="propCostRange" min="1000000" max="100000000" step="500000" value="20000000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <!-- Monthly Rent -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Monthly Rent Received</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
+                            <input type="number" id="monthlyRentInput" value="135000" min="5000" step="5000" class="w-36 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                        </div>
+                    </div>
+                    <input type="range" id="monthlyRentRange" min="5000" max="1000000" step="5000" value="135000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <!-- Annual Expenses -->
+                <div class="grid grid-cols-2 gap-3 text-xs border-t pt-4">
+                    <div>
+                        <label class="font-semibold text-slate-700 block mb-1">Annual Property Tax</label>
+                        <input type="number" id="propTaxInput" value="40000" step="5000" class="w-full p-2 bg-slate-50 border rounded-lg font-bold">
+                    </div>
+                    <div>
+                        <label class="font-semibold text-slate-700 block mb-1">Annual Maintenance & Insurance</label>
+                        <input type="number" id="maintInput" value="60000" step="5000" class="w-full p-2 bg-slate-50 border rounded-lg font-bold">
+                    </div>
+                </div>
+
+                <!-- Expected Vacancy Days / Year -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Vacancy Reserve (%)</label>
+                        <div class="relative">
+                            <input type="number" id="vacancyPctInput" value="5" min="0" max="25" step="1" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-7 font-bold">
+                            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Output Display -->
+            <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+                
+                <div class="bg-blue-600 text-white rounded-2xl p-6 md:p-8 card-shadow">
+                    <p class="text-blue-100 text-xs font-bold uppercase tracking-wider mb-2">Net Commercial Rental Yield (Cap Rate)</p>
+                    <h3 class="text-4xl md:text-5xl font-black mb-4" id="netYieldVal">0.0%</h3>
+                    
+                    <div class="border-t border-blue-500/50 pt-4 grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <p class="text-blue-200 text-xs">Gross Rental Yield</p>
+                            <p class="text-xl font-bold text-white mt-1" id="grossYieldVal">0.0%</p>
+                        </div>
+                        <div>
+                            <p class="text-blue-200 text-xs">Net Operating Income (NOI)</p>
+                            <p class="text-xl font-bold text-emerald-300 mt-1" id="noiVal">₹0 / yr</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-slate-100 space-y-3 text-sm">
+                    <h4 class="font-bold text-slate-800 border-b pb-2">Annual Cash Flow Summary</h4>
+                    <div class="flex justify-between">
+                        <span class="text-slate-600">Gross Annual Rent (100% Occupancy)</span>
+                        <span class="font-bold text-slate-800" id="grossRentVal">₹0</span>
+                    </div>
+                    <div class="flex justify-between text-rose-600 text-xs">
+                        <span>Less: Vacancy Loss + Property Tax + Maintenance</span>
+                        <span class="font-bold" id="totalExpensesVal">- ₹0</span>
+                    </div>
+                    <div class="flex justify-between border-t pt-2 text-emerald-600 font-bold">
+                        <span>Sec 24(a) Taxable Income (After 30% Deduction)</span>
+                        <span id="sec24IncomeVal">₹0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content Section -->
+        <article class="bg-white rounded-2xl p-6 md:p-10 card-shadow border border-slate-100 mb-16 prose prose-slate max-w-none">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">Commercial Real Estate Yield Benchmarks (2026)</h2>
+            <p>
+                Commercial properties (Grade-A Office, High-Street Retail, Warehousing) offer significantly higher cash yields than residential apartments.
+            </p>
+
+            <div class="my-6 overflow-x-auto not-prose">
+                <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden text-sm">
+                    <thead class="bg-slate-100">
+                        <tr>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Property Sector</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Gross Rental Yield Range</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Standard Lease Term</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 bg-white">
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">Commercial Grade-A Office</td>
+                            <td class="p-3.5 font-semibold text-emerald-600">7.5% - 9.5% p.a.</td>
+                            <td class="p-3.5 text-slate-700">5 - 9 Years (3+3+3 Lock-in)</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">High-Street Retail Shop</td>
+                            <td class="p-3.5 font-semibold text-emerald-600">6.5% - 8.5% p.a.</td>
+                            <td class="p-3.5 text-slate-700">3 - 6 Years</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">Industrial Logistics / Warehouse</td>
+                            <td class="p-3.5 font-semibold text-emerald-600">8.5% - 11.0% p.a.</td>
+                            <td class="p-3.5 text-slate-700">9 - 15 Years</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            
+            
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Gross vs Net Rental Yield Formulas</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Gross Rental Yield %:</strong> (Annual Gross Rent / Total Property Purchase Price) * 100.</li>
+            <li><strong>Net Rental Yield %:</strong> [(Annual Rent - Property Tax - Maintenance - Insurance - Vacancy Loss) / Total Property Cost] * 100.</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Income Tax Section 24(a) 30% Standard Deduction</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Statutory 30% Deduction:</strong> Under Income from House Property, every property owner automatically gets a flat 30% standard deduction on Net Annual Value for repairs/maintenance regardless of actual expense incurred.</li>
+            <li><strong>Cap Rate Benchmark:</strong> Prime Grade-A commercial office space in Bengaluru, Mumbai, and NCR yields 7.5% - 9.0% Cap Rates.</li>
+        </ul>
+
+        <div class="mt-8 p-5 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl not-prose">
+            <h4 class="text-base font-bold text-blue-900 mb-1">Rental Yield Benchmark</h4>
+            <p class="text-xs text-blue-800 leading-relaxed">
+                Residential property yields average only 2.5-3.0% in India. Commercial office premises and retail warehouses offer 3x higher yields (8-10%) with long corporate leases.
+            </p>
+        </div>
+
+            <div class="mt-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl not-prose">
+                <h3 class="text-lg font-bold text-slate-800 mb-2">Explore Related Financial Tools & Calculators</h3>
+                <p class="text-xs text-slate-500 mb-4">Compare options across loan EMIs, tax savings, and compounding growth:</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-medium">
+                    <a href="/real-estate-vs-equity/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Real Estate vs Equity</a>
+                    <a href="/property-depreciation-slm-vs-wdv/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Property Depreciation</a>
+                    <a href="/home-construction-cost/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Home Construction Cost</a>
+                    <a href="/home-loan/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Home Loan EMI</a>
+                    <a href="/sip/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SIP Calculator</a>
+                    <a href="/income-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Income Tax Tool</a>
+                    <a href="/capital-gains-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Capital Gains Tax</a>
+                    <a href="/lumpsum/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Lumpsum Calculator</a>
+                    <a href="/inflation/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Inflation Calculator</a>
+                    <a href="/cagr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">CAGR Calculator</a>
+                    <a href="/80c-tax-saving/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">80C Tax Saving</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- FAQs -->
+        <div class="mb-16" id="faqs">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is a good commercial property rental yield in India?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        A gross commercial rental yield of 7.0% to 9.5% per annum is considered attractive in prime Indian commercial hubs (office spaces, retail shops, warehouses).
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is the difference between Gross Rental Yield and Net Rental Yield?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Gross Yield = (Annual Rent / Purchase Price) * 100. Net Yield = ((Annual Rent - Property Tax - Maintenance - Vacancy Loss) / Total Property Investment) * 100.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is Cap Rate (Capitalization Rate)?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Cap Rate measures the net operating income (NOI) of a commercial property relative to its total asset purchase value: Cap Rate = NOI / Property Cost.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is Section 24(a) Standard Deduction on Rental Income?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Under Income Tax Section 24(a), a statutory 30% deduction is granted on net annual rental value for repairs and maintenance without needing actual bills.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Is GST applicable on commercial property rent?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Yes, commercial property rent attracts 18% GST if the landlord's total annual turnover exceeds ₹20 Lakhs.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is Cash-on-Cash Return?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Cash-on-Cash Return measures pre-tax annual cash flow relative to the actual out-of-pocket cash down payment invested in a leveraged property.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Why are commercial rental yields higher than residential yields in India?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Commercial properties offer longer lease lock-in periods (3 to 9 years), corporate tenants, and annual escalation clauses (5% to 15% every 3 years).
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is a Triple Net Lease (NNN)?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        In a Triple Net Lease, the corporate tenant agrees to pay all property taxes, building insurance, and maintenance costs in addition to rent.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global JS Hooks for Linking & Search -->
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        const elements = {
+            propCostInput: document.getElementById('propCostInput'),
+            propCostRange: document.getElementById('propCostRange'),
+            monthlyRentInput: document.getElementById('monthlyRentInput'),
+            monthlyRentRange: document.getElementById('monthlyRentRange'),
+            propTaxInput: document.getElementById('propTaxInput'),
+            maintInput: document.getElementById('maintInput'),
+            vacancyPctInput: document.getElementById('vacancyPctInput'),
+            
+            netYieldVal: document.getElementById('netYieldVal'),
+            grossYieldVal: document.getElementById('grossYieldVal'),
+            noiVal: document.getElementById('noiVal'),
+            grossRentVal: document.getElementById('grossRentVal'),
+            totalExpensesVal: document.getElementById('totalExpensesVal'),
+            sec24IncomeVal: document.getElementById('sec24IncomeVal')
+        };
+
+        function formatIndian(val) {
+            return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+        }
+
+        function calculateRentalYield() {
+            const cost = parseFloat(elements.propCostInput.value) || 0;
+            const monthlyRent = parseFloat(elements.monthlyRentInput.value) || 0;
+            const propTax = parseFloat(elements.propTaxInput.value) || 0;
+            const maint = parseFloat(elements.maintInput.value) || 0;
+            const vacancyPct = (parseFloat(elements.vacancyPctInput.value) || 0) / 100;
+
+            const grossAnnualRent = monthlyRent * 12;
+            const vacancyLoss = grossAnnualRent * vacancyPct;
+            
+            const totalAnnualExpenses = propTax + maint + vacancyLoss;
+            const netOperatingIncome = Math.max(0, grossAnnualRent - totalAnnualExpenses);
+
+            const grossYield = cost > 0 ? (grossAnnualRent / cost) * 100 : 0;
+            const netYield = cost > 0 ? (netOperatingIncome / cost) * 100 : 0;
+
+            // Sec 24(a) Taxable Income = (Gross Rent - Prop Tax) * 70%
+            const netAnnualValue = Math.max(0, grossAnnualRent - propTax);
+            const sec24Taxable = netAnnualValue * 0.70;
+
+            elements.netYieldVal.textContent = netYield.toFixed(2) + "%";
+            elements.grossYieldVal.textContent = grossYield.toFixed(2) + "%";
+            elements.noiVal.textContent = formatIndian(netOperatingIncome) + " / yr";
+            
+            elements.grossRentVal.textContent = formatIndian(grossAnnualRent);
+            elements.totalExpensesVal.textContent = "- " + formatIndian(totalAnnualExpenses);
+            elements.sec24IncomeVal.textContent = formatIndian(sec24Taxable);
+        }
+
+        function setupSync(input, range) {
+            input.addEventListener('input', () => { range.value = input.value; calculateRentalYield(); });
+            range.addEventListener('input', () => { input.value = range.value; calculateRentalYield(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.propCostInput, elements.propCostRange);
+            setupSync(elements.monthlyRentInput, elements.monthlyRentRange);
+            elements.propTaxInput.addEventListener('input', calculateRentalYield);
+            elements.maintInput.addEventListener('input', calculateRentalYield);
+            elements.vacancyPctInput.addEventListener('input', calculateRentalYield);
+            
+            calculateRentalYield();
+        });
+    </script>
+</body>
+</html>

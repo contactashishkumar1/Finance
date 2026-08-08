@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROE Calculator (2026) – Return on Equity Ratio</title>
+    <meta name="description" content="Calculate Return on Equity (ROE) ratio in 2026. Evaluate Net Profit Margin, Shareholders' Equity, and corporate profitability for stock investing.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/roe-calculator/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ROE Calculator (2026)">
+    <meta property="og:description" content="Calculate Return on Equity (ROE) ratio for fundamental equity analysis.">
+    <meta property="og:url" content="https://arthcalculator.in/roe-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "ROE Calculator",
+      "url": "https://arthcalculator.in/roe-calculator/",
+      "description": "Calculate Return on Equity (ROE) ratio for fundamental equity analysis.",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ROE Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://arthcalculator.in/roe-calculator/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "ROE Calculator",
+        "item": "https://arthcalculator.in/roe-calculator/"
+      }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Return on Equity (ROE)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Return on Equity (ROE) measures how efficiently a company converts shareholders' invested capital into net profits after tax: ROE = (Net Profit After Tax / Shareholders' Equity) * 100."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a good ROE percentage for Indian stocks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An ROE of 15% to 25% per annum is considered excellent for Indian equity stocks, demonstrating efficient management and strong shareholder returns."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a high ROE be misleading?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! A company taking on excessive debt (financial leverage) reduces equity while boosting ROE, creating an illusion of high profitability despite elevated bankruptcy risk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How to verify if ROE is genuine or debt-driven?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use DuPont 3-step analysis to break down ROE into Net Profit Margin * Asset Turnover * Financial Leverage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is included in Shareholders' Equity?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shareholders' Equity equals Equity Share Capital + Reserves & Surplus (retained earnings) - Accumulated Losses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does share buyback impact ROE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When a company buys back shares, it reduces net equity balance on the balance sheet, which naturally increases the ROE percentage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What causes ROE to decline over time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ROE declines if net profit margins shrink, asset turnover drops, or retained earnings accumulate without generating incremental profits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Sustainable Growth Rate (SGR)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sustainable Growth Rate = ROE * (1 - Dividend Payout Ratio). It is the maximum rate a business can grow without issuing new equity or debt."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-blue-200">
+    <div id="navbar"></div>
+    <script>
+        fetch("/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+                const menuBtn = document.getElementById("menuBtn");
+                const mobileMenu = document.getElementById("mobileMenu");
+                if(menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                    });
+                }
+            });
+    </script>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+            <ol class="flex list-none p-0">
+                <li class="flex items-center">
+                    <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="text-blue-600 font-bold">ROE Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Return on Equity <span class="text-blue-600">ROE Calculator (2026)</span></h1>
+            <p class="text-lg text-slate-600 mb-6">
+                Calculate ROE percentage using Net Profit After Tax and Shareholders' Equity for equity research.
+            </p>
+        </div>
+
+        <!-- Calculator Interface -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+            
+            <!-- Inputs -->
+            <div class="lg:col-span-6 bg-white rounded-2xl p-6 md:p-8 card-shadow border border-slate-100 space-y-6">
+                <h2 class="text-xl font-bold text-slate-800 border-b pb-3">Income & Equity Inputs</h2>
+
+                <!-- Net Profit After Tax (PAT) -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Net Profit After Tax (PAT)</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
+                            <input type="number" id="patInput" value="18000000" min="500000" step="500000" class="w-36 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                        </div>
+                    </div>
+                    <input type="range" id="patRange" min="500000" max="200000000" step="500000" value="18000000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <!-- Total Shareholders' Equity -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Total Shareholders' Equity</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
+                            <input type="number" id="equityInput" value="90000000" min="1000000" step="1000000" class="w-36 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                        </div>
+                    </div>
+                    <input type="range" id="equityRange" min="1000000" max="500000000" step="1000000" value="90000000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+            </div>
+
+            <!-- Output Display -->
+            <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+                
+                <div class="bg-blue-600 text-white rounded-2xl p-6 md:p-8 card-shadow">
+                    <p class="text-blue-100 text-xs font-bold uppercase tracking-wider mb-2">Return on Equity (ROE)</p>
+                    <h3 class="text-4xl md:text-5xl font-black mb-4" id="roePctVal">20.0%</h3>
+                    
+                    <div class="border-t border-blue-500/50 pt-4 grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <p class="text-blue-200 text-xs">Shareholders' Equity</p>
+                            <p class="text-xl font-bold text-white mt-1" id="equityDisplayVal">₹9.0 Cr</p>
+                        </div>
+                        <div>
+                            <p class="text-blue-200 text-xs">Net Profit After Tax</p>
+                            <p class="text-xl font-bold text-emerald-300 mt-1" id="patDisplayVal">₹1.8 Cr</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-slate-100 space-y-3 text-sm">
+                    <h4 class="font-bold text-slate-800 border-b pb-2">ROE Rating Benchmark</h4>
+                    <div class="flex justify-between text-xs">
+                        <span class="text-slate-600">Equity Profitability Rating</span>
+                        <span class="font-bold text-emerald-600" id="roeRatingDisp">Superior Quality (≥20%)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content Section -->
+        <article class="bg-white rounded-2xl p-6 md:p-10 card-shadow border border-slate-100 mb-16 prose prose-slate max-w-none">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">ROE Quality Benchmarks for Equity Investors</h2>
+            <p>
+                Return on Equity reflects a company's ability to turn shareholder investments into net income growth.
+            </p>
+
+            <div class="my-6 overflow-x-auto not-prose">
+                <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden text-sm">
+                    <thead class="bg-slate-100">
+                        <tr>
+                            <th class="p-3.5 border-b font-bold text-slate-700">ROE %</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Evaluation Grade</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Market Characteristic</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 bg-white">
+                        <tr>
+                            <td class="p-3.5 font-bold text-emerald-600">> 20.0%</td>
+                            <td class="p-3.5 font-semibold text-emerald-600">Excellent / Top Quartile</td>
+                            <td class="p-3.5 text-slate-700">High efficiency; typical of blue-chip market leaders</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">14.0% - 20.0%</td>
+                            <td class="p-3.5 font-semibold text-slate-800">Good Healthy Return</td>
+                            <td class="p-3.5 text-slate-700">Outperforms standard inflation and cost of equity</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-rose-600">< 10.0%</td>
+                            <td class="p-3.5 font-semibold text-rose-600">Poor Return</td>
+                            <td class="p-3.5 text-rose-600 font-bold">Underperforms liquid fixed deposit yield benchmarks</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            
+            
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Return on Equity (ROE) Formula & Valuation Impact</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>ROE Formula:</strong> (Net Profit After Tax / Shareholder's Equity) * 100.</li>
+            <li><strong>Shareholder Value Metric:</strong> Measures how many rupees of net profit a company generates for every ₹100 of equity capital owned by shareholders.</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Evaluating High ROE vs Debt Leverage Risks</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>High ROE Target (> 18-20%):</strong> Indicates superior pricing power and efficient capital reinvestment.</li>
+            <li><strong>Debt-Artificially Inflated ROE:</strong> Beware of companies boosting ROE by taking on massive debt (shrinking equity denominator). Use DuPont Analysis to verify!</li>
+        </ul>
+
+        <div class="mt-8 p-5 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl not-prose">
+            <h4 class="text-base font-bold text-blue-900 mb-1">ROE Growth Rule</h4>
+            <p class="text-xs text-blue-800 leading-relaxed">
+                Sustainable long-term earnings growth rate (g) equals ROE multiplied by the Retention Ratio (1 - Dividend Payout %). High ROE businesses compound fastest without needing extra debt!
+            </p>
+        </div>
+
+            <div class="mt-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl not-prose">
+                <h3 class="text-lg font-bold text-slate-800 mb-2">Explore Related Financial Tools & Calculators</h3>
+                <p class="text-xs text-slate-500 mb-4">Compare options across loan EMIs, tax savings, and compounding growth:</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-medium">
+                    <a href="/roce-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">ROCE Calculator</a>
+                    <a href="/dupont-analysis/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">DuPont Analysis</a>
+                    <a href="/altman-z-score/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Altman Z-Score</a>
+                    <a href="/eps-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">EPS Calculator</a>
+                    <a href="/saas-metrics-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SaaS Metrics Tool</a>
+                    <a href="/sip/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SIP Calculator</a>
+                    <a href="/income-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Income Tax Tool</a>
+                    <a href="/capital-gains-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Capital Gains Tax</a>
+                    <a href="/lumpsum/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Lumpsum Calculator</a>
+                    <a href="/inflation/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Inflation Calculator</a>
+                    <a href="/cagr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">CAGR Calculator</a>
+                    <a href="/80c-tax-saving/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">80C Tax Saving</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- FAQs -->
+        <div class="mb-16" id="faqs">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is Return on Equity (ROE)?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Return on Equity (ROE) measures how efficiently a company converts shareholders' invested capital into net profits after tax: ROE = (Net Profit After Tax / Shareholders' Equity) * 100.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is a good ROE percentage for Indian stocks?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        An ROE of 15% to 25% per annum is considered excellent for Indian equity stocks, demonstrating efficient management and strong shareholder returns.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Can a high ROE be misleading?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Yes! A company taking on excessive debt (financial leverage) reduces equity while boosting ROE, creating an illusion of high profitability despite elevated bankruptcy risk.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How to verify if ROE is genuine or debt-driven?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Use DuPont 3-step analysis to break down ROE into Net Profit Margin * Asset Turnover * Financial Leverage.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is included in Shareholders' Equity?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Shareholders' Equity equals Equity Share Capital + Reserves & Surplus (retained earnings) - Accumulated Losses.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How does share buyback impact ROE?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        When a company buys back shares, it reduces net equity balance on the balance sheet, which naturally increases the ROE percentage.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What causes ROE to decline over time?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        ROE declines if net profit margins shrink, asset turnover drops, or retained earnings accumulate without generating incremental profits.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is Sustainable Growth Rate (SGR)?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Sustainable Growth Rate = ROE * (1 - Dividend Payout Ratio). It is the maximum rate a business can grow without issuing new equity or debt.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global JS Hooks for Linking & Search -->
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        const elements = {
+            patInput: document.getElementById('patInput'),
+            patRange: document.getElementById('patRange'),
+            equityInput: document.getElementById('equityInput'),
+            equityRange: document.getElementById('equityRange'),
+            
+            roePctVal: document.getElementById('roePctVal'),
+            equityDisplayVal: document.getElementById('equityDisplayVal'),
+            patDisplayVal: document.getElementById('patDisplayVal'),
+            roeRatingDisp: document.getElementById('roeRatingDisp')
+        };
+
+        function formatIndian(val) {
+            return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+        }
+
+        function calculateRoe() {
+            const pat = parseFloat(elements.patInput.value) || 0;
+            const equity = parseFloat(elements.equityInput.value) || 1;
+
+            const roePct = (pat / equity) * 100;
+
+            elements.roePctVal.textContent = roePct.toFixed(1) + "%";
+            elements.equityDisplayVal.textContent = formatIndian(equity);
+            elements.patDisplayVal.textContent = formatIndian(pat);
+
+            if (roePct >= 20.0) {
+                elements.roeRatingDisp.textContent = "Superior Equity Return (≥20%)";
+                elements.roeRatingDisp.className = "font-bold text-emerald-600";
+            } else if (roePct >= 14.0) {
+                elements.roeRatingDisp.textContent = "Healthy Equity Return (14% - 20%)";
+                elements.roeRatingDisp.className = "font-bold text-blue-600";
+            } else {
+                elements.roeRatingDisp.textContent = "Sub-par Equity Return (<14%)";
+                elements.roeRatingDisp.className = "font-bold text-rose-600";
+            }
+        }
+
+        function setupSync(input, range) {
+            input.addEventListener('input', () => { range.value = input.value; calculateRoe(); });
+            range.addEventListener('input', () => { input.value = range.value; calculateRoe(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.patInput, elements.patRange);
+            setupSync(elements.equityInput, elements.equityRange);
+            
+            calculateRoe();
+        });
+    </script>
+</body>
+</html>

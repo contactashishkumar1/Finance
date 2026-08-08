@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuPont Analysis Calculator (2026) – 3-Step ROE Breakdown</title>
+    <meta name="description" content="Perform 3-Step DuPont Analysis in 2026. Break down ROE into Profit Margin, Asset Turnover, and Financial Leverage to detect high-debt risk vs operational efficiency.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/dupont-analysis/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DuPont Analysis Calculator (2026)">
+    <meta property="og:description" content="Decompose ROE into Net Margin, Asset Turnover & Leverage using DuPont model.">
+    <meta property="og:url" content="https://arthcalculator.in/dupont-analysis/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "DuPont Analysis Calculator",
+      "url": "https://arthcalculator.in/dupont-analysis/",
+      "description": "Decompose ROE into Net Margin, Asset Turnover & Leverage using DuPont model.",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "DuPont Analysis Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://arthcalculator.in/dupont-analysis/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "DuPont Analysis Calculator",
+        "item": "https://arthcalculator.in/dupont-analysis/"
+      }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is DuPont Analysis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DuPont Analysis is a financial framework that breaks down Return on Equity (ROE) into three component drivers: Net Profit Margin, Asset Turnover, and Financial Leverage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the 3-Step DuPont Formula?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Formula: ROE = (Net Income / Revenue) * (Revenue / Total Assets) * (Total Assets / Shareholders' Equity)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is DuPont Analysis valuable for stock investors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It exposes whether a company's high ROE is driven by superior operating margins (pricing power), high asset velocity (efficiency), or dangerous debt leverage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Financial Leverage Multiplier?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Financial Leverage Multiplier = Total Assets / Shareholders' Equity. A ratio significantly above 2.5x indicates high reliance on debt financing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Asset Turnover Ratio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Asset Turnover = Total Revenue / Total Assets. It measures how many rupees of revenue a company generates for every rupee of assets owned."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Net Profit Margin in DuPont Analysis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Net Profit Margin = Net Income / Total Revenue. It reflects pricing power, cost control, and operational efficiency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is 5-Step DuPont Analysis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "5-Step DuPont further breaks Net Margin into Tax Burden * Interest Burden * Operating Margin (EBIT Margin) * Asset Turnover * Financial Leverage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How to spot a risky high-ROE stock using DuPont model?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If a company has thin net profit margins (<5%) and low asset turnover (<0.8x), but a sky-high leverage ratio (>4x), its high ROE is fueled by dangerous debt leverage."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-blue-200">
+    <div id="navbar"></div>
+    <script>
+        fetch("/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+                const menuBtn = document.getElementById("menuBtn");
+                const mobileMenu = document.getElementById("mobileMenu");
+                if(menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                    });
+                }
+            });
+    </script>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+            <ol class="flex list-none p-0">
+                <li class="flex items-center">
+                    <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="text-blue-600 font-bold">DuPont Analysis</li>
+            </ol>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">DuPont Analysis <span class="text-blue-600">Calculator (2026)</span></h1>
+            <p class="text-lg text-slate-600 mb-6">
+                Decompose Return on Equity (ROE) into Net Profit Margin, Asset Turnover, and Financial Leverage Multiplier.
+            </p>
+        </div>
+
+        <!-- Calculator Interface -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+            
+            <!-- Inputs -->
+            <div class="lg:col-span-6 bg-white rounded-2xl p-6 md:p-8 card-shadow border border-slate-100 space-y-5">
+                <h2 class="text-xl font-bold text-slate-800 border-b pb-3">Financial Statement Figures</h2>
+
+                <!-- Total Revenue -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <label class="font-semibold text-slate-700 text-sm">Total Revenue (Sales)</label>
+                        <div class="relative">
+                            <span class="absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-500 font-medium text-xs">₹</span>
+                            <input type="number" id="revenueInput" value="200000000" min="1000000" step="5000000" class="w-32 text-right bg-slate-50 border border-slate-200 text-slate-800 text-xs rounded-lg block p-1.5 pl-6 font-bold">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Net Income / PAT -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <label class="font-semibold text-slate-700 text-sm">Net Profit After Tax (PAT)</label>
+                        <div class="relative">
+                            <span class="absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-500 font-medium text-xs">₹</span>
+                            <input type="number" id="netIncomeInput" value="25000000" min="100000" step="1000000" class="w-32 text-right bg-slate-50 border border-slate-200 text-slate-800 text-xs rounded-lg block p-1.5 pl-6 font-bold">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Total Assets -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <label class="font-semibold text-slate-700 text-sm">Total Assets</label>
+                        <div class="relative">
+                            <span class="absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-500 font-medium text-xs">₹</span>
+                            <input type="number" id="assetsInput" value="150000000" min="1000000" step="5000000" class="w-32 text-right bg-slate-50 border border-slate-200 text-slate-800 text-xs rounded-lg block p-1.5 pl-6 font-bold">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shareholders' Equity -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <label class="font-semibold text-slate-700 text-sm">Shareholders' Equity</label>
+                        <div class="relative">
+                            <span class="absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-500 font-medium text-xs">₹</span>
+                            <input type="number" id="equityInput" value="100000000" min="1000000" step="5000000" class="w-32 text-right bg-slate-50 border border-slate-200 text-slate-800 text-xs rounded-lg block p-1.5 pl-6 font-bold">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Output Display -->
+            <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+                
+                <div class="bg-blue-600 text-white rounded-2xl p-6 md:p-8 card-shadow">
+                    <p class="text-blue-100 text-xs font-bold uppercase tracking-wider mb-2">Calculated DuPont Return on Equity (ROE)</p>
+                    <h3 class="text-4xl md:text-5xl font-black mb-4" id="dupontRoeVal">25.0%</h3>
+                    
+                    <div class="border-t border-blue-500/50 pt-4 grid grid-cols-3 gap-2 text-center text-xs">
+                        <div>
+                            <p class="text-blue-200">Net Margin</p>
+                            <p class="text-lg font-bold text-white mt-1" id="netMarginVal">12.5%</p>
+                        </div>
+                        <div>
+                            <p class="text-blue-200">Asset Turnover</p>
+                            <p class="text-lg font-bold text-white mt-1" id="assetTurnoverVal">1.33x</p>
+                        </div>
+                        <div>
+                            <p class="text-blue-200">Leverage</p>
+                            <p class="text-lg font-bold text-emerald-300 mt-1" id="leverageVal">1.50x</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-slate-100 space-y-3 text-sm">
+                    <h4 class="font-bold text-slate-800 border-b pb-2">DuPont 3-Factor Breakdown</h4>
+                    <div class="flex justify-between text-xs">
+                        <span class="text-slate-600">1. Profitability (Net Margin)</span>
+                        <span class="font-bold text-slate-800" id="factorMarginDisp">12.5%</span>
+                    </div>
+                    <div class="flex justify-between text-xs">
+                        <span class="text-slate-600">2. Efficiency (Asset Turnover)</span>
+                        <span class="font-bold text-slate-800" id="factorTurnoverDisp">1.33x</span>
+                    </div>
+                    <div class="flex justify-between text-xs border-t pt-2">
+                        <span class="text-slate-600">3. Leverage Multiplier</span>
+                        <span class="font-bold text-blue-600" id="factorLeverageDisp">1.50x (Moderate Debt Risk)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content Section -->
+        <article class="bg-white rounded-2xl p-6 md:p-10 card-shadow border border-slate-100 mb-16 prose prose-slate max-w-none">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">Understanding 3-Step DuPont Formula (2026)</h2>
+            <p>
+                DuPont Analysis isolates whether a business creates high returns via high pricing margins, operational volume turnover, or heavy debt.
+            </p>
+
+            <div class="my-6 overflow-x-auto not-prose">
+                <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden text-sm">
+                    <thead class="bg-slate-100">
+                        <tr>
+                            <th class="p-3.5 border-b font-bold text-slate-700">DuPont Component</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Formula</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Business Driver</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 bg-white">
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">Net Profit Margin</td>
+                            <td class="p-3.5 font-semibold text-slate-800">Net Income / Revenue</td>
+                            <td class="p-3.5 text-slate-700">Pricing power & operational cost efficiency</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">Asset Turnover Ratio</td>
+                            <td class="p-3.5 font-semibold text-slate-800">Revenue / Total Assets</td>
+                            <td class="p-3.5 text-slate-700">Volume velocity & asset utilization efficiency</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">Financial Leverage</td>
+                            <td class="p-3.5 font-semibold text-slate-800">Total Assets / Equity</td>
+                            <td class="p-3.5 text-rose-600 font-bold">Debt capitalization ratio</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            
+            
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">3-Step DuPont ROE Decomposition Formula</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Net Profit Margin (Profitability):</strong> Net Income / Revenue. Measures pricing power and operational cost control.</li>
+            <li><strong>Asset Turnover (Efficiency):</strong> Revenue / Total Assets. Measures how fast assets generate top-line sales volume.</li>
+            <li><strong>Financial Leverage (Debt Multiplier):</strong> Total Assets / Equity. Measures debt reliance in capital structure.</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Spotting Quality ROE vs Debt-Inflated Value Traps</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Quality High ROE:</strong> Driven by high profit margins (>15%) and fast asset turnover (>1.5x) with low financial leverage (<1.5x).</li>
+            <li><strong>Risky Debt ROE:</strong> High ROE driven purely by sky-high financial leverage (>3.5x) with thin margins (<5%). High bankruptcy risk!</li>
+        </ul>
+
+        <div class="mt-8 p-5 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl not-prose">
+            <h4 class="text-base font-bold text-blue-900 mb-1">DuPont Stock Screening Tip</h4>
+            <p class="text-xs text-blue-800 leading-relaxed">
+                Retail FMCG companies achieve high ROE via fast Asset Turnover, while software firms achieve high ROE via steep Profit Margins. Know your sector's DuPont driver!
+            </p>
+        </div>
+
+            <div class="mt-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl not-prose">
+                <h3 class="text-lg font-bold text-slate-800 mb-2">Explore Related Financial Tools & Calculators</h3>
+                <p class="text-xs text-slate-500 mb-4">Compare options across loan EMIs, tax savings, and compounding growth:</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-medium">
+                    <a href="/roe-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">ROE Calculator</a>
+                    <a href="/roce-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">ROCE Calculator</a>
+                    <a href="/altman-z-score/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Altman Z-Score</a>
+                    <a href="/eps-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">EPS Calculator</a>
+                    <a href="/saas-metrics-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SaaS Metrics Tool</a>
+                    <a href="/sip/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SIP Calculator</a>
+                    <a href="/income-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Income Tax Tool</a>
+                    <a href="/capital-gains-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Capital Gains Tax</a>
+                    <a href="/lumpsum/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Lumpsum Calculator</a>
+                    <a href="/inflation/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Inflation Calculator</a>
+                    <a href="/cagr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">CAGR Calculator</a>
+                    <a href="/80c-tax-saving/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">80C Tax Saving</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- FAQs -->
+        <div class="mb-16" id="faqs">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is DuPont Analysis?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        DuPont Analysis is a financial framework that breaks down Return on Equity (ROE) into three component drivers: Net Profit Margin, Asset Turnover, and Financial Leverage.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is the 3-Step DuPont Formula?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Formula: ROE = (Net Income / Revenue) * (Revenue / Total Assets) * (Total Assets / Shareholders' Equity).
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Why is DuPont Analysis valuable for stock investors?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        It exposes whether a company's high ROE is driven by superior operating margins (pricing power), high asset velocity (efficiency), or dangerous debt leverage.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is Financial Leverage Multiplier?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Financial Leverage Multiplier = Total Assets / Shareholders' Equity. A ratio significantly above 2.5x indicates high reliance on debt financing.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is Asset Turnover Ratio?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Asset Turnover = Total Revenue / Total Assets. It measures how many rupees of revenue a company generates for every rupee of assets owned.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is Net Profit Margin in DuPont Analysis?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Net Profit Margin = Net Income / Total Revenue. It reflects pricing power, cost control, and operational efficiency.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is 5-Step DuPont Analysis?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        5-Step DuPont further breaks Net Margin into Tax Burden * Interest Burden * Operating Margin (EBIT Margin) * Asset Turnover * Financial Leverage.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How to spot a risky high-ROE stock using DuPont model?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        If a company has thin net profit margins (<5%) and low asset turnover (<0.8x), but a sky-high leverage ratio (>4x), its high ROE is fueled by dangerous debt leverage.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global JS Hooks for Linking & Search -->
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        const elements = {
+            revenueInput: document.getElementById('revenueInput'),
+            netIncomeInput: document.getElementById('netIncomeInput'),
+            assetsInput: document.getElementById('assetsInput'),
+            equityInput: document.getElementById('equityInput'),
+            
+            dupontRoeVal: document.getElementById('dupontRoeVal'),
+            netMarginVal: document.getElementById('netMarginVal'),
+            assetTurnoverVal: document.getElementById('assetTurnoverVal'),
+            leverageVal: document.getElementById('leverageVal'),
+            factorMarginDisp: document.getElementById('factorMarginDisp'),
+            factorTurnoverDisp: document.getElementById('factorTurnoverDisp'),
+            factorLeverageDisp: document.getElementById('factorLeverageDisp')
+        };
+
+        function calculateDupont() {
+            const rev = parseFloat(elements.revenueInput.value) || 1;
+            const netInc = parseFloat(elements.netIncomeInput.value) || 0;
+            const assets = parseFloat(elements.assetsInput.value) || 1;
+            const equity = parseFloat(elements.equityInput.value) || 1;
+
+            const netMargin = (netInc / rev);
+            const assetTurnover = (rev / assets);
+            const leverage = (assets / equity);
+
+            const roe = (netMargin * assetTurnover * leverage) * 100;
+
+            elements.dupontRoeVal.textContent = roe.toFixed(1) + "%";
+            elements.netMarginVal.textContent = (netMargin * 100).toFixed(1) + "%";
+            elements.assetTurnoverVal.textContent = assetTurnover.toFixed(2) + "x";
+            elements.leverageVal.textContent = leverage.toFixed(2) + "x";
+
+            elements.factorMarginDisp.textContent = (netMargin * 100).toFixed(1) + "%";
+            elements.factorTurnoverDisp.textContent = assetTurnover.toFixed(2) + "x";
+            
+            if (leverage > 3.0) {
+                elements.factorLeverageDisp.textContent = leverage.toFixed(2) + "x (HIGH DEBT LEVERAGE RISK)";
+                elements.factorLeverageDisp.className = "font-bold text-rose-600";
+            } else if (leverage >= 1.8) {
+                elements.factorLeverageDisp.textContent = leverage.toFixed(2) + "x (Moderate Debt Leverage)";
+                elements.factorLeverageDisp.className = "font-bold text-blue-600";
+            } else {
+                elements.factorLeverageDisp.textContent = leverage.toFixed(2) + "x (Conservative Capital Structure)";
+                elements.factorLeverageDisp.className = "font-bold text-emerald-600";
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            elements.revenueInput.addEventListener('input', calculateDupont);
+            elements.netIncomeInput.addEventListener('input', calculateDupont);
+            elements.assetsInput.addEventListener('input', calculateDupont);
+            elements.equityInput.addEventListener('input', calculateDupont);
+            
+            calculateDupont();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESI Calculator (2026) – ESIC Employee & Employer Contribution</title>
+    <meta name="description" content="Calculate monthly ESI (Employee State Insurance) deductions for employee (0.75%) and employer (3.25%) contributions under 2026 ESIC rules.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/esi-calculator/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ESI Calculator (2026)">
+    <meta property="og:description" content="Calculate ESIC employee (0.75%) and employer (3.25%) monthly contributions in India.">
+    <meta property="og:url" content="https://arthcalculator.in/esi-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "ESI Calculator",
+      "url": "https://arthcalculator.in/esi-calculator/",
+      "description": "Calculate ESIC employee (0.75%) and employer (3.25%) monthly contributions in India.",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ESI Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://arthcalculator.in/esi-calculator/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "ESI Contribution Calculator",
+        "item": "https://arthcalculator.in/esi-calculator/"
+      }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the wage limit for ESI coverage in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Employees earning gross monthly wages up to ₹21,000 (or ₹25,000 for Persons with Disabilities) are eligible for ESI coverage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the current ESI contribution rates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Employee contribution rate is 0.75% of gross monthly wages, and Employer contribution rate is 3.25% of gross monthly wages (Total: 4.00%)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is exempt from paying employee ESI contribution?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Employees whose average daily wage is up to ₹176 are exempt from paying their 0.75% contribution. However, the employer must still pay their 3.25% share."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What components of salary are included in ESI wage calculation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gross wages for ESI include Basic Salary, Dearness Allowance (DA), HRA, Overtime, Special Allowances, and Production Bonus."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What medical benefits does an ESI card provide?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ESI provides full medical care for the employee and dependents, sickness cash benefit, maternity benefit (26 weeks), and disability benefits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if an employee's salary exceeds ₹21,000 mid-year?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If salary exceeds ₹21,000 after the start of a contribution period, the employee continues to be covered until the end of that 6-month contribution period."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is ESI contribution remitted by the employer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Employers must deposit the total ESI contribution (4%) on the ESIC online portal within 15 days of the close of the calendar month."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is ESI deduction mandatory for all companies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, ESI registration is mandatory for non-seasonal factories and establishments employing 10 or more persons."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-blue-200">
+    <div id="navbar"></div>
+    <script>
+        fetch("/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+                const menuBtn = document.getElementById("menuBtn");
+                const mobileMenu = document.getElementById("mobileMenu");
+                if(menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                    });
+                }
+            });
+    </script>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+            <ol class="flex list-none p-0">
+                <li class="flex items-center">
+                    <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="text-blue-600 font-bold">ESI Contribution Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">ESI Contribution <span class="text-blue-600">Calculator (2026)</span></h1>
+            <p class="text-lg text-slate-600 mb-6">
+                Calculate employee (0.75%) and employer (3.25%) ESIC monthly deductions under Indian ESI Act guidelines.
+            </p>
+        </div>
+
+        <!-- Calculator Interface -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+            
+            <!-- Inputs -->
+            <div class="lg:col-span-6 bg-white rounded-2xl p-6 md:p-8 card-shadow border border-slate-100 space-y-6">
+                <h2 class="text-xl font-bold text-slate-800 border-b pb-3">Gross Salary Details</h2>
+
+                <!-- Gross Monthly Wage -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Gross Monthly Wages</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
+                            <input type="number" id="grossInput" value="18000" min="1000" step="500" class="w-36 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                        </div>
+                    </div>
+                    <input type="range" id="grossRange" min="1000" max="30000" step="500" value="18000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <!-- Disability Status -->
+                <div class="flex items-center justify-between text-sm pt-2">
+                    <span class="text-slate-700 font-medium">Person with Disability (PWD Limit ₹25k)</span>
+                    <input type="checkbox" id="pwdCheck" class="w-5 h-5 text-blue-600 border-slate-300 rounded focus:ring-blue-500 cursor-pointer">
+                </div>
+
+                <!-- Status Banner -->
+                <div id="eligibilityBanner" class="p-3.5 rounded-xl border text-xs font-semibold">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+
+            <!-- Output Display -->
+            <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+                
+                <div class="bg-blue-600 text-white rounded-2xl p-6 md:p-8 card-shadow">
+                    <p class="text-blue-100 text-xs font-bold uppercase tracking-wider mb-2">Total Monthly ESI Deposit (4.00%)</p>
+                    <h3 class="text-4xl md:text-5xl font-black mb-4" id="totalEsiVal">₹0</h3>
+                    
+                    <div class="border-t border-blue-500/50 pt-4 grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <p class="text-blue-200 text-xs">Employee Share (0.75%)</p>
+                            <p class="text-xl font-bold text-white mt-1" id="employeeEsiVal">₹0</p>
+                        </div>
+                        <div>
+                            <p class="text-blue-200 text-xs">Employer Share (3.25%)</p>
+                            <p class="text-xl font-bold text-emerald-300 mt-1" id="employerEsiVal">₹0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-slate-100 space-y-3 text-sm">
+                    <h4 class="font-bold text-slate-800 border-b pb-2">Take-Home Impact & Annual ESI</h4>
+                    <div class="flex justify-between">
+                        <span class="text-slate-600">Monthly Net Salary After ESI</span>
+                        <span class="font-bold text-slate-800" id="netSalaryDisp">₹0</span>
+                    </div>
+                    <div class="flex justify-between border-t pt-2">
+                        <span class="font-bold text-slate-800">Total Annual ESI Contribution</span>
+                        <span class="font-black text-blue-600 text-base" id="annualEsiDisp">₹0 / year</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content Section -->
+        <article class="bg-white rounded-2xl p-6 md:p-10 card-shadow border border-slate-100 mb-16 prose prose-slate max-w-none">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">ESIC Contribution Rates & Slabs (2026)</h2>
+            <p>
+                Employee State Insurance (ESI) is an integrated social security scheme providing health insurance and cash benefits to Indian workers.
+            </p>
+
+            <div class="my-6 overflow-x-auto not-prose">
+                <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden text-sm">
+                    <thead class="bg-slate-100">
+                        <tr>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Category</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Monthly Wage Ceiling</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Contribution Rates</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 bg-white">
+                        <tr>
+                            <td class="p-3.5 font-medium text-slate-800">Standard Employees</td>
+                            <td class="p-3.5 text-blue-600 font-bold">₹21,000 / month</td>
+                            <td class="p-3.5 text-slate-700">Employee: 0.75% | Employer: 3.25%</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-medium text-slate-800">Persons with Disabilities (PWD)</td>
+                            <td class="p-3.5 text-blue-600 font-bold">₹25,000 / month</td>
+                            <td class="p-3.5 text-slate-700">Employee: 0.75% | Employer: 3.25%</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-medium text-slate-800">Low Wage Employees (≤₹176/day)</td>
+                            <td class="p-3.5 text-emerald-600 font-bold">Up to ₹4,576 / month</td>
+                            <td class="p-3.5 text-emerald-600 font-bold">Employee: 0% (Exempt) | Employer: 3.25%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            
+            
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">ESI Statutory Contribution Rates (2026 Rules)</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Employee Contribution:</strong> 0.75% of Gross Monthly Salary.</li>
+            <li><strong>Employer Contribution:</strong> 3.25% of Gross Monthly Salary. Total Combined ESI Contribution = 4.00%.</li>
+            <li><strong>Eligibility Threshold:</strong> Applicable to employees earning gross monthly wage up to ₹21,000 (₹25,000 for employees with disabilities).</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Medical & Cash Benefits Covered under ESIC Scheme</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Full Medical Care:</strong> Free outpatient and hospitalization care for employee and dependent family members at ESIC hospitals.</li>
+            <li><strong>Sickness & Maternity Benefit:</strong> 70% of wages paid during certified sickness leaves and 100% wages paid for 26 weeks of maternity leave.</li>
+        </ul>
+
+        <div class="mt-8 p-5 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl not-prose">
+            <h4 class="text-base font-bold text-blue-900 mb-1">ESI Exemption Rule</h4>
+            <p class="text-xs text-blue-800 leading-relaxed">
+                Employees whose daily average wage is up to ₹176 are exempt from paying employee contribution (0.75%), though employers must still pay 3.25%.
+            </p>
+        </div>
+
+            <div class="mt-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl not-prose">
+                <h3 class="text-lg font-bold text-slate-800 mb-2">Explore Related Financial Tools & Calculators</h3>
+                <p class="text-xs text-slate-500 mb-4">Compare options across loan EMIs, tax savings, and compounding growth:</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-medium">
+                    <a href="/eps-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">EPS Pension</a>
+                    <a href="/epf/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">EPF Calculator</a>
+                    <a href="/gratuity-exemption-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Gratuity Exemption</a>
+                    <a href="/notice-period-pay-recovery/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Notice Pay Recovery</a>
+                    <a href="/income-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Income Tax Tool</a>
+                    <a href="/sip/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SIP Calculator</a>
+                    <a href="/capital-gains-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Capital Gains Tax</a>
+                    <a href="/lumpsum/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Lumpsum Calculator</a>
+                    <a href="/inflation/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Inflation Calculator</a>
+                    <a href="/cagr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">CAGR Calculator</a>
+                    <a href="/80c-tax-saving/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">80C Tax Saving</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- FAQs -->
+        <div class="mb-16" id="faqs">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is the wage limit for ESI coverage in 2026?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Employees earning gross monthly wages up to ₹21,000 (or ₹25,000 for Persons with Disabilities) are eligible for ESI coverage.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What are the current ESI contribution rates?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Employee contribution rate is 0.75% of gross monthly wages, and Employer contribution rate is 3.25% of gross monthly wages (Total: 4.00%).
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Who is exempt from paying employee ESI contribution?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Employees whose average daily wage is up to ₹176 are exempt from paying their 0.75% contribution. However, the employer must still pay their 3.25% share.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What components of salary are included in ESI wage calculation?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Gross wages for ESI include Basic Salary, Dearness Allowance (DA), HRA, Overtime, Special Allowances, and Production Bonus.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What medical benefits does an ESI card provide?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        ESI provides full medical care for the employee and dependents, sickness cash benefit, maternity benefit (26 weeks), and disability benefits.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What happens if an employee's salary exceeds ₹21,000 mid-year?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        If salary exceeds ₹21,000 after the start of a contribution period, the employee continues to be covered until the end of that 6-month contribution period.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How is ESI contribution remitted by the employer?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Employers must deposit the total ESI contribution (4%) on the ESIC online portal within 15 days of the close of the calendar month.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Is ESI deduction mandatory for all companies?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Yes, ESI registration is mandatory for non-seasonal factories and establishments employing 10 or more persons.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global JS Hooks for Linking & Search -->
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        const elements = {
+            grossInput: document.getElementById('grossInput'),
+            grossRange: document.getElementById('grossRange'),
+            pwdCheck: document.getElementById('pwdCheck'),
+            
+            eligibilityBanner: document.getElementById('eligibilityBanner'),
+            totalEsiVal: document.getElementById('totalEsiVal'),
+            employeeEsiVal: document.getElementById('employeeEsiVal'),
+            employerEsiVal: document.getElementById('employerEsiVal'),
+            netSalaryDisp: document.getElementById('netSalaryDisp'),
+            annualEsiDisp: document.getElementById('annualEsiDisp')
+        };
+
+        function formatIndian(val) {
+            return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+        }
+
+        function calculateEsi() {
+            const gross = parseFloat(elements.grossInput.value) || 0;
+            const isPwd = elements.pwdCheck.checked;
+            const wageCap = isPwd ? 25000 : 21000;
+
+            if (gross > wageCap) {
+                elements.eligibilityBanner.className = "p-3.5 rounded-xl border border-rose-200 bg-rose-50 text-rose-700 text-xs font-semibold";
+                elements.eligibilityBanner.textContent = `Gross salary exceeds ₹${wageCap.toLocaleString('en-IN')} limit. Not covered under ESI scheme.`;
+                
+                elements.totalEsiVal.textContent = "₹0";
+                elements.employeeEsiVal.textContent = "₹0";
+                elements.employerEsiVal.textContent = "₹0";
+                elements.netSalaryDisp.textContent = formatIndian(gross);
+                elements.annualEsiDisp.textContent = "₹0 / year";
+                return;
+            }
+
+            elements.eligibilityBanner.className = "p-3.5 rounded-xl border border-emerald-200 bg-emerald-50 text-emerald-700 text-xs font-semibold";
+            elements.eligibilityBanner.textContent = `Eligible for ESIC Medical & Cash Benefits (Salary ≤ ₹${wageCap.toLocaleString('en-IN')}).`;
+
+            // Employee share is 0 unless daily wage <= ₹176 (approx ₹4,576/mo)
+            let empShare = gross <= 4576 ? 0 : gross * 0.0075;
+            let emprShare = gross * 0.0325;
+            let totalEsi = empShare + emprShare;
+
+            let netSalary = gross - empShare;
+            let annualTotal = totalEsi * 12;
+
+            elements.totalEsiVal.textContent = formatIndian(totalEsi);
+            elements.employeeEsiVal.textContent = formatIndian(empShare);
+            elements.employerEsiVal.textContent = formatIndian(emprShare);
+            elements.netSalaryDisp.textContent = formatIndian(netSalary);
+            elements.annualEsiDisp.textContent = formatIndian(annualTotal) + " / year";
+        }
+
+        function setupSync(input, range) {
+            input.addEventListener('input', () => { range.value = input.value; calculateEsi(); });
+            range.addEventListener('input', () => { input.value = range.value; calculateEsi(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.grossInput, elements.grossRange);
+            elements.pwdCheck.addEventListener('change', calculateEsi);
+            
+            calculateEsi();
+        });
+    </script>
+</body>
+</html>

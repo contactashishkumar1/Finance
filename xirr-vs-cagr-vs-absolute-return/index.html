@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XIRR vs CAGR vs Absolute Return Calculator</title>
+    <meta name="description" content="Understand the difference between XIRR, CAGR, and Absolute Return. Learn which metric to use for measuring your mutual fund and stock portfolio returns.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/xirr-vs-cagr-vs-absolute-return/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="XIRR vs CAGR vs Absolute Return Calculator">
+    <meta property="og:description" content="Understand the difference between XIRR, CAGR, and Absolute Return.">
+    <meta property="og:url" content="https://arthcalculator.in/xirr-vs-cagr-vs-absolute-return/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "XIRR vs CAGR vs Absolute Return Calculator",
+      "url": "https://arthcalculator.in/xirr-vs-cagr-vs-absolute-return/",
+      "description": "Understand the difference between XIRR, CAGR, and Absolute Return. Learn which metric to use for measuring your mutual fund and stock portfolio returns.",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Return Metrics Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://arthcalculator.in/xirr-vs-cagr-vs-absolute-return/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "XIRR vs CAGR",
+        "item": "https://arthcalculator.in/xirr-vs-cagr-vs-absolute-return/"
+      }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Absolute Return?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolute return is the simplest measure of growth. It is simply the total profit divided by the total investment, expressed as a percentage. It does not account for how long it took to earn that profit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is CAGR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CAGR (Compound Annual Growth Rate) measures the smooth, annualized rate of return of an investment over a specific time period. It is best used for single lumpsum investments."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is XIRR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "XIRR (Extended Internal Rate of Return) is a metric that calculates the annualized return for a series of cash flows occurring at irregular intervals. It is the most accurate way to measure SIP returns."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is XIRR different from CAGR for SIPs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because in an SIP, you don't invest all your money on day one. Each monthly installment is invested for a different duration. XIRR accounts for the exact dates each rupee was invested, while CAGR wrongly assumes all money was invested on day one."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I use Absolute Return?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolute return is only useful for short-term trades (less than 1 year). For anything longer than a year, it is misleading because it ignores the time value of money."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can XIRR be negative?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, if the final value of your portfolio is less than the total amount you invested, your XIRR (and CAGR/Absolute Return) will be negative."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Zerodha or Groww calculate my portfolio return?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most modern brokerage platforms display XIRR as the primary metric for your overall portfolio because you likely have multiple buy and sell transactions occurring on different dates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which metric is the highest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no fixed rule. For a profitable SIP, Absolute Return will usually look lower than XIRR because Absolute Return divides the profit by the *entire* invested capital, even though the last few installments haven't had time to grow."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-blue-200">
+    <div id="navbar"></div>
+    <script>
+        fetch("/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+                const menuBtn = document.getElementById("menuBtn");
+                const mobileMenu = document.getElementById("mobileMenu");
+                if(menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                    });
+                }
+            });
+    </script>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+    <ol class="flex list-none p-0">
+        <li class="flex items-center">
+            <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+            <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+        </li>
+        <li class="flex items-center">
+            <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+            <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+        </li>
+        <li class="text-blue-600 font-bold">XIRR vs CAGR vs Absolute</li>
+    </ol>
+</nav>
+
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">XIRR vs CAGR vs Absolute Return <span class="text-blue-600">Calculator</span></h1>
+            <p class="text-lg text-slate-600 mb-6">
+                Enter a mock SIP scenario to visually understand why these three metrics produce wildly different percentage returns on the exact same data.
+            </p>
+        </div>
+
+        <!-- Configuration -->
+        <div class="bg-white rounded-2xl p-6 md:p-8 card-shadow border border-slate-100 mb-10 max-w-3xl mx-auto">
+            <h2 class="text-xl font-bold text-slate-800 mb-6 border-b pb-2">The SIP Scenario</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Initial -->
+                <div>
+                    <label class="font-semibold text-slate-700 block mb-2">Initial Lumpsum</label>
+                    <div class="relative">
+                        <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
+                        <input type="number" id="initialInv" value="50000" class="w-full text-right bg-slate-50 border border-slate-200 text-slate-800 rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                    </div>
+                </div>
+                
+                <!-- SIP -->
+                <div>
+                    <label class="font-semibold text-slate-700 block mb-2">Monthly SIP</label>
+                    <div class="relative">
+                        <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
+                        <input type="number" id="monthlySip" value="10000" class="w-full text-right bg-slate-50 border border-slate-200 text-slate-800 rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                    </div>
+                </div>
+
+                <!-- Tenure -->
+                <div>
+                    <label class="font-semibold text-slate-700 block mb-2">Duration</label>
+                    <div class="relative">
+                        <input type="number" id="tenure" value="3" min="1" max="20" class="w-full text-right bg-slate-50 border border-slate-200 text-slate-800 rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-8 font-bold">
+                        <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium text-xs">Yrs</span>
+                    </div>
+                </div>
+
+                <!-- Final Value -->
+                <div>
+                    <label class="font-semibold text-slate-700 block mb-2">Final Portfolio Value</label>
+                    <div class="relative">
+                        <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
+                        <input type="number" id="finalVal" value="500000" class="w-full text-right bg-slate-50 border border-slate-200 text-slate-800 rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6 p-4 bg-slate-50 rounded-lg text-center text-sm text-slate-600 font-medium">
+                Total Invested: <span id="totalInvestedDisp" class="font-bold text-slate-900">₹4,10,000</span> | Total Profit: <span id="totalProfitDisp" class="font-bold text-emerald-600">₹90,000</span>
+            </div>
+        </div>
+
+        <!-- 3 Metrics Comparison Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            
+            <!-- Absolute Return -->
+            <div class="bg-white rounded-2xl border border-blue-200 card-shadow overflow-hidden flex flex-col">
+                <div class="bg-blue-600 p-4 text-center text-white">
+                    <h3 class="text-xl font-bold">Absolute Return</h3>
+                </div>
+                <div class="p-6 flex-grow flex flex-col items-center justify-center text-center">
+                    <p class="text-4xl font-black text-blue-600 mb-4" id="absReturn">0%</p>
+                    <p class="text-sm text-slate-600">
+                        Calculated simply as: <br><code class="bg-slate-100 p-1 rounded mt-2 block text-xs">(Profit / Total Invested) * 100</code>
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-slate-100 text-xs text-rose-600 font-medium w-full text-left">
+                        <strong>Flaw:</strong> Completely ignores time. A 20% return in 1 year looks exactly the same as a 20% return over 10 years using this metric.
+                    </div>
+                </div>
+            </div>
+
+            <!-- CAGR -->
+            <div class="bg-white rounded-2xl border border-blue-200 card-shadow overflow-hidden flex flex-col">
+                <div class="bg-blue-500 p-4 text-center text-white">
+                    <h3 class="text-xl font-bold">CAGR</h3>
+                </div>
+                <div class="p-6 flex-grow flex flex-col items-center justify-center text-center">
+                    <p class="text-4xl font-black text-blue-600 mb-4" id="cagrReturn">0%</p>
+                    <p class="text-sm text-slate-600">
+                        Compound Annual Growth Rate.<br><code class="bg-slate-100 p-1 rounded mt-2 block text-xs">(Final / Total Invested)^(1/Yrs) - 1</code>
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-slate-100 text-xs text-rose-600 font-medium w-full text-left">
+                        <strong>Flaw (for SIPs):</strong> Assumes the entire Total Invested amount was put in on Day 1, which artificially drags down the percentage for SIPs.
+                    </div>
+                </div>
+            </div>
+
+            <!-- XIRR -->
+            <div class="bg-white rounded-2xl border border-emerald-200 card-shadow overflow-hidden flex flex-col relative transform md:-translate-y-4">
+                <div class="absolute -top-3 right-4 bg-yellow-400 text-yellow-900 text-[10px] font-bold px-2 py-1 rounded-full uppercase">Accurate for SIPs</div>
+                <div class="bg-emerald-600 p-4 text-center text-white">
+                    <h3 class="text-xl font-bold">XIRR</h3>
+                </div>
+                <div class="p-6 flex-grow flex flex-col items-center justify-center text-center bg-emerald-50/30">
+                    <p class="text-4xl font-black text-emerald-600 mb-4" id="xirrReturn">0%</p>
+                    <p class="text-sm text-slate-600">
+                        Extended Internal Rate of Return.<br><code class="bg-slate-100 p-1 rounded mt-2 block text-xs">Accounts for exact cashflow dates</code>
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-emerald-100 text-xs text-emerald-800 font-medium w-full text-left">
+                        <strong>Why it's accurate:</strong> It knows that the SIP you made in month 35 only had 1 month to grow, and calculates the true annualized rate accordingly.
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Educational Content Section -->
+        <article class="bg-white rounded-2xl p-6 md:p-10 card-shadow border border-slate-100 mb-16 prose prose-slate max-w-none">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">Which metric should you actually use?</h2>
+            
+            <h3 class="text-xl font-bold text-slate-800 mt-6 mb-3">1. Use CAGR for Lumpsum</h3>
+            <p>
+                If you buy a house for ₹50 Lakhs today and sell it for ₹1 Crore exactly 10 years later, use <strong>CAGR</strong>. It will accurately tell you that your house grew at ~7.17% annually.
+            </p>
+
+            <h3 class="text-xl font-bold text-slate-800 mt-6 mb-3">2. Use XIRR for SIPs & Dynamic Portfolios</h3>
+            <p>
+                If you are investing ₹10,000 every month, you cannot use CAGR. This is because your first ₹10,000 has been growing for years, while your most recent ₹10,000 has only been growing for a few days. 
+                <strong>XIRR (Extended Internal Rate of Return)</strong> acts as a personal calculator that assigns a specific weight and time duration to every single transaction you make (buys and sells) to give you one unified, accurate annual growth rate.
+            </p>
+
+            <h3 class="text-xl font-bold text-slate-800 mt-6 mb-3">3. Use Absolute Return for Short Term Trading</h3>
+            <p>
+                If you bought a stock on Monday for ₹100 and sold it on Thursday for ₹105, your absolute return is 5%. Annualizing a 4-day trade is mathematically silly (it would look like hundreds of percent), so Absolute Return is the only metric that makes sense for short time frames.
+            </p>
+        
+<div class="my-8 overflow-x-auto not-prose">
+    <h3 class="text-xl font-bold text-slate-800 mb-4">Key Characteristics & Comparison Overview</h3>
+    <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden text-sm">
+        <thead class="bg-slate-100">
+            <tr>
+                <th class="p-3.5 border-b font-bold text-slate-700">Feature / Parameter</th>
+                <th class="p-3.5 border-b font-bold text-slate-700">Details / Rules</th>
+                <th class="p-3.5 border-b font-bold text-slate-700">Tax Implications</th>
+            </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100 bg-white">
+            <tr>
+                <td class="p-3.5 font-medium text-slate-800">Primary Returns</td>
+                <td class="p-3.5 text-blue-600 font-semibold">Guaranteed / Market-Linked Growth</td>
+                <td class="p-3.5 text-slate-600">Taxable at Income Tax Slab Rates</td>
+            </tr>
+            <tr>
+                <td class="p-3.5 font-medium text-slate-800">Compounding / Payout</td>
+                <td class="p-3.5 text-slate-700">Quarterly / Annual Compounding</td>
+                <td class="p-3.5 text-slate-600">TDS deductions applicable where threshold met</td>
+            </tr>
+            <tr>
+                <td class="p-3.5 font-medium text-slate-800">Lock-in & Liquidity</td>
+                <td class="p-3.5 text-slate-700">Specified Tenure / Market Liquidity</td>
+                <td class="p-3.5 text-slate-600">Premature withdrawal penalties apply</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+            
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">When to Use XIRR vs CAGR vs Absolute Return</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>XIRR (Extended Internal Rate of Return):</strong> Essential for SIPs, SWPs, and multiple cash inflows/outflows at irregular dates. It calculates annual yield for every individual transaction.</li>
+            <li><strong>CAGR (Compound Annual Growth Rate):</strong> Ideal for point-to-point single lump sum investments held for more than 1 year.</li>
+            <li><strong>Absolute Return:</strong> Simple percentage growth rate; suitable only for short-term investments under 12 months.</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Common Pitfalls in Investment Return Analysis</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Misleading Absolute Returns:</strong> A 50% absolute return over 5 years is only a 8.4% CAGR annual return.</li>
+            <li><strong>SIP XIRR Misinterpretation:</strong> Early SIP XIRR figures look highly volatile because initial cash contributions are small compared to ongoing market movements.</li>
+        </ul>
+
+        <div class="mt-8 p-5 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl not-prose">
+            <h4 class="text-base font-bold text-blue-900 mb-1">Return Calculation Golden Rule</h4>
+            <p class="text-xs text-blue-800 leading-relaxed">
+                Always evaluate Mutual Fund SIP portfolios using XIRR, single stock buys using CAGR, and intraday/F&O trades using Absolute Return.
+            </p>
+        </div>
+
+            <div class="mt-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl not-prose">
+    <h3 class="text-lg font-bold text-slate-800 mb-2">Explore Related Financial Tools & Calculators</h3>
+    <p class="text-xs text-slate-500 mb-4">Compare options across investments, tax savings, and compounding growth:</p>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-medium">
+        <a href="/sip/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SIP Calculator</a>
+        <a href="/fd/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">FD Calculator</a>
+        <a href="/ppf/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">PPF Calculator</a>
+        <a href="/cagr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">CAGR Calculator</a>
+        <a href="/xirr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">XIRR Calculator</a>
+        <a href="/income-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Income Tax Tool</a>
+        <a href="/capital-gains-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Capital Gains Tax</a>
+        <a href="/lumpsum/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Lumpsum Calculator</a>
+        <a href="/inflation/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Inflation Calculator</a>
+        <a href="/swp/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SWP Calculator</a>
+        <a href="/rd/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">RD Calculator</a>
+        <a href="/80c-tax-saving/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">80C Tax Saving</a>
+    </div>
+</div>
+
+</article>
+        
+        <!-- FAQs -->
+        <div class="mb-16">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is Absolute Return?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Absolute return is the simplest measure of growth. It is simply the total profit divided by the total investment, expressed as a percentage. It does not account for how long it took to earn that profit.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is CAGR?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        CAGR (Compound Annual Growth Rate) measures the smooth, annualized rate of return of an investment over a specific time period. It is best used for single lumpsum investments.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is XIRR?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        XIRR (Extended Internal Rate of Return) is a metric that calculates the annualized return for a series of cash flows occurring at irregular intervals. It is the most accurate way to measure SIP returns.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Why is XIRR different from CAGR for SIPs?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Because in an SIP, you don't invest all your money on day one. Each monthly installment is invested for a different duration. XIRR accounts for the exact dates each rupee was invested, while CAGR wrongly assumes all money was invested on day one.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        When should I use Absolute Return?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Absolute return is only useful for short-term trades (less than 1 year). For anything longer than a year, it is misleading because it ignores the time value of money.
+                    </div>
+                </details>
+                
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Can XIRR be negative?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Yes, if the final value of your portfolio is less than the total amount you invested, your XIRR (and CAGR/Absolute Return) will be negative.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How does Zerodha or Groww calculate my portfolio return?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Most modern brokerage platforms display XIRR as the primary metric for your overall portfolio because you likely have multiple buy and sell transactions occurring on different dates.
+                    </div>
+                </details>
+        <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                Why does CAGR give incorrect results for SIP investments?
+                <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+            <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                CAGR assumes a single lump sum investment at the start. Since SIP involves multiple periodic investments at different times, XIRR is required to account for distinct cash flow dates.
+            </div>
+        </details>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Global JS Hooks for Linking & Search -->
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        // XIRR Calculation logic (Newton-Raphson Method)
+        function calculateXIRR(cashFlows) {
+            if (!cashFlows || cashFlows.length === 0) return 0;
+            
+            let minRate = -0.99999;
+            let maxRate = 10000;
+            let guess = 0.1;
+            let result = guess;
+            
+            const maxIterations = 100;
+            const tolerance = 1e-6;
+
+            for (let i = 0; i < maxIterations; i++) {
+                let fv = 0;
+                let dfv = 0;
+
+                for (let j = 0; j < cashFlows.length; j++) {
+                    const cf = cashFlows[j].amount;
+                    const days = (cashFlows[cashFlows.length-1].date - cashFlows[j].date) / (1000 * 60 * 60 * 24);
+                    const years = days / 365.25;
+
+                    fv += cf * Math.pow(1 + result, years);
+                    dfv += cf * years * Math.pow(1 + result, years - 1);
+                }
+
+                if (Math.abs(fv) < tolerance) {
+                    return result;
+                }
+
+                const newResult = result - fv / dfv;
+                if (Math.abs(newResult - result) < tolerance) {
+                    return newResult;
+                }
+                result = newResult;
+            }
+            
+            // Fallback binary search if Newton fails
+            let low = -0.99;
+            let high = 10;
+            for(let i=0; i<100; i++) {
+                let mid = (low + high)/2;
+                let npv = 0;
+                for (let j = 0; j < cashFlows.length; j++) {
+                    const cf = cashFlows[j].amount;
+                    const days = (cashFlows[cashFlows.length-1].date - cashFlows[j].date) / (1000 * 60 * 60 * 24);
+                    const years = days / 365.25;
+                    npv += cf * Math.pow(1 + mid, years);
+                }
+                if(npv > 0) { high = mid; } else { low = mid; }
+            }
+            return (low+high)/2;
+        }
+
+        const elements = {
+            initialInv: document.getElementById('initialInv'),
+            monthlySip: document.getElementById('monthlySip'),
+            tenure: document.getElementById('tenure'),
+            finalVal: document.getElementById('finalVal'),
+            
+            totalInvestedDisp: document.getElementById('totalInvestedDisp'),
+            totalProfitDisp: document.getElementById('totalProfitDisp'),
+            
+            absReturn: document.getElementById('absReturn'),
+            cagrReturn: document.getElementById('cagrReturn'),
+            xirrReturn: document.getElementById('xirrReturn')
+        };
+
+        function formatIndian(val) {
+            return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+        }
+
+        function calculateMetrics() {
+            const initial = parseFloat(elements.initialInv.value) || 0;
+            const sip = parseFloat(elements.monthlySip.value) || 0;
+            const years = parseFloat(elements.tenure.value) || 0;
+            const final = parseFloat(elements.finalVal.value) || 0;
+            
+            if(years <= 0) return;
+
+            const months = Math.floor(years * 12);
+            const totalInvested = initial + (sip * months);
+            const profit = final - totalInvested;
+
+            elements.totalInvestedDisp.textContent = formatIndian(totalInvested);
+            elements.totalProfitDisp.textContent = profit >= 0 ? formatIndian(profit) : "- " + formatIndian(Math.abs(profit));
+
+            // Absolute Return
+            const abs = (profit / totalInvested) * 100;
+            elements.absReturn.textContent = abs.toFixed(2) + "%";
+
+            // CAGR (Formula: (FV/PV)^(1/n) - 1)
+            // Here PV is treated as Total Invested on day 1 (which is the flaw we are demonstrating)
+            const cagr = (Math.pow(final / totalInvested, 1 / years) - 1) * 100;
+            elements.cagrReturn.textContent = cagr.toFixed(2) + "%";
+
+            // XIRR
+            let cashFlows = [];
+            let startDate = new Date();
+            
+            // Initial Investment
+            cashFlows.push({ date: new Date(startDate), amount: -initial });
+            
+            // SIPs
+            for (let i = 1; i <= months; i++) {
+                let sipDate = new Date(startDate);
+                sipDate.setMonth(sipDate.getMonth() + i);
+                cashFlows.push({ date: sipDate, amount: -sip });
+            }
+            
+            // Final Value Date
+            let finalDate = new Date(startDate);
+            finalDate.setMonth(finalDate.getMonth() + months);
+            // Just to make sure it's the last date in the array
+            cashFlows.push({ date: finalDate, amount: final });
+
+            let xirr = 0;
+            try {
+                xirr = calculateXIRR(cashFlows) * 100;
+            } catch (e) {
+                console.error(e);
+            }
+            
+            elements.xirrReturn.textContent = xirr.toFixed(2) + "%";
+        }
+
+        elements.initialInv.addEventListener('input', calculateMetrics);
+        elements.monthlySip.addEventListener('input', calculateMetrics);
+        elements.tenure.addEventListener('input', calculateMetrics);
+        elements.finalVal.addEventListener('input', calculateMetrics);
+
+        window.addEventListener('DOMContentLoaded', calculateMetrics);
+    </script>
+</body>
+</html>

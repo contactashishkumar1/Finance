@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sovereign Gold Bond (SGB) Secondary Market Yield Calculator (2026)</title>
+    <meta name="description" content="Calculate Sovereign Gold Bond (SGB) secondary market discount yield (YTM) in 2026. Computes annualized return on NSE/BSE discounted SGBs and tax-free maturity gains.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/sovereign-gold-bond-secondary-market-yield/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SGB Secondary Market Yield Calculator (2026)">
+    <meta property="og:description" content="Calculate SGB secondary market discount yield and YTM.">
+    <meta property="og:url" content="https://arthcalculator.in/sovereign-gold-bond-secondary-market-yield/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "SGB Secondary Market Yield Calculator",
+      "url": "https://arthcalculator.in/sovereign-gold-bond-secondary-market-yield/",
+      "description": "Calculate SGB secondary market discount yield and YTM.",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SGB Secondary Market Yield Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://arthcalculator.in/sovereign-gold-bond-secondary-market-yield/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "SGB Secondary Market Yield Calculator",
+        "item": "https://arthcalculator.in/sovereign-gold-bond-secondary-market-yield/"
+      }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why do SGBs trade at a discount on stock exchanges?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SGBs trade on NSE/BSE at a 3-8% discount to physical gold spot prices due to lower secondary market trading liquidity compared to gold ETFs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are capital gains tax-free when buying SGBs from secondary markets?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Capital gains on SGB redemption at 8-year maturity are 100% tax-free under Section 47(viib), irrespective of whether you bought them in primary RBI issuance or from NSE/BSE secondary markets."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the interest rate paid on SGBs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SGBs pay a fixed 2.50% interest per annum on the original issue price, disbursed semi-annually into your registered bank account."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Yield to Maturity (YTM) calculated for discounted SGBs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "YTM incorporates (1) Annual 2.5% coupon yield, (2) Price discount recovery to spot gold price at maturity, and (3) Expected gold price appreciation CAGR."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is SGB 2.5% interest income taxed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 2.5% annual interest income is taxable under 'Income from Other Sources' at your applicable income tax slab rate. Zero TDS is deducted at source."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I sell SGB on the stock exchange before 8 years maturity?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Selling SGBs on stock exchanges before maturity attracts capital gains tax: STCG (held ≤ 24 months) at slab rates, or LTCG (held > 24 months) at 12.5% without indexation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When can I redeem SGBs directly with RBI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RBI allows premature redemption window starting from the 5th year onwards on coupon payment dates at prevailing spot gold rates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which SGB series offer the highest discount on NSE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Older SGB series maturing in 2-4 years often trade at higher discounts (4-7%) due to investors liquidating portfolios early."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-blue-200">
+    <div id="navbar"></div>
+    <script>
+        fetch("/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+                const menuBtn = document.getElementById("menuBtn");
+                const mobileMenu = document.getElementById("mobileMenu");
+                if(menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                    });
+                }
+            });
+    </script>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+            <ol class="flex list-none p-0">
+                <li class="flex items-center">
+                    <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="text-blue-600 font-bold">SGB Secondary Market Yield</li>
+            </ol>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">SGB Secondary Market Yield <span class="text-blue-600">Calculator (2026)</span></h1>
+            <p class="text-lg text-slate-600 mb-6">
+                Calculate discount yield and annualized Yield to Maturity (YTM) for buying discounted Sovereign Gold Bonds on NSE/BSE exchanges.
+            </p>
+        </div>
+
+        <!-- Calculator Interface -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+            
+            <!-- Inputs -->
+            <div class="lg:col-span-6 bg-white rounded-2xl p-6 md:p-8 card-shadow border border-slate-100 space-y-4">
+                <h2 class="text-xl font-bold text-slate-800 border-b pb-3">SGB Market Pricing Details</h2>
+
+                <div>
+                    <label class="font-semibold text-slate-700 text-xs block mb-1">Current Physical Spot Gold Price (₹/gram)</label>
+                    <input type="number" id="spotGoldInput" value="7600" min="5000" step="100" class="w-full p-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold">
+                </div>
+
+                <div>
+                    <label class="font-semibold text-slate-700 text-xs block mb-1">NSE/BSE SGB Secondary Market Trading Price (₹/gram)</label>
+                    <input type="number" id="sgbPriceInput" value="7200" min="4500" step="100" class="w-full p-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold">
+                </div>
+
+                <div class="grid grid-cols-2 gap-2 text-xs">
+                    <div>
+                        <label class="font-semibold text-slate-700 block mb-1">Original Issue Price (₹/gram)</label>
+                        <input type="number" id="issuePriceInput" value="5000" min="3000" step="100" class="w-full p-2 bg-slate-50 border rounded-lg font-bold">
+                    </div>
+                    <div>
+                        <label class="font-semibold text-slate-700 block mb-1">Remaining Tenure to Maturity (Years)</label>
+                        <input type="number" id="remainingTenureInput" value="3.5" min="0.5" max="8.0" step="0.5" class="w-full p-2 bg-slate-50 border rounded-lg font-bold">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="font-semibold text-slate-700 text-xs block mb-1">Expected Annual Gold Appreciation Rate (%)</label>
+                    <input type="number" id="goldCagrInput" value="8.0" min="0" max="15" step="0.5" class="w-full p-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold">
+                </div>
+            </div>
+
+            <!-- Output Display -->
+            <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+                
+                <div class="bg-blue-600 text-white rounded-2xl p-6 md:p-8 card-shadow">
+                    <p class="text-blue-100 text-xs font-bold uppercase tracking-wider mb-2">Total Expected Annualized YTM Yield</p>
+                    <h3 class="text-4xl md:text-5xl font-black mb-4" id="totalYtmVal">11.8% p.a.</h3>
+                    
+                    <div class="border-t border-blue-500/50 pt-4 grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <p class="text-blue-200 text-xs">Secondary Market Price Discount</p>
+                            <p class="text-xl font-bold text-white mt-1" id="discountPctVal">5.26% Off</p>
+                        </div>
+                        <div>
+                            <p class="text-blue-200 text-xs">Maturity Capital Gain Status</p>
+                            <p class="text-xl font-bold text-emerald-300 mt-1" id="taxStatusVal">100% TAX-FREE</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-slate-100 space-y-3 text-sm">
+                    <h4 class="font-bold text-slate-800 border-b pb-2">Annual Payout & Yield Breakdown</h4>
+                    <div class="flex justify-between text-xs">
+                        <span class="text-slate-600">Annual RBI Interest (2.5% on Issue Price)</span>
+                        <span class="font-bold text-slate-800" id="annualCouponVal">₹125 / gram</span>
+                    </div>
+                    <div class="flex justify-between text-xs border-t pt-2">
+                        <span class="text-slate-600">Effective Coupon Yield on Buy Price</span>
+                        <span class="font-bold text-blue-600" id="effectiveCouponYieldVal">1.74% p.a.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content Section -->
+        <article class="bg-white rounded-2xl p-6 md:p-10 card-shadow border border-slate-100 mb-16 prose prose-slate max-w-none">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">Why Buy SGBs on Secondary Markets? (2026)</h2>
+            <p>
+                Buying Sovereign Gold Bonds (SGBs) on stock exchanges (NSE/BSE) often yields higher returns than primary RBI issues due to market price discounts:
+            </p>
+
+            <div class="my-6 overflow-x-auto not-prose">
+                <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden text-sm">
+                    <thead class="bg-slate-100">
+                        <tr>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Gold Vehicle</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Purchase Price</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Extra Payout & Tax</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 bg-white">
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">Secondary Market SGB</td>
+                            <td class="p-3.5 text-emerald-600 font-bold">3% - 8% Below Spot Gold Price</td>
+                            <td class="p-3.5 text-emerald-600 font-bold">+2.5% Interest + 100% Tax-Free Maturity</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">Gold ETF</td>
+                            <td class="p-3.5 text-slate-800">100% Spot Gold Price</td>
+                            <td class="p-3.5 text-slate-700">0% Interest | 12.5% LTCG Tax</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">Physical Gold Coins</td>
+                            <td class="p-3.5 text-rose-600 font-bold">Spot Price + 3% GST + 8% Making Charges</td>
+                            <td class="p-3.5 text-slate-700">0% Interest | 12.5% LTCG Tax</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Key Benefits of Secondary Market SGBs</h3>
+            <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+                <li><strong>Instant Discount Boost:</strong> Buying gold at a 5% discount locks in immediate extra capital gains at maturity.</li>
+                <li><strong>100% Tax Exemption on Capital Gains:</strong> Section 47(viib) grants 100% tax-free capital gains at 8-year maturity for secondary market buyers too!</li>
+            </ul>
+
+            <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Limitations & Trading Considerations (2026)</h3>
+            <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+                <li><strong>Illiquidity Risk:</strong> Secondary SGB order books have wider bid-ask spreads; use limit orders when buying.</li>
+                <li><strong>Taxable Coupon Interest:</strong> The 2.5% annual coupon interest is taxable at your income tax slab rate.</li>
+            </ul>
+
+            <div class="mt-8 p-5 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl not-prose">
+                <h4 class="text-base font-bold text-blue-900 mb-1">SGB Buying Hack</h4>
+                <p class="text-xs text-blue-800 leading-relaxed">
+                    Search for SGB series with 2-3 years remaining tenure on your broker terminal (e.g. SGBNOV28). Buy at a discount to secure tax-free gold compounding with a shorter lock-in!
+                </p>
+            </div>
+
+            <div class="mt-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl not-prose">
+                <h3 class="text-lg font-bold text-slate-800 mb-2">Explore Related Financial Tools & Calculators</h3>
+                <p class="text-xs text-slate-500 mb-4">Compare options across loan EMIs, tax savings, and compounding growth:</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-medium">
+                    <a href="/gold-vs-sgb-vs-digital-gold/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Gold vs SGB Tool</a>
+                    <a href="/capital-gains-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Capital Gains Tax</a>
+                    <a href="/cagr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">CAGR Calculator</a>
+                    <a href="/sip/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SIP Calculator</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- FAQs -->
+        <div class="mb-16" id="faqs">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Why do SGBs trade at a discount on stock exchanges?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        SGBs trade on NSE/BSE at a 3-8% discount to physical gold spot prices due to lower secondary market trading liquidity compared to gold ETFs.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Are capital gains tax-free when buying SGBs from secondary markets?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Yes! Capital gains on SGB redemption at 8-year maturity are 100% tax-free under Section 47(viib), irrespective of whether you bought them in primary RBI issuance or from NSE/BSE secondary markets.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is the interest rate paid on SGBs?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        SGBs pay a fixed 2.50% interest per annum on the original issue price, disbursed semi-annually into your registered bank account.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How is Yield to Maturity (YTM) calculated for discounted SGBs?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        YTM incorporates (1) Annual 2.5% coupon yield, (2) Price discount recovery to spot gold price at maturity, and (3) Expected gold price appreciation CAGR.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How is SGB 2.5% interest income taxed?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        The 2.5% annual interest income is taxable under 'Income from Other Sources' at your applicable income tax slab rate. Zero TDS is deducted at source.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What happens if I sell SGB on the stock exchange before 8 years maturity?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Selling SGBs on stock exchanges before maturity attracts capital gains tax: STCG (held ≤ 24 months) at slab rates, or LTCG (held > 24 months) at 12.5% without indexation.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        When can I redeem SGBs directly with RBI?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        RBI allows premature redemption window starting from the 5th year onwards on coupon payment dates at prevailing spot gold rates.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Which SGB series offer the highest discount on NSE?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Older SGB series maturing in 2-4 years often trade at higher discounts (4-7%) due to investors liquidating portfolios early.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global JS Hooks for Linking & Search -->
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        const elements = {
+            spotGoldInput: document.getElementById('spotGoldInput'),
+            sgbPriceInput: document.getElementById('sgbPriceInput'),
+            issuePriceInput: document.getElementById('issuePriceInput'),
+            remainingTenureInput: document.getElementById('remainingTenureInput'),
+            goldCagrInput: document.getElementById('goldCagrInput'),
+            
+            totalYtmVal: document.getElementById('totalYtmVal'),
+            discountPctVal: document.getElementById('discountPctVal'),
+            taxStatusVal: document.getElementById('taxStatusVal'),
+            annualCouponVal: document.getElementById('annualCouponVal'),
+            effectiveCouponYieldVal: document.getElementById('effectiveCouponYieldVal')
+        };
+
+        function formatIndian(val) {
+            return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+        }
+
+        function calculateSgbYield() {
+            const spot = parseFloat(elements.spotGoldInput.value) || 1;
+            const buyPrice = parseFloat(elements.sgbPriceInput.value) || 1;
+            const issuePrice = parseFloat(elements.issuePriceInput.value) || 1;
+            const tenure = parseFloat(elements.remainingTenureInput.value) || 1;
+            const goldCagr = (parseFloat(elements.goldCagrInput.value) || 8) / 100;
+
+            const discountAmount = spot - buyPrice;
+            const discountPct = (discountAmount / spot) * 100;
+
+            const annualCoupon = issuePrice * 0.025;
+            const effectiveCouponYield = (annualCoupon / buyPrice) * 100;
+
+            // Estimated spot price at maturity: spot * (1 + goldCagr)^tenure
+            const spotAtMaturity = spot * Math.pow(1 + goldCagr, tenure);
+            
+            // Total cash inflow at maturity per gram = spotAtMaturity + (annualCoupon * tenure)
+            const totalInflow = spotAtMaturity + (annualCoupon * tenure);
+
+            // Annualized YTM = (totalInflow / buyPrice)^(1 / tenure) - 1
+            const ytmRate = (Math.pow(totalInflow / buyPrice, 1 / tenure) - 1) * 100;
+
+            elements.totalYtmVal.textContent = ytmRate.toFixed(1) + "% p.a.";
+            elements.discountPctVal.textContent = discountPct.toFixed(2) + "% Off";
+            elements.annualCouponVal.textContent = formatIndian(annualCoupon) + " / gram";
+            elements.effectiveCouponYieldVal.textContent = effectiveCouponYield.toFixed(2) + "% p.a.";
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const inputs = [elements.spotGoldInput, elements.sgbPriceInput, elements.issuePriceInput, elements.remainingTenureInput, elements.goldCagrInput];
+            inputs.forEach(i => i.addEventListener('input', calculateSgbYield));
+            
+            calculateSgbYield();
+        });
+    </script>
+</body>
+</html>

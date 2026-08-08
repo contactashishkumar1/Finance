@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step-Down EMI Calculator (2026) – Decreasing EMI Schedule</title>
+    <meta name="description" content="Calculate decreasing monthly EMI schedules for step-down home loans in India for 2026. Ideal for borrowers near retirement or expecting lower income.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/step-down-emi-calculator/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Step-Down EMI Calculator (2026)">
+    <meta property="og:description" content="Calculate step-down EMI schedule with decreasing monthly payments in India.">
+    <meta property="og:url" content="https://arthcalculator.in/step-down-emi-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Step-Down EMI Calculator",
+      "url": "https://arthcalculator.in/step-down-emi-calculator/",
+      "description": "Calculate step-down EMI schedule with decreasing monthly payments in India.",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Step-Down EMI Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://arthcalculator.in/step-down-emi-calculator/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Step-Down EMI Calculator",
+        "item": "https://arthcalculator.in/step-down-emi-calculator/"
+      }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a Step-Down EMI Loan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Step-Down loan structure starts with higher EMIs during the initial years of the loan, which progressively decrease (step down) in later phases of the loan tenure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who should opt for a Step-Down EMI loan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Step-Down loans are ideal for borrowers close to retirement, individuals expecting career transitions, or parents planning for children's higher education expenses in later years."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between Step-Up and Step-Down EMI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Step-Up EMI starts low and increases over time (ideal for young professionals). Step-Down EMI starts high and decreases over time (ideal for near-retirees)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Step-Down EMI save total interest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because you repay a larger portion of principal in the initial phase, the total interest accrued over the loan life is lower than a standard flat EMI loan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What interest rates apply to Step-Down loans in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Banks offer step-down home loans at standard floating interest rates ranging from 8.35% to 9.50% p.a."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Step-Down EMI calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The loan principal amortization is split into multi-year phases, where higher principal reduction is targeted in Phase 1, resulting in lowered EMIs in Phase 2 and Phase 3."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I prepay a Step-Down loan without penalty?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, floating rate step-down home loans have zero prepayment charges as per RBI rules."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do all Indian banks offer Step-Down loans?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Major lenders like SBI (Privilege Home Loan), HDFC, ICICI Bank, and Axis Bank offer customized step-down EMI structures."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-blue-200">
+    <div id="navbar"></div>
+    <script>
+        fetch("/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+                const menuBtn = document.getElementById("menuBtn");
+                const mobileMenu = document.getElementById("mobileMenu");
+                if(menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                    });
+                }
+            });
+    </script>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+            <ol class="flex list-none p-0">
+                <li class="flex items-center">
+                    <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="text-blue-600 font-bold">Step-Down EMI Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Step-Down EMI <span class="text-blue-600">Calculator (2026)</span></h1>
+            <p class="text-lg text-slate-600 mb-6">
+                Calculate multi-phase decreasing EMI payments for loans near retirement or career transition.
+            </p>
+        </div>
+
+        <!-- Calculator Interface -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+            
+            <!-- Inputs -->
+            <div class="lg:col-span-6 bg-white rounded-2xl p-6 md:p-8 card-shadow border border-slate-100 space-y-6">
+                <h2 class="text-xl font-bold text-slate-800 border-b pb-3">Loan Details</h2>
+
+                <!-- Sanctioned Loan -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Total Sanctioned Loan</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
+                            <input type="number" id="principalInput" value="5000000" min="500000" step="100000" class="w-36 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                        </div>
+                    </div>
+                    <input type="range" id="principalRange" min="500000" max="20000000" step="100000" value="5000000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <!-- Interest Rate -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Annual Interest Rate</label>
+                        <div class="relative">
+                            <input type="number" id="rateInput" value="8.5" min="6" max="15" step="0.1" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-7 font-bold">
+                            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">%</span>
+                        </div>
+                    </div>
+                    <input type="range" id="rateRange" min="6" max="15" step="0.1" value="8.5" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <!-- Total Tenure Years -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Total Loan Tenure</label>
+                        <div class="relative">
+                            <input type="number" id="tenureYearsInput" value="15" min="5" max="30" step="1" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-8 font-bold">
+                            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium text-xs">Years</span>
+                        </div>
+                    </div>
+                    <input type="range" id="tenureYearsRange" min="5" max="30" step="1" value="15" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <!-- Step-Down Rate % per phase -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">EMI Step-Down Reduction (Every 5 Yrs)</label>
+                        <div class="relative">
+                            <input type="number" id="stepPctInput" value="15" min="5" max="30" step="5" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-7 font-bold">
+                            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Output Display -->
+            <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+                
+                <div class="bg-blue-600 text-white rounded-2xl p-6 md:p-8 card-shadow">
+                    <p class="text-blue-100 text-xs font-bold uppercase tracking-wider mb-2">Initial Phase EMI (Highest Payment)</p>
+                    <h3 class="text-4xl md:text-5xl font-black mb-4" id="phase1EmiVal">₹0</h3>
+                    
+                    <div class="border-t border-blue-500/50 pt-4 grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <p class="text-blue-200 text-xs">Phase 2 EMI (After 5 Yrs)</p>
+                            <p class="text-xl font-bold text-white mt-1" id="phase2EmiVal">₹0</p>
+                        </div>
+                        <div>
+                            <p class="text-blue-200 text-xs">Phase 3 EMI (After 10 Yrs)</p>
+                            <p class="text-xl font-bold text-emerald-300 mt-1" id="phase3EmiVal">₹0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-slate-100 space-y-3 text-sm">
+                    <h4 class="font-bold text-slate-800 border-b pb-2">Step-Down vs Regular EMI Comparison</h4>
+                    <div class="flex justify-between">
+                        <span class="text-slate-600">Standard Flat EMI</span>
+                        <span class="font-bold text-slate-800" id="flatEmiVal">₹0</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-600">Total Interest Paid (Step-Down)</span>
+                        <span class="font-bold text-emerald-600" id="stepTotalInterestVal">₹0</span>
+                    </div>
+                    <div class="flex justify-between border-t pt-2">
+                        <span class="font-bold text-slate-800">Interest Savings vs Flat Loan</span>
+                        <span class="font-black text-blue-600 text-base" id="interestSavingsVal">₹0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content Section -->
+        <article class="bg-white rounded-2xl p-6 md:p-10 card-shadow border border-slate-100 mb-16 prose prose-slate max-w-none">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">What is a Step-Down EMI Loan?</h2>
+            <p>
+                A <strong>Step-Down EMI Loan</strong> features a repayment structure where monthly installments are highest during the initial years when your earning capacity is high, and progressively decrease in later phases as retirement approaches.
+            </p>
+
+            <div class="my-6 overflow-x-auto not-prose">
+                <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden text-sm">
+                    <thead class="bg-slate-100">
+                        <tr>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Loan Phase</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">EMI Level</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Best Suited For</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 bg-white">
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">Years 1 - 5 (Phase 1)</td>
+                            <td class="p-3.5 font-semibold text-rose-600">Highest EMI (100% Base)</td>
+                            <td class="p-3.5 text-slate-600">Peak Earning Career Years</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">Years 6 - 10 (Phase 2)</td>
+                            <td class="p-3.5 font-semibold text-blue-600">Stepped Down (-15%)</td>
+                            <td class="p-3.5 text-slate-600">Pre-retirement phase</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">Years 11+ (Phase 3)</td>
+                            <td class="p-3.5 font-semibold text-emerald-600">Lowest EMI (-30%)</td>
+                            <td class="p-3.5 text-emerald-600 font-bold">Post-retirement pension years</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            
+            
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">How Step-Down EMI Loans Work</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Higher Initial EMI, Decreasing Over Time:</strong> Starts with high EMIs during peak earning years and systematically steps down monthly payments in later years.</li>
+            <li><strong>Massive Interest Savings:</strong> Accelerated principal repayment in early years slashes total 20-year compound interest by 25-30%.</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Ideal Borrower Profiles for Step-Down Financing</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Near-Retirement Executives:</strong> Professionals 10-15 years away from retirement who want higher debt payoff while salary is highest.</li>
+            <li><strong>Variable Pay / Bonus Earners:</strong> Individuals expecting lower long-term fixed income.</li>
+        </ul>
+
+        <div class="mt-8 p-5 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl not-prose">
+            <h4 class="text-base font-bold text-blue-900 mb-1">Step-Down EMI Advantage</h4>
+            <p class="text-xs text-blue-800 leading-relaxed">
+                By paying 20% higher EMI during the first 5 years of a home loan, you build 40%+ equity in your home rapidly, insulating yourself against future rate hikes.
+            </p>
+        </div>
+
+            <div class="mt-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl not-prose">
+                <h3 class="text-lg font-bold text-slate-800 mb-2">Explore Related Financial Tools & Calculators</h3>
+                <p class="text-xs text-slate-500 mb-4">Compare options across loan EMIs, tax savings, and compounding growth:</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-medium">
+                    <a href="/home-loan/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Home Loan EMI</a>
+                    <a href="/pre-emi-interest-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Pre-EMI Calculator</a>
+                    <a href="/moratorium-interest-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Moratorium Calculator</a>
+                    <a href="/loan-prepayment/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Loan Prepayment</a>
+                    <a href="/balance-transfer-vs-personal-loan/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Balance Transfer</a>
+                    <a href="/sip/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SIP Calculator</a>
+                    <a href="/income-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Income Tax Tool</a>
+                    <a href="/capital-gains-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Capital Gains Tax</a>
+                    <a href="/lumpsum/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Lumpsum Calculator</a>
+                    <a href="/inflation/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Inflation Calculator</a>
+                    <a href="/cagr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">CAGR Calculator</a>
+                    <a href="/80c-tax-saving/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">80C Tax Saving</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- FAQs -->
+        <div class="mb-16" id="faqs">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is a Step-Down EMI Loan?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        A Step-Down loan structure starts with higher EMIs during the initial years of the loan, which progressively decrease (step down) in later phases of the loan tenure.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Who should opt for a Step-Down EMI loan?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Step-Down loans are ideal for borrowers close to retirement, individuals expecting career transitions, or parents planning for children's higher education expenses in later years.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is the difference between Step-Up and Step-Down EMI?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Step-Up EMI starts low and increases over time (ideal for young professionals). Step-Down EMI starts high and decreases over time (ideal for near-retirees).
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How does Step-Down EMI save total interest?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Because you repay a larger portion of principal in the initial phase, the total interest accrued over the loan life is lower than a standard flat EMI loan.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What interest rates apply to Step-Down loans in 2026?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Banks offer step-down home loans at standard floating interest rates ranging from 8.35% to 9.50% p.a.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How is Step-Down EMI calculated?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        The loan principal amortization is split into multi-year phases, where higher principal reduction is targeted in Phase 1, resulting in lowered EMIs in Phase 2 and Phase 3.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Can I prepay a Step-Down loan without penalty?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Yes, floating rate step-down home loans have zero prepayment charges as per RBI rules.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Do all Indian banks offer Step-Down loans?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Major lenders like SBI (Privilege Home Loan), HDFC, ICICI Bank, and Axis Bank offer customized step-down EMI structures.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global JS Hooks for Linking & Search -->
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        const elements = {
+            principalInput: document.getElementById('principalInput'),
+            principalRange: document.getElementById('principalRange'),
+            rateInput: document.getElementById('rateInput'),
+            rateRange: document.getElementById('rateRange'),
+            tenureYearsInput: document.getElementById('tenureYearsInput'),
+            tenureYearsRange: document.getElementById('tenureYearsRange'),
+            stepPctInput: document.getElementById('stepPctInput'),
+            
+            phase1EmiVal: document.getElementById('phase1EmiVal'),
+            phase2EmiVal: document.getElementById('phase2EmiVal'),
+            phase3EmiVal: document.getElementById('phase3EmiVal'),
+            flatEmiVal: document.getElementById('flatEmiVal'),
+            stepTotalInterestVal: document.getElementById('stepTotalInterestVal'),
+            interestSavingsVal: document.getElementById('interestSavingsVal')
+        };
+
+        function formatIndian(val) {
+            return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+        }
+
+        function calculateFlatEmi(P, r_annual, n_months) {
+            if (n_months <= 0 || P <= 0) return 0;
+            const r = r_annual / 12 / 100;
+            return P * r * (Math.pow(1 + r, n_months) / (Math.pow(1 + r, n_months) - 1));
+        }
+
+        function calculateStepDown() {
+            const P = parseFloat(elements.principalInput.value) || 0;
+            const rate = parseFloat(elements.rateInput.value) || 0;
+            const years = parseInt(elements.tenureYearsInput.value) || 15;
+            const stepPct = (parseFloat(elements.stepPctInput.value) || 15) / 100;
+
+            const months = years * 12;
+            const flatEmi = calculateFlatEmi(P, rate, months);
+            const flatTotalOutflow = flatEmi * months;
+            const flatTotalInterest = flatTotalOutflow - P;
+
+            // Phase 1 EMI is roughly flatEmi * 1.15 to accelerate early principal payback
+            const phase1Emi = flatEmi * (1 + stepPct);
+            const phase2Emi = phase1Emi * (1 - stepPct);
+            const phase3Emi = phase2Emi * (1 - stepPct);
+
+            // Calculate total step-down interest by simulating 5-yr blocks
+            let balance = P;
+            let totalStepInterest = 0;
+            const r = rate / 12 / 100;
+
+            for (let m = 1; m <= months; m++) {
+                let currentEmi = phase1Emi;
+                if (m > 120) {
+                    currentEmi = phase3Emi;
+                } else if (m > 60) {
+                    currentEmi = phase2Emi;
+                }
+                
+                let interest = balance * r;
+                let principal = currentEmi - interest;
+                if (principal > balance) principal = balance;
+                
+                totalStepInterest += interest;
+                balance -= principal;
+                if (balance <= 0) break;
+            }
+
+            const interestSaved = Math.max(0, flatTotalInterest - totalStepInterest);
+
+            elements.phase1EmiVal.textContent = formatIndian(phase1Emi);
+            elements.phase2EmiVal.textContent = formatIndian(phase2Emi);
+            elements.phase3EmiVal.textContent = formatIndian(phase3Emi);
+            elements.flatEmiVal.textContent = formatIndian(flatEmi);
+            elements.stepTotalInterestVal.textContent = formatIndian(totalStepInterest);
+            elements.interestSavingsVal.textContent = formatIndian(interestSaved);
+        }
+
+        function setupSync(input, range) {
+            input.addEventListener('input', () => { range.value = input.value; calculateStepDown(); });
+            range.addEventListener('input', () => { input.value = range.value; calculateStepDown(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.principalInput, elements.principalRange);
+            setupSync(elements.rateInput, elements.rateRange);
+            setupSync(elements.tenureYearsInput, elements.tenureYearsRange);
+            elements.stepPctInput.addEventListener('input', calculateStepDown);
+            
+            calculateStepDown();
+        });
+    </script>
+</body>
+</html>

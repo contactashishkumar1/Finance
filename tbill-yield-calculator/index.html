@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasury Bill T-Bill Yield Calculator (2026) – RBI G-Sec Returns</title>
+    <meta name="description" content="Calculate RBI Treasury Bill (T-Bill) yields for 91-day, 182-day, and 364-day tenures in 2026. Calculate annualized YTM, discount rates, and net profits.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/tbill-yield-calculator/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Treasury Bill T-Bill Yield Calculator (2026)">
+    <meta property="og:description" content="Calculate RBI Treasury Bill (T-Bill) yields and annualized YTM returns.">
+    <meta property="og:url" content="https://arthcalculator.in/tbill-yield-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Treasury Bill T-Bill Yield Calculator",
+      "url": "https://arthcalculator.in/tbill-yield-calculator/",
+      "description": "Calculate RBI Treasury Bill (T-Bill) yields and annualized YTM returns.",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Treasury Bill T-Bill Yield Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://arthcalculator.in/tbill-yield-calculator/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "T-Bill Yield Calculator",
+        "item": "https://arthcalculator.in/tbill-yield-calculator/"
+      }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are Treasury Bills (T-Bills)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Treasury Bills (T-Bills) are short-term money market debt instruments issued by the Reserve Bank of India (RBI) on behalf of the Government of India."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the standard T-Bill tenures in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RBI issues T-Bills in three maturity tenures: 91-Day T-Bills, 182-Day T-Bills, and 364-Day T-Bills."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do T-Bills generate returns without paying coupons?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "T-Bills are zero-coupon securities issued at a discount to Face Value (₹100) and redeemed at full Face Value (₹100) upon maturity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the annualized yield formula for T-Bills?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Formula: Annualized Yield % = [(Face Value - Purchase Price) / Purchase Price] * (365 / Tenure Days) * 100."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is T-Bill interest income taxed in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "T-Bill returns are treated as Short-Term Capital Gains (STCG) and added to the investor's total income, taxed at their applicable slab rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is TDS deducted on RBI Treasury Bills?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. There is zero Tax Deducted at Source (TDS) on RBI Treasury Bills."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can retail investors buy T-Bills in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Retail investors can purchase T-Bills directly through the RBI Retail Direct Portal or via stockbrokers (Zerodha Coin, Groww) in non-competitive bidding auctions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are T-Bills safer than Bank Fixed Deposits?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. T-Bills carry sovereign credit backing from the Government of India, making them risk-free short-term investments superior to bank deposits."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-blue-200">
+    <div id="navbar"></div>
+    <script>
+        fetch("/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+                const menuBtn = document.getElementById("menuBtn");
+                const mobileMenu = document.getElementById("mobileMenu");
+                if(menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                    });
+                }
+            });
+    </script>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+            <ol class="flex list-none p-0">
+                <li class="flex items-center">
+                    <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="text-blue-600 font-bold">T-Bill Yield Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Treasury Bill T-Bill <span class="text-blue-600">Yield Calculator (2026)</span></h1>
+            <p class="text-lg text-slate-600 mb-6">
+                Calculate annualized YTM yield and maturity returns for 91-day, 182-day, and 364-day RBI G-Sec T-Bills.
+            </p>
+        </div>
+
+        <!-- Calculator Interface -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+            
+            <!-- Inputs -->
+            <div class="lg:col-span-6 bg-white rounded-2xl p-6 md:p-8 card-shadow border border-slate-100 space-y-6">
+                <h2 class="text-xl font-bold text-slate-800 border-b pb-3">T-Bill Bidding Parameters</h2>
+
+                <!-- T-Bill Tenure Selection -->
+                <div>
+                    <label class="font-semibold text-slate-700 text-sm block mb-2">T-Bill Maturity Tenure</label>
+                    <select id="tenureDaysSelect" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm font-semibold focus:ring-blue-500 focus:border-blue-500">
+                        <option value="91" selected>91-Day T-Bill</option>
+                        <option value="182">182-Day T-Bill</option>
+                        <option value="364">364-Day T-Bill</option>
+                    </select>
+                </div>
+
+                <!-- Discounted Cutoff Price (Per ₹100 Face Value) -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Cutoff Price (Per ₹100 Face Value)</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
+                            <input type="number" id="cutoffPriceInput" value="98.35" min="90" max="99.9" step="0.05" class="w-32 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                        </div>
+                    </div>
+                    <input type="range" id="cutoffPriceRange" min="90" max="99.9" step="0.05" value="98.35" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <!-- Total Investment Principal Amount -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Total Investment Capital</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
+                            <input type="number" id="investCapInput" value="100000" min="10000" step="10000" class="w-36 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                        </div>
+                    </div>
+                    <input type="range" id="investCapRange" min="10000" max="1000000" step="10000" value="100000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+            </div>
+
+            <!-- Output Display -->
+            <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+                
+                <div class="bg-blue-600 text-white rounded-2xl p-6 md:p-8 card-shadow">
+                    <p class="text-blue-100 text-xs font-bold uppercase tracking-wider mb-2">Annualized Yield to Maturity (YTM)</p>
+                    <h3 class="text-4xl md:text-5xl font-black mb-4" id="ytmYieldVal">6.73% p.a.</h3>
+                    
+                    <div class="border-t border-blue-500/50 pt-4 grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <p class="text-blue-200 text-xs">Maturity Redemption Payout</p>
+                            <p class="text-xl font-bold text-white mt-1" id="maturityPayoutVal">₹1,01,677</p>
+                        </div>
+                        <div>
+                            <p class="text-blue-200 text-xs">Net Short-Term Capital Gain</p>
+                            <p class="text-xl font-bold text-emerald-300 mt-1" id="netStcgVal">₹1,677</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-slate-100 space-y-3 text-sm">
+                    <h4 class="font-bold text-slate-800 border-b pb-2">G-Sec Transaction Audit</h4>
+                    <div class="flex justify-between text-xs">
+                        <span class="text-slate-600">Discount Amount Per ₹100 Unit</span>
+                        <span class="font-bold text-slate-800" id="unitDiscountVal">₹1.65</span>
+                    </div>
+                    <div class="flex justify-between text-xs border-t pt-2">
+                        <span class="text-slate-600">Sovereign Risk Credit Grade</span>
+                        <span class="font-bold text-emerald-600">AAA Sovereign (Zero Default Risk)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content Section -->
+        <article class="bg-white rounded-2xl p-6 md:p-10 card-shadow border border-slate-100 mb-16 prose prose-slate max-w-none">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">RBI Treasury Bill Yield Formulas (2026)</h2>
+            <p>
+                Treasury Bills are sovereign short-term discount bonds issued by the Reserve Bank of India:
+            </p>
+
+            <div class="my-6 overflow-x-auto not-prose">
+                <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden text-sm">
+                    <thead class="bg-slate-100">
+                        <tr>
+                            <th class="p-3.5 border-b font-bold text-slate-700">T-Bill Tenure</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Auction Frequency</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">YTM Formula</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 bg-white">
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">91-Day T-Bill</td>
+                            <td class="p-3.5 text-slate-800">Weekly (Every Wednesday)</td>
+                            <td class="p-3.5 font-semibold text-slate-800">[(100 - Price) / Price] * (365 / 91) * 100</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">182-Day T-Bill</td>
+                            <td class="p-3.5 text-slate-800">Bi-Weekly</td>
+                            <td class="p-3.5 font-semibold text-slate-800">[(100 - Price) / Price] * (365 / 182) * 100</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">364-Day T-Bill</td>
+                            <td class="p-3.5 text-slate-800">Bi-Weekly</td>
+                            <td class="p-3.5 font-semibold text-slate-800">[(100 - Price) / Price] * (365 / 364) * 100</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            
+            
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">RBI Treasury Bill (T-Bill) Mechanics & Tenures</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Zero-Coupon Discount Bonds:</strong> T-Bills pay no periodic interest coupons. Issued at a discount to Par (₹100) and redeemed at full ₹100 Face Value at maturity.</li>
+            <li><strong>3 Tenures:</strong> 91-Day T-Bills (weekly auction), 182-Day T-Bills, and 364-Day T-Bills (bi-weekly auctions).</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Annualized YTM Formula & Tax Treatment</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>YTM Formula:</strong> Annualized Yield % = [(100 - Cutoff Price) / Cutoff Price] * (365 / Tenure Days) * 100.</li>
+            <li><strong>Zero TDS & STCG Tax:</strong> Zero TDS deducted at source. Returns are taxed as Short-Term Capital Gains (STCG) at your income tax slab rate.</li>
+            <li><strong>Retail Direct Buying:</strong> Retail investors can buy T-Bills directly via RBI Retail Direct Portal or Zerodha/Groww apps.</li>
+        </ul>
+
+        <div class="mt-8 p-5 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl not-prose">
+            <h4 class="text-base font-bold text-blue-900 mb-1">Sovereign Safety Advantage</h4>
+            <p class="text-xs text-blue-800 leading-relaxed">
+                Treasury Bills offer 100% sovereign credit backing from the Government of India, making them safer than bank FDs for parking short-term surplus funds.
+            </p>
+        </div>
+
+            <div class="mt-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl not-prose">
+                <h3 class="text-lg font-bold text-slate-800 mb-2">Explore Related Financial Tools & Calculators</h3>
+                <p class="text-xs text-slate-500 mb-4">Compare options across loan EMIs, tax savings, and compounding growth:</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-medium">
+                    <a href="/tds-on-fd-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">TDS on FD Tool</a>
+                    <a href="/kvp-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">KVP Calculator</a>
+                    <a href="/nsc-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">NSC Calculator</a>
+                    <a href="/pomis-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Post Office MIS</a>
+                    <a href="/sip/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SIP Calculator</a>
+                    <a href="/income-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Income Tax Tool</a>
+                    <a href="/capital-gains-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Capital Gains Tax</a>
+                    <a href="/lumpsum/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Lumpsum Calculator</a>
+                    <a href="/inflation/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Inflation Calculator</a>
+                    <a href="/cagr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">CAGR Calculator</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- FAQs -->
+        <div class="mb-16" id="faqs">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What are Treasury Bills (T-Bills)?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Treasury Bills (T-Bills) are short-term money market debt instruments issued by the Reserve Bank of India (RBI) on behalf of the Government of India.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What are the standard T-Bill tenures in India?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        RBI issues T-Bills in three maturity tenures: 91-Day T-Bills, 182-Day T-Bills, and 364-Day T-Bills.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How do T-Bills generate returns without paying coupons?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        T-Bills are zero-coupon securities issued at a discount to Face Value (₹100) and redeemed at full Face Value (₹100) upon maturity.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is the annualized yield formula for T-Bills?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Formula: Annualized Yield % = [(Face Value - Purchase Price) / Purchase Price] * (365 / Tenure Days) * 100.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How is T-Bill interest income taxed in India?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        T-Bill returns are treated as Short-Term Capital Gains (STCG) and added to the investor's total income, taxed at their applicable slab rate.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Is TDS deducted on RBI Treasury Bills?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        No. There is zero Tax Deducted at Source (TDS) on RBI Treasury Bills.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How can retail investors buy T-Bills in India?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Retail investors can purchase T-Bills directly through the RBI Retail Direct Portal or via stockbrokers (Zerodha Coin, Groww) in non-competitive bidding auctions.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Are T-Bills safer than Bank Fixed Deposits?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Yes. T-Bills carry sovereign credit backing from the Government of India, making them risk-free short-term investments superior to bank deposits.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global JS Hooks for Linking & Search -->
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        const elements = {
+            tenureDaysSelect: document.getElementById('tenureDaysSelect'),
+            cutoffPriceInput: document.getElementById('cutoffPriceInput'),
+            cutoffPriceRange: document.getElementById('cutoffPriceRange'),
+            investCapInput: document.getElementById('investCapInput'),
+            investCapRange: document.getElementById('investCapRange'),
+            
+            ytmYieldVal: document.getElementById('ytmYieldVal'),
+            maturityPayoutVal: document.getElementById('maturityPayoutVal'),
+            netStcgVal: document.getElementById('netStcgVal'),
+            unitDiscountVal: document.getElementById('unitDiscountVal')
+        };
+
+        function formatIndian(val) {
+            return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+        }
+
+        function calculateTbill() {
+            const tenureDays = parseInt(elements.tenureDaysSelect.value) || 91;
+            const price = parseFloat(elements.cutoffPriceInput.value) || 98;
+            const investCap = parseFloat(elements.investCapInput.value) || 10000;
+
+            const unitDiscount = 100 - price;
+            const ytm = ((100 - price) / price) * (365 / tenureDays) * 100;
+
+            // Number of units bought
+            const numUnits = investCap / price;
+            const maturityPayout = numUnits * 100;
+            const netStcg = maturityPayout - investCap;
+
+            elements.ytmYieldVal.textContent = ytm.toFixed(2) + "% p.a.";
+            elements.maturityPayoutVal.textContent = formatIndian(maturityPayout);
+            elements.netStcgVal.textContent = formatIndian(netStcg);
+            elements.unitDiscountVal.textContent = "₹" + unitDiscount.toFixed(2);
+        }
+
+        function setupSync(input, range) {
+            input.addEventListener('input', () => { range.value = input.value; calculateTbill(); });
+            range.addEventListener('input', () => { input.value = range.value; calculateTbill(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.cutoffPriceInput, elements.cutoffPriceRange);
+            setupSync(elements.investCapInput, elements.investCapRange);
+            elements.tenureDaysSelect.addEventListener('change', calculateTbill);
+            
+            calculateTbill();
+        });
+    </script>
+</body>
+</html>

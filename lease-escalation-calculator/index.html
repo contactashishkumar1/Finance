@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Lease Escalation Calculator (2026) – Rent Hike Schedule</title>
+    <meta name="description" content="Calculate commercial property rent escalation schedules in 2026. Estimate 15% rent hikes every 3 years, total lease cashflow, and effective monthly rent.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/lease-escalation-calculator/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Commercial Lease Escalation Calculator (2026)">
+    <meta property="og:description" content="Calculate commercial lease escalation and multi-year rent hike schedules.">
+    <meta property="og:url" content="https://arthcalculator.in/lease-escalation-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Commercial Lease Escalation Calculator",
+      "url": "https://arthcalculator.in/lease-escalation-calculator/",
+      "description": "Calculate commercial lease escalation and multi-year rent hike schedules.",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Commercial Lease Escalation Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://arthcalculator.in/lease-escalation-calculator/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Lease Escalation Calculator",
+        "item": "https://arthcalculator.in/lease-escalation-calculator/"
+      }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a Rent Escalation Clause in a Commercial Lease?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A rent escalation clause is a provision in a commercial lease contract that automatically increases the monthly rental payout by a fixed percentage at pre-determined intervals (e.g. 15% every 3 years)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the standard commercial rent escalation rate in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The standard commercial real estate benchmark in India is 15% rent escalation every 3 years (or 5% annual escalation)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a 3+3+3 Lease Lock-in Structure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A 3+3+3 lease structure refers to a total 9-year lease agreement divided into 3-year sub-terms, where rent escalates by 15% at the end of each 3-year block."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Effective Average Monthly Rent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Effective Average Monthly Rent = Total Cash Collections over the entire lease duration divided by total number of months."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is GST applicable on escalated commercial rent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, 18% GST applies to the escalated gross monthly rent if the landlord's annual commercial rental turnover exceeds ₹20 Lakhs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between Fixed Percentage vs CPI Indexation Escalation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fixed Percentage escalation increases rent by an agreed rate (e.g., 15%). CPI Indexation adjusts rent based on official Consumer Price Index inflation rates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a Lease Lock-in Period?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A lock-in period is the mandatory minimum duration (e.g., 3 years) during which neither the tenant nor the landlord can terminate the agreement without paying contractual penalties."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does rent escalation impact commercial property valuation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Regular rent escalations compound Net Operating Income (NOI), directly increasing the capital valuation of commercial assets over time."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-blue-200">
+    <div id="navbar"></div>
+    <script>
+        fetch("/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+                const menuBtn = document.getElementById("menuBtn");
+                const mobileMenu = document.getElementById("mobileMenu");
+                if(menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                    });
+                }
+            });
+    </script>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+            <ol class="flex list-none p-0">
+                <li class="flex items-center">
+                    <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="text-blue-600 font-bold">Lease Escalation Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Lease Escalation <span class="text-blue-600">Calculator (2026)</span></h1>
+            <p class="text-lg text-slate-600 mb-6">
+                Calculate multi-year commercial rent escalation schedules (e.g. 15% every 3 years) and total lease cashflow.
+            </p>
+        </div>
+
+        <!-- Calculator Interface -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+            
+            <!-- Inputs -->
+            <div class="lg:col-span-6 bg-white rounded-2xl p-6 md:p-8 card-shadow border border-slate-100 space-y-6">
+                <h2 class="text-xl font-bold text-slate-800 border-b pb-3">Lease Terms & Rates</h2>
+
+                <!-- Initial Monthly Rent -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Initial Base Monthly Rent</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
+                            <input type="number" id="baseRentInput" value="100000" min="10000" step="5000" class="w-36 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                        </div>
+                    </div>
+                    <input type="range" id="baseRentRange" min="10000" max="1000000" step="5000" value="100000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <!-- Escalation Percentage (%) -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Rent Escalation Rate (%)</label>
+                        <div class="relative">
+                            <input type="number" id="escPctInput" value="15.0" min="1" max="30" step="1" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-7 font-bold">
+                            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium text-xs">%</span>
+                        </div>
+                    </div>
+                    <input type="range" id="escPctRange" min="1" max="30" step="1" value="15.0" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <!-- Escalation Frequency -->
+                <div>
+                    <label class="font-semibold text-slate-700 text-sm block mb-2">Escalation Frequency Interval</label>
+                    <select id="freqSelect" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm font-semibold focus:ring-blue-500 focus:border-blue-500">
+                        <option value="3" selected>Every 3 Years (Standard 15% Commercial Rule)</option>
+                        <option value="1">Every 1 Year (Annual Escalation)</option>
+                        <option value="5">Every 5 Years</option>
+                    </select>
+                </div>
+
+                <!-- Total Lease Tenure -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Total Lease Tenure</label>
+                        <div class="relative">
+                            <input type="number" id="tenureInput" value="9" min="1" max="15" step="1" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-8 font-bold">
+                            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium text-xs">Yrs</span>
+                        </div>
+                    </div>
+                    <input type="range" id="tenureRange" min="1" max="15" step="1" value="9" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+            </div>
+
+            <!-- Output Display -->
+            <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+                
+                <div class="bg-blue-600 text-white rounded-2xl p-6 md:p-8 card-shadow">
+                    <p class="text-blue-100 text-xs font-bold uppercase tracking-wider mb-2">Total Rent Collected Over Lease Tenure</p>
+                    <h3 class="text-4xl md:text-5xl font-black mb-4" id="totalRentVal">₹1.32 Cr</h3>
+                    
+                    <div class="border-t border-blue-500/50 pt-4 grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <p class="text-blue-200 text-xs">Effective Average Monthly Rent</p>
+                            <p class="text-xl font-bold text-white mt-1" id="effectiveMonthlyVal">₹1,22,500 / mo</p>
+                        </div>
+                        <div>
+                            <p class="text-blue-200 text-xs">Final Year Monthly Rent</p>
+                            <p class="text-xl font-bold text-emerald-300 mt-1" id="finalMonthlyVal">₹1,32,250 / mo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-slate-100 space-y-3 text-sm">
+                    <h4 class="font-bold text-slate-800 border-b pb-2">Rent Escalation Block Summary</h4>
+                    <div class="flex justify-between text-xs">
+                        <span class="text-slate-600">Years 1 - 3 Monthly Rent</span>
+                        <span class="font-bold text-slate-800" id="block1Val">₹1,00,000 / mo</span>
+                    </div>
+                    <div class="flex justify-between text-xs">
+                        <span class="text-slate-600">Years 4 - 6 Monthly Rent (+15%)</span>
+                        <span class="font-bold text-slate-800" id="block2Val">₹1,15,000 / mo</span>
+                    </div>
+                    <div class="flex justify-between text-xs border-t pt-2">
+                        <span class="text-slate-600">Years 7 - 9 Monthly Rent (+15%)</span>
+                        <span class="font-bold text-blue-600" id="block3Val">₹1,32,250 / mo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content Section -->
+        <article class="bg-white rounded-2xl p-6 md:p-10 card-shadow border border-slate-100 mb-16 prose prose-slate max-w-none">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">Commercial Rent Escalation Terms (2026)</h2>
+            <p>
+                Commercial lease agreements include structured rent escalation terms to protect property owners against inflation over long multi-year tenures.
+            </p>
+
+            <div class="my-6 overflow-x-auto not-prose">
+                <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden text-sm">
+                    <thead class="bg-slate-100">
+                        <tr>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Lease Structure</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Escalation Rate</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Standard Lock-in Period</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 bg-white">
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">3 + 3 + 3 Structure (9 Yrs)</td>
+                            <td class="p-3.5 font-semibold text-emerald-600">15% Every 3 Years</td>
+                            <td class="p-3.5 text-slate-700">First 3 Years Mandatory Lock-in</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">5 + 5 Structure (10 Yrs)</td>
+                            <td class="p-3.5 font-semibold text-emerald-600">15% - 20% Every 5 Years</td>
+                            <td class="p-3.5 text-slate-700">5 Years Mandatory Lock-in</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">Annual Escalation</td>
+                            <td class="p-3.5 font-semibold text-slate-800">5% - 6% Every Year</td>
+                            <td class="p-3.5 text-slate-700">1 Year Rolling Lock-in</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            
+            
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Commercial Real Estate Rent Escalation Benchmarks</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>3+3+3 Lease Lock-in Structure:</strong> Standard 9-year commercial lease divided into 3-year sub-terms with 15% rent escalation every 3 years.</li>
+            <li><strong>Annual Escalation Option:</strong> Alternative structure with 5% annual compounding rent hikes.</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Impact of Escalation on Effective Monthly Rent & NOI</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Effective Average Rent:</strong> Total Cash Collections over 9 years / 108 months. Gives true normalized cashflow yield.</li>
+            <li><strong>18% GST Compliance:</strong> Commercial rent attracts 18% GST if landlord's annual rental turnover exceeds ₹20 Lakhs.</li>
+        </ul>
+
+        <div class="mt-8 p-5 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl not-prose">
+            <h4 class="text-base font-bold text-blue-900 mb-1">Lease Negotiation Insight</h4>
+            <p class="text-xs text-blue-800 leading-relaxed">
+                A 15% escalation every 3 years equals an effective ~4.77% annual compounding rate. Landlords should secure a minimum 3-year mandatory lock-in to protect cashflows.
+            </p>
+        </div>
+
+            <div class="mt-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl not-prose">
+                <h3 class="text-lg font-bold text-slate-800 mb-2">Explore Related Financial Tools & Calculators</h3>
+                <p class="text-xs text-slate-500 mb-4">Compare options across loan EMIs, tax savings, and compounding growth:</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-medium">
+                    <a href="/commercial-property-rental-yield/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Rental Yield Tool</a>
+                    <a href="/real-estate-vs-equity/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Real Estate vs Equity</a>
+                    <a href="/property-depreciation-slm-vs-wdv/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Property Depreciation</a>
+                    <a href="/section-54-54f-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Section 54 Exemption</a>
+                    <a href="/stamp-duty-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Stamp Duty Calculator</a>
+                    <a href="/income-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Income Tax Tool</a>
+                    <a href="/sip/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SIP Calculator</a>
+                    <a href="/lumpsum/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Lumpsum Calculator</a>
+                    <a href="/inflation/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Inflation Calculator</a>
+                    <a href="/cagr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">CAGR Calculator</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- FAQs -->
+        <div class="mb-16" id="faqs">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is a Rent Escalation Clause in a Commercial Lease?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        A rent escalation clause is a provision in a commercial lease contract that automatically increases the monthly rental payout by a fixed percentage at pre-determined intervals (e.g. 15% every 3 years).
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is the standard commercial rent escalation rate in India?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        The standard commercial real estate benchmark in India is 15% rent escalation every 3 years (or 5% annual escalation).
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is a 3+3+3 Lease Lock-in Structure?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        A 3+3+3 lease structure refers to a total 9-year lease agreement divided into 3-year sub-terms, where rent escalates by 15% at the end of each 3-year block.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is Effective Average Monthly Rent?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Effective Average Monthly Rent = Total Cash Collections over the entire lease duration divided by total number of months.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Is GST applicable on escalated commercial rent?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Yes, 18% GST applies to the escalated gross monthly rent if the landlord's annual commercial rental turnover exceeds ₹20 Lakhs.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is the difference between Fixed Percentage vs CPI Indexation Escalation?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Fixed Percentage escalation increases rent by an agreed rate (e.g., 15%). CPI Indexation adjusts rent based on official Consumer Price Index inflation rates.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is a Lease Lock-in Period?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        A lock-in period is the mandatory minimum duration (e.g., 3 years) during which neither the tenant nor the landlord can terminate the agreement without paying contractual penalties.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How does rent escalation impact commercial property valuation?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Regular rent escalations compound Net Operating Income (NOI), directly increasing the capital valuation of commercial assets over time.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global JS Hooks for Linking & Search -->
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        const elements = {
+            baseRentInput: document.getElementById('baseRentInput'),
+            baseRentRange: document.getElementById('baseRentRange'),
+            escPctInput: document.getElementById('escPctInput'),
+            escPctRange: document.getElementById('escPctRange'),
+            freqSelect: document.getElementById('freqSelect'),
+            tenureInput: document.getElementById('tenureInput'),
+            tenureRange: document.getElementById('tenureRange'),
+            
+            totalRentVal: document.getElementById('totalRentVal'),
+            effectiveMonthlyVal: document.getElementById('effectiveMonthlyVal'),
+            finalMonthlyVal: document.getElementById('finalMonthlyVal'),
+            block1Val: document.getElementById('block1Val'),
+            block2Val: document.getElementById('block2Val'),
+            block3Val: document.getElementById('block3Val')
+        };
+
+        function formatIndian(val) {
+            return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+        }
+
+        function calculateLeaseEscalation() {
+            const baseRent = parseFloat(elements.baseRentInput.value) || 0;
+            const escRate = (parseFloat(elements.escPctInput.value) || 0) / 100;
+            const intervalYears = parseInt(elements.freqSelect.value) || 3;
+            const totalYears = parseInt(elements.tenureInput.value) || 1;
+
+            let totalRentCollected = 0;
+            let currentMonthlyRent = baseRent;
+            
+            let b1 = baseRent;
+            let b2 = baseRent;
+            let b3 = baseRent;
+
+            for (let y = 1; y <= totalYears; y++) {
+                if (y > 1 && (y - 1) % intervalYears === 0) {
+                    currentMonthlyRent = currentMonthlyRent * (1 + escRate);
+                }
+
+                if (y === 1) b1 = currentMonthlyRent;
+                if (y === intervalYears + 1) b2 = currentMonthlyRent;
+                if (y === (intervalYears * 2) + 1) b3 = currentMonthlyRent;
+
+                totalRentCollected += (currentMonthlyRent * 12);
+            }
+
+            const effectiveMonthly = totalRentCollected / (totalYears * 12);
+
+            elements.totalRentVal.textContent = "₹" + (totalRentCollected / 10000000).toFixed(2) + " Cr (" + formatIndian(totalRentCollected) + ")";
+            elements.effectiveMonthlyVal.textContent = formatIndian(effectiveMonthly) + " / mo";
+            elements.finalMonthlyVal.textContent = formatIndian(currentMonthlyRent) + " / mo";
+
+            elements.block1Val.textContent = formatIndian(b1) + " / mo";
+            elements.block2Val.textContent = totalYears > intervalYears ? formatIndian(b2) + " / mo" : "N/A";
+            elements.block3Val.textContent = totalYears > (intervalYears * 2) ? formatIndian(b3) + " / mo" : "N/A";
+        }
+
+        function setupSync(input, range) {
+            input.addEventListener('input', () => { range.value = input.value; calculateLeaseEscalation(); });
+            range.addEventListener('input', () => { input.value = range.value; calculateLeaseEscalation(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.baseRentInput, elements.baseRentRange);
+            setupSync(elements.escPctInput, elements.escPctRange);
+            setupSync(elements.tenureInput, elements.tenureRange);
+            elements.freqSelect.addEventListener('change', calculateLeaseEscalation);
+            
+            calculateLeaseEscalation();
+        });
+    </script>
+</body>
+</html>

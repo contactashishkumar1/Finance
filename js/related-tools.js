@@ -170,7 +170,7 @@
             { name: "Retirement Withdrawal SWP", url: "/retirement-withdrawal/", icon: "👴", category: "milestones", keys: "retirement withdrawal cash runway safety multipliers safe extraction inflation adjustment models cash stream" },
             { name: "Savings Rate Net Percentage", url: "/savings-rate/", icon: "📊", category: "milestones", keys: "savings rate gross income net residue personal tracking allocation parameters profile thrift scale" },
             { name: "Side Income Stream Sizer", url: "/side-income/", icon: "🏖️", category: "milestones", keys: "side income side hustle passive flow extra cash generation analytics tracking metrics side earnings" },
-            { name: "Vacation Travel Sinking Fund", url: "/travel-sinking-fund/", icon: "✈️", category: "milestones", keys: "travel ticket booking cruise itinerary budget sizing envelope savings tracker vacation logistics fund" },
+            { name: "Vacation Travel Sinking Fund", url: "/vacation-goal/", icon: "✈️", category: "milestones", keys: "travel ticket booking cruise itinerary budget sizing envelope savings tracker vacation logistics fund" },
             { name: "Vacation Budget Sinking Fund", url: "/vacation-goal/", icon: "✈️", category: "milestones", keys: "vacation horizon ticket savings goals travel sinking fund bucket metrics leisure holiday budgeting" },
             { name: "Wedding Inflation Framework", url: "/wedding-inflation-planner/", icon: "💍", category: "milestones", keys: "wedding marriage event budget catering venue layout gold price projections horizon marital expenses" },
 

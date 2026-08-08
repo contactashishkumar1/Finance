@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMVVY Calculator: Pradhan Mantri Vaya Vandana Yojana Pension</title>
+    <meta name="description" content="Calculate your guaranteed monthly pension under the PMVVY scheme for senior citizens based on the 7.4% fixed rate. (For existing subscribers).">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/pmvvy-calculator/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PMVVY Calculator: Monthly Pension Calculator">
+    <meta property="og:description" content="Calculate your guaranteed monthly pension under the PMVVY scheme for senior citizens based on the 7.4% fixed rate.">
+    <meta property="og:url" content="https://arthcalculator.in/pmvvy-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "PMVVY Calculator: Pradhan Mantri Vaya Vandana Yojana Pension",
+      "url": "https://arthcalculator.in/pmvvy-calculator/",
+      "description": "Calculate your guaranteed monthly pension under the PMVVY scheme for senior citizens based on the 7.4% fixed rate. (For existing subscribers).",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "PMVVY Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://arthcalculator.in/pmvvy-calculator/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "PMVVY Calculator",
+        "item": "https://arthcalculator.in/pmvvy-calculator/"
+      }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is PMVVY still open for new investments in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, the Pradhan Mantri Vaya Vandana Yojana (PMVVY) was officially closed for new subscriptions on March 31, 2023. This calculator is provided for existing subscribers to track their pensions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What was the interest rate for PMVVY?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For the final financial year before its closure (FY 2022-23), the scheme offered a guaranteed pension rate of 7.4% per annum payable monthly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the tenure of PMVVY?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The policy term for PMVVY is exactly 10 years."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens after the 10-year tenure is complete?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At the end of the 10-year policy term, if the pensioner survives, the initial purchase price (principal amount) along with the final pension installment is refunded to them."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the pension from PMVVY taxable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the pension received under PMVVY is fully taxable. It must be declared under the 'Income from Other Sources' head while filing your income tax returns."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What was the maximum investment limit for PMVVY?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A senior citizen could invest a maximum of ₹15,00,000 (15 Lakhs) in the PMVVY scheme, which yielded a maximum monthly pension of ₹9,250."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I take a loan against my PMVVY policy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, existing subscribers can avail a loan against their PMVVY policy after completing 3 policy years. The maximum loan amount granted is 75% of the initial purchase price."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens in case of the pensioner's death during the 10 years?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If the pensioner dies during the 10-year term, the initial purchase price (principal) is refunded to the designated nominee or legal heirs."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #10b981; height: 6px; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+        .btn-outline { border: 1px solid #e2e8f0; transition: all 0.2s; }
+        .btn-outline:hover { border-color: #10b981; color: #047857; background: #ecfdf5; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-emerald-200">
+    <div id="navbar"></div>
+    <script>
+        fetch("/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+                const menuBtn = document.getElementById("menuBtn");
+                const mobileMenu = document.getElementById("mobileMenu");
+                if(menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                    });
+                }
+            });
+    </script>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+    <ol class="flex list-none p-0">
+        <li class="flex items-center">
+            <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+            <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+        </li>
+        <li class="flex items-center">
+            <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+            <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+        </li>
+        <li class="text-blue-600 font-bold">PMVVY Calculator</li>
+    </ol>
+</nav>
+
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Pradhan Mantri Vaya Vandana Yojana <span class="text-blue-600">PMVVY Calculator</span></h1>
+            <p class="text-lg text-slate-600 mb-6">
+                Calculate your guaranteed monthly pension from the Pradhan Mantri Vaya Vandana Yojana (PMVVY) for existing subscribers.
+            </p>
+            <div class="flex flex-wrap justify-center gap-3 text-xs md:text-sm font-medium">
+                <span class="bg-red-50 text-red-700 px-3 py-1.5 rounded-full border border-red-100 flex items-center shadow-sm">
+                    <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    Scheme Closed to New Investors
+                </span>
+                <span class="bg-emerald-50 text-emerald-700 px-3 py-1.5 rounded-full border border-emerald-100 flex items-center shadow-sm">
+                    <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    7.4% Final Rate
+                </span>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+            
+            <!-- Left: Inputs -->
+            <div class="lg:col-span-7 bg-white rounded-2xl p-6 md:p-8 card-shadow border border-slate-100">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl font-bold text-slate-800">Your Investment Details</h2>
+                    <button id="resetBtn" class="text-sm font-medium text-slate-500 hover:text-emerald-600 transition-colors flex items-center bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200 hover:bg-emerald-50">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                        Reset
+                    </button>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- Total Investment -->
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <label class="font-semibold text-slate-700">Total Purchase Price (Investment)</label>
+                            <div class="relative">
+                                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
+                                <input type="number" id="investmentInput" value="1500000" min="150000" max="1500000" step="10000" class="w-36 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block p-2 pl-7 font-bold">
+                            </div>
+                        </div>
+                        <input type="range" id="investmentRange" min="150000" max="1500000" step="10000" value="1500000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                        <div class="flex justify-between text-xs text-slate-400 mt-1.5 font-medium">
+                            <span>₹1.5 Lakhs</span>
+                            <span>₹15 Lakhs (Max)</span>
+                        </div>
+                        <p class="text-xs text-rose-500 font-medium mt-2" id="errorMsg" style="display:none;">Maximum limit allowed was ₹15,00,000.</p>
+                    </div>
+
+                    <!-- Fixed Parameters -->
+                    <div class="grid grid-cols-2 gap-4 pt-4 border-t border-slate-100">
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <label class="text-xs font-semibold text-slate-500 uppercase">Fixed Pension Rate</label>
+                            <div class="mt-1 text-lg font-bold text-slate-800">7.4% <span class="text-xs text-slate-500 font-normal">p.a.</span></div>
+                            <div class="text-xs text-slate-500 mt-1">(Payable Monthly)</div>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <label class="text-xs font-semibold text-slate-500 uppercase">Scheme Tenure</label>
+                            <div class="mt-1 text-lg font-bold text-slate-800">10 Years</div>
+                            <div class="text-xs text-slate-500 mt-1">(Principal Refunded at End)</div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Buttons -->
+                    <div class="pt-4">
+                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Quick Fill</p>
+                        <div class="flex flex-wrap gap-2">
+                            <button class="btn-outline text-sm px-3 py-1.5 rounded-md font-medium" onclick="applyExample(500000)">5 Lakhs</button>
+                            <button class="btn-outline text-sm px-3 py-1.5 rounded-md font-medium" onclick="applyExample(1000000)">10 Lakhs</button>
+                            <button class="btn-outline text-sm px-3 py-1.5 rounded-md font-medium" onclick="applyExample(1500000)">15 Lakhs (Max)</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right: Results -->
+            <div class="lg:col-span-5 flex flex-col gap-6">
+                <!-- Highlight Result Card -->
+                <div class="bg-gradient-to-br from-emerald-600 to-blue-800 rounded-2xl p-6 md:p-8 card-shadow text-white relative overflow-hidden flex-grow flex flex-col justify-center">
+                    <div class="absolute -right-10 -top-10 w-40 h-40 bg-white opacity-10 rounded-full blur-2xl"></div>
+                    <div class="relative z-10 text-center">
+                        <p class="text-emerald-100 font-medium text-sm md:text-base mb-1 uppercase tracking-wider">Monthly Pension</p>
+                        <h3 class="text-5xl md:text-6xl font-bold mb-8 text-white" id="monthlyPensionValue">₹0</h3>
+                        
+                        <div class="grid grid-cols-2 gap-4 border-t border-emerald-500/50 pt-6 text-left">
+                            <div>
+                                <p class="text-emerald-200 text-xs font-medium mb-1">Total Pension (10 Yrs)</p>
+                                <p class="text-xl font-bold" id="totalPensionValue">₹0</p>
+                            </div>
+                            <div>
+                                <p class="text-emerald-200 text-xs font-medium mb-1">Maturity Refund</p>
+                                <p class="text-xl font-bold" id="maturityValue">₹0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content Section -->
+        <article class="bg-white rounded-2xl p-6 md:p-10 card-shadow border border-slate-100 mb-16 prose prose-slate max-w-none">
+            
+            <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-8 rounded-r-lg">
+                <h3 class="text-red-800 font-bold mt-0 mb-2">Important Notice (2026 Update)</h3>
+                <p class="text-red-700 text-sm mb-0">
+                    The Pradhan Mantri Vaya Vandana Yojana (PMVVY) was officially closed for new subscriptions by the Government of India on <strong>March 31, 2023</strong>. No new policies can be purchased. This calculator is maintained exclusively for existing subscribers who wish to track their ongoing pension amounts and maturity details. For new senior citizen investments, please check the <a href="/scss-calculator/" class="text-red-800 underline">SCSS Calculator</a>.
+                </p>
+            </div>
+
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">What was the Pradhan Mantri Vaya Vandana Yojana (PMVVY)?</h2>
+            <p>
+                <strong>PMVVY</strong> was a pension scheme announced by the Government of India exclusively for senior citizens aged 60 years and above. Operated by the Life Insurance Corporation of India (LIC), it provided an assured return (pension) for a policy term of 10 years.
+            </p>
+
+            <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Key Features for Existing Subscribers</h3>
+            <ul class="list-disc pl-5 space-y-2 mb-6">
+                <li><strong>Guaranteed Return:</strong> For policies purchased in the final year (FY 2022-23), the scheme offered an assured pension rate of 7.4% p.a. payable monthly.</li>
+                <li><strong>Tenure:</strong> The policy term is exactly 10 years.</li>
+                <li><strong>Maturity Benefit:</strong> If the pensioner survives to the end of the 10-year term, the Purchase Price (initial investment) along with the final pension installment is refunded.</li>
+                <li><strong>Death Benefit:</strong> Upon the death of the pensioner during the 10-year term, the entire Purchase Price is refunded to the nominee or legal heirs.</li>
+            </ul>
+
+            <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Taxability of PMVVY</h3>
+            <p>
+                It is important for existing subscribers to remember their tax liabilities:
+            </p>
+            <ul class="list-disc pl-5 space-y-2 mb-6">
+                <li>The regular pension amounts you receive (monthly, quarterly, etc.) are <strong>not tax-free</strong>. They are fully taxable according to your income tax slab.</li>
+                <li>However, the scheme was exempt from GST.</li>
+            </ul>
+
+            <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Loan Facility</h3>
+            <p>A highly useful feature for existing subscribers is the loan facility. Once you have completed 3 policy years, you can avail of a loan against your PMVVY policy to meet emergency medical needs. The maximum loan amount that can be granted is 75% of your original purchase price. The loan interest will be recovered from your future pension installments.</p>
+        
+<div class="my-8 overflow-x-auto not-prose">
+    <h3 class="text-xl font-bold text-slate-800 mb-4">Key Characteristics & Comparison Overview</h3>
+    <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden text-sm">
+        <thead class="bg-slate-100">
+            <tr>
+                <th class="p-3.5 border-b font-bold text-slate-700">Feature / Parameter</th>
+                <th class="p-3.5 border-b font-bold text-slate-700">Details / Rules</th>
+                <th class="p-3.5 border-b font-bold text-slate-700">Tax Implications</th>
+            </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100 bg-white">
+            <tr>
+                <td class="p-3.5 font-medium text-slate-800">Primary Returns</td>
+                <td class="p-3.5 text-blue-600 font-semibold">Guaranteed / Market-Linked Growth</td>
+                <td class="p-3.5 text-slate-600">Taxable at Income Tax Slab Rates</td>
+            </tr>
+            <tr>
+                <td class="p-3.5 font-medium text-slate-800">Compounding / Payout</td>
+                <td class="p-3.5 text-slate-700">Quarterly / Annual Compounding</td>
+                <td class="p-3.5 text-slate-600">TDS deductions applicable where threshold met</td>
+            </tr>
+            <tr>
+                <td class="p-3.5 font-medium text-slate-800">Lock-in & Liquidity</td>
+                <td class="p-3.5 text-slate-700">Specified Tenure / Market Liquidity</td>
+                <td class="p-3.5 text-slate-600">Premature withdrawal penalties apply</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div class="mt-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl not-prose">
+    <h3 class="text-lg font-bold text-slate-800 mb-2">Explore Related Financial Tools & Calculators</h3>
+    <p class="text-xs text-slate-500 mb-4">Compare options across investments, tax savings, and compounding growth:</p>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-medium">
+        <a href="/sip/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SIP Calculator</a>
+        <a href="/fd/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">FD Calculator</a>
+        <a href="/ppf/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">PPF Calculator</a>
+        <a href="/cagr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">CAGR Calculator</a>
+        <a href="/xirr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">XIRR Calculator</a>
+        <a href="/income-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Income Tax Tool</a>
+        <a href="/capital-gains-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Capital Gains Tax</a>
+        <a href="/lumpsum/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Lumpsum Calculator</a>
+        <a href="/inflation/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Inflation Calculator</a>
+        <a href="/swp/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SWP Calculator</a>
+        <a href="/rd/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">RD Calculator</a>
+        <a href="/80c-tax-saving/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">80C Tax Saving</a>
+    </div>
+</div>
+
+</article>
+
+        <!-- FAQs -->
+        <div class="mb-16">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-emerald-600 transition-colors">
+                        Is PMVVY still open for new investments in 2026?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        No, the Pradhan Mantri Vaya Vandana Yojana (PMVVY) was officially closed for new subscriptions on March 31, 2023. This calculator is provided for existing subscribers to track their pensions.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-emerald-600 transition-colors">
+                        What was the interest rate for PMVVY?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        For the final financial year before its closure (FY 2022-23), the scheme offered a guaranteed pension rate of 7.4% per annum payable monthly.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-emerald-600 transition-colors">
+                        What is the tenure of PMVVY?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        The policy term for PMVVY is exactly 10 years.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-emerald-600 transition-colors">
+                        What happens after the 10-year tenure is complete?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        At the end of the 10-year policy term, if the pensioner survives, the initial purchase price (principal amount) along with the final pension installment is refunded to them.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-emerald-600 transition-colors">
+                        Is the pension from PMVVY taxable?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Yes, the pension received under PMVVY is fully taxable. It must be declared under the 'Income from Other Sources' head while filing your income tax returns.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-emerald-600 transition-colors">
+                        What was the maximum investment limit for PMVVY?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        A senior citizen could invest a maximum of ₹15,00,000 (15 Lakhs) in the PMVVY scheme, which yielded a maximum monthly pension of ₹9,250.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-emerald-600 transition-colors">
+                        Can I take a loan against my PMVVY policy?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Yes, existing subscribers can avail a loan against their PMVVY policy after completing 3 policy years. The maximum loan amount granted is 75% of the initial purchase price.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-emerald-600 transition-colors">
+                        What happens in case of the pensioner's death during the 10 years?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        If the pensioner dies during the 10-year term, the initial purchase price (principal) is refunded to the designated nominee or legal heirs.
+                    </div>
+                </details>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Global JS Hooks for Linking & Search -->
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        // Calculator Logic
+        const elements = {
+            invInput: document.getElementById('investmentInput'),
+            invRange: document.getElementById('investmentRange'),
+            errorMsg: document.getElementById('errorMsg'),
+            
+            pensionVal: document.getElementById('monthlyPensionValue'),
+            totalPensionVal: document.getElementById('totalPensionValue'),
+            maturityVal: document.getElementById('maturityValue'),
+            
+            resetBtn: document.getElementById('resetBtn')
+        };
+
+        const MAX_LIMIT = 1500000;
+        const RATE = 7.4; // Fixed final rate
+
+        function formatIndian(val) {
+            const absVal = Math.round(val);
+            if (absVal >= 100000) {
+                return "₹" + (new Intl.NumberFormat('en-IN').format(absVal)) + " (" + (absVal / 100000).toFixed(2) + " L)";
+            }
+            return "₹" + (new Intl.NumberFormat('en-IN').format(absVal));
+        }
+
+        function calculatePMVVY() {
+            let principal = parseFloat(elements.invInput.value) || 0;
+            
+            if(principal > MAX_LIMIT) {
+                elements.errorMsg.style.display = "block";
+                principal = MAX_LIMIT; // Cap for calculation
+            } else {
+                elements.errorMsg.style.display = "none";
+            }
+
+            // Math: Simple interest payout monthly
+            const annualPension = principal * (RATE / 100);
+            const monthlyPension = annualPension / 12;
+            const totalPension = monthlyPension * 12 * 10; // 10 years
+
+            // DOM Updates
+            elements.pensionVal.textContent = "₹" + new Intl.NumberFormat('en-IN').format(Math.round(monthlyPension));
+            elements.totalPensionVal.textContent = formatIndian(totalPension);
+            elements.maturityVal.textContent = formatIndian(principal); // Principal returned
+        }
+
+        function applyExample(amount) {
+            elements.invInput.value = amount;
+            elements.invRange.value = amount;
+            calculatePMVVY();
+        }
+
+        function setupSync(input, range, triggerCalc) {
+            input.addEventListener('input', () => { 
+                range.value = input.value; 
+                if(triggerCalc) calculatePMVVY(); 
+            });
+            range.addEventListener('input', () => { 
+                input.value = range.value; 
+                if(triggerCalc) calculatePMVVY(); 
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.invInput, elements.invRange, true);
+            
+            elements.resetBtn.addEventListener('click', () => {
+                elements.invInput.value = 1500000;
+                elements.invRange.value = 1500000;
+                calculatePMVVY();
+            });
+            
+            elements.invInput.addEventListener('blur', () => {
+                let val = parseFloat(elements.invInput.value) || 0;
+                if(val > MAX_LIMIT) {
+                    val = MAX_LIMIT;
+                }
+                elements.invInput.value = val;
+                elements.invRange.value = val;
+                calculatePMVVY();
+            });
+
+            calculatePMVVY();
+        });
+    </script>
+</body>
+</html>

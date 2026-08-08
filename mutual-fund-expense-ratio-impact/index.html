@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutual Fund Expense Ratio Calculator: Direct vs Regular Impact</title>
+    <meta name="description" content="Calculate exactly how much wealth you are losing to your mutual fund distributor's commissions. Compare Direct vs Regular plan expense ratios over the long term.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/mutual-fund-expense-ratio-impact/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mutual Fund Expense Ratio Calculator: Direct vs Regular">
+    <meta property="og:description" content="Calculate exactly how much wealth you are losing to commissions. Compare Direct vs Regular plan expense ratios.">
+    <meta property="og:url" content="https://arthcalculator.in/mutual-fund-expense-ratio-impact/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Mutual Fund Expense Ratio Impact Calculator",
+      "url": "https://arthcalculator.in/mutual-fund-expense-ratio-impact/",
+      "description": "Calculate exactly how much wealth you are losing to your mutual fund distributor's commissions. Compare Direct vs Regular plan expense ratios over the long term.",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Expense Ratio Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://arthcalculator.in/mutual-fund-expense-ratio-impact/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Expense Ratio Impact",
+        "item": "https://arthcalculator.in/mutual-fund-expense-ratio-impact/"
+      }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is an Expense Ratio in Mutual Funds?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An expense ratio is the annual fee that mutual funds charge their shareholders. It covers the fund manager's fee, administrative costs, and operating expenses. It is deducted automatically from your NAV."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between Direct and Regular plans?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Direct plans are bought directly from the AMC (via apps like Zerodha or Groww) and have no broker commissions. Regular plans are bought through a distributor (broker/agent), and the AMC pays them an annual trailing commission, which increases the expense ratio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is 1% difference in expense ratio really that big?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, absolutely. Because of compounding, a seemingly tiny 1% or 1.5% difference in fees can eat up 20% to 30% of your total final wealth over a 20 or 30-year investing horizon."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the expense ratio deducted?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You do not pay it separately. The AMC calculates it daily and deducts it directly from the fund's Net Asset Value (NAV) before declaring it at the end of the day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I always choose the lowest expense ratio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not necessarily. For active funds, a slightly higher expense ratio might be justified if the fund manager consistently beats the benchmark. However, for Index Funds, you should strictly choose the one with the lowest tracking error and lowest expense ratio."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #0ea5e9; height: 6px; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-blue-200">
+    <div id="navbar"></div>
+    <script>
+        fetch("/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+                const menuBtn = document.getElementById("menuBtn");
+                const mobileMenu = document.getElementById("mobileMenu");
+                if(menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                    });
+                }
+            });
+    </script>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+    <ol class="flex list-none p-0">
+        <li class="flex items-center">
+            <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+            <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+        </li>
+        <li class="flex items-center">
+            <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+            <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+        </li>
+        <li class="text-blue-600 font-bold">Expense Ratio Impact</li>
+    </ol>
+</nav>
+
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Mutual Fund Expense Ratio Impact: <span class="text-blue-600">Direct vs Regular</span></h1>
+            <p class="text-lg text-slate-600 mb-6">
+                Are you investing through a broker or bank relationship manager? See exactly how much of your final wealth is being eaten up by their hidden commissions.
+            </p>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+            
+            <!-- Left: Inputs -->
+            <div class="lg:col-span-5 bg-white rounded-2xl p-6 md:p-8 card-shadow border border-slate-100">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl font-bold text-slate-800">Your Investment</h2>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Monthly SIP -->
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <label class="font-semibold text-slate-700">Monthly SIP</label>
+                            <div class="relative">
+                                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
+                                <input type="number" id="sipInput" value="20000" min="1000" step="1000" class="w-32 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                            </div>
+                        </div>
+                        <input type="range" id="sipRange" min="1000" max="200000" step="1000" value="20000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                    </div>
+
+                    <!-- Tenure -->
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <label class="font-semibold text-slate-700">Investment Period (Years)</label>
+                            <div class="relative">
+                                <input type="number" id="yearsInput" value="20" min="5" max="40" step="1" class="w-24 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-8 font-bold">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium text-xs">Yrs</span>
+                            </div>
+                        </div>
+                        <input type="range" id="yearsRange" min="5" max="40" step="1" value="20" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                    </div>
+
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                        <label class="text-sm font-semibold text-slate-700 block mb-2">Expected Gross Fund Return (%)</label>
+                        <div class="relative">
+                            <input type="number" id="rateInput" value="13.0" min="8" max="20" step="0.5" class="w-full text-center bg-white border border-slate-300 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 font-bold">
+                        </div>
+                        <p class="text-xs text-slate-500 mt-2 text-center">This is the return <em>before</em> any fees are deducted.</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-emerald-50 border border-emerald-200 p-3 rounded-xl">
+                            <label class="text-[10px] font-bold text-emerald-800 uppercase block mb-1">Direct Plan Expense Ratio</label>
+                            <div class="relative">
+                                <input type="number" id="directER" value="0.5" step="0.1" class="w-full text-right bg-white border border-emerald-300 text-emerald-900 rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block p-2 pr-7 font-bold">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-emerald-600 font-medium text-xs">%</span>
+                            </div>
+                        </div>
+                        <div class="bg-rose-50 border border-rose-200 p-3 rounded-xl">
+                            <label class="text-[10px] font-bold text-rose-800 uppercase block mb-1">Regular Plan Expense Ratio</label>
+                            <div class="relative">
+                                <input type="number" id="regularER" value="1.5" step="0.1" class="w-full text-right bg-white border border-rose-300 text-rose-900 rounded-lg focus:ring-rose-500 focus:border-rose-500 block p-2 pr-7 font-bold">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-rose-600 font-medium text-xs">%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Results -->
+            <div class="lg:col-span-7 flex flex-col gap-6">
+                <!-- Highlight Result Card -->
+                <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 md:p-8 card-shadow text-white relative overflow-hidden flex-grow flex flex-col justify-center border border-slate-700">
+                    <div class="absolute -right-10 -top-10 w-40 h-40 bg-blue-500 opacity-20 rounded-full blur-3xl"></div>
+                    <div class="relative z-10 text-center">
+                        <p class="text-slate-400 font-medium text-sm md:text-base mb-2 uppercase tracking-wider">Wealth Lost to Commissions</p>
+                        <h3 class="text-5xl md:text-6xl font-black mb-4 text-rose-400" id="wealthLostVal">₹0</h3>
+                        
+                        <div class="inline-block bg-white/10 px-4 py-2 rounded-lg border border-white/20 backdrop-blur-sm mb-6">
+                            <p class="text-slate-200 text-sm">That's <strong class="text-rose-300 text-lg" id="percentLostVal">0%</strong> of your total final wealth!</p>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 border-t border-slate-700 pt-6 text-left">
+                            <div class="bg-emerald-900/30 p-4 rounded-xl border border-emerald-500/20">
+                                <p class="text-emerald-300 text-xs font-bold mb-1 uppercase tracking-wider">Direct Plan (Self)</p>
+                                <p class="text-2xl font-bold text-emerald-400" id="directFinal">₹0</p>
+                                <p class="text-[10px] text-emerald-200/70 mt-1">No commission</p>
+                            </div>
+                            <div class="bg-rose-900/30 p-4 rounded-xl border border-rose-500/20">
+                                <p class="text-rose-300 text-xs font-bold mb-1 uppercase tracking-wider">Regular Plan (Broker)</p>
+                                <p class="text-2xl font-bold text-rose-400" id="regularFinal">₹0</p>
+                                <p class="text-[10px] text-rose-200/70 mt-1" id="brokerEarns">Broker earns ₹0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content Section -->
+        <article class="bg-white rounded-2xl p-6 md:p-10 card-shadow border border-slate-100 mb-16 prose prose-slate max-w-none">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">Why does 1% matter so much?</h2>
+            <p>
+                When a bank relationship manager or local broker sells you a mutual fund, they aren't doing it for free. They sign you up for a <strong>Regular Plan</strong>.
+            </p>
+            <p>
+                In a Regular plan, the Asset Management Company (AMC) pays the broker a trailing commission every single year, as long as you hold the fund. This commission is recovered directly from your investments by charging you a higher Expense Ratio (usually 1% to 1.5% higher than a Direct plan).
+            </p>
+
+            <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">The Math of Compounding Fees</h3>
+            <p>
+                A 1% fee doesn't sound like much. You might think, <em>"If my fund returns 13%, I still get 12%, that's fine."</em>
+            </p>
+            <p>
+                However, compounding works on fees just like it works on growth. By giving up 1% every year for 20 years, you aren't just losing 1% of your final amount. You are losing the <strong>future compound growth</strong> that those deducted fees would have generated for you over the decades. Over a 20 or 25-year horizon, a 1% higher fee will consume <strong>20% to 30% of your entire final wealth.</strong>
+            </p>
+
+            <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">How to switch to Direct Plans?</h3>
+            <p>
+                To avoid these massive commission losses, always ensure the mutual fund name ends with the word <strong>"Direct Plan"</strong> or <strong>"Direct - Growth"</strong>. You can buy direct mutual funds for free through zero-commission apps like Zerodha Coin, Groww, Kuvera, or directly from the AMC's website.
+            </p>
+        
+<div class="my-8 overflow-x-auto not-prose">
+    <h3 class="text-xl font-bold text-slate-800 mb-4">Key Characteristics & Comparison Overview</h3>
+    <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden text-sm">
+        <thead class="bg-slate-100">
+            <tr>
+                <th class="p-3.5 border-b font-bold text-slate-700">Feature / Parameter</th>
+                <th class="p-3.5 border-b font-bold text-slate-700">Details / Rules</th>
+                <th class="p-3.5 border-b font-bold text-slate-700">Tax Implications</th>
+            </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100 bg-white">
+            <tr>
+                <td class="p-3.5 font-medium text-slate-800">Primary Returns</td>
+                <td class="p-3.5 text-blue-600 font-semibold">Guaranteed / Market-Linked Growth</td>
+                <td class="p-3.5 text-slate-600">Taxable at Income Tax Slab Rates</td>
+            </tr>
+            <tr>
+                <td class="p-3.5 font-medium text-slate-800">Compounding / Payout</td>
+                <td class="p-3.5 text-slate-700">Quarterly / Annual Compounding</td>
+                <td class="p-3.5 text-slate-600">TDS deductions applicable where threshold met</td>
+            </tr>
+            <tr>
+                <td class="p-3.5 font-medium text-slate-800">Lock-in & Liquidity</td>
+                <td class="p-3.5 text-slate-700">Specified Tenure / Market Liquidity</td>
+                <td class="p-3.5 text-slate-600">Premature withdrawal penalties apply</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+            
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">How Expense Ratios Impact Long-Term Wealth</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Direct vs Regular Plans:</strong> Regular mutual fund plans pay ongoing distributor commissions (0.5% - 1.2% extra TER), eroding up to 20-25% of your total wealth over 25 years.</li>
+            <li><strong>Compounding Expense Drag:</strong> A 1% higher Total Expense Ratio (TER) reduces a 30-year SIP maturity corpus by tens of lakhs.</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">SEBI TER Regulations & Passive Index Alternatives</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>SEBI Slabs:</strong> SEBI caps mutual fund TER based on AUM size. Larger funds must lower expense ratios.</li>
+            <li><strong>Low-Cost Index Funds:</strong> Nifty 50 and Sensex Index Funds offer ultra-low TERs (0.05% - 0.20%), delivering higher net returns than underperforming active funds.</li>
+        </ul>
+
+        <div class="mt-8 p-5 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl not-prose">
+            <h4 class="text-base font-bold text-blue-900 mb-1">Expense Ratio Pro Tip</h4>
+            <p class="text-xs text-blue-800 leading-relaxed">
+                Switching your existing Regular Mutual Fund SIPs to Direct Plans can instantly boost your annual CAGR return by 0.75% to 1.25% with zero extra risk.
+            </p>
+        </div>
+
+            <div class="mt-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl not-prose">
+    <h3 class="text-lg font-bold text-slate-800 mb-2">Explore Related Financial Tools & Calculators</h3>
+    <p class="text-xs text-slate-500 mb-4">Compare options across investments, tax savings, and compounding growth:</p>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-medium">
+        <a href="/sip/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SIP Calculator</a>
+        <a href="/fd/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">FD Calculator</a>
+        <a href="/ppf/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">PPF Calculator</a>
+        <a href="/cagr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">CAGR Calculator</a>
+        <a href="/xirr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">XIRR Calculator</a>
+        <a href="/income-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Income Tax Tool</a>
+        <a href="/capital-gains-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Capital Gains Tax</a>
+        <a href="/lumpsum/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Lumpsum Calculator</a>
+        <a href="/inflation/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Inflation Calculator</a>
+        <a href="/swp/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SWP Calculator</a>
+        <a href="/rd/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">RD Calculator</a>
+        <a href="/80c-tax-saving/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">80C Tax Saving</a>
+    </div>
+</div>
+
+</article>
+        
+    <div class="mb-16" id="faqs">
+    <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+    <div class="space-y-4 max-w-4xl mx-auto">
+        <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                What is a mutual fund expense ratio?
+                <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+            <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                Expense ratio is the annual fee charged by asset management companies (AMCs) to manage your mutual fund portfolio.
+            </div>
+        </details>
+        <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                What is the difference between Direct and Regular plans?
+                <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+            <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                Direct plans have no distributor commission resulting in lower expense ratios, while Regular plans pay trailing commissions to brokers.
+            </div>
+        </details>
+        <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                How much wealth is lost to 1% extra expense ratio?
+                <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+            <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                Over a 25-year investment period, a 1% higher expense ratio can reduce your total final corpus by over 20-25%.
+            </div>
+        </details>
+        <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                How is the expense ratio deducted from my money?
+                <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+            <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                It is deducted daily from the fund's Net Asset Value (NAV) before reporting daily returns.
+            </div>
+        </details>
+        <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                Are index funds cheaper in expense ratio?
+                <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+            <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                Yes, index funds usually charge 0.05% to 0.20%, whereas active equity funds may charge 0.75% to 2.25%.
+            </div>
+        </details>
+        <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                Is a lower expense ratio always better?
+                <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+            <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                While lower expense ratios increase net returns, fund manager track record and risk metrics should also be evaluated.
+            </div>
+        </details>
+        <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                Can fund houses increase expense ratios anytime?
+                <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+            <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                SEBI sets regulatory caps based on AUM sizes, but fund houses can adjust within those legal limits.
+            </div>
+        </details>
+        <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                How to check overall portfolio returns?
+                <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+            <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                Use our <a href='/xirr/' class='text-blue-600 underline'>XIRR Calculator</a> to evaluate overall portfolio returns.
+            </div>
+        </details>
+    </div>
+</div>
+
+</main>
+
+    <!-- Global JS Hooks for Linking & Search -->
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        // Calculator Logic
+        const elements = {
+            sipInput: document.getElementById('sipInput'),
+            sipRange: document.getElementById('sipRange'),
+            yearsInput: document.getElementById('yearsInput'),
+            yearsRange: document.getElementById('yearsRange'),
+            rateInput: document.getElementById('rateInput'),
+            directER: document.getElementById('directER'),
+            regularER: document.getElementById('regularER'),
+            
+            wealthLostVal: document.getElementById('wealthLostVal'),
+            percentLostVal: document.getElementById('percentLostVal'),
+            directFinal: document.getElementById('directFinal'),
+            regularFinal: document.getElementById('regularFinal'),
+            brokerEarns: document.getElementById('brokerEarns')
+        };
+
+        function formatIndian(val) {
+            return "₹" + new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(val));
+        }
+
+        // FV of SIP formula
+        function calculateSipFv(P, r_annual, years) {
+            if (years <= 0 || r_annual <= 0) return P * 12 * years;
+            const r_monthly = r_annual / 12 / 100;
+            const n_months = years * 12;
+            return P * (((Math.pow(1 + r_monthly, n_months) - 1) / r_monthly) * (1 + r_monthly));
+        }
+
+        function calculateImpact() {
+            let sip = parseFloat(elements.sipInput.value) || 0;
+            let years = parseInt(elements.yearsInput.value) || 0;
+            let grossRate = parseFloat(elements.rateInput.value) || 0;
+            
+            let dirER = parseFloat(elements.directER.value) || 0;
+            let regER = parseFloat(elements.regularER.value) || 0;
+
+            const netDirRate = grossRate - dirER;
+            const netRegRate = grossRate - regER;
+
+            const directFV = calculateSipFv(sip, netDirRate, years);
+            const regularFV = calculateSipFv(sip, netRegRate, years);
+            
+            const wealthLost = directFV - regularFV;
+            let percentLost = 0;
+            if (directFV > 0) {
+                percentLost = (wealthLost / directFV) * 100;
+            }
+
+            // DOM Updates
+            elements.wealthLostVal.textContent = formatIndian(wealthLost);
+            elements.percentLostVal.textContent = percentLost.toFixed(1) + "%";
+            
+            elements.directFinal.textContent = formatIndian(directFV);
+            elements.regularFinal.textContent = formatIndian(regularFV);
+            
+            elements.brokerEarns.textContent = `Broker indirectly earns ${formatIndian(wealthLost)}`;
+        }
+
+        function setupSync(input, range, triggerCalc) {
+            input.addEventListener('input', () => { 
+                range.value = input.value; 
+                if(triggerCalc) calculateImpact(); 
+            });
+            range.addEventListener('input', () => { 
+                input.value = range.value; 
+                if(triggerCalc) calculateImpact(); 
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.sipInput, elements.sipRange, true);
+            setupSync(elements.yearsInput, elements.yearsRange, true);
+            
+            elements.rateInput.addEventListener('input', calculateImpact);
+            elements.directER.addEventListener('input', calculateImpact);
+            elements.regularER.addEventListener('input', calculateImpact);
+            
+            calculateImpact();
+        });
+    </script>
+</body>
+</html>
