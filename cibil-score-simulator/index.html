@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIBIL Score Simulator (2026) – Predict Credit Score Changes</title>
+    <meta name="description" content="Simulate how credit card payments, loan defaults, credit utilization, and new credit applications impact your CIBIL credit score in 2026.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/cibil-score-simulator/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CIBIL Score Simulator (2026)">
+    <meta property="og:description" content="Simulate how financial decisions affect your CIBIL credit score in India.">
+    <meta property="og:url" content="https://arthcalculator.in/cibil-score-simulator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "CIBIL Score Simulator",
+      "url": "https://arthcalculator.in/cibil-score-simulator/",
+      "description": "Simulate how financial decisions affect your CIBIL credit score in India.",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "CIBIL Score Simulator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://arthcalculator.in/cibil-score-simulator/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "CIBIL Simulator",
+        "item": "https://arthcalculator.in/cibil-score-simulator/"
+      }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a good CIBIL score in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A CIBIL score of 750 or above (out of 900) is considered excellent by Indian banks and financial institutions for loan approval."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What factors impact your CIBIL score the most?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Payment History accounts for 35%, Credit Utilization Ratio accounts for 30%, Credit Age accounts for 15%, and Credit Mix & Hard Inquiries account for 20%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a missed EMI payment lower CIBIL score?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A single 30+ day missed EMI or credit card payment can drop your CIBIL score by 50 to 80 points."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the recommended credit utilization ratio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Keeping your total credit utilization ratio below 30% of your total credit limit helps maintain a high credit score."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to rebuild a low CIBIL score?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "With disciplined on-time payments and low credit utilization, a low score can improve by 50-100 points within 6 to 12 months."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does checking your own CIBIL score lower it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, checking your own credit score is a 'Soft Inquiry' and has zero negative impact on your CIBIL score."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a Hard Inquiry?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Hard Inquiry occurs when a bank or credit card company checks your credit report during a loan application. Multiple hard inquiries in a short time lower your score."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does closing an old credit card affect CIBIL?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Closing your oldest credit card reduces your total credit history length and increases credit utilization, which can temporarily lower your score."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-blue-200">
+    <div id="navbar"></div>
+    <script>
+        fetch("/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+                const menuBtn = document.getElementById("menuBtn");
+                const mobileMenu = document.getElementById("mobileMenu");
+                if(menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                    });
+                }
+            });
+    </script>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+            <ol class="flex list-none p-0">
+                <li class="flex items-center">
+                    <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="text-blue-600 font-bold">CIBIL Simulator</li>
+            </ol>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">CIBIL Score <span class="text-blue-600">Simulator (2026)</span></h1>
+            <p class="text-lg text-slate-600 mb-6">
+                Simulate how credit card bill payments, EMI defaults, credit utilization, and new loan applications alter your credit score.
+            </p>
+        </div>
+
+        <!-- Simulator Interface -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+            
+            <!-- Inputs -->
+            <div class="lg:col-span-6 bg-white rounded-2xl p-6 md:p-8 card-shadow border border-slate-100 space-y-6">
+                <h2 class="text-xl font-bold text-slate-800 border-b pb-3">Current Credit Profile</h2>
+
+                <!-- Current Score -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Current CIBIL Score</label>
+                        <div class="relative">
+                            <input type="number" id="currentScoreInput" value="720" min="300" max="900" step="5" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 font-bold">
+                        </div>
+                    </div>
+                    <input type="range" id="currentScoreRange" min="300" max="900" step="5" value="720" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <h3 class="font-bold text-slate-800 pt-2 border-t text-sm uppercase tracking-wide">Simulate Financial Actions</h3>
+
+                <!-- Action 1: On-Time Payments -->
+                <div class="flex items-center justify-between text-sm">
+                    <span class="text-slate-700 font-medium">6 Months On-Time Payments</span>
+                    <input type="checkbox" id="onTimeCheck" checked class="w-5 h-5 text-blue-600 border-slate-300 rounded focus:ring-blue-500 cursor-pointer">
+                </div>
+
+                <!-- Action 2: Missed EMI -->
+                <div class="flex items-center justify-between text-sm">
+                    <span class="text-slate-700 font-medium">Miss 1 EMI Payment (30+ Days)</span>
+                    <input type="checkbox" id="missedEmiCheck" class="w-5 h-5 text-blue-600 border-slate-300 rounded focus:ring-blue-500 cursor-pointer">
+                </div>
+
+                <!-- Action 3: Credit Card Utilization -->
+                <div>
+                    <label class="font-semibold text-slate-700 text-sm block mb-1">Credit Card Limit Utilization</label>
+                    <select id="utilizationSelect" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm font-semibold focus:ring-blue-500 focus:border-blue-500">
+                        <option value="good" selected>Below 30% (Recommended)</option>
+                        <option value="high">50% to 70% (High)</option>
+                        <option value="maxed">80% to 100% (Maxed Out)</option>
+                    </select>
+                </div>
+
+                <!-- Action 4: Hard Inquiries -->
+                <div>
+                    <label class="font-semibold text-slate-700 text-sm block mb-1">New Credit Cards / Loans Applied</label>
+                    <select id="inquiriesSelect" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm font-semibold focus:ring-blue-500 focus:border-blue-500">
+                        <option value="0" selected>0 New Applications</option>
+                        <option value="2">1 - 2 Applications (Minor Impact)</option>
+                        <option value="5">4+ Applications (Hard Inquiries Spree)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Output Display -->
+            <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+                
+                <div class="bg-blue-600 text-white rounded-2xl p-6 md:p-8 card-shadow">
+                    <p class="text-blue-100 text-xs font-bold uppercase tracking-wider mb-2">Simulated New CIBIL Score</p>
+                    <h3 class="text-5xl md:text-6xl font-black mb-2" id="simulatedScore">720</h3>
+                    <p class="text-blue-200 text-sm font-medium mb-6" id="scoreChangeText">+0 points change</p>
+                    
+                    <div class="border-t border-blue-500/50 pt-4 grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <p class="text-blue-200 text-xs">Credit Category</p>
+                            <p class="text-xl font-bold text-white mt-1" id="scoreCategory">Good</p>
+                        </div>
+                        <div>
+                            <p class="text-blue-200 text-xs">Loan Approval Chances</p>
+                            <p class="text-xl font-bold text-emerald-300 mt-1" id="approvalChance">High</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-slate-100 space-y-3 text-sm">
+                    <h4 class="font-bold text-slate-800 border-b pb-2">Simulation Impact Breakdown</h4>
+                    <div id="impactList" class="space-y-2 text-xs font-medium">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content Section -->
+        <article class="bg-white rounded-2xl p-6 md:p-10 card-shadow border border-slate-100 mb-16 prose prose-slate max-w-none">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">How CIBIL Credit Scores are Calculated in India</h2>
+            <p>
+                TransUnion CIBIL evaluates creditworthiness on a scale of 300 to 900 based on credit bureau reports submitted monthly by Indian banks and NBFCs.
+            </p>
+
+            <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">CIBIL Score Rating Slabs (2026)</h3>
+            <div class="my-6 overflow-x-auto not-prose">
+                <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden text-sm">
+                    <thead class="bg-slate-100">
+                        <tr>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Score Range</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Category</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Impact on Loan Approval & Interest Rates</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 bg-white">
+                        <tr>
+                            <td class="p-3.5 font-bold text-emerald-600">750 - 900</td>
+                            <td class="p-3.5 font-semibold text-emerald-600">Excellent</td>
+                            <td class="p-3.5 text-slate-700">Instant approval at lowest interest rates</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">700 - 749</td>
+                            <td class="p-3.5 font-semibold text-blue-600">Good</td>
+                            <td class="p-3.5 text-slate-700">High approval chances with standard interest rates</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-amber-600">650 - 699</td>
+                            <td class="p-3.5 font-semibold text-amber-600">Fair</td>
+                            <td class="p-3.5 text-slate-700">Possible approval with higher interest & collateral</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-rose-600">300 - 649</td>
+                            <td class="p-3.5 font-semibold text-rose-600">Poor</td>
+                            <td class="p-3.5 text-rose-600 font-medium">High risk of loan rejection</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            
+            
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Key Factors Driving Your CIBIL Credit Score (300-900 Scale)</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Payment History (35% Weight):</strong> Timely EMI and credit card bill payments are the single biggest driver of a 750+ CIBIL score.</li>
+            <li><strong>Credit Utilization Ratio (30% Weight):</strong> Keep credit card spend below 30% of your total assigned credit limit.</li>
+            <li><strong>Credit Mix & History Length (25% Weight):</strong> A balanced mix of secured (home/car) and unsecured (personal/credit card) loans over long tenure.</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Actionable Steps to Rebound from 600 to 750+ CIBIL</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Zero Default Guarantee:</strong> Set up auto-debit for all credit card total amounts due (never pay minimum due only).</li>
+            <li><strong>Limit Hard Enquiries:</strong> Avoid applying for multiple credit cards or personal loans within short timeframes (max 1 enquiry per quarter).</li>
+        </ul>
+
+        <div class="mt-8 p-5 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl not-prose">
+            <h4 class="text-base font-bold text-blue-900 mb-1">CIBIL Score Impact</h4>
+            <p class="text-xs text-blue-800 leading-relaxed">
+                A CIBIL score above 750 qualifies you for prime home loan interest rates (0.50% lower), saving ₹5-10 Lakhs in total loan interest over 20 years.
+            </p>
+        </div>
+
+            <div class="mt-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl not-prose">
+                <h3 class="text-lg font-bold text-slate-800 mb-2">Explore Related Financial Tools & Calculators</h3>
+                <p class="text-xs text-slate-500 mb-4">Compare options across loan EMIs, tax savings, and compounding growth:</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-medium">
+                    <a href="/personal-loan-emi/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Personal Loan EMI</a>
+                    <a href="/home-loan/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Home Loan EMI</a>
+                    <a href="/credit-card-interest/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Credit Card Interest</a>
+                    <a href="/pre-emi-interest-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Pre-EMI Calculator</a>
+                    <a href="/moratorium-interest-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Moratorium Calculator</a>
+                    <a href="/sip/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SIP Calculator</a>
+                    <a href="/income-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Income Tax Tool</a>
+                    <a href="/capital-gains-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Capital Gains Tax</a>
+                    <a href="/lumpsum/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Lumpsum Calculator</a>
+                    <a href="/inflation/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Inflation Calculator</a>
+                    <a href="/cagr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">CAGR Calculator</a>
+                    <a href="/80c-tax-saving/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">80C Tax Saving</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- FAQs -->
+        <div class="mb-16" id="faqs">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is a good CIBIL score in India?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        A CIBIL score of 750 or above (out of 900) is considered excellent by Indian banks and financial institutions for loan approval.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What factors impact your CIBIL score the most?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Payment History accounts for 35%, Credit Utilization Ratio accounts for 30%, Credit Age accounts for 15%, and Credit Mix & Hard Inquiries account for 20%.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How much does a missed EMI payment lower CIBIL score?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        A single 30+ day missed EMI or credit card payment can drop your CIBIL score by 50 to 80 points.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is the recommended credit utilization ratio?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Keeping your total credit utilization ratio below 30% of your total credit limit helps maintain a high credit score.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How long does it take to rebuild a low CIBIL score?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        With disciplined on-time payments and low credit utilization, a low score can improve by 50-100 points within 6 to 12 months.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Does checking your own CIBIL score lower it?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        No, checking your own credit score is a 'Soft Inquiry' and has zero negative impact on your CIBIL score.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is a Hard Inquiry?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        A Hard Inquiry occurs when a bank or credit card company checks your credit report during a loan application. Multiple hard inquiries in a short time lower your score.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How does closing an old credit card affect CIBIL?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Closing your oldest credit card reduces your total credit history length and increases credit utilization, which can temporarily lower your score.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global JS Hooks for Linking & Search -->
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        const elements = {
+            currentScoreInput: document.getElementById('currentScoreInput'),
+            currentScoreRange: document.getElementById('currentScoreRange'),
+            onTimeCheck: document.getElementById('onTimeCheck'),
+            missedEmiCheck: document.getElementById('missedEmiCheck'),
+            utilizationSelect: document.getElementById('utilizationSelect'),
+            inquiriesSelect: document.getElementById('inquiriesSelect'),
+            
+            simulatedScore: document.getElementById('simulatedScore'),
+            scoreChangeText: document.getElementById('scoreChangeText'),
+            scoreCategory: document.getElementById('scoreCategory'),
+            approvalChance: document.getElementById('approvalChance'),
+            impactList: document.getElementById('impactList')
+        };
+
+        function simulateCibil() {
+            let baseScore = parseInt(elements.currentScoreInput.value) || 720;
+            let scoreDelta = 0;
+            let impacts = [];
+
+            // Action 1: On time payments
+            if (elements.onTimeCheck.checked) {
+                scoreDelta += 25;
+                impacts.push('<div class="text-emerald-600">+25 Pts: Consistent on-time payments build credit trust.</div>');
+            }
+
+            // Action 2: Missed EMI
+            if (elements.missedEmiCheck.checked) {
+                scoreDelta -= 65;
+                impacts.push('<div class="text-rose-600">-65 Pts: 30+ day payment default severely hurts payment history.</div>');
+            }
+
+            // Action 3: Utilization
+            const util = elements.utilizationSelect.value;
+            if (util === 'good') {
+                scoreDelta += 15;
+                impacts.push('<div class="text-emerald-600">+15 Pts: Low credit utilization (<30%) indicates low financial stress.</div>');
+            } else if (util === 'high') {
+                scoreDelta -= 20;
+                impacts.push('<div class="text-amber-600">-20 Pts: High credit utilization (50-70%) signals potential credit dependence.</div>');
+            } else if (util === 'maxed') {
+                scoreDelta -= 45;
+                impacts.push('<div class="text-rose-600">-45 Pts: Maxed out credit limit (80-100%) triggers high risk flag.</div>');
+            }
+
+            // Action 4: Hard inquiries
+            const inq = parseInt(elements.inquiriesSelect.value) || 0;
+            if (inq === 2) {
+                scoreDelta -= 10;
+                impacts.push('<div class="text-amber-600">-10 Pts: Minor hard inquiries for new loan/credit card applications.</div>');
+            } else if (inq >= 4) {
+                scoreDelta -= 35;
+                impacts.push('<div class="text-rose-600">-35 Pts: Multiple hard inquiries signal credit hunger to lenders.</div>');
+            }
+
+            let finalScore = Math.min(900, Math.max(300, baseScore + scoreDelta));
+            let diff = finalScore - baseScore;
+            
+            elements.simulatedScore.textContent = finalScore;
+            elements.scoreChangeText.textContent = (diff >= 0 ? "+" + diff : diff) + " points change";
+
+            // Category & Approval chance
+            let category = "Good";
+            let chance = "High";
+            let chanceColor = "text-emerald-300";
+
+            if (finalScore >= 750) {
+                category = "Excellent";
+                chance = "Very High (Lowest Rates)";
+                chanceColor = "text-emerald-300";
+            } else if (finalScore >= 700) {
+                category = "Good";
+                chance = "High";
+                chanceColor = "text-emerald-300";
+            } else if (finalScore >= 650) {
+                category = "Fair";
+                chance = "Moderate (Higher Interest)";
+                chanceColor = "text-amber-300";
+            } else {
+                category = "Poor";
+                chance = "Low (Risk of Rejection)";
+                chanceColor = "text-rose-300";
+            }
+
+            elements.scoreCategory.textContent = category;
+            elements.approvalChance.textContent = chance;
+            elements.approvalChance.className = `text-xl font-bold mt-1 ${chanceColor}`;
+
+            elements.impactList.innerHTML = impacts.join('');
+        }
+
+        function setupSync(input, range) {
+            input.addEventListener('input', () => { range.value = input.value; simulateCibil(); });
+            range.addEventListener('input', () => { input.value = range.value; simulateCibil(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.currentScoreInput, elements.currentScoreRange);
+            elements.onTimeCheck.addEventListener('change', simulateCibil);
+            elements.missedEmiCheck.addEventListener('change', simulateCibil);
+            elements.utilizationSelect.addEventListener('change', simulateCibil);
+            elements.inquiriesSelect.addEventListener('change', simulateCibil);
+            
+            simulateCibil();
+        });
+    </script>
+</body>
+</html>

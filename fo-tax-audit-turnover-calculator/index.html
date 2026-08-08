@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F&O Trading Tax Audit Turnover Calculator (2026) – Sec 44AB & 44AD</title>
+    <meta name="description" content="Calculate F&O trading turnover for tax audit under Section 44AB and 44AD in 2026. Computes absolute profit/loss sum + option premium received to determine CA audit eligibility.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/fo-tax-audit-turnover-calculator/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="F&O Trading Tax Audit Turnover Calculator (2026)">
+    <meta property="og:description" content="Compute F&O legal turnover and test Section 44AB CA Tax Audit requirement.">
+    <meta property="og:url" content="https://arthcalculator.in/fo-tax-audit-turnover-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "F&O Trading Tax Audit Turnover Calculator",
+      "url": "https://arthcalculator.in/fo-tax-audit-turnover-calculator/",
+      "description": "Compute F&O legal turnover and test Section 44AB CA Tax Audit requirement.",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "F&O Trading Tax Audit Turnover Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://arthcalculator.in/fo-tax-audit-turnover-calculator/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "F&O Tax Audit Calculator",
+        "item": "https://arthcalculator.in/fo-tax-audit-turnover-calculator/"
+      }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How is F&O turnover calculated for Income Tax purposes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under ICAI tax audit guidelines, F&O Turnover = Sum of Absolute Positive Profits + Sum of Absolute Negative Losses + Premium Received on Sale of Options."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Tax Audit threshold under Section 44AB for F&O traders?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mandatory Tax Audit by a Chartered Accountant is required under Section 44AB if digital turnover exceeds ₹10 Crores in a financial year (provided cash transactions are ≤ 5%)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can F&O losses be set off against salary income?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. F&O trading losses are treated as Non-Speculative Business Losses. They CANNOT be set off against Salary income, but can be set off against rental, dividend, interest, or capital gain income and carried forward for 8 financial years."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Section 44AD Presumptive Tax applicable to F&O trading?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. F&O traders with turnover up to ₹3 Crores (if digital receipt rules met) can opt for Section 44AD, declaring 6% of turnover as presumptive net profit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When is Tax Audit mandatory if I declare net loss in F&O?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tax Audit is required if you declare net profit lower than 6% of turnover under Section 44AD AND your total annual taxable income exceeds the basic exemption limit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What expenses can be claimed against F&O trading turnover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can deduct STT (Securities Transaction Tax), exchange turnover fees, brokerage charges, GST, internet/broadband bills, trading software/charting subscriptions, and advisory fees as business expenses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is option selling premium treated in turnover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under revised ICAI guidelines, the premium received on the sale of options is added to the turnover computation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the penalty for not getting F&O tax audit done?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Failure to get accounts audited under Section 44AB attracts a penalty under Section 271B equal to 0.5% of total turnover or ₹1,50,000, whichever is lower."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-blue-200">
+    <div id="navbar"></div>
+    <script>
+        fetch("/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+                const menuBtn = document.getElementById("menuBtn");
+                const mobileMenu = document.getElementById("mobileMenu");
+                if(menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                    });
+                }
+            });
+    </script>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+            <ol class="flex list-none p-0">
+                <li class="flex items-center">
+                    <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="text-blue-600 font-bold">F&O Tax Audit Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">F&O Tax Audit Turnover <span class="text-blue-600">Calculator (2026)</span></h1>
+            <p class="text-lg text-slate-600 mb-6">
+                Calculate legal F&O trading turnover and check Section 44AB CA Tax Audit eligibility under 2026 Income Tax rules.
+            </p>
+        </div>
+
+        <!-- Calculator Interface -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+            
+            <!-- Inputs -->
+            <div class="lg:col-span-6 bg-white rounded-2xl p-6 md:p-8 card-shadow border border-slate-100 space-y-4">
+                <h2 class="text-xl font-bold text-slate-800 border-b pb-3">F&O Trading Summary Figures</h2>
+
+                <div>
+                    <label class="font-semibold text-slate-700 text-xs block mb-1">Sum of Absolute Profits (₹)</label>
+                    <input type="number" id="absProfitInput" value="1200000" min="0" step="50000" class="w-full p-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold">
+                </div>
+
+                <div>
+                    <label class="font-semibold text-slate-700 text-xs block mb-1">Sum of Absolute Losses (₹)</label>
+                    <input type="number" id="absLossInput" value="800000" min="0" step="50000" class="w-full p-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold">
+                </div>
+
+                <div>
+                    <label class="font-semibold text-slate-700 text-xs block mb-1">Total Option Premium Received on Sales (₹)</label>
+                    <input type="number" id="optPremiumInput" value="500000" min="0" step="25000" class="w-full p-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold">
+                </div>
+
+                <div>
+                    <label class="font-semibold text-slate-700 text-xs block mb-1">Total Deductible Trading Expenses (Brokerage/STT/GST) (₹)</label>
+                    <input type="number" id="expensesInput" value="150000" min="0" step="10000" class="w-full p-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold">
+                </div>
+            </div>
+
+            <!-- Output Display -->
+            <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+                
+                <div class="bg-blue-600 text-white rounded-2xl p-6 md:p-8 card-shadow">
+                    <p class="text-blue-100 text-xs font-bold uppercase tracking-wider mb-2">Calculated F&O Legal Turnover</p>
+                    <h3 class="text-4xl md:text-5xl font-black mb-4" id="turnoverVal">₹25,00,000</h3>
+                    
+                    <div class="border-t border-blue-500/50 pt-4 grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <p class="text-blue-200 text-xs">Net Realized F&O Profit/Loss</p>
+                            <p class="text-xl font-bold text-white mt-1" id="netProfitVal">+₹2,50,000</p>
+                        </div>
+                        <div>
+                            <p class="text-blue-200 text-xs">CA Tax Audit Status</p>
+                            <p class="text-xl font-bold text-emerald-300 mt-1" id="auditStatusVal">NOT REQUIRED</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-slate-100 space-y-3 text-sm">
+                    <h4 class="font-bold text-slate-800 border-b pb-2">Sec 44AD Presumptive & Audit Analysis</h4>
+                    <div class="flex justify-between text-xs">
+                        <span class="text-slate-600">Presumptive Net Income @ 6% (Sec 44AD)</span>
+                        <span class="font-bold text-slate-800" id="presumptiveVal">₹1,50,000</span>
+                    </div>
+                    <div class="flex justify-between text-xs border-t pt-2">
+                        <span class="text-slate-600">Declared Net Business Profit %</span>
+                        <span class="font-bold text-blue-600" id="profitPctVal">10.0% of Turnover</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content Section -->
+        <article class="bg-white rounded-2xl p-6 md:p-10 card-shadow border border-slate-100 mb-16 prose prose-slate max-w-none">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">ICAI Guidelines for F&O Turnover (2026)</h2>
+            <p>
+                In Futures & Options (F&O) trading, contract values are NOT used to calculate turnover. Under revised ICAI guidance notes:
+            </p>
+
+            <div class="my-6 overflow-x-auto not-prose">
+                <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden text-sm">
+                    <thead class="bg-slate-100">
+                        <tr>
+                            <th class="p-3.5 border-b font-bold text-slate-700">F&O Trade Type</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Turnover Contribution Rule</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 bg-white">
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">Futures Trades</td>
+                            <td class="p-3.5 text-slate-800">Sum of Absolute Positive Profits + Absolute Negative Losses</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">Options Trades</td>
+                            <td class="p-3.5 text-slate-800">Sum of Absolute Profits + Absolute Losses + Premium Received on Sale</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">Digital Audit Threshold</td>
+                            <td class="p-3.5 text-emerald-600 font-bold">₹10 Crores turnover (Sec 44AB digital 95% rule)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Key Benefits of Proper F&O Tax Filing</h3>
+            <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+                <li><strong>8-Year Loss Carry Forward:</strong> Non-speculative F&O losses can be carried forward for 8 consecutive years to set off against future business profits.</li>
+                <li><strong>Expense Deductions:</strong> Claim 100% deduction on brokerage, STT, software subscriptions, internet, and trading laptop depreciation.</li>
+            </ul>
+
+            <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Limitations & CA Audit Trigger Conditions (2026)</h3>
+            <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+                <li><strong>Sec 44AB Audit Trigger:</strong> CA audit is mandatory if turnover > ₹10 Crores OR if net profit is < 6% of turnover under Sec 44AD with income > basic exemption.</li>
+                <li><strong>No Salary Set-Off:</strong> F&O business losses CANNOT be adjusted against salaried income under Section 71.</li>
+            </ul>
+
+            <div class="mt-8 p-5 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl not-prose">
+                <h4 class="text-base font-bold text-blue-900 mb-1">F&O Filing Pro Tip</h4>
+                <p class="text-xs text-blue-800 leading-relaxed">
+                    Always file your ITR-3 before the July 31 due date. Late ITR filings revoke your statutory right to carry forward F&O business losses under Section 80!
+                </p>
+            </div>
+
+            <div class="mt-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl not-prose">
+                <h3 class="text-lg font-bold text-slate-800 mb-2">Explore Related Financial Tools & Calculators</h3>
+                <p class="text-xs text-slate-500 mb-4">Compare options across loan EMIs, tax savings, and compounding growth:</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-medium">
+                    <a href="/income-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Income Tax Tool</a>
+                    <a href="/44ad-presumptive-tax-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">44AD Presumptive Tax</a>
+                    <a href="/44ada-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">44ADA Calculator</a>
+                    <a href="/capital-gains-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Capital Gains Tax</a>
+                    <a href="/sip/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SIP Calculator</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- FAQs -->
+        <div class="mb-16" id="faqs">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How is F&O turnover calculated for Income Tax purposes?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Under ICAI tax audit guidelines, F&O Turnover = Sum of Absolute Positive Profits + Sum of Absolute Negative Losses + Premium Received on Sale of Options.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is the Tax Audit threshold under Section 44AB for F&O traders?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Mandatory Tax Audit by a Chartered Accountant is required under Section 44AB if digital turnover exceeds ₹10 Crores in a financial year (provided cash transactions are ≤ 5%).
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Can F&O losses be set off against salary income?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        No. F&O trading losses are treated as Non-Speculative Business Losses. They CANNOT be set off against Salary income, but can be set off against rental, dividend, interest, or capital gain income and carried forward for 8 financial years.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Is Section 44AD Presumptive Tax applicable to F&O trading?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Yes. F&O traders with turnover up to ₹3 Crores (if digital receipt rules met) can opt for Section 44AD, declaring 6% of turnover as presumptive net profit.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        When is Tax Audit mandatory if I declare net loss in F&O?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Tax Audit is required if you declare net profit lower than 6% of turnover under Section 44AD AND your total annual taxable income exceeds the basic exemption limit.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What expenses can be claimed against F&O trading turnover?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        You can deduct STT (Securities Transaction Tax), exchange turnover fees, brokerage charges, GST, internet/broadband bills, trading software/charting subscriptions, and advisory fees as business expenses.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How is option selling premium treated in turnover?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Under revised ICAI guidelines, the premium received on the sale of options is added to the turnover computation.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is the penalty for not getting F&O tax audit done?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Failure to get accounts audited under Section 44AB attracts a penalty under Section 271B equal to 0.5% of total turnover or ₹1,50,000, whichever is lower.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global JS Hooks for Linking & Search -->
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        const elements = {
+            absProfitInput: document.getElementById('absProfitInput'),
+            absLossInput: document.getElementById('absLossInput'),
+            optPremiumInput: document.getElementById('optPremiumInput'),
+            expensesInput: document.getElementById('expensesInput'),
+            
+            turnoverVal: document.getElementById('turnoverVal'),
+            netProfitVal: document.getElementById('netProfitVal'),
+            auditStatusVal: document.getElementById('auditStatusVal'),
+            presumptiveVal: document.getElementById('presumptiveVal'),
+            profitPctVal: document.getElementById('profitPctVal')
+        };
+
+        function formatIndian(val) {
+            const sign = val < 0 ? "-" : "";
+            return sign + "₹" + new Intl.NumberFormat('en-IN').format(Math.abs(Math.round(val)));
+        }
+
+        function calculateFoTurnover() {
+            const absProfit = parseFloat(elements.absProfitInput.value) || 0;
+            const absLoss = parseFloat(elements.absLossInput.value) || 0;
+            const optPremium = parseFloat(elements.optPremiumInput.value) || 0;
+            const expenses = parseFloat(elements.expensesInput.value) || 0;
+
+            const turnover = absProfit + absLoss + optPremium;
+            const netProfit = absProfit - absLoss - expenses;
+            const profitPct = turnover > 0 ? (netProfit / turnover) * 100 : 0;
+            const presumptiveNet = turnover * 0.06;
+
+            elements.turnoverVal.textContent = formatIndian(turnover);
+            elements.netProfitVal.textContent = formatIndian(netProfit);
+            elements.presumptiveVal.textContent = formatIndian(presumptiveNet);
+            elements.profitPctVal.textContent = profitPct.toFixed(1) + "% of Turnover";
+
+            // Audit Check: Turnover > 10 Cr OR (Profit < 6% AND Net Profit is negative/low)
+            let auditRequired = false;
+            let reason = "Not Required";
+
+            if (turnover > 100000000) {
+                auditRequired = true;
+                reason = "REQUIRED (Turnover > ₹10 Cr)";
+            } else if (profitPct < 6.0 && netProfit < 0) {
+                auditRequired = true;
+                reason = "REQUIRED (Net Loss < 6%)";
+            }
+
+            if (auditRequired) {
+                elements.auditStatusVal.textContent = reason;
+                elements.auditStatusVal.className = "text-xl font-bold text-rose-300 mt-1";
+            } else {
+                elements.auditStatusVal.textContent = "NOT REQUIRED (Exempt)";
+                elements.auditStatusVal.className = "text-xl font-bold text-emerald-300 mt-1";
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const inputs = [elements.absProfitInput, elements.absLossInput, elements.optPremiumInput, elements.expensesInput];
+            inputs.forEach(i => i.addEventListener('input', calculateFoTurnover));
+            
+            calculateFoTurnover();
+        });
+    </script>
+</body>
+</html>

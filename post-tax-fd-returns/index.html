@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post-Tax FD Returns Calculator: Calculate Actual Net Returns</title>
+    <meta name="description" content="Calculate your true post-tax Fixed Deposit (FD) returns. See exactly how much interest you take home after factoring in your income tax slab and TDS rules.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/post-tax-fd-returns/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Post-Tax FD Returns Calculator: Know Your Net Earnings">
+    <meta property="og:description" content="Calculate your true post-tax Fixed Deposit (FD) returns. See exactly how much interest you take home after factoring in your income tax slab.">
+    <meta property="og:url" content="https://arthcalculator.in/post-tax-fd-returns/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Post-Tax FD Returns Calculator: Calculate Actual Net Returns",
+      "url": "https://arthcalculator.in/post-tax-fd-returns/",
+      "description": "Calculate your true post-tax Fixed Deposit (FD) returns. See exactly how much interest you take home after factoring in your income tax slab and TDS rules.",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Post-Tax FD Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://arthcalculator.in/post-tax-fd-returns/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Post-Tax FD Calculator",
+        "item": "https://arthcalculator.in/post-tax-fd-returns/"
+      }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Fixed Deposit (FD) interest taxable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the interest earned on Fixed Deposits is fully taxable. It is added to your total income under the head 'Income from Other Sources' and taxed according to your applicable income tax slab rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the bank deduct TDS on FD interest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, banks deduct TDS (Tax Deducted at Source) at 10% if your total FD interest across all branches of the bank exceeds ₹40,000 in a financial year (₹50,000 for senior citizens). If you have not submitted your PAN, TDS is deducted at 20%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Form 15G and Form 15H?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Form 15G (for non-senior citizens) and Form 15H (for senior citizens) are self-declarations you can submit to the bank requesting them not to deduct TDS, provided your total income is below the basic exemption limit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I claim deduction on FD interest under Section 80TTA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Section 80TTA (which provides a deduction up to ₹10,000) is only for interest earned on Savings Bank accounts, not Fixed Deposits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do senior citizens get tax benefits on FD interest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, under Section 80TTB, senior citizens (aged 60 and above) can claim a tax deduction of up to ₹50,000 in a financial year on interest earned from deposits (including FDs and Savings accounts)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "If the bank deducts 10% TDS, do I still need to pay more tax?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, if you fall in the 20% or 30% tax slab. The bank only deducts 10% TDS. You must calculate your total tax liability, subtract the TDS already paid, and pay the remaining balance as advance tax or self-assessment tax."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is FD interest calculated in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most banks in India compound Fixed Deposit interest quarterly. This means interest is calculated and added to your principal four times a year, increasing your effective yield."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are tax-saving FDs completely tax-free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Tax-saving FDs (5-year lock-in) allow you to claim a deduction on the *principal* invested under Section 80C. However, the *interest* earned on them is still fully taxable just like a normal FD."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #ef4444; height: 6px; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+        .tier-btn { border: 2px solid #e2e8f0; color: #475569; background: #fff; transition: all 0.2s; font-weight: 600; padding: 0.5rem; border-radius: 0.5rem; }
+        .tier-btn.active { border-color: #ef4444; background: #ef4444; color: #fff; }
+        .tier-btn:hover:not(.active) { background: #fef2f2; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-red-200">
+    <div id="navbar"></div>
+    <script>
+        fetch("/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+                const menuBtn = document.getElementById("menuBtn");
+                const mobileMenu = document.getElementById("mobileMenu");
+                if(menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                    });
+                }
+            });
+    </script>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+    <ol class="flex list-none p-0">
+        <li class="flex items-center">
+            <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+            <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+        </li>
+        <li class="flex items-center">
+            <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+            <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+        </li>
+        <li class="text-blue-600 font-bold">Post-Tax FD Calculator</li>
+    </ol>
+</nav>
+
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Post-Tax Fixed Deposit <span class="text-blue-600">FD Return Calculator</span></h1>
+            <p class="text-lg text-slate-600 mb-6">
+                FD interest is fully taxable! Don't look at the headline rate. Calculate exactly how much interest you actually take home after factoring in your income tax slab.
+            </p>
+            <div class="flex flex-wrap justify-center gap-3 text-xs md:text-sm font-medium">
+                <span class="bg-red-50 text-red-700 px-3 py-1.5 rounded-full border border-red-100 flex items-center shadow-sm">
+                    <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Includes Section 80TTB
+                </span>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+            
+            <!-- Left: Inputs -->
+            <div class="lg:col-span-6 bg-white rounded-2xl p-6 md:p-8 card-shadow border border-slate-100">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl font-bold text-slate-800">FD Details</h2>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Deposit Amount -->
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <label class="font-semibold text-slate-700">Total Deposit Amount</label>
+                            <div class="relative">
+                                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
+                                <input type="number" id="principalInput" value="500000" min="10000" step="10000" class="w-32 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block p-2 pl-7 font-bold">
+                            </div>
+                        </div>
+                        <input type="range" id="principalRange" min="10000" max="5000000" step="10000" value="500000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                    </div>
+
+                    <!-- Interest Rate -->
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <label class="font-semibold text-slate-700">Bank Interest Rate (%)</label>
+                            <div class="relative">
+                                <input type="number" id="rateInput" value="7.0" min="3" max="12" step="0.1" class="w-24 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block p-2 pr-7 font-bold">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">%</span>
+                            </div>
+                        </div>
+                        <input type="range" id="rateRange" min="3" max="12" step="0.1" value="7.0" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                    </div>
+
+                    <!-- Tenure -->
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <label class="font-semibold text-slate-700">Tenure (Years)</label>
+                            <div class="relative">
+                                <input type="number" id="yearsInput" value="3" min="1" max="10" step="1" class="w-24 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block p-2 pr-8 font-bold">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium text-xs">Yrs</span>
+                            </div>
+                        </div>
+                        <input type="range" id="yearsRange" min="1" max="10" step="1" value="3" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                    </div>
+
+                    <!-- Taxation Profile -->
+                    <div class="pt-4 border-t border-slate-100">
+                        <h3 class="text-sm font-bold text-slate-800 mb-3 uppercase tracking-wide">Your Tax Profile</h3>
+                        
+                        <label class="font-semibold text-slate-700 block mb-2">Applicable Income Tax Slab</label>
+                        <div class="grid grid-cols-4 gap-2 mb-4" id="taxGroup">
+                            <button class="tier-btn" data-tax="0">0%</button>
+                            <button class="tier-btn" data-tax="10">10%</button>
+                            <button class="tier-btn" data-tax="20">20%</button>
+                            <button class="tier-btn active" data-tax="30">30%</button>
+                        </div>
+                        
+                        <label class="flex items-center space-x-3 cursor-pointer mt-4 bg-slate-50 p-3 rounded-lg border border-slate-200">
+                            <input type="checkbox" id="seniorCitizenCheck" class="w-5 h-5 text-red-600 border-gray-300 rounded focus:ring-red-500">
+                            <div>
+                                <span class="text-sm font-semibold text-slate-800 block">I am a Senior Citizen (60+ yrs)</span>
+                                <span class="text-xs text-slate-500">Applies Section 80TTB (₹50k tax-free limit)</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Results -->
+            <div class="lg:col-span-6 flex flex-col gap-6">
+                <!-- Highlight Result Card -->
+                <div class="bg-gradient-to-br from-red-600 to-rose-800 rounded-2xl p-6 md:p-8 card-shadow text-white relative overflow-hidden flex-grow">
+                    <div class="absolute -right-10 -top-10 w-40 h-40 bg-white opacity-10 rounded-full blur-2xl"></div>
+                    <div class="relative z-10 text-center">
+                        <p class="text-red-100 font-medium text-sm md:text-base mb-1 uppercase tracking-wider">True Post-Tax Returns (Net Interest)</p>
+                        <h3 class="text-5xl md:text-6xl font-bold mb-2 text-white" id="netInterestValue">₹0</h3>
+                        
+                        <div class="inline-block bg-white/20 px-3 py-1 rounded-full text-sm font-medium mb-6">
+                            Effective Rate: <span id="effectiveRateValue">0%</span>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4 border-t border-red-400/50 pt-5 text-left">
+                            <div>
+                                <p class="text-red-200 text-xs font-medium mb-1">Total Tax Paid to Govt.</p>
+                                <p class="text-xl font-bold" id="taxPaidValue">₹0</p>
+                            </div>
+                            <div>
+                                <p class="text-red-200 text-xs font-medium mb-1">Final Maturity in Bank</p>
+                                <p class="text-xl font-bold" id="maturityValue">₹0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-slate-100">
+                    <h3 class="text-sm font-bold text-slate-800 mb-4 uppercase">Calculation Breakdown</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between items-center pb-2 border-b border-slate-50">
+                            <span class="text-slate-600">Headline Pre-Tax Interest</span>
+                            <span class="font-bold text-slate-800" id="preTaxIntVal">₹0</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-2 border-b border-slate-50" id="exemptionRow">
+                            <span class="text-emerald-600">80TTB Tax-Free Exemption</span>
+                            <span class="font-bold text-emerald-600" id="exemptionVal">- ₹0</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-2 border-b border-slate-50">
+                            <span class="text-slate-600">Taxable Interest Amount</span>
+                            <span class="font-bold text-slate-800" id="taxableIntVal">₹0</span>
+                        </div>
+                        <div class="flex justify-between items-center text-red-600">
+                            <span class="font-medium">Income Tax Payable</span>
+                            <span class="font-bold" id="taxPayableVal">- ₹0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content Section -->
+        <article class="bg-white rounded-2xl p-6 md:p-10 card-shadow border border-slate-100 mb-16 prose prose-slate max-w-none">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">The Hidden Truth About FD Returns</h2>
+            <p>
+                When a bank advertises a 7% Fixed Deposit (FD) interest rate, that is the <strong>pre-tax (gross) rate</strong>. The actual return you take home can be significantly lower depending on the income tax bracket you fall under.
+            </p>
+            <p>
+                Unlike Equity Mutual Funds (which enjoy a lower 12.5% LTCG tax rate) or PPF (which is completely tax-free), <strong>FD interest is fully taxable</strong>. It is added to your total income for the year under the head "Income from Other Sources" and taxed at your marginal slab rate (which can be as high as 30%).
+            </p>
+
+            <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">TDS vs Actual Tax Liability</h3>
+            <p>There is a lot of confusion regarding TDS (Tax Deducted at Source) on Fixed Deposits.</p>
+            <ul class="list-disc pl-5 space-y-2 mb-6">
+                <li><strong>What the Bank Does:</strong> If your total interest across all FDs in a bank branch exceeds ₹40,000 in a year (₹50,000 for Senior Citizens), the bank will automatically deduct 10% TDS before crediting the interest.</li>
+                <li><strong>What You Must Do:</strong> If you are in the 30% tax slab, the bank's 10% deduction is not enough. You are legally required to calculate your total tax liability, subtract the 10% TDS already paid, and pay the remaining 20% to the government as advance tax or during ITR filing.</li>
+                <li><strong>Zero Tax Liability:</strong> If your total income is below the taxable limit, you can submit Form 15G (or Form 15H for seniors) to the bank, instructing them not to deduct the 10% TDS.</li>
+            </ul>
+
+            <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Special Relief for Senior Citizens (Section 80TTB)</h3>
+            <p>
+                To provide relief to retirees who rely on interest income, the Income Tax Act provides <strong>Section 80TTB</strong> exclusively for senior citizens (aged 60 and above).
+            </p>
+            <p>
+                Under 80TTB, a senior citizen can claim a deduction of up to <strong>₹50,000 per financial year</strong> on interest earned from all bank deposits (including both Fixed Deposits and Savings Accounts). This means the first ₹50,000 of interest earned every year is completely tax-free, and tax is only applied to the interest earned above this amount.
+            </p>
+            
+            <p class="text-sm text-slate-500 italic mt-6">*Note: This calculator assumes standard quarterly compounding for the FD (which is standard for Indian banks) and assumes the FD interest is taxed at maturity or accrued annually without cess/surcharge complexities for simplicity.*</p>
+        
+<div class="my-8 overflow-x-auto not-prose">
+    <h3 class="text-xl font-bold text-slate-800 mb-4">Key Characteristics & Comparison Overview</h3>
+    <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden text-sm">
+        <thead class="bg-slate-100">
+            <tr>
+                <th class="p-3.5 border-b font-bold text-slate-700">Feature / Parameter</th>
+                <th class="p-3.5 border-b font-bold text-slate-700">Details / Rules</th>
+                <th class="p-3.5 border-b font-bold text-slate-700">Tax Implications</th>
+            </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100 bg-white">
+            <tr>
+                <td class="p-3.5 font-medium text-slate-800">Primary Returns</td>
+                <td class="p-3.5 text-blue-600 font-semibold">Guaranteed / Market-Linked Growth</td>
+                <td class="p-3.5 text-slate-600">Taxable at Income Tax Slab Rates</td>
+            </tr>
+            <tr>
+                <td class="p-3.5 font-medium text-slate-800">Compounding / Payout</td>
+                <td class="p-3.5 text-slate-700">Quarterly / Annual Compounding</td>
+                <td class="p-3.5 text-slate-600">TDS deductions applicable where threshold met</td>
+            </tr>
+            <tr>
+                <td class="p-3.5 font-medium text-slate-800">Lock-in & Liquidity</td>
+                <td class="p-3.5 text-slate-700">Specified Tenure / Market Liquidity</td>
+                <td class="p-3.5 text-slate-600">Premature withdrawal penalties apply</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div class="mt-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl not-prose">
+    <h3 class="text-lg font-bold text-slate-800 mb-2">Explore Related Financial Tools & Calculators</h3>
+    <p class="text-xs text-slate-500 mb-4">Compare options across investments, tax savings, and compounding growth:</p>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-medium">
+        <a href="/sip/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SIP Calculator</a>
+        <a href="/fd/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">FD Calculator</a>
+        <a href="/ppf/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">PPF Calculator</a>
+        <a href="/cagr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">CAGR Calculator</a>
+        <a href="/xirr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">XIRR Calculator</a>
+        <a href="/income-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Income Tax Tool</a>
+        <a href="/capital-gains-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Capital Gains Tax</a>
+        <a href="/lumpsum/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Lumpsum Calculator</a>
+        <a href="/inflation/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Inflation Calculator</a>
+        <a href="/swp/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SWP Calculator</a>
+        <a href="/rd/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">RD Calculator</a>
+        <a href="/80c-tax-saving/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">80C Tax Saving</a>
+    </div>
+</div>
+
+</article>
+        
+        <!-- FAQs -->
+        <div class="mb-16">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-red-600 transition-colors">
+                        Is Fixed Deposit (FD) interest taxable?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Yes, the interest earned on Fixed Deposits is fully taxable. It is added to your total income under the head 'Income from Other Sources' and taxed according to your applicable income tax slab rate.
+                    </div>
+                </details>
+                
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-red-600 transition-colors">
+                        Does the bank deduct TDS on FD interest?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Yes, banks deduct TDS (Tax Deducted at Source) at 10% if your total FD interest across all branches of the bank exceeds ₹40,000 in a financial year (₹50,000 for senior citizens). If you have not submitted your PAN, TDS is deducted at 20%.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-red-600 transition-colors">
+                        What is Form 15G and Form 15H?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Form 15G (for non-senior citizens) and Form 15H (for senior citizens) are self-declarations you can submit to the bank requesting them not to deduct TDS, provided your total income is below the basic exemption limit.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-red-600 transition-colors">
+                        Can I claim deduction on FD interest under Section 80TTA?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        No. Section 80TTA (which provides a deduction up to ₹10,000) is only for interest earned on Savings Bank accounts, not Fixed Deposits. Regular citizens cannot claim 80TTA for FD interest.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-red-600 transition-colors">
+                        Do senior citizens get tax benefits on FD interest?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Yes, under Section 80TTB, senior citizens (aged 60 and above) can claim a tax deduction of up to ₹50,000 in a financial year on interest earned from deposits (including FDs and Savings accounts).
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-red-600 transition-colors">
+                        If the bank deducts 10% TDS, do I still need to pay more tax?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Yes, if you fall in the 20% or 30% tax slab. The bank only deducts 10% TDS. You must calculate your total tax liability, subtract the TDS already paid, and pay the remaining balance as advance tax or self-assessment tax.
+                    </div>
+                </details>
+        <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                What is Form 15G and Form 15H for FDs?
+                <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+            <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                Form 15G (for individuals under 60) and Form 15H (for senior citizens) are self-declaration forms submitted to banks to prevent TDS deduction if your total annual income is below the taxable threshold.
+            </div>
+        </details>
+        <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                How do I calculate my real post-tax FD return after inflation?
+                <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+            <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                Subtract the annual inflation rate from your net post-tax FD interest rate. If your post-tax return is 4.9% and inflation is 6%, your real purchasing power growth is -1.1%.
+            </div>
+        </details>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Global JS Hooks for Linking & Search -->
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        // Calculator Logic
+        const elements = {
+            prinInput: document.getElementById('principalInput'),
+            prinRange: document.getElementById('principalRange'),
+            rateInput: document.getElementById('rateInput'),
+            rateRange: document.getElementById('rateRange'),
+            yearsInput: document.getElementById('yearsInput'),
+            yearsRange: document.getElementById('yearsRange'),
+            
+            taxBtns: document.querySelectorAll('.tier-btn'),
+            seniorCheck: document.getElementById('seniorCitizenCheck'),
+            
+            netInterestVal: document.getElementById('netInterestValue'),
+            effectiveRateVal: document.getElementById('effectiveRateValue'),
+            taxPaidVal: document.getElementById('taxPaidValue'),
+            maturityVal: document.getElementById('maturityValue'),
+            
+            preTaxIntVal: document.getElementById('preTaxIntVal'),
+            exemptionRow: document.getElementById('exemptionRow'),
+            exemptionVal: document.getElementById('exemptionVal'),
+            taxableIntVal: document.getElementById('taxableIntVal'),
+            taxPayableVal: document.getElementById('taxPayableVal')
+        };
+
+        let currentTaxSlab = 30; // Default 30%
+
+        function formatIndian(val) {
+            return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+        }
+
+        function calculateReturns() {
+            let principal = parseFloat(elements.prinInput.value) || 0;
+            let rate = parseFloat(elements.rateInput.value) || 0;
+            let years = parseInt(elements.yearsInput.value) || 0;
+            
+            // Indian FDs typically compound quarterly
+            const compoundingFreq = 4; 
+            
+            // Pre-tax math
+            const preTaxMaturity = principal * Math.pow(1 + (rate / 100) / compoundingFreq, compoundingFreq * years);
+            const preTaxInterest = preTaxMaturity - principal;
+            
+            // Tax Logic
+            let isSenior = elements.seniorCheck.checked;
+            let exemptionLimit = isSenior ? 50000 : 0;
+            // Note: 80TTB is per year, but for simplicity of the calculator over the whole tenure, 
+            // we will approximate it by multiplying exemption by years (assuming interest accrues yearly).
+            let totalExemption = exemptionLimit * years; 
+            
+            let taxableInterest = Math.max(0, preTaxInterest - totalExemption);
+            
+            let taxPayable = taxableInterest * (currentTaxSlab / 100);
+            let postTaxInterest = preTaxInterest - taxPayable;
+            let postTaxMaturity = principal + postTaxInterest;
+            
+            // Annualized Effective Rate calculation
+            // A = P(1+r/100)^t => (A/P)^(1/t) - 1
+            let effectiveRate = (Math.pow(postTaxMaturity / principal, 1 / years) - 1) * 100;
+
+            // DOM Updates
+            elements.netInterestVal.textContent = formatIndian(postTaxInterest);
+            elements.effectiveRateVal.textContent = isNaN(effectiveRate) ? "0%" : effectiveRate.toFixed(2) + "% p.a.";
+            elements.taxPaidVal.textContent = formatIndian(taxPayable);
+            elements.maturityVal.textContent = formatIndian(postTaxMaturity);
+            
+            // Breakdown Updates
+            elements.preTaxIntVal.textContent = formatIndian(preTaxInterest);
+            
+            if(isSenior) {
+                elements.exemptionRow.style.display = "flex";
+                let utilizedExemption = Math.min(preTaxInterest, totalExemption);
+                elements.exemptionVal.textContent = "- " + formatIndian(utilizedExemption);
+            } else {
+                elements.exemptionRow.style.display = "none";
+            }
+            
+            elements.taxableIntVal.textContent = formatIndian(taxableInterest);
+            elements.taxPayableVal.textContent = "- " + formatIndian(taxPayable);
+        }
+
+        elements.taxBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                elements.taxBtns.forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                currentTaxSlab = parseInt(e.target.dataset.tax);
+                calculateReturns();
+            });
+        });
+        
+        elements.seniorCheck.addEventListener('change', calculateReturns);
+
+        function setupSync(input, range, triggerCalc) {
+            input.addEventListener('input', () => { 
+                range.value = input.value; 
+                if(triggerCalc) calculateReturns(); 
+            });
+            range.addEventListener('input', () => { 
+                input.value = range.value; 
+                if(triggerCalc) calculateReturns(); 
+            });
+            input.addEventListener('blur', () => {
+                let val = parseFloat(input.value) || 0;
+                let min = parseFloat(input.min);
+                if(val < min) val = min;
+                if(val > parseFloat(range.max)) range.max = val;
+                input.value = val;
+                range.value = val;
+                calculateReturns();
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.prinInput, elements.prinRange, true);
+            setupSync(elements.rateInput, elements.rateRange, true);
+            setupSync(elements.yearsInput, elements.yearsRange, true);
+            calculateReturns();
+        });
+    </script>
+</body>
+</html>

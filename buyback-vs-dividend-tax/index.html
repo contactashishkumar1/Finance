@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyback vs Dividend Tax Calculator (New Rules 2026)</title>
+    <meta name="description" content="Calculate the exact tax implications of participating in a stock buyback vs receiving a dividend under the new Income Tax rules (effective Oct 2026).">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/buyback-vs-dividend-tax/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Buyback vs Dividend Tax Calculator (New Rules)">
+    <meta property="og:description" content="Calculate the exact tax implications of participating in a stock buyback vs receiving a dividend.">
+    <meta property="og:url" content="https://arthcalculator.in/buyback-vs-dividend-tax/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Buyback vs Dividend Tax Calculator",
+      "url": "https://arthcalculator.in/buyback-vs-dividend-tax/",
+      "description": "Calculate the exact tax implications of participating in a stock buyback vs receiving a dividend under the new Income Tax rules (effective Oct 2026).",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Buyback Tax Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://arthcalculator.in/buyback-vs-dividend-tax/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Buyback vs Dividend Tax",
+        "item": "https://arthcalculator.in/buyback-vs-dividend-tax/"
+      }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What changed for Buybacks in Budget 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Effective October 1, 2026, the entire amount you receive in a buyback is taxed as 'Dividend Income' at your applicable income tax slab rate. Previously, the company paid a 23.29% tax and the amount was tax-free in the hands of the investor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the original cost of shares treated in a buyback now?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because the entire buyback amount is taxed as dividend, the original purchase price of those shares is treated as a Capital Loss. You can carry forward this loss and offset it against future capital gains."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it still beneficial to participate in buybacks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on your tax slab. If you are in the 30% slab, you will pay a heavy upfront tax. However, the capital loss generated can save you 12.5% (LTCG) or 20% (STCG) tax on other stock market profits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are dividends taxed differently now?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, dividends remain taxable at your slab rate. The major difference is that in a dividend payout, you retain ownership of your shares, whereas in a buyback, you surrender your shares."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I offset the buyback capital loss against salary income?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Capital losses can only be offset against capital gains (Short Term or Long Term depending on the holding period of the tendered shares)."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        .tier-btn { border: 2px solid #e2e8f0; color: #475569; background: #fff; transition: all 0.2s; font-weight: 600; padding: 0.5rem; border-radius: 0.5rem; }
+        .tier-btn.active { border-color: #2563eb; background: #2563eb; color: #fff; }
+        .tier-btn:hover:not(.active) { background: #eff6ff; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-blue-200">
+    <div id="navbar"></div>
+    <script>
+        fetch("/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+                const menuBtn = document.getElementById("menuBtn");
+                const mobileMenu = document.getElementById("mobileMenu");
+                if(menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                    });
+                }
+            });
+    </script>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+    <ol class="flex list-none p-0">
+        <li class="flex items-center">
+            <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+            <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+        </li>
+        <li class="flex items-center">
+            <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+            <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+        </li>
+        <li class="text-blue-600 font-bold">Buyback vs Dividend Tax</li>
+    </ol>
+</nav>
+
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block shadow-sm">Updated for Budget 2026 Rules</span>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Share Buyback vs Dividend <span class="text-blue-600">Tax Calculator (2026)</span></h1>
+            <p class="text-lg text-slate-600 mb-6">
+                Effective Oct 1, 2026, Buybacks are taxed heavily in the hands of the investor. Calculate the exact cash outflow and hidden capital loss benefits.
+            </p>
+        </div>
+
+        <!-- Configuration -->
+        <div class="bg-white rounded-2xl p-6 md:p-8 card-shadow border border-slate-100 mb-10 max-w-4xl mx-auto">
+            <h2 class="text-xl font-bold text-slate-800 mb-6 text-center border-b pb-2">Transaction Details</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="space-y-6">
+                    <!-- Shares -->
+                    <div>
+                        <label class="font-semibold text-slate-700 block mb-2">Number of Shares</label>
+                        <div class="relative">
+                            <input type="number" id="numShares" value="100" min="1" step="1" class="w-full text-right bg-slate-50 border border-slate-200 text-slate-800 rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-3 pr-4 font-bold text-lg">
+                        </div>
+                    </div>
+                    
+                    <!-- Offer Price -->
+                    <div>
+                        <label class="font-semibold text-slate-700 block mb-2">Corporate Offer Price / Share</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
+                            <input type="number" id="offerPrice" value="1000" min="1" step="1" class="w-full text-right bg-slate-50 border border-slate-200 text-slate-800 rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-3 pl-7 font-bold text-lg">
+                        </div>
+                        <p class="text-[10px] text-slate-500 mt-2">The buyback price OR the special dividend per share.</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Original Buy Price -->
+                    <div>
+                        <label class="font-semibold text-slate-700 block mb-2">Your Original Buy Price / Share</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
+                            <input type="number" id="buyPrice" value="600" min="1" step="1" class="w-full text-right bg-slate-50 border border-slate-200 text-slate-800 rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-3 pl-7 font-bold text-lg">
+                        </div>
+                    </div>
+
+                    <!-- Tax Slab -->
+                    <div>
+                        <label class="font-semibold text-slate-700 block mb-2">Your Income Tax Slab</label>
+                        <div class="grid grid-cols-3 gap-2" id="taxGroup">
+                            <button class="tier-btn" data-tax="10">10%</button>
+                            <button class="tier-btn" data-tax="20">20%</button>
+                            <button class="tier-btn active" data-tax="30">30%</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparison Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+            
+            <!-- Dividend Card -->
+            <div class="bg-white rounded-2xl border border-blue-200 card-shadow overflow-hidden flex flex-col">
+                <div class="bg-blue-600 p-4 text-center text-white">
+                    <h3 class="text-xl font-bold">If Given as Dividend</h3>
+                </div>
+                <div class="p-6 flex-grow flex flex-col">
+                    <div class="mb-6 flex-grow">
+                        <p class="text-sm text-slate-500 font-medium">Net Cash in Bank</p>
+                        <p class="text-4xl font-black text-slate-900 mt-1" id="divNet">₹0</p>
+                    </div>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between pb-2 border-b border-slate-100">
+                            <span class="text-slate-600">Gross Received</span>
+                            <span class="font-bold text-blue-600" id="divGross">₹0</span>
+                        </div>
+                        <div class="flex justify-between text-rose-600 pb-2 border-b border-slate-100">
+                            <span>Slab Tax Deducted</span>
+                            <span class="font-bold" id="divTax">- ₹0</span>
+                        </div>
+                        <div class="flex justify-between pt-2">
+                            <span class="text-slate-600">Shares Owned After</span>
+                            <span class="font-bold text-emerald-600" id="divShares">100 Shares</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-blue-100 text-xs text-blue-800 bg-blue-50 p-3 rounded-lg">
+                        <strong>Outcome:</strong> You receive the cash, pay slab rate tax, and still retain 100% of your shares.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buyback Card (New Rules) -->
+            <div class="bg-white rounded-2xl border border-blue-200 card-shadow overflow-hidden flex flex-col relative">
+                <div class="bg-blue-600 p-4 text-center text-white">
+                    <h3 class="text-xl font-bold">If Given as Buyback (Oct '24)</h3>
+                </div>
+                <div class="p-6 flex-grow flex flex-col">
+                    <div class="mb-6 flex-grow">
+                        <p class="text-sm text-slate-500 font-medium">Net Cash in Bank</p>
+                        <p class="text-4xl font-black text-slate-900 mt-1" id="bbNet">₹0</p>
+                    </div>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between pb-2 border-b border-slate-100">
+                            <span class="text-slate-600">Gross Received</span>
+                            <span class="font-bold text-blue-600" id="bbGross">₹0</span>
+                        </div>
+                        <div class="flex justify-between text-rose-600 pb-2 border-b border-slate-100">
+                            <span>Dividend Tax Deducted</span>
+                            <span class="font-bold" id="bbTax">- ₹0</span>
+                        </div>
+                        <div class="flex justify-between pt-2 pb-2 border-b border-slate-100">
+                            <span class="text-slate-600">Shares Owned After</span>
+                            <span class="font-bold text-rose-600">0 Shares (Destroyed)</span>
+                        </div>
+                        <div class="flex justify-between pt-2 bg-emerald-50 p-2 rounded">
+                            <span class="text-emerald-700 font-bold">Capital Loss Generated</span>
+                            <span class="font-bold text-emerald-600" id="bbLoss">₹0</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-blue-100 text-xs text-blue-800 bg-blue-50 p-3 rounded-lg">
+                        <strong>Hidden Benefit:</strong> You can carry forward the <span class="font-bold" id="bbLossText">₹0</span> loss to offset future STCG/LTCG taxes on other trades.
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Educational Content Section -->
+        <article class="bg-white rounded-2xl p-6 md:p-10 card-shadow border border-slate-100 mb-16 prose prose-slate max-w-none">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">Understanding the New Buyback Rules</h2>
+            <p>
+                In Budget 2026, the government fundamentally changed how share buybacks are taxed. Previously, the company paid a flat tax and the investor received the buyback amount completely tax-free. Now, the burden has been shifted entirely to the investor.
+            </p>
+
+            <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">How it works now:</h3>
+            <ol class="list-decimal pl-5 space-y-2 mb-6">
+                <li>When you surrender your shares in a buyback, the <strong>entire amount</strong> you receive from the company is considered "Dividend Income".</li>
+                <li>This dividend income is added to your total income and taxed at your applicable slab rate (e.g., 30%).</li>
+                <li>Because your shares were destroyed but you technically made "zero" capital gain, the income tax department allows you to treat your <strong>original purchase price</strong> of those shares as a Capital Loss.</li>
+            </ol>
+
+            <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Is Buyback better than Dividend?</h3>
+            <p>
+                As seen in the calculator, the upfront cash in your bank account is identical in both scenarios. You pay the exact same slab-rate tax. However, the Buyback gives you a <strong>Capital Loss certificate</strong> equal to your initial investment. You can use this loss to legally reduce taxes on your other stock market profits. 
+            </p>
+            <p class="bg-rose-50 p-4 rounded-lg text-rose-800 text-sm mt-4">
+                <strong>Warning:</strong> You lose your shares in a buyback. In a dividend, you keep your shares and continue to benefit from the company's future growth.
+            </p>
+        
+<div class="my-8 overflow-x-auto not-prose">
+    <h3 class="text-xl font-bold text-slate-800 mb-4">Key Characteristics & Comparison Overview</h3>
+    <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden text-sm">
+        <thead class="bg-slate-100">
+            <tr>
+                <th class="p-3.5 border-b font-bold text-slate-700">Feature / Parameter</th>
+                <th class="p-3.5 border-b font-bold text-slate-700">Details / Rules</th>
+                <th class="p-3.5 border-b font-bold text-slate-700">Tax Implications</th>
+            </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100 bg-white">
+            <tr>
+                <td class="p-3.5 font-medium text-slate-800">Primary Returns</td>
+                <td class="p-3.5 text-blue-600 font-semibold">Guaranteed / Market-Linked Growth</td>
+                <td class="p-3.5 text-slate-600">Taxable at Income Tax Slab Rates</td>
+            </tr>
+            <tr>
+                <td class="p-3.5 font-medium text-slate-800">Compounding / Payout</td>
+                <td class="p-3.5 text-slate-700">Quarterly / Annual Compounding</td>
+                <td class="p-3.5 text-slate-600">TDS deductions applicable where threshold met</td>
+            </tr>
+            <tr>
+                <td class="p-3.5 font-medium text-slate-800">Lock-in & Liquidity</td>
+                <td class="p-3.5 text-slate-700">Specified Tenure / Market Liquidity</td>
+                <td class="p-3.5 text-slate-600">Premature withdrawal penalties apply</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+            
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Share Buyback vs Dividend Tax Laws (2026 Finance Act Rules)</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>New Buyback Tax Rule:</strong> Buyback proceeds received by shareholders are treated as Deemed Dividend and taxed at individual income tax slab rates (up to 35.88%).</li>
+            <li><strong>Capital Loss Benefit:</strong> The original acquisition cost of buyback tender shares is allowed as a Capital Loss (STCL/LTCL) to set off against future capital gains.</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Dividend Taxation under Slab System</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Dividend Income:</strong> Dividend payouts are taxed at your marginal slab rate under Income from Other Sources. 10% TDS applies on dividends above ₹5,000.</li>
+            <li><strong>Promoter vs Retail Impact:</strong> High-tax slab investors face heavy tax on both buybacks and dividends, making capital appreciation reinvestment preferable.</li>
+        </ul>
+
+        <div class="mt-8 p-5 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl not-prose">
+            <h4 class="text-base font-bold text-blue-900 mb-1">Tax Optimization Strategy</h4>
+            <p class="text-xs text-blue-800 leading-relaxed">
+                Tendering shares in a buyback generates capital losses equal to your buy cost. Utilize these losses to set off LTCG/STCG from equity fund redemptions!
+            </p>
+        </div>
+
+            <div class="mt-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl not-prose">
+    <h3 class="text-lg font-bold text-slate-800 mb-2">Explore Related Financial Tools & Calculators</h3>
+    <p class="text-xs text-slate-500 mb-4">Compare options across investments, tax savings, and compounding growth:</p>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-medium">
+        <a href="/sip/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SIP Calculator</a>
+        <a href="/fd/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">FD Calculator</a>
+        <a href="/ppf/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">PPF Calculator</a>
+        <a href="/cagr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">CAGR Calculator</a>
+        <a href="/xirr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">XIRR Calculator</a>
+        <a href="/income-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Income Tax Tool</a>
+        <a href="/capital-gains-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Capital Gains Tax</a>
+        <a href="/lumpsum/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Lumpsum Calculator</a>
+        <a href="/inflation/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Inflation Calculator</a>
+        <a href="/swp/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SWP Calculator</a>
+        <a href="/rd/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">RD Calculator</a>
+        <a href="/80c-tax-saving/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">80C Tax Saving</a>
+    </div>
+</div>
+
+</article>
+
+    <div class="mb-16" id="faqs">
+    <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+    <div class="space-y-4 max-w-4xl mx-auto">
+        <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                How are share buybacks taxed after Budget 2026?
+                <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+            <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                Effective Oct 1, 2026, the entire buyback amount received is taxed as dividend income at your income tax slab rate.
+            </div>
+        </details>
+        <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                What happens to original share cost in a buyback?
+                <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+            <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                The original cost of acquisition is treated as a Capital Loss (STCL/LTCL) which can offset other capital gains.
+            </div>
+        </details>
+        <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                How are dividends taxed in India?
+                <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+            <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                Dividends are added to your total income and taxed at your applicable income tax slab rate under Income from Other Sources.
+            </div>
+        </details>
+        <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                Is TDS deducted on buyback payments?
+                <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+            <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                Yes, companies deduct TDS at 10% on payments exceeding specified threshold limits.
+            </div>
+        </details>
+        <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                Can capital loss from buybacks offset salary income?
+                <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+            <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                No, capital losses can only be offset against capital gains (Short-Term or Long-Term).
+            </div>
+        </details>
+        <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                Is buyback still better than dividend for retail investors?
+                <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+            <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                If you have capital gains from other stocks, the capital loss from buyback can reduce your overall tax bill.
+            </div>
+        </details>
+        <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                How long can buyback capital losses be carried forward?
+                <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+            <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                Capital losses can be carried forward for up to 8 assessment years if reported in your ITR.
+            </div>
+        </details>
+        <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                Where can I calculate my overall capital gains tax?
+                <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+            <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                Calculate your exact tax liability using our <a href='/capital-gains-tax/' class='text-blue-600 underline'>Capital Gains Tax Calculator</a>.
+            </div>
+        </details>
+    </div>
+</div>
+
+</main>
+
+    <!-- Global JS Hooks for Linking & Search -->
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        const elements = {
+            numShares: document.getElementById('numShares'),
+            offerPrice: document.getElementById('offerPrice'),
+            buyPrice: document.getElementById('buyPrice'),
+            taxBtns: document.querySelectorAll('.tier-btn'),
+            
+            divNet: document.getElementById('divNet'),
+            divGross: document.getElementById('divGross'),
+            divTax: document.getElementById('divTax'),
+            divShares: document.getElementById('divShares'),
+
+            bbNet: document.getElementById('bbNet'),
+            bbGross: document.getElementById('bbGross'),
+            bbTax: document.getElementById('bbTax'),
+            bbLoss: document.getElementById('bbLoss'),
+            bbLossText: document.getElementById('bbLossText')
+        };
+
+        let currentTaxSlab = 30; // Default
+
+        elements.taxBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                elements.taxBtns.forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                currentTaxSlab = parseInt(e.target.dataset.tax);
+                calculateTaxes();
+            });
+        });
+
+        function formatIndian(val) {
+            return "₹" + new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(val));
+        }
+
+        function calculateTaxes() {
+            const shares = parseFloat(elements.numShares.value) || 0;
+            const offer = parseFloat(elements.offerPrice.value) || 0;
+            const buy = parseFloat(elements.buyPrice.value) || 0;
+            const taxRate = currentTaxSlab / 100;
+
+            const gross = shares * offer;
+            const tax = gross * taxRate;
+            const net = gross - tax;
+            const capitalLoss = shares * buy;
+
+            // Dividend Updates
+            elements.divGross.textContent = formatIndian(gross);
+            elements.divTax.textContent = "- " + formatIndian(tax);
+            elements.divNet.textContent = formatIndian(net);
+            elements.divShares.textContent = shares + " Shares";
+
+            // Buyback Updates
+            elements.bbGross.textContent = formatIndian(gross);
+            elements.bbTax.textContent = "- " + formatIndian(tax);
+            elements.bbNet.textContent = formatIndian(net);
+            elements.bbLoss.textContent = formatIndian(capitalLoss);
+            elements.bbLossText.textContent = formatIndian(capitalLoss);
+        }
+
+        elements.numShares.addEventListener('input', calculateTaxes);
+        elements.offerPrice.addEventListener('input', calculateTaxes);
+        elements.buyPrice.addEventListener('input', calculateTaxes);
+
+        window.addEventListener('DOMContentLoaded', calculateTaxes);
+    </script>
+</body>
+</html>

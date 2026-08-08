@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Wheeler Loan EMI Calculator (2026) – Bike & Scooter EMI</title>
+    <meta name="description" content="Calculate monthly EMI, interest outgo, down payment, and processing fees for bike and scooter loans in India for 2026.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/two-wheeler-loan-emi/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Two-Wheeler Loan EMI Calculator (2026)">
+    <meta property="og:description" content="Calculate monthly EMI, down payment, and interest for bike loans in India.">
+    <meta property="og:url" content="https://arthcalculator.in/two-wheeler-loan-emi/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Two-Wheeler Loan EMI Calculator",
+      "url": "https://arthcalculator.in/two-wheeler-loan-emi/",
+      "description": "Calculate monthly EMI, down payment, and interest for bike loans in India.",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Two-Wheeler Loan EMI Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://arthcalculator.in/two-wheeler-loan-emi/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Bike Loan EMI",
+        "item": "https://arthcalculator.in/two-wheeler-loan-emi/"
+      }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the average interest rate for two-wheeler loans in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Two-wheeler loan interest rates typically range from 9.5% to 18% per annum depending on lender, credit score, and income profile."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much down payment is required for a bike loan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most banks fund 80% to 95% of the bike's on-road price. Minimum down payment is usually 5% to 20% of the vehicle cost."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the maximum tenure for a two-wheeler loan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The maximum repayment tenure for bike and scooter loans is generally 3 to 5 years (36 to 60 months)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What processing fee is charged on bike loans?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lenders charge a processing fee of 1% to 3% of the loan amount plus GST."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is two-wheeler loan EMI calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "EMI = P * r * (1+r)^n / ((1+r)^n - 1), where P is Loan Principal, r is Monthly Interest Rate, and n is Tenure in months."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I prepay a two-wheeler loan early?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, prepayment is allowed after completing 3 to 6 months of EMIs, subject to lender prepayment charges (typically 2% to 5%)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is CIBIL score required for a bike loan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, a CIBIL score of 700+ helps secure lower interest rates, though some lenders offer loans to first-time borrowers with zero credit history."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the loan cover on-road price or ex-showroom price?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Many major lenders offer up to 95% LTV on the On-Road Price (including RTO registration and insurance)."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-blue-200">
+    <div id="navbar"></div>
+    <script>
+        fetch("/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+                const menuBtn = document.getElementById("menuBtn");
+                const mobileMenu = document.getElementById("mobileMenu");
+                if(menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                    });
+                }
+            });
+    </script>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+            <ol class="flex list-none p-0">
+                <li class="flex items-center">
+                    <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="text-blue-600 font-bold">Bike Loan EMI</li>
+            </ol>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Two-Wheeler Loan EMI <span class="text-blue-600">Calculator (2026)</span></h1>
+            <p class="text-lg text-slate-600 mb-6">
+                Calculate monthly EMI, down payment, and interest for bike & scooter purchases in India.
+            </p>
+        </div>
+
+        <!-- Calculator Interface -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+            
+            <!-- Inputs -->
+            <div class="lg:col-span-6 bg-white rounded-2xl p-6 md:p-8 card-shadow border border-slate-100 space-y-6">
+                <h2 class="text-xl font-bold text-slate-800 border-b pb-3">Bike & Loan Details</h2>
+
+                <!-- Bike On-Road Price -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">On-Road Bike Price</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
+                            <input type="number" id="priceInput" value="120000" min="40000" step="5000" class="w-36 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                        </div>
+                    </div>
+                    <input type="range" id="priceRange" min="40000" max="500000" step="5000" value="120000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <!-- Down Payment -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Down Payment Amount</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
+                            <input type="number" id="downInput" value="20000" min="0" step="2000" class="w-36 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                        </div>
+                    </div>
+                    <input type="range" id="downRange" min="0" max="300000" step="2000" value="20000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <!-- Interest Rate -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Interest Rate (p.a.)</label>
+                        <div class="relative">
+                            <input type="number" id="rateInput" value="11.5" min="8" max="24" step="0.5" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-7 font-bold">
+                            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">%</span>
+                        </div>
+                    </div>
+                    <input type="range" id="rateRange" min="8" max="24" step="0.5" value="11.5" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <!-- Loan Tenure -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Loan Tenure</label>
+                        <div class="relative">
+                            <input type="number" id="tenureMonthsInput" value="36" min="6" max="60" step="6" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-10 font-bold">
+                            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium text-xs">Months</span>
+                        </div>
+                    </div>
+                    <input type="range" id="tenureMonthsRange" min="6" max="60" step="6" value="36" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+            </div>
+
+            <!-- Output Display -->
+            <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+                
+                <div class="bg-blue-600 text-white rounded-2xl p-6 md:p-8 card-shadow">
+                    <p class="text-blue-100 text-xs font-bold uppercase tracking-wider mb-2">Monthly Bike EMI</p>
+                    <h3 class="text-4xl md:text-5xl font-black mb-4" id="monthlyEmiVal">₹0</h3>
+                    
+                    <div class="border-t border-blue-500/50 pt-4 grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <p class="text-blue-200 text-xs">Net Loan Amount</p>
+                            <p class="text-xl font-bold text-white mt-1" id="netLoanVal">₹0</p>
+                        </div>
+                        <div>
+                            <p class="text-blue-200 text-xs">Total Interest Payable</p>
+                            <p class="text-xl font-bold text-blue-200 mt-1" id="totalInterestVal">₹0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-slate-100 space-y-3 text-sm">
+                    <h4 class="font-bold text-slate-800 border-b pb-2">Total Financial Outflow Breakdown</h4>
+                    <div class="flex justify-between">
+                        <span class="text-slate-600">Down Payment Paid</span>
+                        <span class="font-bold text-slate-800" id="downPaymentDisp">₹0</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-600">Total EMIs Paid ({tenure} mos)</span>
+                        <span class="font-bold text-slate-800" id="totalEmisDisp">₹0</span>
+                    </div>
+                    <div class="flex justify-between border-t pt-2">
+                        <span class="font-bold text-slate-800">Total Cost of Vehicle</span>
+                        <span class="font-black text-blue-600 text-base" id="totalCostDisp">₹0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content Section -->
+        <article class="bg-white rounded-2xl p-6 md:p-10 card-shadow border border-slate-100 mb-16 prose prose-slate max-w-none">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">Two-Wheeler Loan Interest Rates & Slabs (2026)</h2>
+            <p>
+                Two-wheeler loans enable quick purchase of motorcycles and scooters with flexible EMI tenures ranging from 12 to 60 months.
+            </p>
+
+            <div class="my-6 overflow-x-auto not-prose">
+                <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden text-sm">
+                    <thead class="bg-slate-100">
+                        <tr>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Lender Category</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Interest Rate (p.a.)</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Processing Fee</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 bg-white">
+                        <tr>
+                            <td class="p-3.5 font-medium text-slate-800">Public Sector Banks (SBI, PNB)</td>
+                            <td class="p-3.5 text-blue-600 font-semibold">9.5% - 12.5%</td>
+                            <td class="p-3.5 text-slate-600">0.5% - 1.5%</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-medium text-slate-800">Private Banks (HDFC, ICICI, Axis)</td>
+                            <td class="p-3.5 text-slate-700">10.5% - 16.0%</td>
+                            <td class="p-3.5 text-slate-600">1.5% - 2.5%</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-medium text-slate-800">NBFCs (TVS Credit, Bajaj Finance)</td>
+                            <td class="p-3.5 text-slate-700">13.0% - 20.0%</td>
+                            <td class="p-3.5 text-slate-600">2.0% - 3.5%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            
+            
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Two-Wheeler Loan EMI & Down Payment Math</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>On-Road Price Coverage:</strong> Banks finance up to 85-95% of the bike's on-road price (ex-showroom + RTO registration + insurance).</li>
+            <li><strong>Flat vs Reducing Interest Warning:</strong> Dealership financing often quotes flat interest rates (e.g. 7% flat), which actually equals 13-14% reducing EMI rates.</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Short Tenure (2-3 Years) Optimization</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Tenure Recommendation:</strong> Keep bike loan tenure strictly between 24 and 36 months to avoid paying excess interest on a depreciating asset.</li>
+            <li><strong>Hypothecation Removal:</strong> Clear loan hypothecation from RTO RC smartcard upon final EMI closure.</li>
+        </ul>
+
+        <div class="mt-8 p-5 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl not-prose">
+            <h4 class="text-base font-bold text-blue-900 mb-1">Bike Loan Pro Tip</h4>
+            <p class="text-xs text-blue-800 leading-relaxed">
+                Pay a higher down payment (30-40%) to reduce monthly EMI and negotiate zero processing fee waivers directly with bank representatives before dealership sign-off.
+            </p>
+        </div>
+
+            <div class="mt-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl not-prose">
+                <h3 class="text-lg font-bold text-slate-800 mb-2">Explore Related Financial Tools & Calculators</h3>
+                <p class="text-xs text-slate-500 mb-4">Compare options across loan EMIs, tax savings, and compounding growth:</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-medium">
+                    <a href="/car-loan/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Car Loan EMI</a>
+                    <a href="/personal-loan-emi/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Personal Loan EMI</a>
+                    <a href="/cibil-score-simulator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">CIBIL Simulator</a>
+                    <a href="/home-loan/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Home Loan EMI</a>
+                    <a href="/loan-prepayment/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Loan Prepayment</a>
+                    <a href="/sip/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SIP Calculator</a>
+                    <a href="/income-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Income Tax Tool</a>
+                    <a href="/capital-gains-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Capital Gains Tax</a>
+                    <a href="/lumpsum/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Lumpsum Calculator</a>
+                    <a href="/inflation/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Inflation Calculator</a>
+                    <a href="/cagr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">CAGR Calculator</a>
+                    <a href="/80c-tax-saving/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">80C Tax Saving</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- FAQs -->
+        <div class="mb-16" id="faqs">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is the average interest rate for two-wheeler loans in India?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Two-wheeler loan interest rates typically range from 9.5% to 18% per annum depending on lender, credit score, and income profile.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How much down payment is required for a bike loan?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Most banks fund 80% to 95% of the bike's on-road price. Minimum down payment is usually 5% to 20% of the vehicle cost.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is the maximum tenure for a two-wheeler loan?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        The maximum repayment tenure for bike and scooter loans is generally 3 to 5 years (36 to 60 months).
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What processing fee is charged on bike loans?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Lenders charge a processing fee of 1% to 3% of the loan amount plus GST.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How is two-wheeler loan EMI calculated?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        EMI = P * r * (1+r)^n / ((1+r)^n - 1), where P is Loan Principal, r is Monthly Interest Rate, and n is Tenure in months.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Can I prepay a two-wheeler loan early?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Yes, prepayment is allowed after completing 3 to 6 months of EMIs, subject to lender prepayment charges (typically 2% to 5%).
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Is CIBIL score required for a bike loan?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Yes, a CIBIL score of 700+ helps secure lower interest rates, though some lenders offer loans to first-time borrowers with zero credit history.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Does the loan cover on-road price or ex-showroom price?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Many major lenders offer up to 95% LTV on the On-Road Price (including RTO registration and insurance).
+                    </div>
+                </details>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global JS Hooks for Linking & Search -->
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        const elements = {
+            priceInput: document.getElementById('priceInput'),
+            priceRange: document.getElementById('priceRange'),
+            downInput: document.getElementById('downInput'),
+            downRange: document.getElementById('downRange'),
+            rateInput: document.getElementById('rateInput'),
+            rateRange: document.getElementById('rateRange'),
+            tenureMonthsInput: document.getElementById('tenureMonthsInput'),
+            tenureMonthsRange: document.getElementById('tenureMonthsRange'),
+            
+            monthlyEmiVal: document.getElementById('monthlyEmiVal'),
+            netLoanVal: document.getElementById('netLoanVal'),
+            totalInterestVal: document.getElementById('totalInterestVal'),
+            downPaymentDisp: document.getElementById('downPaymentDisp'),
+            totalEmisDisp: document.getElementById('totalEmisDisp'),
+            totalCostDisp: document.getElementById('totalCostDisp')
+        };
+
+        function formatIndian(val) {
+            return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+        }
+
+        function calculateBikeEmi() {
+            let price = parseFloat(elements.priceInput.value) || 0;
+            let down = parseFloat(elements.downInput.value) || 0;
+            
+            if (down >= price) {
+                down = price * 0.9;
+                elements.downInput.value = down;
+                elements.downRange.value = down;
+            }
+
+            const netLoan = Math.max(0, price - down);
+            const rate = parseFloat(elements.rateInput.value) || 0;
+            const months = parseInt(elements.tenureMonthsInput.value) || 12;
+
+            let emi = 0;
+            let totalInterest = 0;
+
+            if (netLoan > 0 && rate > 0 && months > 0) {
+                const r = rate / 12 / 100;
+                emi = netLoan * r * (Math.pow(1 + r, months) / (Math.pow(1 + r, months) - 1));
+                const totalEmisSum = emi * months;
+                totalInterest = Math.max(0, totalEmisSum - netLoan);
+            }
+
+            const totalOutflow = down + (emi * months);
+
+            elements.monthlyEmiVal.textContent = formatIndian(emi);
+            elements.netLoanVal.textContent = formatIndian(netLoan);
+            elements.totalInterestVal.textContent = formatIndian(totalInterest);
+            
+            elements.downPaymentDisp.textContent = formatIndian(down);
+            elements.totalEmisDisp.textContent = formatIndian(emi * months);
+            elements.totalCostDisp.textContent = formatIndian(totalOutflow);
+        }
+
+        function setupSync(input, range) {
+            input.addEventListener('input', () => { range.value = input.value; calculateBikeEmi(); });
+            range.addEventListener('input', () => { input.value = range.value; calculateBikeEmi(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.priceInput, elements.priceRange);
+            setupSync(elements.downInput, elements.downRange);
+            setupSync(elements.rateInput, elements.rateRange);
+            setupSync(elements.tenureMonthsInput, elements.tenureMonthsRange);
+            
+            calculateBikeEmi();
+        });
+    </script>
+</body>
+</html>

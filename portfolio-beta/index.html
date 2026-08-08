@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Beta Calculator: Measure Your Stock Market Risk</title>
+    <meta name="description" content="Calculate the overall Beta (volatility) of your stock or mutual fund portfolio compared to the benchmark index like Nifty 50.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/portfolio-beta/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Portfolio Beta Calculator: Measure Your Stock Market Risk">
+    <meta property="og:description" content="Calculate the overall Beta of your stock or mutual fund portfolio compared to the benchmark index.">
+    <meta property="og:url" content="https://arthcalculator.in/portfolio-beta/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Portfolio Beta Calculator",
+      "url": "https://arthcalculator.in/portfolio-beta/",
+      "description": "Calculate the overall Beta (volatility) of your stock or mutual fund portfolio compared to the benchmark index like Nifty 50.",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Portfolio Beta Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://arthcalculator.in/portfolio-beta/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Portfolio Beta",
+        "item": "https://arthcalculator.in/portfolio-beta/"
+      }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Beta in the stock market?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Beta is a measure of a stock's volatility in relation to the overall market (like the Nifty 50 or Sensex). The market itself has a beta of exactly 1.0."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a Beta greater than 1 mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A beta greater than 1 means the stock is more volatile than the market. For example, if a stock has a beta of 1.5, it is expected to rise 15% when the market rises 10%, but it will also fall 15% if the market falls 10%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a Beta less than 1 mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A beta less than 1 means the stock is less volatile than the market. Defensive stocks like FMCG (e.g., ITC, HUL) often have betas around 0.5 to 0.8. They won't grow as fast during bull runs, but they won't crash as hard during bear markets."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Portfolio Beta calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Portfolio beta is the weighted average of the betas of the individual stocks in the portfolio. You multiply each stock's beta by its percentage weight in your total portfolio, and sum them all up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a stock have a negative Beta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, a negative beta means the stock moves inversely to the market. Gold often exhibits a zero or slightly negative beta, making it a good hedge against market crashes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a high beta portfolio good or bad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on your strategy. A high beta portfolio (> 1.2) is aggressive and aims for maximum growth during bull markets. A low beta portfolio (< 0.9) is conservative and prioritizes capital preservation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I find the beta of a stock?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can find the beta of Indian stocks on financial portals like Moneycontrol, Screener.in, Yahoo Finance, or the NSE website under the stock's technical/historical data section."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Beta guarantee future performance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Beta is calculated based on historical price movements. A company's future volatility can change based on its earnings, management, or macroeconomic factors."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-blue-200">
+    <div id="navbar"></div>
+    <script>
+        fetch("/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+                const menuBtn = document.getElementById("menuBtn");
+                const mobileMenu = document.getElementById("mobileMenu");
+                if(menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                    });
+                }
+            });
+    </script>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+    <ol class="flex list-none p-0">
+        <li class="flex items-center">
+            <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+            <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+        </li>
+        <li class="flex items-center">
+            <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+            <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+        </li>
+        <li class="text-blue-600 font-bold">Portfolio Beta Calculator</li>
+    </ol>
+</nav>
+
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Portfolio Beta Volatility <span class="text-blue-600">Calculator</span></h1>
+            <p class="text-lg text-slate-600 mb-6">
+                Calculate the overall volatility risk of your stock portfolio. Find out if your investments are riskier or safer than the overall market.
+            </p>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+            
+            <!-- Left: Inputs -->
+            <div class="lg:col-span-8 bg-white rounded-2xl p-6 md:p-8 card-shadow border border-slate-100">
+                <div class="flex justify-between items-center mb-6 border-b border-slate-100 pb-4">
+                    <h2 class="text-xl font-bold text-slate-800">Your Holdings</h2>
+                    <button id="addStockBtn" class="bg-blue-100 text-blue-700 hover:bg-blue-200 px-4 py-2 rounded-lg text-sm font-bold transition-colors flex items-center">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                        Add Stock
+                    </button>
+                </div>
+
+                <!-- Headers -->
+                <div class="grid grid-cols-12 gap-4 mb-2 text-xs font-bold text-slate-400 uppercase tracking-wider px-2 hidden sm:grid">
+                    <div class="col-span-4">Asset Name</div>
+                    <div class="col-span-4">Invested Amount (₹)</div>
+                    <div class="col-span-3">Individual Beta</div>
+                    <div class="col-span-1 text-center">Del</div>
+                </div>
+
+                <div id="holdingsList" class="space-y-4">
+                    <!-- JavaScript will populate rows here -->
+                </div>
+                
+                <div class="mt-8 pt-4 border-t border-slate-100 flex justify-between items-center">
+                    <span class="text-slate-600 font-semibold">Total Portfolio Value:</span>
+                    <span class="text-xl font-black text-slate-900" id="totalValueDisp">₹0</span>
+                </div>
+            </div>
+
+            <!-- Right: Results -->
+            <div class="lg:col-span-4 flex flex-col gap-6">
+                <!-- Highlight Result Card -->
+                <div class="bg-slate-900 rounded-2xl p-6 md:p-8 card-shadow text-white relative overflow-hidden flex-grow flex flex-col justify-center border border-slate-700">
+                    <div class="absolute -right-10 -top-10 w-40 h-40 bg-blue-500 opacity-20 rounded-full blur-3xl"></div>
+                    <div class="relative z-10 text-center">
+                        <p class="text-slate-400 font-medium text-xs md:text-sm mb-2 uppercase tracking-wider">Overall Portfolio Beta</p>
+                        <h3 class="text-6xl md:text-7xl font-black mb-4 text-white" id="portfolioBetaVal">0.00</h3>
+                        
+                        <div id="betaBadge" class="inline-block px-4 py-2 rounded-lg border font-bold text-sm">
+                            Neutral
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-slate-100">
+                    <h3 class="text-sm font-bold text-slate-800 mb-4 uppercase text-center border-b pb-2">What does this mean?</h3>
+                    <p class="text-sm text-slate-600 mb-4 text-center" id="betaExplanation">
+                        Your portfolio moves exactly in line with the broader market.
+                    </p>
+                    
+                    <div class="space-y-3 text-xs bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <div class="flex justify-between items-center pb-2 border-b border-slate-200">
+                            <span class="font-bold text-emerald-600">&lt; 0.9</span>
+                            <span class="text-slate-600">Conservative (Low Volatility)</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-2 border-b border-slate-200">
+                            <span class="font-bold text-blue-600">0.9 to 1.1</span>
+                            <span class="text-slate-600">Neutral (Market Like)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-rose-600">&gt; 1.1</span>
+                            <span class="text-slate-600">Aggressive (High Volatility)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content Section -->
+        <article class="bg-white rounded-2xl p-6 md:p-10 card-shadow border border-slate-100 mb-16 prose prose-slate max-w-none">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">Understanding Portfolio Beta</h2>
+            <p>
+                In finance, <strong>Beta (β)</strong> is a measure of the volatility or systematic risk of a security or a portfolio in comparison to the entire market. The benchmark market index (like the Nifty 50) always has a beta of exactly 1.0.
+            </p>
+
+            <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">How to interpret your score:</h3>
+            <ul class="list-disc pl-5 space-y-4 mb-6">
+                <li>
+                    <strong>Beta = 1.0:</strong> Your portfolio is strongly correlated with the market. If Nifty rises by 10%, your portfolio should theoretically rise by 10%.
+                </li>
+                <li>
+                    <strong>Beta = 1.5 (Aggressive):</strong> Your portfolio is 50% more volatile than the market. If Nifty crashes by 10%, your portfolio is expected to crash by 15%. However, in a bull run, you will make significantly more profits than the index. (Common for Mid/Small Cap portfolios).
+                </li>
+                <li>
+                    <strong>Beta = 0.7 (Conservative):</strong> Your portfolio is 30% less volatile than the market. If Nifty crashes by 10%, your portfolio might only fall by 7%. You sacrifice extreme growth for stability. (Common for FMCG, IT, and large-cap heavy portfolios).
+                </li>
+                <li>
+                    <strong>Negative Beta:</strong> Your portfolio moves in the opposite direction of the market. Gold and inverse ETFs are typical examples.
+                </li>
+            </ul>
+
+            <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Should you aim for a specific Beta?</h3>
+            <p>
+                There is no "perfect" beta. It entirely depends on your age, risk tolerance, and investment horizon. A 25-year-old investor can afford a high-beta aggressive portfolio to maximize growth. A 60-year-old retiree should aim for a low-beta portfolio (0.6 - 0.8) to preserve capital and ensure stable dividends.
+            </p>
+        
+<div class="my-8 overflow-x-auto not-prose">
+    <h3 class="text-xl font-bold text-slate-800 mb-4">Key Characteristics & Comparison Overview</h3>
+    <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden text-sm">
+        <thead class="bg-slate-100">
+            <tr>
+                <th class="p-3.5 border-b font-bold text-slate-700">Feature / Parameter</th>
+                <th class="p-3.5 border-b font-bold text-slate-700">Details / Rules</th>
+                <th class="p-3.5 border-b font-bold text-slate-700">Tax Implications</th>
+            </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100 bg-white">
+            <tr>
+                <td class="p-3.5 font-medium text-slate-800">Primary Returns</td>
+                <td class="p-3.5 text-blue-600 font-semibold">Guaranteed / Market-Linked Growth</td>
+                <td class="p-3.5 text-slate-600">Taxable at Income Tax Slab Rates</td>
+            </tr>
+            <tr>
+                <td class="p-3.5 font-medium text-slate-800">Compounding / Payout</td>
+                <td class="p-3.5 text-slate-700">Quarterly / Annual Compounding</td>
+                <td class="p-3.5 text-slate-600">TDS deductions applicable where threshold met</td>
+            </tr>
+            <tr>
+                <td class="p-3.5 font-medium text-slate-800">Lock-in & Liquidity</td>
+                <td class="p-3.5 text-slate-700">Specified Tenure / Market Liquidity</td>
+                <td class="p-3.5 text-slate-600">Premature withdrawal penalties apply</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+            
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Understanding Stock & Portfolio Beta (Volatility Risk)</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Beta = 1.0 (Market Parity):</strong> Portfolio moves in exact tandem with Nifty 50 or Sensex benchmark.</li>
+            <li><strong>High Beta (> 1.2):</strong> Aggressive growth stocks (e.g. Small-caps, Tech) that rise faster in bull markets but crash harder during corrections.</li>
+            <li><strong>Low Beta (< 0.8):</strong> Defensive stocks (FMCG, Pharma, Utilities) providing downside portfolio protection during market panics.</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Weighted Portfolio Beta Calculation & Hedging</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Formula:</strong> Weighted Beta = Sum of (Individual Stock Beta * Stock Portfolio Weight %).</li>
+            <li><strong>Market Hedging:</strong> Balance high-beta momentum stocks with low-beta dividend aristocrats to keep overall portfolio beta around 0.9 - 1.0.</li>
+        </ul>
+
+        <div class="mt-8 p-5 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl not-prose">
+            <h4 class="text-base font-bold text-blue-900 mb-1">Beta Risk Insight</h4>
+            <p class="text-xs text-blue-800 leading-relaxed">
+                A portfolio with Beta of 1.4 will theoretically surge 28% when Nifty rises 20%, but will plummet 28% when Nifty falls 20%. Adjust beta based on your age and risk tolerance.
+            </p>
+        </div>
+
+            <div class="mt-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl not-prose">
+    <h3 class="text-lg font-bold text-slate-800 mb-2">Explore Related Financial Tools & Calculators</h3>
+    <p class="text-xs text-slate-500 mb-4">Compare options across investments, tax savings, and compounding growth:</p>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-medium">
+        <a href="/sip/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SIP Calculator</a>
+        <a href="/fd/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">FD Calculator</a>
+        <a href="/ppf/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">PPF Calculator</a>
+        <a href="/cagr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">CAGR Calculator</a>
+        <a href="/xirr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">XIRR Calculator</a>
+        <a href="/income-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Income Tax Tool</a>
+        <a href="/capital-gains-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Capital Gains Tax</a>
+        <a href="/lumpsum/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Lumpsum Calculator</a>
+        <a href="/inflation/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Inflation Calculator</a>
+        <a href="/swp/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SWP Calculator</a>
+        <a href="/rd/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">RD Calculator</a>
+        <a href="/80c-tax-saving/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">80C Tax Saving</a>
+    </div>
+</div>
+
+</article>
+        
+        <!-- FAQs -->
+        <div class="mb-16">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is Beta in the stock market?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Beta is a measure of a stock's volatility in relation to the overall market (like the Nifty 50 or Sensex). The market itself has a beta of exactly 1.0.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What does a Beta greater than 1 mean?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        A beta greater than 1 means the stock is more volatile than the market. For example, if a stock has a beta of 1.5, it is expected to rise 15% when the market rises 10%, but it will also fall 15% if the market falls 10%.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What does a Beta less than 1 mean?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        A beta less than 1 means the stock is less volatile than the market. Defensive stocks like FMCG (e.g., ITC, HUL) often have betas around 0.5 to 0.8. They won't grow as fast during bull runs, but they won't crash as hard during bear markets.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How is Portfolio Beta calculated?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Portfolio beta is the weighted average of the betas of the individual stocks in the portfolio. You multiply each stock's beta by its percentage weight in your total portfolio, and sum them all up.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Can a stock have a negative Beta?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Yes, a negative beta means the stock moves inversely to the market. Gold often exhibits a zero or slightly negative beta, making it a good hedge against market crashes.
+                    </div>
+                </details>
+                
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Is a high beta portfolio good or bad?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        It depends on your strategy. A high beta portfolio (> 1.2) is aggressive and aims for maximum growth during bull markets. A low beta portfolio (< 0.9) is conservative and prioritizes capital preservation.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Where can I find the beta of a stock?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        You can find the beta of Indian stocks on financial portals like Moneycontrol, Screener.in, Yahoo Finance, or the NSE website under the stock's technical/historical data section.
+                    </div>
+                </details>
+        <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                How is portfolio beta calculated?
+                <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+            <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                Portfolio beta is the weighted average of individual asset betas based on their market value proportion in your total stock portfolio.
+            </div>
+        </details>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Global JS Hooks for Linking & Search -->
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        const holdingsList = document.getElementById('holdingsList');
+        const totalValueDisp = document.getElementById('totalValueDisp');
+        const portfolioBetaVal = document.getElementById('portfolioBetaVal');
+        const betaBadge = document.getElementById('betaBadge');
+        const betaExplanation = document.getElementById('betaExplanation');
+        
+        let rowCount = 0;
+
+        // Default mock data
+        const defaultHoldings = [
+            { name: "HDFC Bank", amt: 100000, beta: 1.15 },
+            { name: "ITC Ltd", amt: 50000, beta: 0.65 },
+            { name: "Tata Motors", amt: 50000, beta: 1.85 }
+        ];
+
+        function createRow(data) {
+            rowCount++;
+            const id = rowCount;
+            
+            const div = document.createElement('div');
+            div.className = "grid grid-cols-1 sm:grid-cols-12 gap-3 sm:gap-4 items-center bg-slate-50 p-3 sm:p-2 rounded-xl border border-slate-200 holding-row";
+            div.dataset.id = id;
+            
+            div.innerHTML = `
+                <div class="col-span-1 sm:col-span-4">
+                    <label class="text-[10px] font-bold text-slate-500 uppercase sm:hidden mb-1 block">Asset Name</label>
+                    <input type="text" class="asset-name w-full bg-white border border-slate-300 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2" placeholder="e.g. Reliance" value="${data ? data.name : ''}">
+                </div>
+                <div class="col-span-1 sm:col-span-4">
+                    <label class="text-[10px] font-bold text-slate-500 uppercase sm:hidden mb-1 block">Invested Amount (₹)</label>
+                    <input type="number" class="asset-amt w-full bg-white border border-slate-300 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 font-bold" placeholder="10000" min="0" value="${data ? data.amt : ''}">
+                </div>
+                <div class="col-span-1 sm:col-span-3">
+                    <label class="text-[10px] font-bold text-slate-500 uppercase sm:hidden mb-1 block">Individual Beta</label>
+                    <input type="number" class="asset-beta w-full bg-white border border-slate-300 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 font-bold" placeholder="1.0" step="0.01" value="${data ? data.beta : ''}">
+                </div>
+                <div class="col-span-1 sm:col-span-1 flex justify-end sm:justify-center">
+                    <button class="delete-btn text-rose-500 hover:text-rose-700 bg-rose-50 p-2 rounded-lg transition-colors" title="Remove row">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                    </button>
+                </div>
+            `;
+            
+            // Attach events
+            const inputs = div.querySelectorAll('input');
+            inputs.forEach(input => {
+                input.addEventListener('input', calculatePortfolioBeta);
+            });
+            
+            div.querySelector('.delete-btn').addEventListener('click', () => {
+                div.remove();
+                calculatePortfolioBeta();
+            });
+            
+            holdingsList.appendChild(div);
+        }
+
+        function formatIndian(val) {
+            return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+        }
+
+        function calculatePortfolioBeta() {
+            const rows = document.querySelectorAll('.holding-row');
+            
+            let totalAmount = 0;
+            let weightedBetaSum = 0;
+            
+            rows.forEach(row => {
+                const amt = parseFloat(row.querySelector('.asset-amt').value) || 0;
+                const beta = parseFloat(row.querySelector('.asset-beta').value) || 0;
+                
+                if (amt > 0) {
+                    totalAmount += amt;
+                    weightedBetaSum += (amt * beta);
+                }
+            });
+            
+            totalValueDisp.textContent = formatIndian(totalAmount);
+            
+            if (totalAmount > 0) {
+                const portfolioBeta = weightedBetaSum / totalAmount;
+                portfolioBetaVal.textContent = portfolioBeta.toFixed(2);
+                
+                // Update UI based on Beta
+                if (portfolioBeta < 0) {
+                    betaBadge.className = "inline-block px-4 py-2 rounded-lg border font-bold text-sm bg-yellow-900/40 text-yellow-400 border-yellow-500/30";
+                    betaBadge.textContent = "Inverse Market";
+                    betaExplanation.innerHTML = `Your portfolio moves in the <strong>opposite direction</strong> of the market. It acts as a heavy hedge.`;
+                } else if (portfolioBeta < 0.9) {
+                    betaBadge.className = "inline-block px-4 py-2 rounded-lg border font-bold text-sm bg-emerald-900/40 text-emerald-400 border-emerald-500/30";
+                    betaBadge.textContent = "Conservative (Low Risk)";
+                    betaExplanation.innerHTML = `Your portfolio is <strong>less volatile</strong> than the market. It will likely lose less during crashes, but grow slower during bull runs.`;
+                } else if (portfolioBeta <= 1.1) {
+                    betaBadge.className = "inline-block px-4 py-2 rounded-lg border font-bold text-sm bg-blue-900/40 text-blue-400 border-blue-500/30";
+                    betaBadge.textContent = "Neutral (Market Track)";
+                    betaExplanation.innerHTML = `Your portfolio moves <strong>almost exactly</strong> in line with the broader market index.`;
+                } else {
+                    betaBadge.className = "inline-block px-4 py-2 rounded-lg border font-bold text-sm bg-rose-900/40 text-rose-400 border-rose-500/30";
+                    betaBadge.textContent = "Aggressive (High Risk)";
+                    let extra = ((portfolioBeta - 1) * 100).toFixed(0);
+                    betaExplanation.innerHTML = `Your portfolio is highly volatile. If the market falls 10%, expect your portfolio to fall by <strong>~${10 + parseInt(extra/10)}%</strong>.`;
+                }
+            } else {
+                portfolioBetaVal.textContent = "0.00";
+                betaBadge.className = "inline-block px-4 py-2 rounded-lg border font-bold text-sm bg-slate-800 text-slate-400 border-slate-700";
+                betaBadge.textContent = "No Data";
+                betaExplanation.textContent = "Add your stock holdings above to calculate.";
+            }
+        }
+
+        document.getElementById('addStockBtn').addEventListener('click', () => {
+            createRow();
+            calculatePortfolioBeta();
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            // Load initial mock data
+            defaultHoldings.forEach(data => createRow(data));
+            calculatePortfolioBeta();
+        });
+    </script>
+</body>
+</html>

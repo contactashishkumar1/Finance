@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REIT & InvIT Tax Calculator (2026) – Quarterly Payout Breakdown</title>
+    <meta name="description" content="Calculate REIT and InvIT distribution taxation for 2026. Break down quarterly payouts into Tax-Free Dividends, Taxable Interest, Rental Income, and Repayment of Capital.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/reit-dividend-tax-calculator/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="REIT & InvIT Tax Calculator (2026)">
+    <meta property="og:description" content="Calculate quarterly REIT distribution taxability in India under Sec 194LBA & 115UA.">
+    <meta property="og:url" content="https://arthcalculator.in/reit-dividend-tax-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "REIT & InvIT Tax Calculator",
+      "url": "https://arthcalculator.in/reit-dividend-tax-calculator/",
+      "description": "Calculate quarterly REIT distribution taxability in India under Sec 194LBA & 115UA.",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "REIT & InvIT Tax Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://arthcalculator.in/reit-dividend-tax-calculator/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "REIT Tax Calculator",
+        "item": "https://arthcalculator.in/reit-dividend-tax-calculator/"
+      }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How are REIT distributions taxed in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "REIT payouts are split into 4 components under Section 115UA: Dividend (exempt if SPV opted for Sec 115BAA), Interest (taxable at unitholder slab rate), Rental Income (taxable at slab rate), and Repayment of Debt (taxable as Other Sources if cumulative repayment exceeds issue price)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Section 194LBA TDS on REIT payouts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under Section 194LBA, REIT Business Trusts deduct 10% TDS on the Interest and Rental Income components distributed to resident unitholders."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is REIT dividend payout tax-free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dividends distributed by REITs are 100% tax-free in the hands of unitholders if the Special Purpose Vehicle (SPV) has NOT exercised the concessional 22% tax rate option under Section 115BAA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the new Repayment of Capital tax rule introduced in Finance Act 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Repayment of debt/capital distributions exceeding the original issue price of the REIT unit are taxed as 'Income from Other Sources' under Section 56(2)(xii)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are capital gains taxed when selling REIT units on stock exchanges?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "STCG (held ≤ 12 months) is taxed at 20%. LTCG (held > 12 months) is taxed at 12.5% on gains exceeding ₹1.25 Lakhs per financial year."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which REITs operate in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Major SEBI-registered REITs in India include Embassy Office Parks REIT, Mindspace Business Parks REIT, Brookfield India Real Estate Trust, and Nexus Select Trust (Retail REIT)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the quarterly distribution frequency for REITs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEBI mandates that REITs must distribute at least 90% of their net distributable cash flows (NDCF) to unitholders at least once every quarter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I find the tax component breakdown of my REIT payout?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "REIT managers publish a detailed tax breakup statement on exchange filings and issue Form 16A TDS certificates quarterly."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-blue-200">
+    <div id="navbar"></div>
+    <script>
+        fetch("/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+                const menuBtn = document.getElementById("menuBtn");
+                const mobileMenu = document.getElementById("mobileMenu");
+                if(menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                    });
+                }
+            });
+    </script>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+            <ol class="flex list-none p-0">
+                <li class="flex items-center">
+                    <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="text-blue-600 font-bold">REIT Tax Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">REIT & InvIT Tax <span class="text-blue-600">Calculator (2026)</span></h1>
+            <p class="text-lg text-slate-600 mb-6">
+                Calculate post-tax net payout on quarterly REIT distributions under Section 115UA and 194LBA TDS rules.
+            </p>
+        </div>
+
+        <!-- Calculator Interface -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+            
+            <!-- Inputs -->
+            <div class="lg:col-span-6 bg-white rounded-2xl p-6 md:p-8 card-shadow border border-slate-100 space-y-4">
+                <h2 class="text-xl font-bold text-slate-800 border-b pb-3">REIT Holding & Distribution Breakup</h2>
+
+                <div>
+                    <label class="font-semibold text-slate-700 text-xs block mb-1">Number of REIT Units Owned</label>
+                    <input type="number" id="unitsInput" value="1000" class="w-full p-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold">
+                </div>
+
+                <div class="grid grid-cols-2 gap-2 text-xs">
+                    <div>
+                        <label class="font-semibold text-slate-700 block mb-1">Dividend Per Unit (₹)</label>
+                        <input type="number" id="divPerUnitInput" value="1.50" step="0.10" class="w-full p-2 bg-slate-50 border rounded-lg font-bold">
+                    </div>
+                    <div>
+                        <label class="font-semibold text-slate-700 block mb-1">Interest Per Unit (₹)</label>
+                        <input type="number" id="intPerUnitInput" value="2.80" step="0.10" class="w-full p-2 bg-slate-50 border rounded-lg font-bold">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-2 text-xs">
+                    <div>
+                        <label class="font-semibold text-slate-700 block mb-1">Rental Income Per Unit (₹)</label>
+                        <input type="number" id="rentPerUnitInput" value="0.50" step="0.10" class="w-full p-2 bg-slate-50 border rounded-lg font-bold">
+                    </div>
+                    <div>
+                        <label class="font-semibold text-slate-700 block mb-1">Capital Repayment (₹)</label>
+                        <input type="number" id="repayPerUnitInput" value="0.70" step="0.10" class="w-full p-2 bg-slate-50 border rounded-lg font-bold">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="font-semibold text-slate-700 text-xs block mb-1">Your Income Tax Slab Rate (%)</label>
+                    <select id="taxSlabSelect" class="w-full p-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold">
+                        <option value="0">0% (Income below basic exemption)</option>
+                        <option value="5">5% Slab</option>
+                        <option value="10">10% Slab</option>
+                        <option value="15">15% Slab</option>
+                        <option value="20">20% Slab</option>
+                        <option value="30" selected>30% Slab (+ Surcharge/Cess ~31.2%)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Output Display -->
+            <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+                
+                <div class="bg-blue-600 text-white rounded-2xl p-6 md:p-8 card-shadow">
+                    <p class="text-blue-100 text-xs font-bold uppercase tracking-wider mb-2">Net Post-Tax Quarterly Distribution</p>
+                    <h3 class="text-4xl md:text-5xl font-black mb-4" id="netPayoutVal">₹4,470</h3>
+                    
+                    <div class="border-t border-blue-500/50 pt-4 grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <p class="text-blue-200 text-xs">Gross Quarterly Payout</p>
+                            <p class="text-xl font-bold text-white mt-1" id="grossPayoutVal">₹5,500</p>
+                        </div>
+                        <div>
+                            <p class="text-blue-200 text-xs">Total Tax Liability (Slab)</p>
+                            <p class="text-xl font-bold text-emerald-300 mt-1" id="taxLiabilityVal">₹1,030</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-slate-100 space-y-3 text-sm">
+                    <h4 class="font-bold text-slate-800 border-b pb-2">Taxability Component Breakdown</h4>
+                    <div class="flex justify-between text-xs">
+                        <span class="text-slate-600">Tax-Free Dividend Component</span>
+                        <span class="font-bold text-emerald-600" id="exemptDivVal">₹1,500 (Exempt)</span>
+                    </div>
+                    <div class="flex justify-between text-xs">
+                        <span class="text-slate-600">Taxable Interest & Rental Component</span>
+                        <span class="font-bold text-slate-800" id="taxableIntVal">₹3,300 (Taxed at Slab)</span>
+                    </div>
+                    <div class="flex justify-between text-xs border-t pt-2">
+                        <span class="text-slate-600">Sec 194LBA TDS Deducted @ 10%</span>
+                        <span class="font-bold text-blue-600" id="tdsDeductedVal">₹330</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content Section -->
+        <article class="bg-white rounded-2xl p-6 md:p-10 card-shadow border border-slate-100 mb-16 prose prose-slate max-w-none">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">REIT & InvIT Tax Framework in India (2026)</h2>
+            <p>
+                Real Estate Investment Trusts (REITs) pass through income to unitholders with specific component taxability under Section 115UA of the Income Tax Act:
+            </p>
+
+            <div class="my-6 overflow-x-auto not-prose">
+                <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden text-sm">
+                    <thead class="bg-slate-100">
+                        <tr>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Payout Component</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Taxability Rule (Unitholder)</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">TDS under Sec 194LBA</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 bg-white">
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">Dividend Component</td>
+                            <td class="p-3.5 text-emerald-600 font-bold">100% Tax-Free (if SPV did not opt for Sec 115BAA)</td>
+                            <td class="p-3.5 text-slate-700">Nil TDS</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">Interest Component</td>
+                            <td class="p-3.5 text-slate-800">Taxable at Investor's Income Tax Slab Rate</td>
+                            <td class="p-3.5 text-rose-600 font-bold">10% TDS Deducted</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">Rental Income Component</td>
+                            <td class="p-3.5 text-slate-800">Taxable at Investor's Income Tax Slab Rate</td>
+                            <td class="p-3.5 text-rose-600 font-bold">10% TDS Deducted</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">Repayment of Debt</td>
+                            <td class="p-3.5 text-slate-800">Taxed as Other Sources if total exceeds issue price</td>
+                            <td class="p-3.5 text-slate-700">Nil TDS</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Key Benefits of REIT Investing</h3>
+            <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+                <li><strong>Commercial Property Exposure for ₹300:</strong> Access Grade-A commercial IT parks without buying multi-crore real estate.</li>
+                <li><strong>Quarterly Cashflow Yield:</strong> SEBI mandates 90% net cash distribution to unitholders quarterly.</li>
+                <li><strong>Inflation-Hedged Growth:</strong> Commercial lease escalations (15% every 3 years) compound unit valuations.</li>
+            </ul>
+
+            <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Limitations & Tax Risk Factors (2026)</h3>
+            <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+                <li><strong>High Tax Burden for 30% Slab:</strong> Interest & Rental components are taxed at peak slab rates, reducing net yield for high earners.</li>
+                <li><strong>Market Price Volatility:</strong> REIT unit prices fluctuate on stock exchanges based on RBI interest rate cycles.</li>
+            </ul>
+
+            <div class="mt-8 p-5 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl not-prose">
+                <h4 class="text-base font-bold text-blue-900 mb-1">REIT Tax Optimization Strategy</h4>
+                <p class="text-xs text-blue-800 leading-relaxed">
+                    Check your quarterly REIT tax breakup statement in Form 26AS. If your total income is below basic exemption, claim full TDS refund under Section 194LBA by filing your annual ITR.
+                </p>
+            </div>
+
+            <div class="mt-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl not-prose">
+                <h3 class="text-lg font-bold text-slate-800 mb-2">Explore Related Financial Tools & Calculators</h3>
+                <p class="text-xs text-slate-500 mb-4">Compare options across loan EMIs, tax savings, and compounding growth:</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-medium">
+                    <a href="/commercial-property-rental-yield/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Rental Yield Tool</a>
+                    <a href="/lease-escalation-calculator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Lease Escalation</a>
+                    <a href="/capital-gains-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Capital Gains Tax</a>
+                    <a href="/income-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Income Tax Tool</a>
+                    <a href="/sip/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SIP Calculator</a>
+                    <a href="/lumpsum/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Lumpsum Calculator</a>
+                    <a href="/inflation/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Inflation Calculator</a>
+                    <a href="/cagr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">CAGR Calculator</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- FAQs -->
+        <div class="mb-16" id="faqs">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How are REIT distributions taxed in India?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        REIT payouts are split into 4 components under Section 115UA: Dividend (exempt if SPV opted for Sec 115BAA), Interest (taxable at unitholder slab rate), Rental Income (taxable at slab rate), and Repayment of Debt (taxable as Other Sources if cumulative repayment exceeds issue price).
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is Section 194LBA TDS on REIT payouts?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Under Section 194LBA, REIT Business Trusts deduct 10% TDS on the Interest and Rental Income components distributed to resident unitholders.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Is REIT dividend payout tax-free?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Dividends distributed by REITs are 100% tax-free in the hands of unitholders if the Special Purpose Vehicle (SPV) has NOT exercised the concessional 22% tax rate option under Section 115BAA.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is the new Repayment of Capital tax rule introduced in Finance Act 2026?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Repayment of debt/capital distributions exceeding the original issue price of the REIT unit are taxed as 'Income from Other Sources' under Section 56(2)(xii).
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How are capital gains taxed when selling REIT units on stock exchanges?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        STCG (held ≤ 12 months) is taxed at 20%. LTCG (held > 12 months) is taxed at 12.5% on gains exceeding ₹1.25 Lakhs per financial year.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Which REITs operate in India?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Major SEBI-registered REITs in India include Embassy Office Parks REIT, Mindspace Business Parks REIT, Brookfield India Real Estate Trust, and Nexus Select Trust (Retail REIT).
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is the quarterly distribution frequency for REITs?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        SEBI mandates that REITs must distribute at least 90% of their net distributable cash flows (NDCF) to unitholders at least once every quarter.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Where can I find the tax component breakdown of my REIT payout?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        REIT managers publish a detailed tax breakup statement on exchange filings and issue Form 16A TDS certificates quarterly.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global JS Hooks for Linking & Search -->
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        const elements = {
+            unitsInput: document.getElementById('unitsInput'),
+            divPerUnitInput: document.getElementById('divPerUnitInput'),
+            intPerUnitInput: document.getElementById('intPerUnitInput'),
+            rentPerUnitInput: document.getElementById('rentPerUnitInput'),
+            repayPerUnitInput: document.getElementById('repayPerUnitInput'),
+            taxSlabSelect: document.getElementById('taxSlabSelect'),
+            
+            netPayoutVal: document.getElementById('netPayoutVal'),
+            grossPayoutVal: document.getElementById('grossPayoutVal'),
+            taxLiabilityVal: document.getElementById('taxLiabilityVal'),
+            exemptDivVal: document.getElementById('exemptDivVal'),
+            taxableIntVal: document.getElementById('taxableIntVal'),
+            tdsDeductedVal: document.getElementById('tdsDeductedVal')
+        };
+
+        function formatIndian(val) {
+            return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+        }
+
+        function calculateReitTax() {
+            const units = parseFloat(elements.unitsInput.value) || 0;
+            const divPU = parseFloat(elements.divPerUnitInput.value) || 0;
+            const intPU = parseFloat(elements.intPerUnitInput.value) || 0;
+            const rentPU = parseFloat(elements.rentPerUnitInput.value) || 0;
+            const repayPU = parseFloat(elements.repayPerUnitInput.value) || 0;
+            const slabRate = (parseFloat(elements.taxSlabSelect.value) || 0) / 100;
+
+            const totalDiv = units * divPU;
+            const totalInt = units * intPU;
+            const totalRent = units * rentPU;
+            const totalRepay = units * repayPU;
+
+            const grossPayout = totalDiv + totalInt + totalRent + totalRepay;
+            const taxableComponent = totalInt + totalRent;
+
+            // 10% TDS under Sec 194LBA on Interest + Rent
+            const tdsDeducted = taxableComponent * 0.10;
+            
+            // Total Tax liability under slab rate
+            const totalTaxSlab = taxableComponent * slabRate;
+            const netPayout = grossPayout - totalTaxSlab;
+
+            elements.netPayoutVal.textContent = formatIndian(netPayout);
+            elements.grossPayoutVal.textContent = formatIndian(grossPayout);
+            elements.taxLiabilityVal.textContent = formatIndian(totalTaxSlab);
+            
+            elements.exemptDivVal.textContent = formatIndian(totalDiv) + " (100% Tax-Free)";
+            elements.taxableIntVal.textContent = formatIndian(taxableComponent) + " (Taxed @ " + (slabRate*100) + "%)";
+            elements.tdsDeductedVal.textContent = formatIndian(tdsDeducted);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const inputs = [elements.unitsInput, elements.divPerUnitInput, elements.intPerUnitInput, elements.rentPerUnitInput, elements.repayPerUnitInput, elements.taxSlabSelect];
+            inputs.forEach(i => i.addEventListener('input', calculateReitTax));
+            elements.taxSlabSelect.addEventListener('change', calculateReitTax);
+            
+            calculateReitTax();
+        });
+    </script>
+</body>
+</html>

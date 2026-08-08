@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Minimum Due Calculator (2026) – Debt Trap Trap Math</title>
+    <meta name="description" content="Calculate total interest, GST, and payoff tenure if you pay only the Minimum Amount Due (MAD) on your credit card bill in 2026.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/credit-card-minimum-due/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Credit Card Minimum Due Calculator (2026)">
+    <meta property="og:description" content="Calculate total interest and payoff duration for credit card minimum due payments.">
+    <meta property="og:url" content="https://arthcalculator.in/credit-card-minimum-due/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Credit Card Minimum Due Calculator",
+      "url": "https://arthcalculator.in/credit-card-minimum-due/",
+      "description": "Calculate total interest and payoff duration for credit card minimum due payments.",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Credit Card Minimum Due Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://arthcalculator.in/credit-card-minimum-due/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Credit Card Minimum Due",
+        "item": "https://arthcalculator.in/credit-card-minimum-due/"
+      }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Minimum Amount Due (MAD) on a credit card?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Minimum Amount Due is typically 5% of your total outstanding credit card bill (or ₹500, whichever is higher). Paying MAD prevents late payment fees but attracts heavy interest on the remaining 95% balance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the interest rate charged on credit card revolving balance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Credit cards in India charge 3% to 4% per month (equivalent to 36% to 48% per annum) plus 18% GST on interest charges."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does paying Minimum Amount Due protect your CIBIL score?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Paying MAD prevents default reporting on your CIBIL report, but carrying a high balance increases your credit utilization ratio, which damages your score over time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does paying Minimum Due take over 10 years to clear debt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because 5% MAD pays mostly the interest and 18% GST accrued for that month, leaving only a tiny fraction to reduce the principal balance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is GST levied on credit card interest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, 18% GST is legally levied on all financial charges, including finance charges and credit card interest."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I exit a credit card minimum due debt trap?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Convert the outstanding credit card balance into a lower-interest personal loan or EMI conversion plan (13-16% p.a.), or use a low-cost balance transfer facility."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do new purchases earn an interest-free grace period if Minimum Due is paid?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No! If you do not pay the full bill balance, you lose the 45-day interest-free grace period, and new purchases start accruing interest immediately from the transaction date."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is credit card interest calculated daily?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Daily Interest = (Outstanding Amount * Monthly Interest Rate * 12 * Number of Days) / 365."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-blue-200">
+    <div id="navbar"></div>
+    <script>
+        fetch("/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+                const menuBtn = document.getElementById("menuBtn");
+                const mobileMenu = document.getElementById("mobileMenu");
+                if(menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                    });
+                }
+            });
+    </script>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+            <ol class="flex list-none p-0">
+                <li class="flex items-center">
+                    <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="text-blue-600 font-bold">Credit Card Minimum Due</li>
+            </ol>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Credit Card Minimum Due <span class="text-blue-600">Calculator (2026)</span></h1>
+            <p class="text-lg text-slate-600 mb-6">
+                See the shocking truth behind paying only the Minimum Amount Due (MAD). Calculate total interest, 18% GST, and payback duration.
+            </p>
+        </div>
+
+        <!-- Calculator Interface -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+            
+            <!-- Inputs -->
+            <div class="lg:col-span-6 bg-white rounded-2xl p-6 md:p-8 card-shadow border border-slate-100 space-y-6">
+                <h2 class="text-xl font-bold text-slate-800 border-b pb-3">Credit Card Details</h2>
+
+                <!-- Total Bill Outstanding -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Total Outstanding Card Bill</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
+                            <input type="number" id="balanceInput" value="50000" min="5000" step="5000" class="w-36 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                        </div>
+                    </div>
+                    <input type="range" id="balanceRange" min="5000" max="500000" step="5000" value="50000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <!-- Monthly Interest Rate -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Monthly Interest Rate (%)</label>
+                        <div class="relative">
+                            <input type="number" id="monthlyRateInput" value="3.5" min="1.5" max="4.5" step="0.1" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-7 font-bold">
+                            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">%</span>
+                        </div>
+                    </div>
+                    <p class="text-[10px] text-slate-500 mt-1">3.5%/month = 42% per annum (standard in India).</p>
+                </div>
+
+                <!-- Minimum Due % -->
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label class="font-semibold text-slate-700">Minimum Due Percentage</label>
+                        <div class="relative">
+                            <input type="number" id="madPctInput" value="5" min="5" max="15" step="1" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-7 font-bold">
+                            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Output Display -->
+            <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+                
+                <div class="bg-rose-600 text-white rounded-2xl p-6 md:p-8 card-shadow">
+                    <p class="text-rose-100 text-xs font-bold uppercase tracking-wider mb-2">Time Required to Clear Debt (Paying Only MAD)</p>
+                    <h3 class="text-4xl md:text-5xl font-black mb-4" id="payoffMonthsVal">0 Months</h3>
+                    
+                    <div class="border-t border-rose-500/50 pt-4 grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <p class="text-rose-200 text-xs">Total Interest + GST Paid</p>
+                            <p class="text-xl font-bold text-white mt-1" id="totalInterestPaidVal">₹0</p>
+                        </div>
+                        <div>
+                            <p class="text-rose-200 text-xs">Total Money Outflow</p>
+                            <p class="text-xl font-bold text-white mt-1" id="totalOutflowVal">₹0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-slate-100 space-y-3 text-sm">
+                    <h4 class="font-bold text-slate-800 border-b pb-2">First Month Payment Breakdown</h4>
+                    <div class="flex justify-between">
+                        <span class="text-slate-600">First Minimum Amount Due (5%)</span>
+                        <span class="font-bold text-slate-800" id="firstMadVal">₹0</span>
+                    </div>
+                    <div class="flex justify-between text-rose-600">
+                        <span>First Month Interest + 18% GST</span>
+                        <span class="font-bold" id="firstInterestVal">₹0</span>
+                    </div>
+                    <div class="flex justify-between border-t pt-2 text-emerald-600">
+                        <span class="font-medium">Actual Principal Reduced in Month 1</span>
+                        <span class="font-bold" id="firstPrincipalReducedVal">₹0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content Section -->
+        <article class="bg-white rounded-2xl p-6 md:p-10 card-shadow border border-slate-100 mb-16 prose prose-slate max-w-none">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">Why Minimum Amount Due (MAD) is a Trap</h2>
+            <p>
+                When you pay only 5% Minimum Amount Due on a ₹50,000 credit card bill, nearly 80% of that payment goes towards financing interest and 18% GST charges, while your principal debt barely moves.
+            </p>
+
+            <div class="my-6 overflow-x-auto not-prose">
+                <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden text-sm">
+                    <thead class="bg-slate-100">
+                        <tr>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Repayment Strategy</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Time to Pay Off ₹50k Debt</th>
+                            <th class="p-3.5 border-b font-bold text-slate-700">Total Extra Interest + GST</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 bg-white">
+                        <tr>
+                            <td class="p-3.5 font-bold text-rose-600">Pay Minimum Due Only (5%)</td>
+                            <td class="p-3.5 text-rose-600 font-bold">12 - 15 Years</td>
+                            <td class="p-3.5 text-rose-600 font-bold">₹1,10,000+ (220% Extra!)</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-blue-600">Convert to Personal Loan (14%)</td>
+                            <td class="p-3.5 text-blue-600 font-semibold">2 Years</td>
+                            <td class="p-3.5 text-emerald-600 font-semibold">₹7,800</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-bold text-emerald-600">Pay Full Bill Balance</td>
+                            <td class="p-3.5 text-emerald-600 font-bold">Immediate (1 Month)</td>
+                            <td class="p-3.5 text-emerald-600 font-bold">₹0 (Nil Interest)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            
+            
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">The Minimum Due Debt Trap Explained</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>5% Minimum Illusion:</strong> Paying only the 5% Minimum Amount Due covers mostly interest and GST, leaving 95% of principal balance compounding at 36-42% p.a.</li>
+            <li><strong>Loss of Interest-Free Grace Period:</strong> Paying minimum due revokes the 45-day interest-free window on ALL new credit card purchases immediately.</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">18% GST Burden on Credit Card Revolving Interest</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Compounding Interest + Tax:</strong> High revolving finance charges (3.5% per month) attract an additional 18% GST fee every single billing cycle.</li>
+            <li><strong>Time to Pay Off:</strong> A ₹1,00,000 credit card balance paid via Minimum Due alone can take 15-20 years to fully clear, costing over ₹3,50,000 in total interest!</li>
+        </ul>
+
+        <div class="mt-8 p-5 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl not-prose">
+            <h4 class="text-base font-bold text-blue-900 mb-1">Debt Escape Strategy</h4>
+            <p class="text-xs text-blue-800 leading-relaxed">
+                If you cannot pay the full credit card bill, instantly convert the balance into a 12-month balance transfer EMI at 12-14% interest to stop 42% interest debt compounding.
+            </p>
+        </div>
+
+            <div class="mt-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl not-prose">
+                <h3 class="text-lg font-bold text-slate-800 mb-2">Explore Related Financial Tools & Calculators</h3>
+                <p class="text-xs text-slate-500 mb-4">Compare options across loan EMIs, tax savings, and compounding growth:</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-medium">
+                    <a href="/personal-loan-emi/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Personal Loan EMI</a>
+                    <a href="/cibil-score-simulator/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">CIBIL Simulator</a>
+                    <a href="/loan-prepayment/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Loan Prepayment</a>
+                    <a href="/sip/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SIP Calculator</a>
+                    <a href="/income-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Income Tax Tool</a>
+                    <a href="/capital-gains-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Capital Gains Tax</a>
+                    <a href="/lumpsum/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Lumpsum Calculator</a>
+                    <a href="/inflation/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Inflation Calculator</a>
+                    <a href="/cagr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">CAGR Calculator</a>
+                    <a href="/80c-tax-saving/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">80C Tax Saving</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- FAQs -->
+        <div class="mb-16" id="faqs">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is Minimum Amount Due (MAD) on a credit card?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Minimum Amount Due is typically 5% of your total outstanding credit card bill (or ₹500, whichever is higher). Paying MAD prevents late payment fees but attracts heavy interest on the remaining 95% balance.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is the interest rate charged on credit card revolving balance?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Credit cards in India charge 3% to 4% per month (equivalent to 36% to 48% per annum) plus 18% GST on interest charges.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Does paying Minimum Amount Due protect your CIBIL score?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Paying MAD prevents default reporting on your CIBIL report, but carrying a high balance increases your credit utilization ratio, which damages your score over time.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Why does paying Minimum Due take over 10 years to clear debt?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Because 5% MAD pays mostly the interest and 18% GST accrued for that month, leaving only a tiny fraction to reduce the principal balance.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Is GST levied on credit card interest?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Yes, 18% GST is legally levied on all financial charges, including finance charges and credit card interest.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How can I exit a credit card minimum due debt trap?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Convert the outstanding credit card balance into a lower-interest personal loan or EMI conversion plan (13-16% p.a.), or use a low-cost balance transfer facility.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Do new purchases earn an interest-free grace period if Minimum Due is paid?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        No! If you do not pay the full bill balance, you lose the 45-day interest-free grace period, and new purchases start accruing interest immediately from the transaction date.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How is credit card interest calculated daily?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Daily Interest = (Outstanding Amount * Monthly Interest Rate * 12 * Number of Days) / 365.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global JS Hooks for Linking & Search -->
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        const elements = {
+            balanceInput: document.getElementById('balanceInput'),
+            balanceRange: document.getElementById('balanceRange'),
+            monthlyRateInput: document.getElementById('monthlyRateInput'),
+            madPctInput: document.getElementById('madPctInput'),
+            
+            payoffMonthsVal: document.getElementById('payoffMonthsVal'),
+            totalInterestPaidVal: document.getElementById('totalInterestPaidVal'),
+            totalOutflowVal: document.getElementById('totalOutflowVal'),
+            firstMadVal: document.getElementById('firstMadVal'),
+            firstInterestVal: document.getElementById('firstInterestVal'),
+            firstPrincipalReducedVal: document.getElementById('firstPrincipalReducedVal')
+        };
+
+        function formatIndian(val) {
+            return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+        }
+
+        function calculateCreditCardMad() {
+            const initialBalance = parseFloat(elements.balanceInput.value) || 0;
+            const monthlyRate = (parseFloat(elements.monthlyRateInput.value) || 3.5) / 100;
+            const madPct = (parseFloat(elements.madPctInput.value) || 5) / 100;
+            const gstRate = 0.18; // 18% GST on interest
+
+            let balance = initialBalance;
+            let totalInterestGstPaid = 0;
+            let months = 0;
+
+            let month1Mad = Math.max(500, balance * madPct);
+            let month1Interest = balance * monthlyRate;
+            let month1Gst = month1Interest * gstRate;
+            let month1TotalInterest = month1Interest + month1Gst;
+            let month1PrincipalRed = Math.max(0, month1Mad - month1TotalInterest);
+
+            elements.firstMadVal.textContent = formatIndian(month1Mad);
+            elements.firstInterestVal.textContent = formatIndian(month1TotalInterest);
+            elements.firstPrincipalReducedVal.textContent = formatIndian(month1PrincipalRed);
+
+            // Simulation loop until balance <= 100 or 360 months (30 yrs cap)
+            while (balance > 100 && months < 360) {
+                months++;
+                let interest = balance * monthlyRate;
+                let gst = interest * gstRate;
+                let totalMonthlyTaxInt = interest + gst;
+                
+                let mad = Math.max(500, balance * madPct);
+                if (mad > balance + totalMonthlyTaxInt) {
+                    mad = balance + totalMonthlyTaxInt;
+                }
+                
+                totalInterestGstPaid += totalMonthlyTaxInt;
+                let principalPaid = mad - totalMonthlyTaxInt;
+                balance = balance - principalPaid;
+
+                if (balance <= 0) break;
+            }
+
+            const totalOutflow = initialBalance + totalInterestGstPaid;
+
+            elements.payoffMonthsVal.textContent = `${months} Months (${(months/12).toFixed(1)} Yrs)`;
+            elements.totalInterestPaidVal.textContent = formatIndian(totalInterestGstPaid);
+            elements.totalOutflowVal.textContent = formatIndian(totalOutflow);
+        }
+
+        function setupSync(input, range) {
+            input.addEventListener('input', () => { range.value = input.value; calculateCreditCardMad(); });
+            range.addEventListener('input', () => { input.value = range.value; calculateCreditCardMad(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.balanceInput, elements.balanceRange);
+            elements.monthlyRateInput.addEventListener('input', calculateCreditCardMad);
+            elements.madPctInput.addEventListener('input', calculateCreditCardMad);
+            
+            calculateCreditCardMad();
+        });
+    </script>
+</body>
+</html>

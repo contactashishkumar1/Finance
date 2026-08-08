@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yield on Cost Calculator: True Dividend Return</title>
+    <meta name="description" content="Calculate your true Yield on Cost (YOC) for dividend stocks. Discover your actual dividend return based on your original purchase price.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/yield-on-cost/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Yield on Cost Calculator">
+    <meta property="og:description" content="Calculate your true Yield on Cost (YOC) for dividend stocks based on your original purchase price.">
+    <meta property="og:url" content="https://arthcalculator.in/yield-on-cost/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Yield on Cost Calculator",
+      "url": "https://arthcalculator.in/yield-on-cost/",
+      "description": "Calculate your true Yield on Cost (YOC) for dividend stocks. Discover your actual dividend return based on your original purchase price.",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Yield on Cost Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://arthcalculator.in/yield-on-cost/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Yield on Cost",
+        "item": "https://arthcalculator.in/yield-on-cost/"
+      }]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Yield on Cost (YOC)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yield on Cost is the annual dividend you receive from a stock divided by the original price you paid for that stock, expressed as a percentage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is it different from Current Dividend Yield?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Current Dividend Yield uses the stock's market price *today*. Yield on Cost uses the price *you* paid years ago. As a stock's price goes up, its current yield drops, but your personal yield on cost remains high."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is Yield on Cost important?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It shows the true cash return you are getting on your initial capital. It proves the power of holding strong dividend-paying companies over decades, as companies increase their dividends over time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Yield on Cost reach 100%?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Legendary investors who buy and hold for decades often see their Yield on Cost surpass 100%. This means the company pays them back their entire initial investment in cash dividends every single year."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I buy a stock just for its Yield on Cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Yield on Cost is a backward-looking metric that rewards holding. You cannot buy a stock today and get someone else's Yield on Cost. You only get today's Current Yield."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does YOC account for stock splits?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To calculate YOC accurately after a stock split, you must adjust your Original Purchase Price downwards proportionally to the split ratio."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-blue-200">
+    <div id="navbar"></div>
+    <script>
+        fetch("/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+                const menuBtn = document.getElementById("menuBtn");
+                const mobileMenu = document.getElementById("mobileMenu");
+                if(menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                    });
+                }
+            });
+    </script>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+    <ol class="flex list-none p-0">
+        <li class="flex items-center">
+            <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+            <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+        </li>
+        <li class="flex items-center">
+            <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+            <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+        </li>
+        <li class="text-blue-600 font-bold">Yield on Cost Calculator</li>
+    </ol>
+</nav>
+
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Dividend Yield on Cost <span class="text-blue-600">Calculator</span></h1>
+            <p class="text-lg text-slate-600 mb-6">
+                Calculate your true dividend yield based on what <strong>you</strong> actually paid for the stock, not what it's trading for today.
+            </p>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+            
+            <!-- Left: Inputs -->
+            <div class="lg:col-span-5 bg-white rounded-2xl p-6 md:p-8 card-shadow border border-slate-100">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl font-bold text-slate-800">Stock Details</h2>
+                </div>
+
+                <div class="space-y-6">
+                    <div>
+                        <label class="font-semibold text-slate-700 block mb-2">Original Purchase Price (Per Share)</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
+                            <input type="number" id="buyPrice" value="150" min="1" step="1" class="w-full text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-3 pl-7 font-bold text-lg">
+                        </div>
+                        <p class="text-xs text-slate-500 mt-2">The average price you bought the stock at.</p>
+                    </div>
+
+                    <div>
+                        <label class="font-semibold text-slate-700 block mb-2">Current Market Price (Per Share)</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
+                            <input type="number" id="currentPrice" value="450" min="1" step="1" class="w-full text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-3 pl-7 font-bold text-lg">
+                        </div>
+                        <p class="text-xs text-slate-500 mt-2">What the stock is trading for today.</p>
+                    </div>
+
+                    <div class="bg-blue-50 p-4 rounded-xl border border-blue-200 mt-4">
+                        <label class="font-bold text-blue-800 block mb-2">Current Annual Dividend (Per Share)</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-blue-600 font-medium">₹</span>
+                            <input type="number" id="dividend" value="15" min="0" step="0.1" class="w-full text-right bg-white border border-blue-300 text-blue-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-3 pl-7 font-bold text-lg">
+                        </div>
+                        <p class="text-xs text-blue-700 mt-2">Total dividend declared in the last 12 months.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Results -->
+            <div class="lg:col-span-7 flex flex-col gap-6">
+                <!-- Highlight Result Card -->
+                <div class="bg-gradient-to-br from-blue-600 to-emerald-800 rounded-2xl p-6 md:p-8 card-shadow text-white relative overflow-hidden flex-grow flex flex-col justify-center">
+                    <div class="absolute -right-10 -top-10 w-40 h-40 bg-white opacity-10 rounded-full blur-2xl"></div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+                        
+                        <!-- YOC -->
+                        <div class="text-center md:text-left md:border-r border-blue-500/50 md:pr-8">
+                            <p class="text-blue-200 font-medium text-sm mb-2 uppercase tracking-wider">Your True Return</p>
+                            <h3 class="text-5xl font-black mb-2 text-white" id="yocVal">10.0%</h3>
+                            <p class="text-emerald-300 font-bold text-lg">Yield on Cost</p>
+                            <p class="text-blue-100 text-xs mt-4 leading-relaxed">
+                                You are making a <strong id="yocText" class="text-white">10%</strong> cash return every year on your original ₹150 investment.
+                            </p>
+                        </div>
+
+                        <!-- Current Yield -->
+                        <div class="text-center md:text-left bg-slate-900/30 p-4 rounded-xl border border-white/10 flex flex-col justify-center">
+                            <p class="text-slate-300 font-medium text-xs mb-1 uppercase tracking-wider">What others get today</p>
+                            <h3 class="text-3xl font-bold mb-1 text-slate-100" id="currentYieldVal">3.33%</h3>
+                            <p class="text-slate-400 font-bold text-sm">Current Market Yield</p>
+                            <p class="text-slate-400 text-xs mt-3 leading-relaxed">
+                                Anyone buying the stock today at ₹450 only gets this much yield.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-slate-100 text-center">
+                    <h3 class="text-sm font-bold text-slate-800 mb-2 uppercase">Capital Appreciation Bonus</h3>
+                    <p class="text-slate-600 text-sm">On top of your <span class="font-bold text-blue-600" id="bonusYoc">10%</span> annual cash yield, your initial capital has also grown by <span class="font-bold text-emerald-600 text-xl" id="capitalGains">200%</span>!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content Section -->
+        <article class="bg-white rounded-2xl p-6 md:p-10 card-shadow border border-slate-100 mb-16 prose prose-slate max-w-none">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">The Magic of Yield on Cost</h2>
+            <p>
+                Most financial websites only display the <strong>Current Dividend Yield</strong> of a stock. This is simply the annual dividend divided by the stock's price <em>today</em>. While this is useful for new buyers, it completely ignores the reality of long-term investors.
+            </p>
+            <p>
+                As a company grows, it increases its dividend payout. At the same time, the stock price usually goes up. Because both the dividend (numerator) and stock price (denominator) increase, the <em>Current Yield</em> might always hover around 2% to 3%.
+            </p>
+
+            <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Warren Buffett's Yield on Cost</h3>
+            <p>
+                The greatest example of YOC is Warren Buffett's investment in Coca-Cola. Berkshire Hathaway completed its purchase of Coke shares in 1994, paying a total of $1.3 Billion. 
+            </p>
+            <p>
+                Today, Coke pays Berkshire Hathaway roughly $736 Million in cash dividends every single year. 
+                If you calculate his <strong>Yield on Cost</strong> ($736M / $1.3B), Buffett is earning an astonishing <strong>56% yield</strong> on his original investment every single year, in cold hard cash!
+            </p>
+
+            <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">The Lesson for Investors</h3>
+            <p>
+                Do not sell fundamentally strong dividend-paying companies just because their "Current Yield" looks low on a screener. If you bought early, your Yield on Cost is what truly matters, and it rewards patience immensely.
+            </p>
+        
+<div class="my-8 overflow-x-auto not-prose">
+    <h3 class="text-xl font-bold text-slate-800 mb-4">Key Characteristics & Comparison Overview</h3>
+    <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden text-sm">
+        <thead class="bg-slate-100">
+            <tr>
+                <th class="p-3.5 border-b font-bold text-slate-700">Feature / Parameter</th>
+                <th class="p-3.5 border-b font-bold text-slate-700">Details / Rules</th>
+                <th class="p-3.5 border-b font-bold text-slate-700">Tax Implications</th>
+            </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100 bg-white">
+            <tr>
+                <td class="p-3.5 font-medium text-slate-800">Primary Returns</td>
+                <td class="p-3.5 text-blue-600 font-semibold">Guaranteed / Market-Linked Growth</td>
+                <td class="p-3.5 text-slate-600">Taxable at Income Tax Slab Rates</td>
+            </tr>
+            <tr>
+                <td class="p-3.5 font-medium text-slate-800">Compounding / Payout</td>
+                <td class="p-3.5 text-slate-700">Quarterly / Annual Compounding</td>
+                <td class="p-3.5 text-slate-600">TDS deductions applicable where threshold met</td>
+            </tr>
+            <tr>
+                <td class="p-3.5 font-medium text-slate-800">Lock-in & Liquidity</td>
+                <td class="p-3.5 text-slate-700">Specified Tenure / Market Liquidity</td>
+                <td class="p-3.5 text-slate-600">Premature withdrawal penalties apply</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+            
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Why Yield on Cost (YOC) Measures True Passive Income</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Original Capital Yield:</strong> YOC measures annual dividend payout divided by your original purchase price rather than current inflated market price.</li>
+            <li><strong>Compounding Dividends:</strong> Long-term dividend growth stocks (e.g., IT, PSUs) can generate 20-50%+ annual Yield on Cost on shares bought a decade ago.</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-slate-800 mt-8 mb-3">Difference Between Current Dividend Yield and YOC</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700 text-sm">
+            <li><strong>Current Yield:</strong> Dividend / Current Market Price (CMP). Looks static (1-3%).</li>
+            <li><strong>Yield on Cost:</strong> Dividend / Original Buy Price. Demonstrates real passive income compounding over time.</li>
+        </ul>
+
+        <div class="mt-8 p-5 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl not-prose">
+            <h4 class="text-base font-bold text-blue-900 mb-1">YOC Income Secret</h4>
+            <p class="text-xs text-blue-800 leading-relaxed">
+                Target companies with consistent dividend growth rates (10%+ p.a.). In 15 years, your Yield on Cost can exceed 30% of your initial purchase investment annually.
+            </p>
+        </div>
+
+            <div class="mt-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl not-prose">
+    <h3 class="text-lg font-bold text-slate-800 mb-2">Explore Related Financial Tools & Calculators</h3>
+    <p class="text-xs text-slate-500 mb-4">Compare options across investments, tax savings, and compounding growth:</p>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-medium">
+        <a href="/sip/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SIP Calculator</a>
+        <a href="/fd/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">FD Calculator</a>
+        <a href="/ppf/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">PPF Calculator</a>
+        <a href="/cagr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">CAGR Calculator</a>
+        <a href="/xirr/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">XIRR Calculator</a>
+        <a href="/income-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Income Tax Tool</a>
+        <a href="/capital-gains-tax/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Capital Gains Tax</a>
+        <a href="/lumpsum/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Lumpsum Calculator</a>
+        <a href="/inflation/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">Inflation Calculator</a>
+        <a href="/swp/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">SWP Calculator</a>
+        <a href="/rd/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">RD Calculator</a>
+        <a href="/80c-tax-saving/" class="p-2.5 bg-white border border-slate-200 rounded-lg text-blue-600 hover:underline hover:border-blue-300 transition-all text-center">80C Tax Saving</a>
+    </div>
+</div>
+
+</article>
+        
+        <!-- FAQs -->
+        <div class="mb-16">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        What is Yield on Cost (YOC)?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Yield on Cost is the annual dividend you receive from a stock divided by the original price you paid for that stock, expressed as a percentage.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        How is it different from Current Dividend Yield?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Current Dividend Yield uses the stock's market price *today*. Yield on Cost uses the price *you* paid years ago. As a stock's price goes up, its current yield drops, but your personal yield on cost remains high.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Why is Yield on Cost important?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        It shows the true cash return you are getting on your initial capital. It proves the power of holding strong dividend-paying companies over decades, as companies increase their dividends over time.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Can Yield on Cost reach 100%?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        Yes! Legendary investors who buy and hold for decades often see their Yield on Cost surpass 100%. This means the company pays them back their entire initial investment in cash dividends every single year.
+                    </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Should I buy a stock just for its Yield on Cost?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        No. Yield on Cost is a backward-looking metric that rewards holding. You cannot buy a stock today and get someone else's Yield on Cost. You only get today's Current Yield.
+                    </div>
+                </details>
+                
+                <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                        Does YOC account for stock splits?
+                        <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                        To calculate YOC accurately after a stock split, you must adjust your Original Purchase Price downwards proportionally to the split ratio.
+                    </div>
+                </details>
+        <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                How is Yield on Cost different from Dividend Yield?
+                <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+            <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                Dividend Yield is based on current market price, while Yield on Cost is based on your initial cost price.
+            </div>
+        </details>
+        <details class="group bg-white border border-slate-200 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-slate-900 font-semibold text-lg hover:text-blue-600 transition-colors">
+                Does Yield on Cost account for stock splits and bonus shares?
+                <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </summary>
+            <div class="px-5 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                Yes, when stock splits or bonus shares occur, your effective cost per share decreases, increasing your overall Yield on Cost.
+            </div>
+        </details>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Global JS Hooks for Linking & Search -->
+    <div id="arthcalculatorLinkingHub"></div>
+    <script src="/js/related-tools.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    
+    <div id="footer"></div>
+    <script>
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+        const elements = {
+            buyPrice: document.getElementById('buyPrice'),
+            currentPrice: document.getElementById('currentPrice'),
+            dividend: document.getElementById('dividend'),
+            
+            yocVal: document.getElementById('yocVal'),
+            yocText: document.getElementById('yocText'),
+            currentYieldVal: document.getElementById('currentYieldVal'),
+            
+            bonusYoc: document.getElementById('bonusYoc'),
+            capitalGains: document.getElementById('capitalGains')
+        };
+
+        function calculateYOC() {
+            const buy = parseFloat(elements.buyPrice.value) || 0;
+            const current = parseFloat(elements.currentPrice.value) || 0;
+            const div = parseFloat(elements.dividend.value) || 0;
+            
+            if (buy > 0) {
+                const yoc = (div / buy) * 100;
+                elements.yocVal.textContent = yoc.toFixed(2) + "%";
+                elements.yocText.textContent = yoc.toFixed(2) + "%";
+                elements.bonusYoc.textContent = yoc.toFixed(2) + "%";
+                
+                const gains = ((current - buy) / buy) * 100;
+                elements.capitalGains.textContent = gains.toFixed(0) + "%";
+            }
+            
+            if (current > 0) {
+                const currentYield = (div / current) * 100;
+                elements.currentYieldVal.textContent = currentYield.toFixed(2) + "%";
+            }
+        }
+
+        elements.buyPrice.addEventListener('input', calculateYOC);
+        elements.currentPrice.addEventListener('input', calculateYOC);
+        elements.dividend.addEventListener('input', calculateYOC);
+
+        window.addEventListener('DOMContentLoaded', calculateYOC);
+    </script>
+</body>
+</html>
