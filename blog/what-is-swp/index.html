@@ -21,14 +21,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>body{font-family:Inter,sans-serif;background:#f8fafc}.prose p{margin:0 0 1rem;line-height:1.8}.prose h2{margin-top:2.8rem}.prose h3{margin-top:1.8rem}</style>
 <script type="application/ld+json">
+
 {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Organization",
-      "name": "ArthCalculator",
-      "url": "https://arthcalculator.in/"
-    },
     {
       "@type": "WebPage",
       "name": "What is SWP?",
@@ -37,37 +33,119 @@
     {
       "@type": "Article",
       "headline": "What is SWP? The Ultimate Guide to Systematic Withdrawal Plans",
-      "mainEntityOfPage": "https://arthcalculator.in/blog/what-is-swp/",
-      "publisher": {
-        "@type": "Organization",
-        "name": "ArthCalculator"
-      }
+      "mainEntityOfPage": "https://arthcalculator.in/blog/what-is-swp/"
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/"},
-        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://arthcalculator.in/blog/"},
-        {"@type": "ListItem", "position": 3, "name": "What is SWP?", "item": "https://arthcalculator.in/blog/what-is-swp/"}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://arthcalculator.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://arthcalculator.in/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "What is SWP?",
+          "item": "https://arthcalculator.in/blog/what-is-swp/"
+        }
       ]
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
-        {"@type": "Question", "name": "What is an SWP?", "acceptedAnswer": {"@type": "Answer", "text": "A Systematic Withdrawal Plan (SWP) is a mutual fund facility that allows an investor to withdraw a fixed amount of money from their mutual fund corpus at regular intervals (usually monthly)."}},
-        {"@type": "Question", "name": "How is SWP different from SIP?", "acceptedAnswer": {"@type": "Answer", "text": "SIP (Systematic Investment Plan) is a mechanism to systematically inject money into a mutual fund to build wealth. SWP is the exact opposite; it systematically extracts money from a built corpus to generate regular income."}},
-        {"@type": "Question", "name": "Does my remaining money still earn returns in an SWP?", "acceptedAnswer": {"@type": "Answer", "text": "Yes! Only the fixed withdrawal amount is redeemed each month. The rest of your corpus remains invested in the mutual fund, continuing to earn market returns and compound over time."}},
-        {"@type": "Question", "name": "Will an SWP eventually deplete my entire principal?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on your withdrawal rate. If your withdrawal rate (e.g., 6%) is lower than the fund's growth rate (e.g., 10%), your principal will actually continue to grow. If you withdraw faster than the fund grows, your principal will eventually hit zero."}},
-        {"@type": "Question", "name": "What is a safe withdrawal rate for an SWP?", "acceptedAnswer": {"@type": "Answer", "text": "Financial planners globally recommend a Safe Withdrawal Rate (SWR) of around 4% to 5% annually if your goal is to preserve the principal corpus indefinitely while adjusting for inflation."}},
-        {"@type": "Question", "name": "Are SWP withdrawals taxable?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, but they are highly tax-efficient. In an SWP, you are selling mutual fund units. Only the 'capital gains' portion of each sold unit is taxed (STCG or LTCG). The principal portion of the withdrawal is completely tax-free."}},
-        {"@type": "Question", "name": "Can I change my SWP amount later?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, an SWP is completely flexible. You can stop, increase, decrease, or pause your withdrawal mandate at any time without paying any penalties to the AMC."}},
-        {"@type": "Question", "name": "Should I run an SWP from an equity or debt fund?", "acceptedAnswer": {"@type": "Answer", "text": "If you need guaranteed stability and cannot tolerate market crashes, run the SWP from a Debt or Hybrid fund. Running an SWP from a pure Equity fund is highly risky because withdrawing during a market crash severely damages your corpus."}},
-        {"@type": "Question", "name": "What is the Bucket Strategy?", "acceptedAnswer": {"@type": "Answer", "text": "It is a retirement strategy where you keep 3-5 years of SWP expenses in a safe Debt fund (Bucket 1) and the rest in an Equity fund (Bucket 2). You run the SWP from the debt fund, periodically refilling it from equity."}},
-        {"@type": "Question", "name": "Can I have both SIP and SWP in the same fund?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, technically, but it makes no financial sense. You would be injecting money and withdrawing it simultaneously, incurring exit loads and capital gains taxes for no logical reason."}}
+        {
+          "@type": "Question",
+          "name": "What is an SWP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Systematic Withdrawal Plan (SWP) is a mutual fund facility that allows an investor to withdraw a fixed amount of money from their mutual fund corpus at regular intervals (usually monthly)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is SWP different from SIP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SIP (Systematic Investment Plan) is a mechanism to systematically inject money into a mutual fund to build wealth. SWP is the exact opposite; it systematically extracts money from a built corpus to generate regular income."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does my remaining money still earn returns in an SWP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Only the fixed withdrawal amount is redeemed each month. The rest of your corpus remains invested in the mutual fund, continuing to earn market returns and compound over time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will an SWP eventually deplete my entire principal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on your withdrawal rate. If your withdrawal rate (e.g., 6%) is lower than the fund's growth rate (e.g., 10%), your principal will actually continue to grow. If you withdraw faster than the fund grows, your principal will eventually hit zero."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a safe withdrawal rate for an SWP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Financial planners globally recommend a Safe Withdrawal Rate (SWR) of around 4% to 5% annually if your goal is to preserve the principal corpus indefinitely while adjusting for inflation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are SWP withdrawals taxable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, but they are highly tax-efficient. In an SWP, you are selling mutual fund units. Only the 'capital gains' portion of each sold unit is taxed (STCG or LTCG). The principal portion of the withdrawal is completely tax-free."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I change my SWP amount later?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, an SWP is completely flexible. You can stop, increase, decrease, or pause your withdrawal mandate at any time without paying any penalties to the AMC."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I run an SWP from an equity or debt fund?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you need guaranteed stability and cannot tolerate market crashes, run the SWP from a Debt or Hybrid fund. Running an SWP from a pure Equity fund is highly risky because withdrawing during a market crash severely damages your corpus."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Bucket Strategy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is a retirement strategy where you keep 3-5 years of SWP expenses in a safe Debt fund (Bucket 1) and the rest in an Equity fund (Bucket 2). You run the SWP from the debt fund, periodically refilling it from equity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I have both SIP and SWP in the same fund?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, technically, but it makes no financial sense. You would be injecting money and withdrawing it simultaneously, incurring exit loads and capital gains taxes for no logical reason."
+          }
+        }
       ]
     }
   ]
 }
+
 </script>
 </head>
 <body class="text-slate-700">
