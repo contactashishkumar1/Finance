@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-Step & 5-Step DuPont Analysis: Deconstructing Return on Equity (RoE) | ArthCalculator</title>
+    <meta name="description" content="Master 3-step and 5-step DuPont Analysis. Deconstruct Return on Equity (RoE) into Net Profit Margin, Asset Turnover, Financial Leverage, Tax Burden, and Interest Burden.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/blog/du-pont-analysis-roe-breakdown-formula/">
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="3-Step & 5-Step DuPont Analysis: Deconstructing Return on Equity (RoE)">
+    <meta property="og:description" content="Master 3-step and 5-step DuPont Analysis. Deconstruct Return on Equity (RoE) into Net Profit Margin, Asset Turnover, Financial Leverage, Tax Burden, and Interest Burden.">
+    <meta property="og:url" content="https://arthcalculator.in/blog/du-pont-analysis-roe-breakdown-formula/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="3-Step & 5-Step DuPont Analysis: Deconstructing Return on Equity (RoE)">
+    <meta name="twitter:description" content="Master 3-step and 5-step DuPont Analysis. Deconstruct Return on Equity (RoE) into Net Profit Margin, Asset Turnover, Financial Leverage, Tax Burden, and Interest Burden.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .prose p { margin-bottom: 1.35rem; line-height: 1.85; }
+        .prose h2 { margin-top: 2.75rem; margin-bottom: 1rem; }
+        .prose h3 { margin-top: 2rem; margin-bottom: 0.75rem; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "name": "3-Step & 5-Step DuPont Analysis: Deconstructing Return on Equity (RoE)",
+          "url": "https://arthcalculator.in/blog/du-pont-analysis-roe-breakdown-formula/"
+        },
+        {
+          "@type": "Article",
+          "headline": "3-Step & 5-Step DuPont Analysis: Deconstructing Return on Equity (RoE)",
+          "description": "Master 3-step and 5-step DuPont Analysis. Deconstruct Return on Equity (RoE) into Net Profit Margin, Asset Turnover, Financial Leverage, Tax Burden, and Interest Burden.",
+          "mainEntityOfPage": "https://arthcalculator.in/blog/du-pont-analysis-roe-breakdown-formula/",
+          "publisher": {
+            "@type": "Organization",
+            "name": "ArthCalculator",
+            "url": "https://arthcalculator.in/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://arthcalculator.in/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Financial Guides",
+              "item": "https://arthcalculator.in/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "3-Step & 5-Step DuPont Analysis: Deconstructing Return on Equity (RoE)",
+              "item": "https://arthcalculator.in/blog/du-pont-analysis-roe-breakdown-formula/"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {"@type":"Question","name":"What is DuPont Analysis?","acceptedAnswer":{"@type":"Answer","text":"DuPont Analysis is a financial framework created by the DuPont Corporation in the 1920s that breaks down Return on Equity (RoE) into its operational and financial components."}},
+        {"@type":"Question","name":"Why is DuPont Analysis superior to simple RoE?","acceptedAnswer":{"@type":"Answer","text":"Simple RoE can be artificially inflated by taking on excessive debt. DuPont Analysis isolates financial leverage from core operational profitability."}},
+        {"@type":"Question","name":"What is the 5-Step DuPont Analysis formula?","acceptedAnswer":{"@type":"Answer","text":"5-Step DuPont = Tax Burden × Interest Burden × EBIT Margin × Asset Turnover × Financial Leverage."}},
+        {"@type":"Question","name":"What is a good Financial Leverage Multiplier?","acceptedAnswer":{"@type":"Answer","text":"A financial leverage multiplier between 1.2x and 2.0x is healthy for non-financial companies. Multipliers above 4.0x indicate heavy debt reliance."}},
+        {"@type":"Question","name":"Why do retail banks have high Financial Leverage multipliers?","acceptedAnswer":{"@type":"Answer","text":"Banks naturally operate with high financial leverage multipliers (10x-15x) because customer deposits are liabilities funding loan assets."}}
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="text-slate-700 antialiased min-h-screen">
+    <div id="navbar"></div>
+
+    <main class="max-w-4xl mx-auto px-4 py-10 sm:py-16">
+        <!-- Breadcrumbs -->
+        <nav class="flex mb-8 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-start" aria-label="Breadcrumb">
+            <ol class="flex list-none p-0 flex-wrap items-center">
+                <li class="flex items-center">
+                    <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="/blog/" class="hover:text-blue-600 transition-colors">Financial Guides</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="text-blue-600 font-bold truncate max-w-[200px] sm:max-w-none">3-Step & 5-Step DuPont Analysis: Deconstructing Return on Equity (RoE)</li>
+            </ol>
+        </nav>
+
+        <article>
+            <header class="border-b border-slate-200 pb-8">
+                <div class="flex items-center gap-3">
+                    <span class="text-blue-700 bg-blue-50 border border-blue-200 text-xs font-semibold px-3 py-1 rounded-full">Fundamental Stock Analysis</span>
+                    <span class="text-slate-500 text-xs font-medium">12 min read</span>
+                </div>
+                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 mt-4 leading-tight">
+                    3-Step & 5-Step DuPont Analysis: Deconstructing Return on Equity (RoE)
+                </h1>
+                <p class="text-lg text-slate-600 mt-4 leading-relaxed">
+                    Analyzing high RoE stocks? Learn how DuPont Analysis breaks down Return on Equity into profit margin, asset efficiency, and financial leverage to spot quality companies.
+                </p>
+            </header>
+
+            <div class="prose mt-10">
+                <!-- Executive Summary Section -->
+                <section class="not-prose space-y-4 mb-10">
+                    <div class="bg-blue-50/70 border-2 border-blue-100/90 rounded-2xl p-6 sm:p-8 shadow-sm">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="bg-blue-100 text-blue-700 border border-blue-200 text-xs font-extrabold uppercase tracking-wider px-3 py-1 rounded-full">⚡ Executive Summary</span>
+                        </div>
+                        <h2 class="text-2xl font-extrabold text-slate-900 mb-3">Quick Answer & Overview</h2>
+                        <p class="text-slate-700 text-sm sm:text-base leading-relaxed font-medium">
+                            DuPont Analysis decomposes Return on Equity (RoE) into distinct sub-components: 3-step (Net Profit Margin × Asset Turnover × Equity Multiplier) and 5-step, revealing whether high RoE stems from operational excellence or dangerous debt leverage.
+                        </p>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="bg-blue-50 border border-blue-100 rounded-xl p-5">
+                            <h3 class="font-bold text-blue-900 text-base flex items-center gap-2">
+                                <span>📌 Key Takeaways</span>
+                            </h3>
+                            <ul class="mt-3 text-xs sm:text-sm text-slate-700 leading-relaxed list-disc pl-5 space-y-1.5">
+                                <li>3-Step DuPont Formula: RoE = Net Profit Margin × Asset Turnover × Financial Leverage.</li>
+<li>Profitability Component: Net Profit Margin (Net Income / Revenue).</li>
+<li>Efficiency Component: Asset Turnover (Revenue / Average Total Assets).</li>
+<li>Leverage Component: Financial Leverage Multiplier (Total Assets / Total Equity).</li>
+<li>Red Flag: A company achieving high RoE solely through high Financial Leverage carries high insolvency risk.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-amber-50 border border-amber-100 rounded-xl p-5">
+                            <h3 class="font-bold text-amber-900 text-base flex items-center gap-2">
+                                <span>🎯 What You'll Learn</span>
+                            </h3>
+                            <p class="mt-3 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                                How to separate operational performance from balance sheet financial engineering.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                
+<h2>Core Drivers & Real-World Mechanics of 3-Step & 5-Step DuPont Analysis</h2>
+<p>Understanding 3-Step & 5-Step DuPont Analysis requires evaluating how underlying market dynamics, tax structures, and fee friction interact over your investment horizon. Evaluating financial choices through empirical cash flow modeling prevents costly guesswork.</p>
+<p>Aligning product features directly with your specific liquidity requirements, risk tolerance, and time horizon ensures consistent long-term execution regardless of emotional market cycles.</p>
+
+<h2>Practical Implementation Blueprint & Key Decision Rules</h2>
+<p>Before executing any financial transaction or strategy, stress-test your assumptions against adverse market conditions. Ensure your liquid <a href="/emergency-fund/" class="text-blue-600 font-medium hover:underline">emergency fund</a> remains intact and review your portfolio parameters once every 12 months.</p>
+<h2 class="text-2xl font-bold text-slate-900">Detailed Comparison & Parameter Breakdown</h2>
+                <p>
+                    To gain complete clarity, let us break down the key parameters and features side-by-side:
+                </p>
+
+                <!-- Responsive Table -->
+                <div class="overflow-x-auto not-prose my-6 border border-slate-200 rounded-xl shadow-sm">
+                    <table class="w-full text-sm text-left">
+                        <thead class="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
+                            <tr>
+                                <th class="p-3 sm:p-4">DuPont Component</th>
+<th class="p-3 sm:p-4">Formula</th>
+<th class="p-3 sm:p-4">What it Measures</th>
+<th class="p-3 sm:p-4">High Value Signifies</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 bg-white">
+                            <tr><td class="p-3 sm:p-4">Net Profit Margin</td><td class="p-3 sm:p-4">Net Income / Revenue</td><td class="p-3 sm:p-4">Pricing power & cost control</td><td class="p-3 sm:p-4">High operational profitability</td></tr>
+<tr><td class="p-3 sm:p-4">Asset Turnover Ratio</td><td class="p-3 sm:p-4">Revenue / Average Total Assets</td><td class="p-3 sm:p-4">Efficiency of asset utilization</td><td class="p-3 sm:p-4">High capital efficiency</td></tr>
+<tr><td class="p-3 sm:p-4">Financial Leverage</td><td class="p-3 sm:p-4">Total Assets / Total Equity</td><td class="p-3 sm:p-4">Use of debt financing</td><td class="p-3 sm:p-4">High leverage / financial risk</td></tr>
+<tr><td class="p-3 sm:p-4">Tax Burden (5-Step)</td><td class="p-3 sm:p-4">Net Income / EBT</td><td class="p-3 sm:p-4">Tax efficiency & incentives</td><td class="p-3 sm:p-4">Low corporate tax drain</td></tr>
+<tr><td class="p-3 sm:p-4">Interest Burden (5-Step)</td><td class="p-3 sm:p-4">EBT / EBIT</td><td class="p-3 sm:p-4">Impact of interest expenses</td><td class="p-3 sm:p-4">Low debt interest drag</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    As illustrated in the comparison matrix above, selecting the appropriate financial strategy requires aligning product features directly with your cash flow constraints and investment goals.
+                </p>
+
+                <h2 class="text-2xl font-bold text-slate-900">Step-by-Step Worked Numerical Example</h2>
+                <p>
+                    Mathematical modeling provides concrete clarity. Consider the following practical worked scenario to visualize real-world financial impact:
+                </p>
+
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 not-prose space-y-3 text-sm my-6">
+                    <div class="font-bold text-slate-900 text-base border-b pb-2">Worked Example: Comparing Firm A (Operational Efficiency) vs Firm B (High Debt)</div>
+                    <div class="flex justify-between flex-wrap gap-2"><span>Firm A (High Margin & Efficiency):</span><span class="font-bold text-slate-900">Profit Margin = 15% | Asset Turnover = 1.2x | Leverage = 1.1x -> RoE = 15% × 1.2 × 1.1 = 19.8% (High Quality RoE!)</span></div>
+<div class="flex justify-between flex-wrap gap-2"><span>Firm B (Low Margin, Heavy Debt):</span><span class="font-bold text-slate-900">Profit Margin = 4% | Asset Turnover = 0.8x | Leverage = 6.2x -> RoE = 4% × 0.8 × 6.2 = 19.8% (High Risk Debt Trap!)</span></div>
+<div class="flex justify-between flex-wrap gap-2"><span>Key Takeaway:</span><span class="font-bold text-slate-900">Both show identical 19.8% RoE, but DuPont analysis exposes Firm B as a fragile leverage risk!</span></div>
+                </div>
+
+                <p>
+                    This scenario clearly highlights why mathematical compounding and fee minimization are the two most powerful levers for long-term wealth creation. Small adjustments in yields or costs create dramatic divergence in final portfolio balances over 10 to 20 years.
+                </p>
+                <p>
+                    Investors should also remain mindful of tax efficiency. Structuring cash flows to utilize statutory deductions and capital gain exemptions can significantly enhance net take-home returns without taking extra investment risk.
+                </p>
+
+                <!-- Expert Tip Callout -->
+                <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 not-prose my-6">
+                    <h3 class="font-bold text-blue-900 text-base flex items-center gap-2">
+                        <span>💡 Strategic Financial Advice</span>
+                    </h3>
+                    <p class="mt-2 text-sm text-slate-700 leading-relaxed">
+                        Always perform a net-of-tax, net-of-inflation calculation before committing to any long-term financial product. Test your assumptions using interactive financial calculators rather than relying on promotional product estimates.
+                    </p>
+                </div>
+
+                
+
+                <!-- Warning Callout -->
+                <div class="bg-rose-50 border border-rose-100 rounded-xl p-5 not-prose my-6">
+                    <h3 class="font-bold text-rose-900 text-base flex items-center gap-2">
+                        <span>⚠️ Important Caution & Risk Disclosure</span>
+                    </h3>
+                    <p class="mt-2 text-sm text-slate-700 leading-relaxed">
+                        Past historical returns are not a guarantee of future performance. Market conditions, interest rate cycles, and regulatory tax structures evolve over time. Always rebalance your portfolio annually to maintain your target risk profile.
+                    </p>
+                </div>
+
+                <!-- Related Calculators CTA Hub -->
+                
+<h2>Deep Fundamental Core Principles & Strategic Context</h2>
+<p>To master 3-Step & 5-Step DuPont Analysis at an expert level, investors and financial planners must evaluate the underlying mathematical mechanics, economic trade-offs, and behavioral factors that drive long-term outcomes:</p>
+<ul class="list-disc pl-6 space-y-2">
+    <li><strong>Mathematical Compounding & Friction Control:</strong> Small reductions in annual expense ratios, transaction fees, and tax drag create dramatic divergence in final portfolio balances over 10 to 20 years. Minimizing unnecessary friction preserves capital growth.</li>
+    <li><strong>Behavioral Finance & Execution Discipline:</strong> Emotional biases—such as panic selling during market drawdowns or chasing past short-term returns—frequently cause investors to underperform the underlying assets they own. Establishing an automated, rules-based process enforces execution consistency.</li>
+    <li><strong>Risk-Adjusted Return Optimization:</strong> High nominal returns must always be evaluated against the risk taken to achieve them. Utilizing risk metrics such as Sharpe Ratio, Sortino Ratio, and Maximum Drawdown ensures portfolio resilience.</li>
+</ul>
+
+<h2>Comprehensive Step-by-Step Practical Implementation Blueprint</h2>
+<ul class="list-disc pl-6 space-y-2">
+    <li>Define clear financial goals, time horizons, and target return requirements.</li>
+    <li>Calculate net-of-tax and net-of-fee expected returns before committing capital.</li>
+    <li>Maintain a dedicated 6-month liquid emergency fund before making long-term growth investments.</li>
+    <li>Audit and rebalance strategy parameters once every 12 months.</li>
+</ul>
+
+
+
+<h2>Regulatory Guidelines, Compliance & Risk Management Framework</h2>
+<p>To ensure long-term wealth preservation when executing financial decisions around Du Pont Analysis Roe Breakdown Formula, investors must align strategy execution with current regulatory frameworks issued by SEBI, RBI, and CBDT:</p>
+<ul class="list-disc pl-6 space-y-2">
+    <li><strong>Statutory Tax Compliance:</strong> Maintaining proper transaction logs, Form 16/16A certificates, and AIS statements prevents unexpected tax audit queries under Section 143(1).</li>
+    <li><strong>Friction Control:</strong> Small recurring losses from high expense ratios, brokerage markups, or exit loads compound into major wealth penalties over 10-year horizons. Minimizing unnecessary friction optimizes net compound yields.</li>
+</ul>
+
+<h2>5-Step Execution Blueprint & Annual Review Checklist</h2>
+<ul class="list-disc pl-6 space-y-2">
+    <li>Audit cash flows and categorize capital into emergency, short-term debt, and long-term equity buckets.</li>
+    <li>Calculate net post-tax, post-inflation real return expectations before deploying capital.</li>
+    <li>Set automated payday investment mandates to enforce emotional discipline during volatile market cycles.</li>
+    <li>Review portfolio allocations, nominee designations, and health coverage limits annually.</li>
+</ul>
+
+
+<div class="bg-gradient-to-br from-slate-50 to-blue-50/70 border border-blue-100 rounded-2xl p-6 sm:p-8 my-10 not-prose shadow-sm">
+                    <div class="text-xs font-extrabold uppercase tracking-widest text-blue-600 mb-2">Tools & Calculators</div>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 mb-3">Calculate & Plan Your Financial Journey</h3>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                        Use ArthCalculator's free interactive tools to run your numbers, stress-test your portfolio, and make informed financial decisions.
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-3">
+                        <a href="/dupont-analysis/" class="bg-white hover:bg-blue-600 hover:text-white text-slate-800 p-4 rounded-xl font-bold text-sm transition-all border border-slate-200 hover:border-blue-600 flex items-center justify-between group shadow-sm"><span>DuPont Analysis Calculator</span><span class="group-hover:translate-x-1 transition-transform">→</span></a>
+<a href="/blog/pe-ratio-vs-pb-ratio-valuation/" class="bg-white hover:bg-blue-600 hover:text-white text-slate-800 p-4 rounded-xl font-bold text-sm transition-all border border-slate-200 hover:border-blue-600 flex items-center justify-between group shadow-sm"><span>P/E Ratio Calculator</span><span class="group-hover:translate-x-1 transition-transform">→</span></a>
+<a href="/profit-margin/" class="bg-white hover:bg-blue-600 hover:text-white text-slate-800 p-4 rounded-xl font-bold text-sm transition-all border border-slate-200 hover:border-blue-600 flex items-center justify-between group shadow-sm"><span>Profit Margin Calculator</span><span class="group-hover:translate-x-1 transition-transform">→</span></a>
+<a href="/working-capital/" class="bg-white hover:bg-blue-600 hover:text-white text-slate-800 p-4 rounded-xl font-bold text-sm transition-all border border-slate-200 hover:border-blue-600 flex items-center justify-between group shadow-sm"><span>Working Capital Calculator</span><span class="group-hover:translate-x-1 transition-transform">→</span></a>
+                    </div>
+                </div>
+
+                
+
+                <!-- FAQ Section -->
+                
+<h2>Common Misconceptions & Real-World Execution Pitfalls</h2>
+<p>When implementing strategies around 3-Step & 5-Step DuPont Analysis, individual investors frequently encounter subtle traps that can erode net take-home returns or expose portfolios to unintended risks:</p>
+<ul class="list-disc pl-6 space-y-2">
+    <li><strong>Confusing Gross Yields with Net Post-Tax Returns:</strong> Evaluating financial products purely on headline promotional rates without accounting for applicable income tax slab rates, TDS withholdings, and exit loads leads to inaccurate decision-making. Always model cash flows on a net post-tax, post-fee basis.</li>
+    <li><strong>Ignoring Inflation Erosion over Long Horizons:</strong> A nominal return of 7% in an environment with 6% retail inflation yields a real purchasing power gain of only ~1%. Portfolio allocations must include growth assets that outpace statutory inflation rates.</li>
+    <li><strong>Chasing Past Performance Cycles:</strong> Re-allocating capital based solely on trailing 1-year returns often results in buying asset classes at market tops immediately prior to mean-reversion cycles. Establishing a disciplined, rules-based rebalancing framework prevents emotional timing errors.</li>
+</ul>
+
+<h2>Comprehensive Pre-Execution Compliance & Security Checklist</h2>
+<ul class="list-disc pl-6 space-y-2">
+    <li>Verify all statutory tax slab rates, deduction limits, and compliance deadline dates for the current financial year.</li>
+    <li>Maintain an unencumbered liquid emergency reserve covering at least 6 months of essential household expenses.</li>
+    <li>Stress-test financial projections against conservative return scenarios rather than best-case historical rallies.</li>
+    <li>Audit folio nominations, bank mandate links, and contact details across all financial institutions annually.</li>
+</ul>
+
+
+
+<h2>Real-World Case Study: 5-Year Portfolio Impact</h2>
+<p>To illustrate the practical value of applying 3-Step & 5-Step DuPont Analysis principles in daily financial planning, let us evaluate a 5-year worked case study comparing a disciplined strategy against a conventional baseline strategy:</p>
+
+<div class="overflow-x-auto my-6">
+    <table class="min-w-full bg-white border border-slate-200 rounded-xl text-left text-sm">
+        <thead class="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
+            <tr>
+                <th class="p-3.5">Strategy Parameter</th>
+                <th class="p-3.5">Conventional Approach</th>
+                <th class="p-3.5 text-blue-700 font-extrabold">Optimized Strategy</th>
+                <th class="p-3.5 text-emerald-700 font-extrabold">Net Benefit (5-Year)</th>
+            </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr>
+                <td class="p-3.5 font-medium">Annual Tax / Fee Drag Rate</td>
+                <td class="p-3.5 text-rose-600 font-semibold">2.50% p.a.</td>
+                <td class="p-3.5 text-emerald-600 font-semibold">0.65% p.a.</td>
+                <td class="p-3.5 font-bold text-slate-900">+1.85% p.a. Savings</td>
+            </tr>
+            <tr>
+                <td class="p-3.5 font-medium">Effective 5-Year Net Wealth (₹10 Lakh Base)</td>
+                <td class="p-3.5">₹14.69 Lakh</td>
+                <td class="p-3.5 text-blue-700 font-bold">₹16.10 Lakh</td>
+                <td class="p-3.5 text-emerald-600 font-extrabold">+₹1,41,000 Wealth Gain</td>
+            </tr>
+            <tr>
+                <td class="p-3.5 font-medium">Drawdown Volatility Protection</td>
+                <td class="p-3.5">Unprotected (-22% Max Drawdown)</td>
+                <td class="p-3.5">Hedged (-8% Max Drawdown)</td>
+                <td class="p-3.5">Superior Risk-Adjusted Profile</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p class="text-sm text-slate-600 leading-relaxed mt-2">As demonstrated in the worked matrix above, minimizing structural friction (taxes, expense markups, and unhedged drawdowns) compounds into substantial additional net wealth over a 5-year execution horizon.</p>
+
+
+<h2 class="text-2xl font-bold text-slate-900 mt-12 mb-6">Frequently Asked Questions</h2>
+                <div class="space-y-3 not-prose">
+                    <details class="border border-slate-200 rounded-xl p-4 bg-white shadow-sm"><summary class="font-semibold text-slate-900 cursor-pointer flex justify-between items-center"><span>What is DuPont Analysis?</span><svg class="w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><p class="mt-3 text-sm text-slate-600 leading-relaxed">DuPont Analysis is a financial framework created by the DuPont Corporation in the 1920s that breaks down Return on Equity (RoE) into its operational and financial components.</p></details>
+<details class="border border-slate-200 rounded-xl p-4 bg-white shadow-sm"><summary class="font-semibold text-slate-900 cursor-pointer flex justify-between items-center"><span>Why is DuPont Analysis superior to simple RoE?</span><svg class="w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><p class="mt-3 text-sm text-slate-600 leading-relaxed">Simple RoE can be artificially inflated by taking on excessive debt. DuPont Analysis isolates financial leverage from core operational profitability.</p></details>
+<details class="border border-slate-200 rounded-xl p-4 bg-white shadow-sm"><summary class="font-semibold text-slate-900 cursor-pointer flex justify-between items-center"><span>What is the 5-Step DuPont Analysis formula?</span><svg class="w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><p class="mt-3 text-sm text-slate-600 leading-relaxed">5-Step DuPont = Tax Burden × Interest Burden × EBIT Margin × Asset Turnover × Financial Leverage.</p></details>
+<details class="border border-slate-200 rounded-xl p-4 bg-white shadow-sm"><summary class="font-semibold text-slate-900 cursor-pointer flex justify-between items-center"><span>What is a good Financial Leverage Multiplier?</span><svg class="w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><p class="mt-3 text-sm text-slate-600 leading-relaxed">A financial leverage multiplier between 1.2x and 2.0x is healthy for non-financial companies. Multipliers above 4.0x indicate heavy debt reliance.</p></details>
+<details class="border border-slate-200 rounded-xl p-4 bg-white shadow-sm"><summary class="font-semibold text-slate-900 cursor-pointer flex justify-between items-center"><span>Why do retail banks have high Financial Leverage multipliers?</span><svg class="w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><p class="mt-3 text-sm text-slate-600 leading-relaxed">Banks naturally operate with high financial leverage multipliers (10x-15x) because customer deposits are liabilities funding loan assets.</p></details>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <div id="footer"></div>
+    <script src="/js/search.js" defer></script>
+    <script>
+        fetch("/navbar.html").then(r => r.text()).then(t => { document.getElementById("navbar").innerHTML = t; });
+        fetch("/footer.html").then(r => r.text()).then(t => { document.getElementById("footer").innerHTML = t; });
+    </script>
+</body>
+</html>

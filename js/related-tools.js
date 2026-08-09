@@ -11,173 +11,2221 @@
         const currentURL = window.location.href.toLowerCase();
 
         // 171 Calculators Core Database Mapping Matrix (Aligned with XML Sitemap Specifications)
+        // Strictly 316 Calculator Pages Matrix
         const db = [
-            // --- INVESTMENT, MUTUAL FUNDS & RETIREMENT ---
-            { name: "SIP Calculator", url: "/sip/", icon: "📈", category: "investment", keys: "sip mutual fund investment returns compounding systematic plan mf allocation" },
-            { name: "Lumpsum Growth Calc", url: "/lumpsum/", icon: "💰", category: "investment", keys: "lumpsum one time investment wealth compounding mf stock returns future value" },
-            { name: "CAGR Growth Tool", url: "/cagr/", icon: "📊", category: "investment", keys: "cagr compound annual growth rate portfolio return business analytics percentage valuation" },
-            { name: "Step Up SIP Optimizer", url: "/step-up-sip/", icon: "🚀", category: "investment", keys: "step up incremental sip salary hike increase top up compounding allocation" },
-            { name: "XIRR Portfolio Analyzer", url: "/xirr/", icon: "💹", category: "investment", keys: "xirr irr extended internal rate of return irregular cash flows buy sell stock shares" },
-            { name: "Compound Interest Engine", url: "/compound-interest/", icon: "⏳", category: "investment", keys: "compound interest compounding savings asset growth wealth math continuous" },
-            { name: "FD Calculator (Fixed Deposit)", url: "/fd/", icon: "🏦", category: "investment", keys: "fd fixed deposit banking safe returns interest monthly payout compounding sbi bank" },
-            { name: "RD Calculator (Recurring Deposit)", url: "/rd/", icon: "⏱️", category: "investment", keys: "rd recurring deposit banks post office monthly savings schemes installment compounding" },
-            { name: "SWP Withdrawal Planner", url: "/swp/", icon: "🏧", category: "investment", keys: "swp systematic withdrawal plan retirement regular monthly cash income payout dividends" },
-            { name: "PPF Wealth Accumulator", url: "/ppf/", icon: "🛡️", category: "investment", keys: "ppf public provident fund government savings scheme tax free safe interest post office" },
-            { name: "EPF Retirement Passbook", url: "/epf/", icon: "💼", category: "investment", keys: "epf pf provident fund employee contribution pension passbook balance sbi interest" },
-            { name: "NPS Tax Alpha Optimizer", url: "/nps-optimizer-2026/", icon: "👴", category: "investment", keys: "nps national pension scheme tier 1 corporate model 80ccd active choice auto choice" },
-            { name: "Sukanya Samriddhi Yojana", url: "/ssy/", icon: "👧", category: "investment", keys: "ssy ssa sukanya samriddhi yojana girl child daughter saving interest post office compounding" },
-            { name: "Mutual Fund Return Planner", url: "/mutual-fund-returns/", icon: "🎯", category: "investment", keys: "mutual fund returns absolute mf performance metrics direct regular equity" },
-            { name: "SIP vs FD Comparison", url: "/sip-vs-fd/", icon: "⚔️", category: "investment", keys: "sip vs fd fixed deposit mutual fund yield returns risk vs reward contrast asset allocation" },
-            { name: "Asset Allocation Model", url: "/asset-allocation/", icon: "⚖️", category: "investment", keys: "asset allocation diversification portfolio risk rebalancing equity debt gold capital" },
-            { name: "Simple Interest Calculator", url: "/simple-interest/", icon: "🧮", category: "investment", keys: "simple interest si flat rate tracking borrowing linear math banking formulas" },
-            { name: "Real Rate of Return Finder", url: "/real-return/", icon: "📉", category: "investment", keys: "real return net inflation adjusted adjustments purchasing power yield true value gains" },
-            { name: "Alpha Portfolio Yield", url: "/alpha/", icon: "⚡", category: "investment", keys: "alpha portfolio return asset metric outperformance market benchmark mutual funds gains" },
-            { name: "Beta Market Risk Metric", url: "/beta/", icon: "📉", category: "investment", keys: "beta market risk volatility portfolio benchmark capm metrics tracking shares equity" },
-            { name: "Bonus Sizing Calculator", url: "/bonus-calculator/", icon: "🎁", category: "investment", keys: "bonus calculator corporate action share dilution equity issuance ratios split" },
-            { name: "Dividend Growth Model", url: "/dividend-growth/", icon: "🧳", category: "investment", keys: "dividend growth ddm valuation constant compounding returns pricing streams projections" },
-            { name: "Dividend Yield Tracker", url: "/dividend-yield/", icon: "🎟️", category: "investment", keys: "dividend yield payout tracking portfolio income passive stock cash flow reserves" },
-            { name: "Financial Goal Planner", url: "/financial-goal-planner/", icon: "🎯", category: "investment", keys: "financial goal planner timeline corpus requirements multi asset allocation targeting milestone" },
-            { name: "Financial Independence Grid", url: "/financial-independence/", icon: "🏁", category: "investment", keys: "financial independence corpus runaway metrics fire multiplier safe withdrawal models portfolio" },
-            { name: "FIRE Calculator Suite", url: "/fire-calculator/", icon: "🔥", category: "investment", keys: "fire early retirement independence fast savings tracking safe withdrawal multiplier expense projections" },
-            { name: "IRR Internal Return Engine", url: "/irr-calculator/", icon: "⏳", category: "investment", keys: "irr return metric yield hurdle cash outflow capital budgeting project timeline validation cash" },
-            { name: "Portfolio Overlap Finder", url: "/portfolio-overlap/", icon: "📂", category: "investment", keys: "portfolio overlap mutual fund diversification holdings stock concentration tracking assets direct equity" },
-            { name: "Portfolio Return Matrix", url: "/portfolio-return-calculator/", icon: "📊", category: "investment", keys: "portfolio return assets weights compounding absolute profile metrics track records return" },
-            { name: "Portfolio Rebalancing Matrix", url: "/portfolio-rebalancing/", icon: "🔄", category: "investment", keys: "portfolio rebalancing allocation deviation standard limits target layout buy sell equity debt allocation" },
-            { name: "Future Value (FV) Engine", url: "/future-value/", icon: "📈", category: "investment", keys: "future value fv compounding inflation cash projections math money timeline wealth appreciation valuation" },
-            { name: "Present Value (PV) Engine", url: "/present-value/", icon: "📉", category: "investment", keys: "present value pv discounting discounted cash flows time value money analytics liability calculations" },
-            { name: "Inflation Impact Calculator", url: "/inflation/", icon: "🎈", category: "investment", keys: "inflation indexing rupee value cost escalation historical parameters compounding decay cash purchasing" },
-            { name: "Inflation Adjusted SIP Tracker", url: "/inflation-adjusted-sip-calculator/", icon: "💹", category: "investment", keys: "inflation adjusted systematic planning required real yield mf adjustments future metrics target" },
-            { name: "Required CAGR Estimator", url: "/required-cagr-calculator/", icon: "📊", category: "investment", keys: "required cagr future goal target horizon calculation backward interest computation assets growth" },
-            { name: "Rolling Returns Consistency", url: "/rolling-returns/", icon: "⏳", category: "investment", keys: "rolling returns timeline mutual fund equity performance alpha consistency verification tracking profiling" },
-            { name: "Rule of 72 Doubling Time", url: "/rule-of-72/", icon: "🔢", category: "investment", keys: "rule of 72 compounding double timeline quick estimation interest division assets wealth" },
-            { name: "Sharpe Ratio Risk Adjuster", url: "/sharpe-ratio/", icon: "📊", category: "investment", keys: "sharpe risk adjusted portfolio return mutual fund evaluation metrics tracking variance asset" },
-            { name: "Sortino Ratio Variance Check", url: "/sortino-ratio/", icon: "📊", category: "investment", keys: "sortino ratio risk adjusted down side variance deviation portfolio mutual fund analytics volatility" },
-            { name: "Treynor Ratio Portfolio Metric", url: "/treynor-ratio/", icon: "📊", category: "investment", keys: "treynor ratio risk adjusted returns beta systematic mutual fund evaluation calculations framework" },
-            { name: "SRR Sequence Risk Simulator", url: "/srr-simulator/", icon: "🎲", category: "investment", keys: "srr sequence of returns risk portfolio cash drain tracking market cycles retirement variance run" },
-            { name: "Time Value of Money (TVM)", url: "/time-value-of-money/", icon: "⏳", category: "investment", keys: "tvm time value money finance foundational formulas discounting cash flows compounding timelines value" },
-            { name: "Time to Freedom Projection", url: "/time-to-financial-freedom/", icon: "⏳", category: "investment", keys: "time to financial freedom asset tracking runway models target saving compound rates milestone" },
-            { name: "Wealth Projection Horizon", url: "/wealth-projection/", icon: "📈", category: "investment", keys: "wealth trajectory balance compound projections model asset lifecycle tracking future values accumulation" },
-
-            // --- LOANS & DEBT METRICS ---
-            { name: "EMI Loan Calculator", url: "/emi/", icon: "💳", category: "loans", keys: "emi loan repayment reduction home personal car reducing absolute total interest schedule chart breakdown" },
-            { name: "Home Loan Planner", url: "/home-loan/", icon: "🏠", category: "loans", keys: "home loan eligibility processing house flat property builder bank sbi interest mortgages balance asset buy" },
-            { name: "Car Loan EMI Sheet", url: "/car-loan/", icon: "🚗", category: "loans", keys: "car vehicle auto transport loan emi interest reducing rate tenure downpayment bike dealership purchase" },
-            { name: "Personal Loan Instant EMI", url: "/personal-loan-emi/", icon: "💸", category: "loans", keys: "personal loan salary credit balance instant emergency interest fees processing unsecured borrowing math" },
-            { name: "Loan Eligibility Tester", url: "/loan-eligibility/", icon: "🆗", category: "loans", keys: "loan eligibility criteria salary tracking banking profile score limits multiplier credit criteria" },
-            { name: "Loan Prepayment Saver", url: "/loan-prepayment/", icon: "⚡", category: "loans", keys: "loan prepayment early payoff extra emi tenure reduction interest savings bank closing debt tracker" },
-            { name: "Home Loan Balance Transfer", url: "/home-loan-balance-transfer/", icon: "🔄", category: "loans", keys: "hlbt balance transfer switch bank refinancing mclr repo rate lower processing fee" },
-            { name: "Flat vs Reducing Rate Switch", url: "/flat-vs-reducing-rate/", icon: "📉", category: "loans", keys: "flat versus reducing interest rate calculation banking processing fee real yield hidden costs" },
-            { name: "No Cost EMI Checker", url: "/no-cost-emi/", icon: "🏷️", category: "loans", keys: "no cost emi zero interest processing fee hidden processing discount upfront gst calculations retail" },
-            { name: "Debt Payoff Snowball Grid", url: "/debt-payoff/", icon: "📅", category: "loans", keys: "debt payoff reduction planner avalanche snowball card consolidation tracking payments schedules liabilities" },
-            { name: "Car Lease vs Buy Evaluator", url: "/car-lease-vs-buy/", icon: "⚖️", category: "loans", keys: "car lease vs buy vehicle leasing corporate tax shield depreciation purchase options transaction" },
-            { name: "Credit Card Interest Loop", url: "/credit-card-interest/", icon: "💳", category: "loans", keys: "credit card interest debt trap roll over monthly compounding penal cash advances finance charges penalty" },
-            { name: "Credit Card Rewards Point", url: "/credit-card-rewards/", icon: "🎁", category: "loans", keys: "credit card rewards points cashback monetization mile collection travel perks processing benefits" },
-            { name: "Debt to Equity Corporate", url: "/debt-to-equity/", icon: "⚖️", category: "loans", keys: "debt to equity ratio leverage corporate metrics solvency profile capital balance tracking audit" },
-            { name: "Debt to Income (DTI) Planner", url: "/debt-to-income/", icon: "📊", category: "loans", keys: "dti debt to income ratio credit score loan eligibility banking compliance leverage limits tracking" },
-            { name: "Education Loan Moratorium", url: "/education-loan-moratorium/", icon: "🎒", category: "loans", keys: "education loan moratorium student study abroad interest accrual collateral university funding emi interest" },
-            { name: "Fixed vs Floating Rate", url: "/fixed-vs-floating-rate/", icon: "⚖️", category: "loans", keys: "fixed floating interest rates rbi repo rate linked mclr home loan market volatility benchmarking selection" },
-            { name: "Gold Loan vs Personal Loan", url: "/gold-loan-vs-personal-loan/", icon: "🏆", category: "loans", keys: "gold loan personal unsecured secured collateral interest comparison pawn shop jewelry pledge finance" },
-            { name: "Home Affordability Index", url: "/home-affordability/", icon: "🏠", category: "loans", keys: "home affordability downpayment salary tracking properties mortgages capacity indexing limits cost basis" },
-            { name: "Loan Balance Calculator", url: "/loan-balance-calculator/", icon: "⚖️", category: "loans", keys: "remaining loan balance tracking amortization schedule paid off principal interest outstanding metrics status" },
-            { name: "Loan vs Investment Cost", url: "/loan-vs-investment-calculator/", icon: "⚖️", category: "loans", keys: "loan versus investment prepayment arbitrage rate returns comparative models debt settlement margin" },
-            { name: "Mortgage Balance Refinance", url: "/mortgage-balance/", icon: "🏠", category: "loans", keys: "mortgage balance property equity borrowing tracking closing valuation bank statements refinancing tenure" },
-            { name: "Step Up Loan Amortization", url: "/step-up-loan-calculator/", icon: "🪜", category: "loans", keys: "step up loan variable emi principal scaling moratorium bank layout tracking options structural" },
-
-            // --- TAXATION & PAYROLL ---
-            { name: "Income Tax Planner", url: "/income-tax/", icon: "📑", category: "tax", keys: "income tax old regime new slab deductions standard deduction tax brackets standard rebates exemptions calculation budget" },
-            { name: "Advance Tax Payments", url: "/advance-tax/", icon: "🗓️", category: "tax", keys: "advance tax estimated liabilities self employed salaried penalty calculation compliance deadlines returns filing quarterly" },
-            { name: "TDS Calculator Matrix", url: "/tds-calculator/", icon: "✂️", category: "tax", keys: "tds tax deducted at source threshold salary interest rent professionals freelancers withholding tax compliance" },
-            { name: "GST Calculator India", url: "/gst/", icon: "📦", category: "tax", keys: "gst gross item cgst sgst igst net product bills invoices manufacturing business taxation central slabs text input" },
-            { name: "HRA Tax Exemption Finder", url: "/hra/", icon: "🔑", category: "tax", keys: "hra house rent allowance standard exemption salary structure proof metrics savings real house landlords text sheet" },
-            { name: "Gratuity Compliance Sheet", url: "/gratuity/", icon: "💼", category: "tax", keys: "gratuity service company exit resignation terminal benefit compliance years calculation continuous structure act" },
-            { name: "Capital Gains Tax Matrix", url: "/capital-gains-tax/", icon: "📉", category: "tax", keys: "capital gains tax stcg ltcg long short term shares property mutual funds indexation 112a holding calculations" },
-            { name: "Tax Loss Harvesting Engine", url: "/tax-loss-harvesting/", icon: "🌾", category: "tax", keys: "tax loss harvesting capital offset balancing equity delivery set off short long losses share adjustments" },
-            { name: "50-30-20 Budget Rule Plan", url: "/50-30-20-rule/", icon: "📊", category: "tax", keys: "50 30 20 rule budget planning personal savings needs wants salary allocation metrics ledger" },
-            { name: "CTC to In Hand Salary", url: "/ctc-to-in-hand/", icon: "👔", category: "tax", keys: "ctc to in hand gross monthly take home deductions epf gratuity allowances tax structure dynamic payout" },
-            { name: "Freelancer vs Salaried Tax", url: "/freelancer-vs-salaried/", icon: "💼", category: "tax", keys: "freelancer vs salaried 44ad business expenses presumptive taxation 192 standard structure profile options" },
-            { name: "In Hand Salary Net Matrix", url: "/in-hand-salary/", icon: "💵", category: "tax", keys: "in hand salary net deduction tax brackets old regime new regime take home tracking allowances payslip" },
-            { name: "Influencer Tax Ledger", url: "/influencer-tax-tracker/", icon: "📸", category: "tax", keys: "influencer taxation business expenses tds 194j digital creators streaming revenue tracking deduction brand" },
-            { name: "LRS TCS Remittance Tool", url: "/lrs-tcs-calculator/", icon: "🛂", category: "tax", keys: "lrs tcs foreign remittances education limits international travel tax validation compliance outbound outward" },
-            { name: "Salary Hike Estimator", url: "/salary-hike/", icon: "🚀", category: "tax", keys: "salary hike appraisal increment current layout benchmark future payout percentage corporate promotion" },
-            { name: "Salary Breakup Component", url: "/salary-breakup/", icon: "👔", category: "tax", keys: "salary markup ctc structure allowances basic components in hand mapping parameters structure gross" },
-            { name: "Take Home Salary Net Calc", url: "/take-home-salary/", icon: "💵", category: "tax", keys: "take home salary professional taxes gross deduction monthly net payload tracking options bracket payslip" },
-            { name: "TCS Refund & Liability", url: "/tcs-calculator/", icon: "🛂", category: "tax", keys: "tcs tax collected at source luxury cars foreign remittances travel compliance collection rates adjustments credit" },
-
-            // --- CORPORATE FINANCE & FP&A ---
-            { name: "Break Even Sales Volume", url: "/break-even-calculator/", icon: "🎯", category: "business", keys: "break even margin fixed variable variable manufacturing quantity sales pricing product units units capacity target profit" },
-            { name: "DCF Intrinsic Valuation", url: "/dcf/", icon: "💎", category: "business", keys: "dcf discounted cash flow intrinsic true fair value stocks valuation enterprise projections wacc growth terminal multiplier" },
-            { name: "EBITDA Operational Margin", url: "/ebitda/", icon: "📊", category: "business", keys: "ebitda operating earnings interest tax depreciation amortization corporate financial health corporate margin margins" },
-            { name: "Working Capital Health", url: "/working-capital/", icon: "💳", category: "business", keys: "working capital current ratio liquidity short term asset liability operation profiles runway tracking diagnostics" },
-            { name: "Contribution Margin", url: "/contribution-margin/", icon: "📈", category: "business", keys: "contribution margin variable costs variable profiling profitability break even cogs units pricing volume analysis" },
-            { name: "Corporate Cost of Debt", url: "/cost-of-debt/", icon: "💸", category: "business", keys: "cost of debt weighted post tax interest premium bonds yield corporate balance sheets tracking models valuation" },
-            { name: "CAPM Cost of Equity Finder", url: "/cost-of-equity/", icon: "📊", category: "business", keys: "cost of equity capm beta risk free rate market premium hurdle discount valuation analytics models framework" },
-            { name: "Current Ratio Liquidity", url: "/current-ratio/", icon: "📏", category: "business", keys: "current ratio corporate liquidity asset liabilities balance sheet health accounting criteria solvency sheet" },
-            { name: "DSCR Debt Service Ratio", url: "/dscr/", icon: "💰", category: "business", keys: "dscr debt service coverage ratio corporate loans banking leverage solvency tracking limits capacity cash flow safety" },
-            { name: "Enterprise Valuation (EV)", url: "/enterprise-value/", icon: "🏢", category: "business", keys: "enterprise value ev market cap debt cash adjustments multiples corporate valuation takeover pricing acquisition metrics" },
-            { name: "Financial Leverage (DFL)", url: "/financial-leverage/", icon: "🧱", category: "business", keys: "dfl degree financial leverage debt equity structure risk tracking solvency parameters eps ebit volatility structural" },
-            { name: "Interest Coverage Ratio", url: "/interest-coverage/", icon: "🧱", category: "business", keys: "icr interest coverage ratio solvency safety margins ebit borrowing bank health monitoring credit profile coverage" },
-            { name: "Inventory Turnover Checker", url: "/inventory-turnover/", icon: "📦", category: "business", keys: "inventory turnover efficiency storage warehousing cost of goods sold sales velocity operations tracking metrics" },
-            { name: "Gross & Net Margin", url: "/margin-calculator/", icon: "📏", category: "business", keys: "gross profit net margin pricing cost of goods sold cogs analytics wholesale distribution revenues markups spreadsheet" },
-            { name: "Retail Markup Percentage", url: "/markup-calculator/", icon: "🏷️", category: "business", keys: "markup calculator margin retail pricing multiplier costs retail inventory cost profile calculations commerce" },
-            { name: "Operating Leverage (DOL)", url: "/operating-leverage/", icon: "🏗️", category: "business", keys: "dol operating leverage fixed asset fixed costs break even operational asset business metrics volatility leverage" },
-            { name: "Investment Payback Period", url: "/payback-period-calculator/", icon: "🕰️", category: "business", keys: "payback period calculation capital budgeting corporate project cash flows break even timelines yields metrics capital" },
-            { name: "Profit Margin Workspace", url: "/profit-margin/", icon: "📈", category: "business", keys: "profit margin business markup corporate return cogs cost analysis model tracking parameters spreadsheet" },
-            { name: "Quick Ratio Acid Test", url: "/quick-ratio/", icon: "⚡", category: "business", keys: "quick ratio liquidity current assets liquid assets cash accounting balance sheet working capital cash" },
-            { name: "WACC Cost of Capital", url: "/wacc/", icon: "🏢", category: "business", keys: "wacc weighted average cost capital corporate finance debt equity balance weights metrics structure component" },
-
-            // --- SUSTAINABILITY & RE-POWERING ---
-            { name: "Solar Rooftop Subsidy", url: "/solar-rooftop-calculator/", icon: "☀️", category: "ev", keys: "solar rooftop subsidy light electricity bills cost savings government benchmark panel mnre structure power grid setup" },
-            { name: "EV vs Petrol Cost Per KM", url: "/ev-vs-petrol-cost/", icon: "⚡", category: "ev", keys: "ev electronic vehicle petrol cost km tco running mileage battery lifespan engine comparison fuel pricing car buy" },
-            { name: "Solar + EV Home ROI Link", url: "/solar-ev-ecosystem/", icon: "🏡", category: "ev", keys: "solar ev charger combination home grid off grid net zero fuel free green running costs payback period calculations" },
-            { name: "EV vs ICE Powertrain Lifecycle", url: "/ev-vs-petrol/", icon: "🔋", category: "ev", keys: "ev hybrid ice petrol diesel gas vehicle comparison running maintenance tco depreciation long term" },
-            { name: "Carbon Credit Project Valuation", url: "/carbon-credit-valuation/", icon: "🌿", category: "ev", keys: "carbon credit offset project valuation green offsets pricing tree planting standard compliance monetization metrics" },
-
-            // --- TRADING & QUANT MATRIX ---
-            { name: "Brokerage & P&L Tool", url: "/brokerage-calculator/", icon: "🖥️", category: "trading", keys: "brokerage pnl trading margin profit delivery intraday zerodha angel fno sebi charges stamp duty exchange turnover taxes" },
-            { name: "Intraday Profit Analyzer", url: "/intraday-profit-calculator/", icon: "🔥", category: "trading", keys: "intraday profit shares equity volume leverage square off daily setup quick points scale risk stop target" },
-            { name: "Futures Derivatives Profit", url: "/futures-profit/", icon: "📈", category: "trading", keys: "futures profit derivative margin leverage lot size mark to market fno contract pricing options derivatives segment" },
-            { name: "Options Trading Premium", url: "/options-profit/", icon: "📊", category: "trading", keys: "options calls puts multi strategy options writing premium breakdown risk premium payoff grid derivatives" },
-            { name: "Position Sizing Sizer Risk", url: "/position-size-calculator/", icon: "📏", category: "trading", keys: "position size stop loss trading shares sizing trade exposure risk boundaries parameters exposure sizing" },
-            { name: "Risk Reward Position Sizer", url: "/risk-reward-calculator/", icon: "⚖️", category: "trading", keys: "risk reward trading target parameters stops points win rate probability models strategy risk setup" },
-            { name: "Stop Loss Position Sizer", url: "/stop-loss/", icon: "🛑", category: "trading", keys: "stop loss buffer trading targets point calculation dynamic metrics management risk threshold parameter" },
-
-            // --- PERSONAL WEALTH & MILESTONES ---
-            { name: "Net Worth Asset Ledger", url: "/net-worth/", icon: "👑", category: "personal", keys: "net worth wealth personal equity sheet liability land bank liquid balance gold calculations tracking metric records" },
-            { name: "Budget Tracker (50/30/20)", url: "/budget-planner/", icon: "📝", category: "personal", keys: "budget allocation planning salary tracker tracking costs bucket management tools cash envelope systems parameters" },
-            { name: "Retirement Target Corpus", url: "/retirement/", icon: "👴", category: "milestones", keys: "retirement planning age life longevity inflation corpus pensions annuity monthly costs expenses milestones" },
-            { name: "Marriage Budget Planner", url: "/marriage-planner/", icon: "💍", category: "milestones", keys: "marriage wedding hall catering jewelry cost projections layout gold booking designer events milestones planner" },
-            { name: "Child Education Planner", url: "/child-education-planner/", icon: "🎓", category: "milestones", keys: "child education costs future higher studies collages international admission inflation savings growth milestones" },
-            { name: "Rent vs Buy Cost Evaluator", url: "/rent-vs-buy-calculator/", icon: "🏢", category: "milestones", keys: "rent vs buy property house home ownership downpayment tax home appreciation vs compound savings calculation milestones" },
-            { name: "Car Purchase Affordability", url: "/car-purchase/", icon: "🚘", category: "milestones", keys: "car purchase asset budget affordability auto loan downpayment parameters processing evaluation" },
-            { name: "Crorepati Milestone Plan", url: "/crorepati-calculator/", icon: "👑", category: "milestones", keys: "crorepati timeline target savings monthly goal tracking compounding wealth milestone timelines speed models" },
-            { name: "Retail Discount Absolute Check", url: "/discount-calculator/", icon: "🏷️", category: "milestones", keys: "discount coupon pricing retail flat rate absolute percentage markup tools e-commerce price tag" },
-            { name: "Early Retirement FIRE Corpus", url: "/early-retirement/", icon: "🔥", category: "milestones", keys: "early retirement freedom calculations metrics safe withdrawal limits runaways passive accumulation strategy" },
-            { name: "Education Cost Inflation", url: "/education-cost/", icon: "🎒", category: "milestones", keys: "education cost timeline higher study university fee inflation increments projection funding requirements" },
-            { name: "Education Portfolio Roadmap", url: "/education-planning/", icon: "🎓", category: "milestones", keys: "education planning horizontal tracking milestones compound savings horizons assets matching targets" },
-            { name: "Emergency Fund Buffer Builder", url: "/emergency-fund/", icon: "🛡️", category: "milestones", keys: "emergency fund rainy day reserve liquidity liquid storage banking monthly fixed expenses safety margins contingency" },
-            { name: "Health Insurance Evaluator", url: "/health-insurance-evaluator/", icon: "🏥", category: "milestones", keys: "health insurance claim premium top up super copay tracking metrics safety parameters cover policies" },
-            { name: "Goal Portfolio Allocation Setup", url: "/goal-portfolio/", icon: "🎯", category: "milestones", keys: "goal portfolio framework parameters rebalancing equity allocations metrics profile optimization layout" },
-            { name: "Goal Priority Weighted Matrix", url: "/goal-priority/", icon: "⚖️", category: "milestones", keys: "goal priority timeline weights importance mapping financial strategy options framework prioritization utility" },
-            { name: "Goal SIP Calculator Target", url: "/goal-sip-calculator/", icon: "📈", category: "milestones", keys: "goal systematic investment path required corpus target yield monthly allocation tools strategy path" },
-            { name: "Goal Step Up Incremental Tool", url: "/goal-step-up/", icon: "🚀", category: "milestones", keys: "goal step up dynamic target increments compounding adjustments milestones tracking progressive scaling" },
-            { name: "Home Loan Balance Refinance", url: "/home-loan-balance-transfer/", icon: "🔄", category: "milestones", keys: "hlbt balance transfer switch bank refinancing mclr repo rate lower processing fee optimization refinance" },
-            { name: "Loan Affordability Index", url: "/loan-affordability/", icon: "📈", category: "milestones", keys: "loan affordability eligibility gross income multiplier maximum emi limits capacity banking profile assessment" },
-            { name: "Multiple Goals Portfolio Compiler", url: "/multiple-goals/", icon: "📂", category: "milestones", keys: "multiple goals horizon alignment compound matching multi dynamic tracking pipelines bucket compounding" },
-            { name: "Property Appreciation Tracker", url: "/property-appreciation/", icon: "📈", category: "milestones", keys: "property appreciation real estate growth compounding housing land valuation future price projections modeling equity" },
-            { name: "Property ROI Rental Yield Analysis", url: "/property-roi/", icon: "🏠", category: "milestones", keys: "property roi real estate returns cap rates cash purchase metrics leverage appreciation models real estate" },
-            { name: "Real Estate Rental Yield", url: "/rental-yield/", icon: "🏠", category: "milestones", keys: "rental yield gross net property investment cap rates monthly rent maintenance real estate analytics calculations valuation" },
-            { name: "Remote vs Office Commute Cost", url: "/remote-vs-office-calculator/", icon: "🚗", category: "milestones", keys: "remote versus office cost travel time fuel savings food expenses remote utility metrics tracking travel" },
-            { name: "Retirement Withdrawal SWP", url: "/retirement-withdrawal/", icon: "👴", category: "milestones", keys: "retirement withdrawal cash runway safety multipliers safe extraction inflation adjustment models cash stream" },
-            { name: "Savings Rate Net Percentage", url: "/savings-rate/", icon: "📊", category: "milestones", keys: "savings rate gross income net residue personal tracking allocation parameters profile thrift scale" },
-            { name: "Side Income Stream Sizer", url: "/side-income/", icon: "🏖️", category: "milestones", keys: "side income side hustle passive flow extra cash generation analytics tracking metrics side earnings" },
-            { name: "Vacation Travel Sinking Fund", url: "/vacation-goal/", icon: "✈️", category: "milestones", keys: "travel ticket booking cruise itinerary budget sizing envelope savings tracker vacation logistics fund" },
-            { name: "Vacation Budget Sinking Fund", url: "/vacation-goal/", icon: "✈️", category: "milestones", keys: "vacation horizon ticket savings goals travel sinking fund bucket metrics leisure holiday budgeting" },
-            { name: "Wedding Inflation Framework", url: "/wedding-inflation-planner/", icon: "💍", category: "milestones", keys: "wedding marriage event budget catering venue layout gold price projections horizon marital expenses" },
-
-            // --- PLATFORM META UTILITIES ---
-            { name: "Platform Privacy Policy", url: "/privacy-policy/", icon: "📜", category: "meta", keys: "privacy policy data collection standard procedures metrics cookies trackers security alignment compliance" },
-            { name: "Platform Legal Disclaimer", url: "/disclaimer/", icon: "⚖️", category: "meta", keys: "disclaimer rules validation compliance chartered accountant standard information terms conditions" }
-        ];
+    {
+        "name": "50/30/20 Rule Calculator – Budget Planner India Calculator",
+        "url": "/50-30-20-rule/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "50 30 20 rule 50/30/20 rule calculator – budget planner india calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Advance Tax Calculator India Calculator",
+        "url": "/advance-tax/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "advance tax advance tax calculator india calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Advance Tax Penalty Calculator",
+        "url": "/advance-tax-penalty-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "advance tax penalty calculator advance tax penalty calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Advanced Home Affordability Calculator India Calculator",
+        "url": "/home-affordability/",
+        "icon": "🏠",
+        "category": "investment",
+        "keys": "home affordability advanced home affordability calculator india calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Agriculture Income Tax Calculator",
+        "url": "/agriculture-income-tax-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "agriculture income tax calculator agriculture income tax calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Alpha Calculator India – Portfolio Excess Return Analysis Calculator",
+        "url": "/alpha/",
+        "icon": "🧮",
+        "category": "trading",
+        "keys": "alpha alpha calculator india – portfolio excess return analysis calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Altman Z-Score Calculator",
+        "url": "/altman-z-score/",
+        "icon": "🧮",
+        "category": "trading",
+        "keys": "altman z score altman z-score calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Asset Allocation Calculator India – Optimize Your Portfolio Mix Calculator",
+        "url": "/asset-allocation/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "asset allocation asset allocation calculator india – optimize your portfolio mix calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Atal Pension Yojana APY Calculator",
+        "url": "/apy-calculator/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "apy calculator atal pension yojana apy calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "BNPL Late Fee Annualized APR Calculator",
+        "url": "/bnpl-late-fee-apr/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "bnpl late fee apr bnpl late fee annualized apr calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Balance Transfer vs Personal Loan Calculator",
+        "url": "/balance-transfer-vs-personal-loan/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "balance transfer vs personal loan balance transfer vs personal loan calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Beta Calculator India – Stock Volatility & Market Risk Calculator",
+        "url": "/beta/",
+        "icon": "🧮",
+        "category": "trading",
+        "keys": "beta beta calculator india – stock volatility & market risk calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Bonus Calculator India – Calculate Salary Bonus & Tax Impact Calculator",
+        "url": "/bonus-calculator/",
+        "icon": "🧮",
+        "category": "tax",
+        "keys": "bonus calculator bonus calculator india – calculate salary bonus & tax impact calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Bonus Stripping Loss Disallowance Calculator",
+        "url": "/bonus-stripping-94-8/",
+        "icon": "🧮",
+        "category": "tax",
+        "keys": "bonus stripping 94 8 bonus stripping loss disallowance calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Break Even Calculator",
+        "url": "/break-even-calculator/",
+        "icon": "🚗",
+        "category": "business",
+        "keys": "break even calculator break even calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Brokerage Calculator India – Calculate Trading Charges & Profit Calculator",
+        "url": "/brokerage-calculator/",
+        "icon": "💹",
+        "category": "trading",
+        "keys": "brokerage calculator brokerage calculator india – calculate trading charges & profit calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Budget Planner India – Optimize Monthly Spending Calculator",
+        "url": "/budget-planner/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "budget planner budget planner india – optimize monthly spending calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Business Loan EMI Calculator",
+        "url": "/business-loan-emi/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "business loan emi business loan emi calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "CAGR Calculator India – Calculate Compound Annual Growth Rate Calculator",
+        "url": "/cagr/",
+        "icon": "📈",
+        "category": "investment",
+        "keys": "cagr cagr calculator india – calculate compound annual growth rate calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "CIBIL Score Simulator Calculator",
+        "url": "/cibil-score-simulator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "cibil score simulator cibil score simulator calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "CTC to In-Hand Salary Calculator India – Calculate Take Home Pay Calculator",
+        "url": "/ctc-to-in-hand/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "ctc to in hand ctc to in-hand salary calculator india – calculate take home pay calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Capital Gains Exemption Calculator",
+        "url": "/capital-gains-exemption-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "capital gains exemption calculator capital gains exemption calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Capital Gains Indexation Calculator",
+        "url": "/capital-gains-indexation-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "capital gains indexation calculator capital gains indexation calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Capital Gains Tax Calculator – Stocks & Mutual Funds Calculator",
+        "url": "/capital-gains-tax/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "capital gains tax capital gains tax calculator – stocks & mutual funds calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Car Loan Calculator India Calculator",
+        "url": "/car-loan/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "car loan car loan calculator india calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Car Purchase Planner India – Dream Vehicle Fund Calculator",
+        "url": "/car-purchase/",
+        "icon": "🚗",
+        "category": "business",
+        "keys": "car purchase car purchase planner india – dream vehicle fund calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Carbon Credit Valuation & Sequestration Estimator Calculator",
+        "url": "/carbon-credit-valuation/",
+        "icon": "🚗",
+        "category": "trading",
+        "keys": "carbon credit valuation carbon credit valuation & sequestration estimator calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Cash Conversion Cycle CCC Calculator",
+        "url": "/cash-conversion-cycle/",
+        "icon": "🧮",
+        "category": "trading",
+        "keys": "cash conversion cycle cash conversion cycle ccc calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Cash-Futures Arbitrage Spread Return Calculator",
+        "url": "/cash-futures-arbitrage-yield/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "cash futures arbitrage yield cash-futures arbitrage spread return calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Child Education Cost 2040 Projector (SIP Goal Planner) Calculator",
+        "url": "/child-education-planner/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "child education planner child education cost 2040 projector (sip goal planner) calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Clubbing of Income Calculator",
+        "url": "/clubbing-of-income-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "clubbing of income calculator clubbing of income calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Commercial Property Rental Yield Calculator",
+        "url": "/commercial-property-rental-yield/",
+        "icon": "🏠",
+        "category": "investment",
+        "keys": "commercial property rental yield commercial property rental yield calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Commission Calculator – Calculate Earnings & Payouts Calculator",
+        "url": "/commission-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "commission calculator commission calculator – calculate earnings & payouts calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Compound Interest Calculator India Calculator",
+        "url": "/compound-interest/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "compound interest compound interest calculator india calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Construction Material Calculator",
+        "url": "/house-construction-material/",
+        "icon": "🏠",
+        "category": "business",
+        "keys": "house construction material construction material calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Contribution Margin Calculator – Formula, Ratio & Break-Even Calculator",
+        "url": "/contribution-margin/",
+        "icon": "💹",
+        "category": "trading",
+        "keys": "contribution margin contribution margin calculator – formula, ratio & break-even calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Corporate Car Lease vs. Buy Calculator (2026 India Tax Edition) Calculator",
+        "url": "/car-lease-vs-buy/",
+        "icon": "🚗",
+        "category": "loans",
+        "keys": "car lease vs buy corporate car lease vs. buy calculator (2026 india tax edition) calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Corporate FD vs Bank FD Calculator",
+        "url": "/corporate-fd-vs-bank-fd-calculator/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "corporate fd vs bank fd calculator corporate fd vs bank fd calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Cost of Debt Calculator India – After-Tax Capital Tool",
+        "url": "/cost-of-debt/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "cost of debt cost of debt calculator india – after-tax capital tool loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Cost of Equity Calculator India – CAPM Valuation Tool",
+        "url": "/cost-of-equity/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "cost of equity cost of equity calculator india – capm valuation tool business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Covered Call Break-Even & Cushion Calculator",
+        "url": "/covered-call-downside-cushion/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "covered call downside cushion covered call break-even & cushion calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Credit Card Balance Transfer Calculator",
+        "url": "/credit-card-balance-transfer-calculator/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "credit card balance transfer calculator credit card balance transfer calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Credit Card Interest Calculator India Calculator",
+        "url": "/credit-card-interest/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "credit card interest credit card interest calculator india calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Credit Card Minimum Due Calculator",
+        "url": "/credit-card-minimum-due/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "credit card minimum due credit card minimum due calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Credit Card Reward Calculator India – Calculate Your Real Cashback & Value Calculator",
+        "url": "/credit-card-rewards/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "credit card rewards credit card reward calculator india – calculate your real cashback & value calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Credit Card Reward Points to Rupee Calculator",
+        "url": "/credit-card-reward-points-rupee/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "credit card reward points rupee credit card reward points to rupee calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Crorepati Calculator India – When Will You Reach ₹1 Crore? Calculator",
+        "url": "/crorepati-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "crorepati calculator crorepati calculator india – when will you reach ₹1 crore? calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Crypto Tax Calculator India Calculator",
+        "url": "/crypto-tax-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "crypto tax calculator crypto tax calculator india calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Current Ratio Calculator – Liquidity Ratio Analysis Calculator",
+        "url": "/current-ratio/",
+        "icon": "🏠",
+        "category": "trading",
+        "keys": "current ratio current ratio calculator – liquidity ratio analysis calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "DCF Calculator India – Intrinsic Value & Fair Price Calculator",
+        "url": "/dcf/",
+        "icon": "🧮",
+        "category": "trading",
+        "keys": "dcf dcf calculator india – intrinsic value & fair price calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "DCF Intrinsic Stock Valuation Calculator",
+        "url": "/dcf-valuation-calculator/",
+        "icon": "🧮",
+        "category": "trading",
+        "keys": "dcf valuation calculator dcf intrinsic stock valuation calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "DSCR Calculator – Debt Service Coverage Ratio India Calculator",
+        "url": "/dscr/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "dscr dscr calculator – debt service coverage ratio india calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Debt Consolidation Calculator",
+        "url": "/debt-consolidation-calculator/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "debt consolidation calculator debt consolidation calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Debt Payoff Calculator India Calculator",
+        "url": "/debt-payoff/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "debt payoff debt payoff calculator india calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Debt to Equity Ratio Calculator – D/E Ratio Analysis Calculator",
+        "url": "/debt-to-equity/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "debt to equity debt to equity ratio calculator – d/e ratio analysis calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Debt to Income Ratio Calculator India – Assess Borrowing Health Calculator",
+        "url": "/debt-to-income/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "debt to income debt to income ratio calculator india – assess borrowing health calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Discount Calculator – Calculate Sale Price & Net Savings Calculator",
+        "url": "/discount-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "discount calculator discount calculator – calculate sale price & net savings calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Dividend Discount Model DDM Calculator",
+        "url": "/dividend-discount-model/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "dividend discount model dividend discount model ddm calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Dividend Growth Calculator – Estimate Future Passive Income Calculator",
+        "url": "/dividend-growth/",
+        "icon": "📈",
+        "category": "investment",
+        "keys": "dividend growth dividend growth calculator – estimate future passive income calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Dividend Stripping Calculator (Sec 94(7)) Calculator",
+        "url": "/dividend-stripping-94-7/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "dividend stripping 94 7 dividend stripping calculator (sec 94(7)) calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Dividend Tax Calculator",
+        "url": "/dividend-tax-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "dividend tax calculator dividend tax calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Dividend Yield Calculator",
+        "url": "/dividend-yield-calculator/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "dividend yield calculator dividend yield calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Dividend Yield Calculator India – Calculate Stock Dividend Income Calculator",
+        "url": "/dividend-yield/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "dividend yield dividend yield calculator india – calculate stock dividend income calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Dividend Yield on Cost Calculator",
+        "url": "/yield-on-cost/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "yield on cost dividend yield on cost calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "DuPont Analysis Calculator",
+        "url": "/dupont-analysis/",
+        "icon": "🧮",
+        "category": "trading",
+        "keys": "dupont analysis dupont analysis calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "E-Way Bill Validity Calculator",
+        "url": "/eway-bill-validity-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "eway bill validity calculator e-way bill validity calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "EBITDA Calculator India – Operating Performance Analysis Calculator",
+        "url": "/ebitda/",
+        "icon": "🧮",
+        "category": "trading",
+        "keys": "ebitda ebitda calculator india – operating performance analysis calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "ELSS vs PPF vs FD Comparison 2026 Calculator",
+        "url": "/elss-vs-ppf-vs-fd/",
+        "icon": "👴",
+        "category": "investment",
+        "keys": "elss vs ppf vs fd elss vs ppf vs fd comparison 2026 calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "EPF Calculator – Employee Provident Fund Maturity Calculator",
+        "url": "/epf/",
+        "icon": "👴",
+        "category": "investment",
+        "keys": "epf epf calculator – employee provident fund maturity calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "EPF vs VPF vs PPF Comparison Calculator",
+        "url": "/epf-vs-vpf-vs-ppf/",
+        "icon": "👴",
+        "category": "investment",
+        "keys": "epf vs vpf vs ppf epf vs vpf vs ppf comparison calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "EPS Pension Calculator",
+        "url": "/eps-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "eps calculator eps pension calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "ESI Contribution Calculator",
+        "url": "/esi-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "esi calculator esi contribution calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "ESOP & RSU Wealth Simulator (2026 Edition) Calculator",
+        "url": "/esop-simulator/",
+        "icon": "🧮",
+        "category": "tax",
+        "keys": "esop simulator esop & rsu wealth simulator (2026 edition) calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "ESOP Dilution & Valuation Calculator",
+        "url": "/esop-dilution-calculator/",
+        "icon": "🧮",
+        "category": "tax",
+        "keys": "esop dilution calculator esop dilution & valuation calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "ESOP Perquisite Tax Calculator",
+        "url": "/esop-perquisite-tax-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "esop perquisite tax calculator esop perquisite tax calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "ESOP Value Calculator India – Calculate Startup Equity & Taxes Calculator",
+        "url": "/esop-calculator/",
+        "icon": "🧮",
+        "category": "tax",
+        "keys": "esop calculator esop value calculator india – calculate startup equity & taxes calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "EV Battery Replacement Fund Planner Calculator",
+        "url": "/ev-battery-fund-planner/",
+        "icon": "🚗",
+        "category": "business",
+        "keys": "ev battery fund planner ev battery replacement fund planner calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "EV vs Petrol Cost Calculator India – Calculate True Savings & Break-Even Calculator",
+        "url": "/ev-vs-petrol/",
+        "icon": "🚗",
+        "category": "business",
+        "keys": "ev vs petrol ev vs petrol cost calculator india – calculate true savings & break-even calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "EV vs. Petrol Cost Per KM Calculator (2026 Edition) Calculator",
+        "url": "/ev-vs-petrol-cost/",
+        "icon": "🚗",
+        "category": "business",
+        "keys": "ev vs petrol cost ev vs. petrol cost per km calculator (2026 edition) calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Early Retirement Planner India – Your Path to FIRE Calculator",
+        "url": "/early-retirement/",
+        "icon": "👴",
+        "category": "business",
+        "keys": "early retirement early retirement planner india – your path to fire calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Education Cost Calculator India – Plan Future College Fees & SIP Investment Calculator",
+        "url": "/education-cost/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "education cost education cost calculator india – plan future college fees & sip investment calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Education Loan Moratorium & Capitalization Calculator",
+        "url": "/education-loan-moratorium/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "education loan moratorium education loan moratorium & capitalization calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Education Loan Refinancing Calculator",
+        "url": "/education-loan-refinancing-calculator/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "education loan refinancing calculator education loan refinancing calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Education Planning Calculator India – Plan Your Child's Future Calculator",
+        "url": "/education-planning/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "education planning education planning calculator india – plan your child's future calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Emergency Fund Calculator India – Calculate Ideal Safety Fund Calculator",
+        "url": "/emergency-fund/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "emergency fund emergency fund calculator india – calculate ideal safety fund calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Enterprise Value Calculator India – True Business Worth Calculator",
+        "url": "/enterprise-value/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "enterprise value enterprise value calculator india – true business worth calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Expense Ratio Calculator India – Mutual Fund Fee Impact Tool",
+        "url": "/expense-ratio/",
+        "icon": "🧮",
+        "category": "trading",
+        "keys": "expense ratio expense ratio calculator india – mutual fund fee impact tool trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "F&O Tax Audit Turnover Calculator",
+        "url": "/fo-tax-audit-turnover-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "fo tax audit turnover calculator f&o tax audit turnover calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "FD Calculator India 2026 – Fixed Deposit Interest & Maturity Calculator",
+        "url": "/fd/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "fd fd calculator india 2026 – fixed deposit interest & maturity calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "FIRE Calculator India Calculator",
+        "url": "/fire-calculator/",
+        "icon": "👴",
+        "category": "investment",
+        "keys": "fire calculator fire calculator india calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Fibonacci Retracement Calculator",
+        "url": "/fibonacci-retracement-calculator/",
+        "icon": "💹",
+        "category": "trading",
+        "keys": "fibonacci retracement calculator fibonacci retracement calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Financial Goal Planner India – Calculate SIP for All Life Goals Calculator",
+        "url": "/financial-goal-planner/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "financial goal planner financial goal planner india – calculate sip for all life goals calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Financial Independence Calculator India – Your FIRE Target Calculator",
+        "url": "/financial-independence/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "financial independence financial independence calculator india – your fire target calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Financial Leverage Calculator – Degree of Financial Leverage (DFL) Calculator",
+        "url": "/financial-leverage/",
+        "icon": "🚗",
+        "category": "business",
+        "keys": "financial leverage financial leverage calculator – degree of financial leverage (dfl) calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Fixed vs Floating Interest Rate Calculator – Home Loan Comparison India Calculator",
+        "url": "/fixed-vs-floating-rate/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "fixed vs floating rate fixed vs floating interest rate calculator – home loan comparison india calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Flat vs Reducing Interest Rate Calculator – Loan Comparison India Calculator",
+        "url": "/flat-vs-reducing-rate/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "flat vs reducing rate flat vs reducing interest rate calculator – loan comparison india calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Foreign Freelance Tax Calculator India – Sec 44ADA, GST & LRS Optimizer Calculator",
+        "url": "/foreign-tax-optimizer/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "foreign tax optimizer foreign freelance tax calculator india – sec 44ada, gst & lrs optimizer calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Form 67 Foreign Tax Credit Calculator",
+        "url": "/foreign-tax-credit-form-67/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "foreign tax credit form 67 form 67 foreign tax credit calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Freelance Rate & Project Quote Calculator",
+        "url": "/freelance-rate-calculator/",
+        "icon": "🧮",
+        "category": "tax",
+        "keys": "freelance rate calculator freelance rate & project quote calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Freelancer vs. Salaried Comparison Calculator (Sec 44ADA 2026) Calculator",
+        "url": "/freelancer-vs-salaried/",
+        "icon": "🧮",
+        "category": "tax",
+        "keys": "freelancer vs salaried freelancer vs. salaried comparison calculator (sec 44ada 2026) calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Future Value Calculator India – Calculate Investment Growth Calculator",
+        "url": "/future-value/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "future value future value calculator india – calculate investment growth calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Futures Profit Calculator India – Equity & Index Derivative P&L Calculator",
+        "url": "/futures-profit/",
+        "icon": "🧮",
+        "category": "trading",
+        "keys": "futures profit futures profit calculator india – equity & index derivative p&l calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "GST Calculator India – Add or Remove GST Instantly Calculator",
+        "url": "/gst/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "gst gst calculator india – add or remove gst instantly calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "GST Composition Scheme Calculator",
+        "url": "/gst-composition-scheme-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "gst composition scheme calculator gst composition scheme calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "GST Export LUT Tax Savings Calculator",
+        "url": "/freelance-gst-lut-export-tax/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "freelance gst lut export tax gst export lut tax savings calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "GST Late Fee & Penalty Calculator",
+        "url": "/gst-late-fee-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "gst late fee calculator gst late fee & penalty calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "GST Profit Calculator India – Calculate Profit & Margin After GST Calculator",
+        "url": "/gst-profit-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "gst profit calculator gst profit calculator india – calculate profit & margin after gst calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "GST RCM Calculator",
+        "url": "/rcm-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "rcm calculator gst rcm calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Gift Tax Calculator India Calculator",
+        "url": "/gift-tax-sec-56-2-x/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "gift tax sec 56 2 x gift tax calculator india calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Goal Based Portfolio Planner India – Your Wealth Roadmap Calculator",
+        "url": "/goal-portfolio/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "goal portfolio goal based portfolio planner india – your wealth roadmap calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Goal Priority Planner India – Strategic Multi-Goal Planner Calculator",
+        "url": "/goal-priority/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "goal priority goal priority planner india – strategic multi-goal planner calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Goal SIP Calculator – Reverse SIP Finder Calculator",
+        "url": "/goal-sip-calculator/",
+        "icon": "📈",
+        "category": "investment",
+        "keys": "goal sip calculator goal sip calculator – reverse sip finder calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Goal Step Up SIP Calculator India – Financial Target Planner Calculator",
+        "url": "/goal-step-up/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "goal step up goal step up sip calculator india – financial target planner calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Gold Investment Comparison: SGB vs Physical vs Digital Calculator",
+        "url": "/gold-vs-sgb-vs-digital-gold/",
+        "icon": "🪙",
+        "category": "investment",
+        "keys": "gold vs sgb vs digital gold gold investment comparison: sgb vs physical vs digital calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Gold Loan vs. Personal Loan Optimizer (2026 India Edition) Calculator",
+        "url": "/gold-loan-vs-personal-loan/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "gold loan vs personal loan gold loan vs. personal loan optimizer (2026 india edition) calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Gratuity Calculator India – Calculate Gratuity Online Calculator",
+        "url": "/gratuity/",
+        "icon": "🧮",
+        "category": "tax",
+        "keys": "gratuity gratuity calculator india – calculate gratuity online calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Gratuity Exemption Calculator",
+        "url": "/gratuity-exemption-calculator/",
+        "icon": "🧮",
+        "category": "tax",
+        "keys": "gratuity exemption calculator gratuity exemption calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "HRA Calculator – House Rent Allowance Exemption Calculator",
+        "url": "/hra/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "hra hra calculator – house rent allowance exemption calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "HUF Tax Savings Calculator",
+        "url": "/huf-tax-savings-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "huf tax savings calculator huf tax savings calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Health Insurance Top-Up vs. Base Plan Evaluator Calculator",
+        "url": "/health-insurance-evaluator/",
+        "icon": "🚗",
+        "category": "business",
+        "keys": "health insurance evaluator health insurance top-up vs. base plan evaluator calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Home Construction Cost Calculator",
+        "url": "/home-construction-cost/",
+        "icon": "🏠",
+        "category": "business",
+        "keys": "home construction cost home construction cost calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Home Loan Balance Transfer (HLBT) Savings Tool",
+        "url": "/home-loan-balance-transfer/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "home loan balance transfer home loan balance transfer (hlbt) savings tool loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Home Loan Calculator India Calculator",
+        "url": "/home-loan/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "home loan home loan calculator india calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Human Life Value (HLV) Calculator (2026 Insurance Optimizer) Calculator",
+        "url": "/hlv-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "hlv calculator human life value (hlv) calculator (2026 insurance optimizer) calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "In-Hand Salary Calculator India – Know Your Real Take Home Salary from CTC Calculator",
+        "url": "/in-hand-salary/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "in hand salary in-hand salary calculator india – know your real take home salary from ctc calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Income Tax Calculator India FY 2025-26 Calculator",
+        "url": "/income-tax/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "income tax income tax calculator india fy 2025-26 calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Income from House Property Calculator",
+        "url": "/income-from-house-property-calculator/",
+        "icon": "🏠",
+        "category": "business",
+        "keys": "income from house property calculator income from house property calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Indian Land Area Unit Converter Calculator",
+        "url": "/indian-land-unit-converter/",
+        "icon": "🏠",
+        "category": "business",
+        "keys": "indian land unit converter indian land area unit converter calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Inflation Adjusted SIP Calculator",
+        "url": "/inflation-adjusted-sip-calculator/",
+        "icon": "📈",
+        "category": "investment",
+        "keys": "inflation adjusted sip calculator inflation adjusted sip calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Inflation Adjusted Salary Calculator – Calculate Real Value Calculator",
+        "url": "/inflation-adjusted-salary-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "inflation adjusted salary calculator inflation adjusted salary calculator – calculate real value calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Inflation Calculator India Calculator",
+        "url": "/inflation/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "inflation inflation calculator india calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Influencer Business Expense & Tax Tracker Calculator",
+        "url": "/influencer-tax-tracker/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "influencer tax tracker influencer business expense & tax tracker calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Information Ratio Calculator India – Measure Active Manager Skill Calculator",
+        "url": "/information-ratio/",
+        "icon": "📑",
+        "category": "trading",
+        "keys": "information ratio information ratio calculator india – measure active manager skill calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Interest Coverage Ratio Calculator – EBIT vs Interest Analysis Calculator",
+        "url": "/interest-coverage/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "interest coverage interest coverage ratio calculator – ebit vs interest analysis calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Internal Rate of Return (IRR) Calculator India 2026 Calculator",
+        "url": "/irr-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "irr calculator internal rate of return (irr) calculator india 2026 calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Intraday Profit Calculator – Calculate Profit After All Charges Calculator",
+        "url": "/intraday-profit-calculator/",
+        "icon": "🧮",
+        "category": "trading",
+        "keys": "intraday profit calculator intraday profit calculator – calculate profit after all charges calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Inventory Turnover Calculator India – Efficiency Planner Calculator",
+        "url": "/inventory-turnover/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "inventory turnover inventory turnover calculator india – efficiency planner calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Iron Condor 4-Leg Strategy PnL Visualizer Calculator",
+        "url": "/iron-condor-strategy-pnl/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "iron condor strategy pnl iron condor 4-leg strategy pnl visualizer calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Joining Bonus Clawback Tax Refund Sec 89(1) Calculator",
+        "url": "/joining-bonus-clawback-tax-refund/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "joining bonus clawback tax refund joining bonus clawback tax refund sec 89(1) calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Kisan Vikas Patra KVP Calculator",
+        "url": "/kvp-calculator/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "kvp calculator kisan vikas patra kvp calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "LRS & TCS Refund Calculator (2026-27 Edition) Calculator",
+        "url": "/lrs-tcs-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "lrs tcs calculator lrs & tcs refund calculator (2026-27 edition) calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Lease Escalation Calculator",
+        "url": "/lease-escalation-calculator/",
+        "icon": "🧮",
+        "category": "loans",
+        "keys": "lease escalation calculator lease escalation calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Leave Encashment Calculator",
+        "url": "/leave-encashment-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "leave encashment calculator leave encashment calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Leave Encashment Exemption Calculator",
+        "url": "/leave-encashment-taxability-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "leave encashment taxability calculator leave encashment exemption calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Loan Affordability Calculator India Calculator",
+        "url": "/loan-affordability/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "loan affordability loan affordability calculator india calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Loan Against Mutual Funds Calculator",
+        "url": "/loan-against-mutual-funds/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "loan against mutual funds loan against mutual funds calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Loan Balance Calculator – Check Outstanding Principal Calculator",
+        "url": "/loan-balance-calculator/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "loan balance calculator loan balance calculator – check outstanding principal calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Loan EMI Calculator India – Home, Car & Personal Loan EMI Calculator",
+        "url": "/emi/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "emi loan emi calculator india – home, car & personal loan emi calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Loan Eligibility Calculator India Calculator",
+        "url": "/loan-eligibility/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "loan eligibility loan eligibility calculator india calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Loan Prepayment Calculator India Calculator",
+        "url": "/loan-prepayment/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "loan prepayment loan prepayment calculator india calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Loan vs Investment Calculator – Should You Prepay Loan or Invest? Calculator",
+        "url": "/loan-vs-investment-calculator/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "loan vs investment calculator loan vs investment calculator – should you prepay loan or invest? calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Long Butterfly Option Strategy Risk-Reward Calculator",
+        "url": "/butterfly-spread-option-risk/",
+        "icon": "💹",
+        "category": "trading",
+        "keys": "butterfly spread option risk long butterfly option strategy risk-reward calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Long Straddle & Strangle Volatility Calculator",
+        "url": "/straddle-strangle-volatility-breakeven/",
+        "icon": "🚗",
+        "category": "business",
+        "keys": "straddle strangle volatility breakeven long straddle & strangle volatility calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Lumpsum Calculator India Calculator",
+        "url": "/lumpsum/",
+        "icon": "📈",
+        "category": "investment",
+        "keys": "lumpsum lumpsum calculator india calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Mahila Samman Savings Certificate Calculator",
+        "url": "/mahila-samman-savings-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "mahila samman savings calculator mahila samman savings certificate calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Markup Calculator India – Selling Price, Margin & Profit Tool",
+        "url": "/markup-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "markup calculator markup calculator india – selling price, margin & profit tool business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Marriage Planning Calculator India – Wedding Cost & SIP Planner Calculator",
+        "url": "/marriage-planner/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "marriage planner marriage planning calculator india – wedding cost & sip planner calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Monthly Expense Tracker India – Daily Spending Manager Calculator",
+        "url": "/expense-tracker/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "expense tracker monthly expense tracker india – daily spending manager calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Moratorium Interest Calculator",
+        "url": "/moratorium-interest-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "moratorium interest calculator moratorium interest calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Mortgage Balance Calculator India – Loan Outstanding Tracker Calculator",
+        "url": "/mortgage-balance/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "mortgage balance mortgage balance calculator india – loan outstanding tracker calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Mudra Loan EMI Calculator",
+        "url": "/mudra-loan-emi/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "mudra loan emi mudra loan emi calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Multiple Goal Planner India – Comprehensive Target Planner Calculator",
+        "url": "/multiple-goals/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "multiple goals multiple goal planner india – comprehensive target planner calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Mutual Fund Expense Ratio Impact: Direct vs Regular Calculator",
+        "url": "/mutual-fund-expense-ratio-impact/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "mutual fund expense ratio impact mutual fund expense ratio impact: direct vs regular calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Mutual Fund Portfolio Overlap Estimator (2026 Strategy Edition) Calculator",
+        "url": "/portfolio-overlap/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "portfolio overlap mutual fund portfolio overlap estimator (2026 strategy edition) calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Mutual Fund Return Calculator India – Wealth Projection Planner Calculator",
+        "url": "/mutual-fund-returns/",
+        "icon": "📈",
+        "category": "investment",
+        "keys": "mutual fund returns mutual fund return calculator india – wealth projection planner calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "NPS Calculator India Calculator",
+        "url": "/nps/",
+        "icon": "👴",
+        "category": "investment",
+        "keys": "nps nps calculator india calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "NPS Tier 1 vs Tier 2 Calculator",
+        "url": "/nps-tier-1-vs-tier-2/",
+        "icon": "👴",
+        "category": "investment",
+        "keys": "nps tier 1 vs tier 2 nps tier 1 vs tier 2 calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "NPS Tier I vs. Tier II Optimizer (2026-27 Tax Edition) Calculator",
+        "url": "/nps-optimizer-2026/",
+        "icon": "👴",
+        "category": "investment",
+        "keys": "nps optimizer 2026 nps tier i vs. tier ii optimizer (2026-27 tax edition) calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "NPS vs EPF vs PPF Calculator",
+        "url": "/nps-vs-epf-vs-ppf/",
+        "icon": "👴",
+        "category": "investment",
+        "keys": "nps vs epf vs ppf nps vs epf vs ppf calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "NRE vs NRO Account Tax Calculator",
+        "url": "/nre-vs-nro-taxation-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "nre vs nro taxation calculator nre vs nro account tax calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "NRI Repatriation Calculator (NRO) Calculator",
+        "url": "/nri-repatriation-limit-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "nri repatriation limit calculator nri repatriation calculator (nro) calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "National Savings Certificate NSC Calculator",
+        "url": "/nsc-calculator/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "nsc calculator national savings certificate nsc calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Net Present Value (NPV) Calculator",
+        "url": "/npv-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "npv calculator net present value (npv) calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Net Worth Calculator India Calculator",
+        "url": "/net-worth/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "net worth net worth calculator india calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "New vs Old Tax Regime Breakeven Calculator",
+        "url": "/new-old-tax-breakeven/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "new old tax breakeven new vs old tax regime breakeven calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "No Cost EMI Calculator India Calculator",
+        "url": "/no-cost-emi/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "no cost emi no cost emi calculator india calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Notice Period Pay Buyout Tax & Cost Calculator",
+        "url": "/notice-period-buyout-tax-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "notice period buyout tax calculator notice period pay buyout tax & cost calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Notice Period Pay Recovery Calculator",
+        "url": "/notice-period-pay-recovery/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "notice period pay recovery notice period pay recovery calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Operating Leverage Calculator – Degree of Operating Leverage (DOL) Calculator",
+        "url": "/operating-leverage/",
+        "icon": "🚗",
+        "category": "business",
+        "keys": "operating leverage operating leverage calculator – degree of operating leverage (dol) calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Opportunity Cost Calculator India Calculator",
+        "url": "/opportunity-cost-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "opportunity cost calculator opportunity cost calculator india calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Option IV Rank (IVR) & Percentile Calculator",
+        "url": "/option-iv-rank-percentile/",
+        "icon": "💹",
+        "category": "trading",
+        "keys": "option iv rank percentile option iv rank (ivr) & percentile calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Option Payoff Calculator",
+        "url": "/option-payoff-calculator/",
+        "icon": "💹",
+        "category": "trading",
+        "keys": "option payoff calculator option payoff calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Option Selling Margin & ROI Calculator",
+        "url": "/option-selling-roi-calculator/",
+        "icon": "💹",
+        "category": "trading",
+        "keys": "option selling roi calculator option selling margin & roi calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Option Wheel Strategy (CSP + Covered Call) ROI Calculator",
+        "url": "/nifty-wheel-strategy-roi/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "nifty wheel strategy roi option wheel strategy (csp + covered call) roi calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Options Profit Calculator India – Call & Put P&L Estimator Calculator",
+        "url": "/options-profit/",
+        "icon": "💹",
+        "category": "trading",
+        "keys": "options profit options profit calculator india – call & put p&l estimator calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "P2P Lending Net Return Calculator",
+        "url": "/peer-to-peer-p2p-lending-returns/",
+        "icon": "📈",
+        "category": "business",
+        "keys": "peer to peer p2p lending returns p2p lending net return calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "PEG Ratio Calculator",
+        "url": "/peg-ratio-calculator/",
+        "icon": "🧮",
+        "category": "trading",
+        "keys": "peg ratio calculator peg ratio calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "PF Withdrawal Taxability & TDS Calculator",
+        "url": "/pf-withdrawal-taxability-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "pf withdrawal taxability calculator pf withdrawal taxability & tds calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "PPF Calculator India – Public Provident Fund Calculator",
+        "url": "/ppf/",
+        "icon": "👴",
+        "category": "investment",
+        "keys": "ppf ppf calculator india – public provident fund calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Passive Income Calculator India – Your Wealth Engine Calculator",
+        "url": "/passive-income/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "passive income passive income calculator india – your wealth engine calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Payback Period Calculator",
+        "url": "/payback-period-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "payback period calculator payback period calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Percentage Calculator",
+        "url": "/percentage/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "percentage percentage calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Personal Loan EMI Calculator – Plan Your Borrowing Calculator",
+        "url": "/personal-loan-emi/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "personal loan emi personal loan emi calculator – plan your borrowing calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Piotroski F-Score Calculator",
+        "url": "/piotroski-score-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "piotroski score calculator piotroski f-score calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Portfolio Beta Volatility Calculator",
+        "url": "/portfolio-beta/",
+        "icon": "🧮",
+        "category": "trading",
+        "keys": "portfolio beta portfolio beta volatility calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Portfolio Rebalancing Calculator India – Asset Allocation Optimization Calculator",
+        "url": "/portfolio-rebalancing/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "portfolio rebalancing portfolio rebalancing calculator india – asset allocation optimization calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Portfolio Return Calculator – Master Your Total Wealth Growth Calculator",
+        "url": "/portfolio-return-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "portfolio return calculator portfolio return calculator – master your total wealth growth calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Position Size Calculator – Calculate Safe Trade Quantity Calculator",
+        "url": "/position-size-calculator/",
+        "icon": "🧮",
+        "category": "trading",
+        "keys": "position size calculator position size calculator – calculate safe trade quantity calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Post Office Monthly Income POMIS Calculator",
+        "url": "/pomis-calculator/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "pomis calculator post office monthly income pomis calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Post-Tax Fixed Deposit FD Return Calculator",
+        "url": "/post-tax-fd-returns/",
+        "icon": "📈",
+        "category": "tax",
+        "keys": "post tax fd returns post-tax fixed deposit fd return calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Pradhan Mantri Vaya Vandana Yojana PMVVY Calculator",
+        "url": "/pmvvy-calculator/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "pmvvy calculator pradhan mantri vaya vandana yojana pmvvy calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Pre-EMI Interest Calculator",
+        "url": "/pre-emi-interest-calculator/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "pre emi interest calculator pre-emi interest calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Present Value Calculator India – Discount Future Value Instantly Calculator",
+        "url": "/present-value/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "present value present value calculator india – discount future value instantly calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Professional Tax Calculator (State-wise) 2026 Calculator",
+        "url": "/professional-tax-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "professional tax calculator professional tax calculator (state-wise) 2026 calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Profit Margin Calculator India – Business Pricing Tool",
+        "url": "/profit-margin/",
+        "icon": "💹",
+        "category": "trading",
+        "keys": "profit margin profit margin calculator india – business pricing tool trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Profit Margin Calculator – Analyze Gross & Net Margin Calculator",
+        "url": "/margin-calculator/",
+        "icon": "💹",
+        "category": "trading",
+        "keys": "margin calculator profit margin calculator – analyze gross & net margin calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Property Appreciation Calculator India – Forecast Future Worth Calculator",
+        "url": "/property-appreciation/",
+        "icon": "🏠",
+        "category": "business",
+        "keys": "property appreciation property appreciation calculator india – forecast future worth calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Property Area & Plot Size Converter Calculator",
+        "url": "/property-area-converter/",
+        "icon": "🏠",
+        "category": "business",
+        "keys": "property area converter property area & plot size converter calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Property Depreciation SLM vs WDV Calculator",
+        "url": "/property-depreciation-slm-vs-wdv/",
+        "icon": "🏠",
+        "category": "business",
+        "keys": "property depreciation slm vs wdv property depreciation slm vs wdv calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Property ROI Calculator India – Real Estate Return Tool",
+        "url": "/property-roi/",
+        "icon": "🏠",
+        "category": "business",
+        "keys": "property roi property roi calculator india – real estate return tool business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Protective Put Portfolio Hedging Cost Calculator",
+        "url": "/protective-put-hedge-cost/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "protective put hedge cost protective put portfolio hedging cost calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Quick Ratio Calculator – Acid Test Ratio Analysis Calculator",
+        "url": "/quick-ratio/",
+        "icon": "🧮",
+        "category": "trading",
+        "keys": "quick ratio quick ratio calculator – acid test ratio analysis calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "RD Calculator India – Recurring Deposit Maturity Calculator",
+        "url": "/rd/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "rd rd calculator india – recurring deposit maturity calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "REIT & InvIT Dividend Distribution Yield & Tax Calculator",
+        "url": "/reit-invit-dividend-tax-yield/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "reit invit dividend tax yield reit & invit dividend distribution yield & tax calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "REIT & InvIT Tax Calculator",
+        "url": "/reit-dividend-tax-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "reit dividend tax calculator reit & invit tax calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "ROI Calculator – Calculate Return on Investment Calculator",
+        "url": "/roi-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "roi calculator roi calculator – calculate return on investment calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Real Estate vs Equity Calculator",
+        "url": "/real-estate-vs-equity/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "real estate vs equity real estate vs equity calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Real Return Calculator India Calculator",
+        "url": "/real-return/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "real return real return calculator india calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Remote vs. Office Work Savings Calculator",
+        "url": "/remote-vs-office-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "remote vs office calculator remote vs. office work savings calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Rent vs Buy Calculator – Should You Buy or Rent? Calculator",
+        "url": "/rent-vs-buy-calculator/",
+        "icon": "🏠",
+        "category": "business",
+        "keys": "rent vs buy calculator rent vs buy calculator – should you buy or rent? calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Rental Yield Calculator India – Property ROI & Income Calculator",
+        "url": "/rental-yield/",
+        "icon": "🏠",
+        "category": "investment",
+        "keys": "rental yield rental yield calculator india – property roi & income calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Required CAGR Calculator – Reverse CAGR Calculator",
+        "url": "/required-cagr-calculator/",
+        "icon": "📈",
+        "category": "investment",
+        "keys": "required cagr calculator required cagr calculator – reverse cagr calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Retirement Calculator India Calculator",
+        "url": "/retirement/",
+        "icon": "👴",
+        "category": "business",
+        "keys": "retirement retirement calculator india calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Retirement Withdrawal Calculator India – How Long Will My Money Last? Calculator",
+        "url": "/retirement-withdrawal/",
+        "icon": "👴",
+        "category": "business",
+        "keys": "retirement withdrawal retirement withdrawal calculator india – how long will my money last? calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Return on Capital Employed ROCE Calculator",
+        "url": "/roce-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "roce calculator return on capital employed roce calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Return on Equity ROE Calculator",
+        "url": "/roe-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "roe calculator return on equity roe calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Risk Reward Ratio Calculator India – Find Best Trade Setup Calculator",
+        "url": "/risk-reward-calculator/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "risk reward calculator risk reward ratio calculator india – find best trade setup calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Rolling Returns Calculator India – Consistency Analyzer Calculator",
+        "url": "/rolling-returns/",
+        "icon": "📈",
+        "category": "business",
+        "keys": "rolling returns rolling returns calculator india – consistency analyzer calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Rule of 72 Calculator – Find How Fast Your Money Doubles Calculator",
+        "url": "/rule-of-72/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "rule of 72 rule of 72 calculator – find how fast your money doubles calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "SGB Secondary Market Yield Calculator",
+        "url": "/sovereign-gold-bond-secondary-market-yield/",
+        "icon": "🪙",
+        "category": "investment",
+        "keys": "sovereign gold bond secondary market yield sgb secondary market yield calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "SIP Calculator India – Mutual Fund Returns with Step-Up & ₹1 Crore Plan Calculator",
+        "url": "/sip/",
+        "icon": "📈",
+        "category": "investment",
+        "keys": "sip sip calculator india – mutual fund returns with step-up & ₹1 crore plan calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "SIP Cost of Delay Calculator",
+        "url": "/sip-cost-of-delay/",
+        "icon": "📈",
+        "category": "investment",
+        "keys": "sip cost of delay sip cost of delay calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "SIP vs FD Calculator – Compare Returns & Choose Best Investment Calculator",
+        "url": "/sip-vs-fd/",
+        "icon": "📈",
+        "category": "investment",
+        "keys": "sip vs fd sip vs fd calculator – compare returns & choose best investment calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "SSY Calculator India – Sukanya Samriddhi Yojana Maturity Returns Calculator",
+        "url": "/ssy/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "ssy ssy calculator india – sukanya samriddhi yojana maturity returns calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "SWP Calculator – Systematic Withdrawal Plan Calculator",
+        "url": "/swp/",
+        "icon": "👴",
+        "category": "investment",
+        "keys": "swp swp calculator – systematic withdrawal plan calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "SaaS & Subscription Leak Audit Tool",
+        "url": "/subscription-leak-audit/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "subscription leak audit saas & subscription leak audit tool business formula returns math calculation india 2026"
+    },
+    {
+        "name": "SaaS Unit Economics Calculator",
+        "url": "/saas-metrics-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "saas metrics calculator saas unit economics calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Salary Breakup Calculator India – CTC Structure, Basic, HRA & Net Salary Calculator",
+        "url": "/salary-breakup/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "salary breakup salary breakup calculator india – ctc structure, basic, hra & net salary calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Salary Hike Calculator India Calculator",
+        "url": "/salary-hike/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "salary hike salary hike calculator india calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Savings Bank Interest Calculator",
+        "url": "/savings-bank-interest/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "savings bank interest savings bank interest calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Savings Goal Calculator India – Plan Monthly Investment for Your Goals Calculator",
+        "url": "/savings-goal/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "savings goal savings goal calculator india – plan monthly investment for your goals calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Savings Rate Calculator – Track Your Monthly Savings % Calculator",
+        "url": "/savings-rate/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "savings rate savings rate calculator – track your monthly savings % calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Section 10(37) Compulsory Land Acquisition Exemption Calculator",
+        "url": "/sec-10-37-land-acquisition/",
+        "icon": "🏠",
+        "category": "tax",
+        "keys": "sec 10 37 land acquisition section 10(37) compulsory land acquisition exemption calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Section 40(b) LLP Partner Remuneration Calculator",
+        "url": "/llp-partner-remuneration-40b/",
+        "icon": "🧮",
+        "category": "trading",
+        "keys": "llp partner remuneration 40b section 40(b) llp partner remuneration calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Section 44AD Presumptive Tax Calculator",
+        "url": "/44ad-presumptive-tax-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "44ad presumptive tax calculator section 44ad presumptive tax calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Section 44ADA Presumptive Tax Calculator",
+        "url": "/44ada-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "44ada calculator section 44ada presumptive tax calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Section 44AE Calculator",
+        "url": "/44ae-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "44ae calculator section 44ae calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Section 54 & 54F Tax Exemption Calculator",
+        "url": "/section-54-54f-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "section 54 54f calculator section 54 & 54f tax exemption calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Section 54B Agricultural Land Capital Gain Calculator",
+        "url": "/sec-54b-agricultural-land/",
+        "icon": "🏠",
+        "category": "tax",
+        "keys": "sec 54b agricultural land section 54b agricultural land capital gain calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Section 54EC Capital Gain Bonds Tax Calculator",
+        "url": "/sec-54ec-capital-gain-bonds-tax/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "sec 54ec capital gain bonds tax section 54ec capital gain bonds tax calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Section 54EC Capital Gains Bond Calculator",
+        "url": "/section-54ec-bond-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "section 54ec bond calculator section 54ec capital gains bond calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Section 54F Capital Gain Exemption Calculator",
+        "url": "/sec-54f-capital-gain-exemption/",
+        "icon": "🧮",
+        "category": "tax",
+        "keys": "sec 54f capital gain exemption section 54f capital gain exemption calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Section 80C Tax Saving Calculator",
+        "url": "/80c-tax-saving/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "80c tax saving section 80c tax saving calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Section 80D Tax Saving Calculator",
+        "url": "/80d-tax-saving-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "80d tax saving calculator section 80d tax saving calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Section 80DD Disability Dependent Tax Calculator",
+        "url": "/sec-80dd-dependent-tax/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "sec 80dd dependent tax section 80dd disability dependent tax calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Section 80DDB Critical Illness Medical Deduction Calculator",
+        "url": "/sec-80ddb-critical-illness/",
+        "icon": "🧮",
+        "category": "tax",
+        "keys": "sec 80ddb critical illness section 80ddb critical illness medical deduction calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Section 80E Education Loan Tax Calculator",
+        "url": "/sec-80e-education-loan/",
+        "icon": "💳",
+        "category": "tax",
+        "keys": "sec 80e education loan section 80e education loan tax calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Section 80EEA Home Loan Tax Calculator",
+        "url": "/sec-80eea-home-loan/",
+        "icon": "💳",
+        "category": "tax",
+        "keys": "sec 80eea home loan section 80eea home loan tax calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Section 80EEB EV Loan Interest Tax Calculator",
+        "url": "/sec-80eeb-ev-loan-tax-deduction/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "sec 80eeb ev loan tax deduction section 80eeb ev loan interest tax calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Section 80EEB EV Loan Tax Calculator",
+        "url": "/sec-80eeb-electric-vehicle/",
+        "icon": "🧮",
+        "category": "tax",
+        "keys": "sec 80eeb electric vehicle section 80eeb ev loan tax calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Section 80G Donation Tax Deduction Calculator",
+        "url": "/80g-donation-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "80g donation calculator section 80g donation tax deduction calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Section 80GGA Scientific Research Donation Calculator",
+        "url": "/sec-80gga-scientific-donation/",
+        "icon": "🧮",
+        "category": "tax",
+        "keys": "sec 80gga scientific donation section 80gga scientific research donation calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Section 80TTB Senior Citizen Tax Calculator",
+        "url": "/sec-80ttb-senior-citizen-tax/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "sec 80ttb senior citizen tax section 80ttb senior citizen tax calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Section 80U Disability Tax Calculator",
+        "url": "/sec-80u-disability-tax/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "sec 80u disability tax section 80u disability tax calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Section 87A Rebate Eligibility Calculator",
+        "url": "/section-87a-rebate/",
+        "icon": "📑",
+        "category": "business",
+        "keys": "section 87a rebate section 87a rebate eligibility calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Section 89 Salary Arrears Tax Relief Calculator",
+        "url": "/salary-arrears-tax-relief-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "salary arrears tax relief calculator section 89 salary arrears tax relief calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Senior Citizen Savings Scheme SCSS Calculator",
+        "url": "/scss-calculator/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "scss calculator senior citizen savings scheme scss calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Sequence of Returns Risk (SRR) Simulator Calculator",
+        "url": "/srr-simulator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "srr simulator sequence of returns risk (srr) simulator calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Set Off and Carry Forward of Losses Calculator",
+        "url": "/set-off-carry-forward-losses-calculator/",
+        "icon": "🚗",
+        "category": "investment",
+        "keys": "set off carry forward losses calculator set off and carry forward of losses calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Share Buyback vs Dividend Tax Calculator",
+        "url": "/buyback-vs-dividend-tax/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "buyback vs dividend tax share buyback vs dividend tax calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Sharpe Ratio Calculator India Calculator",
+        "url": "/sharpe-ratio/",
+        "icon": "🧮",
+        "category": "trading",
+        "keys": "sharpe ratio sharpe ratio calculator india calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Side Income Calculator India – Optimize Your Hustle Calculator",
+        "url": "/side-income/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "side income side income calculator india – optimize your hustle calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Simple Interest Calculator India Calculator",
+        "url": "/simple-interest/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "simple interest simple interest calculator india calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Solar + EV Home Ecosystem ROI Calculator",
+        "url": "/solar-ev-ecosystem/",
+        "icon": "🚗",
+        "category": "business",
+        "keys": "solar ev ecosystem solar + ev home ecosystem roi calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Solar Rooftop ROI & Subsidy Calculator – PM Surya Ghar Edition Calculator",
+        "url": "/solar-rooftop-calculator/",
+        "icon": "☀️",
+        "category": "business",
+        "keys": "solar rooftop calculator solar rooftop roi & subsidy calculator – pm surya ghar edition calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Sortino Ratio Calculator – Evaluate Portfolio Risk-Adjusted Returns Calculator",
+        "url": "/sortino-ratio/",
+        "icon": "🧮",
+        "category": "trading",
+        "keys": "sortino ratio sortino ratio calculator – evaluate portfolio risk-adjusted returns calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Sovereign Gold Bond SGB Returns Calculator",
+        "url": "/sgb-returns-calculator/",
+        "icon": "📈",
+        "category": "investment",
+        "keys": "sgb returns calculator sovereign gold bond sgb returns calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Stamp Duty & Property Registration Fee Calculator",
+        "url": "/stamp-duty-property-registration-fee/",
+        "icon": "🏠",
+        "category": "trading",
+        "keys": "stamp duty property registration fee stamp duty & property registration fee calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Stamp Duty & Registration Calculator",
+        "url": "/stamp-duty-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "stamp duty calculator stamp duty & registration calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Stamp Duty Calculator India – Property Registration Fees & Charges Calculator",
+        "url": "/stamp-duty/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "stamp duty stamp duty calculator india – property registration fees & charges calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Startup Burn Rate & Runway Calculator",
+        "url": "/startup-burn-rate-runway/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "startup burn rate runway startup burn rate & runway calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Step Up SIP Calculator India Calculator",
+        "url": "/step-up-sip/",
+        "icon": "📈",
+        "category": "investment",
+        "keys": "step up sip step up sip calculator india calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Step-Down EMI Calculator",
+        "url": "/step-down-emi-calculator/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "step down emi calculator step-down emi calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Step-Up Loan EMI & Repayment Optimizer Calculator",
+        "url": "/step-up-loan-calculator/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "step up loan calculator step-up loan emi & repayment optimizer calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Stock Average Calculator India Calculator",
+        "url": "/stock-average/",
+        "icon": "💹",
+        "category": "business",
+        "keys": "stock average stock average calculator india calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Stock Pivot Point Calculator",
+        "url": "/pivot-point-calculator/",
+        "icon": "💹",
+        "category": "trading",
+        "keys": "pivot point calculator stock pivot point calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Stock Position Size Calculator",
+        "url": "/stock-position-size-calculator/",
+        "icon": "💹",
+        "category": "trading",
+        "keys": "stock position size calculator stock position size calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Stop Loss Calculator India – Risk Management Planner Calculator",
+        "url": "/stop-loss/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "stop loss stop loss calculator india – risk management planner calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Superannuation Fund Calculator",
+        "url": "/superannuation-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "superannuation calculator superannuation fund calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Surcharge & Marginal Relief Calculator",
+        "url": "/surcharge-marginal-relief-calculator/",
+        "icon": "💹",
+        "category": "trading",
+        "keys": "surcharge marginal relief calculator surcharge & marginal relief calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Systematic Transfer Plan STP Calculator",
+        "url": "/stp-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "stp calculator systematic transfer plan stp calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "TCS Calculator India Calculator",
+        "url": "/tcs-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "tcs calculator tcs calculator india calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "TDS Calculator India Calculator",
+        "url": "/tds-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "tds calculator tds calculator india calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "TDS Late Payment Penalty Calculator",
+        "url": "/tds-late-payment-penalty-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "tds late payment penalty calculator tds late payment penalty calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "TDS on FD Interest Calculator",
+        "url": "/tds-on-fd-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "tds on fd calculator tds on fd interest calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "TDS on Property Sale (Section 194-IA) Calculator",
+        "url": "/tds-on-property-sale-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "tds on property sale calculator tds on property sale (section 194-ia) calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "TDS on Rent (Sec 194-IB) Calculator",
+        "url": "/tds-on-rent-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "tds on rent calculator tds on rent (sec 194-ib) calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "TDS on Salary Calculator (Section 192) Calculator",
+        "url": "/tds-on-salary-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "tds on salary calculator tds on salary calculator (section 192) calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Take Home Salary Calculator India Calculator",
+        "url": "/take-home-salary/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "take home salary take home salary calculator india calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Target Amount SIP Calculator",
+        "url": "/target-sip-calculator/",
+        "icon": "📈",
+        "category": "investment",
+        "keys": "target sip calculator target amount sip calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Tax Loss Harvesting Calculator – Offset Capital Losses & Save Tax Calculator",
+        "url": "/tax-loss-harvesting/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "tax loss harvesting tax loss harvesting calculator – offset capital losses & save tax calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Term Insurance Cover Calculator",
+        "url": "/term-insurance-calculator/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "term insurance calculator term insurance cover calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Time Value of Money Calculator India Calculator",
+        "url": "/time-value-of-money/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "time value of money time value of money calculator india calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Time to Financial Freedom Calculator – FIRE Calculator India Calculator",
+        "url": "/time-to-financial-freedom/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "time to financial freedom time to financial freedom calculator – fire calculator india calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Treasury Bill T-Bill Yield Calculator",
+        "url": "/tbill-yield-calculator/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "tbill yield calculator treasury bill t-bill yield calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Treynor Ratio Calculator India – Measure Portfolio Efficiency Calculator",
+        "url": "/treynor-ratio/",
+        "icon": "🧮",
+        "category": "trading",
+        "keys": "treynor ratio treynor ratio calculator india – measure portfolio efficiency calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Trust & NGO Tax Calculator (Sec 11) Calculator",
+        "url": "/trust-tax-calculator/",
+        "icon": "📑",
+        "category": "tax",
+        "keys": "trust tax calculator trust & ngo tax calculator (sec 11) calculator tax formula returns math calculation india 2026"
+    },
+    {
+        "name": "Two-Wheeler Loan EMI Calculator",
+        "url": "/two-wheeler-loan-emi/",
+        "icon": "💳",
+        "category": "loans",
+        "keys": "two wheeler loan emi two-wheeler loan emi calculator loans formula returns math calculation india 2026"
+    },
+    {
+        "name": "Vacation Goal Calculator India – Travel Savings Planner Calculator",
+        "url": "/vacation-goal/",
+        "icon": "🧮",
+        "category": "investment",
+        "keys": "vacation goal vacation goal calculator india – travel savings planner calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "WACC Calculator",
+        "url": "/wacc-calculator/",
+        "icon": "🧮",
+        "category": "trading",
+        "keys": "wacc calculator wacc calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "WACC Calculator India – Weighted Average Cost of Capital Calculator",
+        "url": "/wacc/",
+        "icon": "🧮",
+        "category": "trading",
+        "keys": "wacc wacc calculator india – weighted average cost of capital calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "Wealth Projection Calculator India – Forecast Your Future Worth Calculator",
+        "url": "/wealth-projection/",
+        "icon": "📈",
+        "category": "investment",
+        "keys": "wealth projection wealth projection calculator india – forecast your future worth calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "Wedding Expense & Inflation Planner (2026 India Edition) Calculator",
+        "url": "/wedding-inflation-planner/",
+        "icon": "🧮",
+        "category": "business",
+        "keys": "wedding inflation planner wedding expense & inflation planner (2026 india edition) calculator business formula returns math calculation india 2026"
+    },
+    {
+        "name": "Working Capital Calculator India – Liquidity & Ratio Analysis Calculator",
+        "url": "/working-capital/",
+        "icon": "🧮",
+        "category": "trading",
+        "keys": "working capital working capital calculator india – liquidity & ratio analysis calculator trading formula returns math calculation india 2026"
+    },
+    {
+        "name": "XIRR Calculator India – SIP, Mutual Fund & Portfolio Returns Calculator",
+        "url": "/xirr/",
+        "icon": "📈",
+        "category": "investment",
+        "keys": "xirr xirr calculator india – sip, mutual fund & portfolio returns calculator investment formula returns math calculation india 2026"
+    },
+    {
+        "name": "XIRR vs CAGR vs Absolute Return Calculator",
+        "url": "/xirr-vs-cagr-vs-absolute-return/",
+        "icon": "📈",
+        "category": "investment",
+        "keys": "xirr vs cagr vs absolute return xirr vs cagr vs absolute return calculator investment formula returns math calculation india 2026"
+    }
+];
 
         // Context Substring Dynamic Matrix Matcher
         let targetCategory = "investment";
