@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TCS Calculator India 2026: LRS & Foreign Remittance Planner</title>
-    <meta name="description" content="Calculate TCS on LRS remittance, foreign transfers, cars and goods. Check threshold, rates and total payable instantly. Updated for FY 2025-26 & 2026-27.">
+    <title>TCS Calculator India FY 2025-26: LRS & Foreign Remittance Planner</title>
+    <meta name="description" content="Calculate TCS on LRS remittance, foreign transfers and vehicles for FY 2025-26. Check threshold, rates and total payable instantly.">
     <meta name="keywords" content="TCS Calculator India, Tax Collected at Source, LRS TCS Calculator, TCS on Overseas Tour, TCS on Car Purchase 2026, Section 206C India, foreign remittance tax">
     <meta name="author" content="Ashish Kumar">
     <meta name="last-modified" content="2026-03-22">
@@ -31,7 +31,7 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "TCS Calculator India (2026)",
+  "name": "TCS Calculator India (FY 2025-26)",
   "url": "https://arthcalculator.in/tcs-calculator/",
   "description": "Calculate Tax Collected at Source for LRS, car purchases, and business goods based on the latest Indian Income Tax rules.",
   "datePublished": "2024-03-14",
@@ -187,18 +187,17 @@
                         <label class="text-xs font-bold text-slate-400 uppercase block mb-3">TCS Nature of Transaction</label>
                         <select id="tcsCategory" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all bg-white text-slate-700">
                             <optgroup label="Liberalised Remittance Scheme (LRS)">
-                                <option value="lrs_edu_loan" data-rate="0" data-threshold="1000000">LRS: Education (via Education Loan) - Nil</option>
-                                <option value="lrs_edu_med" data-rate="2" data-threshold="1000000">LRS: Education / Medical (Own Funds) - 2%</option>
+                                <option value="lrs_edu_loan" data-rate="5" data-threshold="1000000">LRS: Education (including Education Loan) - 5%</option>
+                                <option value="lrs_edu_med" data-rate="5" data-threshold="1000000">LRS: Education / Medical - 5%</option>
                                 <option value="lrs_others" data-rate="20" data-threshold="1000000">LRS: Others (Investment/Maintenance) - 20%</option>
                             </optgroup>
                             <optgroup label="Travel & Luxury">
-                                <option value="overseas_tour" data-rate="2" data-threshold="0">Overseas Tour Program Package - 2%</option>
+                                <option value="overseas_tour" data-rate="5" data-tier2="20" data-threshold="1000000">Overseas Tour Program Package - 5% / 20%</option>
                                 <option value="luxury_car" data-rate="1" data-threshold="1000000">Purchase of Motor Vehicle (> ₹10L) - 1%</option>
                             </optgroup>
                             <optgroup label="Business & Goods">
                                 <option value="scrap" data-rate="1" data-threshold="0">Sale of Scrap - 1%</option>
                                 <option value="timber" data-rate="2.5" data-threshold="0">Timber / Forest Produce - 2.5%</option>
-                                <option value="sale_goods" data-rate="0.1" data-threshold="5000000">Sale of Goods (> ₹50L) - 0.1%</option>
                             </optgroup>
                         </select>
                     </div>
@@ -255,7 +254,7 @@
                              <div class="h-8 w-1 bg-blue-500 rounded-full mr-3"></div>
                              <div>
                                 <p class="text-[10px] text-slate-500 uppercase font-bold">Threshold</p>
-                                <p class="font-bold text-slate-800 text-sm" id="thresholdDisp">₹7,00,000</p>
+                                <p class="font-bold text-slate-800 text-sm" id="thresholdDisp">₹10,00,000</p>
                              </div>
                         </div>
                     </div>
@@ -273,7 +272,7 @@
                         <div class="flex flex-wrap justify-between mt-4 gap-4">
                             <div class="flex items-center">
                                 <div class="w-3 h-3 bg-blue-500 rounded-sm mr-2 text-pretty"></div>
-                                <span class="text-[10px] sm:text-xs text-slate-500 font-medium" id="exemptLabel">₹7,00,000</span>
+                                <span class="text-[10px] sm:text-xs text-slate-500 font-medium" id="exemptLabel">₹10,00,000</span>
                             </div>
                             <div class="flex items-center">
                                 <div class="w-3 h-3 bg-indigo-400 rounded-sm mr-2 text-pretty"></div>
@@ -336,7 +335,7 @@
             <h2 class="text-2xl font-bold text-slate-900 mb-6">What is TCS under LRS?</h2>
             <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
                 <p>Tax Collected at Source (TCS) under the Liberalised Remittance Scheme (LRS) is a tax mechanism used by the RBI and Income Tax Department to track foreign outward remittances by resident individuals. The primary purpose is to monitor large-value transactions and ensure they match the taxpayer's reported income.</p>
-                <p>Starting October 2023, the <strong>exemption threshold</strong> is ₹7 Lakhs per financial year. This limit applies to all remittances combined (except for overseas tour packages which have their own rules). If you send more than ₹7 Lakhs, your bank will collect TCS, which you can later claim while filing your <a href="/income-tax/" class="text-blue-600 underline">Income Tax Return</a>.</p>
+                <p>For FY 2025-26, the <strong>exemption threshold</strong> for LRS remittances is ₹10 Lakhs per financial year. This limit applies to aggregate LRS remittances. TCS is a credit that can be adjusted while filing your <a href="/income-tax/" class="text-blue-600 underline">Income Tax Return</a>.</p>
             </div>
         </section>
 
@@ -346,10 +345,9 @@
             <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
                 <p>The Union Budget 2026 maintained the increased rates for foreign spending to encourage domestic investment. Here is the summary of current rates:</p>
                 <ul class="list-disc ml-5 space-y-2">
-                    <li><strong>Overseas Education:</strong> 0.5% (if funded by loan) or 5% (if self-funded) above ₹7 Lakhs.</li>
-                    <li><strong>Medical Treatment:</strong> 5% above the ₹7 Lakhs threshold.</li>
-                    <li><strong>Investment/Gift/Maintenance:</strong> A high rate of 20% applies on the amount exceeding ₹7 Lakhs.</li>
-                    <li><strong>Overseas Tour Packages:</strong> 5% up to ₹7 Lakhs and 20% for any amount above that.</li>
+                    <li><strong>Education and medical treatment:</strong> 5% on the amount above ₹10 Lakhs.</li>
+                    <li><strong>Investment/Gift/Maintenance:</strong> 20% on the amount above ₹10 Lakhs.</li>
+                    <li><strong>Overseas Tour Packages:</strong> 5% up to ₹10 Lakhs and 20% on the excess.</li>
                 </ul>
                 <p>Planning a big purchase? Check your <a href="/capital-gains-tax/" class="text-blue-600 underline">Capital Gains Tax</a> before redeeming assets for foreign transfers.</p>
             </div>
@@ -382,7 +380,7 @@
                     </p>
                     <h3 class="text-xl font-bold text-slate-800 mt-8">Recent Changes in LRS TCS Rates</h3>
                     <p>
-                        As of the latest regulations, the rates for LRS have seen a major hike. While education and medical remittances still enjoy a lower rate (5% above ₹7L), other purposes like investing in foreign stocks or sending money to relatives attract a steep **20% TCS**. This makes cash flow planning essential for global Indian families. Consider starting a <a href="/sip/" class="underline">SIP</a> early to buffer against these costs.
+                        For FY 2025-26, education and medical remittances attract 5% TCS above ₹10L, while other LRS purposes attract 20% on the excess. This makes cash-flow planning essential for global Indian families. Consider starting a <a href="/sip/" class="underline">SIP</a> early to buffer against these costs.
                     </p>
                 </div>
             </section>
@@ -395,7 +393,7 @@
                     
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">2. What is the limit for TCS on Car Purchase?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Under Section 206C(1F), 1% TCS is applicable on the purchase of any motor vehicle if the value exceeds ₹10 Lakhs. This applies to both luxury cars and commercial vehicles.</div></details>
                     
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">3. Does the ₹7 Lakh LRS limit apply to each bank?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">No. The ₹7 Lakh threshold is an **aggregate limit per financial year** across all banks and authorized dealers. Banks will check your LRS usage history on the RBI portal before applying the threshold.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">3. Does the ₹10 Lakh LRS limit apply to each bank?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">No. The ₹10 Lakh threshold is an aggregate limit per financial year across all banks and authorised dealers.</div></details>
 
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm text-pretty text-pretty text-pretty">4. Is TCS applicable on foreign credit card spending?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">As per current 2026 rules, international credit card spending while traveling abroad is currently exempt from the LRS limit and TCS. However, debit card spending is counted under LRS.</div></details>
 
@@ -524,8 +522,13 @@
             let appliedRateText = "";
 
             if (elements.catSel.value === 'overseas_tour') {
+                const lowerTier = Math.min(amount, threshold);
+                const upperTier = Math.max(0, amount - threshold);
+                tcsAmount = (lowerTier * baseRate + upperTier * tier2Rate) / 100;
+                appliedRateText = `${baseRate}% up to ₹10L; ${tier2Rate}% above`;
+            } else if (elements.catSel.value === 'luxury_car') {
                 tcsAmount = (amount * baseRate) / 100;
-                appliedRateText = baseRate + "%";
+                appliedRateText = baseRate + "% on full vehicle value";
             } else if (amount <= threshold) {
                 tcsAmount = 0;
                 appliedRateText = "0% (Within threshold)";

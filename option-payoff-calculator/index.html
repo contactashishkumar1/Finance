@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Option Payoff Calculator – Call & Put Profit/Loss Visualizer | ArthCalculator</title>
+    <meta name="description" content="Calculate Call and Put option profit, loss, and breakeven point at expiry. Visualizes Nifty, BankNifty, and stock options payoff diagrams easily.">
+    <meta name="keywords" content="option payoff calculator, call option payoff calculator, put option payoff, options profit calculator Nifty BankNifty 2026">
+    <meta name="author" content="ArthCalculator">
+    <meta name="last-modified" content="2026-08-09">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/option-payoff-calculator/">
+    <link type="image/x-icon" rel="icon" href="/favicon.ico">
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Option Payoff Calculator – Call & Put Options P&L Visualizer">
+    <meta property="og:description" content="Calculate exact profit, loss, and breakeven prices for Long/Short Call and Put options.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/option-payoff-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- Schemas -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Option Payoff Calculator",
+      "url": "https://arthcalculator.in/option-payoff-calculator/",
+      "description": "Calculate Call and Put option profit, loss, and breakeven points for Indian derivative traders.",
+      "datePublished": "2026-08-09",
+      "dateModified": "2026-08-09"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Option Payoff Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+        { "@type": "ListItem", "position": 3, "name": "Option Payoff Calculator", "item": "https://arthcalculator.in/option-payoff-calculator/" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the breakeven price for a Call Option?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a Long Call Option, Breakeven Price = Strike Price + Premium Paid. For example, if you buy a Nifty 24,000 Call at a ₹100 premium, your breakeven price at expiry is ₹24,100."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the breakeven price for a Put Option?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a Long Put Option, Breakeven Price = Strike Price - Premium Paid. If you buy a Nifty 24,000 Put at ₹100 premium, your breakeven price at expiry is ₹23,900."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the maximum loss in buying a Call or Put option?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When buying options (Long Call or Long Put), your maximum loss is strictly capped at the total premium paid (Premium × Lot Size × Number of Lots)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the maximum profit in Option Selling (Writing)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When selling options (Short Call or Short Put), your maximum profit is limited to the total premium received. However, maximum loss is theoretically unlimited."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the current Nifty 50 lot size?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NSE Nifty 50 derivative lot size is 25 shares per lot (revised by NSE). BankNifty lot size is 15 shares, and FinNifty lot size is 25 shares."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does option payoff change before expiry?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Before expiry, option prices are impacted by Implied Volatility (IV) and Time Decay (Theta). At expiry, the payoff depends purely on intrinsic value (Spot Price vs Strike Price)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Intrinsic Value vs Extrinsic Value?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Intrinsic Value is the actual in-the-money amount (e.g. Spot ₹24,100 - Strike ₹24,000 = ₹100 intrinsic). Extrinsic Value (Time Value) is the remaining premium amount above intrinsic value."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are STT and brokerage included in option payoff?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard option payoff diagrams show gross P&L. To calculate net P&L, subtract STT (0.125% on exercised options or 0.0625% on premium), exchange transaction charges, and broker fees."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #059669 0%, #0d9488 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05); }
+        details summary { list-style: none; cursor: pointer; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg.chevron { transform: rotate(180deg); }
+        input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-slide { animation: slideIn 0.4s ease forwards; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+    <div id="navbar"></div>
+
+    <!-- Hero -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center"><a href="/" class="hover:text-teal-600 transition-colors">Home</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li class="flex items-center"><a href="/calculators/" class="hover:text-teal-600 transition-colors">Calculators</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li class="text-teal-600 font-bold" aria-current="page">Option Payoff Calculator</li>
+                </ol>
+            </nav>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div class="max-w-3xl">
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight pb-1">Option Payoff Calculator</h1>
+                    <p class="text-slate-500 text-sm font-medium mb-3">Call & Put Options · Long/Short Position · Breakeven & Max Loss</p>
+                    <p class="text-slate-500 text-xs sm:text-base leading-relaxed">Calculate exact profit, loss, and breakeven prices for Call (CE) and Put (PE) option contracts at expiry. Includes Nifty, BankNifty, and Stock option lot sizes.</p>
+                </div>
+                <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="bg-teal-50 text-teal-700 border border-teal-200 px-3 py-1.5 rounded-full font-medium">✓ Call & Put Support</span>
+                    <span class="bg-emerald-50 text-emerald-700 border border-emerald-200 px-3 py-1.5 rounded-full font-medium">✓ Breakeven Math</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4" id="calculator">
+        <div class="flex flex-col lg:flex-row gap-8 mb-12">
+            <!-- Left: Inputs -->
+            <div class="w-full lg:w-3/5 bg-white rounded-2xl card-shadow border border-slate-100 p-6 sm:p-8">
+                <h2 class="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
+                    <span class="w-8 h-8 bg-teal-100 text-teal-700 rounded-lg flex items-center justify-center text-sm font-bold">📈</span>
+                    Option Details
+                </h2>
+
+                <!-- Position Type: Buy / Sell -->
+                <div class="mb-5">
+                    <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2">Trade Action</label>
+                    <div class="grid grid-cols-2 gap-3">
+                        <label class="relative flex items-center justify-center p-3 border border-slate-200 rounded-xl cursor-pointer bg-white hover:border-teal-400 transition-all">
+                            <input type="radio" name="tradeAction" value="buy" class="peer sr-only" checked>
+                            <span class="text-sm font-bold text-slate-600 peer-checked:text-emerald-700">🛒 Buy (Long)</span>
+                            <div class="absolute inset-0 border-2 border-transparent peer-checked:border-emerald-500 rounded-xl pointer-events-none"></div>
+                        </label>
+                        <label class="relative flex items-center justify-center p-3 border border-slate-200 rounded-xl cursor-pointer bg-white hover:border-teal-400 transition-all">
+                            <input type="radio" name="tradeAction" value="sell" class="peer sr-only">
+                            <span class="text-sm font-bold text-slate-600 peer-checked:text-rose-700">🏷️ Sell (Short)</span>
+                            <div class="absolute inset-0 border-2 border-transparent peer-checked:border-rose-500 rounded-xl pointer-events-none"></div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Option Type: Call / Put -->
+                <div class="mb-6">
+                    <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2">Option Type</label>
+                    <div class="grid grid-cols-2 gap-3">
+                        <label class="relative flex items-center justify-center p-3 border border-slate-200 rounded-xl cursor-pointer bg-white hover:border-teal-400 transition-all">
+                            <input type="radio" name="optionType" value="call" class="peer sr-only" checked>
+                            <span class="text-sm font-bold text-slate-600 peer-checked:text-teal-700">🟢 Call (CE)</span>
+                            <div class="absolute inset-0 border-2 border-transparent peer-checked:border-teal-500 rounded-xl pointer-events-none"></div>
+                        </label>
+                        <label class="relative flex items-center justify-center p-3 border border-slate-200 rounded-xl cursor-pointer bg-white hover:border-teal-400 transition-all">
+                            <input type="radio" name="optionType" value="put" class="peer sr-only">
+                            <span class="text-sm font-bold text-slate-600 peer-checked:text-indigo-700">🔴 Put (PE)</span>
+                            <div class="absolute inset-0 border-2 border-transparent peer-checked:border-indigo-500 rounded-xl pointer-events-none"></div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Strike Price & Premium -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Strike Price (₹)</label>
+                        <input type="number" id="strikePrice" placeholder="24000" value="24000" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-teal-400 outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Option Premium Paid/Received (₹)</label>
+                        <input type="number" id="premiumPrice" placeholder="150" value="150" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-teal-400 outline-none text-sm">
+                    </div>
+                </div>
+
+                <!-- Lot Size & Quantity -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Lot Size (Shares per Lot)</label>
+                        <input type="number" id="lotSize" placeholder="25" value="25" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-teal-400 outline-none text-sm">
+                        <p class="text-[10px] text-slate-400 mt-1">Nifty=25, BankNifty=15, FinNifty=25</p>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Number of Lots</label>
+                        <input type="number" id="numLots" placeholder="1" value="1" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-teal-400 outline-none text-sm">
+                    </div>
+                </div>
+
+                <!-- Expected Expiry Target Price -->
+                <div class="mb-6">
+                    <label class="block text-xs font-semibold text-slate-600 mb-1.5">Target Spot Price at Expiry (₹)</label>
+                    <input type="number" id="targetSpot" placeholder="24300" value="24300" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-teal-400 outline-none text-sm">
+                    <p class="text-xs text-slate-400 mt-1">Underlying index/stock price on expiry day</p>
+                </div>
+
+                <div class="flex gap-3">
+                    <button id="calculateBtn" class="flex-1 bg-teal-600 hover:bg-teal-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-teal-200 transition-all active:scale-[0.98]">
+                        Calculate Payoff & P&L
+                    </button>
+                    <button id="resetBtn" class="px-5 py-4 bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold rounded-xl transition-colors">
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right: Results -->
+            <div class="w-full lg:w-2/5 flex flex-col gap-5">
+                <!-- Main PnL Card -->
+                <div id="pnlCard" class="bg-gradient-to-br from-emerald-600 to-teal-700 rounded-2xl card-shadow p-6 text-white animate-slide">
+                    <p class="text-xs text-teal-200 font-bold uppercase tracking-wider mb-1">Expected P&L at Target Price</p>
+                    <p id="resPnlAmt" class="text-4xl font-black mb-1">₹—</p>
+                    <p id="resPnlPct" class="text-teal-200 text-xs">ROI on Premium: —</p>
+                </div>
+
+                <!-- Key Metrics -->
+                <div class="bg-white rounded-2xl card-shadow border border-slate-100 p-6">
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Payoff Summary</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between text-slate-600"><span>Breakeven Price</span><span id="resBreakeven" class="font-bold text-teal-700 text-base">—</span></div>
+                        <div class="flex justify-between text-slate-600"><span>Max Risk (Max Loss)</span><span id="resMaxLoss" class="font-semibold text-rose-600">—</span></div>
+                        <div class="flex justify-between text-slate-600"><span>Max Profit Potential</span><span id="resMaxProfit" class="font-semibold text-emerald-600">—</span></div>
+                        <div class="flex justify-between text-slate-600"><span>Total Investment / Outlay</span><span id="resTotalOutlay" class="font-semibold">—</span></div>
+                        <div class="flex justify-between text-slate-600"><span>Total Quantity</span><span id="resTotalQty" class="font-semibold">—</span></div>
+                    </div>
+                </div>
+
+                <!-- Copy / Print -->
+                <div class="flex gap-3">
+                    <button onclick="copyResults()" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-xl transition-colors text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                        Copy Result
+                    </button>
+                    <button onclick="window.print()" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-xl transition-colors text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                        Print
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <section id="educational-content" class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Option Payoff Formulas & Trader Guide</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-white rounded-2xl border border-slate-100 card-shadow p-6">
+                    <h3 class="font-bold text-teal-800 mb-3 text-base">🟢 Call Option (CE) Payoff</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-2"><strong>Buy Call (Long CE):</strong> Profit = Max(0, Spot Price - Strike Price) - Premium Paid.</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">Breakeven = Strike Price + Premium Paid. Risk is limited to premium; profit is unlimited.</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-100 card-shadow p-6">
+                    <h3 class="font-bold text-indigo-800 mb-3 text-base">🔴 Put Option (PE) Payoff</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-2"><strong>Buy Put (Long PE):</strong> Profit = Max(0, Strike Price - Spot Price) - Premium Paid.</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">Breakeven = Strike Price - Premium Paid. Risk is limited to premium; profit occurs when market falls.</p>
+                </div>
+            </div>
+
+            <!-- Quick Insights & Hacks -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-teal-50 border border-teal-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-teal-900 mb-2 flex items-center gap-2"><span class="text-lg">💡</span> Pro Hack: Avoid Hero-Zero Buying</h3>
+                    <p class="text-teal-800 text-xs sm:text-sm leading-relaxed">Far Out-of-the-Money (OTM) options lose 100% of their extrinsic time value (Theta) on expiry day. Trade In-the-Money (ITM) or At-the-Money (ATM) options for higher delta and probability of profit.</p>
+                </div>
+                <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-emerald-900 mb-2 flex items-center gap-2"><span class="text-lg">⚡</span> Importance of Breakeven</h3>
+                    <p class="text-emerald-800 text-xs sm:text-sm leading-relaxed">Always calculate your breakeven price before entering a trade. If Nifty is at 24,000 and you buy a 24,200 Call for ₹100, Nifty must rise past 24,300 (+1.25%) just for you to break even at expiry.</p>
+                </div>
+                <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-amber-900 mb-2 flex items-center gap-2"><span class="text-lg">🛡️</span> IV Crush Alert</h3>
+                    <p class="text-amber-800 text-xs sm:text-sm leading-relaxed">Prior to major news (Union Budget, RBI Policy, Corporate Earnings), Implied Volatility (IV) spikes, inflating premiums. Post-event IV crush collapses premiums even if price moves in your direction.</p>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-800 mb-4">Option Strategy Risk & Reward Matrix</h3>
+            <div class="bg-white rounded-2xl border border-slate-100 card-shadow overflow-hidden mb-8">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead class="bg-slate-50 border-b border-slate-200">
+                            <tr>
+                                <th class="text-left px-4 py-3 font-semibold text-slate-700">Position</th>
+                                <th class="text-left px-4 py-3 font-semibold text-slate-700">Market View</th>
+                                <th class="text-center px-4 py-3 font-semibold text-slate-700">Breakeven Price</th>
+                                <th class="text-center px-4 py-3 font-semibold text-rose-600">Max Loss</th>
+                                <th class="text-center px-4 py-3 font-semibold text-emerald-600">Max Profit</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">Buy Call (Long CE)</td><td class="px-4 py-3 text-slate-600">Bullish</td><td class="text-center px-4 py-3 font-semibold">Strike + Premium</td><td class="text-center px-4 py-3 text-rose-600 font-semibold">Premium Paid</td><td class="text-center px-4 py-3 text-emerald-600 font-semibold">Unlimited</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">Sell Call (Short CE)</td><td class="px-4 py-3 text-slate-600">Bearish / Neutral</td><td class="text-center px-4 py-3 font-semibold">Strike + Premium</td><td class="text-center px-4 py-3 text-rose-600 font-semibold">Unlimited</td><td class="text-center px-4 py-3 text-emerald-600 font-semibold">Premium Received</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">Buy Put (Long PE)</td><td class="px-4 py-3 text-slate-600">Bearish</td><td class="text-center px-4 py-3 font-semibold">Strike - Premium</td><td class="text-center px-4 py-3 text-rose-600 font-semibold">Premium Paid</td><td class="text-center px-4 py-3 text-emerald-600 font-semibold">Strike - Premium</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">Sell Put (Short PE)</td><td class="px-4 py-3 text-slate-600">Bullish / Neutral</td><td class="text-center px-4 py-3 font-semibold">Strike - Premium</td><td class="text-center px-4 py-3 text-rose-600 font-semibold">Strike - Premium</td><td class="text-center px-4 py-3 text-emerald-600 font-semibold">Premium Received</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Common Mistakes -->
+            <div class="bg-red-50 border border-red-200 rounded-2xl p-6 mb-8">
+                <h3 class="font-bold text-red-900 mb-3">⚠️ Critical Option Trading Pitfalls</h3>
+                <ul class="space-y-2 text-sm text-red-800">
+                    <li>• <strong>Naked Option Selling Without Stop Loss:</strong> Selling uncovered calls or puts carries unlimited loss potential during sharp market gaps. Always define stop-loss levels or hedge with spreads.</li>
+                    <li>• <strong>Ignoring Transaction Costs & STT:</strong> STT (Securities Transaction Tax) is charged @ 0.125% on exercised in-the-money options at expiry, which can eat into small option profits.</li>
+                    <li>• <strong>Over-Leveraging Lot Sizes:</strong> Buying 20–50 lots just because premium is low (₹5–₹10) exposes you to 100% capital destruction on rapid time decay.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FAQs -->
+        <section id="faqs" class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Frequently Asked Questions</h2>
+            <div class="space-y-3 max-w-3xl mx-auto">
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is the breakeven price for a Call Option?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">For a Long Call Option, Breakeven Price = Strike Price + Premium Paid. For example, if you buy a Nifty 24,000 Call at a ₹100 premium, your breakeven price at expiry is ₹24,100.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is the breakeven price for a Put Option?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">For a Long Put Option, Breakeven Price = Strike Price - Premium Paid. If you buy a Nifty 24,000 Put at ₹100 premium, your breakeven price at expiry is ₹23,900.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is the maximum loss in buying a Call or Put option?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">When buying options (Long Call or Long Put), your maximum loss is strictly capped at the total premium paid (Premium × Lot Size × Number of Lots).</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is the maximum profit in Option Selling (Writing)?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">When selling options (Short Call or Short Put), your maximum profit is limited to the total premium received. However, maximum loss is theoretically unlimited.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is the current Nifty 50 lot size?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">NSE Nifty 50 derivative lot size is 25 shares per lot (revised by NSE). BankNifty lot size is 15 shares, and FinNifty lot size is 25 shares.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">Does option payoff change before expiry?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Yes. Before expiry, option prices are impacted by Implied Volatility (IV) and Time Decay (Theta). At expiry, the payoff depends purely on intrinsic value (Spot Price vs Strike Price).</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is Intrinsic Value vs Extrinsic Value?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Intrinsic Value is the actual in-the-money amount (e.g. Spot ₹24,100 - Strike ₹24,000 = ₹100 intrinsic). Extrinsic Value (Time Value) is the remaining premium amount above intrinsic value.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">Are STT and brokerage included in option payoff?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Standard option payoff diagrams show gross P&L. To calculate net P&L, subtract STT (0.125% on exercised options or 0.0625% on premium), exchange transaction charges, and broker fees.</div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Related -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold text-slate-800 mb-6">Related Stock & Trading Calculators</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                <a href="/stock-position-size-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-teal-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-teal-700">Position Size Calculator</p><p class="text-xs text-slate-400 mt-1">Risk management</p></a>
+                <a href="/pivot-point-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-teal-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-teal-700">Pivot Point Calculator</p><p class="text-xs text-slate-400 mt-1">Intraday S&R levels</p></a>
+                <a href="/fibonacci-retracement-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-teal-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-teal-700">Fibonacci Calculator</p><p class="text-xs text-slate-400 mt-1">Retracement levels</p></a>
+                <a href="/stock-average/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-teal-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-teal-700">Stock Average Calculator</p><p class="text-xs text-slate-400 mt-1">Average down price</p></a>
+                <a href="/dividend-yield-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-teal-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-teal-700">Dividend Yield Calculator</p><p class="text-xs text-slate-400 mt-1">Passive income growth</p></a>
+                <a href="/cagr/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-teal-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-teal-700">CAGR Calculator</p><p class="text-xs text-slate-400 mt-1">Compound growth rate</p></a>
+                <a href="/capital-gains-tax/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-teal-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-teal-700">Capital Gains Tax</p><p class="text-xs text-slate-400 mt-1">STCG & LTCG tax</p></a>
+                <a href="/target-sip-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-teal-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-teal-700">Target Amount SIP</p><p class="text-xs text-slate-400 mt-1">Goal SIP planner</p></a>
+            </div>
+        </section>
+
+        <div id="arthcalculatorLinkingHub"></div>
+        <script src="/js/related-tools.js" defer></script>
+        <script src="/js/search.js" defer></script>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        function fmt(n) { return '₹' + Math.round(n).toLocaleString('en-IN'); }
+
+        const strikeInput = document.getElementById('strikePrice');
+        const premiumInput = document.getElementById('premiumPrice');
+        const lotSizeInput = document.getElementById('lotSize');
+        const numLotsInput = document.getElementById('numLots');
+        const targetSpotInput = document.getElementById('targetSpot');
+
+        document.querySelectorAll('input[name="tradeAction"], input[name="optionType"]').forEach(r => r.addEventListener('change', calculate));
+        [strikeInput, premiumInput, lotSizeInput, numLotsInput, targetSpotInput].forEach(i => i.addEventListener('input', calculate));
+
+        document.getElementById('calculateBtn').addEventListener('click', calculate);
+        document.getElementById('resetBtn').addEventListener('click', () => {
+            strikeInput.value = 24000;
+            premiumInput.value = 150;
+            lotSizeInput.value = 25;
+            numLotsInput.value = 1;
+            targetSpotInput.value = 24300;
+            document.querySelector('input[name="tradeAction"][value="buy"]').checked = true;
+            document.querySelector('input[name="optionType"][value="call"]').checked = true;
+            calculate();
+        });
+
+        let lastResult = {};
+
+        function calculate() {
+            const isBuy = document.querySelector('input[name="tradeAction"]:checked').value === 'buy';
+            const isCall = document.querySelector('input[name="optionType"]:checked').value === 'call';
+            const strike = parseFloat(strikeInput.value) || 0;
+            const premium = parseFloat(premiumInput.value) || 0;
+            const lotSize = parseInt(lotSizeInput.value) || 1;
+            const numLots = parseInt(numLotsInput.value) || 1;
+            const targetSpot = parseFloat(targetSpotInput.value) || 0;
+
+            const totalQty = lotSize * numLots;
+            const totalOutlay = premium * totalQty;
+
+            let breakeven = 0, pnlPerShare = 0, maxProfitText = '', maxLossText = '';
+
+            if (isCall) {
+                breakeven = strike + premium;
+                const intrinsicAtSpot = Math.max(0, targetSpot - strike);
+                pnlPerShare = isBuy ? (intrinsicAtSpot - premium) : (premium - intrinsicAtSpot);
+                if (isBuy) {
+                    maxLossText = fmt(totalOutlay);
+                    maxProfitText = 'Unlimited';
+                } else {
+                    maxLossText = 'Unlimited';
+                    maxProfitText = fmt(totalOutlay);
+                }
+            } else { // Put
+                breakeven = strike - premium;
+                const intrinsicAtSpot = Math.max(0, strike - targetSpot);
+                pnlPerShare = isBuy ? (intrinsicAtSpot - premium) : (premium - intrinsicAtSpot);
+                if (isBuy) {
+                    maxLossText = fmt(totalOutlay);
+                    maxProfitText = fmt((strike - premium) * totalQty);
+                } else {
+                    maxLossText = fmt((strike - premium) * totalQty);
+                    maxProfitText = fmt(totalOutlay);
+                }
+            }
+
+            const totalPnl = pnlPerShare * totalQty;
+            const roiPct = totalOutlay > 0 ? (totalPnl / totalOutlay * 100) : 0;
+
+            lastResult = { isBuy, isCall, strike, premium, totalQty, totalOutlay, targetSpot, breakeven, totalPnl, roiPct };
+
+            const pnlCard = document.getElementById('pnlCard');
+            const resPnlAmt = document.getElementById('resPnlAmt');
+            const resPnlPct = document.getElementById('resPnlPct');
+
+            if (totalPnl >= 0) {
+                pnlCard.className = 'bg-gradient-to-br from-emerald-600 to-teal-700 rounded-2xl card-shadow p-6 text-white animate-slide';
+                resPnlAmt.textContent = '+' + fmt(totalPnl);
+            } else {
+                pnlCard.className = 'bg-gradient-to-br from-rose-600 to-red-700 rounded-2xl card-shadow p-6 text-white animate-slide';
+                resPnlAmt.textContent = '-' + fmt(Math.abs(totalPnl));
+            }
+            resPnlPct.textContent = `ROI on Premium: ${roiPct.toFixed(1)}% | At Spot ₹${targetSpot.toLocaleString('en-IN')}`;
+
+            document.getElementById('resBreakeven').textContent = fmt(breakeven);
+            document.getElementById('resMaxLoss').textContent = maxLossText;
+            document.getElementById('resMaxProfit').textContent = maxProfitText;
+            document.getElementById('resTotalOutlay').textContent = fmt(totalOutlay);
+            document.getElementById('resTotalQty').textContent = totalQty.toLocaleString('en-IN') + ` (${numLots} Lots)`;
+        }
+
+        function copyResults() {
+            if (!lastResult.strike) return;
+            const r = lastResult;
+            const text = `Option Payoff Result (ArthCalculator.in)\n${r.isBuy?'Long':'Short'} ${r.isCall?'Call':'Put'} @ Strike ₹${r.strike}\nPremium: ₹${r.premium} | Qty: ${r.totalQty}\nBreakeven Price: ₹${r.breakeven}\nP&L at Spot ₹${r.targetSpot}: ${r.totalPnl >= 0 ? '+' : ''}${fmt(r.totalPnl)}`;
+            navigator.clipboard.writeText(text).then(() => alert('Copied!'));
+        }
+
+        window.addEventListener('DOMContentLoaded', calculate);
+
+        fetch('/navbar.html').then(r => r.text()).then(h => {
+            document.getElementById('navbar').innerHTML = h;
+            const btn = document.getElementById('menuBtn');
+            const menu = document.getElementById('mobileMenu');
+            if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        });
+        fetch('/footer.html').then(r => r.text()).then(h => { document.getElementById('footer').innerHTML = h; });
+    </script>
+</body>
+</html>

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Retracement Calculator – Stock Chart Target Levels | ArthCalculator</title>
+    <meta name="description" content="Calculate stock price Fibonacci retracement (23.6%, 38.2%, 50%, 61.8%, 78.6%) and extension levels for uptrends and downtrends.">
+    <meta name="keywords" content="fibonacci retracement calculator, stock fibonacci calculator, golden ratio trading levels, fibonacci extensions Nifty 2026">
+    <meta name="author" content="ArthCalculator">
+    <meta name="last-modified" content="2026-08-09">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/fibonacci-retracement-calculator/">
+    <link type="image/x-icon" rel="icon" href="/favicon.ico">
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Fibonacci Retracement Calculator – Uptrend & Downtrend Levels">
+    <meta property="og:description" content="Calculate key Fibonacci levels for technical stock chart analysis.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/fibonacci-retracement-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- Schemas -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Fibonacci Retracement Calculator",
+      "url": "https://arthcalculator.in/fibonacci-retracement-calculator/",
+      "description": "Calculate technical Fibonacci retracement and extension price levels for stock trading.",
+      "datePublished": "2026-08-09",
+      "dateModified": "2026-08-09"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Fibonacci Retracement Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+        { "@type": "ListItem", "position": 3, "name": "Fibonacci Calculator", "item": "https://arthcalculator.in/fibonacci-retracement-calculator/" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Fibonacci Retracement in Stock Trading?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fibonacci Retracement is a technical analysis tool based on key mathematical ratios (23.6%, 38.2%, 50%, 61.8%, 78.6%) derived from the Fibonacci sequence. Traders use these levels to identify potential support and resistance zones where price pullbacks may reverse."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Golden Ratio in Fibonacci Trading?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 61.8% level is known as the Golden Ratio (0.618). It is considered the most significant Fibonacci retracement level where pullbacks frequently find strong support or resistance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How to calculate Fibonacci Retracement in Uptrend?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In an uptrend, calculate Retracement Level = Swing High - (Range × Ratio), where Range = Swing High - Swing Low. For example, 61.8% level = High - (Range × 0.618)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How to calculate Fibonacci Retracement in Downtrend?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In a downtrend, calculate Retracement Level = Swing Low + (Range × Ratio), where Range = Swing High - Swing Low."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are Fibonacci Extension levels?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fibonacci extensions (127.2%, 161.8%, 261.8%) project potential profit-taking target levels once price breaks out past the previous swing high or swing low."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is 50% a Fibonacci ratio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Technically 50% is not a Fibonacci number ratio, but Dow Theory and market technical analysis include the 50% retracement level because financial markets frequently pull back halfway across a major price move."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which timeframe works best for Fibonacci Retracement?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fibonacci works across all timeframes. Swing traders use daily and weekly charts, while intraday traders use 5-minute and 15-minute charts on Nifty and BankNifty."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should Fibonacci be used alone for trade signals?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Professional traders combine Fibonacci levels with horizontal support/resistance, candlestick reversal patterns (hammer, engulfing), and volume indicators for confluence."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #7c3aed 0%, #2563eb 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05); }
+        details summary { list-style: none; cursor: pointer; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg.chevron { transform: rotate(180deg); }
+        input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-slide { animation: slideIn 0.4s ease forwards; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+    <div id="navbar"></div>
+
+    <!-- Hero -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center"><a href="/" class="hover:text-purple-600 transition-colors">Home</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li class="flex items-center"><a href="/calculators/" class="hover:text-purple-600 transition-colors">Calculators</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li class="text-purple-600 font-bold" aria-current="page">Fibonacci Retracement</li>
+                </ol>
+            </nav>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div class="max-w-3xl">
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight pb-1">Fibonacci Retracement Calculator</h1>
+                    <p class="text-slate-500 text-sm font-medium mb-3">Golden Ratio (61.8%) · Uptrend & Downtrend Levels · Technical Extensions</p>
+                    <p class="text-slate-500 text-xs sm:text-base leading-relaxed">Calculate key Fibonacci price retracements (23.6%, 38.2%, 50%, 61.8%, 78.6%) and extension targets for Nifty, BankNifty, and stock chart analysis.</p>
+                </div>
+                <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="bg-purple-50 text-purple-700 border border-purple-200 px-3 py-1.5 rounded-full font-medium">✓ Golden Ratio 61.8%</span>
+                    <span class="bg-indigo-50 text-indigo-700 border border-indigo-200 px-3 py-1.5 rounded-full font-medium">✓ Extensions Included</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4" id="calculator">
+        <div class="flex flex-col lg:flex-row gap-8 mb-12">
+            <!-- Left: Inputs -->
+            <div class="w-full lg:w-3/5 bg-white rounded-2xl card-shadow border border-slate-100 p-6 sm:p-8">
+                <h2 class="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
+                    <span class="w-8 h-8 bg-purple-100 text-purple-700 rounded-lg flex items-center justify-center text-sm font-bold">📐</span>
+                    Trend & Swing Prices
+                </h2>
+
+                <!-- Trend Direction -->
+                <div class="mb-5">
+                    <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2">Trend Direction</label>
+                    <div class="grid grid-cols-2 gap-3">
+                        <label class="relative flex items-center justify-center p-3 border border-slate-200 rounded-xl cursor-pointer bg-white hover:border-purple-400 transition-all">
+                            <input type="radio" name="trendDir" value="uptrend" class="peer sr-only" checked>
+                            <span class="text-sm font-bold text-slate-600 peer-checked:text-emerald-700">📈 Uptrend (Pullback Buy)</span>
+                            <div class="absolute inset-0 border-2 border-transparent peer-checked:border-emerald-500 rounded-xl pointer-events-none"></div>
+                        </label>
+                        <label class="relative flex items-center justify-center p-3 border border-slate-200 rounded-xl cursor-pointer bg-white hover:border-purple-400 transition-all">
+                            <input type="radio" name="trendDir" value="downtrend" class="peer sr-only">
+                            <span class="text-sm font-bold text-slate-600 peer-checked:text-rose-700">📉 Downtrend (Rally Sell)</span>
+                            <div class="absolute inset-0 border-2 border-transparent peer-checked:border-rose-500 rounded-xl pointer-events-none"></div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Swing High & Swing Low -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Swing High Price (₹)</label>
+                        <input type="number" id="swingHigh" placeholder="24500" value="24500" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-purple-400 outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Swing Low Price (₹)</label>
+                        <input type="number" id="swingLow" placeholder="23500" value="23500" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-purple-400 outline-none text-sm">
+                    </div>
+                </div>
+
+                <div class="flex gap-3">
+                    <button id="calculateBtn" class="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-purple-200 transition-all active:scale-[0.98]">
+                        Calculate Fibonacci Levels
+                    </button>
+                    <button id="resetBtn" class="px-5 py-4 bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold rounded-xl transition-colors">
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right: Results -->
+            <div class="w-full lg:w-2/5 flex flex-col gap-5">
+                <!-- Golden Ratio Banner -->
+                <div class="bg-gradient-to-br from-purple-600 to-indigo-700 rounded-2xl card-shadow p-6 text-white animate-slide">
+                    <p class="text-xs text-purple-200 font-bold uppercase tracking-wider mb-1">Golden Ratio Level (61.8%)</p>
+                    <p id="resGoldenRatio" class="text-4xl font-black mb-1">₹—</p>
+                    <p id="resTrendLabel" class="text-purple-200 text-xs">Primary Uptrend Support Zone</p>
+                </div>
+
+                <!-- Retracement Breakdown -->
+                <div class="bg-white rounded-2xl card-shadow border border-slate-100 p-6">
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Fibonacci Retracement Levels</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between p-2 rounded-lg bg-slate-50 text-slate-700"><span>0.00% (High/Low)</span><span id="resFibo0" class="font-bold">—</span></div>
+                        <div class="flex justify-between p-2 rounded-lg bg-slate-50 text-slate-700"><span>23.6% Level</span><span id="resFibo236" class="font-semibold">—</span></div>
+                        <div class="flex justify-between p-2 rounded-lg bg-slate-50 text-slate-700"><span>38.2% Level</span><span id="resFibo382" class="font-semibold">—</span></div>
+                        <div class="flex justify-between p-2 rounded-lg bg-indigo-50 text-indigo-900 font-semibold"><span>50.0% Level (Halfway)</span><span id="resFibo500" class="font-bold">—</span></div>
+                        <div class="flex justify-between p-2.5 rounded-lg bg-purple-100 text-purple-900 font-bold text-base my-1"><span>61.8% Golden Ratio</span><span id="resFibo618">—</span></div>
+                        <div class="flex justify-between p-2 rounded-lg bg-slate-50 text-slate-700"><span>78.6% Level</span><span id="resFibo786" class="font-semibold">—</span></div>
+                        <div class="flex justify-between p-2 rounded-lg bg-slate-50 text-slate-700"><span>100.0% Level</span><span id="resFibo100" class="font-bold">—</span></div>
+                    </div>
+                </div>
+
+                <!-- Extensions -->
+                <div class="bg-white rounded-2xl card-shadow border border-slate-100 p-6">
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-3">Fibonacci Extension Targets</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between text-slate-600"><span>127.2% Target</span><span id="resExt127" class="font-bold text-emerald-600">—</span></div>
+                        <div class="flex justify-between text-slate-600"><span>161.8% Target (Golden Ext)</span><span id="resExt161" class="font-bold text-emerald-600">—</span></div>
+                    </div>
+                </div>
+
+                <!-- Copy / Print -->
+                <div class="flex gap-3">
+                    <button onclick="copyResults()" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-xl transition-colors text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 002 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                        Copy Levels
+                    </button>
+                    <button onclick="window.print()" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-xl transition-colors text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                        Print
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <section id="educational-content" class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Fibonacci Retracement & Technical Trading Guide</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-white rounded-2xl border border-slate-100 card-shadow p-6">
+                    <h3 class="font-bold text-purple-800 mb-3 text-base">📈 Uptrend Retracement Math</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-2"><strong>Range</strong> = Swing High - Swing Low</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-2"><strong>61.8% Level</strong> = Swing High - (Range × 0.618)</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">In an uptrend, traders buy near the 38.2%, 50%, or 61.8% support zones expecting the primary trend to resume.</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-100 card-shadow p-6">
+                    <h3 class="font-bold text-purple-800 mb-3 text-base">📉 Downtrend Retracement Math</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-2"><strong>Range</strong> = Swing High - Swing Low</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-2"><strong>61.8% Level</strong> = Swing Low + (Range × 0.618)</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">In a downtrend, traders short near the 50% or 61.8% resistance zones expecting price to drop.</p>
+                </div>
+            </div>
+
+            <!-- Quick Insights & Hacks -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-purple-50 border border-purple-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-purple-900 mb-2 flex items-center gap-2"><span class="text-lg">💡</span> Pro Hack: Confluence Trading</h3>
+                    <p class="text-purple-800 text-xs sm:text-sm leading-relaxed">The most powerful buy setups occur when a 61.8% Fibonacci level aligns perfectly with a key moving average (like 50 EMA or 200 EMA) and prior horizontal structure support.</p>
+                </div>
+                <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-emerald-900 mb-2 flex items-center gap-2"><span class="text-lg">⚡</span> Importance of Golden Ratio (0.618)</h3>
+                    <p class="text-emerald-800 text-xs sm:text-sm leading-relaxed">Derived from nature and financial market mathematics, the 61.8% level represents the maximum healthy pullback in a strong trend. A break below 78.6% usually indicates trend failure.</p>
+                </div>
+                <div class="bg-indigo-50 border border-indigo-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-indigo-900 mb-2 flex items-center gap-2"><span class="text-lg">🎯</span> Extension Profit Targets</h3>
+                    <p class="text-indigo-800 text-xs sm:text-sm leading-relaxed">Once a stock breaks out past its previous swing high, use the 161.8% Fibonacci extension level as a objective, scientific profit-taking target.</p>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-800 mb-4">Fibonacci Ratios & Market Significance</h3>
+            <div class="bg-white rounded-2xl border border-slate-100 card-shadow overflow-hidden mb-8">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead class="bg-slate-50 border-b border-slate-200">
+                            <tr>
+                                <th class="text-left px-4 py-3 font-semibold text-slate-700">Ratio Level</th>
+                                <th class="text-left px-4 py-3 font-semibold text-slate-700">Pullback Depth Description</th>
+                                <th class="text-left px-4 py-3 font-semibold text-slate-700">Typical Market Sentiment</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-purple-700">23.6%</td><td class="px-4 py-3 text-slate-600">Shallow Retracement</td><td class="px-4 py-3 text-slate-600">Extremely strong momentum trend</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-purple-700">38.2%</td><td class="px-4 py-3 text-slate-600">Moderate Retracement</td><td class="px-4 py-3 text-slate-600">Healthy institutional trend buying</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-indigo-700">50.0%</td><td class="px-4 py-3 text-slate-600">Halfway Pullback (Dow Theory)</td><td class="px-4 py-3 text-slate-600">Key psychological equilibrium point</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-bold text-purple-800 bg-purple-50">61.8%</td><td class="px-4 py-3 font-semibold text-slate-800 bg-purple-50">Golden Ratio Level</td><td class="px-4 py-3 font-semibold text-purple-900 bg-purple-50">Maximum optimal risk-reward entry zone</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-rose-700">78.6%</td><td class="px-4 py-3 text-slate-600">Deep Retracement</td><td class="px-4 py-3 text-rose-600 font-semibold">Warning: Trend weakness / potential reversal</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Common Mistakes -->
+            <div class="bg-red-50 border border-red-200 rounded-2xl p-6 mb-8">
+                <h3 class="font-bold text-red-900 mb-3">⚠️ 3 Common Fibonacci Drawing Mistakes</h3>
+                <ul class="space-y-2 text-sm text-red-800">
+                    <li>• <strong>Mixing Candlestick Wicks and Bodies:</strong> Always draw Fibonacci consistently from extreme wick-to-wick or body-to-body of the swing high and swing low.</li>
+                    <li>• <strong>Selecting Minor Intraday Swings:</strong> Drawing Fibonacci across micro noise on 1-minute charts creates unreliable levels. Stick to major swing highs and lows.</li>
+                    <li>• <strong>Assuming 100% Reversal at 61.8%:</strong> Fibonacci levels are probable support zones, not guaranteed walls. Always await confirmation price action.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FAQs -->
+        <section id="faqs" class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Frequently Asked Questions</h2>
+            <div class="space-y-3 max-w-3xl mx-auto">
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is Fibonacci Retracement in Stock Trading?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Fibonacci Retracement is a technical analysis tool based on key mathematical ratios (23.6%, 38.2%, 50%, 61.8%, 78.6%) derived from the Fibonacci sequence. Traders use these levels to identify potential support and resistance zones where price pullbacks may reverse.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is the Golden Ratio in Fibonacci Trading?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">The 61.8% level is known as the Golden Ratio (0.618). It is considered the most significant Fibonacci retracement level where pullbacks frequently find strong support or resistance.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">How to calculate Fibonacci Retracement in Uptrend?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">In an uptrend, calculate Retracement Level = Swing High - (Range × Ratio), where Range = Swing High - Swing Low. For example, 61.8% level = High - (Range × 0.618).</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">How to calculate Fibonacci Retracement in Downtrend?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">In a downtrend, calculate Retracement Level = Swing Low + (Range × Ratio), where Range = Swing High - Swing Low.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What are Fibonacci Extension levels?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Fibonacci extensions (127.2%, 161.8%, 261.8%) project potential profit-taking target levels once price breaks out past the previous swing high or swing low.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">Is 50% a Fibonacci ratio?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Technically 50% is not a Fibonacci number ratio, but Dow Theory and market technical analysis include the 50% retracement level because financial markets frequently pull back halfway across a major price move.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">Which timeframe works best for Fibonacci Retracement?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Fibonacci works across all timeframes. Swing traders use daily and weekly charts, while intraday traders use 5-minute and 15-minute charts on Nifty and BankNifty.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">Should Fibonacci be used alone for trade signals?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">No. Professional traders combine Fibonacci levels with horizontal support/resistance, candlestick reversal patterns (hammer, engulfing), and volume indicators for confluence.</div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Related -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold text-slate-800 mb-6">Related Stock & Trading Calculators</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                <a href="/pivot-point-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-purple-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-purple-700">Pivot Point Calculator</p><p class="text-xs text-slate-400 mt-1">Intraday S&R levels</p></a>
+                <a href="/stock-position-size-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-purple-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-purple-700">Position Size Calculator</p><p class="text-xs text-slate-400 mt-1">Risk management</p></a>
+                <a href="/option-payoff-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-purple-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-purple-700">Option Payoff Calculator</p><p class="text-xs text-slate-400 mt-1">Call & Put P&L</p></a>
+                <a href="/stock-average/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-purple-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-purple-700">Stock Average Calculator</p><p class="text-xs text-slate-400 mt-1">Average down price</p></a>
+                <a href="/dividend-yield-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-purple-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-purple-700">Dividend Yield Calculator</p><p class="text-xs text-slate-400 mt-1">Passive income growth</p></a>
+                <a href="/cagr/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-purple-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-purple-700">CAGR Calculator</p><p class="text-xs text-slate-400 mt-1">Compound growth rate</p></a>
+                <a href="/capital-gains-tax/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-purple-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-purple-700">Capital Gains Tax</p><p class="text-xs text-slate-400 mt-1">STCG & LTCG tax</p></a>
+                <a href="/target-sip-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-purple-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-purple-700">Target Amount SIP</p><p class="text-xs text-slate-400 mt-1">Goal SIP planner</p></a>
+            </div>
+        </section>
+
+        <div id="arthcalculatorLinkingHub"></div>
+        <script src="/js/related-tools.js" defer></script>
+        <script src="/js/search.js" defer></script>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        function fmt(n) { return '₹' + (Math.round(n * 100) / 100).toLocaleString('en-IN'); }
+
+        const highInput = document.getElementById('swingHigh');
+        const lowInput = document.getElementById('swingLow');
+
+        document.querySelectorAll('input[name="trendDir"]').forEach(r => r.addEventListener('change', calculate));
+        [highInput, lowInput].forEach(i => i.addEventListener('input', calculate));
+
+        document.getElementById('calculateBtn').addEventListener('click', calculate);
+        document.getElementById('resetBtn').addEventListener('click', () => {
+            highInput.value = 24500; lowInput.value = 23500;
+            document.querySelector('input[name="trendDir"][value="uptrend"]').checked = true;
+            calculate();
+        });
+
+        let lastResult = {};
+
+        function calculate() {
+            const isUptrend = document.querySelector('input[name="trendDir"]:checked').value === 'uptrend';
+            const H = parseFloat(highInput.value) || 0;
+            const L = parseFloat(lowInput.value) || 0;
+            const diff = H - L;
+
+            let fib0 = 0, fib236 = 0, fib382 = 0, fib500 = 0, fib618 = 0, fib786 = 0, fib100 = 0;
+            let ext127 = 0, ext161 = 0;
+
+            if (isUptrend) {
+                fib0 = H;
+                fib236 = H - (diff * 0.236);
+                fib382 = H - (diff * 0.382);
+                fib500 = H - (diff * 0.500);
+                fib618 = H - (diff * 0.618);
+                fib786 = H - (diff * 0.786);
+                fib100 = L;
+                ext127 = H + (diff * 0.272);
+                ext161 = H + (diff * 0.618);
+            } else {
+                fib0 = L;
+                fib236 = L + (diff * 0.236);
+                fib382 = L + (diff * 0.382);
+                fib500 = L + (diff * 0.500);
+                fib618 = L + (diff * 0.618);
+                fib786 = L + (diff * 0.786);
+                fib100 = H;
+                ext127 = L - (diff * 0.272);
+                ext161 = L - (diff * 0.618);
+            }
+
+            lastResult = { isUptrend, H, L, fib0, fib236, fib382, fib500, fib618, fib786, fib100, ext127, ext161 };
+
+            document.getElementById('resGoldenRatio').textContent = fmt(fib618);
+            document.getElementById('resTrendLabel').textContent = isUptrend ? 'Primary Uptrend Support Zone (61.8%)' : 'Primary Downtrend Resistance Zone (61.8%)';
+            document.getElementById('resFibo0').textContent = fmt(fib0);
+            document.getElementById('resFibo236').textContent = fmt(fib236);
+            document.getElementById('resFibo382').textContent = fmt(fib382);
+            document.getElementById('resFibo500').textContent = fmt(fib500);
+            document.getElementById('resFibo618').textContent = fmt(fib618);
+            document.getElementById('resFibo786').textContent = fmt(fib786);
+            document.getElementById('resFibo100').textContent = fmt(fib100);
+            document.getElementById('resExt127').textContent = fmt(ext127);
+            document.getElementById('resExt161').textContent = fmt(ext161);
+        }
+
+        function copyResults() {
+            if (!lastResult.fib618) return;
+            const r = lastResult;
+            const text = `Fibonacci Levels (${r.isUptrend?'Uptrend':'Downtrend'}) (ArthCalculator.in)\n61.8% Golden Ratio: ${fmt(r.fib618)}\n50%: ${fmt(r.fib500)} | 38.2%: ${fmt(r.fib382)} | 23.6%: ${fmt(r.fib236)}\nExtension 161.8%: ${fmt(r.ext161)}`;
+            navigator.clipboard.writeText(text).then(() => alert('Copied!'));
+        }
+
+        window.addEventListener('DOMContentLoaded', calculate);
+
+        fetch('/navbar.html').then(r => r.text()).then(h => {
+            document.getElementById('navbar').innerHTML = h;
+            const btn = document.getElementById('menuBtn');
+            const menu = document.getElementById('mobileMenu');
+            if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        });
+        fetch('/footer.html').then(r => r.text()).then(h => { document.getElementById('footer').innerHTML = h; });
+    </script>
+</body>
+</html>

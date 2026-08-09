@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Long Straddle & Strangle Volatility Break-Even Calculator | ArthCalculator</title>
+    <meta name="description" content="Calculate combined net debit, upper & lower breakeven points, and required percentage movement for Long Straddle and Strangle option trades in India.">
+    <meta name="keywords" content="straddle calculator, strangle calculator, straddle breakeven calculator, Nifty strangle volatility calculator India 2026">
+    <meta name="author" content="ArthCalculator">
+    <meta name="last-modified" content="2026-08-09">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/straddle-strangle-volatility-breakeven/">
+    <link type="image/x-icon" rel="icon" href="/favicon.ico">
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Long Straddle & Strangle Volatility Break-Even Calculator">
+    <meta property="og:description" content="Calculate upper & lower breakeven prices and required movement % for Straddles & Strangles.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/straddle-strangle-volatility-breakeven/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- Schemas (WebPage, SoftwareApplication, BreadcrumbList, FAQPage) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Long Straddle & Strangle Volatility Calculator",
+      "url": "https://arthcalculator.in/straddle-strangle-volatility-breakeven/",
+      "description": "Calculate Straddle and Strangle option strategy breakeven points and movement required.",
+      "datePublished": "2026-08-09",
+      "dateModified": "2026-08-09"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Straddle Strangle Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+        { "@type": "ListItem", "position": 3, "name": "Straddle Strangle Calculator", "item": "https://arthcalculator.in/straddle-strangle-volatility-breakeven/" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a Long Straddle option strategy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Long Straddle involves buying both an At-the-Money (ATM) Call and an ATM Put option for the same underlying asset and expiration date, profiting from big price moves in EITHER direction."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a Long Strangle option strategy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Long Strangle involves buying an Out-of-the-Money (OTM) Call and an OTM Put option. It costs less than a Straddle but requires a larger price move to reach profitability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are Straddle breakeven points calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1. Upper Breakeven = Strike Price + Total Net Premium Paid.\n2. Lower Breakeven = Strike Price - Total Net Premium Paid."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are Strangle breakeven points calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1. Upper Breakeven = Call Strike Price + Total Net Premium Paid.\n2. Lower Breakeven = Put Strike Price - Total Net Premium Paid."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I trade a Long Straddle or Strangle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Trade Long Straddles or Strangles prior to major binary market events (e.g. Union Budget announcements, RBI Interest Rate Decisions, General Election results) when massive volatility is expected."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the biggest risk of a Long Straddle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The primary risk is Time Decay (Theta) and Volatility Crush. If the market stays flat or fails to move beyond the breakeven points, you lose 100% of the net debit premium paid."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What percentage move is required to breakeven on a Nifty Straddle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Typically, a weekly Nifty ATM Straddle requires a 1.5% to 2.5% market move in either direction to hit breakeven."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Theta affect Straddles vs Strangles?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Straddles suffer higher absolute daily theta decay because both legs are ATM options with high extrinsic value. Strangles have lower daily theta decay but lower delta."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #059669 0%, #0284c7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05); }
+        details summary { list-style: none; cursor: pointer; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg.chevron { transform: rotate(180deg); }
+        input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-slide { animation: slideIn 0.4s ease forwards; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+    <div id="navbar"></div>
+
+    <!-- Hero -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center"><a href="/" class="hover:text-emerald-600 transition-colors">Home</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li class="flex items-center"><a href="/calculators/" class="hover:text-emerald-600 transition-colors">Calculators</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li class="text-emerald-600 font-bold" aria-current="page">Straddle / Strangle Calculator</li>
+                </ol>
+            </nav>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div class="max-w-3xl">
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight pb-1">Long Straddle & Strangle Volatility Calculator</h1>
+                    <p class="text-slate-500 text-sm font-medium mb-3">Upper & Lower Breakevens · Required Movement % · Binary Event Trading</p>
+                    <p class="text-slate-500 text-xs sm:text-base leading-relaxed">Calculate total net debit, upper/lower breakeven prices, and required percentage movement to profit on Straddles and Strangles.</p>
+                </div>
+                <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="bg-emerald-50 text-emerald-700 border border-emerald-200 px-3 py-1.5 rounded-full font-medium">✓ Dual Direction Profit</span>
+                    <span class="bg-sky-50 text-sky-700 border border-sky-200 px-3 py-1.5 rounded-full font-medium">✓ Required % Move</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4" id="calculator">
+        <div class="flex flex-col lg:flex-row gap-8 mb-12">
+            <!-- Left: Inputs -->
+            <div class="w-full lg:w-3/5 bg-white rounded-2xl card-shadow border border-slate-100 p-6 sm:p-8">
+                <h2 class="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
+                    <span class="w-8 h-8 bg-emerald-100 text-emerald-700 rounded-lg flex items-center justify-center text-sm font-bold">⚡</span>
+                    Straddle / Strangle Trade Inputs
+                </h2>
+
+                <!-- Spot Price & Lot Size -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Current Spot Price (₹)</label>
+                        <input type="number" id="spotPrice" placeholder="24000" value="24000" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-emerald-400 outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Lot Size (Qty)</label>
+                        <input type="number" id="lotSize" placeholder="25" value="25" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-emerald-400 outline-none text-sm">
+                    </div>
+                </div>
+
+                <!-- Call Strike & Premium -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Purchased Call Strike (₹)</label>
+                        <input type="number" id="callStrike" placeholder="24000" value="24000" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-emerald-400 outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Call Premium Paid (₹)</label>
+                        <input type="number" id="callPremium" placeholder="180" value="180" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-emerald-400 outline-none text-sm">
+                    </div>
+                </div>
+
+                <!-- Put Strike & Premium -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Purchased Put Strike (₹)</label>
+                        <input type="number" id="putStrike" placeholder="24000" value="24000" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-emerald-400 outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Put Premium Paid (₹)</label>
+                        <input type="number" id="putPremium" placeholder="170" value="170" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-emerald-400 outline-none text-sm">
+                    </div>
+                </div>
+
+                <div class="flex gap-3">
+                    <button id="calculateBtn" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-emerald-200 transition-all active:scale-[0.98]">
+                        Calculate Volatility Breakevens
+                    </button>
+                    <button id="resetBtn" class="px-5 py-4 bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold rounded-xl transition-colors">
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right: Results -->
+            <div class="w-full lg:w-2/5 flex flex-col gap-5">
+                <!-- Result Banner -->
+                <div class="bg-gradient-to-br from-emerald-600 to-teal-700 rounded-2xl card-shadow p-6 text-white animate-slide">
+                    <p class="text-xs text-emerald-200 font-bold uppercase tracking-wider mb-1">Required Market Movement %</p>
+                    <p id="resMovePct" class="text-4xl font-black mb-1">± — %</p>
+                    <p id="resTotalCostSubtext" class="text-emerald-200 text-xs">Total Net Debit Cost: ₹—</p>
+                </div>
+
+                <!-- Breakdown Summary -->
+                <div class="bg-white rounded-2xl card-shadow border border-slate-100 p-6">
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Breakeven Range Summary</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between text-slate-600"><span>Upper Breakeven Price</span><span id="resUpperBe" class="font-bold text-emerald-600">—</span></div>
+                        <div class="flex justify-between text-slate-600"><span>Lower Breakeven Price</span><span id="resLowerBe" class="font-bold text-emerald-600">—</span></div>
+                        <div class="flex justify-between text-slate-600"><span>Max Risk (Total Debit)</span><span id="resMaxRisk" class="font-bold text-rose-600">—</span></div>
+                        <div class="border-t border-slate-100 pt-3 flex justify-between font-bold text-slate-800 text-base">
+                            <span>Upside & Downside Potential</span>
+                            <span class="text-emerald-600 font-bold">100% UNLIMITED</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copy / Print -->
+                <div class="flex gap-3">
+                    <button onclick="copyResults()" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-xl transition-colors text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                        Copy Result
+                    </button>
+                    <button onclick="window.print()" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-xl transition-colors text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                        Print
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <section id="educational-content" class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Long Straddle vs Strangle Masterclass</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-white rounded-2xl border border-slate-100 card-shadow p-6">
+                    <h3 class="font-bold text-emerald-800 mb-3 text-base">Long Straddle (ATM Call + ATM Put)</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Buying ATM Call + ATM Put at the same strike. High debit cost, but requires a smaller percentage price move to reach breakeven compared to a Strangle.</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-100 card-shadow p-6">
+                    <h3 class="font-bold text-emerald-800 mb-3 text-base">Long Strangle (OTM Call + OTM Put)</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Buying OTM Call + OTM Put at different strikes. Lower debit cost, but requires a significantly larger price move to reach profitability.</p>
+                </div>
+            </div>
+
+            <!-- Quick Insights & Hacks -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-emerald-900 mb-2 flex items-center gap-2"><span class="text-lg">💡</span> Pro Hack: Pre-Event IV Spike</h3>
+                    <p class="text-emerald-800 text-xs sm:text-sm leading-relaxed">Buy Straddles 5-7 days before major events (e.g. Budget) when IV is still low, and sell BEFORE the event to profit from IV expansion!</p>
+                </div>
+                <div class="bg-sky-50 border border-sky-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-sky-900 mb-2 flex items-center gap-2"><span class="text-lg">⚡</span> Avoid Post-Event Volatility Crush</h3>
+                    <p class="text-sky-800 text-xs sm:text-sm leading-relaxed">Holding Straddles through an event causes severe Volatility Crush immediately after the announcement, deflating premiums rapidly.</p>
+                </div>
+                <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-amber-900 mb-2 flex items-center gap-2"><span class="text-lg">🛡️</span> Weekly vs Monthly Expiry</h3>
+                    <p class="text-amber-800 text-xs sm:text-sm leading-relaxed">Monthly Straddles suffer slower daily theta decay compared to weekly options, giving your position more time to move.</p>
+                </div>
+            </div>
+
+            <!-- Common Mistakes -->
+            <div class="bg-red-50 border border-red-200 rounded-2xl p-6 mb-8">
+                <h3 class="font-bold text-red-900 mb-3">⚠️ 3 Common Volatility Strategy Mistakes</h3>
+                <ul class="space-y-2 text-sm text-red-800">
+                    <li>• <strong>Trading Straddles in Low Volatility Markets:</strong> Buying Straddles during quiet range-bound consolidation leads to 100% premium loss due to theta decay.</li>
+                    <li>• <strong>Overpaying for High IV Options:</strong> Buying Straddles when IV Rank is already above 80 leaves zero margin for profit.</li>
+                    <li>• <strong>Holding Flat Positions to Expiry:</strong> Cut losses early if the expected market catalyst passes without generating price movement.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FAQs -->
+        <section id="faqs" class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Frequently Asked Questions</h2>
+            <div class="space-y-3 max-w-3xl mx-auto">
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is a Long Straddle option strategy?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">A Long Straddle involves buying both an At-the-Money (ATM) Call and an ATM Put option for the same underlying asset and expiration date, profiting from big price moves in EITHER direction.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is a Long Strangle option strategy?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">A Long Strangle involves buying an Out-of-the-Money (OTM) Call and an OTM Put option. It costs less than a Straddle but requires a larger price move to reach profitability.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">How are Straddle breakeven points calculated?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">1. Upper Breakeven = Strike Price + Total Net Premium Paid.<br>2. Lower Breakeven = Strike Price - Total Net Premium Paid.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">How are Strangle breakeven points calculated?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">1. Upper Breakeven = Call Strike Price + Total Net Premium Paid.<br>2. Lower Breakeven = Put Strike Price - Total Net Premium Paid.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">When should I trade a Long Straddle or Strangle?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Trade Long Straddles or Strangles prior to major binary market events (e.g. Union Budget announcements, RBI Interest Rate Decisions, General Election results) when massive volatility is expected.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is the biggest risk of a Long Straddle?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">The primary risk is Time Decay (Theta) and Volatility Crush. If the market stays flat or fails to move beyond the breakeven points, you lose 100% of the net debit premium paid.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What percentage move is required to breakeven on a Nifty Straddle?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Typically, a weekly Nifty ATM Straddle requires a 1.5% to 2.5% market move in either direction to hit breakeven.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">How does Theta affect Straddles vs Strangles?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Straddles suffer higher absolute daily theta decay because both legs are ATM options with high extrinsic value. Strangles have lower daily theta decay but lower delta.</div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Related -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold text-slate-800 mb-6">Related Options & Trading Calculators</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                <a href="/butterfly-spread-option-risk/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-emerald-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-emerald-700">Butterfly Spread Risk</p><p class="text-xs text-slate-400 mt-1">Defined risk-reward</p></a>
+                <a href="/iron-condor-strategy-pnl/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-emerald-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-emerald-700">Iron Condor PnL</p><p class="text-xs text-slate-400 mt-1">4-leg option strategy</p></a>
+                <a href="/option-iv-rank-percentile/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-emerald-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-emerald-700">Option IV Rank (IVR)</p><p class="text-xs text-slate-400 mt-1">Volatility rank & percentile</p></a>
+                <a href="/option-payoff-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-emerald-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-emerald-700">Option Payoff Visualizer</p><p class="text-xs text-slate-400 mt-1">Multi-leg option P&L</p></a>
+            </div>
+        </section>
+
+        <div id="arthcalculatorLinkingHub"></div>
+        <script src="/js/related-tools.js" defer></script>
+        <script src="/js/search.js" defer></script>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        function fmt(n) { return '₹' + Math.round(n).toLocaleString('en-IN'); }
+
+        const spotInput = document.getElementById('spotPrice');
+        const lotInput = document.getElementById('lotSize');
+        const callStrikeInput = document.getElementById('callStrike');
+        const callPremInput = document.getElementById('callPremium');
+        const putStrikeInput = document.getElementById('putStrike');
+        const putPremInput = document.getElementById('putPremium');
+
+        [spotInput, lotInput, callStrikeInput, callPremInput, putStrikeInput, putPremInput].forEach(i => i.addEventListener('input', calculate));
+
+        document.getElementById('calculateBtn').addEventListener('click', calculate);
+        document.getElementById('resetBtn').addEventListener('click', () => {
+            spotInput.value = 24000;
+            lotInput.value = 25;
+            callStrikeInput.value = 24000;
+            callPremInput.value = 180;
+            putStrikeInput.value = 24000;
+            putPremInput.value = 170;
+            calculate();
+        });
+
+        let lastResult = {};
+
+        function calculate() {
+            const spot = parseFloat(spotInput.value) || 0;
+            const lot = parseFloat(lotInput.value) || 0;
+            const callStrike = parseFloat(callStrikeInput.value) || 0;
+            const callPrem = parseFloat(callPremInput.value) || 0;
+            const putStrike = parseFloat(putStrikeInput.value) || 0;
+            const putPrem = parseFloat(putPremInput.value) || 0;
+
+            const netDebitPerUnit = callPrem + putPrem;
+            const totalCost = netDebitPerUnit * lot;
+            const upperBe = callStrike + netDebitPerUnit;
+            const lowerBe = putStrike - netDebitPerUnit;
+            const moveUpPct = spot > 0 ? ((upperBe - spot) / spot) * 100 : 0;
+            const moveDownPct = spot > 0 ? ((spot - lowerBe) / spot) * 100 : 0;
+            const avgMovePct = (moveUpPct + moveDownPct) / 2;
+
+            lastResult = { spot, lot, callStrike, callPrem, putStrike, putPrem, netDebitPerUnit, totalCost, upperBe, lowerBe, moveUpPct, moveDownPct, avgMovePct };
+
+            document.getElementById('resMovePct').textContent = '± ' + avgMovePct.toFixed(2) + ' %';
+            document.getElementById('resTotalCostSubtext').textContent = 'Total Net Debit Cost: ' + fmt(totalCost);
+            document.getElementById('resUpperBe').textContent = '₹' + Math.round(upperBe) + ' (+' + moveUpPct.toFixed(2) + '%)';
+            document.getElementById('resLowerBe').textContent = '₹' + Math.round(lowerBe) + ' (-' + moveDownPct.toFixed(2) + '%)';
+            document.getElementById('resMaxRisk').textContent = fmt(totalCost);
+        }
+
+        function copyResults() {
+            if (!lastResult.spot) return;
+            const r = lastResult;
+            const text = `Straddle/Strangle Result (ArthCalculator.in)\nSpot Price: ₹${r.spot}\nTotal Net Debit Cost: ${fmt(r.totalCost)}\nUpper Breakeven: ₹${Math.round(r.upperBe)}\nLower Breakeven: ₹${Math.round(r.lowerBe)}\nRequired Movement: ±${r.avgMovePct.toFixed(2)}%`;
+            navigator.clipboard.writeText(text).then(() => alert('Copied!'));
+        }
+
+        window.addEventListener('DOMContentLoaded', calculate);
+
+        fetch('/navbar.html').then(r => r.text()).then(h => {
+            document.getElementById('navbar').innerHTML = h;
+            const btn = document.getElementById('menuBtn');
+            const menu = document.getElementById('mobileMenu');
+            if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        });
+        fetch('/footer.html').then(r => r.text()).then(h => { document.getElementById('footer').innerHTML = h; });
+    </script>
+</body>
+</html>

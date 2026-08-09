@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protective Put Portfolio Hedging Cost Calculator | ArthCalculator</title>
+    <meta name="description" content="Calculate hedging cost percentage, portfolio downside floor price, and net payoff for Protective Put portfolio insurance in India.">
+    <meta name="keywords" content="protective put calculator, portfolio hedging cost calculator, Nifty put hedge calculator India 2026">
+    <meta name="author" content="ArthCalculator">
+    <meta name="last-modified" content="2026-08-09">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/protective-put-hedge-cost/">
+    <link type="image/x-icon" rel="icon" href="/favicon.ico">
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Protective Put Portfolio Hedging Cost Calculator">
+    <meta property="og:description" content="Calculate portfolio hedging cost and downside floor price with Protective Put options.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/protective-put-hedge-cost/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- Schemas (WebPage, SoftwareApplication, BreadcrumbList, FAQPage) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Protective Put Portfolio Hedging Calculator",
+      "url": "https://arthcalculator.in/protective-put-hedge-cost/",
+      "description": "Calculate Protective Put portfolio insurance cost and downside floor protection.",
+      "datePublished": "2026-08-09",
+      "dateModified": "2026-08-09"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Protective Put Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+        { "@type": "ListItem", "position": 3, "name": "Protective Put Calculator", "item": "https://arthcalculator.in/protective-put-hedge-cost/" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a Protective Put strategy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Protective Put (or Synthetic Long Call) is a portfolio hedging technique where an investor owns long shares/mutual funds and buys a Put option to place a hard floor under potential portfolio market losses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does a Protective Put act as portfolio insurance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Just like auto insurance, you pay a small premium for the Put option. If the market crashes 20%-30%, your Put option gains value rupee-for-rupee below the strike price, capping your max loss."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the Hedging Cost % calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hedging Cost % = (Total Put Option Premium Paid / Total Portfolio Value) × 100."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Downside Floor Price of a Protective Put?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Downside Floor Price = Put Strike Price - Put Premium Paid per share. Regardless of how low the stock drops, your net portfolio value cannot fall below this floor price."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if the market rallies strongly after buying a Protective Put?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You participate fully in the market rally minus the small cost of the Put premium paid. Your upside is UNLIMITED."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Nifty Put options be used to hedge a stock portfolio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Buying Nifty OTM Put options equal to your portfolio Beta provides macro market crash insurance for diversified equity portfolios."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What strike price should I choose for a Protective Put?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most investors choose 5% to 10% Out-of-the-Money (OTM) Put strikes to balance cheap annual hedging cost (1%-3%) with robust crash protection."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does a Protective Put compare to a Stop Loss order?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Stop Loss order triggers a sell-off during market gap-downs, liquidating your long positions at bad prices. A Protective Put guarantees a fixed floor price without forcing you to sell your underlying shares."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #4f46e5 0%, #0284c7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05); }
+        details summary { list-style: none; cursor: pointer; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg.chevron { transform: rotate(180deg); }
+        input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-slide { animation: slideIn 0.4s ease forwards; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+    <div id="navbar"></div>
+
+    <!-- Hero -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center"><a href="/" class="hover:text-indigo-600 transition-colors">Home</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li class="flex items-center"><a href="/calculators/" class="hover:text-indigo-600 transition-colors">Calculators</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li class="text-indigo-600 font-bold" aria-current="page">Protective Put Calculator</li>
+                </ol>
+            </nav>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div class="max-w-3xl">
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight pb-1">Protective Put Portfolio Hedging Cost Calculator</h1>
+                    <p class="text-slate-500 text-sm font-medium mb-3">Portfolio Crash Insurance · Hedging Cost % · Downside Floor Price</p>
+                    <p class="text-slate-500 text-xs sm:text-base leading-relaxed">Calculate exact hedging cost percentage, downside floor price, and crash protection for your equity portfolio using Protective Puts.</p>
+                </div>
+                <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="bg-indigo-50 text-indigo-700 border border-indigo-200 px-3 py-1.5 rounded-full font-medium">✓ Portfolio Insurance</span>
+                    <span class="bg-sky-50 text-sky-700 border border-sky-200 px-3 py-1.5 rounded-full font-medium">✓ Max Loss Cap</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4" id="calculator">
+        <div class="flex flex-col lg:flex-row gap-8 mb-12">
+            <!-- Left: Inputs -->
+            <div class="w-full lg:w-3/5 bg-white rounded-2xl card-shadow border border-slate-100 p-6 sm:p-8">
+                <h2 class="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
+                    <span class="w-8 h-8 bg-indigo-100 text-indigo-700 rounded-lg flex items-center justify-center text-sm font-bold">🛡️</span>
+                    Portfolio & Put Option Details
+                </h2>
+
+                <!-- Portfolio Value & Current Stock/Index Price -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Total Portfolio Value (₹)</label>
+                        <input type="number" id="portfolioValue" placeholder="1000000" value="1000000" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-indigo-400 outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Current Stock / Index Price (₹)</label>
+                        <input type="number" id="currentPrice" placeholder="24000" value="24000" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-indigo-400 outline-none text-sm">
+                    </div>
+                </div>
+
+                <!-- Put Strike & Put Premium -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Purchased Put Strike Price (₹)</label>
+                        <input type="number" id="putStrike" placeholder="23000" value="23000" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-indigo-400 outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Put Premium Paid per Unit (₹)</label>
+                        <input type="number" id="putPremium" placeholder="300" value="300" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-indigo-400 outline-none text-sm">
+                    </div>
+                </div>
+
+                <div class="flex gap-3">
+                    <button id="calculateBtn" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-indigo-200 transition-all active:scale-[0.98]">
+                        Calculate Hedging Cost & Floor
+                    </button>
+                    <button id="resetBtn" class="px-5 py-4 bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold rounded-xl transition-colors">
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right: Results -->
+            <div class="w-full lg:w-2/5 flex flex-col gap-5">
+                <!-- Result Banner -->
+                <div class="bg-gradient-to-br from-indigo-600 to-sky-700 rounded-2xl card-shadow p-6 text-white animate-slide">
+                    <p class="text-xs text-indigo-200 font-bold uppercase tracking-wider mb-1">Total Hedging Insurance Cost %</p>
+                    <p id="resHedgeCostPct" class="text-4xl font-black mb-1">— %</p>
+                    <p id="resMaxLossSubtext" class="text-indigo-200 text-xs">Maximum Portfolio Loss Capped At: — %</p>
+                </div>
+
+                <!-- Breakdown Summary -->
+                <div class="bg-white rounded-2xl card-shadow border border-slate-100 p-6">
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Protective Put Summary</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between text-slate-600"><span>Total Insurance Premium Paid</span><span id="resTotalHedgeCost" class="font-bold text-slate-800">—</span></div>
+                        <div class="flex justify-between text-slate-600"><span>Downside Protection Floor Level</span><span id="resFloorLevel" class="font-bold text-indigo-700">—</span></div>
+                        <div class="flex justify-between text-slate-600"><span>Maximum Capped Portfolio Loss</span><span id="resMaxMonetaryLoss" class="font-bold text-rose-600">—</span></div>
+                        <div class="border-t border-slate-100 pt-3 flex justify-between font-bold text-slate-800 text-base">
+                            <span>Upside Participation</span>
+                            <span class="text-emerald-600 font-bold">100% UNLIMITED</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copy / Print -->
+                <div class="flex gap-3">
+                    <button onclick="copyResults()" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-xl transition-colors text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                        Copy Result
+                    </button>
+                    <button onclick="window.print()" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-xl transition-colors text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                        Print
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <section id="educational-content" class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Protective Put Hedging Guide</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-white rounded-2xl border border-slate-100 card-shadow p-6">
+                    <h3 class="font-bold text-indigo-800 mb-3 text-base">How Protective Puts Work</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">A Protective Put combines long equity stock holdings with long Put options. It creates a synthetic long call profile—providing 100% unlimited upside during bull markets while placing a hard floor under downside market crashes.</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-100 card-shadow p-6">
+                    <h3 class="font-bold text-indigo-800 mb-3 text-base">Hedging Cost vs Capital Protection</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Thinking of Put options as insurance premiums keeps expectations realistic. Paying 1%-2% quarterly hedging cost eliminates catastrophic 30%-50% portfolio drawdowns.</p>
+                </div>
+            </div>
+
+            <!-- Quick Insights & Hacks -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-indigo-50 border border-indigo-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-indigo-900 mb-2 flex items-center gap-2"><span class="text-lg">💡</span> Pro Hack: Collar Strategy</h3>
+                    <p class="text-indigo-800 text-xs sm:text-sm leading-relaxed">To fund your Protective Put for FREE, sell an OTM Covered Call to collect premium that offsets the cost of buying the Put option (Collar strategy).</p>
+                </div>
+                <div class="bg-sky-50 border border-sky-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-sky-900 mb-2 flex items-center gap-2"><span class="text-lg">⚡</span> Nifty Index Hedge for Stocks</h3>
+                    <p class="text-sky-800 text-xs sm:text-sm leading-relaxed">You don't need to buy puts for every individual stock. Purchasing Nifty Put options provides macro crash insurance for diversified portfolios.</p>
+                </div>
+                <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-emerald-900 mb-2 flex items-center gap-2"><span class="text-lg">🛡️</span> 5%-10% OTM Strike Selection</h3>
+                    <p class="text-emerald-800 text-xs sm:text-sm leading-relaxed">Selecting a Put strike 5%-10% below current spot price lowers option premium costs while insulating against deep market panics.</p>
+                </div>
+            </div>
+
+            <!-- Common Mistakes -->
+            <div class="bg-red-50 border border-red-200 rounded-2xl p-6 mb-8">
+                <h3 class="font-bold text-red-900 mb-3">⚠️ 3 Common Portfolio Hedging Mistakes</h3>
+                <ul class="space-y-2 text-sm text-red-800">
+                    <li>• <strong>Over-Hedging constantly:</strong> Buying ITM puts month after month burns 10%-15% of annual portfolio returns in premium drag.</li>
+                    <li>• <strong>Unmatched Delta / Beta:</strong> Failing to align your Nifty Put lot quantity with your stock portfolio's beta leaves you under-hedged during market crashes.</li>
+                    <li>• <strong>Panic Selling Puts Too Early:</strong> Closing your Put option early during the start of a crash removes your floor protection before the real bottom is reached.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FAQs -->
+        <section id="faqs" class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Frequently Asked Questions</h2>
+            <div class="space-y-3 max-w-3xl mx-auto">
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is a Protective Put strategy?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">A Protective Put (or Synthetic Long Call) is a portfolio hedging technique where an investor owns long shares/mutual funds and buys a Put option to place a hard floor under potential portfolio market losses.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">How does a Protective Put act as portfolio insurance?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Just like auto insurance, you pay a small premium for the Put option. If the market crashes 20%-30%, your Put option gains value rupee-for-rupee below the strike price, capping your max loss.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">How is the Hedging Cost % calculated?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Hedging Cost % = (Total Put Option Premium Paid / Total Portfolio Value) × 100.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is the Downside Floor Price of a Protective Put?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Downside Floor Price = Put Strike Price - Put Premium Paid per share. Regardless of how low the stock drops, your net portfolio value cannot fall below this floor price.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What happens if the market rallies strongly after buying a Protective Put?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">You participate fully in the market rally minus the small cost of the Put premium paid. Your upside is UNLIMITED.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">Can Nifty Put options be used to hedge a stock portfolio?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Yes! Buying Nifty OTM Put options equal to your portfolio Beta provides macro market crash insurance for diversified equity portfolios.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What strike price should I choose for a Protective Put?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Most investors choose 5% to 10% Out-of-the-Money (OTM) Put strikes to balance cheap annual hedging cost (1%-3%) with robust crash protection.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">How does a Protective Put compare to a Stop Loss order?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">A Stop Loss order triggers a sell-off during market gap-downs, liquidating your long positions at bad prices. A Protective Put guarantees a fixed floor price without forcing you to sell your underlying shares.</div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Related -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold text-slate-800 mb-6">Related Options & Trading Calculators</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                <a href="/covered-call-downside-cushion/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-indigo-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-indigo-700">Covered Call Cushion</p><p class="text-xs text-slate-400 mt-1">Downside protection %</p></a>
+                <a href="/nifty-wheel-strategy-roi/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-indigo-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-indigo-700">Option Wheel Strategy</p><p class="text-xs text-slate-400 mt-1">CSP & Covered Call ROI</p></a>
+                <a href="/option-iv-rank-percentile/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-indigo-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-indigo-700">Option IV Rank (IVR)</p><p class="text-xs text-slate-400 mt-1">Volatility rank & percentile</p></a>
+                <a href="/stock-position-size-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-indigo-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-indigo-700">Position Size Calculator</p><p class="text-xs text-slate-400 mt-1">Risk per trade math</p></a>
+            </div>
+        </section>
+
+        <div id="arthcalculatorLinkingHub"></div>
+        <script src="/js/related-tools.js" defer></script>
+        <script src="/js/search.js" defer></script>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        function fmt(n) { return '₹' + Math.round(n).toLocaleString('en-IN'); }
+
+        const portInput = document.getElementById('portfolioValue');
+        const curInput = document.getElementById('currentPrice');
+        const strikeInput = document.getElementById('putStrike');
+        const premInput = document.getElementById('putPremium');
+
+        [portInput, curInput, strikeInput, premInput].forEach(i => i.addEventListener('input', calculate));
+
+        document.getElementById('calculateBtn').addEventListener('click', calculate);
+        document.getElementById('resetBtn').addEventListener('click', () => {
+            portInput.value = 1000000;
+            curInput.value = 24000;
+            strikeInput.value = 23000;
+            premInput.value = 300;
+            calculate();
+        });
+
+        let lastResult = {};
+
+        function calculate() {
+            const portVal = parseFloat(portInput.value) || 0;
+            const curPrice = parseFloat(curInput.value) || 0;
+            const strike = parseFloat(strikeInput.value) || 0;
+            const prem = parseFloat(premInput.value) || 0;
+
+            const hedgeCostPct = curPrice > 0 ? (prem / curPrice) * 100 : 0;
+            const units = curPrice > 0 ? portVal / curPrice : 0;
+            const totalHedgeCost = units * prem;
+            const floorPricePerUnit = strike - prem;
+            const floorValueTotal = units * floorPricePerUnit;
+            const maxMonetaryLoss = Math.max(0, portVal - floorValueTotal);
+            const maxLossPct = portVal > 0 ? (maxMonetaryLoss / portVal) * 100 : 0;
+
+            lastResult = { portVal, curPrice, strike, prem, hedgeCostPct, totalHedgeCost, floorPricePerUnit, floorValueTotal, maxMonetaryLoss, maxLossPct };
+
+            document.getElementById('resHedgeCostPct').textContent = hedgeCostPct.toFixed(2) + ' %';
+            document.getElementById('resMaxLossSubtext').textContent = 'Max Portfolio Loss Capped At: ' + maxLossPct.toFixed(2) + ' % (' + fmt(maxMonetaryLoss) + ')';
+            document.getElementById('resTotalHedgeCost').textContent = fmt(totalHedgeCost);
+            document.getElementById('resFloorLevel').textContent = fmt(floorValueTotal) + ' (₹' + Math.round(floorPricePerUnit) + ' / unit)';
+            document.getElementById('resMaxMonetaryLoss').textContent = fmt(maxMonetaryLoss) + ' (' + maxLossPct.toFixed(2) + '%)';
+        }
+
+        function copyResults() {
+            if (!lastResult.portVal) return;
+            const r = lastResult;
+            const text = `Protective Put Result (ArthCalculator.in)\nPortfolio Value: ${fmt(r.portVal)}\nHedging Insurance Cost: ${r.hedgeCostPct.toFixed(2)}% (${fmt(r.totalHedgeCost)})\nPortfolio Floor Level: ${fmt(r.floorValueTotal)}\nMax Capped Loss: ${fmt(r.maxMonetaryLoss)} (${r.maxLossPct.toFixed(2)}%)`;
+            navigator.clipboard.writeText(text).then(() => alert('Copied!'));
+        }
+
+        window.addEventListener('DOMContentLoaded', calculate);
+
+        fetch('/navbar.html').then(r => r.text()).then(h => {
+            document.getElementById('navbar').innerHTML = h;
+            const btn = document.getElementById('menuBtn');
+            const menu = document.getElementById('mobileMenu');
+            if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        });
+        fetch('/footer.html').then(r => r.text()).then(h => { document.getElementById('footer').innerHTML = h; });
+    </script>
+</body>
+</html>

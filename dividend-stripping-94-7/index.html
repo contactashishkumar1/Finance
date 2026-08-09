@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dividend Stripping Loss Disallowance Calculator – Sec 94(7) | ArthCalculator</title>
+    <meta name="description" content="Calculate disallowed capital losses under Section 94(7) when buying shares/mutual funds before record date and selling at a loss post tax-free dividend payout.">
+    <meta name="keywords" content="dividend stripping calculator, section 94 7 loss disallowance, dividend stripping tax rules India 2026">
+    <meta name="author" content="ArthCalculator">
+    <meta name="last-modified" content="2026-08-09">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/dividend-stripping-94-7/">
+    <link type="image/x-icon" rel="icon" href="/favicon.ico">
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Dividend Stripping Loss Disallowance Calculator – Section 94(7)">
+    <meta property="og:description" content="Calculate tax-disallowed capital losses on shares and mutual funds under Section 94(7).">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/dividend-stripping-94-7/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- Schemas (WebPage, SoftwareApplication, BreadcrumbList, FAQPage) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Dividend Stripping Loss Disallowance Calculator",
+      "url": "https://arthcalculator.in/dividend-stripping-94-7/",
+      "description": "Calculate Section 94(7) disallowed capital loss math for stock and mutual fund dividend transactions.",
+      "datePublished": "2026-08-09",
+      "dateModified": "2026-08-09"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Dividend Stripping Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+        { "@type": "ListItem", "position": 3, "name": "Dividend Stripping Calculator", "item": "https://arthcalculator.in/dividend-stripping-94-7/" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Dividend Stripping under Section 94(7)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dividend stripping occurs when an investor buys shares/mutual fund units within 3 months prior to the record date, receives exempt or dividend income, and then sells the units at a loss within 3 months (shares) or 9 months (mutual funds) after the record date."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Section 94(7) disallow capital losses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under Section 94(7), the short-term capital loss arising from such a sale is disallowed to the extent of the dividend income received. Only the excess loss (if any) above the dividend amount can be set off."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the holding period condition for shares vs mutual funds?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1. Shares: Bought within 3 months before record date AND sold within 3 months after record date.\n2. Mutual Funds: Bought within 3 months before record date AND sold within 9 months after record date."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why was Section 94(7) introduced by the IT Department?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Section 94(7) was introduced to curb tax avoidance where high-net-worth investors bought stocks right before record dates to collect dividends and simultaneously created artificial short-term capital losses to offset against taxable gains."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if dividend income is higher than the capital loss?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If the dividend received (e.g. ₹50,000) is greater than the capital loss (e.g. ₹30,000), the ENTIRE capital loss of ₹30,000 is disallowed, leaving ₹0 allowable loss for tax set-off."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are dividends taxable in the hands of investors now?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, dividends are now taxable at applicable slab rates. However, Section 94(7) still applies to prevent artificial loss generation where exempt or concessionally taxed income is involved."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can investors avoid Section 94(7) loss disallowance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hold the shares for more than 3 months after the record date (or mutual fund units for more than 9 months after the record date) before selling. This makes 100% of your capital loss legally allowable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can disallowed loss under 94(7) be carried forward?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The portion of capital loss disallowed under Section 94(7) is permanently forfeited and cannot be set off or carried forward to future financial years."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0284c7 0%, #0d9488 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05); }
+        details summary { list-style: none; cursor: pointer; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg.chevron { transform: rotate(180deg); }
+        input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-slide { animation: slideIn 0.4s ease forwards; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+    <div id="navbar"></div>
+
+    <!-- Hero -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center"><a href="/" class="hover:text-sky-600 transition-colors">Home</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li class="flex items-center"><a href="/calculators/" class="hover:text-sky-600 transition-colors">Calculators</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li class="text-sky-600 font-bold" aria-current="page">Dividend Stripping Calculator</li>
+                </ol>
+            </nav>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div class="max-w-3xl">
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight pb-1">Dividend Stripping Calculator (Sec 94(7))</h1>
+                    <p class="text-slate-500 text-sm font-medium mb-3">Loss Disallowance Math · Shares & Mutual Funds · Record Date Audit</p>
+                    <p class="text-slate-500 text-xs sm:text-base leading-relaxed">Calculate exact allowable vs disallowed capital losses under Section 94(7) when buying before record date and selling post-dividend.</p>
+                </div>
+                <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="bg-sky-50 text-sky-700 border border-sky-200 px-3 py-1.5 rounded-full font-medium">✓ Sec 94(7) Disallowance</span>
+                    <span class="bg-teal-50 text-teal-700 border border-teal-200 px-3 py-1.5 rounded-full font-medium">✓ Holding Period Check</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4" id="calculator">
+        <div class="flex flex-col lg:flex-row gap-8 mb-12">
+            <!-- Left: Inputs -->
+            <div class="w-full lg:w-3/5 bg-white rounded-2xl card-shadow border border-slate-100 p-6 sm:p-8">
+                <h2 class="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
+                    <span class="w-8 h-8 bg-sky-100 text-sky-700 rounded-lg flex items-center justify-center text-sm font-bold">📈</span>
+                    Trade & Dividend Transaction Details
+                </h2>
+
+                <!-- Asset Type Choice -->
+                <div class="mb-5">
+                    <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2">Asset Type</label>
+                    <div class="grid grid-cols-2 gap-3">
+                        <label class="relative flex items-center justify-center p-3 border border-slate-200 rounded-xl cursor-pointer bg-white hover:border-sky-400 transition-all">
+                            <input type="radio" name="assetType" value="shares" class="peer sr-only" checked>
+                            <span class="text-sm font-bold text-slate-700 peer-checked:text-sky-700">Equity Shares (3 Months Rule)</span>
+                            <div class="absolute inset-0 border-2 border-transparent peer-checked:border-sky-500 rounded-xl pointer-events-none"></div>
+                        </label>
+                        <label class="relative flex items-center justify-center p-3 border border-slate-200 rounded-xl cursor-pointer bg-white hover:border-sky-400 transition-all">
+                            <input type="radio" name="assetType" value="mf" class="peer sr-only">
+                            <span class="text-sm font-bold text-slate-700 peer-checked:text-teal-700">Mutual Funds (9 Months Rule)</span>
+                            <div class="absolute inset-0 border-2 border-transparent peer-checked:border-teal-500 rounded-xl pointer-events-none"></div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Financial Inputs -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Purchase Price / Cost (₹)</label>
+                        <input type="number" id="purchaseCost" placeholder="500000" value="500000" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Sale Proceeds Realized (₹)</label>
+                        <input type="number" id="saleProceeds" placeholder="420000" value="420000" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-xs font-semibold text-slate-600 mb-1.5">Dividend Income Received (₹)</label>
+                    <input type="number" id="dividendReceived" placeholder="50000" value="50000" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                </div>
+
+                <div class="flex gap-3">
+                    <button id="calculateBtn" class="flex-1 bg-sky-600 hover:bg-sky-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-sky-200 transition-all active:scale-[0.98]">
+                        Calculate Loss Disallowance
+                    </button>
+                    <button id="resetBtn" class="px-5 py-4 bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold rounded-xl transition-colors">
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right: Results -->
+            <div class="w-full lg:w-2/5 flex flex-col gap-5">
+                <!-- Main Result Banner -->
+                <div id="resultBanner" class="bg-gradient-to-br from-sky-600 to-teal-700 rounded-2xl card-shadow p-6 text-white animate-slide">
+                    <p class="text-xs text-sky-200 font-bold uppercase tracking-wider mb-1">Allowable Short-Term Loss</p>
+                    <p id="resAllowableLoss" class="text-4xl font-black mb-1">₹—</p>
+                    <p id="resDisallowedSubtext" class="text-sky-200 text-xs">Disallowed under Sec 94(7): ₹—</p>
+                </div>
+
+                <!-- Metrics Breakdown -->
+                <div class="bg-white rounded-2xl card-shadow border border-slate-100 p-6">
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Loss Disallowance Summary</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between text-slate-600"><span>Gross Capital Loss Incurred</span><span id="resGrossLoss" class="font-bold text-rose-600">—</span></div>
+                        <div class="flex justify-between text-slate-600"><span>Dividend Received</span><span id="resDivVal" class="font-bold text-slate-800">—</span></div>
+                        <div class="flex justify-between text-slate-600"><span>Disallowed Loss (Sec 94(7))</span><span id="resDisallowedLoss" class="font-bold text-rose-600">—</span></div>
+                        <div class="border-t border-slate-100 pt-3 flex justify-between font-bold text-slate-800 text-base">
+                            <span>Allowable Loss for ITR Set-Off</span>
+                            <span id="resNetAllowable" class="text-emerald-600">—</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copy / Print -->
+                <div class="flex gap-3">
+                    <button onclick="copyResults()" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-xl transition-colors text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                        Copy Result
+                    </button>
+                    <button onclick="window.print()" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-xl transition-colors text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                        Print
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <section id="educational-content" class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Section 94(7) Dividend Stripping Guide</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-white rounded-2xl border border-slate-100 card-shadow p-6">
+                    <h3 class="font-bold text-sky-800 mb-3 text-base">What Triggers Section 94(7)?</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Section 94(7) triggers when you buy shares or mutual fund units within 3 months prior to the record date, collect the dividend, and sell at a loss within 3 months (shares) or 9 months (mutual funds) post record date.</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-100 card-shadow p-6">
+                    <h3 class="font-bold text-sky-800 mb-3 text-base">The Disallowance Calculation Formula</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed"><strong>Disallowed Loss</strong> = Lower of (Gross Capital Loss Incurred OR Dividend Income Received).</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mt-1"><strong>Allowable Loss</strong> = Gross Capital Loss Incurred - Disallowed Loss.</p>
+                </div>
+            </div>
+
+            <!-- Quick Insights & Hacks -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-sky-50 border border-sky-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-sky-900 mb-2 flex items-center gap-2"><span class="text-lg">💡</span> Pro Hack: Hold Past 3/9 Months</h3>
+                    <p class="text-sky-800 text-xs sm:text-sm leading-relaxed">To make 100% of your capital loss legally allowable for ITR set-off, simply hold equity shares for at least 91 days after the record date (or mutual fund units for at least 271 days).</p>
+                </div>
+                <div class="bg-teal-50 border border-teal-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-teal-900 mb-2 flex items-center gap-2"><span class="text-lg">⚡</span> Permanently Forfeited Loss</h3>
+                    <p class="text-teal-800 text-xs sm:text-sm leading-relaxed">The disallowed loss under Section 94(7) is permanently lost. It cannot be carried forward to future financial years or set off against STCG/LTCG gains.</p>
+                </div>
+                <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-amber-900 mb-2 flex items-center gap-2"><span class="text-lg">🛡️</span> Growth Option Advantage</h3>
+                    <p class="text-amber-800 text-xs sm:text-sm leading-relaxed">Investing in Growth Option mutual funds eliminates Section 94(7) disallowance risks entirely because Growth schemes do not pay out dividends.</p>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-800 mb-4">Section 94(7) Holding Period Rule Reference Table</h3>
+            <div class="bg-white rounded-2xl border border-slate-100 card-shadow overflow-hidden mb-8">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead class="bg-slate-50 border-b border-slate-200">
+                            <tr>
+                                <th class="text-left px-4 py-3 font-semibold text-slate-700">Security Type</th>
+                                <th class="text-center px-4 py-3 font-semibold text-slate-700">Pre-Record Date Window</th>
+                                <th class="text-center px-4 py-3 font-semibold text-slate-700">Post-Record Date Sale Window</th>
+                                <th class="text-left px-4 py-3 font-semibold text-slate-700">Sec 94(7) Applicability</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">Equity Shares & Stocks</td><td class="text-center px-4 py-3 text-slate-600">Within 3 Months before</td><td class="text-center px-4 py-3 text-rose-600 font-bold">Within 3 Months after</td><td class="px-4 py-3 text-rose-600 font-semibold">Loss disallowed up to dividend</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">Equity Shares & Stocks</td><td class="text-center px-4 py-3 text-slate-600">Within 3 Months before</td><td class="text-center px-4 py-3 text-emerald-600 font-bold">After 3 Months (Day 91+)</td><td class="px-4 py-3 text-emerald-600 font-semibold">100% Loss Allowable</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">Mutual Fund Units</td><td class="text-center px-4 py-3 text-slate-600">Within 3 Months before</td><td class="text-center px-4 py-3 text-rose-600 font-bold">Within 9 Months after</td><td class="px-4 py-3 text-rose-600 font-semibold">Loss disallowed up to dividend</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">Mutual Fund Units</td><td class="text-center px-4 py-3 text-slate-600">Within 3 Months before</td><td class="text-center px-4 py-3 text-emerald-600 font-bold">After 9 Months (Day 271+)</td><td class="px-4 py-3 text-emerald-600 font-semibold">100% Loss Allowable</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Common Mistakes -->
+            <div class="bg-red-50 border border-red-200 rounded-2xl p-6 mb-8">
+                <h3 class="font-bold text-red-900 mb-3">⚠️ 3 Common Dividend Stripping Pitfalls</h3>
+                <ul class="space-y-2 text-sm text-red-800">
+                    <li>• <strong>Assuming Dividend is Tax-Free:</strong> Even though dividends are now taxable in your hands, Section 94(7) still disallows capital losses generated during the 3-month/9-month window.</li>
+                    <li>• <strong>Confusing Share Window with Mutual Fund Window:</strong> Remember that mutual funds have a longer 9-month post-record-date sale restriction compared to 3 months for equity shares.</li>
+                    <li>• <strong>Failing to Audit ITR Schedule CG:</strong> Claiming disallowed losses in Schedule CG of ITR-2 or ITR-4 can trigger automated income tax notices for invalid set-offs.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FAQs -->
+        <section id="faqs" class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Frequently Asked Questions</h2>
+            <div class="space-y-3 max-w-3xl mx-auto">
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is Dividend Stripping under Section 94(7)?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Dividend stripping occurs when an investor buys shares/mutual fund units within 3 months prior to the record date, receives exempt or dividend income, and then sells the units at a loss within 3 months (shares) or 9 months (mutual funds) after the record date.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">How does Section 94(7) disallow capital losses?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Under Section 94(7), the short-term capital loss arising from such a sale is disallowed to the extent of the dividend income received. Only the excess loss (if any) above the dividend amount can be set off.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is the holding period condition for shares vs mutual funds?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">1. Shares: Bought within 3 months before record date AND sold within 3 months after record date.<br>2. Mutual Funds: Bought within 3 months before record date AND sold within 9 months after record date.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">Why was Section 94(7) introduced by the IT Department?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Section 94(7) was introduced to curb tax avoidance where high-net-worth investors bought stocks right before record dates to collect dividends and simultaneously created artificial short-term capital losses to offset against taxable gains.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What happens if dividend income is higher than the capital loss?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">If the dividend received (e.g. ₹50,000) is greater than the capital loss (e.g. ₹30,000), the ENTIRE capital loss of ₹30,000 is disallowed, leaving ₹0 allowable loss for tax set-off.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">Are dividends taxable in the hands of investors now?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Yes, dividends are now taxable at applicable slab rates. However, Section 94(7) still applies to prevent artificial loss generation where exempt or concessionally taxed income is involved.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">How can investors avoid Section 94(7) loss disallowance?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Hold the shares for more than 3 months after the record date (or mutual fund units for more than 9 months after the record date) before selling. This makes 100% of your capital loss legally allowable.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">Can disallowed loss under 94(7) be carried forward?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">No. The portion of capital loss disallowed under Section 94(7) is permanently forfeited and cannot be set off or carried forward to future financial years.</div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Related -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold text-slate-800 mb-6">Related Stock & Tax Calculators</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                <a href="/dividend-yield-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">Dividend Yield Calculator</p><p class="text-xs text-slate-400 mt-1">Yield & cost payout</p></a>
+                <a href="/bonus-stripping-94-8/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">Bonus Stripping Sec 94(8)</p><p class="text-xs text-slate-400 mt-1">Bonus shares loss rule</p></a>
+                <a href="/capital-gains-tax/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">Capital Gains Tax</p><p class="text-xs text-slate-400 mt-1">STCG & LTCG tax math</p></a>
+                <a href="/income-tax/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">Income Tax Calculator</p><p class="text-xs text-slate-400 mt-1">Old vs New regime</p></a>
+            </div>
+        </section>
+
+        <div id="arthcalculatorLinkingHub"></div>
+        <script src="/js/related-tools.js" defer></script>
+        <script src="/js/search.js" defer></script>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        function fmt(n) { return '₹' + Math.round(n).toLocaleString('en-IN'); }
+
+        const costInput = document.getElementById('purchaseCost');
+        const saleInput = document.getElementById('saleProceeds');
+        const divInput = document.getElementById('dividendReceived');
+
+        [costInput, saleInput, divInput].forEach(i => i.addEventListener('input', calculate));
+
+        document.getElementById('calculateBtn').addEventListener('click', calculate);
+        document.getElementById('resetBtn').addEventListener('click', () => {
+            costInput.value = 500000;
+            saleInput.value = 420000;
+            divInput.value = 50000;
+            calculate();
+        });
+
+        let lastResult = {};
+
+        function calculate() {
+            const cost = parseFloat(costInput.value) || 0;
+            const sale = parseFloat(saleInput.value) || 0;
+            const divRec = parseFloat(divInput.value) || 0;
+
+            const grossLoss = Math.max(0, cost - sale);
+            const disallowedLoss = Math.min(grossLoss, divRec);
+            const allowableLoss = Math.max(0, grossLoss - disallowedLoss);
+
+            lastResult = { cost, sale, divRec, grossLoss, disallowedLoss, allowableLoss };
+
+            document.getElementById('resAllowableLoss').textContent = fmt(allowableLoss);
+            document.getElementById('resDisallowedSubtext').textContent = 'Disallowed under Sec 94(7): ' + fmt(disallowedLoss);
+            document.getElementById('resGrossLoss').textContent = fmt(grossLoss);
+            document.getElementById('resDivVal').textContent = fmt(divRec);
+            document.getElementById('resDisallowedLoss').textContent = fmt(disallowedLoss);
+            document.getElementById('resNetAllowable').textContent = fmt(allowableLoss);
+        }
+
+        function copyResults() {
+            if (!lastResult.cost) return;
+            const r = lastResult;
+            const text = `Dividend Stripping Result (ArthCalculator.in)\nGross Capital Loss: ${fmt(r.grossLoss)}\nDividend Received: ${fmt(r.divRec)}\nDisallowed Loss (Sec 94(7)): ${fmt(r.disallowedLoss)}\nAllowable Capital Loss: ${fmt(r.allowableLoss)}`;
+            navigator.clipboard.writeText(text).then(() => alert('Copied!'));
+        }
+
+        window.addEventListener('DOMContentLoaded', calculate);
+
+        fetch('/navbar.html').then(r => r.text()).then(h => {
+            document.getElementById('navbar').innerHTML = h;
+            const btn = document.getElementById('menuBtn');
+            const menu = document.getElementById('mobileMenu');
+            if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        });
+        fetch('/footer.html').then(r => r.text()).then(h => { document.getElementById('footer').innerHTML = h; });
+    </script>
+</body>
+</html>

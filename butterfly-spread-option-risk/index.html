@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Long Butterfly Option Strategy Risk-Reward Calculator | ArthCalculator</title>
+    <meta name="description" content="Calculate maximum profit, net debit cost, risk-reward ratio, and upper/lower breakevens for Long Call & Put Butterfly options spreads in India.">
+    <meta name="keywords" content="butterfly spread calculator, long butterfly option strategy calculator, butterfly option risk reward India 2026">
+    <meta name="author" content="ArthCalculator">
+    <meta name="last-modified" content="2026-08-09">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/butterfly-spread-option-risk/">
+    <link type="image/x-icon" rel="icon" href="/favicon.ico">
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Long Butterfly Option Strategy Risk-Reward Calculator">
+    <meta property="og:description" content="Calculate max profit, net debit, and risk-reward ratio for Long Butterfly option trades.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/butterfly-spread-option-risk/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- Schemas (WebPage, SoftwareApplication, BreadcrumbList, FAQPage) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Long Butterfly Option Strategy Calculator",
+      "url": "https://arthcalculator.in/butterfly-spread-option-risk/",
+      "description": "Calculate Long Butterfly option strategy net debit, max profit, and risk-reward ratio.",
+      "datePublished": "2026-08-09",
+      "dateModified": "2026-08-09"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Butterfly Spread Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+        { "@type": "ListItem", "position": 3, "name": "Butterfly Spread Calculator", "item": "https://arthcalculator.in/butterfly-spread-option-risk/" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a Long Butterfly Option Strategy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Long Butterfly is a neutral, defined-risk option strategy combining a Bull Spread and a Bear Spread. It involves buying 1 ITM option, selling 2 ATM options, and buying 1 OTM option."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Maximum Profit calculated for a Long Butterfly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Maximum Profit = (Middle Strike - Lower Strike - Net Debit Paid) × Lot Size. Peak profit occurs when the spot price closes exactly at the middle strike price at expiration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Maximum Risk / Loss of a Long Butterfly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Maximum Loss = Net Debit Premium Paid × Lot Size. If the spot price closes far above or far below the outer strikes, you lose only the net debit paid."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the breakeven points for a Long Call Butterfly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1. Lower Breakeven = Lower Strike + Net Debit Paid per unit.\n2. Upper Breakeven = Upper Strike - Net Debit Paid per unit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do option traders like Butterfly spreads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Long Butterfly spreads offer exceptional Risk-Reward ratios (often 1:3 to 1:5)—meaning you risk a small amount of net debit to potentially gain 3x to 5x your risk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I enter a Long Butterfly spread?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Enter Long Butterfly spreads when Implied Volatility is moderate to high, expecting the underlying asset (Nifty/BankNifty) to consolidate within a tight price range near the middle strike."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between Call Butterfly and Put Butterfly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both Call Butterfly and Put Butterfly have identical payoff diagrams and risk-reward profiles. The choice depends on option liquidity and pricing skew."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Theta (Time Decay) affect a Long Butterfly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As expiration approaches, time decay works in your favor as long as the spot price stays near the middle strike, causing the two short middle options to lose value faster than the outer long options."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0284c7 0%, #6366f1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05); }
+        details summary { list-style: none; cursor: pointer; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg.chevron { transform: rotate(180deg); }
+        input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-slide { animation: slideIn 0.4s ease forwards; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+    <div id="navbar"></div>
+
+    <!-- Hero -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center"><a href="/" class="hover:text-sky-600 transition-colors">Home</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li class="flex items-center"><a href="/calculators/" class="hover:text-sky-600 transition-colors">Calculators</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li class="text-sky-600 font-bold" aria-current="page">Butterfly Spread Calculator</li>
+                </ol>
+            </nav>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div class="max-w-3xl">
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight pb-1">Long Butterfly Option Strategy Risk-Reward Calculator</h1>
+                    <p class="text-slate-500 text-sm font-medium mb-3">Defined Risk-Reward Ratio · Pinpoint Target Profit · Net Debit Math</p>
+                    <p class="text-slate-500 text-xs sm:text-base leading-relaxed">Calculate exact net debit paid, maximum target profit, risk-reward ratio, and breakevens for Long Butterfly option spreads.</p>
+                </div>
+                <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="bg-sky-50 text-sky-700 border border-sky-200 px-3 py-1.5 rounded-full font-medium">✓ High Risk:Reward Ratio</span>
+                    <span class="bg-indigo-50 text-indigo-700 border border-indigo-200 px-3 py-1.5 rounded-full font-medium">✓ Defined Max Risk</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4" id="calculator">
+        <div class="flex flex-col lg:flex-row gap-8 mb-12">
+            <!-- Left: Inputs -->
+            <div class="w-full lg:w-3/5 bg-white rounded-2xl card-shadow border border-slate-100 p-6 sm:p-8">
+                <h2 class="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
+                    <span class="w-8 h-8 bg-sky-100 text-sky-700 rounded-lg flex items-center justify-center text-sm font-bold">🦋</span>
+                    Butterfly Strike & Premium Details
+                </h2>
+
+                <!-- Lot Size & Wing Width -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Lot Size (Qty)</label>
+                        <input type="number" id="lotSize" placeholder="25" value="25" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Wing Width (Points between strikes)</label>
+                        <input type="number" id="wingWidth" placeholder="200" value="200" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                    </div>
+                </div>
+
+                <!-- Middle Strike & Net Debit -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Middle Short Strike Price (₹)</label>
+                        <input type="number" id="middleStrike" placeholder="24000" value="24000" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Net Debit Premium Paid per Unit (₹)</label>
+                        <input type="number" id="netDebit" placeholder="35" value="35" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                    </div>
+                </div>
+
+                <div class="flex gap-3">
+                    <button id="calculateBtn" class="flex-1 bg-sky-600 hover:bg-sky-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-sky-200 transition-all active:scale-[0.98]">
+                        Calculate Butterfly Risk-Reward
+                    </button>
+                    <button id="resetBtn" class="px-5 py-4 bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold rounded-xl transition-colors">
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right: Results -->
+            <div class="w-full lg:w-2/5 flex flex-col gap-5">
+                <!-- Result Banner -->
+                <div class="bg-gradient-to-br from-sky-600 to-indigo-700 rounded-2xl card-shadow p-6 text-white animate-slide">
+                    <p class="text-xs text-sky-200 font-bold uppercase tracking-wider mb-1">Maximum Target Profit</p>
+                    <p id="resMaxProfit" class="text-4xl font-black mb-1">₹—</p>
+                    <p id="resRrRatioSubtext" class="text-sky-200 text-xs">Risk : Reward Ratio: 1 : —</p>
+                </div>
+
+                <!-- Breakdown Summary -->
+                <div class="bg-white rounded-2xl card-shadow border border-slate-100 p-6">
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Butterfly Metrics Breakdown</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between text-slate-600"><span>Max Risk (Net Debit Paid)</span><span id="resMaxRisk" class="font-bold text-rose-600">—</span></div>
+                        <div class="flex justify-between text-slate-600"><span>Lower Breakeven Price</span><span id="resLowerBe" class="font-semibold text-slate-800">—</span></div>
+                        <div class="flex justify-between text-slate-600"><span>Upper Breakeven Price</span><span id="resUpperBe" class="font-semibold text-slate-800">—</span></div>
+                        <div class="border-t border-slate-100 pt-3 flex justify-between font-bold text-slate-800 text-base">
+                            <span>Pinpoint Target Strike</span>
+                            <span id="resTargetStrike" class="text-sky-700 font-bold">—</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copy / Print -->
+                <div class="flex gap-3">
+                    <button onclick="copyResults()" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-xl transition-colors text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                        Copy Result
+                    </button>
+                    <button onclick="window.print()" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-xl transition-colors text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                        Print
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <section id="educational-content" class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Long Butterfly Option Strategy Guide</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-white rounded-2xl border border-slate-100 card-shadow p-6">
+                    <h3 class="font-bold text-sky-800 mb-3 text-base">Butterfly Strategy Anatomy</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">A Long Call Butterfly consists of: 1. Buy 1 ITM Call (Lower Strike). 2. Sell 2 ATM Calls (Middle Strike). 3. Buy 1 OTM Call (Upper Strike). All legs use the same expiration date.</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-100 card-shadow p-6">
+                    <h3 class="font-bold text-sky-800 mb-3 text-base">Exceptional Risk-Reward Profiles</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Long Butterfly spreads are beloved for their asymmetric payouts. Risk is strictly limited to the small net debit paid, while upside potential can be 3x to 6x the risk amount!</p>
+                </div>
+            </div>
+
+            <!-- Quick Insights & Hacks -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-sky-50 border border-sky-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-sky-900 mb-2 flex items-center gap-2"><span class="text-lg">💡</span> Pro Hack: Low Debit Entry</h3>
+                    <p class="text-sky-800 text-xs sm:text-sm leading-relaxed">Aim to enter Butterfly spreads when net debit is 20% or less of the wing width (e.g. paying ₹35 for a 200-point wing width) for a 1:4.7 risk-reward ratio.</p>
+                </div>
+                <div class="bg-indigo-50 border border-indigo-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-indigo-900 mb-2 flex items-center gap-2"><span class="text-lg">⚡</span> Expiration Week Acceleration</h3>
+                    <p class="text-indigo-800 text-xs sm:text-sm leading-relaxed">Butterfly spreads gain the most value in the final 5-7 days before expiration as time decay rapidly erodes the two short middle options.</p>
+                </div>
+                <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-emerald-900 mb-2 flex items-center gap-2"><span class="text-lg">🛡️</span> Broken Wing Butterfly Variation</h3>
+                    <p class="text-emerald-800 text-xs sm:text-sm leading-relaxed">In a Broken Wing Butterfly, you widen one of the outer wings to eliminate risk on one side entirely, creating a zero-cost or credit trade.</p>
+                </div>
+            </div>
+
+            <!-- Common Mistakes -->
+            <div class="bg-red-50 border border-red-200 rounded-2xl p-6 mb-8">
+                <h3 class="font-bold text-red-900 mb-3">⚠️ 3 Common Butterfly Spread Mistakes</h3>
+                <ul class="space-y-2 text-sm text-red-800">
+                    <li>• <strong>Expecting 100% Max Profit:</strong> Pinpointing the exact middle strike at 3:30 PM on expiry is rare. Take profits when the trade reaches 50%-70% of max profit.</li>
+                    <li>• <strong>Overpaying on Net Debit:</strong> Paying a high net debit (>35% of wing width) ruins the asymmetric risk-reward advantage.</li>
+                    <li>• <strong>Ignoring Bid-Ask Spreads:</strong> Executing 4 legs in illiquid stock options can cause severe slippage loss. Always trade high-volume Nifty/BankNifty options.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FAQs -->
+        <section id="faqs" class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Frequently Asked Questions</h2>
+            <div class="space-y-3 max-w-3xl mx-auto">
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is a Long Butterfly Option Strategy?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">A Long Butterfly is a neutral, defined-risk option strategy combining a Bull Spread and a Bear Spread. It involves buying 1 ITM option, selling 2 ATM options, and buying 1 OTM option.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">How is Maximum Profit calculated for a Long Butterfly?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Maximum Profit = (Middle Strike - Lower Strike - Net Debit Paid) × Lot Size. Peak profit occurs when the spot price closes exactly at the middle strike price at expiration.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is the Maximum Risk / Loss of a Long Butterfly?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Maximum Loss = Net Debit Premium Paid × Lot Size. If the spot price closes far above or far below the outer strikes, you lose only the net debit paid.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What are the breakeven points for a Long Call Butterfly?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">1. Lower Breakeven = Lower Strike + Net Debit Paid per unit.<br>2. Upper Breakeven = Upper Strike - Net Debit Paid per unit.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">Why do option traders like Butterfly spreads?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Long Butterfly spreads offer exceptional Risk-Reward ratios (often 1:3 to 1:5)—meaning you risk a small amount of net debit to potentially gain 3x to 5x your risk.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">When should I enter a Long Butterfly spread?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Enter Long Butterfly spreads when Implied Volatility is moderate to high, expecting the underlying asset (Nifty/BankNifty) to consolidate within a tight price range near the middle strike.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is the difference between Call Butterfly and Put Butterfly?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Both Call Butterfly and Put Butterfly have identical payoff diagrams and risk-reward profiles. The choice depends on option liquidity and pricing skew.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">How does Theta (Time Decay) affect a Long Butterfly?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">As expiration approaches, time decay works in your favor as long as the spot price stays near the middle strike, causing the two short middle options to lose value faster than the outer long options.</div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Related -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold text-slate-800 mb-6">Related Options & Trading Calculators</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                <a href="/iron-condor-strategy-pnl/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">Iron Condor PnL</p><p class="text-xs text-slate-400 mt-1">4-leg option strategy</p></a>
+                <a href="/straddle-strangle-volatility-breakeven/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">Straddle / Strangle</p><p class="text-xs text-slate-400 mt-1">Volatility breakevens</p></a>
+                <a href="/option-iv-rank-percentile/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">Option IV Rank (IVR)</p><p class="text-xs text-slate-400 mt-1">Volatility rank & percentile</p></a>
+                <a href="/option-payoff-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">Option Payoff Visualizer</p><p class="text-xs text-slate-400 mt-1">Multi-leg option P&L</p></a>
+            </div>
+        </section>
+
+        <div id="arthcalculatorLinkingHub"></div>
+        <script src="/js/related-tools.js" defer></script>
+        <script src="/js/search.js" defer></script>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        function fmt(n) { return '₹' + Math.round(n).toLocaleString('en-IN'); }
+
+        const lotInput = document.getElementById('lotSize');
+        const wingInput = document.getElementById('wingWidth');
+        const midInput = document.getElementById('middleStrike');
+        const debitInput = document.getElementById('netDebit');
+
+        [lotInput, wingInput, midInput, debitInput].forEach(i => i.addEventListener('input', calculate));
+
+        document.getElementById('calculateBtn').addEventListener('click', calculate);
+        document.getElementById('resetBtn').addEventListener('click', () => {
+            lotInput.value = 25;
+            wingInput.value = 200;
+            midInput.value = 24000;
+            debitInput.value = 35;
+            calculate();
+        });
+
+        let lastResult = {};
+
+        function calculate() {
+            const lot = parseFloat(lotInput.value) || 0;
+            const wing = parseFloat(wingInput.value) || 0;
+            const midStrike = parseFloat(midInput.value) || 0;
+            const debitPerUnit = parseFloat(debitInput.value) || 0;
+
+            const lowerStrike = midStrike - wing;
+            const upperStrike = midStrike + wing;
+
+            const maxProfitPerUnit = Math.max(0, wing - debitPerUnit);
+            const maxProfitTotal = maxProfitPerUnit * lot;
+            const maxRiskTotal = debitPerUnit * lot;
+            const lowerBe = lowerStrike + debitPerUnit;
+            const upperBe = upperStrike - debitPerUnit;
+            const rrRatio = debitPerUnit > 0 ? (maxProfitPerUnit / debitPerUnit).toFixed(1) : '0';
+
+            lastResult = { lot, wing, midStrike, debitPerUnit, maxProfitTotal, maxRiskTotal, lowerBe, upperBe, rrRatio };
+
+            document.getElementById('resMaxProfit').textContent = fmt(maxProfitTotal);
+            document.getElementById('resRrRatioSubtext').textContent = 'Risk : Reward Ratio = 1 : ' + rrRatio + ' (Defined Risk)';
+            document.getElementById('resMaxRisk').textContent = fmt(maxRiskTotal);
+            document.getElementById('resLowerBe').textContent = '₹' + Math.round(lowerBe);
+            document.getElementById('resUpperBe').textContent = '₹' + Math.round(upperBe);
+            document.getElementById('resTargetStrike').textContent = '₹' + Math.round(midStrike) + ' (Pinpoint Peak)';
+        }
+
+        function copyResults() {
+            if (!lastResult.lot) return;
+            const r = lastResult;
+            const text = `Butterfly Spread Result (ArthCalculator.in)\nMax Risk (Net Debit): ${fmt(r.maxRiskTotal)}\nMax Target Profit: ${fmt(r.maxProfitTotal)}\nRisk:Reward Ratio: 1:${r.rrRatio}\nBreakeven Range: ₹${Math.round(r.lowerBe)} to ₹${Math.round(r.upperBe)}`;
+            navigator.clipboard.writeText(text).then(() => alert('Copied!'));
+        }
+
+        window.addEventListener('DOMContentLoaded', calculate);
+
+        fetch('/navbar.html').then(r => r.text()).then(h => {
+            document.getElementById('navbar').innerHTML = h;
+            const btn = document.getElementById('menuBtn');
+            const menu = document.getElementById('mobileMenu');
+            if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        });
+        fetch('/footer.html').then(r => r.text()).then(h => { document.getElementById('footer').innerHTML = h; });
+    </script>
+</body>
+</html>

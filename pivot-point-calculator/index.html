@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Pivot Point Calculator – Standard, Fibonacci & Camarilla S&R | ArthCalculator</title>
+    <meta name="description" content="Calculate daily intraday pivot points, support (S1, S2, S3) and resistance (R1, R2, R3) levels using Standard, Fibonacci, Camarilla, and Woodie formulas.">
+    <meta name="keywords" content="pivot point calculator, intraday pivot points, camarilla pivot calculator, fibonacci pivot point calculator Nifty BankNifty 2026">
+    <meta name="author" content="ArthCalculator">
+    <meta name="last-modified" content="2026-08-09">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/pivot-point-calculator/">
+    <link type="image/x-icon" rel="icon" href="/favicon.ico">
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Stock Pivot Point Calculator – Standard, Fibonacci & Camarilla">
+    <meta property="og:description" content="Calculate daily support and resistance levels for intraday stock trading.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/pivot-point-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- Schemas -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Stock Pivot Point Calculator",
+      "url": "https://arthcalculator.in/pivot-point-calculator/",
+      "description": "Calculate daily support and resistance pivot points using Standard, Fibonacci, and Camarilla algorithms.",
+      "datePublished": "2026-08-09",
+      "dateModified": "2026-08-09"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Stock Pivot Point Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+        { "@type": "ListItem", "position": 3, "name": "Pivot Point Calculator", "item": "https://arthcalculator.in/pivot-point-calculator/" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a Pivot Point in Stock Trading?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A pivot point is a technical indicator calculated from the high, low, and closing prices of the previous trading day. It represents the primary directional bias and key support and resistance levels for the current trading day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the Standard Pivot Point calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pivot Point (P) = (High + Low + Close) / 3. R1 = (2 × P) - Low. S1 = (2 × P) - High. R2 = P + (High - Low). S2 = P - (High - Low)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Camarilla Pivot Point method?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Camarilla pivot points use a set of 8 levels (H1-H4, L1-L4) based on yesterday's range. Traders use H3/L3 for mean-reversal trades and H4/L4 for breakout trades."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Fibonacci Pivot Point method?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fibonacci pivot points calculate the central pivot (P = (H+L+C)/3) and apply Fibonacci ratios (38.2%, 61.8%, 100%) to the previous day's price range to establish support and resistance levels."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How to trade using Pivot Points in Nifty & BankNifty?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If price opens above the Central Pivot (P), the intraday bias is bullish (targets R1, R2). If price opens below P, the bias is bearish (targets S1, S2)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which timeframe is best for Pivot Points?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Daily pivot points are best used on 5-minute, 15-minute, or 1-hour intraday price charts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is CPR (Central Pivot Range)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CPR consists of 3 levels: TC (Top Central = (P - BC) + P), P (Pivot = (H+L+C)/3), and BC (Bottom Central = (H+L)/2). A narrow CPR indicates a high probability of a trending day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use today's open price in Woodie Pivot calculation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! The Woodie pivot formula gives extra weight to the open price: Pivot (P) = (High + Low + 2 × Open) / 4."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #d97706 0%, #ca8a04 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05); }
+        details summary { list-style: none; cursor: pointer; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg.chevron { transform: rotate(180deg); }
+        input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-slide { animation: slideIn 0.4s ease forwards; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+    <div id="navbar"></div>
+
+    <!-- Hero -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center"><a href="/" class="hover:text-amber-600 transition-colors">Home</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li class="flex items-center"><a href="/calculators/" class="hover:text-amber-600 transition-colors">Calculators</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li class="text-amber-600 font-bold" aria-current="page">Pivot Point Calculator</li>
+                </ol>
+            </nav>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div class="max-w-3xl">
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight pb-1">Stock Pivot Point Calculator</h1>
+                    <p class="text-slate-500 text-sm font-medium mb-3">Intraday Support & Resistance · Standard, Fibonacci & Camarilla</p>
+                    <p class="text-slate-500 text-xs sm:text-base leading-relaxed">Calculate key daily intraday pivot points, support levels (S1, S2, S3), and resistance levels (R1, R2, R3) for Nifty, BankNifty, and Indian stocks.</p>
+                </div>
+                <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="bg-amber-50 text-amber-700 border border-amber-200 px-3 py-1.5 rounded-full font-medium">✓ Standard & Fibonacci</span>
+                    <span class="bg-yellow-50 text-yellow-700 border border-yellow-200 px-3 py-1.5 rounded-full font-medium">✓ Camarilla & Woodie</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4" id="calculator">
+        <div class="flex flex-col lg:flex-row gap-8 mb-12">
+            <!-- Left: Inputs -->
+            <div class="w-full lg:w-3/5 bg-white rounded-2xl card-shadow border border-slate-100 p-6 sm:p-8">
+                <h2 class="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
+                    <span class="w-8 h-8 bg-amber-100 text-amber-700 rounded-lg flex items-center justify-center text-sm font-bold">📊</span>
+                    Previous Day Price Inputs
+                </h2>
+
+                <!-- Formula Selection -->
+                <div class="mb-5">
+                    <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2">Pivot Calculation Method</label>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                        <label class="relative flex items-center justify-center p-2.5 border border-slate-200 rounded-xl cursor-pointer bg-white hover:border-amber-400 transition-all text-xs font-bold text-slate-600 text-center">
+                            <input type="radio" name="pivotMethod" value="standard" class="peer sr-only" checked>
+                            <span class="peer-checked:text-amber-700">Standard</span>
+                            <div class="absolute inset-0 border-2 border-transparent peer-checked:border-amber-500 rounded-xl pointer-events-none"></div>
+                        </label>
+                        <label class="relative flex items-center justify-center p-2.5 border border-slate-200 rounded-xl cursor-pointer bg-white hover:border-amber-400 transition-all text-xs font-bold text-slate-600 text-center">
+                            <input type="radio" name="pivotMethod" value="fibonacci" class="peer sr-only">
+                            <span class="peer-checked:text-amber-700">Fibonacci</span>
+                            <div class="absolute inset-0 border-2 border-transparent peer-checked:border-amber-500 rounded-xl pointer-events-none"></div>
+                        </label>
+                        <label class="relative flex items-center justify-center p-2.5 border border-slate-200 rounded-xl cursor-pointer bg-white hover:border-amber-400 transition-all text-xs font-bold text-slate-600 text-center">
+                            <input type="radio" name="pivotMethod" value="camarilla" class="peer sr-only">
+                            <span class="peer-checked:text-amber-700">Camarilla</span>
+                            <div class="absolute inset-0 border-2 border-transparent peer-checked:border-amber-500 rounded-xl pointer-events-none"></div>
+                        </label>
+                        <label class="relative flex items-center justify-center p-2.5 border border-slate-200 rounded-xl cursor-pointer bg-white hover:border-amber-400 transition-all text-xs font-bold text-slate-600 text-center">
+                            <input type="radio" name="pivotMethod" value="woodie" class="peer sr-only">
+                            <span class="peer-checked:text-amber-700">Woodie</span>
+                            <div class="absolute inset-0 border-2 border-transparent peer-checked:border-amber-500 rounded-xl pointer-events-none"></div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- High, Low, Close -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Previous High (₹)</label>
+                        <input type="number" id="prevHigh" placeholder="24250" value="24250" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-amber-400 outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Previous Low (₹)</label>
+                        <input type="number" id="prevLow" placeholder="23950" value="23950" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-amber-400 outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Previous Close (₹)</label>
+                        <input type="number" id="prevClose" placeholder="24100" value="24100" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-amber-400 outline-none text-sm">
+                    </div>
+                </div>
+
+                <!-- Optional Today's Open for Woodie -->
+                <div id="woodieOpenGroup" class="hidden mb-6">
+                    <label class="block text-xs font-semibold text-slate-600 mb-1.5">Today's Open Price (₹) [For Woodie Formula]</label>
+                    <input type="number" id="todayOpen" placeholder="24120" value="24120" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-amber-400 outline-none text-sm">
+                </div>
+
+                <div class="flex gap-3">
+                    <button id="calculateBtn" class="flex-1 bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-amber-200 transition-all active:scale-[0.98]">
+                        Calculate Pivot Points
+                    </button>
+                    <button id="resetBtn" class="px-5 py-4 bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold rounded-xl transition-colors">
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right: Results -->
+            <div class="w-full lg:w-2/5 flex flex-col gap-5">
+                <!-- Central Pivot Banner -->
+                <div class="bg-gradient-to-br from-amber-600 to-yellow-700 rounded-2xl card-shadow p-6 text-white animate-slide">
+                    <p class="text-xs text-amber-200 font-bold uppercase tracking-wider mb-1">Central Pivot Point (P)</p>
+                    <p id="resPivot" class="text-4xl font-black mb-1">₹—</p>
+                    <p id="resMethodName" class="text-amber-200 text-xs">Standard Pivot Method</p>
+                </div>
+
+                <!-- Levels Breakdown -->
+                <div class="bg-white rounded-2xl card-shadow border border-slate-100 p-6">
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Support & Resistance Levels</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between p-2 rounded-lg bg-rose-50 text-rose-800 font-semibold"><span>Resistance 3 (R3)</span><span id="resR3">—</span></div>
+                        <div class="flex justify-between p-2 rounded-lg bg-rose-50 text-rose-700 font-semibold"><span>Resistance 2 (R2)</span><span id="resR2">—</span></div>
+                        <div class="flex justify-between p-2 rounded-lg bg-rose-50 text-rose-600 font-semibold"><span>Resistance 1 (R1)</span><span id="resR1">—</span></div>
+                        <div class="flex justify-between p-2.5 rounded-lg bg-amber-100 text-amber-900 font-bold text-base my-2"><span>Central Pivot (P)</span><span id="resPivotMid">—</span></div>
+                        <div class="flex justify-between p-2 rounded-lg bg-emerald-50 text-emerald-600 font-semibold"><span>Support 1 (S1)</span><span id="resS1">—</span></div>
+                        <div class="flex justify-between p-2 rounded-lg bg-emerald-50 text-emerald-700 font-semibold"><span>Support 2 (S2)</span><span id="resS2">—</span></div>
+                        <div class="flex justify-between p-2 rounded-lg bg-emerald-50 text-emerald-800 font-semibold"><span>Support 3 (S3)</span><span id="resS3">—</span></div>
+                    </div>
+                </div>
+
+                <!-- Copy / Print -->
+                <div class="flex gap-3">
+                    <button onclick="copyResults()" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-xl transition-colors text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                        Copy Levels
+                    </button>
+                    <button onclick="window.print()" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-xl transition-colors text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                        Print
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <section id="educational-content" class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Pivot Point Formulas & Intraday Trading Guide</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-white rounded-2xl border border-slate-100 card-shadow p-6">
+                    <h3 class="font-bold text-amber-800 mb-3 text-base">Standard (Floor) Pivot</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-2"><strong>P</strong> = (High + Low + Close) / 3</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-2"><strong>R1</strong> = 2P - Low | <strong>S1</strong> = 2P - High</p>
+                    <p class="text-slate-600 text-sm leading-relaxed"><strong>R2</strong> = P + (High - Low) | <strong>S2</strong> = P - (High - Low)</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-100 card-shadow p-6">
+                    <h3 class="font-bold text-amber-800 mb-3 text-base">Fibonacci Pivot</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-2"><strong>P</strong> = (High + Low + Close) / 3</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-2"><strong>R1</strong> = P + 0.382 × (High - Low)</p>
+                    <p class="text-slate-600 text-sm leading-relaxed"><strong>R2</strong> = P + 0.618 × (High - Low)</p>
+                </div>
+            </div>
+
+            <!-- Quick Insights & Hacks -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-amber-900 mb-2 flex items-center gap-2"><span class="text-lg">💡</span> Pro Hack: Narrow CPR Breakout</h3>
+                    <p class="text-amber-800 text-xs sm:text-sm leading-relaxed">When the distance between Top Central (TC) and Bottom Central (BC) pivot is extremely narrow, it signals an explosive trending day in Nifty or BankNifty. Look for opening range breakouts above TC or below BC.</p>
+                </div>
+                <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-emerald-900 mb-2 flex items-center gap-2"><span class="text-lg">⚡</span> Importance of Camarilla H3/L3</h3>
+                    <p class="text-emerald-800 text-xs sm:text-sm leading-relaxed">Camarilla H3 and L3 act as strong mean-reversion boundary zones. Buying near L3 or shorting near H3 provides high-probability range-bound intraday setups.</p>
+                </div>
+                <div class="bg-sky-50 border border-sky-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-sky-900 mb-2 flex items-center gap-2"><span class="text-lg">🛡️</span> Institutional Alignment</h3>
+                    <p class="text-sky-800 text-xs sm:text-sm leading-relaxed">Unlike lagging moving averages, pivot points are calculated before the market opens. Institutional algorithmic execution algorithms use these exact levels to place block orders.</p>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-800 mb-4">Pivot Point Methods Feature Comparison</h3>
+            <div class="bg-white rounded-2xl border border-slate-100 card-shadow overflow-hidden mb-8">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead class="bg-slate-50 border-b border-slate-200">
+                            <tr>
+                                <th class="text-left px-4 py-3 font-semibold text-slate-700">Method</th>
+                                <th class="text-left px-4 py-3 font-semibold text-slate-700">Best Used For</th>
+                                <th class="text-center px-4 py-3 font-semibold text-slate-700">Key Support/Resistance</th>
+                                <th class="text-left px-4 py-3 font-semibold text-slate-700">Trading Style</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">Standard Floor</td><td class="px-4 py-3 text-slate-600">General Equities & Index</td><td class="text-center px-4 py-3 font-semibold">R1, R2, S1, S2</td><td class="px-4 py-3 text-slate-600">Swing & Day Trading</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">Fibonacci</td><td class="px-4 py-3 text-slate-600">Trending Markets</td><td class="text-center px-4 py-3 font-semibold">38.2%, 61.8% R/S</td><td class="px-4 py-3 text-slate-600">Trend Following</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">Camarilla</td><td class="px-4 py-3 text-slate-600">Intraday Mean Reversal & Breakout</td><td class="text-center px-4 py-3 font-semibold">H3, L3 (Reversal) / H4, L4 (Breakout)</td><td class="px-4 py-3 text-slate-600">High-Frequency Scalping</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">Woodie</td><td class="px-4 py-3 text-slate-600">Opening Momentum</td><td class="text-center px-4 py-3 font-semibold">P = (H+L+2O)/4</td><td class="px-4 py-3 text-slate-600">Opening Bell Intraday</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Common Mistakes -->
+            <div class="bg-red-50 border border-red-200 rounded-2xl p-6 mb-8">
+                <h3 class="font-bold text-red-900 mb-3">⚠️ 3 Common Pitfalls in Pivot Point Trading</h3>
+                <ul class="space-y-2 text-sm text-red-800">
+                    <li>• <strong>Trading Pivots in Isolation:</strong> Never buy at S1 or sell at R1 without confirming volume, candlestick patterns, or broader market trend direction.</li>
+                    <li>• <strong>Placing Stop Losses Right at Pivot Lines:</strong> Market makers often sweep liquidity right beyond pivot levels. Place stop losses slightly beyond the level.</li>
+                    <li>• <strong>Using Weekly Pivots for 1-Minute Scalping:</strong> Match your pivot timeframe with your trading horizon. Use daily pivots for intraday 5-min charts.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FAQs -->
+        <section id="faqs" class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Frequently Asked Questions</h2>
+            <div class="space-y-3 max-w-3xl mx-auto">
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is a Pivot Point in Stock Trading?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">A pivot point is a technical indicator calculated from the high, low, and closing prices of the previous trading day. It represents the primary directional bias and key support and resistance levels for the current trading day.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">How is the Standard Pivot Point calculated?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Pivot Point (P) = (High + Low + Close) / 3. R1 = (2 × P) - Low. S1 = (2 × P) - High. R2 = P + (High - Low). S2 = P - (High - Low).</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is the Camarilla Pivot Point method?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Camarilla pivot points use a set of 8 levels (H1-H4, L1-L4) based on yesterday's range. Traders use H3/L3 for mean-reversal trades and H4/L4 for breakout trades.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is the Fibonacci Pivot Point method?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Fibonacci pivot points calculate the central pivot (P = (H+L+C)/3) and apply Fibonacci ratios (38.2%, 61.8%, 100%) to the previous day's price range to establish support and resistance levels.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">How to trade using Pivot Points in Nifty & BankNifty?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">If price opens above the Central Pivot (P), the intraday bias is bullish (targets R1, R2). If price opens below P, the bias is bearish (targets S1, S2).</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">Which timeframe is best for Pivot Points?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Daily pivot points are best used on 5-minute, 15-minute, or 1-hour intraday price charts.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is CPR (Central Pivot Range)?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">CPR consists of 3 levels: TC (Top Central = (P - BC) + P), P (Pivot = (H+L+C)/3), and BC (Bottom Central = (H+L)/2). A narrow CPR indicates a high probability of a trending day.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">Can I use today's open price in Woodie Pivot calculation?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Yes! The Woodie pivot formula gives extra weight to the open price: Pivot (P) = (High + Low + 2 × Open) / 4.</div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Related -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold text-slate-800 mb-6">Related Stock & Trading Calculators</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                <a href="/fibonacci-retracement-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-amber-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-amber-700">Fibonacci Calculator</p><p class="text-xs text-slate-400 mt-1">Retracement levels</p></a>
+                <a href="/stock-position-size-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-amber-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-amber-700">Position Size Calculator</p><p class="text-xs text-slate-400 mt-1">Risk management</p></a>
+                <a href="/option-payoff-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-amber-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-amber-700">Option Payoff Calculator</p><p class="text-xs text-slate-400 mt-1">Call & Put P&L</p></a>
+                <a href="/stock-average/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-amber-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-amber-700">Stock Average Calculator</p><p class="text-xs text-slate-400 mt-1">Average down price</p></a>
+                <a href="/dividend-yield-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-amber-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-amber-700">Dividend Yield Calculator</p><p class="text-xs text-slate-400 mt-1">Passive income growth</p></a>
+                <a href="/cagr/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-amber-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-amber-700">CAGR Calculator</p><p class="text-xs text-slate-400 mt-1">Compound growth rate</p></a>
+                <a href="/capital-gains-tax/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-amber-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-amber-700">Capital Gains Tax</p><p class="text-xs text-slate-400 mt-1">STCG & LTCG tax</p></a>
+                <a href="/target-sip-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-amber-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-amber-700">Target Amount SIP</p><p class="text-xs text-slate-400 mt-1">Goal SIP planner</p></a>
+            </div>
+        </section>
+
+        <div id="arthcalculatorLinkingHub"></div>
+        <script src="/js/related-tools.js" defer></script>
+        <script src="/js/search.js" defer></script>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        function fmt(n) { return '₹' + (Math.round(n * 100) / 100).toLocaleString('en-IN'); }
+
+        const highInput = document.getElementById('prevHigh');
+        const lowInput = document.getElementById('prevLow');
+        const closeInput = document.getElementById('prevClose');
+        const openInput = document.getElementById('todayOpen');
+        const woodieGroup = document.getElementById('woodieOpenGroup');
+
+        document.querySelectorAll('input[name="pivotMethod"]').forEach(r => {
+            r.addEventListener('change', () => {
+                woodieGroup.classList.toggle('hidden', r.value !== 'woodie');
+                calculate();
+            });
+        });
+
+        [highInput, lowInput, closeInput, openInput].forEach(i => i.addEventListener('input', calculate));
+
+        document.getElementById('calculateBtn').addEventListener('click', calculate);
+        document.getElementById('resetBtn').addEventListener('click', () => {
+            highInput.value = 24250; lowInput.value = 23950; closeInput.value = 24100; openInput.value = 24120;
+            document.querySelector('input[name="pivotMethod"][value="standard"]').checked = true;
+            woodieGroup.classList.add('hidden');
+            calculate();
+        });
+
+        let lastResult = {};
+
+        function calculate() {
+            const method = document.querySelector('input[name="pivotMethod"]:checked').value;
+            const H = parseFloat(highInput.value) || 0;
+            const L = parseFloat(lowInput.value) || 0;
+            const C = parseFloat(closeInput.value) || 0;
+            const O = parseFloat(openInput.value) || 0;
+
+            let P = 0, R1 = 0, R2 = 0, R3 = 0, S1 = 0, S2 = 0, S3 = 0;
+            const range = H - L;
+
+            if (method === 'standard') {
+                P = (H + L + C) / 3;
+                R1 = (2 * P) - L;
+                S1 = (2 * P) - H;
+                R2 = P + range;
+                S2 = P - range;
+                R3 = H + 2 * (P - L);
+                S3 = L - 2 * (H - P);
+            } else if (method === 'fibonacci') {
+                P = (H + L + C) / 3;
+                R1 = P + 0.382 * range;
+                R2 = P + 0.618 * range;
+                R3 = P + 1.000 * range;
+                S1 = P - 0.382 * range;
+                S2 = P - 0.618 * range;
+                S3 = P - 1.000 * range;
+            } else if (method === 'camarilla') {
+                P = (H + L + C) / 3;
+                R1 = C + range * 1.1 / 12;
+                R2 = C + range * 1.1 / 6;
+                R3 = C + range * 1.1 / 4;
+                S1 = C - range * 1.1 / 12;
+                S2 = C - range * 1.1 / 6;
+                S3 = C - range * 1.1 / 4;
+            } else if (method === 'woodie') {
+                P = (H + L + 2 * O) / 4;
+                R1 = (2 * P) - L;
+                S1 = (2 * P) - H;
+                R2 = P + range;
+                S2 = P - range;
+                R3 = H + 2 * (P - L);
+                S3 = L - 2 * (H - P);
+            }
+
+            const methodNames = { standard: 'Standard Pivot', fibonacci: 'Fibonacci Pivot', camarilla: 'Camarilla Pivot', woodie: 'Woodie Pivot' };
+
+            lastResult = { method: methodNames[method], P, R1, R2, R3, S1, S2, S3 };
+
+            document.getElementById('resPivot').textContent = fmt(P);
+            document.getElementById('resMethodName').textContent = methodNames[method] + ' Method';
+            document.getElementById('resR3').textContent = fmt(R3);
+            document.getElementById('resR2').textContent = fmt(R2);
+            document.getElementById('resR1').textContent = fmt(R1);
+            document.getElementById('resPivotMid').textContent = fmt(P);
+            document.getElementById('resS1').textContent = fmt(S1);
+            document.getElementById('resS2').textContent = fmt(S2);
+            document.getElementById('resS3').textContent = fmt(S3);
+        }
+
+        function copyResults() {
+            if (!lastResult.P) return;
+            const r = lastResult;
+            const text = `${r.method} Result (ArthCalculator.in)\nPivot (P): ${fmt(r.P)}\nR1: ${fmt(r.R1)} | R2: ${fmt(r.R2)} | R3: ${fmt(r.R3)}\nS1: ${fmt(r.S1)} | S2: ${fmt(r.S2)} | S3: ${fmt(r.S3)}`;
+            navigator.clipboard.writeText(text).then(() => alert('Copied!'));
+        }
+
+        window.addEventListener('DOMContentLoaded', calculate);
+
+        fetch('/navbar.html').then(r => r.text()).then(h => {
+            document.getElementById('navbar').innerHTML = h;
+            const btn = document.getElementById('menuBtn');
+            const menu = document.getElementById('mobileMenu');
+            if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        });
+        fetch('/footer.html').then(r => r.text()).then(h => { document.getElementById('footer').innerHTML = h; });
+    </script>
+</body>
+</html>

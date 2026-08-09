@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REIT & InvIT Dividend Distribution Yield & Tax Calculator | ArthCalculator</title>
+    <meta name="description" content="Calculate post-tax yield, distribution breakdown (Dividend, Interest, Repayment of SPV Debt), and tax liability on REITs & InvITs (Embassy, Mindspace, Nexus Select, PowerGrid) in India.">
+    <meta name="keywords" content="reit dividend tax calculator, invit distribution yield calculator, Embassy REIT taxability India 2026, REIT repayment of debt tax">
+    <meta name="author" content="ArthCalculator">
+    <meta name="last-modified" content="2026-08-09">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/reit-invit-dividend-tax-yield/">
+    <link type="image/x-icon" rel="icon" href="/favicon.ico">
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="REIT & InvIT Dividend Distribution Yield & Tax Calculator">
+    <meta property="og:description" content="Calculate post-tax distribution yield and tax breakdown for REITs & InvITs in India.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/reit-invit-dividend-tax-yield/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- Schemas (WebPage, SoftwareApplication, BreadcrumbList, FAQPage) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "REIT & InvIT Dividend Distribution Yield & Tax Calculator",
+      "url": "https://arthcalculator.in/reit-invit-dividend-tax-yield/",
+      "description": "Calculate REIT and InvIT quarterly distribution yield and tax liability breakdown.",
+      "datePublished": "2026-08-09",
+      "dateModified": "2026-08-09"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "REIT InvIT Tax Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+        { "@type": "ListItem", "position": 3, "name": "REIT InvIT Calculator", "item": "https://arthcalculator.in/reit-invit-dividend-tax-yield/" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are REITs and InvITs in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "REITs (Real Estate Investment Trusts) and InvITs (Infrastructure Investment Trusts) are SEBI-regulated instruments that pool investor funds to own income-generating real estate assets (malls, IT parks) or infrastructure assets (highways, power lines)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the 3 components of a REIT/InvIT distribution payout?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1. Interest Income (Taxable at slab rate)\n2. Dividend Income (Taxable or exempt based on SPV tax regime)\n3. Repayment of SPV Debt / Capital Reduction (Taxable under 'Income from Other Sources' above issue price)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is dividend received from REITs taxable in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If the underlying Special Purpose Vehicle (SPV) opted for the 22% concessionary tax regime u/s 115BAA, dividends received by unitholders are 100% TAXABLE. If SPV did not opt for 115BAA, dividends are TAX-FREE."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Repayment of Debt (Capital Reduction) taxed post-Finance Act 2023?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Repayment of SPV debt distributions exceeding the original unit issue price are taxed as 'Income from Other Sources' at your applicable income tax slab rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is TDS deducted on REIT distribution payouts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, REITs deduct 10% TDS on the taxable component (Interest and taxable Dividend) distributed to resident individual unitholders if annual payout exceeds ₹5,000."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are capital gains on sale of REIT units taxed in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1. Short-Term Capital Gains (STCG, held ≤36 months): Taxed at 20%.\n2. Long-Term Capital Gains (LTCG, held >36 months): Taxed at 12.5% on gains exceeding ₹1.25 Lakhs per year."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the typical distribution yield of Indian REITs & InvITs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Commercial REITs (Embassy, Mindspace, Nexus Select) offer 6.0% to 7.5% distribution yields. Infrastructure InvITs (PowerGrid, India Grid Trust) offer 9.0% to 11.5% yields."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How frequently do REITs distribute payouts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEBI rules require REITs and InvITs to distribute at least 90% of Net Distributable Cash Flows (NDCF) to unitholders on a QUARTERLY basis."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0284c7 0%, #16a34a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05); }
+        details summary { list-style: none; cursor: pointer; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg.chevron { transform: rotate(180deg); }
+        input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-slide { animation: slideIn 0.4s ease forwards; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+    <div id="navbar"></div>
+
+    <!-- Hero -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center"><a href="/" class="hover:text-sky-600 transition-colors">Home</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li class="flex items-center"><a href="/calculators/" class="hover:text-sky-600 transition-colors">Calculators</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li class="text-sky-600 font-bold" aria-current="page">REIT InvIT Calculator</li>
+                </ol>
+            </nav>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div class="max-w-3xl">
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight pb-1">REIT & InvIT Dividend Distribution Yield & Tax Calculator</h1>
+                    <p class="text-slate-500 text-sm font-medium mb-3">Pre & Post-Tax Yield % · Distribution Component Taxability · Quarterly Payouts</p>
+                    <p class="text-slate-500 text-xs sm:text-base leading-relaxed">Calculate exact pre-tax and post-tax yields, distribution breakdown (Interest, Dividend, Debt Repayment), and net tax liability on REITs & InvITs.</p>
+                </div>
+                <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="bg-sky-50 text-sky-700 border border-sky-200 px-3 py-1.5 rounded-full font-medium">✓ Post-Tax Yield Math</span>
+                    <span class="bg-emerald-50 text-emerald-700 border border-emerald-200 px-3 py-1.5 rounded-full font-medium">✓ 3-Component Tax Split</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4" id="calculator">
+        <div class="flex flex-col lg:flex-row gap-8 mb-12">
+            <!-- Left: Inputs -->
+            <div class="w-full lg:w-3/5 bg-white rounded-2xl card-shadow border border-slate-100 p-6 sm:p-8">
+                <h2 class="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
+                    <span class="w-8 h-8 bg-sky-100 text-sky-700 rounded-lg flex items-center justify-center text-sm font-bold">🏙️</span>
+                    Investment & Distribution Payout Inputs
+                </h2>
+
+                <!-- Total Investment & Annual Distribution -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Total REIT / InvIT Investment (₹)</label>
+                        <input type="number" id="totalInvestment" placeholder="500000" value="500000" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Total Annual Distribution Received (₹)</label>
+                        <input type="number" id="annualDistribution" placeholder="38000" value="38000" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                    </div>
+                </div>
+
+                <!-- Component Percentages % -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-5">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Interest Component %</label>
+                        <input type="number" id="interestPct" placeholder="45" value="45" class="w-full px-3 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Dividend Component %</label>
+                        <input type="number" id="dividendPct" placeholder="35" value="35" class="w-full px-3 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Debt Repayment %</label>
+                        <input type="number" id="debtRepayPct" placeholder="20" value="20" class="w-full px-3 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                    </div>
+                </div>
+
+                <!-- Tax Slab Rate & SPV Tax Regime -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Your Income Tax Slab Rate</label>
+                        <select id="taxSlab" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                            <option value="31.2" selected>30% Slab (+ 4% Cess = 31.2%)</option>
+                            <option value="20.8">20% Slab (+ 4% Cess = 20.8%)</option>
+                            <option value="15.6">15% Slab (+ 4% Cess = 15.6%)</option>
+                            <option value="10.4">10% Slab (+ 4% Cess = 10.4%)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">SPV Tax Status for Dividend Component</label>
+                        <select id="spvTaxStatus" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                            <option value="taxable" selected>Taxable (SPV opted u/s 115BAA 22% rate)</option>
+                            <option value="exempt">Tax-Free (SPV did NOT opt u/s 115BAA)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="flex gap-3">
+                    <button id="calculateBtn" class="flex-1 bg-sky-600 hover:bg-sky-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-sky-200 transition-all active:scale-[0.98]">
+                        Calculate Post-Tax Yield
+                    </button>
+                    <button id="resetBtn" class="px-5 py-4 bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold rounded-xl transition-colors">
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right: Results -->
+            <div class="w-full lg:w-2/5 flex flex-col gap-5">
+                <!-- Result Banner -->
+                <div class="bg-gradient-to-br from-emerald-600 to-teal-700 rounded-2xl card-shadow p-6 text-white animate-slide">
+                    <p class="text-xs text-emerald-200 font-bold uppercase tracking-wider mb-1">Effective Post-Tax Yield %</p>
+                    <p id="resPostTaxYield" class="text-4xl font-black mb-1">— %</p>
+                    <p id="resPreTaxYieldSubtext" class="text-emerald-200 text-xs">Pre-Tax Gross Yield: — %</p>
+                </div>
+
+                <!-- Breakdown Summary -->
+                <div class="bg-white rounded-2xl card-shadow border border-slate-100 p-6">
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Taxability Breakdown Summary</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between text-slate-600"><span>Taxable Interest Amount</span><span id="resInterestVal" class="font-bold text-slate-800">—</span></div>
+                        <div class="flex justify-between text-slate-600"><span>Dividend Portion (Tax Status)</span><span id="resDividendVal" class="font-bold text-slate-800">—</span></div>
+                        <div class="flex justify-between text-slate-600"><span>Repayment of Debt Portion</span><span id="resDebtRepayVal" class="font-bold text-slate-800">—</span></div>
+                        <div class="flex justify-between text-slate-600"><span>Total Tax Liability</span><span id="resTotalTax" class="font-bold text-rose-600">—</span></div>
+                        <div class="border-t border-slate-100 pt-3 flex justify-between font-bold text-slate-800 text-base">
+                            <span>Net In-Hand Annual Income</span>
+                            <span id="resNetInHand" class="text-emerald-600 font-bold">—</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copy / Print -->
+                <div class="flex gap-3">
+                    <button onclick="copyResults()" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-xl transition-colors text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                        Copy Result
+                    </button>
+                    <button onclick="window.print()" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-xl transition-colors text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                        Print
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <section id="educational-content" class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">REIT & InvIT Distribution Taxability Masterclass</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-white rounded-2xl border border-slate-100 card-shadow p-6">
+                    <h3 class="font-bold text-sky-800 mb-3 text-base">The 3 Component Distribution Split</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">REIT quarterly distributions are NOT pure dividends. They consist of 3 distinct components: Interest Income, Dividend Income, and Repayment of Debt. Each component has unique tax implications.</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-100 card-shadow p-6">
+                    <h3 class="font-bold text-sky-800 mb-3 text-base">Finance Act 2023 Amendment</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Prior to April 2023, Repayment of Debt was 100% tax-free. Under current rules, debt repayment distributions exceeding the original unit issue price are taxable under 'Other Sources'.</p>
+                </div>
+            </div>
+
+            <!-- REIT Comparison Table -->
+            <h3 class="text-xl font-bold text-slate-800 mb-4">Indian REIT & InvIT Popular Distribution Profiles</h3>
+            <div class="bg-white rounded-2xl border border-slate-100 card-shadow overflow-hidden mb-8">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead class="bg-slate-50 border-b border-slate-200">
+                            <tr>
+                                <th class="text-left px-4 py-3 font-semibold text-slate-700">REIT / InvIT Name</th>
+                                <th class="text-center px-4 py-3 font-semibold text-slate-700">Asset Class</th>
+                                <th class="text-center px-4 py-3 font-semibold text-emerald-700">Avg Gross Yield</th>
+                                <th class="text-center px-4 py-3 font-semibold text-slate-700">Dividend Taxability</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-bold text-slate-800">Embassy Office Parks REIT</td><td class="text-center px-4 py-3 text-slate-600">IT Parks & Offices</td><td class="text-center px-4 py-3 font-bold text-emerald-600">6.8%</td><td class="text-center px-4 py-3 text-rose-600 font-semibold">Taxable (115BAA)</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-bold text-slate-800">Mindspace Business Parks REIT</td><td class="text-center px-4 py-3 text-slate-600">Commercial Real Estate</td><td class="text-center px-4 py-3 font-bold text-emerald-600">6.5%</td><td class="text-center px-4 py-3 text-emerald-600 font-semibold">Exempt (Non-115BAA)</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-bold text-slate-800">Nexus Select Trust REIT</td><td class="text-center px-4 py-3 text-slate-600">Retail Malls</td><td class="text-center px-4 py-3 font-bold text-emerald-600">6.2%</td><td class="text-center px-4 py-3 text-emerald-600 font-semibold">Exempt / Partial</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-bold text-slate-800">PowerGrid InvIT</td><td class="text-center px-4 py-3 text-slate-600">Power Transmission</td><td class="text-center px-4 py-3 font-bold text-emerald-600">10.5%</td><td class="text-center px-4 py-3 text-rose-600 font-semibold">Taxable</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Quick Insights & Hacks -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-sky-50 border border-sky-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-sky-900 mb-2 flex items-center gap-2"><span class="text-lg">💡</span> Pro Hack: Low Tax Slab Optimization</h3>
+                    <p class="text-sky-800 text-xs sm:text-sm leading-relaxed">Holding REIT units in accounts of family members in lower tax slabs (e.g., parents/spouse) preserves higher net yields.</p>
+                </div>
+                <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-emerald-900 mb-2 flex items-center gap-2"><span class="text-lg">⚡</span> Quarterly Cash Compounding</h3>
+                    <p class="text-emerald-800 text-xs sm:text-sm leading-relaxed">REITs pay quarterly distributions. Reinvesting quarterly payouts accelerates overall annual compound returns.</p>
+                </div>
+                <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-amber-900 mb-2 flex items-center gap-2"><span class="text-lg">🛡️</span> 10% TDS Credit Claim</h3>
+                    <p class="text-amber-800 text-xs sm:text-sm leading-relaxed">Ensure the 10% TDS deducted by the REIT trust appears in your Form 26AS to adjust it against your final tax return.</p>
+                </div>
+            </div>
+
+            <!-- Common Mistakes -->
+            <div class="bg-red-50 border border-red-200 rounded-2xl p-6 mb-8">
+                <h3 class="font-bold text-red-900 mb-3">⚠️ 3 Common REIT Tax Mistakes</h3>
+                <ul class="space-y-2 text-sm text-red-800">
+                    <li>• <strong>Assuming Pre-Tax Yield Equals Net Income:</strong> Comparing a 7% REIT yield directly to a 7% FD is misleading because REIT interest components are taxed at slab rates.</li>
+                    <li>• <strong>Ignoring SPV Tax Election:</strong> Check whether the REIT's SPV opted for 115BAA before assuming dividend components are tax-free!</li>
+                    <li>• <strong>Confusing Distribution Yield with Price Growth:</strong> Distribution yield is passive cash flow; market unit prices can fluctuate based on interest rate cycles.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FAQs -->
+        <section id="faqs" class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Frequently Asked Questions</h2>
+            <div class="space-y-3 max-w-3xl mx-auto">
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What are REITs and InvITs in India?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">REITs (Real Estate Investment Trusts) and InvITs (Infrastructure Investment Trusts) are SEBI-regulated instruments that pool investor funds to own income-generating real estate assets (malls, IT parks) or infrastructure assets (highways, power lines).</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What are the 3 components of a REIT/InvIT distribution payout?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">1. Interest Income (Taxable at slab rate)<br>2. Dividend Income (Taxable or exempt based on SPV tax regime)<br>3. Repayment of SPV Debt / Capital Reduction (Taxable under 'Income from Other Sources' above issue price).</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">Is dividend received from REITs taxable in India?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">If the underlying Special Purpose Vehicle (SPV) opted for the 22% concessionary tax regime u/s 115BAA, dividends received by unitholders are 100% TAXABLE. If SPV did not opt for 115BAA, dividends are TAX-FREE.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">How is Repayment of Debt (Capital Reduction) taxed post-Finance Act 2023?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Repayment of SPV debt distributions exceeding the original unit issue price are taxed as 'Income from Other Sources' at your applicable income tax slab rate.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">Is TDS deducted on REIT distribution payouts?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Yes, REITs deduct 10% TDS on the taxable component (Interest and taxable Dividend) distributed to resident individual unitholders if annual payout exceeds ₹5,000.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">How are capital gains on sale of REIT units taxed in India?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">1. Short-Term Capital Gains (STCG, held ≤36 months): Taxed at 20%.<br>2. Long-Term Capital Gains (LTCG, held >36 months): Taxed at 12.5% on gains exceeding ₹1.25 Lakhs per year.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is the typical distribution yield of Indian REITs & InvITs?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Commercial REITs (Embassy, Mindspace, Nexus Select) offer 6.0% to 7.5% distribution yields. Infrastructure InvITs (PowerGrid, India Grid Trust) offer 9.0% to 11.5% yields.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">How frequently do REITs distribute payouts?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">SEBI rules require REITs and InvITs to distribute at least 90% of Net Distributable Cash Flows (NDCF) to unitholders on a QUARTERLY basis.</div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Related -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold text-slate-800 mb-6">Related Investment & Tax Calculators</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                <a href="/dividend-yield-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">Dividend Yield Calculator</p><p class="text-xs text-slate-400 mt-1">Stock dividend return</p></a>
+                <a href="/capital-gains-tax/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">Capital Gains Tax</p><p class="text-xs text-slate-400 mt-1">STCG & LTCG rates</p></a>
+                <a href="/sec-54ec-capital-gain-bonds-tax/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">Sec 54EC Bonds Tax</p><p class="text-xs text-slate-400 mt-1">REC & PFC 54EC bonds</p></a>
+                <a href="/stock-position-size-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">Position Size Calculator</p><p class="text-xs text-slate-400 mt-1">Risk per trade math</p></a>
+            </div>
+        </section>
+
+        <div id="arthcalculatorLinkingHub"></div>
+        <script src="/js/related-tools.js" defer></script>
+        <script src="/js/search.js" defer></script>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        function fmt(n) { return '₹' + Math.round(n).toLocaleString('en-IN'); }
+
+        const invInput = document.getElementById('totalInvestment');
+        const distInput = document.getElementById('annualDistribution');
+        const intPctInput = document.getElementById('interestPct');
+        const divPctInput = document.getElementById('dividendPct');
+        const debtPctInput = document.getElementById('debtRepayPct');
+        const slabSelect = document.getElementById('taxSlab');
+        const spvSelect = document.getElementById('spvTaxStatus');
+
+        [invInput, distInput, intPctInput, divPctInput, debtPctInput, slabSelect, spvSelect].forEach(i => i.addEventListener('input', calculate));
+
+        document.getElementById('calculateBtn').addEventListener('click', calculate);
+        document.getElementById('resetBtn').addEventListener('click', () => {
+            invInput.value = 500000;
+            distInput.value = 38000;
+            intPctInput.value = 45;
+            divPctInput.value = 35;
+            debtPctInput.value = 20;
+            slabSelect.value = "31.2";
+            spvSelect.value = "taxable";
+            calculate();
+        });
+
+        let lastResult = {};
+
+        function calculate() {
+            const inv = parseFloat(invInput.value) || 0;
+            const dist = parseFloat(distInput.value) || 0;
+            const intPct = parseFloat(intPctInput.value) || 0;
+            const divPct = parseFloat(divPctInput.value) || 0;
+            const debtPct = parseFloat(debtPctInput.value) || 0;
+            const taxSlabPct = parseFloat(slabSelect.value) || 31.2;
+            const spvStatus = spvSelect.value;
+
+            const interestVal = dist * (intPct / 100);
+            const dividendVal = dist * (divPct / 100);
+            const debtRepayVal = dist * (debtPct / 100);
+
+            // Interest is always taxable at slab rate
+            const taxOnInterest = interestVal * (taxSlabPct / 100);
+
+            // Dividend is taxable if SPV opted for 115BAA (22%)
+            const taxOnDividend = spvStatus === 'taxable' ? dividendVal * (taxSlabPct / 100) : 0;
+
+            // Debt repayment portion is tax-free up to issue price (assume tax-free baseline)
+            const taxOnDebtRepay = 0;
+
+            const totalTax = taxOnInterest + taxOnDividend + taxOnDebtRepay;
+            const netInHand = dist - totalTax;
+
+            const preTaxYield = inv > 0 ? (dist / inv) * 100 : 0;
+            const postTaxYield = inv > 0 ? (netInHand / inv) * 100 : 0;
+
+            lastResult = { inv, dist, preTaxYield, postTaxYield, interestVal, dividendVal, debtRepayVal, totalTax, netInHand, spvStatus };
+
+            document.getElementById('resPostTaxYield').textContent = postTaxYield.toFixed(2) + ' %';
+            document.getElementById('resPreTaxYieldSubtext').textContent = 'Pre-Tax Gross Yield: ' + preTaxYield.toFixed(2) + ' %';
+            document.getElementById('resInterestVal').textContent = fmt(interestVal) + ' (Taxable @ ' + taxSlabPct.toFixed(1) + '%)';
+            document.getElementById('resDividendVal').textContent = fmt(dividendVal) + (spvStatus === 'taxable' ? ' (Taxable @ ' + taxSlabPct.toFixed(1) + '%)' : ' (TAX FREE)');
+            document.getElementById('resDebtRepayVal').textContent = fmt(debtRepayVal) + ' (Tax-Exempt Base)';
+            document.getElementById('resTotalTax').textContent = fmt(totalTax);
+            document.getElementById('resNetInHand').textContent = fmt(netInHand);
+        }
+
+        function copyResults() {
+            if (!lastResult.inv) return;
+            const r = lastResult;
+            const text = `REIT/InvIT Result (ArthCalculator.in)\nInvestment: ${fmt(r.inv)}\nAnnual Distribution: ${fmt(r.dist)}\nPre-Tax Yield: ${r.preTaxYield.toFixed(2)}%\nTotal Tax Payable: ${fmt(r.totalTax)}\nNet In-Hand Annual Income: ${fmt(r.netInHand)}\nEffective Post-Tax Yield: ${r.postTaxYield.toFixed(2)}%`;
+            navigator.clipboard.writeText(text).then(() => alert('Copied!'));
+        }
+
+        window.addEventListener('DOMContentLoaded', calculate);
+
+        fetch('/navbar.html').then(r => r.text()).then(h => {
+            document.getElementById('navbar').innerHTML = h;
+            const btn = document.getElementById('menuBtn');
+            const menu = document.getElementById('mobileMenu');
+            if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        });
+        fetch('/footer.html').then(r => r.text()).then(h => { document.getElementById('footer').innerHTML = h; });
+    </script>
+</body>
+</html>

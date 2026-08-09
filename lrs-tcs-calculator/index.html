@@ -32,6 +32,21 @@
         .floating-badge { position: fixed; top: 1rem; right: 1rem; z-index: 50; }
         @media print { .no-print { display: none; } }
     </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "LRS & TCS Refund Calculator: Foreign Remittance Optimizer",
+      "operatingSystem": "All",
+      "applicationCategory": "FinanceApplication",
+      "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR"
+      }
+}
+    </script>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12">
 <div id="navbar"></div>
@@ -225,7 +240,7 @@
             <section class="bg-indigo-600 p-8 rounded-2xl text-white text-pretty text-pretty">
                 <h2 class="text-xl font-bold mb-4">Strategy: How to avoid the 20% TCS Trap</h2>
                 <div class="prose prose-indigo max-w-none text-white/90 text-sm sm:text-base leading-relaxed space-y-4 text-pretty">
-                    <p>The 20% TCS on foreign investments and gifts can significantly impact your investable capital. To avoid this, consider <strong>Family Pooling</strong>: Since the ₹7 Lakh threshold is <em>per individual</em>, a family of four can remit up to ₹28 Lakhs in a year without attracting a single rupee in TCS. Ensure the bank accounts are KYC-verified and the source of funds is clearly documented for each member.</p>
+                    <p>The 20% TCS on foreign investments and gifts can significantly impact your investable capital. The ₹10 Lakh LRS threshold is <em>per individual</em>; keep bank accounts KYC-verified and document each person’s source of funds.</p>
                     <p>Another 2026-ready tip: For overseas education, using a bank loan (Sec 80E) not only gives you a tax deduction but also drops your TCS rate from 5% to a negligible 0.5%.</p>
                 </div>
             </section>
@@ -247,10 +262,10 @@
             <section class="max-w-4xl mx-auto py-10" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">TCS & LRS Frequently Asked Questions</h2>
                 <div class="space-y-4 text-pretty">
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What is the threshold for TCS on LRS in 2026?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">The aggregate threshold for all remittances under LRS is ₹7 Lakhs per year. This limit is shared across categories like education, medical, and investments.</div></details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Is TCS applicable on international credit card spends?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Currently, credit card spends for individual transactions are not reported under LRS. However, debit cards and forex cards fall strictly under the ₹7L threshold.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What is the threshold for TCS on LRS in 2026?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">The aggregate threshold for LRS remittances is ₹10 Lakhs per year. This limit is shared across categories such as education, medical treatment and investments.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Is TCS applicable on international credit card spends?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">International credit-card treatment can differ from LRS remittances. Confirm the treatment with your authorised dealer before relying on this calculator.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Can I adjust TCS against my Salary TDS?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">Yes! Following the 2024 regulatory update, you can declare your TCS details to your employer, and they can reduce your monthly salary TDS accordingly to improve your cash flow.</div></details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Is the 7 Lakh limit per bank account?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">No, it is <strong>per PAN</strong>. Remitting from different banks will not help as the IT department aggregates all transactions in your AIS (Annual Information Statement).</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Is the ₹10 Lakh limit per bank account?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">No, it is <strong>per PAN</strong>. Remitting from different banks will not help as the Income Tax Department aggregates transactions in AIS.</div></details>
                 </div>
             </section>
 
