@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash-Futures Arbitrage Spread Return & Yield Calculator | ArthCalculator</title>
+    <meta name="description" content="Calculate risk-free annualized yield, basis spread, and net returns for Cash-Futures arbitrage (buying cash equity & shorting futures contracts) in India.">
+    <meta name="keywords" content="cash futures arbitrage calculator, arbitrage yield calculator, equity futures spread calculator India 2026">
+    <meta name="author" content="ArthCalculator">
+    <meta name="last-modified" content="2026-08-09">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/cash-futures-arbitrage-yield/">
+    <link type="image/x-icon" rel="icon" href="/favicon.ico">
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Cash-Futures Arbitrage Spread Return & Yield Calculator">
+    <meta property="og:description" content="Calculate risk-free annualized yield and basis spread for Cash-Futures arbitrage.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/cash-futures-arbitrage-yield/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- Schemas (WebPage, SoftwareApplication, BreadcrumbList, FAQPage) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Cash-Futures Arbitrage Spread Return Calculator",
+      "url": "https://arthcalculator.in/cash-futures-arbitrage-yield/",
+      "description": "Calculate Cash-Futures arbitrage spread return and annualized risk-free yield.",
+      "datePublished": "2026-08-09",
+      "dateModified": "2026-08-09"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Cash-Futures Arbitrage Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+        { "@type": "ListItem", "position": 3, "name": "Cash-Futures Arbitrage Calculator", "item": "https://arthcalculator.in/cash-futures-arbitrage-yield/" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Cash-Futures Arbitrage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cash-Futures Arbitrage is a risk-free strategy where an investor buys equity shares in the cash market and simultaneously sells (shorts) an equivalent number of futures contracts trading at a premium."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is Cash-Futures Arbitrage considered risk-free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On contract expiry date, the futures price MUST converge exactly to the spot cash price. Therefore, the premium spread locked in at trade entry is guaranteed profit regardless of market direction."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Annualized Arbitrage Yield calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Annualized Yield % = [(Futures Price - Cash Price) / Cash Price] × (365 / Days to Expiry) × 100."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Arbitrage Fund taxation in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because Arbitrage Funds maintain >65% average exposure to domestic equities via cash-futures positions, they are taxed as Equity Mutual Funds (12.5% LTCG above ₹1.25L & 20% STCG)—offering huge tax benefits over FD interest!"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What transaction costs affect cash-futures arbitrage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Transaction costs include Brokerage fees, STT (Securities Transaction Tax on cash buy & futures sell), Exchange Turnover fees, Stamp Duty, and GST."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is 'Basis' in futures trading?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Basis is the price difference between the futures contract price and the cash market spot price. Basis = Futures Price - Spot Cash Price."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if futures trade at a discount (Backwardation)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If futures trade at a discount to cash spot price (Backwardation), Cash-Futures arbitrage is not viable. Reverse arbitrage (short cash & buy futures) is executed by institutional traders."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a good annualized return for cash-futures arbitrage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Historically, cash-futures arbitrage yields range from 6.5% to 10.5% annualized depending on market sentiment, interest rates, and short rollover spreads."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0284c7 0%, #16a34a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05); }
+        details summary { list-style: none; cursor: pointer; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg.chevron { transform: rotate(180deg); }
+        input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-slide { animation: slideIn 0.4s ease forwards; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+    <div id="navbar"></div>
+
+    <!-- Hero -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center"><a href="/" class="hover:text-sky-600 transition-colors">Home</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li class="flex items-center"><a href="/calculators/" class="hover:text-sky-600 transition-colors">Calculators</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li class="text-sky-600 font-bold" aria-current="page">Cash-Futures Arbitrage Calculator</li>
+                </ol>
+            </nav>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div class="max-w-3xl">
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight pb-1">Cash-Futures Arbitrage Spread Return Calculator</h1>
+                    <p class="text-slate-500 text-sm font-medium mb-3">Risk-Free Yield % · Basis Spread Math · Equity Arbitrage Returns</p>
+                    <p class="text-slate-500 text-xs sm:text-base leading-relaxed">Calculate exact risk-free annualized yield, basis spread, and net returns for Cash-Futures arbitrage trades.</p>
+                </div>
+                <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="bg-sky-50 text-sky-700 border border-sky-200 px-3 py-1.5 rounded-full font-medium">✓ Risk-Free Return</span>
+                    <span class="bg-emerald-50 text-emerald-700 border border-emerald-200 px-3 py-1.5 rounded-full font-medium">✓ Equity Tax Status</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4" id="calculator">
+        <div class="flex flex-col lg:flex-row gap-8 mb-12">
+            <!-- Left: Inputs -->
+            <div class="w-full lg:w-3/5 bg-white rounded-2xl card-shadow border border-slate-100 p-6 sm:p-8">
+                <h2 class="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
+                    <span class="w-8 h-8 bg-sky-100 text-sky-700 rounded-lg flex items-center justify-center text-sm font-bold">⚖️</span>
+                    Cash & Futures Prices
+                </h2>
+
+                <!-- Cash Buy & Futures Sell Prices -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Cash Market Spot Price (₹)</label>
+                        <input type="number" id="cashPrice" placeholder="1000" value="1000" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Futures Contract Price (₹)</label>
+                        <input type="number" id="futuresPrice" placeholder="1008" value="1008" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                    </div>
+                </div>
+
+                <!-- Lot Size & Days to Expiry -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Futures Lot Size (Qty)</label>
+                        <input type="number" id="lotSize" placeholder="1000" value="1000" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Days Remaining to Contract Expiry</label>
+                        <input type="number" id="daysExpiry" placeholder="30" value="30" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                    </div>
+                </div>
+
+                <div class="flex gap-3">
+                    <button id="calculateBtn" class="flex-1 bg-sky-600 hover:bg-sky-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-sky-200 transition-all active:scale-[0.98]">
+                        Calculate Arbitrage Yield
+                    </button>
+                    <button id="resetBtn" class="px-5 py-4 bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold rounded-xl transition-colors">
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right: Results -->
+            <div class="w-full lg:w-2/5 flex flex-col gap-5">
+                <!-- Result Banner -->
+                <div class="bg-gradient-to-br from-sky-600 to-emerald-700 rounded-2xl card-shadow p-6 text-white animate-slide">
+                    <p class="text-xs text-sky-200 font-bold uppercase tracking-wider mb-1">Annualized Risk-Free Yield</p>
+                    <p id="resAnnualizedYield" class="text-4xl font-black mb-1">— %</p>
+                    <p id="resAbsoluteProfitSubtext" class="text-sky-200 text-xs">Total Net Arbitrage Profit: ₹—</p>
+                </div>
+
+                <!-- Breakdown Summary -->
+                <div class="bg-white rounded-2xl card-shadow border border-slate-100 p-6">
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Arbitrage Spread Breakdown</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between text-slate-600"><span>Basis Spread per Share</span><span id="resBasisSpread" class="font-bold text-slate-800">—</span></div>
+                        <div class="flex justify-between text-slate-600"><span>Total Capital Required</span><span id="resCapitalRequired" class="font-bold text-slate-800">—</span></div>
+                        <div class="flex justify-between text-slate-600"><span>Absolute Net Profit</span><span id="resAbsoluteProfit" class="font-bold text-emerald-600">—</span></div>
+                        <div class="border-t border-slate-100 pt-3 flex justify-between font-bold text-slate-800 text-base">
+                            <span>Expiry Convergence Risk</span>
+                            <span class="text-emerald-600 font-bold">ZERO (100% Risk Free)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copy / Print -->
+                <div class="flex gap-3">
+                    <button onclick="copyResults()" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-xl transition-colors text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                        Copy Result
+                    </button>
+                    <button onclick="window.print()" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-xl transition-colors text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                        Print
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <section id="educational-content" class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Cash-Futures Arbitrage Guide</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-white rounded-2xl border border-slate-100 card-shadow p-6">
+                    <h3 class="font-bold text-sky-800 mb-3 text-base">How Cash-Futures Arbitrage Works</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">During bull markets, futures contracts trade at a premium to cash spot prices. You buy 1000 shares in cash and short 1 futures contract. On expiry day, both prices converge, locking in a risk-free profit.</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-100 card-shadow p-6">
+                    <h3 class="font-bold text-sky-800 mb-3 text-base">Equity Tax Benefit Over Bank FDs</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Arbitrage Funds & cash-futures positions are taxed as Equity Funds (12.5% LTCG above ₹1.25L). Bank FD interest is taxed at your full slab rate (30%), making arbitrage far superior after tax!</p>
+                </div>
+            </div>
+
+            <!-- Quick Insights & Hacks -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-sky-50 border border-sky-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-sky-900 mb-2 flex items-center gap-2"><span class="text-lg">💡</span> Pro Hack: Rollover Spread Bonus</h3>
+                    <p class="text-sky-800 text-xs sm:text-sm leading-relaxed">On expiry Thursday, if the next month's futures contract continues to trade at a premium, roll over your short futures position to extend your risk-free yield for another month!</p>
+                </div>
+                <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-emerald-900 mb-2 flex items-center gap-2"><span class="text-lg">⚡</span> Expiry Price Convergence</h3>
+                    <p class="text-emerald-800 text-xs sm:text-sm leading-relaxed">NSE regulations mandate that futures settlement price equals the cash closing price on expiry. Convergence is 100% guaranteed by law.</p>
+                </div>
+                <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-amber-900 mb-2 flex items-center gap-2"><span class="text-lg">🛡️</span> Zero Market Direction Risk</h3>
+                    <p class="text-amber-800 text-xs sm:text-sm leading-relaxed">Whether the market crashes 50% or surges 50%, your cash gain balances your futures loss (or vice versa), yielding exact locked-in profit.</p>
+                </div>
+            </div>
+
+            <!-- Common Mistakes -->
+            <div class="bg-red-50 border border-red-200 rounded-2xl p-6 mb-8">
+                <h3 class="font-bold text-red-900 mb-3">⚠️ 3 Common Cash-Futures Arbitrage Mistakes</h3>
+                <ul class="space-y-2 text-sm text-red-800">
+                    <li>• <strong>Mismatched Quantity:</strong> Buying 500 shares in cash while shorting a 1,000 lot futures contract leaves you exposed to unhedged market risk.</li>
+                    <li>• <strong>Forgetting STT & Transaction Fees:</strong> Transaction charges (STT on buy/sell) eat 0.1%-0.2% of the spread. Ensure the spread is wide enough (>0.6%).</li>
+                    <li>• <strong>Shorting at a Discount (Backwardation):</strong> Attempting cash-futures arbitrage when futures trade lower than cash spot creates a guaranteed loss!</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FAQs -->
+        <section id="faqs" class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Frequently Asked Questions</h2>
+            <div class="space-y-3 max-w-3xl mx-auto">
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is Cash-Futures Arbitrage?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Cash-Futures Arbitrage is a risk-free strategy where an investor buys equity shares in the cash market and simultaneously sells (shorts) an equivalent number of futures contracts trading at a premium.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">Why is Cash-Futures Arbitrage considered risk-free?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">On contract expiry date, the futures price MUST converge exactly to the spot cash price. Therefore, the premium spread locked in at trade entry is guaranteed profit regardless of market direction.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">How is Annualized Arbitrage Yield calculated?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Annualized Yield % = [(Futures Price - Cash Price) / Cash Price] × (365 / Days to Expiry) × 100.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is Arbitrage Fund taxation in India?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Because Arbitrage Funds maintain >65% average exposure to domestic equities via cash-futures positions, they are taxed as Equity Mutual Funds (12.5% LTCG above ₹1.25L & 20% STCG)—offering huge tax benefits over FD interest!</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What transaction costs affect cash-futures arbitrage?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Transaction costs include Brokerage fees, STT (Securities Transaction Tax on cash buy & futures sell), Exchange Turnover fees, Stamp Duty, and GST.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is 'Basis' in futures trading?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Basis is the price difference between the futures contract price and the cash market spot price. Basis = Futures Price - Spot Cash Price.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What happens if futures trade at a discount (Backwardation)?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">If futures trade at a discount to cash spot price (Backwardation), Cash-Futures arbitrage is not viable. Reverse arbitrage (short cash & buy futures) is executed by institutional traders.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is a good annualized return for cash-futures arbitrage?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Historically, cash-futures arbitrage yields range from 6.5% to 10.5% annualized depending on market sentiment, interest rates, and short rollover spreads.</div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Related -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold text-slate-800 mb-6">Related Trading Calculators</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                <a href="/nifty-wheel-strategy-roi/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">Option Wheel Strategy</p><p class="text-xs text-slate-400 mt-1">CSP & Covered Call ROI</p></a>
+                <a href="/option-iv-rank-percentile/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">Option IV Rank (IVR)</p><p class="text-xs text-slate-400 mt-1">Volatility rank & percentile</p></a>
+                <a href="/stock-position-size-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">Position Size Calculator</p><p class="text-xs text-slate-400 mt-1">Risk per trade math</p></a>
+                <a href="/pivot-point-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">Pivot Point Calculator</p><p class="text-xs text-slate-400 mt-1">Support & Resistance</p></a>
+            </div>
+        </section>
+
+        <div id="arthcalculatorLinkingHub"></div>
+        <script src="/js/related-tools.js" defer></script>
+        <script src="/js/search.js" defer></script>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        function fmt(n) { return '₹' + Math.round(n).toLocaleString('en-IN'); }
+
+        const cashInput = document.getElementById('cashPrice');
+        const futuresInput = document.getElementById('futuresPrice');
+        const lotInput = document.getElementById('lotSize');
+        const daysInput = document.getElementById('daysExpiry');
+
+        [cashInput, futuresInput, lotInput, daysInput].forEach(i => i.addEventListener('input', calculate));
+
+        document.getElementById('calculateBtn').addEventListener('click', calculate);
+        document.getElementById('resetBtn').addEventListener('click', () => {
+            cashInput.value = 1000;
+            futuresInput.value = 1008;
+            lotInput.value = 1000;
+            daysInput.value = 30;
+            calculate();
+        });
+
+        let lastResult = {};
+
+        function calculate() {
+            const cash = parseFloat(cashInput.value) || 0;
+            const fut = parseFloat(futuresInput.value) || 0;
+            const lot = parseFloat(lotInput.value) || 0;
+            const days = Math.max(1, parseFloat(daysInput.value) || 1);
+
+            const basisSpread = fut - cash;
+            const capitalRequired = cash * lot;
+            const absoluteProfit = basisSpread * lot;
+            const simpleYield = cash > 0 ? (basisSpread / cash) * 100 : 0;
+            const annualizedYield = simpleYield * (365 / days);
+
+            lastResult = { cash, fut, lot, days, basisSpread, capitalRequired, absoluteProfit, annualizedYield };
+
+            document.getElementById('resAnnualizedYield').textContent = annualizedYield.toFixed(2) + ' %';
+            document.getElementById('resAbsoluteProfitSubtext').textContent = 'Total Net Arbitrage Profit: ' + fmt(absoluteProfit);
+            document.getElementById('resBasisSpread').textContent = '₹' + basisSpread.toFixed(2) + ' / share (' + simpleYield.toFixed(2) + '%)';
+            document.getElementById('resCapitalRequired').textContent = fmt(capitalRequired);
+            document.getElementById('resAbsoluteProfit').textContent = fmt(absoluteProfit);
+        }
+
+        function copyResults() {
+            if (!lastResult.cash) return;
+            const r = lastResult;
+            const text = `Cash-Futures Arbitrage Result (ArthCalculator.in)\nCapital Required: ${fmt(r.capitalRequired)}\nBasis Spread: ₹${r.basisSpread.toFixed(2)} / share\nTotal Arbitrage Profit: ${fmt(r.absoluteProfit)}\nAnnualized Yield: ${r.annualizedYield.toFixed(2)}%`;
+            navigator.clipboard.writeText(text).then(() => alert('Copied!'));
+        }
+
+        window.addEventListener('DOMContentLoaded', calculate);
+
+        fetch('/navbar.html').then(r => r.text()).then(h => {
+            document.getElementById('navbar').innerHTML = h;
+            const btn = document.getElementById('menuBtn');
+            const menu = document.getElementById('mobileMenu');
+            if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        });
+        fetch('/footer.html').then(r => r.text()).then(h => { document.getElementById('footer').innerHTML = h; });
+    </script>
+</body>
+</html>

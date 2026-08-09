@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target Amount SIP Calculator – Monthly SIP Required for Goal | ArthCalculator</title>
+    <meta name="description" content="Calculate the exact monthly SIP required to reach your target financial goal (e.g. ₹1 Crore, ₹50 Lakhs). Adjust for expected returns, inflation, and tenure.">
+    <meta name="keywords" content="target sip calculator, monthly sip required for 1 crore, target corpus sip planner, mutual fund target sip calculator 2026">
+    <meta name="author" content="ArthCalculator">
+    <meta name="last-modified" content="2026-08-09">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/target-sip-calculator/">
+    <link type="image/x-icon" rel="icon" href="/favicon.ico">
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Target Amount SIP Calculator – Find Required Monthly Investment">
+    <meta property="og:description" content="Calculate monthly SIP needed to reach any target amount. Adjust for expected return % and inflation rate.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/target-sip-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- Schemas -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Target Amount SIP Calculator",
+      "url": "https://arthcalculator.in/target-sip-calculator/",
+      "description": "Calculate exact monthly SIP amount required to achieve target corpus with inflation adjustment.",
+      "datePublished": "2026-08-09",
+      "dateModified": "2026-08-09"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Target Amount SIP Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+        { "@type": "ListItem", "position": 3, "name": "Target SIP Calculator", "item": "https://arthcalculator.in/target-sip-calculator/" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much SIP is needed to make ₹1 Crore in 10 years?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Assuming an expected return of 12% p.a., you need a monthly SIP of approximately ₹43,040 to accumulate ₹1 Crore in 10 years. At 15% expected return, the required monthly SIP reduces to around ₹36,150."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a Target Amount SIP Calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Unlike a standard SIP calculator that calculates future value from a given monthly investment, a Target Amount SIP calculator works in reverse: it calculates the exact monthly investment required to reach a specific financial goal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I adjust my target goal for inflation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Inflation erodes purchasing power over time. ₹1 Crore after 15 years at 6% annual inflation will have the purchasing power of only about ₹41.7 Lakhs today. Adjusting for inflation ensures your target goal meets real future expenses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What return rate should I assume for equity SIP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For Indian equity mutual funds over a 7-10+ year horizon, financial advisors generally suggest assuming a conservative 12% to 14% CAGR. For hybrid or debt funds, assume 7% to 9%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I increase my SIP annually (Step-up SIP)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Increasing your SIP by even 10% every year reduces your required starting monthly investment significantly. For example, to reach ₹1 Cr in 15 years at 12% return, a flat SIP requires ₹20,000/mo, whereas a 10% step-up SIP requires a starting investment of only ~₹11,500/mo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the formula used in Target SIP calculation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The formula used is: Monthly SIP = Target Amount / [{(1 + r)^n - 1} / r * (1 + r)], where 'r' is the monthly interest rate (Annual Return / 12 / 100) and 'n' is total months (Years * 12)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I reach my target faster by investing lump sum + SIP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! If you already have an existing lump sum corpus, its compounded growth reduces the remaining balance needed from your monthly SIP, lowering your required monthly investment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should I review my target SIP plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You should review your target SIP portfolio annually to rebalance assets, adjust for actual mutual fund CAGR, and increase contributions in line with annual salary increments."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05); }
+        details summary { list-style: none; cursor: pointer; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg.chevron { transform: rotate(180deg); }
+        input[type="range"] { accent-color: #0284c7; height: 6px; }
+        input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        .bar-inv { background: linear-gradient(90deg, #0284c7, #38bdf8); }
+        .bar-gain { background: linear-gradient(90deg, #10b981, #34d399); }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-slide { animation: slideIn 0.4s ease forwards; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+    <div id="navbar"></div>
+
+    <!-- Hero -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center"><a href="/" class="hover:text-sky-600 transition-colors">Home</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li class="flex items-center"><a href="/calculators/" class="hover:text-sky-600 transition-colors">Calculators</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li class="text-sky-600 font-bold" aria-current="page">Target Amount SIP Calculator</li>
+                </ol>
+            </nav>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div class="max-w-3xl">
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight pb-1">Target Amount SIP Calculator</h1>
+                    <p class="text-slate-500 text-sm font-medium mb-3">Goal-Based Wealth Planner · Reverse SIP Math · Inflation Adjusted</p>
+                    <p class="text-slate-500 text-xs sm:text-base leading-relaxed">Calculate the exact monthly investment required to reach your target financial goal (e.g. ₹1 Crore, ₹50 Lakhs). Adjust for expected returns, duration, and inflation.</p>
+                </div>
+                <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="bg-sky-50 text-sky-700 border border-sky-200 px-3 py-1.5 rounded-full font-medium">✓ Reverse SIP Math</span>
+                    <span class="bg-green-50 text-green-700 border border-green-200 px-3 py-1.5 rounded-full font-medium">✓ Inflation Adjustment</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4" id="calculator">
+        <div class="flex flex-col lg:flex-row gap-8 mb-12">
+            <!-- Left: Inputs -->
+            <div class="w-full lg:w-3/5 bg-white rounded-2xl card-shadow border border-slate-100 p-6 sm:p-8">
+                <h2 class="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
+                    <span class="w-8 h-8 bg-sky-100 text-sky-700 rounded-lg flex items-center justify-center text-sm font-bold">🎯</span>
+                    Goal Parameters
+                </h2>
+
+                <!-- Target Amount -->
+                <div class="mb-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <label class="text-sm font-semibold text-slate-700">Target Amount Goal (₹)</label>
+                        <span id="targetDisplay" class="text-sky-600 font-bold text-sm">₹1,00,00,000</span>
+                    </div>
+                    <input type="range" id="targetSlider" min="500000" max="100000000" step="500000" value="10000000" class="w-full mb-2">
+                    <div class="flex justify-between text-xs text-slate-400"><span>₹5L</span><span>₹10 Cr</span></div>
+                </div>
+
+                <!-- Investment Duration -->
+                <div class="mb-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <label class="text-sm font-semibold text-slate-700">Time Horizon (Years)</label>
+                        <span id="yearsDisplay" class="text-sky-600 font-bold text-sm">15 Years</span>
+                    </div>
+                    <input type="range" id="yearsSlider" min="1" max="40" step="1" value="15" class="w-full mb-2">
+                    <div class="flex justify-between text-xs text-slate-400"><span>1 Year</span><span>40 Years</span></div>
+                </div>
+
+                <!-- Expected Return Rate -->
+                <div class="mb-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <label class="text-sm font-semibold text-slate-700">Expected CAGR Return (% p.a.)</label>
+                        <span id="rateDisplay" class="text-sky-600 font-bold text-sm">12%</span>
+                    </div>
+                    <input type="range" id="rateSlider" min="5" max="25" step="0.5" value="12" class="w-full mb-2">
+                    <div class="flex justify-between text-xs text-slate-400"><span>5% (Debt)</span><span>12% (Equity)</span><span>25% (Aggressive)</span></div>
+                </div>
+
+                <!-- Inflation Adjustment Switch -->
+                <div class="mb-6 p-4 bg-slate-50 rounded-xl">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <label class="text-sm font-semibold text-slate-700 block">Adjust Target for Inflation?</label>
+                            <p class="text-xs text-slate-500 mt-0.5">Accounts for purchasing power loss over time</p>
+                        </div>
+                        <input type="checkbox" id="inflationCheck" class="w-5 h-5 accent-sky-600 rounded cursor-pointer">
+                    </div>
+                    <div id="inflationInputGroup" class="hidden mt-4 pt-3 border-t border-slate-200">
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-xs font-semibold text-slate-600">Expected Inflation Rate (% p.a.)</label>
+                            <span id="infDisplay" class="text-sky-600 font-bold text-xs">6%</span>
+                        </div>
+                        <input type="range" id="infSlider" min="3" max="10" step="0.5" value="6" class="w-full">
+                    </div>
+                </div>
+
+                <div class="flex gap-3">
+                    <button id="calculateBtn" class="flex-1 bg-sky-600 hover:bg-sky-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-sky-200 transition-all active:scale-[0.98]">
+                        Calculate Required Monthly SIP
+                    </button>
+                    <button id="resetBtn" class="px-5 py-4 bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold rounded-xl transition-colors">
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right: Results -->
+            <div class="w-full lg:w-2/5 flex flex-col gap-5">
+                <!-- Result Banner -->
+                <div class="bg-gradient-to-br from-sky-600 to-blue-700 rounded-2xl card-shadow p-6 text-white animate-slide">
+                    <p class="text-xs text-sky-200 font-bold uppercase tracking-wider mb-1">Required Monthly SIP</p>
+                    <p id="resMonthlySip" class="text-4xl font-black mb-1">₹—</p>
+                    <p id="resSipSubtext" class="text-sky-200 text-xs">Per month for 15 years to achieve ₹1 Cr</p>
+                </div>
+
+                <!-- Breakdown Card -->
+                <div class="bg-white rounded-2xl card-shadow border border-slate-100 p-6">
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Investment Summary</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between text-slate-600"><span>Target Corpus</span><span id="resTargetCorpus" class="font-bold text-slate-800">—</span></div>
+                        <div id="resInfTargetRow" class="flex justify-between text-slate-600 hidden"><span>Inflation-Adjusted Goal</span><span id="resInfTarget" class="font-bold text-amber-600">—</span></div>
+                        <div class="flex justify-between text-slate-600"><span>Total Amount Invested</span><span id="resTotalInvested" class="font-semibold">—</span></div>
+                        <div class="flex justify-between text-slate-600"><span>Estimated Wealth Gain</span><span id="resEstimatedGain" class="font-bold text-emerald-600">—</span></div>
+                        <div class="border-t border-slate-100 pt-3 flex justify-between font-bold text-slate-800 text-base">
+                            <span>Wealth Multiplier</span>
+                            <span id="resWealthMultiplier" class="text-sky-700">—</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual Progress Bar -->
+                <div id="visualBarCard" class="bg-white rounded-2xl card-shadow border border-slate-100 p-6">
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-3">Principal vs Capital Gain Ratio</h3>
+                    <div class="h-6 bg-slate-100 rounded-full overflow-hidden flex mb-2">
+                        <div id="barInvested" class="h-full bar-inv transition-all duration-700" style="width: 30%"></div>
+                        <div id="barGain" class="h-full bar-gain transition-all duration-700" style="width: 70%"></div>
+                    </div>
+                    <div class="flex justify-between text-xs font-semibold">
+                        <span class="text-sky-600">■ Invested: <span id="barInvestedPct">30%</span></span>
+                        <span class="text-emerald-600">■ Estimated Wealth Gain: <span id="barGainPct">70%</span></span>
+                    </div>
+                </div>
+
+                <!-- Copy / Print -->
+                <div class="flex gap-3">
+                    <button onclick="copyResults()" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-xl transition-colors text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                        Copy Result
+                    </button>
+                    <button onclick="window.print()" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-xl transition-colors text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                        Print
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <section id="educational-content" class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Target Amount SIP — Complete Goal Planning Guide</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-white rounded-2xl border border-slate-100 card-shadow p-6">
+                    <h3 class="font-bold text-slate-800 mb-3 text-base">What is Target Amount SIP?</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Target Amount SIP planning (reverse SIP calculation) determines how much you need to invest every month to reach a specific financial goal—such as ₹1 Crore for retirement, ₹50 Lakhs for a child's higher education, or ₹25 Lakhs for a home down payment.</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-100 card-shadow p-6">
+                    <h3 class="font-bold text-slate-800 mb-3 text-base">Why Use Goal-Based SIP?</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Investing without a target often leads to under-investing. By calculating the exact monthly commitment required, you can align your monthly budget, track actual portfolio performance against your target, and increase your SIP when income rises.</p>
+                </div>
+            </div>
+
+            <!-- Quick Insights & Hacks -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-sky-50 border border-sky-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-sky-900 mb-2 flex items-center gap-2"><span class="text-lg">💡</span> Pro Hack: Step-Up SIP</h3>
+                    <p class="text-sky-800 text-xs sm:text-sm leading-relaxed">Increasing your SIP contribution by 10% annually reduces your required starting monthly investment by up to 40%. It aligns your SIP with annual salary hikes and dramatically accelerates goal achievement.</p>
+                </div>
+                <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-emerald-900 mb-2 flex items-center gap-2"><span class="text-lg">⚡</span> Importance of Inflation</h3>
+                    <p class="text-emerald-800 text-xs sm:text-sm leading-relaxed">Always adjust your target goal for inflation (typically 6% in India). A ₹1 Crore goal today will require ₹2.4 Crore after 15 years to maintain the exact same purchasing power.</p>
+                </div>
+                <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-amber-900 mb-2 flex items-center gap-2"><span class="text-lg">🛡️</span> De-risking Near Goal</h3>
+                    <p class="text-amber-800 text-xs sm:text-sm leading-relaxed">When you are 2–3 years away from your target date, gradually shift your equity corpus into liquid or short-term debt funds to lock in your gains and protect against market drawdowns.</p>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-800 mb-4">Required Monthly SIP for ₹1 Crore Target Across Different Horizons</h3>
+            <div class="bg-white rounded-2xl border border-slate-100 card-shadow overflow-hidden mb-8">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead class="bg-slate-50 border-b border-slate-200">
+                            <tr>
+                                <th class="text-left px-4 py-3 font-semibold text-slate-700">Time Horizon</th>
+                                <th class="text-center px-4 py-3 font-semibold text-sky-700">@ 10% CAGR</th>
+                                <th class="text-center px-4 py-3 font-semibold text-sky-700">@ 12% CAGR</th>
+                                <th class="text-center px-4 py-3 font-semibold text-sky-700">@ 15% CAGR</th>
+                                <th class="text-center px-4 py-3 font-semibold text-emerald-700">Total Invested (@12%)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">5 Years</td><td class="text-center px-4 py-3 font-semibold">₹12,900</td><td class="text-center px-4 py-3 font-semibold">₹12,240</td><td class="text-center px-4 py-3 font-semibold">₹11,320</td><td class="text-center px-4 py-3 text-emerald-600 font-semibold">₹73.4 Lakhs</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">10 Years</td><td class="text-center px-4 py-3 font-semibold">₹48,820</td><td class="text-center px-4 py-3 font-semibold">₹43,040</td><td class="text-center px-4 py-3 font-semibold">₹36,150</td><td class="text-center px-4 py-3 text-emerald-600 font-semibold">₹51.6 Lakhs</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">15 Years</td><td class="text-center px-4 py-3 font-semibold">₹24,130</td><td class="text-center px-4 py-3 font-semibold">₹20,020</td><td class="text-center px-4 py-3 font-semibold">₹14,960</td><td class="text-center px-4 py-3 text-emerald-600 font-semibold">₹36.0 Lakhs</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">20 Years</td><td class="text-center px-4 py-3 font-semibold">₹13,170</td><td class="text-center px-4 py-3 font-semibold">₹10,010</td><td class="text-center px-4 py-3 font-semibold">₹6,680</td><td class="text-center px-4 py-3 text-emerald-600 font-semibold">₹24.0 Lakhs</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">25 Years</td><td class="text-center px-4 py-3 font-semibold">₹7,540</td><td class="text-center px-4 py-3 font-semibold">₹5,270</td><td class="text-center px-4 py-3 font-semibold">₹3,080</td><td class="text-center px-4 py-3 text-emerald-600 font-semibold">₹15.8 Lakhs</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Common Mistakes -->
+            <div class="bg-red-50 border border-red-200 rounded-2xl p-6 mb-8">
+                <h3 class="font-bold text-red-900 mb-3">⚠️ 4 Common Mistakes in Target SIP Planning</h3>
+                <ul class="space-y-2 text-sm text-red-800">
+                    <li>• <strong>Assuming Unrealistic Return Rates:</strong> Expecting 18–20% annual returns leads to severe SIP underfunding. Stick to realistic 12–14% equity returns.</li>
+                    <li>• <strong>Ignoring Tax Deductions on Redemption:</strong> Equity long-term capital gains (LTCG) above ₹1.25 Lakhs per year attract 12.5% tax. Plan your withdrawal strategy to minimize tax.</li>
+                    <li>• <strong>Pausing SIPs During Market Falls:</strong> Market corrections allow you to buy more mutual fund units at lower NAVs, which accelerates reaching your target corpus.</li>
+                    <li>• <strong>Not Accounting for Expense Ratios:</strong> Direct mutual fund plans save 0.5%–1% annually compared to regular plans, adding lakhs to your final corpus.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FAQs -->
+        <section id="faqs" class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Frequently Asked Questions</h2>
+            <div class="space-y-3 max-w-3xl mx-auto">
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">How much SIP is needed to make ₹1 Crore in 10 years?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Assuming an expected return of 12% p.a., you need a monthly SIP of approximately ₹43,040 to accumulate ₹1 Crore in 10 years. At 15% expected return, the required monthly SIP reduces to around ₹36,150.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is a Target Amount SIP Calculator?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Unlike a standard SIP calculator that calculates future value from a given monthly investment, a Target Amount SIP calculator works in reverse: it calculates the exact monthly investment required to reach a specific financial goal.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">Should I adjust my target goal for inflation?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Yes! Inflation erodes purchasing power over time. ₹1 Crore after 15 years at 6% annual inflation will have the purchasing power of only about ₹41.7 Lakhs today. Adjusting for inflation ensures your target goal meets real future expenses.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What return rate should I assume for equity SIP?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">For Indian equity mutual funds over a 7-10+ year horizon, financial advisors generally suggest assuming a conservative 12% to 14% CAGR. For hybrid or debt funds, assume 7% to 9%.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What if I increase my SIP annually (Step-up SIP)?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Increasing your SIP by even 10% every year reduces your required starting monthly investment significantly. For example, to reach ₹1 Cr in 15 years at 12% return, a flat SIP requires ₹20,000/mo, whereas a 10% step-up SIP requires a starting investment of only ~₹11,500/mo.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is the formula used in Target SIP calculation?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">The formula used is: Monthly SIP = Target Amount / [{(1 + r)^n - 1} / r * (1 + r)], where 'r' is monthly interest rate (Annual Return / 12 / 100) and 'n' is total months (Years * 12).</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">Can I reach my target faster by investing lump sum + SIP?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Yes! If you already have an existing lump sum corpus, its compounded growth reduces the remaining balance needed from your monthly SIP, lowering your required monthly investment.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">How often should I review my target SIP plan?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">You should review your target SIP portfolio annually to rebalance assets, adjust for actual mutual fund CAGR, and increase contributions in line with annual salary increments.</div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Related -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold text-slate-800 mb-6">Related Calculators</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                <a href="/sip/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">SIP Calculator</p><p class="text-xs text-slate-400 mt-1">Standard wealth returns</p></a>
+                <a href="/step-up-sip/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">Step-Up SIP Calculator</p><p class="text-xs text-slate-400 mt-1">Annual top-up growth</p></a>
+                <a href="/sip-cost-of-delay/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">Cost of Delay Calculator</p><p class="text-xs text-slate-400 mt-1">Delay cost analysis</p></a>
+                <a href="/inflation-adjusted-sip-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">Inflation Adjusted SIP</p><p class="text-xs text-slate-400 mt-1">Real return wealth</p></a>
+                <a href="/swp/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">SWP Calculator</p><p class="text-xs text-slate-400 mt-1">Systematic withdrawal</p></a>
+                <a href="/cagr/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">CAGR Calculator</p><p class="text-xs text-slate-400 mt-1">Compound growth rate</p></a>
+                <a href="/mutual-fund-returns/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">Mutual Fund Returns</p><p class="text-xs text-slate-400 mt-1">Estimate Fund Profit</p></a>
+                <a href="/fire-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">FIRE Calculator</p><p class="text-xs text-slate-400 mt-1">Financial Independence</p></a>
+            </div>
+        </section>
+
+        <div id="arthcalculatorLinkingHub"></div>
+        <script src="/js/related-tools.js" defer></script>
+        <script src="/js/search.js" defer></script>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        function fmt(n) { return '₹' + Math.round(n).toLocaleString('en-IN'); }
+
+        const targetSlider = document.getElementById('targetSlider');
+        const targetDisplay = document.getElementById('targetDisplay');
+        const yearsSlider = document.getElementById('yearsSlider');
+        const yearsDisplay = document.getElementById('yearsDisplay');
+        const rateSlider = document.getElementById('rateSlider');
+        const rateDisplay = document.getElementById('rateDisplay');
+        const inflationCheck = document.getElementById('inflationCheck');
+        const inflationInputGroup = document.getElementById('inflationInputGroup');
+        const infSlider = document.getElementById('infSlider');
+        const infDisplay = document.getElementById('infDisplay');
+
+        targetSlider.addEventListener('input', () => targetDisplay.textContent = fmt(targetSlider.value));
+        yearsSlider.addEventListener('input', () => yearsDisplay.textContent = yearsSlider.value + ' Years');
+        rateSlider.addEventListener('input', () => rateDisplay.textContent = rateSlider.value + '%');
+        infSlider.addEventListener('input', () => infDisplay.textContent = infSlider.value + '%');
+
+        inflationCheck.addEventListener('change', () => {
+            inflationInputGroup.classList.toggle('hidden', !inflationCheck.checked);
+            calculate();
+        });
+
+        document.getElementById('calculateBtn').addEventListener('click', calculate);
+        document.getElementById('resetBtn').addEventListener('click', () => {
+            targetSlider.value = 10000000; targetDisplay.textContent = fmt(10000000);
+            yearsSlider.value = 15; yearsDisplay.textContent = '15 Years';
+            rateSlider.value = 12; rateDisplay.textContent = '12%';
+            inflationCheck.checked = false; inflationInputGroup.classList.add('hidden');
+            infSlider.value = 6; infDisplay.textContent = '6%';
+            calculate();
+        });
+
+        let lastResult = {};
+
+        function calculate() {
+            let target = parseFloat(targetSlider.value) || 10000000;
+            const years = parseInt(yearsSlider.value) || 15;
+            const rate = parseFloat(rateSlider.value) || 12;
+            const hasInf = inflationCheck.checked;
+            const infRate = hasInf ? (parseFloat(infSlider.value) || 6) : 0;
+
+            let actualTarget = target;
+            if (hasInf) {
+                // Future inflation-adjusted target
+                actualTarget = target * Math.pow(1 + (infRate / 100), years);
+            }
+
+            const i = (rate / 100) / 12;
+            const n = years * 12;
+
+            // Monthly SIP = ActualTarget / [{(1+i)^n - 1}/i * (1+i)]
+            const monthlySip = actualTarget / (((Math.pow(1 + i, n) - 1) / i) * (1 + i));
+            const totalInvested = monthlySip * n;
+            const estimatedGain = actualTarget - totalInvested;
+            const multiplier = actualTarget / totalInvested;
+
+            lastResult = { target, actualTarget, years, rate, monthlySip, totalInvested, estimatedGain, hasInf };
+
+            document.getElementById('resMonthlySip').textContent = fmt(monthlySip);
+            document.getElementById('resSipSubtext').textContent = `Per month for ${years} years to achieve ${fmt(actualTarget)}`;
+            document.getElementById('resTargetCorpus').textContent = fmt(target);
+
+            const infRow = document.getElementById('resInfTargetRow');
+            if (hasInf) {
+                infRow.classList.remove('hidden');
+                document.getElementById('resInfTarget').textContent = fmt(actualTarget);
+            } else {
+                infRow.classList.add('hidden');
+            }
+
+            document.getElementById('resTotalInvested').textContent = fmt(totalInvested);
+            document.getElementById('resEstimatedGain').textContent = fmt(estimatedGain);
+            document.getElementById('resWealthMultiplier').textContent = multiplier.toFixed(2) + 'x';
+
+            // Bars
+            const invPct = Math.min(100, Math.max(0, (totalInvested / actualTarget) * 100));
+            const gainPct = 100 - invPct;
+            document.getElementById('barInvested').style.width = invPct + '%';
+            document.getElementById('barGain').style.width = gainPct + '%';
+            document.getElementById('barInvestedPct').textContent = invPct.toFixed(1) + '%';
+            document.getElementById('barGainPct').textContent = gainPct.toFixed(1) + '%';
+        }
+
+        function copyResults() {
+            if (!lastResult.monthlySip) return;
+            const r = lastResult;
+            const text = `Target Amount SIP Calculation (ArthCalculator.in)\nTarget Goal: ${fmt(r.target)}\nTenure: ${r.years} Years @ ${r.rate}% CAGR\nRequired Monthly SIP: ${fmt(r.monthlySip)}\nTotal Invested: ${fmt(r.totalInvested)}\nEstimated Gain: ${fmt(r.estimatedGain)}`;
+            navigator.clipboard.writeText(text).then(() => alert('Copied!'));
+        }
+
+        window.addEventListener('DOMContentLoaded', calculate);
+
+        fetch('/navbar.html').then(r => r.text()).then(h => {
+            document.getElementById('navbar').innerHTML = h;
+            const btn = document.getElementById('menuBtn');
+            const menu = document.getElementById('mobileMenu');
+            if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        });
+        fetch('/footer.html').then(r => r.text()).then(h => { document.getElementById('footer').innerHTML = h; });
+    </script>
+</body>
+</html>

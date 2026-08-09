@@ -84,6 +84,21 @@
 
     </style>
 
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Foreign Freelance Tax Calculator 2026: Sec 44ADA, GST & LRS",
+      "operatingSystem": "All",
+      "applicationCategory": "FinanceApplication",
+      "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR"
+      }
+}
+    </script>
 </head>
 
 <body class="text-slate-800 antialiased min-h-screen pb-12">
@@ -176,8 +191,14 @@
 
                         <input type="range" id="grossIncomeRange" min="500000" max="7500000" step="50000" value="3000000" class="w-full py-2 cursor-pointer">
 
-                        <p class="text-[10px] text-slate-400 mt-1 italic text-pretty">Sec 44ADA limit is ₹75 Lakhs for digital professionals.</p>
+                        <p class="text-[10px] text-slate-400 mt-1 italic text-pretty">44ADA limit is ₹50L, or ₹75L only when cash receipts are at most 5%.</p>
 
+                    </div>
+
+                    <div class="mb-8">
+                        <label class="text-sm font-medium text-slate-600 block mb-2">Cash Receipts in Professional Income (₹)</label>
+                        <input type="number" id="cashReceiptsInput" value="0" min="0" step="10000" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500">
+                        <p id="adaEligibility" class="text-[10px] text-slate-400 mt-1">₹75L eligibility requires cash receipts of 5% or less.</p>
                     </div>
 
                     <div class="mb-8">
@@ -460,7 +481,7 @@
 
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">
 
-                            If you spend or invest money abroad (remittance), banks deduct 20% TCS above ₹7L. You can see this amount in your Form 26AS. While filing your Income Tax Return (ITR), you can adjust this amount against your final tax liability or claim a full refund if your tax is zero.
+                            If you spend or invest money abroad (remittance), banks collect 20% TCS on the amount above the ₹10L LRS threshold. You can see this amount in your Form 26AS and adjust it against your final tax liability or claim a refund where applicable.
 
                         </div>
 
@@ -520,6 +541,7 @@
     const elements = {
 
         grossIncomeInput: document.getElementById('grossIncomeInput'),
+        cashReceiptsInput: document.getElementById('cashReceiptsInput'),
 
         grossIncomeRange: document.getElementById('grossIncomeRange'),
 
@@ -628,6 +650,7 @@
     function updateCalculations() {
 
         const gross = parseFloat(elements.grossIncomeInput.value) || 0;
+        const cashReceipts = parseFloat(elements.cashReceiptsInput.value) || 0;
 
         const remittance = parseFloat(elements.remittanceInput.value) || 0;
 
@@ -637,13 +660,21 @@
 
         // Note: Standard deduction of 75k is NOT available for non-salaried income
 
-        const professionalProfit = gross * 0.5;
+        const eligibleLimit = cashReceipts <= gross * 0.05 ? 7500000 : 5000000;
+        const adaEligible = gross <= eligibleLimit;
+        const eligibility = document.getElementById('adaEligibility');
+        eligibility.textContent = adaEligible
+            ? `Eligible for 44ADA under the ₹${eligibleLimit / 100000}L limit.`
+            : `Not eligible for 44ADA: your applicable limit is ₹${eligibleLimit / 100000}L. Contractor estimates are unavailable.`;
+        eligibility.className = adaEligible ? 'text-[10px] text-emerald-600 mt-1' : 'text-[10px] text-rose-600 mt-1 font-semibold';
+
+        const professionalProfit = adaEligible ? gross * 0.5 : 0;
 
         const contractorTax = calculateSlabTax(professionalProfit);
 
-        const tcsAmount = remittance > 1000000 ? (remittance - 1000000) * 0.20 : 0;
+        const tcsAmount = adaEligible && remittance > 1000000 ? (remittance - 1000000) * 0.20 : 0;
 
-        const contractorNet = gross - contractorTax - tcsAmount;
+        const contractorNet = adaEligible ? gross - contractorTax - tcsAmount : 0;
 
         // 2. Salaried Logic (New Regime)
 
@@ -661,13 +692,13 @@
 
         const fullTaxOnGross = calculateSlabTax(gross);
 
-        const taxSaved = fullTaxOnGross - contractorTax;
+        const taxSaved = adaEligible ? fullTaxOnGross - contractorTax : 0;
 
         // Update UI
 
-        elements.netTakeHomeDisplay.textContent = formatINR(contractorNet);
+        elements.netTakeHomeDisplay.textContent = adaEligible ? formatINR(contractorNet) : 'Not eligible';
 
-        elements.taxSavedDisplay.textContent = formatINR(taxSaved);
+        elements.taxSavedDisplay.textContent = adaEligible ? formatINR(taxSaved) : '—';
 
         elements.tcsRefundDisplay.textContent = formatINR(tcsAmount);
 
@@ -687,7 +718,7 @@
 
         // Bars
 
-        const maxNet = Math.max(contractorNet, salariedNet);
+        const maxNet = Math.max(contractorNet, salariedNet, 1);
 
         elements.contractorBar.style.width = (contractorNet / maxNet * 100) + "%";
 
@@ -697,15 +728,15 @@
 
         const rows = [
 
-            ["Gross Annual Value", formatINR(gross), formatINR(salariedCtc)],
+            ["Gross Annual Value", adaEligible ? formatINR(gross) : "Not eligible", formatINR(salariedCtc)],
 
-            ["Taxable Income", formatINR(professionalProfit) + " (50%)", formatINR(salariedTaxable)],
+            ["Taxable Income", adaEligible ? formatINR(professionalProfit) + " (50%)" : "—", formatINR(salariedTaxable)],
 
-            ["Estimated Income Tax", formatINR(contractorTax), formatINR(salariedTax)],
+            ["Estimated Income Tax", adaEligible ? formatINR(contractorTax) : "—", formatINR(salariedTax)],
 
             ["TCS (Blocked Capital)", formatINR(tcsAmount), "₹0"],
 
-            ["Net Cash In-Hand", "<strong>" + formatINR(contractorNet) + "</strong>", "<strong>" + formatINR(salariedNet) + "</strong>"]
+            ["Net Cash In-Hand", adaEligible ? "<strong>" + formatINR(contractorNet) + "</strong>" : "Not eligible", "<strong>" + formatINR(salariedNet) + "</strong>"]
 
         ];
 
@@ -727,7 +758,9 @@
 
         const diff = contractorNet - salariedNet;
 
-        let insight = `By choosing a professional contract, you keep <strong>${formatINR(diff)} more</strong> cash in your bank compared to a salaried job. `;
+        let insight = adaEligible
+            ? `By choosing a professional contract, you keep <strong>${formatINR(diff)} more</strong> cash in your bank compared to a salaried job. `
+            : '44ADA is unavailable for these receipts; use normal business-tax computation instead.';
 
         if (tcsAmount > 0) {
 
@@ -737,7 +770,7 @@
 
         elements.insightText.innerHTML = insight;
 
-        elements.verdictText.textContent = `Retain ${((contractorNet/gross)*100).toFixed(1)}% of your gross foreign earnings.`;
+        elements.verdictText.textContent = adaEligible ? `Retain ${((contractorNet/gross)*100).toFixed(1)}% of your gross foreign earnings.` : '44ADA eligibility required.';
 
     }
 
@@ -758,6 +791,7 @@
         setupSync(elements.salariedCtcInput, elements.salariedCtcRange);
 
         document.getElementById('calcBtn').addEventListener('click', updateCalculations);
+        elements.cashReceiptsInput.addEventListener('input', updateCalculations);
 
         fetch("/navbar.html").then(res=>res.text()).then(data=>{document.getElementById("navbar").innerHTML=data;});
 

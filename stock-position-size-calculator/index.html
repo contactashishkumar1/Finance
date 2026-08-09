@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Position Size Calculator – Risk & Stop Loss Quantity Planner | ArthCalculator</title>
+    <meta name="description" content="Calculate exact share quantity and position size based on portfolio risk percentage, entry price, and stop loss. Protect your trading capital with scientific risk management.">
+    <meta name="keywords" content="position size calculator stocks, stock risk management calculator, share quantity calculator stop loss, 1 percent risk rule calculator 2026">
+    <meta name="author" content="ArthCalculator">
+    <meta name="last-modified" content="2026-08-09">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/stock-position-size-calculator/">
+    <link type="image/x-icon" rel="icon" href="/favicon.ico">
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Stock Position Size Calculator – Scientific Risk Management">
+    <meta property="og:description" content="Calculate maximum share quantity to buy based on portfolio risk % and stop-loss price.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/stock-position-size-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- Schemas -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Stock Position Size Calculator",
+      "url": "https://arthcalculator.in/stock-position-size-calculator/",
+      "description": "Calculate exact share purchase quantity based on capital risk percentage and stop-loss distance.",
+      "datePublished": "2026-08-09",
+      "dateModified": "2026-08-09"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Stock Position Size Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+        { "@type": "ListItem", "position": 3, "name": "Stock Position Size Calculator", "item": "https://arthcalculator.in/stock-position-size-calculator/" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the 1% Risk Rule in Stock Trading?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 1% risk rule states that a trader should never risk more than 1% of their total trading capital on a single trade. For example, with ₹5,00,000 capital, your max loss per trade if stop loss triggers should be capped at ₹5,000."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Position Size calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Position Size (Number of Shares) = (Total Capital × Risk %) / (Entry Price - Stop Loss Price). For example, if risk is ₹5,000 and stop loss per share is ₹20, you buy 250 shares."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is Position Sizing important?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Position sizing prevents account blowouts during a streak of losing trades. It ensures that no single trade ruins your portfolio, allowing you to stay in the game long enough to achieve profitability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Risk-to-Reward Ratio (R:R)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Risk-to-Reward ratio compares your potential loss to potential profit. A 1:2 R:R means you risk ₹1,000 to make ₹2,000. Professional traders aim for at least a 1:2 or 1:3 ratio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if position value exceeds available capital?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If the calculated position value exceeds your total available cash capital, you must cap your quantity to your available cash (unless using margin/leverage from your broker)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How to set a proper Stop Loss?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Set stop loss based on technical chart levels such as below key swing lows, support levels, moving averages, or ATR (Average True Range) volatility, rather than arbitrary percentage values."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is position sizing different for Intraday vs Swing Trading?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Intraday trades often use smaller stop-loss distances (0.5% - 1%) allowing larger share quantities with broker margin. Swing trades use wider stop-loss distances (3% - 7%) requiring smaller share quantities."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this position size calculator apply to Crypto and Forex?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! The core mathematical formula for risk-based position sizing is universal and applies to Indian equities, F&O, commodities, forex, and cryptocurrency trading."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #4f46e5 0%, #0284c7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05); }
+        details summary { list-style: none; cursor: pointer; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg.chevron { transform: rotate(180deg); }
+        input[type="range"] { accent-color: #4f46e5; height: 6px; }
+        input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-slide { animation: slideIn 0.4s ease forwards; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+    <div id="navbar"></div>
+
+    <!-- Hero -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center"><a href="/" class="hover:text-indigo-600 transition-colors">Home</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li class="flex items-center"><a href="/calculators/" class="hover:text-indigo-600 transition-colors">Calculators</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li class="text-indigo-600 font-bold" aria-current="page">Position Size Calculator</li>
+                </ol>
+            </nav>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div class="max-w-3xl">
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight pb-1">Stock Position Size Calculator</h1>
+                    <p class="text-slate-500 text-sm font-medium mb-3">Risk Management · 1% Rule · Share Quantity Planner</p>
+                    <p class="text-slate-500 text-xs sm:text-base leading-relaxed">Calculate exact share purchase quantity based on your portfolio risk percentage, entry price, and stop-loss level. Protect your capital with disciplined risk management.</p>
+                </div>
+                <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="bg-indigo-50 text-indigo-700 border border-indigo-200 px-3 py-1.5 rounded-full font-medium">✓ 1% Risk Rule</span>
+                    <span class="bg-emerald-50 text-emerald-700 border border-emerald-200 px-3 py-1.5 rounded-full font-medium">✓ Capital Protection</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4" id="calculator">
+        <div class="flex flex-col lg:flex-row gap-8 mb-12">
+            <!-- Left: Inputs -->
+            <div class="w-full lg:w-3/5 bg-white rounded-2xl card-shadow border border-slate-100 p-6 sm:p-8">
+                <h2 class="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
+                    <span class="w-8 h-8 bg-indigo-100 text-indigo-700 rounded-lg flex items-center justify-center text-sm font-bold">⚖️</span>
+                    Trade Risk Parameters
+                </h2>
+
+                <!-- Account Capital -->
+                <div class="mb-5">
+                    <label class="block text-xs font-semibold text-slate-600 mb-1.5">Total Trading Account Capital (₹)</label>
+                    <input type="number" id="accountCapital" placeholder="500000" value="500000" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-indigo-400 outline-none text-sm">
+                </div>
+
+                <!-- Risk Percentage -->
+                <div class="mb-5">
+                    <div class="flex justify-between items-center mb-2">
+                        <label class="text-xs font-semibold text-slate-600">Risk per Trade (% of Capital)</label>
+                        <span id="riskPctDisplay" class="text-indigo-600 font-bold text-xs">1.0%</span>
+                    </div>
+                    <input type="range" id="riskPctSlider" min="0.25" max="5.0" step="0.25" value="1.0" class="w-full mb-1">
+                    <div class="flex justify-between text-[10px] text-slate-400"><span>0.25% (Conservative)</span><span>1% (Recommended)</span><span>5% (High Risk)</span></div>
+                </div>
+
+                <!-- Entry & Stop Loss Price -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Entry Buy Price (₹)</label>
+                        <input type="number" id="entryPrice" placeholder="500" value="500" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-indigo-400 outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Stop Loss Price (₹)</label>
+                        <input type="number" id="stopLossPrice" placeholder="475" value="475" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-indigo-400 outline-none text-sm">
+                    </div>
+                </div>
+
+                <!-- Target Price (Optional for R:R) -->
+                <div class="mb-6">
+                    <label class="block text-xs font-semibold text-slate-600 mb-1.5">Target Profit Price (Optional for Risk:Reward)</label>
+                    <input type="number" id="targetPrice" placeholder="550" value="550" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-indigo-400 outline-none text-sm">
+                </div>
+
+                <div class="flex gap-3">
+                    <button id="calculateBtn" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-indigo-200 transition-all active:scale-[0.98]">
+                        Calculate Position Size
+                    </button>
+                    <button id="resetBtn" class="px-5 py-4 bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold rounded-xl transition-colors">
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right: Results -->
+            <div class="w-full lg:w-2/5 flex flex-col gap-5">
+                <!-- Quantity Banner -->
+                <div class="bg-gradient-to-br from-indigo-600 to-blue-700 rounded-2xl card-shadow p-6 text-white animate-slide">
+                    <p class="text-xs text-indigo-200 font-bold uppercase tracking-wider mb-1">Recommended Position Size</p>
+                    <p id="resShareQty" class="text-4xl font-black mb-1">— Shares</p>
+                    <p id="resPositionVal" class="text-indigo-200 text-xs">Total Position Value: —</p>
+                </div>
+
+                <!-- Breakdown Card -->
+                <div class="bg-white rounded-2xl card-shadow border border-slate-100 p-6">
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Risk Breakdown</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between text-slate-600"><span>Max Capital Risk (Max Loss)</span><span id="resMaxRiskAmt" class="font-bold text-rose-600">—</span></div>
+                        <div class="flex justify-between text-slate-600"><span>Stop Loss Distance per Share</span><span id="resSlDistance" class="font-semibold">—</span></div>
+                        <div class="flex justify-between text-slate-600"><span>Potential Profit Amount</span><span id="resPotentialProfit" class="font-bold text-emerald-600">—</span></div>
+                        <div class="border-t border-slate-100 pt-3 flex justify-between font-bold text-slate-800 text-base">
+                            <span>Risk : Reward Ratio</span>
+                            <span id="resRrRatio" class="text-indigo-700">—</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copy / Print -->
+                <div class="flex gap-3">
+                    <button onclick="copyResults()" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-xl transition-colors text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                        Copy Result
+                    </button>
+                    <button onclick="window.print()" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-xl transition-colors text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                        Print
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <section id="educational-content" class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Scientific Position Sizing & Risk Management Guide</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-white rounded-2xl border border-slate-100 card-shadow p-6">
+                    <h3 class="font-bold text-indigo-800 mb-3 text-base">The Core Position Sizing Formula</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-2"><strong>Max Risk Amount</strong> = Account Capital × (Risk % / 100)</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-2"><strong>Risk Per Share</strong> = Entry Price - Stop Loss Price</p>
+                    <p class="text-slate-600 text-sm leading-relaxed"><strong>Position Size (Qty)</strong> = Max Risk Amount / Risk Per Share</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-100 card-shadow p-6">
+                    <h3 class="font-bold text-indigo-800 mb-3 text-base">Why 1% Risk Rule Works</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Even if you encounter 10 consecutive losing trades, risking 1% per trade leaves over 90% of your account capital intact. Without position sizing, a few bad trades can wipe out months of profits.</p>
+                </div>
+            </div>
+
+            <!-- Quick Insights & Hacks -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-indigo-50 border border-indigo-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-indigo-900 mb-2 flex items-center gap-2"><span class="text-lg">💡</span> Pro Hack: Dynamic Volatility Sizing</h3>
+                    <p class="text-indigo-800 text-xs sm:text-sm leading-relaxed">High-beta volatile stocks require wider stop loss distances (e.g. 5%), resulting in smaller share quantities. Low-volatility large-cap stocks allow tighter stop losses (e.g. 1.5%), resulting in larger share quantities for identical rupee risk.</p>
+                </div>
+                <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-emerald-900 mb-2 flex items-center gap-2"><span class="text-lg">⚡</span> Importance of R:R Minimum 1:2</h3>
+                    <p class="text-emerald-800 text-xs sm:text-sm leading-relaxed">If your Risk-to-Reward ratio is 1:2, you only need a 34% win rate to breakeven. A trader with a 1:2 R:R making 50% winning trades generates consistent long-term wealth compounding.</p>
+                </div>
+                <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-amber-900 mb-2 flex items-center gap-2"><span class="text-lg">🛡️</span> Anti-Martingale Scaling</h3>
+                    <p class="text-amber-800 text-xs sm:text-sm leading-relaxed">Scale up your position size only when your portfolio equity reaches new highs. When facing a drawdown, reduce position sizes proportionally to protect remaining capital.</p>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-800 mb-4">Capital Preservation vs Drawdown Recovery Table</h3>
+            <div class="bg-white rounded-2xl border border-slate-100 card-shadow overflow-hidden mb-8">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead class="bg-slate-50 border-b border-slate-200">
+                            <tr>
+                                <th class="text-left px-4 py-3 font-semibold text-slate-700">Account Drawdown (%)</th>
+                                <th class="text-center px-4 py-3 font-semibold text-rose-600">Remaining Capital</th>
+                                <th class="text-center px-4 py-3 font-semibold text-emerald-600">Gain Required to Breakeven</th>
+                                <th class="text-left px-4 py-3 font-semibold text-slate-700">Trader Recovery Difficulty</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">10% Drawdown</td><td class="text-center px-4 py-3 font-semibold">90%</td><td class="text-center px-4 py-3 text-emerald-600 font-semibold">11.1%</td><td class="px-4 py-3 text-slate-600">Easy (Normal trading)</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">20% Drawdown</td><td class="text-center px-4 py-3 font-semibold">80%</td><td class="text-center px-4 py-3 text-emerald-600 font-semibold">25.0%</td><td class="px-4 py-3 text-slate-600">Moderate</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">30% Drawdown</td><td class="text-center px-4 py-3 font-semibold">70%</td><td class="text-center px-4 py-3 text-emerald-600 font-semibold">42.9%</td><td class="px-4 py-3 text-amber-600 font-semibold">Hard</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">50% Drawdown</td><td class="text-center px-4 py-3 font-semibold">50%</td><td class="text-center px-4 py-3 text-rose-600 font-bold">100.0%</td><td class="px-4 py-3 text-rose-600 font-bold">Extreme (Needs 2x double)</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">75% Drawdown</td><td class="text-center px-4 py-3 font-semibold">25%</td><td class="text-center px-4 py-3 text-rose-600 font-bold">300.0%</td><td class="px-4 py-3 text-rose-700 font-bold">Near Impossible</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Common Mistakes -->
+            <div class="bg-red-50 border border-red-200 rounded-2xl p-6 mb-8">
+                <h3 class="font-bold text-red-900 mb-3">⚠️ 3 Dangerous Risk Management Mistakes</h3>
+                <ul class="space-y-2 text-sm text-red-800">
+                    <li>• <strong>Averaging Down Losing Positions (Martingale Trap):</strong> Buying more shares of a falling stock increases your monetary risk exponentially, turning a small controlled loss into a catastrophic portfolio hit.</li>
+                    <li>• <strong>Fixed Share Quantity Trading:</strong> Buying 100 shares of every stock regardless of price or stop-loss distance creates inconsistent risk exposures across your trades.</li>
+                    <li>• <strong>Moving Stop Loss Mid-Trade:</strong> Widening your stop loss when price nears it violates your pre-trade risk calculation and invites emotional decision making.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FAQs -->
+        <section id="faqs" class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Frequently Asked Questions</h2>
+            <div class="space-y-3 max-w-3xl mx-auto">
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is the 1% Risk Rule in Stock Trading?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">The 1% risk rule states that a trader should never risk more than 1% of their total trading capital on a single trade. For example, with ₹5,00,000 capital, your max loss per trade if stop loss triggers should be capped at ₹5,000.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">How is Position Size calculated?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Position Size (Number of Shares) = (Total Capital × Risk %) / (Entry Price - Stop Loss Price). For example, if risk is ₹5,000 and stop loss per share is ₹20, you buy 250 shares.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">Why is Position Sizing important?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Position sizing prevents account blowouts during a streak of losing trades. It ensures that no single trade ruins your portfolio, allowing you to stay in the game long enough to achieve profitability.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is Risk-to-Reward Ratio (R:R)?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Risk-to-Reward ratio compares your potential loss to potential profit. A 1:2 R:R means you risk ₹1,000 to make ₹2,000. Professional traders aim for at least a 1:2 or 1:3 ratio.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What happens if position value exceeds available capital?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">If the calculated position value exceeds your total available cash capital, you must cap your quantity to your available cash (unless using margin/leverage from your broker).</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">How to set a proper Stop Loss?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Set stop loss based on technical chart levels such as below key swing lows, support levels, moving averages, or ATR (Average True Range) volatility, rather than arbitrary percentage values.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">Is position sizing different for Intraday vs Swing Trading?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Intraday trades often use smaller stop-loss distances (0.5% - 1%) allowing larger share quantities with broker margin. Swing trades use wider stop-loss distances (3% - 7%) requiring smaller share quantities.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">Does this position size calculator apply to Crypto and Forex?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Yes! The core mathematical formula for risk-based position sizing is universal and applies to Indian equities, F&O, commodities, forex, and cryptocurrency trading.</div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Related -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold text-slate-800 mb-6">Related Stock & Trading Calculators</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                <a href="/option-payoff-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-indigo-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-indigo-700">Option Payoff Calculator</p><p class="text-xs text-slate-400 mt-1">Call & Put P&L visualizer</p></a>
+                <a href="/pivot-point-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-indigo-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-indigo-700">Pivot Point Calculator</p><p class="text-xs text-slate-400 mt-1">Intraday S&R levels</p></a>
+                <a href="/fibonacci-retracement-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-indigo-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-indigo-700">Fibonacci Calculator</p><p class="text-xs text-slate-400 mt-1">Retracement levels</p></a>
+                <a href="/stock-average/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-indigo-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-indigo-700">Stock Average Calculator</p><p class="text-xs text-slate-400 mt-1">Average down price</p></a>
+                <a href="/dividend-yield-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-indigo-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-indigo-700">Dividend Yield Calculator</p><p class="text-xs text-slate-400 mt-1">Passive income growth</p></a>
+                <a href="/cagr/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-indigo-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-indigo-700">CAGR Calculator</p><p class="text-xs text-slate-400 mt-1">Compound growth rate</p></a>
+                <a href="/capital-gains-tax/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-indigo-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-indigo-700">Capital Gains Tax</p><p class="text-xs text-slate-400 mt-1">STCG & LTCG tax</p></a>
+                <a href="/target-sip-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-indigo-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-indigo-700">Target Amount SIP</p><p class="text-xs text-slate-400 mt-1">Goal SIP planner</p></a>
+            </div>
+        </section>
+
+        <div id="arthcalculatorLinkingHub"></div>
+        <script src="/js/related-tools.js" defer></script>
+        <script src="/js/search.js" defer></script>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        function fmt(n) { return '₹' + Math.round(n).toLocaleString('en-IN'); }
+
+        const capitalInput = document.getElementById('accountCapital');
+        const riskPctSlider = document.getElementById('riskPctSlider');
+        const riskPctDisplay = document.getElementById('riskPctDisplay');
+        const entryInput = document.getElementById('entryPrice');
+        const stopLossInput = document.getElementById('stopLossPrice');
+        const targetInput = document.getElementById('targetPrice');
+
+        riskPctSlider.addEventListener('input', () => {
+            riskPctDisplay.textContent = parseFloat(riskPctSlider.value).toFixed(2) + '%';
+            calculate();
+        });
+
+        [capitalInput, entryInput, stopLossInput, targetInput].forEach(i => i.addEventListener('input', calculate));
+
+        document.getElementById('calculateBtn').addEventListener('click', calculate);
+        document.getElementById('resetBtn').addEventListener('click', () => {
+            capitalInput.value = 500000;
+            riskPctSlider.value = 1.0;
+            riskPctDisplay.textContent = '1.0%';
+            entryInput.value = 500;
+            stopLossInput.value = 475;
+            targetInput.value = 550;
+            calculate();
+        });
+
+        let lastResult = {};
+
+        function calculate() {
+            const capital = parseFloat(capitalInput.value) || 0;
+            const riskPct = parseFloat(riskPctSlider.value) || 1;
+            const entry = parseFloat(entryInput.value) || 0;
+            const stopLoss = parseFloat(stopLossInput.value) || 0;
+            const target = parseFloat(targetInput.value) || 0;
+
+            const maxRiskAmt = capital * (riskPct / 100);
+            const slDistance = Math.abs(entry - stopLoss);
+
+            let qty = 0;
+            if (slDistance > 0) {
+                qty = Math.floor(maxRiskAmt / slDistance);
+            }
+
+            const positionVal = qty * entry;
+            let profitAmt = 0, rrRatioText = '—';
+            if (target > 0 && entry > 0) {
+                const rewardDistance = Math.abs(target - entry);
+                profitAmt = qty * rewardDistance;
+                if (slDistance > 0) {
+                    const rr = rewardDistance / slDistance;
+                    rrRatioText = '1 : ' + rr.toFixed(2);
+                }
+            }
+
+            lastResult = { capital, riskPct, entry, stopLoss, target, qty, positionVal, maxRiskAmt, slDistance, profitAmt, rrRatioText };
+
+            document.getElementById('resShareQty').textContent = qty.toLocaleString('en-IN') + ' Shares';
+            document.getElementById('resPositionVal').textContent = 'Total Position Value: ' + fmt(positionVal) + (positionVal > capital ? ' (Exceeds cash balance)' : '');
+            document.getElementById('resMaxRiskAmt').textContent = fmt(maxRiskAmt);
+            document.getElementById('resSlDistance').textContent = fmt(slDistance) + ' per share';
+            document.getElementById('resPotentialProfit').textContent = profitAmt > 0 ? fmt(profitAmt) : '—';
+            document.getElementById('resRrRatio').textContent = rrRatioText;
+        }
+
+        function copyResults() {
+            if (!lastResult.qty) return;
+            const r = lastResult;
+            const text = `Stock Position Size Calculation (ArthCalculator.in)\nCapital: ${fmt(r.capital)} | Risk: ${r.riskPct}%\nEntry: ₹${r.entry} | Stop Loss: ₹${r.stopLoss}\nRecommended Position Size: ${r.qty} Shares (${fmt(r.positionVal)})\nMax Risk Amount: ${fmt(r.maxRiskAmt)} | R:R Ratio: ${r.rrRatioText}`;
+            navigator.clipboard.writeText(text).then(() => alert('Copied!'));
+        }
+
+        window.addEventListener('DOMContentLoaded', calculate);
+
+        fetch('/navbar.html').then(r => r.text()).then(h => {
+            document.getElementById('navbar').innerHTML = h;
+            const btn = document.getElementById('menuBtn');
+            const menu = document.getElementById('mobileMenu');
+            if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        });
+        fetch('/footer.html').then(r => r.text()).then(h => { document.getElementById('footer').innerHTML = h; });
+    </script>
+</body>
+</html>

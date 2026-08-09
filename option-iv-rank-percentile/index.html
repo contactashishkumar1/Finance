@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Option Implied Volatility Rank (IVR) & Percentile Calculator | ArthCalculator</title>
+    <meta name="description" content="Calculate Option Implied Volatility Rank (IVR) and IV Percentile to determine whether Nifty/BankNifty option premiums are cheap or expensive for option sellers.">
+    <meta name="keywords" content="iv rank calculator, implied volatility rank calculator, IV percentile options India 2026, Nifty option selling IVR">
+    <meta name="author" content="ArthCalculator">
+    <meta name="last-modified" content="2026-08-09">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/option-iv-rank-percentile/">
+    <link type="image/x-icon" rel="icon" href="/favicon.ico">
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Option Implied Volatility Rank (IVR) & Percentile Calculator">
+    <meta property="og:description" content="Calculate IV Rank (IVR) and IV Percentile for options trading in India.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/option-iv-rank-percentile/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- Schemas (WebPage, SoftwareApplication, BreadcrumbList, FAQPage) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Option Implied Volatility Rank (IVR) Calculator",
+      "url": "https://arthcalculator.in/option-iv-rank-percentile/",
+      "description": "Calculate IV Rank (IVR) and IV Percentile to optimize option selling strategies.",
+      "datePublished": "2026-08-09",
+      "dateModified": "2026-08-09"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "IV Rank Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+        { "@type": "ListItem", "position": 3, "name": "IV Rank Calculator", "item": "https://arthcalculator.in/option-iv-rank-percentile/" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Implied Volatility Rank (IVR)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IV Rank (IVR) measures where the current Implied Volatility (IV) of an option stands relative to its 52-week (1-year) high and low IV values on a scale from 0 to 100."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the formula for IV Rank (IVR)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IV Rank (IVR) = [(Current IV - 52-Week Low IV) / (52-Week High IV - 52-Week Low IV)] × 100."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between IV Rank and IV Percentile?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IV Rank compares current IV against the absolute 52-week min and max levels. IV Percentile measures the percentage of days in the past 252 trading days where the IV was lower than the current IV."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is IV Rank crucial for option sellers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When IV Rank is high (>50), option premiums are rich and expensive, giving option sellers a statistical advantage due to volatility crush. When IV Rank is low (<20), option buying is generally preferred."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is considered a good IV Rank for selling options?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An IV Rank of 50 or higher indicates that options are overpriced compared to historical levels, making strategies like Iron Condors, Covered Calls, and Short Straddles highly profitable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Volatility Crush impact options trading?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Volatility Crush occurs when uncertainty drops rapidly (e.g. immediately after earnings or Union Budget announcements), causing option premiums to deflate rapidly even if the spot price moves very little."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can IV Rank be applied to Nifty and BankNifty options?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! IV Rank is widely used for Nifty, BankNifty, Finnifty, and high-beta F&O stocks to select optimal trading strategies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What trading strategies should I use when IV Rank is below 20?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When IV Rank is below 20, option premiums are cheap. Traders prefer net debit strategies such as Long Calls, Long Puts, Calendar Spreads, or Debit Spreads."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0284c7 0%, #6366f1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05); }
+        details summary { list-style: none; cursor: pointer; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg.chevron { transform: rotate(180deg); }
+        input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-slide { animation: slideIn 0.4s ease forwards; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+    <div id="navbar"></div>
+
+    <!-- Hero -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center"><a href="/" class="hover:text-sky-600 transition-colors">Home</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li class="flex items-center"><a href="/calculators/" class="hover:text-sky-600 transition-colors">Calculators</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li class="text-sky-600 font-bold" aria-current="page">IV Rank Calculator</li>
+                </ol>
+            </nav>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div class="max-w-3xl">
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight pb-1">Option IV Rank (IVR) & Percentile Calculator</h1>
+                    <p class="text-slate-500 text-sm font-medium mb-3">Implied Volatility Rank · Option Selling Strategy Selector · 52-Week Min/Max</p>
+                    <p class="text-slate-500 text-xs sm:text-base leading-relaxed">Calculate exact IV Rank (IVR) to identify whether Nifty, BankNifty, or stock option premiums are cheap or expensive for trading.</p>
+                </div>
+                <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="bg-sky-50 text-sky-700 border border-sky-200 px-3 py-1.5 rounded-full font-medium">✓ IV Rank Math</span>
+                    <span class="bg-indigo-50 text-indigo-700 border border-indigo-200 px-3 py-1.5 rounded-full font-medium">✓ Strategy Recommendation</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4" id="calculator">
+        <div class="flex flex-col lg:flex-row gap-8 mb-12">
+            <!-- Left: Inputs -->
+            <div class="w-full lg:w-3/5 bg-white rounded-2xl card-shadow border border-slate-100 p-6 sm:p-8">
+                <h2 class="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
+                    <span class="w-8 h-8 bg-sky-100 text-sky-700 rounded-lg flex items-center justify-center text-sm font-bold">📊</span>
+                    Implied Volatility (IV) Inputs
+                </h2>
+
+                <!-- Current IV -->
+                <div class="mb-5">
+                    <label class="block text-xs font-semibold text-slate-600 mb-1.5">Current Implied Volatility (IV) (%)</label>
+                    <input type="number" id="currentIv" placeholder="28" value="28" step="0.1" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                </div>
+
+                <!-- 52-Week Low & High IV -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">52-Week Low IV (%)</label>
+                        <input type="number" id="lowIv" placeholder="12" value="12" step="0.1" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">52-Week High IV (%)</label>
+                        <input type="number" id="highIv" placeholder="40" value="40" step="0.1" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                    </div>
+                </div>
+
+                <!-- Days Below Current IV for Percentile -->
+                <div class="mb-6">
+                    <label class="block text-xs font-semibold text-slate-600 mb-1.5">Trading Days in Past Year Where IV Was Lower Than Current IV (Out of 252 Days)</label>
+                    <input type="number" id="daysBelow" placeholder="180" value="180" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                </div>
+
+                <div class="flex gap-3">
+                    <button id="calculateBtn" class="flex-1 bg-sky-600 hover:bg-sky-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-sky-200 transition-all active:scale-[0.98]">
+                        Calculate IV Rank & Strategy
+                    </button>
+                    <button id="resetBtn" class="px-5 py-4 bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold rounded-xl transition-colors">
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right: Results -->
+            <div class="w-full lg:w-2/5 flex flex-col gap-5">
+                <!-- Result Banner -->
+                <div id="statusBanner" class="bg-gradient-to-br from-sky-600 to-indigo-700 rounded-2xl card-shadow p-6 text-white animate-slide">
+                    <p class="text-xs text-sky-200 font-bold uppercase tracking-wider mb-1">IV Rank (IVR)</p>
+                    <p id="resIvr" class="text-4xl font-black mb-1">— %</p>
+                    <p id="resStrategyRec" class="text-sky-200 text-xs font-semibold">Recommended Strategy: —</p>
+                </div>
+
+                <!-- Breakdown Summary -->
+                <div class="bg-white rounded-2xl card-shadow border border-slate-100 p-6">
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Volatility Metrics Breakdown</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between text-slate-600"><span>IV Rank (IVR)</span><span id="resIvrVal" class="font-bold text-sky-700">—</span></div>
+                        <div class="flex justify-between text-slate-600"><span>IV Percentile</span><span id="resIvPercentile" class="font-bold text-indigo-700">—</span></div>
+                        <div class="flex justify-between text-slate-600"><span>Option Premium Status</span><span id="resPremiumStatus" class="font-bold text-slate-800">—</span></div>
+                        <div class="border-t border-slate-100 pt-3 flex justify-between font-bold text-slate-800 text-base">
+                            <span>Preferred Strategy Edge</span>
+                            <span id="resEdgeText" class="text-emerald-600 font-bold">—</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copy / Print -->
+                <div class="flex gap-3">
+                    <button onclick="copyResults()" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-xl transition-colors text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                        Copy Result
+                    </button>
+                    <button onclick="window.print()" class="flex-1 flex items-center justify-center gap-2 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-xl transition-colors text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                        Print
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <section id="educational-content" class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Option Implied Volatility Rank (IVR) Guide</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-white rounded-2xl border border-slate-100 card-shadow p-6">
+                    <h3 class="font-bold text-sky-800 mb-3 text-base">What is IV Rank (IVR)?</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">IV Rank measures current IV relative to its 52-week low and high. An IV Rank of 80 means current IV is at 80% of its annual range—signifying extremely high option premiums suitable for option selling strategies.</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-100 card-shadow p-6">
+                    <h3 class="font-bold text-sky-800 mb-3 text-base">IV Rank vs IV Percentile</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed"><strong>IV Rank:</strong> Compares current IV to absolute min/max endpoints.<br><strong>IV Percentile:</strong> Measures the percentage of trading days in the past year where IV was lower than current IV.</p>
+                </div>
+            </div>
+
+            <!-- Quick Insights & Hacks -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-sky-50 border border-sky-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-sky-900 mb-2 flex items-center gap-2"><span class="text-lg">💡</span> Pro Hack: Sell Options When IVR > 50</h3>
+                    <p class="text-sky-800 text-xs sm:text-sm leading-relaxed">When IVR is above 50, option premiums contain significant fear markup. Option sellers gain a statistical edge from theta decay and volatility crush.</p>
+                </div>
+                <div class="bg-indigo-50 border border-indigo-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-indigo-900 mb-2 flex items-center gap-2"><span class="text-lg">⚡</span> Buy Options When IVR < 20</h3>
+                    <p class="text-indigo-800 text-xs sm:text-sm leading-relaxed">When IVR is under 20, options are cheap. Use net debit strategies like Long Calls, Long Puts, or Debit Spreads to minimize time decay loss.</p>
+                </div>
+                <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-emerald-900 mb-2 flex items-center gap-2"><span class="text-lg">🛡️</span> Earnings Volatility Crush</h3>
+                    <p class="text-emerald-800 text-xs sm:text-sm leading-relaxed">IV Rank spikes right before quarterly earnings. Selling credit spreads just before earnings captures rapid premium deflation.</p>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-800 mb-4">IV Rank Trading Strategy Matrix</h3>
+            <div class="bg-white rounded-2xl border border-slate-100 card-shadow overflow-hidden mb-8">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead class="bg-slate-50 border-b border-slate-200">
+                            <tr>
+                                <th class="text-left px-4 py-3 font-semibold text-slate-700">IV Rank (IVR) Level</th>
+                                <th class="text-center px-4 py-3 font-semibold text-slate-700">Option Premium Pricing</th>
+                                <th class="text-left px-4 py-3 font-semibold text-sky-700">Recommended Trading Strategy</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-bold text-emerald-600">IVR 50 to 100 (High)</td><td class="text-center px-4 py-3 text-emerald-600 font-semibold">Expensive / Overpriced</td><td class="px-4 py-3 font-bold text-emerald-700">Iron Condors, Credit Spreads, Covered Calls, Short Straddles</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-bold text-slate-700">IVR 20 to 50 (Moderate)</td><td class="text-center px-4 py-3 text-slate-600 font-semibold">Neutral / Fairly Priced</td><td class="px-4 py-3 font-bold text-slate-700">Calendar Spreads, Ratio Spreads, Collar Strategies</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-bold text-indigo-600">IVR 0 to 20 (Low)</td><td class="text-center px-4 py-3 text-indigo-600 font-semibold">Cheap / Underpriced</td><td class="px-4 py-3 font-bold text-indigo-700">Long Calls, Long Puts, Bull/Bear Debit Spreads</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Common Mistakes -->
+            <div class="bg-red-50 border border-red-200 rounded-2xl p-6 mb-8">
+                <h3 class="font-bold text-red-900 mb-3">⚠️ 3 Common IV Rank Mistakes</h3>
+                <ul class="space-y-2 text-sm text-red-800">
+                    <li>• <strong>Buying Options at High IVR (>70):</strong> Buying calls/puts during high IVR subjects your position to severe volatility crush even if direction is correct.</li>
+                    <li>• <strong>Ignoring Delta & Strike Selection:</strong> High IVR provides a premium edge, but bad strike selection can still result in losses.</li>
+                    <li>• <strong>Confusing Absolute IV with IV Rank:</strong> An absolute IV of 25% might be high for Nifty (IVR 80) but extremely low for a volatile stock like Tata Motors (IVR 10). Always look at IVR!</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FAQs -->
+        <section id="faqs" class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Frequently Asked Questions</h2>
+            <div class="space-y-3 max-w-3xl mx-auto">
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is Implied Volatility Rank (IVR)?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">IV Rank (IVR) measures where the current Implied Volatility (IV) of an option stands relative to its 52-week (1-year) high and low IV values on a scale from 0 to 100.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is the formula for IV Rank (IVR)?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">IV Rank (IVR) = [(Current IV - 52-Week Low IV) / (52-Week High IV - 52-Week Low IV)] × 100.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is the difference between IV Rank and IV Percentile?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">IV Rank compares current IV against the absolute 52-week min and max levels. IV Percentile measures the percentage of days in the past 252 trading days where the IV was lower than the current IV.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">Why is IV Rank crucial for option sellers?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">When IV Rank is high (>50), option premiums are rich and expensive, giving option sellers a statistical advantage due to volatility crush. When IV Rank is low (<20), option buying is generally preferred.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What is considered a good IV Rank for selling options?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">An IV Rank of 50 or higher indicates that options are overpriced compared to historical levels, making strategies like Iron Condors, Covered Calls, and Short Straddles highly profitable.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">How does Volatility Crush impact options trading?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Volatility Crush occurs when uncertainty drops rapidly (e.g. immediately after earnings or Union Budget announcements), causing option premiums to deflate rapidly even if the spot price moves very little.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">Can IV Rank be applied to Nifty and BankNifty options?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">Yes! IV Rank is widely used for Nifty, BankNifty, Finnifty, and high-beta F&O stocks to select optimal trading strategies.</div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What trading strategies should I use when IV Rank is below 20?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">When IV Rank is below 20, option premiums are cheap. Traders prefer net debit strategies such as Long Calls, Long Puts, Calendar Spreads, or Debit Spreads.</div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Related -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold text-slate-800 mb-6">Related Options & Trading Calculators</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                <a href="/nifty-wheel-strategy-roi/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">Option Wheel Strategy</p><p class="text-xs text-slate-400 mt-1">CSP & Covered Call ROI</p></a>
+                <a href="/covered-call-downside-cushion/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">Covered Call Cushion</p><p class="text-xs text-slate-400 mt-1">Downside protection %</p></a>
+                <a href="/option-payoff-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">Option Payoff Visualizer</p><p class="text-xs text-slate-400 mt-1">Multi-leg option P&L</p></a>
+                <a href="/pivot-point-calculator/" class="bg-white border border-slate-200 rounded-xl p-4 hover:border-sky-400 hover:shadow-md transition-all group"><p class="text-sm font-semibold text-slate-700 group-hover:text-sky-700">Pivot Point Calculator</p><p class="text-xs text-slate-400 mt-1">Support & Resistance</p></a>
+            </div>
+        </section>
+
+        <div id="arthcalculatorLinkingHub"></div>
+        <script src="/js/related-tools.js" defer></script>
+        <script src="/js/search.js" defer></script>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        const curInput = document.getElementById('currentIv');
+        const lowInput = document.getElementById('lowIv');
+        const highInput = document.getElementById('highIv');
+        const daysInput = document.getElementById('daysBelow');
+
+        [curInput, lowInput, highInput, daysInput].forEach(i => i.addEventListener('input', calculate));
+
+        document.getElementById('calculateBtn').addEventListener('click', calculate);
+        document.getElementById('resetBtn').addEventListener('click', () => {
+            curInput.value = 28;
+            lowInput.value = 12;
+            highInput.value = 40;
+            daysInput.value = 180;
+            calculate();
+        });
+
+        let lastResult = {};
+
+        function calculate() {
+            const cur = parseFloat(curInput.value) || 0;
+            const low = parseFloat(lowInput.value) || 0;
+            const high = parseFloat(highInput.value) || 1;
+            const daysBelow = parseFloat(daysInput.value) || 0;
+
+            const range = Math.max(0.1, high - low);
+            const ivr = Math.min(100, Math.max(0, ((cur - low) / range) * 100));
+            const ivPercentile = Math.min(100, Math.max(0, (daysBelow / 252) * 100));
+
+            let recStrategy = '';
+            let statusText = '';
+            let edgeText = '';
+
+            if (ivr >= 50) {
+                recStrategy = 'Option Selling (Iron Condor, Credit Spreads, Covered Call)';
+                statusText = 'Expensive / High Volatility';
+                edgeText = 'Option Selling (Volatility Crush)';
+            } else if (ivr >= 20) {
+                recStrategy = 'Neutral Spreads (Calendar / Ratio Spreads)';
+                statusText = 'Fairly Priced / Moderate Volatility';
+                edgeText = 'Neutral Spreads';
+            } else {
+                recStrategy = 'Option Buying (Long Calls/Puts, Debit Spreads)';
+                statusText = 'Cheap / Low Volatility';
+                edgeText = 'Option Buying (Net Debit)';
+            }
+
+            lastResult = { cur, low, high, ivr, ivPercentile, recStrategy, statusText, edgeText };
+
+            const banner = document.getElementById('statusBanner');
+            if (ivr >= 50) {
+                banner.className = 'bg-gradient-to-br from-emerald-600 to-teal-700 rounded-2xl card-shadow p-6 text-white animate-slide';
+            } else if (ivr >= 20) {
+                banner.className = 'bg-gradient-to-br from-sky-600 to-indigo-700 rounded-2xl card-shadow p-6 text-white animate-slide';
+            } else {
+                banner.className = 'bg-gradient-to-br from-indigo-600 to-purple-700 rounded-2xl card-shadow p-6 text-white animate-slide';
+            }
+
+            document.getElementById('resIvr').textContent = ivr.toFixed(1) + ' %';
+            document.getElementById('resStrategyRec').textContent = 'Recommended: ' + recStrategy;
+            document.getElementById('resIvrVal').textContent = ivr.toFixed(1) + ' %';
+            document.getElementById('resIvPercentile').textContent = ivPercentile.toFixed(1) + ' % (Days: ' + daysBelow + '/252)';
+            document.getElementById('resPremiumStatus').textContent = statusText;
+            document.getElementById('resEdgeText').textContent = edgeText;
+        }
+
+        function copyResults() {
+            if (!lastResult.cur) return;
+            const r = lastResult;
+            const text = `IV Rank Result (ArthCalculator.in)\nCurrent IV: ${r.cur}%\nIV Rank (IVR): ${r.ivr.toFixed(1)}%\nIV Percentile: ${r.ivPercentile.toFixed(1)}%\nStatus: ${r.statusText}\nRecommended Strategy: ${r.recStrategy}`;
+            navigator.clipboard.writeText(text).then(() => alert('Copied!'));
+        }
+
+        window.addEventListener('DOMContentLoaded', calculate);
+
+        fetch('/navbar.html').then(r => r.text()).then(h => {
+            document.getElementById('navbar').innerHTML = h;
+            const btn = document.getElementById('menuBtn');
+            const menu = document.getElementById('mobileMenu');
+            if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        });
+        fetch('/footer.html').then(r => r.text()).then(h => { document.getElementById('footer').innerHTML = h; });
+    </script>
+</body>
+</html>

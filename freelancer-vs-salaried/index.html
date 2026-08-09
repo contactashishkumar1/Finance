@@ -30,6 +30,21 @@
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
     </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Freelancer vs Salaried Tax Calculator 2026: Sec 44ADA",
+      "operatingSystem": "All",
+      "applicationCategory": "FinanceApplication",
+      "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR"
+      }
+}
+    </script>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12">
 <div id="navbar"></div>
@@ -81,7 +96,13 @@
                             <input type="number" id="grossIncome" value="3000000" min="0" step="50000" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                         </div>
                         <input type="range" id="grossRange" min="500000" max="7500000" step="50000" value="3000000" class="w-full py-2 cursor-pointer text-pretty">
-                        <p class="text-[10px] text-slate-400 italic mt-1 text-pretty">Max 44ADA limit is ₹75 Lakhs turnover.</p>
+                        <p class="text-[10px] text-slate-400 italic mt-1 text-pretty">44ADA limit is ₹50L, or ₹75L only when cash receipts are at most 5%.</p>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="text-sm font-medium text-slate-600 block mb-2">Cash Receipts in Freelance Turnover (₹)</label>
+                        <input type="number" id="cashReceipts" value="0" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                        <p id="adaEligibility" class="text-[10px] text-slate-400 mt-1">₹75L eligibility requires cash receipts of 5% or less.</p>
                     </div>
 
                     <div class="space-y-4 mb-6 text-pretty">
@@ -376,6 +397,14 @@
     function calculate() {
         const gross = parseFloat(elements.grossIncome.value) || 0;
         const pt = parseFloat(elements.profTax.value) || 0;
+        const cashReceipts = parseFloat(document.getElementById('cashReceipts').value) || 0;
+        const eligibleLimit = cashReceipts <= gross * 0.05 ? 7500000 : 5000000;
+        const adaEligible = gross <= eligibleLimit;
+        const eligibility = document.getElementById('adaEligibility');
+        eligibility.textContent = adaEligible
+            ? `Eligible for 44ADA under the ₹${eligibleLimit / 100000}L limit.`
+            : `Not eligible for 44ADA: your applicable limit is ₹${eligibleLimit / 100000}L. Freelance figures are not shown.`;
+        eligibility.className = adaEligible ? 'text-[10px] text-emerald-600 mt-1' : 'text-[10px] text-rose-600 mt-1 font-semibold';
 
         // 1. Salaried Calculation
         const salTaxable = Math.max(0, gross - 75000 - pt); // Std Ded + PT
@@ -384,16 +413,16 @@
 
         // 2. Freelance Calculation (44ADA)
         // No Std Deduction for professional income
-        const freeTaxable = gross * 0.5;
-        const freeTax = calculateNewRegimeTax(freeTaxable);
-        const freeNet = gross - freeTax;
+        const freeTaxable = adaEligible ? gross * 0.5 : 0;
+        const freeTax = adaEligible ? calculateNewRegimeTax(freeTaxable) : 0;
+        const freeNet = adaEligible ? gross - freeTax : 0;
 
         // UI Updates
         elements.salariedNet.textContent = formatINR(salNet);
-        elements.freelanceNet.textContent = formatINR(freeNet);
+        elements.freelanceNet.textContent = adaEligible ? formatINR(freeNet) : 'Not eligible';
         
         const benefit = freeNet - salNet;
-        elements.benefitDisplay.textContent = formatINR(benefit);
+        elements.benefitDisplay.textContent = adaEligible ? formatINR(benefit) : '—';
 
         // Visuals
         const taxSalPct = (salTax / gross) * 100 || 0;
@@ -419,11 +448,11 @@
             ["Annual Turnover / CTC", formatINR(gross), formatINR(gross)],
             ["Standard Deduction", formatINR(75000), "₹0"],
             ["Professional Tax (PT)", formatINR(pt), "₹0"],
-            ["Presumptive Expense (50%)", "₹0", formatINR(gross * 0.5)],
-            ["Net Taxable Income", formatINR(salTaxable), formatINR(freeTaxable)],
-            ["Income Tax (Cess Incl.)", formatINR(salTax), formatINR(freeTax)],
-            ["Effective Tax Rate", ((salTax / gross) * 100 || 0).toFixed(1) + "%", ((freeTax / gross) * 100 || 0).toFixed(1) + "%"],
-            ["Total Net In-Hand", "<strong>" + formatINR(salNet) + "</strong>", "<strong>" + formatINR(freeNet) + "</strong>"]
+            ["Presumptive Expense (50%)", "₹0", adaEligible ? formatINR(gross * 0.5) : "Not eligible"],
+            ["Net Taxable Income", formatINR(salTaxable), adaEligible ? formatINR(freeTaxable) : "—"],
+            ["Income Tax (Cess Incl.)", formatINR(salTax), adaEligible ? formatINR(freeTax) : "—"],
+            ["Effective Tax Rate", ((salTax / gross) * 100 || 0).toFixed(1) + "%", adaEligible ? ((freeTax / gross) * 100 || 0).toFixed(1) + "%" : "—"],
+            ["Total Net In-Hand", "<strong>" + formatINR(salNet) + "</strong>", adaEligible ? "<strong>" + formatINR(freeNet) + "</strong>" : "Not eligible"]
         ];
 
         elements.breakdownTable.innerHTML = rows.map(r => `
@@ -435,7 +464,9 @@
         `).join('');
 
         // Expert Verdict update
-        if (benefit > 0) {
+        if (!adaEligible) {
+            elements.verdictText.textContent = '44ADA is unavailable for these receipts. Use normal business-tax computation instead.';
+        } else if (benefit > 0) {
             elements.verdictText.textContent = `As a freelancer, you save ${formatINR(benefit)} in Income Tax, but remember to factor in the cost of self-funded health insurance and loss of employer EPF contributions.`;
         } else {
             elements.verdictText.textContent = `At this income level, the tax benefit is marginal. Consider staying salaried for perks like EPF and Group Insurance.`;
@@ -452,6 +483,7 @@
         elements.profTax.addEventListener('input', calculate);
         
         document.getElementById('calcBtn').addEventListener('click', calculate);
+        document.getElementById('cashReceipts').addEventListener('input', calculate);
 
         fetch("/navbar.html").then(res=>res.text()).then(data=>{
             document.getElementById("navbar").innerHTML=data;

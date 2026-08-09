@@ -217,18 +217,27 @@
 
                     <div class="space-y-5">
                         <div id="limitWarning" class="bg-red-50 text-red-700 p-3 rounded-lg text-xs font-semibold hidden border border-red-200">
-                            Warning: Your Gross Receipts exceed ₹75 Lakhs. You are NOT eligible for Section 44ADA. You must file normal business taxes and undergo a tax audit.
+                            You are not eligible for Section 44ADA. The limit is ₹50 Lakhs, or ₹75 Lakhs only when cash receipts are no more than 5% of gross receipts.
                         </div>
 
                         <div>
                             <label for="grossReceipts" class="text-sm font-medium text-slate-600 block mb-2 flex justify-between">
-                                Gross Annual Receipts (₹) <span class="text-xs text-indigo-500 font-bold uppercase">Max ₹75L</span>
+                                Gross Annual Receipts (₹) <span class="text-xs text-indigo-500 font-bold uppercase">₹50L / ₹75L</span>
                             </label>
                             <div class="relative">
                                 <span class="absolute left-4 top-3 text-slate-400 font-bold">₹</span>
                                 <input type="number" id="grossReceipts" value="2400000" class="w-full pl-8 pr-4 py-3 border border-slate-200 rounded-xl font-semibold focus:ring-2 focus:ring-indigo-500 focus:outline-none transition-all">
                             </div>
                             <p class="text-[10px] text-slate-400 mt-1">Total revenue billed to clients (excluding GST) for the financial year.</p>
+                        </div>
+
+                        <div>
+                            <label for="cashReceipts" class="text-sm font-medium text-slate-600 block mb-2">Cash Receipts Included Above (₹)</label>
+                            <div class="relative">
+                                <span class="absolute left-4 top-3 text-slate-400 font-bold">₹</span>
+                                <input type="number" id="cashReceipts" value="0" min="0" class="w-full pl-8 pr-4 py-3 border border-slate-200 rounded-xl font-semibold focus:ring-2 focus:ring-indigo-500 focus:outline-none transition-all">
+                            </div>
+                            <p class="text-[10px] text-slate-400 mt-1">₹75L is available only when cash receipts are at most 5% of gross receipts.</p>
                         </div>
                         
                         <div>
@@ -666,10 +675,13 @@
 
         function calculate() {
             const gross = parseFloat(elements.grossReceipts.value) || 0;
+            const cashReceipts = parseFloat(document.getElementById('cashReceipts').value) || 0;
             const expenses = parseFloat(elements.actualExpenses.value) || 0;
             const regime = elements.taxRegime.value;
+            const eligibleLimit = cashReceipts <= gross * 0.05 ? 7500000 : 5000000;
+            const isEligible = gross <= eligibleLimit;
             
-            if (gross > 7500000) {
+            if (!isEligible) {
                 elements.limitWarning.classList.remove('hidden');
             } else {
                 elements.limitWarning.classList.add('hidden');
@@ -705,7 +717,13 @@
             
             elements.auditBanner.classList.add('hidden');
             
-            if (adaTaxAmt <= normalTaxAmt) {
+            if (!isEligible) {
+                elements.winnerName.textContent = "Normal Taxation";
+                elements.taxSavings.textContent = formatInr(0);
+                elements.winnerTax.textContent = formatInr(normalTaxAmt);
+                elements.adaBox.className = `p-5 rounded-2xl transition-all relative card-shadow ${normalClass}`;
+                elements.normalBox.className = `p-5 rounded-2xl transition-all relative card-shadow ${highlightClass}`;
+            } else if (adaTaxAmt <= normalTaxAmt) {
                 elements.winnerName.textContent = "Section 44ADA";
                 elements.taxSavings.textContent = formatInr(normalTaxAmt - adaTaxAmt);
                 elements.winnerTax.textContent = formatInr(adaTaxAmt);
