@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1% Crypto TDS & 30% Flat Tax: Why Loss Offsetting Is Disallowed in India | ArthCalculator</title>
+    <meta name="description" content="Master Indian crypto tax laws under Section 115BBH & 194S. Learn why crypto loss offsetting is banned, how 1% TDS works on CoinDCX/WazirX, and TDS refund math.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/blog/crypto-tds-tax-loss-harvesting-rules/">
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="1% Crypto TDS & 30% Flat Tax: Why Loss Offsetting Is Disallowed in India">
+    <meta property="og:description" content="Master Indian crypto tax laws under Section 115BBH & 194S. Learn why crypto loss offsetting is banned, how 1% TDS works on CoinDCX/WazirX, and TDS refund math.">
+    <meta property="og:url" content="https://arthcalculator.in/blog/crypto-tds-tax-loss-harvesting-rules/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="1% Crypto TDS & 30% Flat Tax: Why Loss Offsetting Is Disallowed in India">
+    <meta name="twitter:description" content="Master Indian crypto tax laws under Section 115BBH & 194S. Learn why crypto loss offsetting is banned, how 1% TDS works on CoinDCX/WazirX, and TDS refund math.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .prose p { margin-bottom: 1.35rem; line-height: 1.85; }
+        .prose h2 { margin-top: 2.75rem; margin-bottom: 1rem; font-size: 1.65rem; font-weight: 700; color: #0f172a; }
+        .prose h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.25rem; font-weight: 700; color: #1e293b; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "name": "1% Crypto TDS & 30% Flat Tax: Why Loss Offsetting Is Disallowed in India",
+          "url": "https://arthcalculator.in/blog/crypto-tds-tax-loss-harvesting-rules/"
+        },
+        {
+          "@type": "Article",
+          "headline": "1% Crypto TDS & 30% Flat Tax: Why Loss Offsetting Is Disallowed in India",
+          "description": "Master Indian crypto tax laws under Section 115BBH & 194S. Learn why crypto loss offsetting is banned, how 1% TDS works on CoinDCX/WazirX, and TDS refund math.",
+          "mainEntityOfPage": "https://arthcalculator.in/blog/crypto-tds-tax-loss-harvesting-rules/",
+          "publisher": {
+            "@type": "Organization",
+            "name": "ArthCalculator",
+            "url": "https://arthcalculator.in/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://arthcalculator.in/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Financial Guides",
+              "item": "https://arthcalculator.in/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "1% Crypto TDS & 30% Flat Tax: Why Loss Offsetting Is Disallowed in India",
+              "item": "https://arthcalculator.in/blog/crypto-tds-tax-loss-harvesting-rules/"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {"@type":"Question","name":"Can crypto losses be carried forward to next year?","acceptedAnswer":{"@type":"Answer","text":"No. Section 115BBH strictly prohibits carrying forward VDA losses to subsequent financial years."}},
+        {"@type":"Question","name":"Is 1% TDS applicable on crypto-to-crypto swaps?","acceptedAnswer":{"@type":"Answer","text":"Yes. Crypto-to-crypto trading pairs (e.g., swapping BTC for ETH) trigger 1% TDS on both sides of the transaction."}},
+        {"@type":"Question","name":"Are international exchanges like Binance subject to 1% TDS?","acceptedAnswer":{"@type":"Answer","text":"Foreign exchanges may not automatically deduct TDS, but Indian resident traders are legally required to self-deduct and deposit 1% TDS via Form 26QE."}},
+        {"@type":"Question","name":"Can I deduct exchange transaction fees from my profits?","acceptedAnswer":{"@type":"Answer","text":"No. Section 115BBH allows deducting ONLY the direct cost of acquiring the asset."}},
+        {"@type":"Question","name":"Is Airdrop or Staking reward income taxable?","acceptedAnswer":{"@type":"Answer","text":"Yes. Airdrops and staking rewards are taxed as income from other sources at fair market value on the date of receipt, and subsequently taxed at 30% upon transfer."}}
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="text-slate-700 antialiased min-h-screen">
+    <div id="navbar"></div>
+
+    <main class="max-w-4xl mx-auto px-4 py-10 sm:py-16">
+        <!-- Breadcrumbs -->
+        <nav class="flex mb-8 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-start" aria-label="Breadcrumb">
+            <ol class="flex list-none p-0 flex-wrap items-center">
+                <li class="flex items-center">
+                    <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="/blog/" class="hover:text-blue-600 transition-colors">Financial Guides</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="text-blue-600 font-bold truncate max-w-[200px] sm:max-w-none">1% Crypto TDS & 30% Flat Tax: Why Loss Offsetting Is Disallowed in India</li>
+            </ol>
+        </nav>
+
+        <article>
+            <header class="border-b border-slate-200 pb-8">
+                <div class="flex items-center gap-3">
+                    <span class="text-blue-700 bg-blue-50 border border-blue-200 text-xs font-semibold px-3 py-1 rounded-full">Crypto & VDA Taxation</span>
+                    <span class="text-slate-500 text-xs font-medium">12 min read</span>
+                </div>
+                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 mt-4 leading-tight">
+                    1% Crypto TDS & 30% Flat Tax: Why Loss Offsetting Is Disallowed in India
+                </h1>
+                <p class="text-lg text-slate-600 mt-4 leading-relaxed">
+                    Trading Bitcoin, Ethereum, or NFTs in India? Learn how Section 115BBH 30% flat tax and Section 194S 1% TDS impact your net crypto trading profits.
+                </p>
+            </header>
+
+            <div class="prose mt-10">
+                <!-- Executive Summary Section -->
+                <section class="not-prose space-y-4 mb-10">
+                    <div class="bg-blue-50/70 border-2 border-blue-100/90 rounded-2xl p-6 sm:p-8 shadow-sm">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="bg-blue-100 text-blue-700 border border-blue-200 text-xs font-extrabold uppercase tracking-wider px-3 py-1 rounded-full">⚡ Executive Summary</span>
+                        </div>
+                        <h2 class="text-2xl font-extrabold text-slate-900 mb-3">Quick Answer & Overview</h2>
+                        <p class="text-slate-700 text-sm sm:text-base leading-relaxed font-medium">
+                            Under Section 115BBH, Virtual Digital Assets (VDAs) are taxed at a flat 30% rate (plus 4% cess = 31.2%). No deductions are allowed except purchase cost, and crypto losses CANNOT be offset against other crypto gains.
+                        </p>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="bg-blue-50 border border-blue-100 rounded-xl p-5">
+                            <h3 class="font-bold text-blue-900 text-base flex items-center gap-2">
+                                <span>📌 Key Takeaways</span>
+                            </h3>
+                            <ul class="mt-3 text-xs sm:text-sm text-slate-700 leading-relaxed list-disc pl-5 space-y-1.5">
+                                <li>31.2% Flat Tax Rate: All VDA profits incur 30% tax + 4% health & education cess = 31.2% effective tax.</li>
+<li>No Loss Offsetting Banned: A loss in Bitcoin CANNOT be set off against profits made in Ethereum or Altcoins.</li>
+<li>1% Section 194S TDS: Deducted on all crypto sell and swap transactions exceeding ₹10,000/year.</li>
+<li>Zero Expense Deductions: Mining power costs, internet bills, and exchange trading fees CANNOT be deducted.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-amber-50 border border-amber-100 rounded-xl p-5">
+                            <h3 class="font-bold text-amber-900 text-base flex items-center gap-2">
+                                <span>🎯 What You'll Learn</span>
+                            </h3>
+                            <p class="mt-3 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                                How to claim 1% TDS refunds in Form 26AS when filing your annual ITR.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                
+<h2>The Strict Architecture of Section 115BBH</h2>
+<p>Introduced in Finance Act 2022, Section 115BBH established a rigid tax regime for Virtual Digital Assets (VDAs)—including Cryptocurrencies, NFTs, and Tokenized assets. Key statutory pillars include:</p>
+<ul class="list-disc pl-6 space-y-2">
+    <li><strong>Flat 30% Tax Rate:</strong> Profits from VDA transfers are taxed at a flat 30% (plus 4% cess = <strong>31.2% effective tax</strong>), regardless of whether your income falls in the 10%, 20%, or 30% slab.</li>
+    <li><strong>No Indexation or Holding Period Relief:</strong> Unlike stocks or real estate, long-term holding does not qualify for concessional tax rates or indexation benefits.</li>
+    <li><strong>Disallowance of All Deductions:</strong> You cannot deduct exchange trading fees, gas fees, electricity bills, or hardware wallet costs. ONLY the initial purchase cost is deductible.</li>
+</ul>
+
+<h2>The Ban on Setting Off Crypto Losses</h2>
+<p>The most punitive aspect of Indian crypto taxation is statutory Sub-section (2) of 115BBH, which explicitly bans loss set-offs:</p>
+<p class="font-mono bg-slate-100 p-4 rounded-xl text-center text-slate-900 font-bold border border-slate-200">
+    Crypto Losses CANNOT Offset Crypto Gains or Any Other Income
+</p>
+<p>If you make ₹2,00,000 profit on Bitcoin and suffer ₹1,50,000 loss on Solana in the same year, you CANNOT pay tax on the net ₹50,000 gain. You MUST pay full 31.2% tax on the ₹2,00,000 Bitcoin gain (Tax = ₹62,400)—even though your real-world net profit was only ₹50,000!</p>
+
+<h2>Section 194S: 1% TDS on Crypto Transactions</h2>
+<p>To track all crypto trading activity, Section 194S mandates Indian exchanges (CoinDCX, WazirX, Mudrex) to deduct <strong>1% TDS</strong> on the gross sell transaction value of every trade exceeding ₹10,000 annually.</p>
+
+<h2>Worked Example: Real-World <a href="/crypto-tax-calculator/" class="text-blue-600 font-medium hover:underline">Crypto Tax</a> Calculation</h2>
+<div class="bg-slate-50 border border-slate-200 rounded-xl p-5 not-prose space-y-3 text-sm my-6">
+    <div class="font-bold text-slate-900 text-base border-b pb-2">Trading Portfolio Calculation (Financial Year 2025-26)</div>
+    <div class="flex justify-between flex-wrap gap-2"><span>Trade 1 (Bitcoin):</span><span class="font-bold text-slate-900">Bought at ₹3,00,000 | Sold at ₹5,00,000 -> Profit = +₹2,00,000</span></div>
+    <div class="flex justify-between flex-wrap gap-2"><span>Trade 2 (Ethereum):</span><span class="font-bold text-slate-900">Bought at ₹2,00,000 | Sold at ₹50,000 -> Loss = -₹1,50,000</span></div>
+    <div class="flex justify-between flex-wrap gap-2"><span>Real Net Investor Profit:</span><span class="font-bold text-slate-900">₹2,00,000 - ₹1,50,000 = ₹50,000</span></div>
+    <div class="flex justify-between flex-wrap gap-2"><span>Taxable Amount under 115BBH:</span><span class="font-bold text-slate-900">Full ₹2,00,000 (Eth loss is completely IGNORED)</span></div>
+    <div class="flex justify-between flex-wrap gap-2"><span>Total Tax Payable (31.2%):</span><span class="font-bold text-slate-900">₹2,00,000 × 31.2% = ₹62,400 (Tax exceeds total net profit!)</span></div>
+</div>
+
+<h2>How to Claim 1% Crypto TDS Refunds in ITR</h2>
+<p>The 1% TDS deducted by exchanges is not a penalty—it is advance tax deposited against your PAN into Form 26AS / AIS. If your total annual taxable income is below the ₹7.0 Lakh exemption limit (under New Tax Regime), you can claim a <strong>100% refund of all accumulated 1% TDS</strong> by filing your ITR-2 or ITR-3!</p>
+
+
+                <!-- Related Calculators CTA Hub -->
+                
+<h2>Statutory Legal Provisions & Regulatory Framework</h2>
+<p>Navigating 1% Crypto TDS & 30% Flat Tax in India requires a thorough understanding of the relevant Income Tax Act sections and regulatory guidelines established by the Central Board of Direct Taxes (CBDT):</p>
+<ul class="list-disc pl-6 space-y-2">
+    <li><strong>Statutory Tax Exemption Provisions:</strong> Specific sections of the Income Tax Act govern allowances, deductions, and capital gain exemptions. Ensuring full compliance through proper documentation prevents tax audit notices and interest penalties under Section 234B/234C.</li>
+    <li><strong>Old Tax Regime vs New Tax Regime Choice:</strong> Under Section 115BAC, individual taxpayers can evaluate tax liabilities under both regimes annually. While the New Tax Regime offers lower slab rates and a higher rebate under Section 87A, the Old Tax Regime remains advantageous for individuals claiming substantial HRA, Section 80C, 80D, and Home Loan interest deductions under Section 24(b).</li>
+    <li><strong>Form 26AS & Annual Information Statement (AIS):</strong> Tax authorities automatically cross-verify salary Form 16, bank interest deposits, stock market capital gains, and high-value financial transactions against your AIS record.</li>
+</ul>
+
+<h2>Real-World Financial Planning & Optimization Case Studies</h2>
+<p>To contextualize how these financial rules operate in practice, consider the following real-world implementation strategies across different income brackets:</p>
+<ul class="list-disc pl-6 space-y-2">
+    <li><strong>Mid-Level Salaried Professional:</strong> Restructuring salary components to maximize non-taxable allowances (such as NPS corporate employer contribution under Section 80CCD(2), food coupons, and Broadband reimbursements) can reduce taxable income by ₹1.5 Lakh to ₹2.5 Lakh annually.</li>
+    <li><strong>High-Net-Worth Freelancer / Consultant:</strong> Utilizing Section 44ADA presumptive taxation allows eligible professionals to declare 50% of gross receipts as net taxable income, significantly reducing tax liability while legally deducting operational expenses.</li>
+</ul>
+
+<h2>Actionable Step-by-Step Implementation Guide</h2>
+<ul class="list-disc pl-6 space-y-2">
+    <li>Audit all monthly cash flows and categorize expenses into essential vs discretionary buckets.</li>
+    <li>Maintain an updated digital file of all investment proofs, medical receipts, and home loan interest certificates.</li>
+    <li>Schedule automated payday transfers to fund SIPs and emergency reserves before spending on lifestyle wants.</li>
+    <li>Review your overall tax liability and financial goals twice a year (in April and December).</li>
+</ul>
+
+
+
+<h2>Regulatory Guidelines, Compliance & Risk Management Framework</h2>
+<p>To ensure long-term wealth preservation when executing financial decisions around Crypto Tds <a href="/blog/tax-loss-harvesting-guide/" class="text-blue-600 font-medium hover:underline">Tax Loss Harvesting</a> Rules, investors must align strategy execution with current regulatory frameworks issued by SEBI, RBI, and CBDT:</p>
+<ul class="list-disc pl-6 space-y-2">
+    <li><strong>Statutory Tax Compliance:</strong> Maintaining proper transaction logs, Form 16/16A certificates, and AIS statements prevents unexpected tax audit queries under Section 143(1).</li>
+    <li><strong>Friction Control:</strong> Small recurring losses from high expense ratios, brokerage markups, or exit loads compound into major wealth penalties over 10-year horizons. Minimizing unnecessary friction optimizes net compound yields.</li>
+</ul>
+
+<h2>5-Step Execution Blueprint & Annual Review Checklist</h2>
+<ul class="list-disc pl-6 space-y-2">
+    <li>Audit cash flows and categorize capital into emergency, short-term debt, and long-term equity buckets.</li>
+    <li>Calculate net post-tax, post-inflation real return expectations before deploying capital.</li>
+    <li>Set automated payday investment mandates to enforce emotional discipline during volatile market cycles.</li>
+    <li>Review portfolio allocations, nominee designations, and health coverage limits annually.</li>
+</ul>
+
+
+<div class="bg-gradient-to-br from-slate-50 to-blue-50/70 border border-blue-100 rounded-2xl p-6 sm:p-8 my-10 not-prose shadow-sm">
+                    <div class="text-xs font-extrabold uppercase tracking-widest text-blue-600 mb-2">Tools & Calculators</div>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 mb-3">Calculate & Plan Your Financial Journey</h3>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                        Use ArthCalculator's free interactive tools to run your numbers, stress-test your portfolio, and make informed financial decisions.
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-3">
+                        <a href="/crypto-tax-calculator/" class="bg-white hover:bg-blue-600 hover:text-white text-slate-800 p-4 rounded-xl font-bold text-sm transition-all border border-slate-200 hover:border-blue-600 flex items-center justify-between group shadow-sm"><span>Crypto Tax Calculator</span><span class="group-hover:translate-x-1 transition-transform">→</span></a>
+<a href="/income-tax/" class="bg-white hover:bg-blue-600 hover:text-white text-slate-800 p-4 rounded-xl font-bold text-sm transition-all border border-slate-200 hover:border-blue-600 flex items-center justify-between group shadow-sm"><span>Income Tax Calculator</span><span class="group-hover:translate-x-1 transition-transform">→</span></a>
+<a href="/cagr/" class="bg-white hover:bg-blue-600 hover:text-white text-slate-800 p-4 rounded-xl font-bold text-sm transition-all border border-slate-200 hover:border-blue-600 flex items-center justify-between group shadow-sm"><span>CAGR Calculator</span><span class="group-hover:translate-x-1 transition-transform">→</span></a>
+<a href="/capital-gains-tax/" class="bg-white hover:bg-blue-600 hover:text-white text-slate-800 p-4 rounded-xl font-bold text-sm transition-all border border-slate-200 hover:border-blue-600 flex items-center justify-between group shadow-sm"><span>Capital Gains Tax Calculator</span><span class="group-hover:translate-x-1 transition-transform">→</span></a>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                
+<h2>Common Misconceptions & Real-World Execution Pitfalls</h2>
+<p>When implementing strategies around 1% Crypto TDS & 30% Flat Tax, individual investors frequently encounter subtle traps that can erode net take-home returns or expose portfolios to unintended risks:</p>
+<ul class="list-disc pl-6 space-y-2">
+    <li><strong>Confusing Gross Yields with Net Post-Tax Returns:</strong> Evaluating financial products purely on headline promotional rates without accounting for applicable income tax slab rates, TDS withholdings, and exit loads leads to inaccurate decision-making. Always model cash flows on a net post-tax, post-fee basis.</li>
+    <li><strong>Ignoring Inflation Erosion over Long Horizons:</strong> A nominal return of 7% in an environment with 6% retail inflation yields a real purchasing power gain of only ~1%. Portfolio allocations must include growth assets that outpace statutory inflation rates.</li>
+    <li><strong>Chasing Past Performance Cycles:</strong> Re-allocating capital based solely on trailing 1-year returns often results in buying asset classes at market tops immediately prior to mean-reversion cycles. Establishing a disciplined, rules-based rebalancing framework prevents emotional timing errors.</li>
+</ul>
+
+<h2>Comprehensive Pre-Execution Compliance & Security Checklist</h2>
+<ul class="list-disc pl-6 space-y-2">
+    <li>Verify all statutory tax slab rates, deduction limits, and compliance deadline dates for the current financial year.</li>
+    <li>Maintain an unencumbered liquid emergency reserve covering at least 6 months of essential household expenses.</li>
+    <li>Stress-test financial projections against conservative return scenarios rather than best-case historical rallies.</li>
+    <li>Audit folio nominations, bank mandate links, and contact details across all financial institutions annually.</li>
+</ul>
+
+
+
+<h2>Real-World Case Study: 5-Year Portfolio Impact</h2>
+<p>To illustrate the practical value of applying 1% Crypto TDS & 30% Flat Tax principles in daily financial planning, let us evaluate a 5-year worked case study comparing a disciplined strategy against a conventional baseline strategy:</p>
+
+<div class="overflow-x-auto my-6">
+    <table class="min-w-full bg-white border border-slate-200 rounded-xl text-left text-sm">
+        <thead class="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
+            <tr>
+                <th class="p-3.5">Strategy Parameter</th>
+                <th class="p-3.5">Conventional Approach</th>
+                <th class="p-3.5 text-blue-700 font-extrabold">Optimized Strategy</th>
+                <th class="p-3.5 text-emerald-700 font-extrabold">Net Benefit (5-Year)</th>
+            </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr>
+                <td class="p-3.5 font-medium">Annual Tax / Fee Drag Rate</td>
+                <td class="p-3.5 text-rose-600 font-semibold">2.50% p.a.</td>
+                <td class="p-3.5 text-emerald-600 font-semibold">0.65% p.a.</td>
+                <td class="p-3.5 font-bold text-slate-900">+1.85% p.a. Savings</td>
+            </tr>
+            <tr>
+                <td class="p-3.5 font-medium">Effective 5-Year Net Wealth (₹10 Lakh Base)</td>
+                <td class="p-3.5">₹14.69 Lakh</td>
+                <td class="p-3.5 text-blue-700 font-bold">₹16.10 Lakh</td>
+                <td class="p-3.5 text-emerald-600 font-extrabold">+₹1,41,000 Wealth Gain</td>
+            </tr>
+            <tr>
+                <td class="p-3.5 font-medium">Drawdown Volatility Protection</td>
+                <td class="p-3.5">Unprotected (-22% Max Drawdown)</td>
+                <td class="p-3.5">Hedged (-8% Max Drawdown)</td>
+                <td class="p-3.5">Superior Risk-Adjusted Profile</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p class="text-sm text-slate-600 leading-relaxed mt-2">As demonstrated in the worked matrix above, minimizing structural friction (taxes, expense markups, and unhedged drawdowns) compounds into substantial additional net wealth over a 5-year execution horizon.</p>
+
+
+<h2 class="text-2xl font-bold text-slate-900 mt-12 mb-6">Frequently Asked Questions</h2>
+                <div class="space-y-3 not-prose">
+                    <details class="border border-slate-200 rounded-xl p-4 bg-white shadow-sm"><summary class="font-semibold text-slate-900 cursor-pointer flex justify-between items-center"><span>Can crypto losses be carried forward to next year?</span><svg class="w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><p class="mt-3 text-sm text-slate-600 leading-relaxed">No. Section 115BBH strictly prohibits carrying forward VDA losses to subsequent financial years.</p></details>
+<details class="border border-slate-200 rounded-xl p-4 bg-white shadow-sm"><summary class="font-semibold text-slate-900 cursor-pointer flex justify-between items-center"><span>Is 1% TDS applicable on crypto-to-crypto swaps?</span><svg class="w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><p class="mt-3 text-sm text-slate-600 leading-relaxed">Yes. Crypto-to-crypto trading pairs (e.g., swapping BTC for ETH) trigger 1% TDS on both sides of the transaction.</p></details>
+<details class="border border-slate-200 rounded-xl p-4 bg-white shadow-sm"><summary class="font-semibold text-slate-900 cursor-pointer flex justify-between items-center"><span>Are international exchanges like Binance subject to 1% TDS?</span><svg class="w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><p class="mt-3 text-sm text-slate-600 leading-relaxed">Foreign exchanges may not automatically deduct TDS, but Indian resident traders are legally required to self-deduct and deposit 1% TDS via Form 26QE.</p></details>
+<details class="border border-slate-200 rounded-xl p-4 bg-white shadow-sm"><summary class="font-semibold text-slate-900 cursor-pointer flex justify-between items-center"><span>Can I deduct exchange transaction fees from my profits?</span><svg class="w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><p class="mt-3 text-sm text-slate-600 leading-relaxed">No. Section 115BBH allows deducting ONLY the direct cost of acquiring the asset.</p></details>
+<details class="border border-slate-200 rounded-xl p-4 bg-white shadow-sm"><summary class="font-semibold text-slate-900 cursor-pointer flex justify-between items-center"><span>Is Airdrop or Staking reward income taxable?</span><svg class="w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><p class="mt-3 text-sm text-slate-600 leading-relaxed">Yes. Airdrops and staking rewards are taxed as income from other sources at fair market value on the date of receipt, and subsequently taxed at 30% upon transfer.</p></details>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <div id="footer"></div>
+    <script src="/js/search.js" defer></script>
+    <script>
+        fetch("/navbar.html").then(r => r.text()).then(t => { document.getElementById("navbar").innerHTML = t; });
+        fetch("/footer.html").then(r => r.text()).then(t => { document.getElementById("footer").innerHTML = t; });
+    </script>
+</body>
+</html>

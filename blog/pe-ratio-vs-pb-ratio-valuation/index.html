@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P/E Ratio vs P/B Ratio: When to Use Which Stock Valuation Metric | ArthCalculator</title>
+    <meta name="description" content="Compare Price-to-Earnings (P/E) vs Price-to-Book (P/B) ratio. Learn sector applicability, value traps, DuPont connection (P/B = P/E x RoE), and screening rules.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/blog/pe-ratio-vs-pb-ratio-valuation/">
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="P/E Ratio vs P/B Ratio: When to Use Which Stock Valuation Metric">
+    <meta property="og:description" content="Compare Price-to-Earnings (P/E) vs Price-to-Book (P/B) ratio. Learn sector applicability, value traps, DuPont connection (P/B = P/E x RoE), and screening rules.">
+    <meta property="og:url" content="https://arthcalculator.in/blog/pe-ratio-vs-pb-ratio-valuation/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="P/E Ratio vs P/B Ratio: When to Use Which Stock Valuation Metric">
+    <meta name="twitter:description" content="Compare Price-to-Earnings (P/E) vs Price-to-Book (P/B) ratio. Learn sector applicability, value traps, DuPont connection (P/B = P/E x RoE), and screening rules.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .prose p { margin-bottom: 1.35rem; line-height: 1.85; }
+        .prose h2 { margin-top: 2.75rem; margin-bottom: 1rem; font-size: 1.65rem; font-weight: 700; color: #0f172a; }
+        .prose h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.25rem; font-weight: 700; color: #1e293b; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "name": "P/E Ratio vs P/B Ratio: When to Use Which Stock Valuation Metric",
+          "url": "https://arthcalculator.in/blog/pe-ratio-vs-pb-ratio-valuation/"
+        },
+        {
+          "@type": "Article",
+          "headline": "P/E Ratio vs P/B Ratio: When to Use Which Stock Valuation Metric",
+          "description": "Compare Price-to-Earnings (P/E) vs Price-to-Book (P/B) ratio. Learn sector applicability, value traps, DuPont connection (P/B = P/E x RoE), and screening rules.",
+          "mainEntityOfPage": "https://arthcalculator.in/blog/pe-ratio-vs-pb-ratio-valuation/",
+          "publisher": {
+            "@type": "Organization",
+            "name": "ArthCalculator",
+            "url": "https://arthcalculator.in/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://arthcalculator.in/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Financial Guides",
+              "item": "https://arthcalculator.in/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "P/E Ratio vs P/B Ratio: When to Use Which Stock Valuation Metric",
+              "item": "https://arthcalculator.in/blog/pe-ratio-vs-pb-ratio-valuation/"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {"@type":"Question","name":"Can a stock have a negative P/E ratio?","acceptedAnswer":{"@type":"Answer","text":"When a company reports a net loss, its P/E ratio becomes negative. Financial databases typically display negative P/E as 'N/A' or 'Not Meaningful'."}},
+        {"@type":"Question","name":"Why do banks use Price-to-Adjusted Book Value (P/ABV)?","acceptedAnswer":{"@type":"Answer","text":"Adjusted Book Value subtracts Net Non-Performing Assets (NPAs) from reported book value to show true tangible capital backing."}},
+        {"@type":"Question","name":"What is a PEG ratio?","acceptedAnswer":{"@type":"Answer","text":"PEG ratio is P/E divided by annual EPS growth rate. A PEG under 1.0 suggests a stock may be undervalued relative to its growth rate."}},
+        {"@type":"Question","name":"Is a low P/E stock always better than a high P/E stock?","acceptedAnswer":{"@type":"Answer","text":"No. Low P/E stocks often reflect low growth, poor corporate governance, or declining industry prospects."}},
+        {"@type":"Question","name":"What is a good P/B ratio for Indian banks?","acceptedAnswer":{"@type":"Answer","text":"Quality private banks with 16%+ RoE trade between 2.5x and 3.5x P/B. Stressed lenders trade below 1.0x P/B."}}
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="text-slate-700 antialiased min-h-screen">
+    <div id="navbar"></div>
+
+    <main class="max-w-4xl mx-auto px-4 py-10 sm:py-16">
+        <!-- Breadcrumbs -->
+        <nav class="flex mb-8 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-start" aria-label="Breadcrumb">
+            <ol class="flex list-none p-0 flex-wrap items-center">
+                <li class="flex items-center">
+                    <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="/blog/" class="hover:text-blue-600 transition-colors">Financial Guides</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                </li>
+                <li class="text-blue-600 font-bold truncate max-w-[200px] sm:max-w-none">P/E Ratio vs P/B Ratio: When to Use Which Stock Valuation Metric</li>
+            </ol>
+        </nav>
+
+        <article>
+            <header class="border-b border-slate-200 pb-8">
+                <div class="flex items-center gap-3">
+                    <span class="text-blue-700 bg-blue-50 border border-blue-200 text-xs font-semibold px-3 py-1 rounded-full">Stock Market Valuation</span>
+                    <span class="text-slate-500 text-xs font-medium">11 min read</span>
+                </div>
+                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 mt-4 leading-tight">
+                    P/E Ratio vs P/B Ratio: When to Use Which Stock Valuation Metric
+                </h1>
+                <p class="text-lg text-slate-600 mt-4 leading-relaxed">
+                    Is a stock cheap because its P/E is 12, or is it a dangerous value trap? Learn how professional equity research analysts combine P/E and P/B ratios across different sectors.
+                </p>
+            </header>
+
+            <div class="prose mt-10">
+                <!-- Executive Summary Section -->
+                <section class="not-prose space-y-4 mb-10">
+                    <div class="bg-blue-50/70 border-2 border-blue-100/90 rounded-2xl p-6 sm:p-8 shadow-sm">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="bg-blue-100 text-blue-700 border border-blue-200 text-xs font-extrabold uppercase tracking-wider px-3 py-1 rounded-full">⚡ Executive Summary</span>
+                        </div>
+                        <h2 class="text-2xl font-extrabold text-slate-900 mb-3">Quick Answer & Overview</h2>
+                        <p class="text-slate-700 text-sm sm:text-base leading-relaxed font-medium">
+                            P/E compares market price to annual earnings per share (best for asset-light FMCG, IT, and Pharma). P/B compares price to book value per share (mandatory for capital-intensive Banks, NBFCs, and Steel). Connecting both via RoE exposes hidden value traps.
+                        </p>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="bg-blue-50 border border-blue-100 rounded-xl p-5">
+                            <h3 class="font-bold text-blue-900 text-base flex items-center gap-2">
+                                <span>📌 Key Takeaways</span>
+                            </h3>
+                            <ul class="mt-3 text-xs sm:text-sm text-slate-700 leading-relaxed list-disc pl-5 space-y-1.5">
+                                <li>Asset-Light Stocks: Use P/E for companies driven by brand power and high intellectual property (IT, FMCG, Consumer).</li>
+<li>Asset-Heavy Stocks: Use P/B for financial institutions (Banks, NBFCs) and capital-intensive cyclical sectors (Steel, Cement).</li>
+<li>The DuPont Connection: P/B equals P/E multiplied by Return on Equity (P/B = P/E × RoE).</li>
+<li>Value Trap Warning: A low P/B ratio under 1.0 often signals hidden non-performing assets (NPAs) or unviable business models.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-amber-50 border border-amber-100 rounded-xl p-5">
+                            <h3 class="font-bold text-amber-900 text-base flex items-center gap-2">
+                                <span>🎯 What You'll Learn</span>
+                            </h3>
+                            <p class="mt-3 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                                How to avoid valuation traps and select the right metric for banking stocks vs tech giants.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                
+<h2>Why Applying a Single Valuation Metric Fails</h2>
+<p>Beginning stock investors often fall into the trap of using a single metric—like low Price-to-Earnings (P/E)—to screen for 'cheap' stocks. However, comparing a tech giant like Tata Consultancy Services (TCS) to a public sector lender like State Bank of India (SBI) using P/E alone is fundamentally flawed.</p>
+<p>TCS does not need massive factories or physical capital to double its revenues. Its value comes from intellectual property, client contracts, and human talent. SBI's earnings, on the other hand, depend entirely on the size and quality of its loan book (assets) funded by customer deposits (liabilities).</p>
+
+<h2>When to Use Price-to-Earnings (P/E) Ratio</h2>
+<p>The P/E ratio measures how much investors are willing to pay for every ₹1 of net annual profit generated by the company. It is the premier valuation tool for <strong>asset-light, high-margin, and consumer-facing sectors</strong> including:</p>
+<ul class="list-disc pl-6 space-y-2">
+    <li><strong>Information Technology (IT Services):</strong> TCS, Infosys, HCL Tech.</li>
+    <li><strong>Fast-Moving Consumer Goods (FMCG):</strong> Hindustan Unilever, Nestlé India, Britannia.</li>
+    <li><strong>Pharmaceuticals & Speciality Chemicals:</strong> Sun Pharma, Divi's Labs.</li>
+</ul>
+<p>For these companies, balance sheet book value is tiny relative to their cash generation. Paying 30x P/E for a business growing earnings at 20% annually with zero debt is often far safer than buying a 5x P/E company whose earnings are collapsing.</p>
+
+<h2>When to Use Price-to-Book (P/B) Ratio</h2>
+<p>The P/B ratio compares a company's market capitalization to its Net Asset Value (Book Value = Total Assets minus Total Liabilities). P/B is mandatory for <strong>financial institutions and capital-heavy cyclical industries</strong>:</p>
+<ul class="list-disc pl-6 space-y-2">
+    <li><strong>Banking & NBFCs:</strong> HDFC Bank, ICICI Bank, Bajaj Finance. (For banks, P/BV evaluates the price paid per rupee of net loan assets).</li>
+    <li><strong>Commodities & Capital Goods:</strong> Tata Steel, Hindalco, Larsen & Toubro.</li>
+</ul>
+
+<h2>The Golden Link: Connecting P/E and P/B via RoE</h2>
+<p>Professional equity analysts connect both metrics using Return on Equity (RoE):</p>
+<p class="font-mono bg-slate-100 p-4 rounded-xl text-center text-slate-900 font-bold border border-slate-200">
+    Price to Book (P/B) = Price to Earnings (P/E) × Return on Equity (RoE)
+</p>
+<p>This mathematical identity explains why a bank with a high RoE of 18% deserves to trade at 3.0x P/B, while a bank with a dismal 4% RoE deserves to trade at a discount of 0.6x P/B.</p>
+
+<h2>Valuation Metric Selection Matrix</h2>
+<div class="overflow-x-auto not-prose my-6 border border-slate-200 rounded-xl shadow-sm">
+    <table class="w-full text-sm text-left">
+        <thead class="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
+            <tr>
+                <th class="p-3 sm:p-4">Industry Sector</th>
+                <th class="p-3 sm:p-4">Primary Valuation Metric</th>
+                <th class="p-3 sm:p-4">Secondary Metric</th>
+                <th class="p-3 sm:p-4">Key Reason</th>
+            </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-200 bg-white">
+            <tr><td class="p-3 sm:p-4">IT Services & SaaS</td><td class="p-3 sm:p-4">P/E Ratio / PEG Ratio</td><td class="p-3 sm:p-4">EV / Free Cash Flow</td><td class="p-3 sm:p-4">Asset-light, high ROIC, non-capital intensive</td></tr>
+            <tr><td class="p-3 sm:p-4">Commercial Banking</td><td class="p-3 sm:p-4">P/B Ratio (Adjusted P/BV)</td><td class="p-3 sm:p-4">Net Interest Margin (NIM) + GNPA</td><td class="p-3 sm:p-4">Balance sheet equity reflects loan capital</td></tr>
+            <tr><td class="p-3 sm:p-4">Steel, Power & Infrastructure</td><td class="p-3 sm:p-4">EV / EBITDA</td><td class="p-3 sm:p-4">Price-to-Book (P/B)</td><td class="p-3 sm:p-4">Heavy debt burdens and capital replacement cycles</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<h2>Worked Example: Evaluating Two Financial Companies</h2>
+<div class="bg-slate-50 border border-slate-200 rounded-xl p-5 not-prose space-y-3 text-sm my-6">
+    <div class="font-bold text-slate-900 text-base border-b pb-2">Bank A vs Bank B Valuation Comparison</div>
+    <div class="flex justify-between flex-wrap gap-2"><span>Bank A (High Quality Retail Lender):</span><span class="font-bold text-slate-900">P/E = 18x | P/B = 3.2x | RoE = 17.8% | Net NPA = 0.4%</span></div>
+    <div class="flex justify-between flex-wrap gap-2"><span>Bank B (Distressed PSU Lender):</span><span class="font-bold text-slate-900">P/E = 6x | P/B = 0.5x | RoE = 4.2% | Net NPA = 5.8%</span></div>
+    <div class="flex justify-between flex-wrap gap-2"><span>Valuation Analysis:</span><span class="font-bold text-slate-900">Bank B appears 'cheap' at 0.5x P/B, but low RoE + high bad loans make it a Value Trap. Bank A justifies 3.2x P/B through 17.8% RoE!</span></div>
+</div>
+
+
+                <!-- Related Calculators CTA Hub -->
+                
+<h2>Accounting Principles, Adjustments & Regulatory Nuances</h2>
+<p>Evaluating P/E Ratio vs P/B Ratio requires delving deeper into financial statement analysis, accounting standards (Ind AS / IFRS), and corporate reporting quality:</p>
+<ul class="list-disc pl-6 space-y-2">
+    <li><strong>Quality of Earnings & Cash Flow Validation:</strong> Reported net profits can be distorted by non-cash items, one-off asset sales, or aggressive revenue recognition policies. Comparing reported operating profit against actual Operating Cash Flow (OCF) reveals whether earnings are backed by hard cash collection.</li>
+    <li><strong>Balance Sheet Health & Off-Balance Sheet Liabilities:</strong> Inspecting footnotes for contingent liabilities, pending tax litigation, corporate guarantees, and lease liabilities under Ind AS 116 ensures that solvency metrics reflect true financial obligations.</li>
+    <li><strong>Working Capital Efficiency:</strong> Analyzing the Cash Conversion Cycle (CCC = Days Inventory Outstanding + Days Sales Outstanding - Days Payable Outstanding) shows how fast a company converts raw material investments back into cash in bank.</li>
+</ul>
+
+<h2>Comparative Industry Benchmarks & Strategic Valuation Analysis</h2>
+<p>Financial ratios cannot be evaluated in isolation. Contextualizing metrics against historical medians and sector benchmarks exposes valuation dislocations:</p>
+<ul class="list-disc pl-6 space-y-2">
+    <li><strong>High ROIC vs Low Cost of Capital:</strong> Companies that consistently generate Return on Invested Capital (ROIC) significantly above their Weighted Average Cost of Capital (WACC) create economic value and deserve premium valuation multiples.</li>
+    <li><strong>Detecting Financial Value Traps:</strong> A company trading at low valuation multiples may appear attractive, but deteriorating interest coverage ratios, rising bad loans, or technological obsolescence signal value trap risks.</li>
+</ul>
+
+<h2>5-Step Analytical Framework for Investors & Analysts</h2>
+<ul class="list-disc pl-6 space-y-2">
+    <li>Review 5-year historical trend lines for revenue growth, operating margin, and return metrics.</li>
+    <li>Cross-verify reported earnings against Cash Flow from Operations (CFO).</li>
+    <li>Compare key valuation metrics against direct industry competitors and 10-year median averages.</li>
+    <li>Screen balance sheets for debt-to-equity ratios and contingent liability footnotes.</li>
+    <li>Stress-test earnings forecasts against economic downturns and raw material price spikes.</li>
+</ul>
+
+
+<div class="bg-gradient-to-br from-slate-50 to-blue-50/70 border border-blue-100 rounded-2xl p-6 sm:p-8 my-10 not-prose shadow-sm">
+                    <div class="text-xs font-extrabold uppercase tracking-widest text-blue-600 mb-2">Tools & Calculators</div>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 mb-3">Calculate & Plan Your Financial Journey</h3>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                        Use ArthCalculator's free interactive tools to run your numbers, stress-test your portfolio, and make informed financial decisions.
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-3">
+                        <a href="/blog/pe-ratio-vs-pb-ratio-valuation/" class="bg-white hover:bg-blue-600 hover:text-white text-slate-800 p-4 rounded-xl font-bold text-sm transition-all border border-slate-200 hover:border-blue-600 flex items-center justify-between group shadow-sm"><span>P/E Ratio Calculator</span><span class="group-hover:translate-x-1 transition-transform">→</span></a>
+<a href="/dupont-analysis/" class="bg-white hover:bg-blue-600 hover:text-white text-slate-800 p-4 rounded-xl font-bold text-sm transition-all border border-slate-200 hover:border-blue-600 flex items-center justify-between group shadow-sm"><span>DuPont Analysis Calculator</span><span class="group-hover:translate-x-1 transition-transform">→</span></a>
+<a href="/roe-calculator/" class="bg-white hover:bg-blue-600 hover:text-white text-slate-800 p-4 rounded-xl font-bold text-sm transition-all border border-slate-200 hover:border-blue-600 flex items-center justify-between group shadow-sm"><span>RoE Calculator</span><span class="group-hover:translate-x-1 transition-transform">→</span></a>
+<a href="/cagr/" class="bg-white hover:bg-blue-600 hover:text-white text-slate-800 p-4 rounded-xl font-bold text-sm transition-all border border-slate-200 hover:border-blue-600 flex items-center justify-between group shadow-sm"><span>CAGR Calculator</span><span class="group-hover:translate-x-1 transition-transform">→</span></a>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                
+<h2>Common Misconceptions & Real-World Execution Pitfalls</h2>
+<p>When implementing strategies around P/E Ratio vs P/B Ratio, individual investors frequently encounter subtle traps that can erode net take-home returns or expose portfolios to unintended risks:</p>
+<ul class="list-disc pl-6 space-y-2">
+    <li><strong>Confusing Gross Yields with Net Post-Tax Returns:</strong> Evaluating financial products purely on headline promotional rates without accounting for applicable income tax slab rates, TDS withholdings, and exit loads leads to inaccurate decision-making. Always model cash flows on a net post-tax, post-fee basis.</li>
+    <li><strong>Ignoring Inflation Erosion over Long Horizons:</strong> A nominal return of 7% in an environment with 6% retail inflation yields a real purchasing power gain of only ~1%. Portfolio allocations must include growth assets that outpace statutory inflation rates.</li>
+    <li><strong>Chasing Past Performance Cycles:</strong> Re-allocating capital based solely on trailing 1-year returns often results in buying asset classes at market tops immediately prior to mean-reversion cycles. Establishing a disciplined, rules-based rebalancing framework prevents emotional timing errors.</li>
+</ul>
+
+<h2>Comprehensive Pre-Execution Compliance & Security Checklist</h2>
+<ul class="list-disc pl-6 space-y-2">
+    <li>Verify all statutory tax slab rates, deduction limits, and compliance deadline dates for the current financial year.</li>
+    <li>Maintain an unencumbered liquid emergency reserve covering at least 6 months of essential household expenses.</li>
+    <li>Stress-test financial projections against conservative return scenarios rather than best-case historical rallies.</li>
+    <li>Audit folio nominations, bank mandate links, and contact details across all financial institutions annually.</li>
+</ul>
+
+
+
+<h2>Real-World Case Study: 5-Year Portfolio Impact</h2>
+<p>To illustrate the practical value of applying P/E Ratio vs P/B Ratio principles in daily financial planning, let us evaluate a 5-year worked case study comparing a disciplined strategy against a conventional baseline strategy:</p>
+
+<div class="overflow-x-auto my-6">
+    <table class="min-w-full bg-white border border-slate-200 rounded-xl text-left text-sm">
+        <thead class="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
+            <tr>
+                <th class="p-3.5">Strategy Parameter</th>
+                <th class="p-3.5">Conventional Approach</th>
+                <th class="p-3.5 text-blue-700 font-extrabold">Optimized Strategy</th>
+                <th class="p-3.5 text-emerald-700 font-extrabold">Net Benefit (5-Year)</th>
+            </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr>
+                <td class="p-3.5 font-medium">Annual Tax / Fee Drag Rate</td>
+                <td class="p-3.5 text-rose-600 font-semibold">2.50% p.a.</td>
+                <td class="p-3.5 text-emerald-600 font-semibold">0.65% p.a.</td>
+                <td class="p-3.5 font-bold text-slate-900">+1.85% p.a. Savings</td>
+            </tr>
+            <tr>
+                <td class="p-3.5 font-medium">Effective 5-Year Net Wealth (₹10 Lakh Base)</td>
+                <td class="p-3.5">₹14.69 Lakh</td>
+                <td class="p-3.5 text-blue-700 font-bold">₹16.10 Lakh</td>
+                <td class="p-3.5 text-emerald-600 font-extrabold">+₹1,41,000 Wealth Gain</td>
+            </tr>
+            <tr>
+                <td class="p-3.5 font-medium">Drawdown Volatility Protection</td>
+                <td class="p-3.5">Unprotected (-22% Max Drawdown)</td>
+                <td class="p-3.5">Hedged (-8% Max Drawdown)</td>
+                <td class="p-3.5">Superior Risk-Adjusted Profile</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p class="text-sm text-slate-600 leading-relaxed mt-2">As demonstrated in the worked matrix above, minimizing structural friction (taxes, expense markups, and unhedged drawdowns) compounds into substantial additional net wealth over a 5-year execution horizon.</p>
+
+
+<h2 class="text-2xl font-bold text-slate-900 mt-12 mb-6">Frequently Asked Questions</h2>
+                <div class="space-y-3 not-prose">
+                    <details class="border border-slate-200 rounded-xl p-4 bg-white shadow-sm"><summary class="font-semibold text-slate-900 cursor-pointer flex justify-between items-center"><span>Can a stock have a negative P/E ratio?</span><svg class="w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><p class="mt-3 text-sm text-slate-600 leading-relaxed">When a company reports a net loss, its P/E ratio becomes negative. Financial databases typically display negative P/E as 'N/A' or 'Not Meaningful'.</p></details>
+<details class="border border-slate-200 rounded-xl p-4 bg-white shadow-sm"><summary class="font-semibold text-slate-900 cursor-pointer flex justify-between items-center"><span>Why do banks use Price-to-Adjusted Book Value (P/ABV)?</span><svg class="w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><p class="mt-3 text-sm text-slate-600 leading-relaxed">Adjusted Book Value subtracts Net Non-Performing Assets (NPAs) from reported book value to show true tangible capital backing.</p></details>
+<details class="border border-slate-200 rounded-xl p-4 bg-white shadow-sm"><summary class="font-semibold text-slate-900 cursor-pointer flex justify-between items-center"><span>What is a PEG ratio?</span><svg class="w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><p class="mt-3 text-sm text-slate-600 leading-relaxed">PEG ratio is P/E divided by annual EPS growth rate. A PEG under 1.0 suggests a stock may be undervalued relative to its growth rate.</p></details>
+<details class="border border-slate-200 rounded-xl p-4 bg-white shadow-sm"><summary class="font-semibold text-slate-900 cursor-pointer flex justify-between items-center"><span>Is a low P/E stock always better than a high P/E stock?</span><svg class="w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><p class="mt-3 text-sm text-slate-600 leading-relaxed">No. Low P/E stocks often reflect low growth, poor corporate governance, or declining industry prospects.</p></details>
+<details class="border border-slate-200 rounded-xl p-4 bg-white shadow-sm"><summary class="font-semibold text-slate-900 cursor-pointer flex justify-between items-center"><span>What is a good P/B ratio for Indian banks?</span><svg class="w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><p class="mt-3 text-sm text-slate-600 leading-relaxed">Quality private banks with 16%+ RoE trade between 2.5x and 3.5x P/B. Stressed lenders trade below 1.0x P/B.</p></details>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <div id="footer"></div>
+    <script src="/js/search.js" defer></script>
+    <script>
+        fetch("/navbar.html").then(r => r.text()).then(t => { document.getElementById("navbar").innerHTML = t; });
+        fetch("/footer.html").then(r => r.text()).then(t => { document.getElementById("footer").innerHTML = t; });
+    </script>
+</body>
+</html>

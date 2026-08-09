@@ -19,7 +19,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>body{font-family:Inter,sans-serif;background:#f8fafc}.prose p{margin:0 0 1rem;line-height:1.8}.prose h2{margin-top:2.8rem}.prose h3{margin-top:1.8rem}</style>
+<style>body{background:#f8fafc}.prose p{margin:0 0 1rem;line-height:1.8}.prose h2{margin-top:2.8rem}.prose h3{margin-top:1.8rem}</style>
 <script type="application/ld+json">
 
 {
@@ -148,7 +148,7 @@
 
 </script>
 </head>
-<body class="text-slate-700">
+<body class="text-slate-700 antialiased min-h-screen font-sans">
 <div id="navbar"></div>
 <main class="max-w-3xl mx-auto px-4 py-10 sm:py-16">
 <nav class="flex mb-8 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-start" aria-label="Breadcrumb"><ol class="flex list-none p-0 flex-wrap"><li class="flex items-center"><a href="/" class="hover:text-blue-600 transition-colors">Home</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li><li class="flex items-center text-pretty"><a href="/blog/" class="hover:text-blue-600 transition-colors">Financial Guides</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li><li class="text-blue-600 font-bold">Flat vs Reducing Balance</li></ol></nav>
@@ -178,8 +178,8 @@
     <li><strong>Principal:</strong> ₹5,00,000</li>
     <li><strong>Yearly Interest:</strong> 8% of ₹5,00,000 = ₹40,000</li>
     <li><strong>Total Interest over 5 years:</strong> ₹40,000 × 5 = ₹2,00,000</li>
-    <li><strong>Total Amount Payable:</strong> ₹5,00,000 + ₹2,00,000 = ₹7,00,000</li>
-    <li><strong>Monthly EMI:</strong> ₹7,00,000 ÷ 60 months = ₹11,667</li>
+    <li><strong>Total Amount Payable:</strong> ₹5,00,000 + ₹2,00,000 = ₹12,00,000</li>
+    <li><strong>Monthly EMI:</strong> ₹12,00,000 ÷ 60 months = ₹11,667</li>
   </ul>
   
   <p>This calculation seems highly transparent and easy to understand. However, it contains a massive flaw: <strong>you don't hold the entire ₹5,00,000 for the whole 5 years</strong>. After your first EMI, you have paid back a portion of the principal. By year 4, you might only owe ₹1,50,000. Yet, the flat rate formula still charges you interest as if you had the full ₹5,00,000 in your pocket.</p>
