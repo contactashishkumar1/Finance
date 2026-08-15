@@ -318,17 +318,25 @@
         const totalAmount = currentAmount + prevAmount;
         
         let tcs = 0;
-        const threshold = 1000000;
+        const threshold = 700000; // Statutory ₹7 Lakh threshold under Sec 206C(1G)
 
-        // TCS Logic for FY 2026-27
+        // TCS Logic under Section 206C(1G)
         if (purpose === 'tour') {
-            // Overseas-tour packages attract TCS on the full package value.
-            tcs = currentAmount * 0.02;
+            // Overseas tour packages: 5% up to 7L, 20% on amount exceeding 7L
+            if (totalAmount <= threshold) {
+                tcs = currentAmount * 0.05;
+            } else if (prevAmount >= threshold) {
+                tcs = currentAmount * 0.20;
+            } else {
+                const partAt5 = threshold - prevAmount;
+                const partAt20 = currentAmount - partAt5;
+                tcs = (partAt5 * 0.05) + (partAt20 * 0.20);
+            }
         } else {
             // Education, medical, investments and gifts under LRS.
-            let rate = 0.20; // Default (Investments/Gifts)
-            if (purpose === 'eduLoan') rate = 0;
-            else if (purpose === 'eduSelf' || purpose === 'medical') rate = 0.02;
+            let rate = 0.20; // Default (Investments / Gifts)
+            if (purpose === 'eduLoan') rate = 0.005; // 0.5% above 7L
+            else if (purpose === 'eduSelf' || purpose === 'medical') rate = 0.05; // 5% above 7L
 
             if (totalAmount > threshold) {
                 const taxablePart = Math.min(currentAmount, totalAmount - threshold);
@@ -369,12 +377,12 @@
         // Insight Logic
         let insight = "";
         if (tcs > 0) {
-            insight = `A total of <strong>${formatINR(tcs)}</strong> is being blocked until you file your ITR. You can claim 100% of this back. `;
+            insight = `A total of <strong>${formatINR(tcs)}</strong> is being blocked until you file your ITR. You can claim 100% of this back as a tax credit. `;
             if (purpose === 'other' && currentAmount > 500000) {
-                insight += "Strategy: Split this transfer with family members to save the 20% TCS hit.";
+                insight += "Strategy: Split this transfer with family members across financial years to stay under the ₹7 Lakh threshold.";
             }
         } else {
-            insight = "Great! You are within the ₹10 Lakh annual threshold. No TCS is applicable for this transfer.";
+            insight = "Great! You are within the ₹7 Lakh annual threshold. No TCS is applicable for this transfer.";
         }
         elements.insightText.innerHTML = insight;
     }

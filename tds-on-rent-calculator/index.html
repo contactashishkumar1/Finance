@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TDS on Rent (Section 194-IB) Calculator | ArthCalculator</title>
-    <meta name="description" content="Calculate TDS on rent under Section 194-IB if your monthly rent exceeds ₹50,000. Find out the exact 5% or 20% TDS to deduct and pay to the government.">
+    <meta name="description" content="Calculate TDS on rent under Section 194-IB if your monthly rent exceeds ₹50,000. Find out the exact 2% or 20% TDS to deduct and pay to the government.">
     <meta name="keywords" content="tds on rent calculator, section 194-ib calculator, 194-ib tds rate, rent tds calculator, landlord pan tds, tenant rent tds deduction">
     <meta name="author" content="ArthCalculator">
     <meta name="last-modified" content="2026-08-02">
@@ -32,7 +32,7 @@
   "@type": "WebPage",
   "name": "TDS on Rent (Section 194-IB) Calculator",
   "url": "https://arthcalculator.in/tds-on-rent-calculator/",
-  "description": "Calculate the 5% or 20% TDS to be deducted on rent exceeding \u20b950,000 per month."
+  "description": "Calculate the 2% or 20% TDS to be deducted on rent exceeding \u20b950,000 per month."
 }
 
     </script>
@@ -347,8 +347,8 @@
                                 </tr>
                                 <tr class="hover:bg-slate-50 transition-colors">
                                     <td class="p-4 border-b border-slate-100 font-medium">Rent > ₹50,000/month & PAN Provided</td>
-                                    <td class="p-4 border-b border-slate-100 font-bold text-blue-600">5%</td>
-                                    <td class="p-4 border-b border-slate-100">Deduct 5% from total annual rent in the final month.</td>
+                                    <td class="p-4 border-b border-slate-100 font-bold text-blue-600">2%</td>
+                                    <td class="p-4 border-b border-slate-100">Deduct 2% from total annual rent in the final month.</td>
                                 </tr>
                                 <tr class="hover:bg-slate-50 transition-colors">
                                     <td class="p-4 border-b border-slate-100 font-medium">Rent > ₹50,000/month & PAN NOT Provided</td>
@@ -372,10 +372,10 @@
                         <p class="text-sm">
                             Suppose you pay a rent of ₹60,000 per month for 12 months. <br>
                             Total Rent = ₹7,20,000. <br>
-                            TDS @ 5% = ₹36,000. <br>
+                            TDS @ 2% = ₹14,400. <br>
                             For 11 months (April to Feb), you pay the landlord the full ₹60,000. <br>
-                            In March, you deduct the ₹36,000 TDS. The rent you pay the landlord for March will be: <strong>₹60,000 - ₹36,000 = ₹24,000</strong>.<br>
-                            You then deposit the ₹36,000 to the government via Form 26QC before April 30.
+                            In March, you deduct the ₹14,400 TDS. The rent you pay the landlord for March will be: <strong>₹60,000 - ₹14,400 = ₹45,600</strong>.<br>
+                            You then deposit the ₹14,400 to the government via Form 26QC before April 30.
                         </p>
                     </div>
                 </div>
@@ -403,7 +403,7 @@
                         <svg class="chevron flex-shrink-0 w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </summary>
                     <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4 mt-1">
-                        The TDS rate is 5% if the landlord has provided a PAN. If the landlord does not provide a PAN, the TDS rate increases to 20%.
+                        The TDS rate is 2% (reduced from 5% under Budget 2024/2026 rules) if the landlord has provided a PAN. If the landlord does not provide a PAN, the TDS rate is 20%.
                     </div>
                 </details>
 
@@ -677,7 +677,7 @@
 
                 if (rent > 50000) {
                     warnRent.classList.add('hidden');
-                    tdsRate = hasPan ? 0.05 : 0.20;
+                    tdsRate = hasPan ? 0.02 : 0.20;
                     tdsAmount = totalRent * tdsRate;
                     
                     // Cap TDS if no PAN
@@ -693,7 +693,7 @@
 
                 // UI Updates
                 outTDS.innerText = formatINR(tdsAmount);
-                outRate.innerText = tdsRate === 0 ? "0% (Not Applicable)" : (hasPan ? "5%" : "20%");
+                outRate.innerText = tdsRate === 0 ? "0% (Not Applicable)" : (hasPan ? "2% (Budget 2026/2024 Rule)" : "20%");
                 if(isCapped) {
                     outRate.innerText = "20% (Capped at 1 Month Rent)";
                 }

@@ -203,9 +203,11 @@
                         <select id="categorySelect" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all bg-white text-slate-700">
                             <option value="194I_Rent_Land" data-rate="10" data-threshold="240000">194I: Rent (Land/Building) - 10%</option>
                             <option value="194I_Rent_Plant" data-rate="2" data-threshold="240000">194I: Rent (Plant/Machinery) - 2%</option>
+                            <option value="194IB_Rent_Ind" data-rate="2" data-threshold="50000">194-IB: Rent by Individual/HUF (>₹50k/mo) - 2%</option>
                             <option value="194J_Professional" data-rate="10" data-threshold="30000" selected>194J: Professional Fees - 10%</option>
                             <option value="194J_Technical" data-rate="2" data-threshold="30000">194J: Technical Services - 2%</option>
-                            <option value="194H_Commission" data-rate="5" data-threshold="15000">194H: Commission / Brokerage - 5%</option>
+                            <option value="194H_Commission" data-rate="2" data-threshold="15000">194H: Commission / Brokerage - 2%</option>
+                            <option value="194M_Contractor" data-rate="2" data-threshold="5000000">194M: Contractor / Commission by Ind/HUF - 2%</option>
                             <option value="194C_Contractor_Ind" data-rate="1" data-threshold="30000">194C: Contractor (Individual/HUF) - 1%</option>
                             <option value="194C_Contractor_Oth" data-rate="2" data-threshold="30000">194C: Contractor (Others) - 2%</option>
                             <option value="194A_Interest" data-rate="10" data-threshold="40000">194A: Interest (Other than Bank) - 10%</option>
@@ -320,12 +322,14 @@
                                     </tr>
                                 </thead>
                                 <tbody id="projectionTable">
-                                    <tr><td class="p-3 border-b border-slate-50">194I</td><td class="p-3 border-b border-slate-50">Rent (Bldg)</td><td class="p-3 border-b border-slate-50 text-right">10%</td><td class="p-3 border-b border-slate-50 text-right">2,40,000</td></tr>
-                                    <tr><td class="p-3 border-b border-slate-50">194J</td><td class="p-3 border-b border-slate-50">Professional Fees</td><td class="p-3 border-b border-slate-50 text-right">10%</td><td class="p-3 border-b border-slate-50 text-right">30,000</td></tr>
-                                    <tr><td class="p-3 border-b border-slate-50">194H</td><td class="p-3 border-b border-slate-50">Commission</td><td class="p-3 border-b border-slate-50 text-right">5%</td><td class="p-3 border-b border-slate-50 text-right">15,000</td></tr>
-                                    <tr><td class="p-3 border-b border-slate-50">194C</td><td class="p-3 border-b border-slate-50">Contractors</td><td class="p-3 border-b border-slate-50 text-right">1% / 2%</td><td class="p-3 border-b border-slate-50 text-right">30,000</td></tr>
-                                    <tr><td class="p-3 border-b border-slate-50">194A</td><td class="p-3 border-b border-slate-50">Interest</td><td class="p-3 border-b border-slate-50 text-right">10%</td><td class="p-3 border-b border-slate-50 text-right">40,000</td></tr>
-                                    <tr><td class="p-3 border-b border-slate-50">194Q</td><td class="p-3 border-b border-slate-50">Purchase Goods</td><td class="p-3 border-b border-slate-50 text-right">0.1%</td><td class="p-3 border-b border-slate-50 text-right">50,00,000</td></tr>
+                                    <tr><td class="p-3 border-b border-slate-50">194I</td><td class="p-3 border-b border-slate-50">Rent (Land/Building)</td><td class="p-3 border-b border-slate-50 text-right font-semibold text-slate-700">10%</td><td class="p-3 border-b border-slate-50 text-right">2,40,000</td></tr>
+                                    <tr><td class="p-3 border-b border-slate-50">194-IB</td><td class="p-3 border-b border-slate-50">Rent by Ind/HUF</td><td class="p-3 border-b border-slate-50 text-right font-semibold text-blue-600">2%</td><td class="p-3 border-b border-slate-50 text-right">50,000 / mo</td></tr>
+                                    <tr><td class="p-3 border-b border-slate-50">194J</td><td class="p-3 border-b border-slate-50">Professional Fees</td><td class="p-3 border-b border-slate-50 text-right font-semibold text-slate-700">10%</td><td class="p-3 border-b border-slate-50 text-right">30,000</td></tr>
+                                    <tr><td class="p-3 border-b border-slate-50">194H</td><td class="p-3 border-b border-slate-50">Commission / Brokerage</td><td class="p-3 border-b border-slate-50 text-right font-semibold text-blue-600">2%</td><td class="p-3 border-b border-slate-50 text-right">15,000</td></tr>
+                                    <tr><td class="p-3 border-b border-slate-50">194M</td><td class="p-3 border-b border-slate-50">Contractor by Ind/HUF</td><td class="p-3 border-b border-slate-50 text-right font-semibold text-blue-600">2%</td><td class="p-3 border-b border-slate-50 text-right">50,00,000</td></tr>
+                                    <tr><td class="p-3 border-b border-slate-50">194C</td><td class="p-3 border-b border-slate-50">Contractors</td><td class="p-3 border-b border-slate-50 text-right font-semibold text-slate-700">1% / 2%</td><td class="p-3 border-b border-slate-50 text-right">30,000</td></tr>
+                                    <tr><td class="p-3 border-b border-slate-50">194A</td><td class="p-3 border-b border-slate-50">Interest (Other than Bank)</td><td class="p-3 border-b border-slate-50 text-right font-semibold text-slate-700">10%</td><td class="p-3 border-b border-slate-50 text-right">40,000</td></tr>
+                                    <tr><td class="p-3 border-b border-slate-50">194Q</td><td class="p-3 border-b border-slate-50">Purchase of Goods</td><td class="p-3 border-b border-slate-50 text-right font-semibold text-slate-700">0.1%</td><td class="p-3 border-b border-slate-50 text-right">50,00,000</td></tr>
                                 </tbody>
                             </table>
                         </div>
