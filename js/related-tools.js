@@ -364,13 +364,6 @@
         "keys": "dcf dcf calculator india – intrinsic value & fair price calculator trading formula returns math calculation india 2026"
     },
     {
-        "name": "DCF Intrinsic Stock Valuation Calculator",
-        "url": "/dcf-valuation-calculator/",
-        "icon": "🧮",
-        "category": "trading",
-        "keys": "dcf valuation calculator dcf intrinsic stock valuation calculator trading formula returns math calculation india 2026"
-    },
-    {
         "name": "DSCR Calculator – Debt Service Coverage Ratio India Calculator",
         "url": "/dscr/",
         "icon": "🧮",
@@ -441,18 +434,11 @@
         "keys": "dividend tax calculator dividend tax calculator tax formula returns math calculation india 2026"
     },
     {
-        "name": "Dividend Yield Calculator",
-        "url": "/dividend-yield-calculator/",
-        "icon": "🧮",
-        "category": "investment",
-        "keys": "dividend yield calculator dividend yield calculator investment formula returns math calculation india 2026"
-    },
-    {
-        "name": "Dividend Yield Calculator India – Calculate Stock Dividend Income Calculator",
+        "name": "Dividend Yield Calculator India – Calculate Stock Dividend Income",
         "url": "/dividend-yield/",
-        "icon": "🧮",
+        "icon": "📈",
         "category": "investment",
-        "keys": "dividend yield dividend yield calculator india – calculate stock dividend income calculator investment formula returns math calculation india 2026"
+        "keys": "dividend yield dividend yield calculator india stock income yield payout growth returns math calculation 2026"
     },
     {
         "name": "Dividend Yield on Cost Calculator",
@@ -1953,25 +1939,11 @@
         "keys": "sgb returns calculator sovereign gold bond sgb returns calculator investment formula returns math calculation india 2026"
     },
     {
-        "name": "Stamp Duty & Property Registration Fee Calculator",
-        "url": "/stamp-duty-property-registration-fee/",
-        "icon": "🏠",
-        "category": "trading",
-        "keys": "stamp duty property registration fee stamp duty & property registration fee calculator trading formula returns math calculation india 2026"
-    },
-    {
-        "name": "Stamp Duty & Registration Calculator",
-        "url": "/stamp-duty-calculator/",
-        "icon": "🧮",
-        "category": "business",
-        "keys": "stamp duty calculator stamp duty & registration calculator business formula returns math calculation india 2026"
-    },
-    {
-        "name": "Stamp Duty Calculator India – Property Registration Fees & Charges Calculator",
+        "name": "Stamp Duty & Property Registration Calculator",
         "url": "/stamp-duty/",
-        "icon": "🧮",
+        "icon": "🏠",
         "category": "business",
-        "keys": "stamp duty stamp duty calculator india – property registration fees & charges calculator business formula returns math calculation india 2026"
+        "keys": "stamp duty stamp duty calculator india property registration fees charges state wise rates 2026"
     },
     {
         "name": "Startup Burn Rate & Runway Calculator",
@@ -2177,18 +2149,11 @@
         "keys": "vacation goal vacation goal calculator india – travel savings planner calculator investment formula returns math calculation india 2026"
     },
     {
-        "name": "WACC Calculator",
-        "url": "/wacc-calculator/",
-        "icon": "🧮",
-        "category": "trading",
-        "keys": "wacc calculator wacc calculator trading formula returns math calculation india 2026"
-    },
-    {
-        "name": "WACC Calculator India – Weighted Average Cost of Capital Calculator",
+        "name": "WACC Calculator India – Weighted Average Cost of Capital",
         "url": "/wacc/",
         "icon": "🧮",
         "category": "trading",
-        "keys": "wacc wacc calculator india – weighted average cost of capital calculator trading formula returns math calculation india 2026"
+        "keys": "wacc wacc calculator india weighted average cost of capital cost of debt cost of equity formula returns math calculation 2026"
     },
     {
         "name": "Wealth Projection Calculator India – Forecast Your Future Worth Calculator",

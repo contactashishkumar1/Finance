@@ -235,7 +235,7 @@
 
                 <!-- Related Calculators CTA Hub -->
                 
-<h2>Legal Framework, <a href="/stamp-duty-calculator/" class="text-blue-600 font-medium hover:underline">Stamp Duty</a> & Regulatory Clearances</h2>
+<h2>Legal Framework, <a href="/stamp-duty/" class="text-blue-600 font-medium hover:underline">Stamp Duty</a> & Regulatory Clearances</h2>
 <p>Executing investments in Credit Card Balance Transfer involves navigating statutory legal frameworks, state revenue laws, and environmental regulations in India:</p>
 <ul class="list-disc pl-6 space-y-2">
     <li><strong>RERA Compliance & Title Verification:</strong> Under the Real Estate (Regulation and Development) Act (RERA), verifying project registration numbers, approved building sanctions, and 30-year encumbrance certificates protects buyers from construction delays and title disputes.</li>
@@ -366,7 +366,12 @@
     <div id="footer"></div>
     <script src="/js/search.js" defer></script>
     <script>
-        fetch("/navbar.html").then(r => r.text()).then(t => { document.getElementById("navbar").innerHTML = t; });
+        fetch('/navbar.html').then(r => r.text()).then(h => {
+        document.getElementById('navbar').innerHTML = h;
+        const btn = document.getElementById('menuBtn');
+        const menu = document.getElementById('mobileMenu');
+        if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    });
         fetch("/footer.html").then(r => r.text()).then(t => { document.getElementById("footer").innerHTML = t; });
     </script>
 </body>
