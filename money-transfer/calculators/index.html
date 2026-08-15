@@ -50,8 +50,157 @@
 
     <!-- Schema: FAQPage -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between an exchange rate and a transfer fee?","acceptedAnswer":{"@type":"Answer","text":"A transfer fee is a direct charge applied by a provider for processing a transaction, usually stated upfront as a flat amount or percentage. An exchange rate determines how much of the destination currency you receive for your sending currency. Providers often apply a margin to the exchange rate, which acts as an indirect fee."}},{"@type":"Question","name":"Why does the exchange rate I see on Google differ from what my provider offers?","acceptedAnswer":{"@type":"Answer","text":"The rate shown on independent search engines is typically the mid-market rate, which is the midpoint between global buy and sell rates. Most transfer providers do not offer this exact rate to retail customers; instead, they apply a markup or margin to generate revenue."}},{"@type":"Question","name":"What is an exchange rate markup?","acceptedAnswer":{"@type":"Answer","text":"An exchange rate markup is the percentage difference between the true mid-market exchange rate and the rate a transfer provider offers you. This difference is kept by the provider as profit."}},{"@type":"Question","name":"How do fixed fees differ from percentage-based fees?","acceptedAnswer":{"@type":"Answer","text":"A fixed fee is a set amount charged regardless of the transfer size, making it generally more cost-effective for large transfers. A percentage-based fee scales with the amount you send, meaning larger transfers incur higher fees."}},{"@type":"Question","name":"Why is the 'amount received' sometimes lower than expected?","acceptedAnswer":{"@type":"Answer","text":"The received amount can be lower than expected due to hidden intermediary bank fees, receiving bank charges, or if the provider's exchange rate fluctuated between the time you initiated the transfer and when it was processed."}},{"@type":"Question","name":"Are international wire transfers from banks usually more expensive than specialised providers?","acceptedAnswer":{"@type":"Answer","text":"Yes, traditional bank wires typically involve higher flat fees and wider exchange rate markups compared to digital money transfer specialists. They may also incur additional intermediary bank fees."}},{"@type":"Question","name":"What is an effective exchange rate?","acceptedAnswer":{"@type":"Answer","text":"The effective exchange rate is the true cost of your transfer expressed as an exchange rate, accounting for both the offered rate and any upfront fees. It represents the actual amount of destination currency received per unit of sending currency sent."}},{"@type":"Question","name":"How can I calculate the total cost of my transfer?","acceptedAnswer":{"@type":"Answer","text":"The total cost includes both the upfront transfer fee and the exchange rate markup. You calculate it by determining what you would have received at the mid-market rate with zero fees, and subtracting the actual amount your provider is delivering."}},{"@type":"Question","name":"Why do some providers claim to have 'zero fees'?","acceptedAnswer":{"@type":"Answer","text":"Providers claiming 'zero fees' typically mean they charge no upfront transfer fee. However, they almost always make money by applying a larger margin to the exchange rate, making the transfer 'fee-free' but not 'cost-free'."}},{"@type":"Question","name":"Does the transfer amount affect the fee structure?","acceptedAnswer":{"@type":"Answer","text":"Often, yes. Many providers lower their percentage fee or offer tighter exchange rate margins for larger transfer amounts, while smaller transfers may attract higher proportional fees."}},{"@type":"Question","name":"How do intermediary bank fees affect wire transfers?","acceptedAnswer":{"@type":"Answer","text":"When sending money via the SWIFT network, intermediary banks that help route the funds may deduct a fee from the principal amount. This means the recipient gets less unless the sender specifically chooses to cover all intermediary charges (a 'OUR' instruction)."}},{"@type":"Question","name":"Should I focus more on the fee or the exchange rate?","acceptedAnswer":{"@type":"Answer","text":"Neither in isolation. You should focus entirely on the 'amount received' for the specific amount you wish to send. A provider with a high fee but an excellent exchange rate may deliver more money than a provider with zero fees but a poor exchange rate."}},{"@type":"Question","name":"What is the mid-market exchange rate?","acceptedAnswer":{"@type":"Answer","text":"The mid-market rate is the midpoint between the buy and sell prices of two currencies in global markets. It is the fairest exchange rate and the benchmark against which all transfer markups should be measured."}},{"@type":"Question","name":"How do I compare two different money transfer providers accurately?","acceptedAnswer":{"@type":"Answer","text":"The most accurate way to compare providers is to enter the exact amount you wish to send into both platforms at the same time and compare the final net amount the recipient will receive."}},{"@type":"Question","name":"Do weekend transfers affect the exchange rate applied?","acceptedAnswer":{"@type":"Answer","text":"Yes, currency markets close on weekends. Providers typically 'freeze' their rates for the weekend, often applying a slightly wider margin to protect themselves against the risk of the market opening at a significantly different rate on Monday."}},{"@type":"Question","name":"Can exchange rate margins be considered a hidden fee?","acceptedAnswer":{"@type":"Answer","text":"Yes, consumer advocates widely consider exchange rate margins a form of hidden fee, because the true cost is obscured within the conversion math rather than being stated clearly as a separate charge."}},{"@type":"Question","name":"How often do exchange rates change during a transfer process?","acceptedAnswer":{"@type":"Answer","text":"Exchange rates fluctuate constantly during market hours. Some providers offer a 'guaranteed rate' for a specified period (e.g., 24-48 hours) to protect you from volatility while you arrange payment."}},{"@type":"Question","name":"Is it generally cheaper to send large amounts or small amounts?","acceptedAnswer":{"@type":"Answer","text":"As a percentage of the total transfer, it is often more cost-effective to send large amounts. Fixed fees become a smaller percentage of the total, and providers often offer better exchange rate margins for significant volumes."}}]
-    </script>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between an exchange rate and a transfer fee?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A transfer fee is a direct charge applied by a provider for processing a transaction, usually stated upfront as a flat amount or percentage. An exchange rate determines how much of the destination currency you receive for your sending currency. Providers often apply a margin to the exchange rate, which acts as an indirect fee."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the exchange rate I see on Google differ from what my provider offers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The rate shown on independent search engines is typically the mid-market rate, which is the midpoint between global buy and sell rates. Most transfer providers do not offer this exact rate to retail customers; instead, they apply a markup or margin to generate revenue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is an exchange rate markup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An exchange rate markup is the percentage difference between the true mid-market exchange rate and the rate a transfer provider offers you. This difference is kept by the provider as profit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do fixed fees differ from percentage-based fees?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A fixed fee is a set amount charged regardless of the transfer size, making it generally more cost-effective for large transfers. A percentage-based fee scales with the amount you send, meaning larger transfers incur higher fees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the 'amount received' sometimes lower than expected?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The received amount can be lower than expected due to hidden intermediary bank fees, receiving bank charges, or if the provider's exchange rate fluctuated between the time you initiated the transfer and when it was processed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are international wire transfers from banks usually more expensive than specialised providers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, traditional bank wires typically involve higher flat fees and wider exchange rate markups compared to digital money transfer specialists. They may also incur additional intermediary bank fees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is an effective exchange rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The effective exchange rate is the true cost of your transfer expressed as an exchange rate, accounting for both the offered rate and any upfront fees. It represents the actual amount of destination currency received per unit of sending currency sent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I calculate the total cost of my transfer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The total cost includes both the upfront transfer fee and the exchange rate markup. You calculate it by determining what you would have received at the mid-market rate with zero fees, and subtracting the actual amount your provider is delivering."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do some providers claim to have 'zero fees'?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Providers claiming 'zero fees' typically mean they charge no upfront transfer fee. However, they almost always make money by applying a larger margin to the exchange rate, making the transfer 'fee-free' but not 'cost-free'."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the transfer amount affect the fee structure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Often, yes. Many providers lower their percentage fee or offer tighter exchange rate margins for larger transfer amounts, while smaller transfers may attract higher proportional fees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do intermediary bank fees affect wire transfers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When sending money via the SWIFT network, intermediary banks that help route the funds may deduct a fee from the principal amount. This means the recipient gets less unless the sender specifically chooses to cover all intermediary charges (a 'OUR' instruction)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I focus more on the fee or the exchange rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Neither in isolation. You should focus entirely on the 'amount received' for the specific amount you wish to send. A provider with a high fee but an excellent exchange rate may deliver more money than a provider with zero fees but a poor exchange rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the mid-market exchange rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The mid-market rate is the midpoint between the buy and sell prices of two currencies in global markets. It is the fairest exchange rate and the benchmark against which all transfer markups should be measured."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I compare two different money transfer providers accurately?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most accurate way to compare providers is to enter the exact amount you wish to send into both platforms at the same time and compare the final net amount the recipient will receive."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do weekend transfers affect the exchange rate applied?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, currency markets close on weekends. Providers typically 'freeze' their rates for the weekend, often applying a slightly wider margin to protect themselves against the risk of the market opening at a significantly different rate on Monday."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can exchange rate margins be considered a hidden fee?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, consumer advocates widely consider exchange rate margins a form of hidden fee, because the true cost is obscured within the conversion math rather than being stated clearly as a separate charge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often do exchange rates change during a transfer process?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Exchange rates fluctuate constantly during market hours. Some providers offer a 'guaranteed rate' for a specified period (e.g., 24-48 hours) to protect you from volatility while you arrange payment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it generally cheaper to send large amounts or small amounts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As a percentage of the total transfer, it is often more cost-effective to send large amounts. Fixed fees become a smaller percentage of the total, and providers often offer better exchange rate margins for significant volumes."
+      }
+    }
+  ]
+}
+</script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"

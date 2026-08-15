@@ -285,7 +285,7 @@
                     <div class="grid sm:grid-cols-2 gap-3">
                         <a href="/payback-period-calculator/" class="bg-white hover:bg-blue-600 hover:text-white text-slate-800 p-4 rounded-xl font-bold text-sm transition-all border border-slate-200 hover:border-blue-600 flex items-center justify-between group shadow-sm"><span>Discounted Payback Calculator</span><span class="group-hover:translate-x-1 transition-transform">→</span></a>
 <a href="/time-value-of-money/" class="bg-white hover:bg-blue-600 hover:text-white text-slate-800 p-4 rounded-xl font-bold text-sm transition-all border border-slate-200 hover:border-blue-600 flex items-center justify-between group shadow-sm"><span>Time Value of Money Calculator</span><span class="group-hover:translate-x-1 transition-transform">→</span></a>
-<a href="/dcf-valuation-calculator/" class="bg-white hover:bg-blue-600 hover:text-white text-slate-800 p-4 rounded-xl font-bold text-sm transition-all border border-slate-200 hover:border-blue-600 flex items-center justify-between group shadow-sm"><span>DCF Valuation Calculator</span><span class="group-hover:translate-x-1 transition-transform">→</span></a>
+<a href="/dcf/" class="bg-white hover:bg-blue-600 hover:text-white text-slate-800 p-4 rounded-xl font-bold text-sm transition-all border border-slate-200 hover:border-blue-600 flex items-center justify-between group shadow-sm"><span>DCF Valuation Calculator</span><span class="group-hover:translate-x-1 transition-transform">→</span></a>
 <a href="/wacc/" class="bg-white hover:bg-blue-600 hover:text-white text-slate-800 p-4 rounded-xl font-bold text-sm transition-all border border-slate-200 hover:border-blue-600 flex items-center justify-between group shadow-sm"><span>WACC Calculator</span><span class="group-hover:translate-x-1 transition-transform">→</span></a>
                     </div>
                 </div>
@@ -366,7 +366,12 @@
     <div id="footer"></div>
     <script src="/js/search.js" defer></script>
     <script>
-        fetch("/navbar.html").then(r => r.text()).then(t => { document.getElementById("navbar").innerHTML = t; });
+        fetch('/navbar.html').then(r => r.text()).then(h => {
+        document.getElementById('navbar').innerHTML = h;
+        const btn = document.getElementById('menuBtn');
+        const menu = document.getElementById('mobileMenu');
+        if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    });
         fetch("/footer.html").then(r => r.text()).then(t => { document.getElementById("footer").innerHTML = t; });
     </script>
 </body>
