@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Section 44ADA Calculator FY 2026-27: Freelancer Tax</title>
-    <meta name="description" content="Calculate your income tax under Section 44ADA. See how much tax you can save as a freelancer or professional without maintaining complex books of accounts.">
+    <meta name="description" content="Calculate presumptive tax under Section 44ADA for professionals and freelancers. Compute tax savings without maintaining balance sheets.">
     <meta name="keywords" content="44ADA calculator, presumptive taxation, freelancer tax calculator, income tax for professionals, 50% profit rule, FY 2026-27">
     <meta name="author" content="ArthCalculator">
     <meta name="last-modified" content="2026-08-02">
@@ -589,6 +589,7 @@
 
         const elements = {
             grossReceipts: document.getElementById('grossReceipts'),
+            cashReceipts: document.getElementById('cashReceipts'),
             actualExpenses: document.getElementById('actualExpenses'),
             taxRegime: document.getElementById('taxRegime'),
             limitWarning: document.getElementById('limitWarning'),
@@ -746,7 +747,7 @@
         fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; }).catch(() => {});
 
         let timeout = null;
-        [elements.grossReceipts, elements.actualExpenses, elements.taxRegime].forEach(input => {
+        [elements.grossReceipts, elements.cashReceipts, elements.actualExpenses, elements.taxRegime].forEach(input => {
             input.addEventListener('input', () => { clearTimeout(timeout); timeout = setTimeout(calculate, 100); });
             input.addEventListener('change', calculate);
         });

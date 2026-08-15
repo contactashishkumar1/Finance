@@ -296,8 +296,8 @@
                         <thead>
                             <tr class="bg-slate-50 text-slate-500 font-bold uppercase text-[10px]">
                                 <th class="p-4 border-b">Category</th>
-                                <th class="p-4 border-b">Rate (Up to ₹7L)</th>
-                                <th class="p-4 border-b">Rate (Above ₹7L)</th>
+                                <th class="p-4 border-b">Rate (Up to ₹10L)</th>
+                                <th class="p-4 border-b">Rate (Above ₹10L)</th>
                             </tr>
                         </thead>
                         <tbody class="text-sm text-slate-600 divide-y divide-slate-50">
@@ -391,7 +391,7 @@
         const totalAmount = currentAmount + prevAmount;
         
         let tcs = 0;
-        const threshold = 700000; // Statutory ₹7 Lakh threshold under Sec 206C(1G)
+        const threshold = 1000000; // Statutory ₹10 Lakh threshold under Sec 206C(1G)
 
         // TCS Logic under Section 206C(1G)
         if (purpose === 'tour') {
@@ -452,10 +452,10 @@
         if (tcs > 0) {
             insight = `A total of <strong>${formatINR(tcs)}</strong> is being blocked until you file your ITR. You can claim 100% of this back as a tax credit. `;
             if (purpose === 'other' && currentAmount > 500000) {
-                insight += "Strategy: Split this transfer with family members across financial years to stay under the ₹7 Lakh threshold.";
+                insight += "Strategy: Split this transfer with family members across financial years to stay under the ₹10 Lakh threshold.";
             }
         } else {
-            insight = "Great! You are within the ₹7 Lakh annual threshold. No TCS is applicable for this transfer.";
+            insight = "Great! You are within the ₹10 Lakh annual threshold. No TCS is applicable for this transfer.";
         }
         elements.insightText.innerHTML = insight;
     }
