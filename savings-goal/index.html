@@ -27,36 +27,8 @@
     <meta property="og:site_name" content="ArthCalculator">
 
     <!-- Schema Markup: WebPage -->
-    <script type="application/ld+json">
     
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Savings Goal Calculator India (2026)",
-  "url": "https://arthcalculator.in/savings-goal/",
-  "description": "Calculate the monthly investment required to reach a specific financial target considering current savings and returns.",
-  "datePublished": "2024-03-08",
-  "dateModified": "2026-04-11"
-}
-
-    </script>
-
-    <!-- Schema Markup: HowTo -->
-    <!-- Schema Markup: Organization -->
-    <!-- Schema Markup: Breadcrumb -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
-        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
-        { "@type": "ListItem", "position": 3, "name": "Savings Goal Calculator", "item": "https://arthcalculator.in/savings-goal/" }
-      ]
-    }
-    </script>
-
-    <style>
+<style>
         body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
         .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
         .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
@@ -71,19 +43,124 @@
         .btn-outline { border: 1px solid #e2e8f0; transition: all 0.2s; }
         .btn-outline:hover { border-color: #2563eb; color: #2563eb; background: #eff6ff; }
     </style>
-
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Savings Goal Calculator 2026: Calculate Required Monthly SIP",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "INR"
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Savings Goal Calculator",
+      "item": "https://arthcalculator.in/savings-goal/"
+    }
+  ]
+}
+    </script>
+
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Savings Goal Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/savings-goal/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a savings goal calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a financial tool that tells you the fixed monthly investment needed to reach a specific monetary target within a set timeframe."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "How much should I save monthly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your goal and income. A common rule is the 50/30/20 rule, where you save 20% of your take-home pay. For specific targets, enter your values in the calculator above."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to calculate savings goal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the reverse compounding formula: PMT = FV / [((1 + r)^n - 1) / r * (1 + r)], where FV is the future value, r is the monthly interest rate, and n is the total number of months."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is SIP for goals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Systematic Investment Plan (SIP) helps you invest fixed amounts into mutual funds monthly. It is ideal for reaching financial goals because it offers rupee cost averaging."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How inflation affects savings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Inflation reduces the \"real\" value of your savings. A \u20b91 Crore goal today may only buy \u20b960 Lakhs worth of goods in 10 years. Always adjust your target upwards using our Inflation tool ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Best return rate assumption in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For long-term equity (10+ years), a conservative assumption is 12% CAGR. For debt or FDs, 6-7% is more realistic."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I reach \u20b91 Crore with \u20b910,000 monthly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, at a 12% return rate, an SIP of \u20b910,000 will take approximately 20 years to reach \u20b91 Crore. Starting early is key."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the power of compounding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Compounding is earning interest on interest. Over time, the returns generated by your investments start making their own returns, exponentially growing your wealth."
+      }
+    }
+  ]
 }
     </script>
 </head>
@@ -93,7 +170,7 @@
     <!-- Header & Breadcrumbs -->
     <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
         <div class="max-w-6xl mx-auto px-4">
-            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
                 <ol class="flex list-none p-0">
                     <li class="flex items-center">
                         <a href="/" class="hover:text-blue-600 transition-colors">Home</a>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sequence of Returns Risk Simulator: Retirement Stress Test</title>
-    <meta name="description" content="Stress-test your retirement portfolio against Sequence of Returns Risk (SRR). Compare a bull-start vs a bear-start market to see if your corpus survives 25 years.">
+    <meta name="description" content="Stress-test your retirement corpus against Sequence of Returns Risk (SRR). Compare bull vs bear start cycles to ensure retirement longevity.">
     <meta name="keywords" content="sequence of returns risk calculator india, srr simulator, retirement stress test, 4 percent rule india 2026, fire calculator srr, portfolio longevity calculator">
     <meta name="author" content="Ashish Kumar">
     <meta name="last-modified" content="2026-05-03">
@@ -32,19 +32,92 @@
         .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; color: #1e293b; }
         @media print { .no-print { display: none; } }
     </style>
-
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Sequence of Returns Risk Simulator: Retirement Stress Test",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "INR"
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Sequence of Returns Risk (SRR) Simulator",
+      "item": "https://arthcalculator.in/srr-simulator/"
+    }
+  ]
+}
+    </script>
+
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Sequence of Returns Risk (SRR) Simulator Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/srr-simulator/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What exactly is Sequence of Returns Risk?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's the risk of experiencing poor investment returns in the earliest years of your retirement. Because you are withdrawing capital, these early losses have a compounding negative effect that is impossible to recover from later."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the start of retirement the \"Danger Zone\"?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the first 3-5 years, your portfolio is at its peak value. A 20% crash on \u20b95 Cr is a loss of \u20b91 Cr. If you also withdraw \u20b920L for expenses, your base is permanently shrunk."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a 6% withdrawal rate safe in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Likely not. In an environment with 6% inflation, a 6% withdrawal rate requires your portfolio to consistently generate 12%+ returns just to stay flat. Any bad sequence will trigger a zero balance within 15 years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the 'Guardrail' withdrawal strategy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's a dynamic approach where you reduce your withdrawal amount by 10-20% during market crash years to preserve capital, and increase it when the market is at an all-time high."
+      }
+    }
+  ]
 }
     </script>
 </head>
@@ -53,17 +126,17 @@
 
     <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left text-pretty">
         <div class="max-w-6xl mx-auto px-4">
-            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start">
-                <ol class="flex list-none p-0 text-pretty">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
                     <li class="flex items-center">
                         <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="flex items-center text-pretty">
+                    <li class="flex items-center">
                         <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-slate-900 font-bold">SRR Stress Test Simulator</li>
+                    <li class="text-blue-600 font-bold">Sequence of Returns Risk (SRR) Simulator</li>
                 </ol>
             </nav>
 

@@ -21,133 +21,118 @@
     <meta property="og:image" content="https://arthcalculator.in/logo.png">
 
     <!-- Schema Markup -->
-    <script type="application/ld+json">
+    <!-- Breadcrumb Schema -->
     
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "In-Hand Salary Calculator India (2026)",
-  "description": "Professional calculator to estimate take-home salary from CTC including tax and EPF deductions for FY 2025-26.",
-  "url": "https://arthcalculator.in/in-hand-salary/"
-}
-
-    </script>
-
-    <script type="application/ld+json">
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
       "name": "In-Hand Salary Calculator",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0"
-      }
+      "item": "https://arthcalculator.in/in-hand-salary/"
     }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://arthcalculator.in/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Financial Calculators",
-        "item": "https://arthcalculator.in/calculators/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "In-Hand Salary Calculator",
-        "item": "https://arthcalculator.in/in-hand-salary/"
-      }
-      ]
-    }
+  ]
+}
     </script>
 
+    <!-- SoftwareApplication Schema -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is in-hand salary for ₹10 LPA?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For ₹10 LPA CTC, the in-hand salary is approximately ₹73,000 - ₹75,000 per month. This assumes Employer and Employee PF deductions and zero income tax due to the ₹12L rebate in the new regime."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is PF calculated on salary?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Employee PF is usually 12% of Basic Salary. In a CTC model, the employer also contributes 12%, which is deducted from the total CTC to reach the Gross Salary."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How to increase in-hand salary?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You can opt for the New Tax Regime if it offers lower tax. Also, structure salary components like 'Special Allowance' or 'Flexi Benefits' to manage taxable components."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is Section 87A Rebate?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Section 87A provides a rebate making your tax zero if taxable income is up to ₹12 Lakhs in the New Regime (FY 2025-26)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the difference between CTC and take-home salary?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "CTC (Cost to Company) is the total amount the company spends on you, including perks and employer PF. Take-home salary is what remains after statutory deductions like PF and Income Tax."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is standard deduction available in the new tax regime?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, a standard deduction of ₹75,000 is available for all salaried individuals under the New Tax Regime for FY 2025-26."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is Professional Tax (PT)?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Professional Tax is a state-level tax on professions and trades in India. It is usually a small amount (around ₹200/month) deducted from the salary by the employer and paid to the state government."
-          }
-        }
-      ]
-    }
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "In-Hand Salary Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/in-hand-salary/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
     </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-        input[type="range"] { accent-color: #2563eb; height: 6px; }
-        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-    </style>
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is in-hand salary for \u20b910 LPA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For \u20b910 LPA CTC, the in-hand salary is approximately \u20b973,000 - \u20b975,000 per month. This assumes Employer and Employee PF deductions and zero income tax due to the \u20b912L rebate in the new regime."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is PF calculated on salary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Employee PF is usually 12% of Basic Salary. In a CTC model, the employer also contributes 12%, which is deducted from the total CTC to reach the Gross Salary."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to increase in-hand salary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can opt for the New Tax Regime if it offers lower tax. Also, structure salary components like 'Special Allowance' or 'Flexi Benefits' to manage taxable components. Use our Salary Hike Calculator for appraisal planning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Section 87A Rebate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Section 87A provides a rebate making your tax zero if taxable income is up to \u20b912 Lakhs in the New Regime (FY 2025-26)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between CTC and take-home salary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CTC (Cost to Company) is the total amount the company spends on you, including perks and employer PF. Take-home salary is what remains after statutory deductions like PF and Income Tax."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is standard deduction available in the new tax regime?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, a standard deduction of \u20b975,000 is available for all salaried individuals under the New Tax Regime for FY 2025-26."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Professional Tax (PT)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Professional Tax is a small monthly deduction (usually \u20b9200) mandated by specific state governments in India. It is deducted from your gross salary to reach the net in-hand figure."
+      }
+    }
+  ]
+}
+    </script>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12">
 <div id="navbar"></div>
@@ -161,7 +146,7 @@
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="flex items-center">
-                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="text-blue-600 font-bold">In-Hand Salary Calculator</li>

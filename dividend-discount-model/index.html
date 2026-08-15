@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dividend Discount Model DDM Calculator (2026) – Gordon Growth Model</title>
-    <meta name="description" content="Calculate intrinsic stock value using Gordon Growth Dividend Discount Model (DDM) in 2026. Input annual dividend, expected dividend growth rate, and required return.">
+    <title>Dividend Discount Model (DDM) Calculator: Gordon Growth</title>
+    <meta name="description" content="Calculate intrinsic stock value using Gordon Growth Dividend Discount Model (DDM). Enter annual dividend, growth rate %, and required return.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://arthcalculator.in/dividend-discount-model/">
     
@@ -19,139 +19,126 @@
     <meta property="og:url" content="https://arthcalculator.in/dividend-discount-model/">
     <meta property="og:site_name" content="ArthCalculator">
     <meta property="og:image" content="https://arthcalculator.in/logo.png">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Dividend Discount Model DDM Calculator",
-      "url": "https://arthcalculator.in/dividend-discount-model/",
-      "description": "Calculate intrinsic stock valuation using Gordon Growth Dividend Model.",
-      "datePublished": "2026-08-08",
-      "dateModified": "2026-08-08"
-    }
-    </script>
+    <!-- Breadcrumb Schema -->
     
+    <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
       "name": "Dividend Discount Model DDM Calculator",
-      "applicationCategory": "FinanceApplication",
-      "operatingSystem": "Web",
-      "url": "https://arthcalculator.in/dividend-discount-model/",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "INR"
+      "item": "https://arthcalculator.in/dividend-discount-model/"
+    }
+  ]
+}
+    </script>
+
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Dividend Discount Model DDM Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/dividend-discount-model/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Dividend Discount Model (DDM)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Dividend Discount Model (DDM) values a stock by discounting its expected future dividend payments back to their present value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Gordon Growth Model formula?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Formula: Intrinsic Stock Value P0 = D1 / (r - g), where D1 = Next Year Dividend = D0 * (1 + g), r = Required Rate of Return (Cost of Equity), g = Constant Dividend Growth Rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if Dividend Growth Rate (g) is greater than Required Return (r)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Gordon Growth Model requires that the discount rate (r) must be strictly greater than the dividend growth rate (g). If g >= r, the mathematical formula breaks down."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which type of stocks are suitable for DDM valuation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "DDM is best suited for mature, stable, dividend-paying companies like blue-chip PSUs, FMCG giants, utility firms, and REITs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can DDM be used for tech growth companies that don't pay dividends?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Non-dividend-paying companies or high-growth tech firms reinvesting 100% of cash flows cannot be valued using DDM. Use DCF valuation instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Dividend Growth Rate (g) estimated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Growth rate can be estimated using the fundamental retention formula: g = ROE * Retention Ratio (1 - Payout Ratio)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Required Rate of Return (r)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Required Rate of Return (Cost of Equity) is calculated using CAPM: r = Risk-Free Rate + Beta * (Market Return - Risk-Free Rate)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Multi-Stage DDM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multi-stage DDM assumes a high initial dividend growth rate for 5-10 years followed by a lower, stable terminal dividend growth rate indefinitely."
       }
     }
+  ]
+}
     </script>
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://arthcalculator.in/"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Financial Calculators",
-        "item": "https://arthcalculator.in/calculators/"
-      },{
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Dividend Discount Model",
-        "item": "https://arthcalculator.in/dividend-discount-model/"
-      }]
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the Dividend Discount Model (DDM)?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The Dividend Discount Model (DDM) values a stock by discounting its expected future dividend payments back to their present value."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the Gordon Growth Model formula?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Formula: Intrinsic Stock Value P0 = D1 / (r - g), where D1 = Next Year Dividend = D0 * (1 + g), r = Required Rate of Return (Cost of Equity), g = Constant Dividend Growth Rate."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What happens if Dividend Growth Rate (g) is greater than Required Return (r)?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The Gordon Growth Model requires that the discount rate (r) must be strictly greater than the dividend growth rate (g). If g >= r, the mathematical formula breaks down."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which type of stocks are suitable for DDM valuation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "DDM is best suited for mature, stable, dividend-paying companies like blue-chip PSUs, FMCG giants, utility firms, and REITs."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can DDM be used for tech growth companies that don't pay dividends?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Non-dividend-paying companies or high-growth tech firms reinvesting 100% of cash flows cannot be valued using DDM. Use DCF valuation instead."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is Dividend Growth Rate (g) estimated?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Growth rate can be estimated using the fundamental retention formula: g = ROE * Retention Ratio (1 - Payout Ratio)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is Required Rate of Return (r)?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Required Rate of Return (Cost of Equity) is calculated using CAPM: r = Risk-Free Rate + Beta * (Market Return - Risk-Free Rate)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is Multi-Stage DDM?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Multi-stage DDM assumes a high initial dividend growth rate for 5-10 years followed by a lower, stable terminal dividend growth rate indefinitely."
-          }
-        }
-      ]
-    }
-    </script>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-        details summary { list-style: none; }
-        details summary::-webkit-details-marker { display: none; }
-        details[open] summary svg { transform: rotate(180deg); }
-    </style>
 </head>
 <body class="text-slate-800 antialiased selection:bg-blue-200">
     <div id="navbar"></div>
@@ -174,18 +161,18 @@
         
         <!-- Breadcrumb -->
         <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
-            <ol class="flex list-none p-0">
-                <li class="flex items-center">
-                    <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
-                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
-                </li>
-                <li class="flex items-center">
-                    <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
-                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
-                </li>
-                <li class="text-blue-600 font-bold">Dividend Discount Model</li>
-            </ol>
-        </nav>
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Dividend Discount Model DDM Calculator</li>
+                </ol>
+            </nav>
 
         <!-- Hero Section -->
         <div class="text-center max-w-3xl mx-auto mb-10">

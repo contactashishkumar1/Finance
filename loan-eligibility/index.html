@@ -23,136 +23,126 @@
     <meta property="og:site_name" content="ArthCalculator">
 
     <!-- Schema Markup: WebPage -->
-    <script type="application/ld+json">
     
+<!-- Schema Markup: FAQ -->
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Loan Eligibility Calculator India (2026)",
-  "description": "High-precision tool to calculate bank loan eligibility based on monthly income and debt obligations in India."
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Loan Eligibility Calculator",
+      "item": "https://arthcalculator.in/loan-eligibility/"
+    }
+  ]
 }
-
     </script>
 
-    <!-- Schema Markup: Breadcrumb -->
+    <!-- SoftwareApplication Schema -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
-        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
-        { "@type": "ListItem", "position": 3, "name": "Loan Eligibility", "item": "https://arthcalculator.in/loan-eligibility" }
-      ]
-    }
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Loan Eligibility Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/loan-eligibility/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
     </script>
 
-    <!-- Schema Markup: FAQ -->
+    <!-- FAQPage Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What salary is required for ₹50 lakh home loan?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Assuming 8.5% interest and 20-year tenure, the net monthly salary required is approx ₹75,000 to ₹85,000 if you have no other debts."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much loan can I get on ₹50,000 salary?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "On a ₹50,000 salary, banks allow max EMIs of ₹30,000. At 8.5% for 20 years, you could qualify for approx ₹34.5 Lakh."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do existing EMIs affect eligibility?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, heavily. Every rupee you pay for an existing loan reduces the disposable income available for the new loan."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the maximum loan tenure in India?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For Home Loans, the maximum tenure is typically 30 years. For Personal Loans, it is usually 5 years."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can joint applicants increase eligibility?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Banks combine the income of both applicants, which can nearly double your eligibility if both are high earners."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is loan eligibility same as EMI affordability?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Eligibility is what a bank is willing to give. Affordability is what you should take without affecting your savings like SIPs."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do banks verify income?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Banks verify income via salary slips (3-6 months), ITR (2-3 years), and bank statements showing regular salary credits."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the EMI per Rupee factor?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It is a mathematical ratio used by lenders to quickly calculate principal based on a target EMI. It changes with interest rates and tenure."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-        input[type="range"] { accent-color: #2563eb; height: 6px; }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .table-container::-webkit-scrollbar { height: 4px; }
-        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
-        .nav-link.active { color: #2563eb; font-weight: 600; }
-        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 2px; background-color: #2563eb; }
-        details summary { list-style: none; }
-        details summary::-webkit-details-marker { display: none; }
-        details[open] summary svg { transform: rotate(180deg); }
-        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
-        .btn-outline { border: 1px solid #e2e8f0; transition: all 0.2s; }
-        .btn-outline:hover { border-color: #2563eb; color: #2563eb; background: #eff6ff; }
-        select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748b'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25rem; }
-    </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Loan Eligibility Calculator India 2026: Maximum Loan Amount",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "INR"
+      "@type": "Question",
+      "name": "What salary is required for \u20b950 lakh home loan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Assuming 8.5% interest and 20-year tenure, the net monthly salary required is approx \u20b975,000 to \u20b985,000 if you have no other debts."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "How much loan can I get on \u20b950,000 salary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On a \u20b950,000 salary, banks allow max EMIs of \u20b930,000. At 8.5% for 20 years, you could qualify for approx \u20b934.5 Lakh."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do existing EMIs affect eligibility?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, heavily. Every rupee you pay for an existing loan reduces the \"disposable income\" available for the new loan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the maximum loan tenure in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For Home Loans, the maximum tenure is typically 30 years. For Personal Loans, it is usually 5 years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can joint applicants increase eligibility?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Banks combine the income of both applicants, which can nearly double your eligibility if both are high earners."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is loan eligibility same as EMI affordability?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Eligibility is what a bank is *willing* to give. Affordability is what you *should* take without affecting your savings like SIPs ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do banks verify income?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Banks verify income via salary slips (3-6 months), ITR (2-3 years), and bank statements showing regular salary credits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the \"EMI per Rupee\" factor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a mathematical ratio used by lenders to quickly calculate principal based on a target EMI. It changes with interest rates and tenure."
+      }
+    }
+  ]
 }
     </script>
 </head>
@@ -162,7 +152,7 @@
     <!-- Header & Breadcrumbs -->
     <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
         <div class="max-w-6xl mx-auto px-4">
-            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
                 <ol class="flex list-none p-0">
                     <li class="flex items-center">
                         <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
@@ -172,7 +162,7 @@
                         <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600 font-bold">Loan Eligibility</li>
+                    <li class="text-blue-600 font-bold">Loan Eligibility Calculator</li>
                 </ol>
             </nav>
 
@@ -285,7 +275,7 @@
 
                     <div id="insightsBox" class="bg-blue-50 p-4 rounded-xl border border-blue-100 text-sm text-blue-800 leading-relaxed mb-4"></div>
                     
-                    <p class="text-[10px] text-slate-400 italic">Disclaimer: This is an estimate based on FOIR norms. Actual bank eligibility depends on your credit score and stability.</p>
+                    <p class="text-[10px] text-slate-400 italic">Note: This is an estimate based on FOIR norms. Actual bank eligibility depends on your credit score and stability.</p>
                 </div>
             </div>
         </div>

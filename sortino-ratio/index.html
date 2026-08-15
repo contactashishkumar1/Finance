@@ -17,136 +17,86 @@
     <meta property="og:image" content="/favicon.ico">
     
     <!-- Schema Markup: WebPage -->
-    <script type="application/ld+json">
     
+<!-- Schema Markup: FAQ -->
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Sortino Ratio Calculator",
-  "description": "A professional financial tool to calculate Sortino Ratio and downside risk-adjusted returns."
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Sortino Ratio Calculator",
+      "item": "https://arthcalculator.in/sortino-ratio/"
+    }
+  ]
 }
-
     </script>
 
-    <!-- Schema Markup: Breadcrumb -->
+    <!-- SoftwareApplication Schema -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://arthcalculator.in/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Financial Calculators",
-          "item": "https://arthcalculator.in/calculators/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Sortino Ratio Calculator",
-          "item": "https://arthcalculator.in/sortino-ratio/"
-        }
-      ]
-    }
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Sortino Ratio Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/sortino-ratio/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
     </script>
 
-    <!-- Schema Markup: FAQ -->
+    <!-- FAQPage Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is a good Sortino Ratio?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A Sortino ratio above 1.0 is considered good, above 2.0 is very good, and above 3.0 is considered excellent."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is Sortino Ratio different from Sharpe Ratio?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The Sharpe Ratio uses total volatility (standard deviation), while the Sortino Ratio only uses downside volatility (downside deviation), ignoring upside gains."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            -webkit-tap-highlight-color: transparent;
-            scroll-behavior: smooth;
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .card-shadow {
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-        }
-        input[type="range"] {
-            accent-color: #2563eb;
-            height: 6px;
-        }
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        .table-container::-webkit-scrollbar {
-            height: 4px;
-        }
-        .table-container::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 10px;
-        }
-        details summary {
-            list-style: none;
-        }
-        details summary::-webkit-details-marker {
-            display: none;
-        }
-        details[open] summary svg {
-            transform: rotate(180deg);
-        }
-        .formula-box {
-            background: #f1f5f9;
-            padding: 1.5rem;
-            border-radius: 1rem;
-            font-family: 'Courier New', Courier, monospace;
-            overflow-x: auto;
-        }
-    </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Sortino Ratio Calculator 2026: Evaluate Risk-Adjusted Return",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "INR"
+      "@type": "Question",
+      "name": "1. What is Downside Deviation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Downside deviation is a measure of the volatility of returns that fall below a minimum acceptable return or risk-free rate. Unlike standard deviation, it only counts the \"bad\" variance that leads to losses."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "2. Why should I use Sortino instead of Sharpe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use Sortino when your investment has high \"upside volatility.\" For example, if you invest in a crypto asset or high-growth tech stock that often jumps up in value, a Sharpe ratio would penalize these gains as risk, whereas Sortino would ignore them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "3. Can the Sortino Ratio be negative?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If the investment return is less than the risk-free rate, the ratio becomes negative. This indicates that the investment is performing worse than a guaranteed safe return (like a bank FD or government bond)."
+      }
+    }
+  ]
 }
     </script>
 </head>
@@ -163,10 +113,10 @@
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="flex items-center">
-                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600">Sortino Ratio Calculator</li>
+                    <li class="text-blue-600 font-bold">Sortino Ratio Calculator</li>
                 </ol>
             </nav>
 
@@ -458,11 +408,6 @@
                     </details>
                 </div>
             </section>
-
-            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-center">
-                <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
-                The Sortino Ratio Calculator is provided for educational and informational purposes only. Investment returns and risk metrics are subject to market fluctuations. Past performance is not indicative of future results. Consult with a qualified financial advisor before making any investment decisions.
-            </div>
         </div>
     </main>
 

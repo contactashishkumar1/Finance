@@ -17,137 +17,118 @@
     <meta property="og:image" content="/favicon.ico">
     
     <!-- Schema Markup: WebPage -->
-    <script type="application/ld+json">
     
+<!-- Schema Markup: FAQ -->
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Education Planning Calculator India (2026)",
-  "description": "A high-precision financial tool to calculate future education costs and monthly investment goals."
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Education Planning Calculator",
+      "item": "https://arthcalculator.in/education-planning/"
+    }
+  ]
 }
-
     </script>
 
-    <!-- Schema Markup: Breadcrumb -->
+    <!-- SoftwareApplication Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Education Planning Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/education-planning/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-     "@context": "https://schema.org",
-     "@type": "BreadcrumbList",
-     "itemListElement": [
-      {
-       "@type": "ListItem",
-       "position": 1,
-       "name": "Home",
-       "item": "https://arthcalculator.in/"
-      },
-      {
-       "@type": "ListItem",
-       "position": 2,
-       "name": "Financial Calculators",
-       "item": "https://arthcalculator.in/calculators/"
-      },
-      {
-       "@type": "ListItem",
-       "position": 3,
-       "name": "Education Planning Calculator",
-       "item": "https://arthcalculator.in/education-planning/"
+      "@type": "Question",
+      "name": "1. Should I consider foreign education in my plan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if you aspire for your child to study abroad, you must account for currency depreciation (USD/INR) alongside education inflation. Usually, adding an extra 3-4% to inflation covers this."
       }
-     ]
-    }
-    </script>
-
-    <!-- Schema Markup: FAQ -->
-    <script type="application/ld+json">
+    },
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the average education inflation in India?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Education inflation in India typically ranges between 8% to 12% per year, which is significantly higher than the standard consumer price inflation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I calculate the future cost of a college degree?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Future Cost = Current Cost x (1 + Inflation Rate)^Number of Years. This accounts for the rising cost of tuition and living expenses over time."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Should I choose an Education Loan or save for college?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Saving in advance is always cheaper as you earn interest on your savings, whereas a loan requires you to pay high interest (usually 9-12% p.a.). Education loans should only be a fallback for gaps in funding."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does currency depreciation affect foreign education planning?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "When planning for overseas education, you must account for Rupee depreciation (historically 3-4% p.a. against the USD) in addition to university tuition inflation."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            -webkit-tap-highlight-color: transparent;
-            scroll-behavior: smooth;
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .card-shadow {
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-        }
-        input[type="range"] {
-            accent-color: #2563eb;
-            height: 6px;
-        }
-        .table-container::-webkit-scrollbar {
-            height: 4px;
-        }
-        .table-container::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 10px;
-        }
-        .formula-box {
-            background: #f1f5f9;
-            padding: 1.5rem;
-            border-radius: 1rem;
-            font-family: 'Courier New', Courier, monospace;
-            overflow-x: auto;
-        }
-    </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Education Planning Calculator India \u2013 Future College Fees",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "INR"
+      "@type": "Question",
+      "name": "2. How much should I invest monthly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This depends on the current cost of the degree and the time left. Use our Education Planning Calculator above to get the exact monthly SIP amount based on your specific requirements."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "3. What is the impact of taxes on education savings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most long-term capital gains (LTCG) in equity are taxed at 12.5% (above \u20b91.25 Lakh). You should ideally target a corpus that is 10-15% higher than your actual goal to account for future taxes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "4. Should I choose an Education Loan or save for college?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Saving in advance is always cheaper as you earn interest on your savings, whereas a loan requires you to pay high interest (usually 9-12% p.a.). Education loans should only be a fallback for gaps in funding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "5. How does currency depreciation affect foreign education planning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When planning for overseas education, you must account for Rupee depreciation (historically 3-4% p.a. against the USD) in addition to university tuition inflation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "6. How to save for a child's education in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The best way is to start a Goal-based SIP in diversified equity mutual funds. For a girl child, Sukanya Samriddhi Yojana (SSY) is an excellent debt-based option with tax benefits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "7. What are the tax-saving options for child education?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under Section 80C, you can claim tax deductions for school/college tuition fees. For investments, SSY offers EEE status, while ELSS mutual funds offer 80C benefits during the accumulation phase."
+      }
+    }
+  ]
 }
     </script>
 </head>
@@ -164,10 +145,10 @@
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="flex items-center">
-                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600">Education Planner</li>
+                    <li class="text-blue-600 font-bold">Education Planning Calculator</li>
                 </ol>
             </nav>
 
@@ -502,11 +483,6 @@
                     </details>
                 </div>
             </section>
-
-            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-center">
-                <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
-                This calculator provides estimates based on compound interest and inflation formulas. Actual future costs and investment returns may vary based on market conditions and educational institution policies. This tool is for illustrative purposes only.
-            </div>
         </div>
     </main>
 

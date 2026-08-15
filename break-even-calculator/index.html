@@ -17,54 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Schema Markup: WebPage -->
-    <script type="application/ld+json">
-    {
-       "@context":"https://schema.org",
-       "@type":"WebPage",
-       "name":"Break Even Calculator",
-       "url":"https://arthcalculator.in/break-even-calculator/",
-       "description":"Calculate the break-even point in units and revenue for your business or trading strategy.",
-       "inLanguage":"en"
-    }
-    </script>
-
-    <!-- Schema Markup: SoftwareApplication -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Break Even Calculator",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "description": "Calculates the break-even point and potential profit based on fixed costs, variable costs, and sales price.",
-      "featureList": [
-        "Break-even units calculation",
-        "Break-even revenue projection",
-        "Contribution margin analysis",
-        "Profit/Loss estimation"
-      ],
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "INR"
-      }
-    }
-    </script>
-
-    <!-- Schema Markup: Breadcrumb -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
-        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
-        { "@type": "ListItem", "position": 3, "name": "Break Even Calculator", "item": "https://arthcalculator.in/break-even-calculator/" }
-      ]
-    }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+<script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
         .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -78,6 +32,102 @@
         input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
         .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
     </style>
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Break Even Calculator",
+      "item": "https://arthcalculator.in/break-even-calculator/"
+    }
+  ]
+}
+    </script>
+
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Break Even Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/break-even-calculator/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a break-even point?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The break-even point is the production level or sales volume at which total revenues for a product exactly equal total expenses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you calculate break-even units?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide your total fixed costs by the contribution per unit (Selling Price - Variable Cost). Formula: Fixed Costs / (Price - Variable Cost)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the contribution margin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The contribution margin is the selling price per unit minus the variable cost per unit. It represents how much each sale contributes to covering fixed costs and creating profit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I reduce my break-even point?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can reduce the BEP by lowering your fixed costs (e.g., cheaper rent), lowering variable costs (e.g., buying raw materials in bulk), or increasing your selling price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a break-even point be zero?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Technically, yes\u2014if you have zero fixed costs. In such a case, every sale starting from the very first unit produces a profit."
+      }
+    }
+  ]
+}
+    </script>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
     <div id="navbar"></div>
@@ -85,8 +135,8 @@
     <!-- Header & Breadcrumbs -->
     <header class="bg-white border-b border-slate-200 py-8 sm:py-12 mb-6 sm:mb-8 text-center md:text-left">
         <div class="max-w-6xl mx-auto px-4">
-            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
-                <ol class="flex list-none p-0 text-pretty">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
                     <li class="flex items-center">
                         <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>

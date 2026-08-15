@@ -21,124 +21,126 @@
     <meta property="og:site_name" content="ArthCalculator">
     
     <!-- Schema Markup: WebPage -->
-    <script type="application/ld+json">
+    <!-- Breadcrumb Schema -->
     
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Financial Independence Calculator India (2026)",
-  "url": "https://arthcalculator.in/financial-independence/",
-  "description": "A comprehensive tool to calculate the FIRE (Financial Independence, Retire Early) target corpus and timeline."
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Financial Independence Calculator",
+      "item": "https://arthcalculator.in/financial-independence/"
+    }
+  ]
 }
-
     </script>
 
-    <!-- Schema Markup: Organization -->
-    <!-- Schema Markup: SoftwareApplication -->
+    <!-- SoftwareApplication Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Financial Independence Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/financial-independence/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Financial Independence Calculator",
-      "applicationCategory": "FinanceApplication",
-      "operatingSystem": "All",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "INR"
+      "@type": "Question",
+      "name": "1. Is 1 Crore enough for financial independence in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a family in a metro like Bangalore or Mumbai in 2026, \u20b91 Crore only generates about \u20b933,000 monthly (at 4% SWR), which is usually insufficient. Aim for higher targets using SIP planning ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "2. How does the \"Safe Withdrawal Rate\" (SWR) work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SWR is the percentage you withdraw every year. While 4% is common, 3% is better for early retirement to handle India's higher inflation rates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "3. Does FI include my house?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Your home is not a liquid asset. However, a paid-off home reduces your monthly expenses, effectively lowering your FI corpus requirement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "4. What is the biggest risk to financial independence?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Medical inflation and market sequence risk. Ensure you have high health insurance coverage separate from your FI fund."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "5. Should I stop my SIP once I achieve FI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you stop saving and start withdrawing. You transition from accumulation to distribution using a Systematic Withdrawal Plan ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "6. How to invest for FIRE in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use a mix of Index Funds, Flexicap funds, and debt for stability. The goal is to maximize post-tax real returns ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "7. Does FIRE mean I will never work again?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It means you work because you want to. Many \"retired\" people start niche businesses or consult in their field of expertise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "8. Can I achieve FI with children?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, but you must treat their milestones (Education, Marriage) as separate sinking funds outside your main FI corpus."
       }
     }
+  ]
+}
     </script>
-
-    <!-- Schema Markup: HowTo -->
-    <!-- Schema Markup: FAQ (All 8 Questions) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is 1 Crore enough for financial independence in India?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For a single person with low expenses in a Tier-2 city, it might be. However, for a family in a metro like Bangalore in 2026, ₹1 Crore only generates about ₹33,000 monthly at 4% SWR, which is usually insufficient."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does the 'Safe Withdrawal Rate' (SWR) work?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "SWR is the percentage of your portfolio you withdraw annually adjusted for inflation. The 'Trinity Study' suggests 4%, but 3% is often used in India to account for higher inflation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does FI include my house?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Your primary home should not be counted in your liquid portfolio. However, owning it reduces your expenses by removing rent, lowering your FI target."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the biggest risk to financial independence?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Medical inflation (12-14% p.a.) and 'Sequence of Returns Risk' are the biggest threats. Ensure adequate health insurance separate from your FI corpus."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Should I stop my SIP once I achieve FI?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, you transition from accumulation to distribution using a Systematic Withdrawal Plan (SWP) to generate monthly income."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How to invest for FIRE in India?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A mix of Low-cost Index Funds, Flexicap Mutual Funds, and a portion in Gold or Debt for stability is the standard recommendation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does FIRE mean I will never work again?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Not necessarily. It means you work because you want to, not because you have to. Many enter passion projects or consulting."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I achieve FI with children?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, but treat their major milestones like education as separate sinking funds outside your main living expense corpus."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-        input[type="range"] { accent-color: #2563eb; height: 6px; }
-        .table-container::-webkit-scrollbar { height: 4px; }
-        .table-container::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
-        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
-        details summary { list-style: none; }
-        details summary::-webkit-details-marker { display: none; }
-        details[open] summary svg { transform: rotate(180deg); }
-    </style>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12">
     <div id="navbar"></div>
@@ -153,10 +155,10 @@
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="flex items-center">
-                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600 font-bold">Financial Independence</li>
+                    <li class="text-blue-600 font-bold">Financial Independence Calculator</li>
                 </ol>
             </nav>
 
@@ -444,12 +446,6 @@
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">8. Can I achieve FI with children?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Yes, but you must treat their milestones (Education, Marriage) as separate sinking funds outside your main FI corpus.</div></details>
                 </div>
             </section>
-
-            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-center text-pretty">
-                <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide text-pretty">Disclaimer</p>
-                Financial independence projections are based on mathematical formulas and assumptions about future inflation and market performance. Actual outcomes depend on individual spending behavior and volatile market returns. This tool is for educational purposes only.
-                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: April 12, 2026</p>
-            </div>
         </div>
     </main>
 

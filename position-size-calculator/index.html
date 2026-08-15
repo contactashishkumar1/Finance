@@ -17,54 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Schema Markup: WebPage -->
-    <script type="application/ld+json">
-    {
-     "@context":"https://schema.org",
-     "@type":"WebPage",
-     "name":"Position Size Calculator",
-     "url":"https://arthcalculator.in/position-size-calculator/",
-     "description":"Professional trading tool to calculate the exact number of shares to purchase based on capital risk limits.",
-     "inLanguage":"en"
-    }
-    </script>
-
-    <!-- Schema Markup: SoftwareApplication -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Position Size Calculator",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "description": "Calculates safe share quantity based on entry, stop loss, and percentage risk of trading capital.",
-      "featureList": [
-        "Risk Amount Calculation",
-        "Safe Quantity (Shares) Calculation",
-        "Reward to Risk Ratio Analysis",
-        "Total Exposure Tracking"
-      ],
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "INR"
-      }
-    }
-    </script>
-
-    <!-- Schema Markup: Breadcrumb -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
-        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
-        { "@type": "ListItem", "position": 3, "name": "Position Size", "item": "https://arthcalculator.in/position-size-calculator/" }
-      ]
-    }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+<script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
         .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -78,6 +32,110 @@
         details[open] summary svg { transform: rotate(180deg); }
         input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
     </style>
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Position Size Calculator",
+      "item": "https://arthcalculator.in/position-size-calculator/"
+    }
+  ]
+}
+    </script>
+
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Position Size Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/position-size-calculator/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much of my capital should I risk?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most experts suggest the 1% rule. If your capital is \u20b910 Lakh, your risk per trade should not exceed \u20b910,000."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I trade without a stop loss?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Trading without a stop loss is gambling. A stop loss allows you to execute the position size math correctly and preserve your capital."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does position sizing improve my trading psychology?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Position sizing removes the fear of a crash. When you know the exact maximum loss before entering, you are less likely to panic-sell during minor fluctuations, allowing your trade thesis time to work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I use a different position size for Intraday vs Delivery?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Intraday trades usually have tighter stop losses, resulting in larger quantities. Delivery trades often have wider stop losses, meaning you buy fewer shares. However, the absolute rupee risk (e.g., 1% of capital) should remain the same."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can position sizing help me reach my Crorepati goal faster?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Indirectly, yes. By preventing large drawdowns (losses) in your trading account, you allow your capital to compound steadily. Consistent safe wins are more effective for reaching a \u20b91 Crore milestone than high-risk gambles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Position Sizing and Diversification?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Position sizing manages the risk of a single trade based on your stop-loss. Diversification manages the risk of your entire portfolio by spreading capital across different sectors or assets. Both are essential for long-term survival."
+      }
+    }
+  ]
+}
+    </script>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
     <div id="navbar"></div>
@@ -85,7 +143,7 @@
     <!-- Header & Breadcrumbs -->
     <header class="bg-white border-b border-slate-200 py-8 sm:py-12 mb-6 sm:mb-8 text-center md:text-left">
         <div class="max-w-6xl mx-auto px-4">
-            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
                 <ol class="flex list-none p-0">
                     <li class="flex items-center">
                         <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
@@ -95,7 +153,7 @@
                         <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600 font-bold">Position Size</li>
+                    <li class="text-blue-600 font-bold">Position Size Calculator</li>
                 </ol>
             </nav>
 

@@ -30,19 +30,124 @@
         input[type="range"] { accent-color: #4f46e5; height: 6px; }
         .formula-box { background: #f5f3ff; padding: 1.25rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; color: #4338ca; }
     </style>
-
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Child Education Cost 2040 Projector \u2013 SIP Goal Planner India",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "INR"
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Child Education Cost 2040 Projector (SIP Goal Planner)",
+      "item": "https://arthcalculator.in/child-education-planner/"
+    }
+  ]
+}
+    </script>
+
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Child Education Cost 2040 Projector (SIP Goal Planner) Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/child-education-planner/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is education inflation 10%?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Education in India operates on a specialized cost index. Premium institutes often adjust fees annually to cover growing administrative, faculty, and technology costs."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Is \u20b950 Lakhs enough for higher education in 2040?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a Tier-1 Indian MBA, it might barely suffice. For Medical or Overseas education, \u20b950L will likely be insufficient as costs are projected to cross \u20b91.5 Cr to \u20b92.5 Cr."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I use Gold for education?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gold acts as a currency hedge and inflation buffer. While it shouldn't be your only asset, holding 10-15% in SGBs or Gold ETFs can protect your child's overseas education from rupee depreciation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a Step-up SIP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Step-up SIP increases your monthly contribution by a fixed % (e.g., 10%) every year as your salary increases. This is the most efficient way to hit high education targets. Use our Step-Up SIP tool to plan this."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I withdraw from my EPF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can withdraw up to 50% of your EPF contribution for a child's higher education after 7 years of service. However, this impacts your retirement corpus. It's better to build a dedicated education SIP."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Average cost of MBA in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A premier 2-year MBA in India currently costs between \u20b925 Lakhs to \u20b932 Lakhs. This includes tuition, hostel, and study materials."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I take an education loan or use savings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ideally, try to fund 70-80% through early savings via SIPs and use an education loan for the remaining 20% to claim Section 80E tax benefits and build your child's credit score."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I stop my equity SIP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Shift your money from volatile equity mutual funds to safer debt funds or fixed deposits 2 to 3 years before your child's graduation starts to protect the corpus from sudden market crashes."
+      }
+    }
+  ]
 }
     </script>
 </head>
@@ -51,17 +156,17 @@
 
     <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left text-pretty">
         <div class="max-w-6xl mx-auto px-4">
-            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
                 <ol class="flex list-none p-0">
                     <li class="flex items-center">
-                        <a href="/" class="hover:text-indigo-600 transition-colors">Home</a>
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="flex items-center">
-                        <a href="/calculators/" class="hover:text-indigo-600 transition-colors text-pretty">Calculators</a>
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-indigo-600 font-bold">Child Education Projector</li>
+                    <li class="text-blue-600 font-bold">Child Education Cost 2040 Projector (SIP Goal Planner)</li>
                 </ol>
             </nav>
 

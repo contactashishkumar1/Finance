@@ -26,118 +26,96 @@
     <meta property="og:image" content="https://arthcalculator.in/logo.png">
 
     <!-- Schema Markup: WebPage -->
-    <script type="application/ld+json">
     
+<!-- Schema Markup: FAQ -->
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Salary Hike Calculator India (2026)",
-  "url": "https://arthcalculator.in/salary-hike/",
-  "description": "High-precision tool to calculate salary increments, percentage raises, and new monthly income in India.",
-  "datePublished": "2024-03-08",
-  "dateModified": "2026-03-22"
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Salary Hike Calculator",
+      "item": "https://arthcalculator.in/salary-hike/"
+    }
+  ]
 }
-
     </script>
 
-    <!-- Schema Markup: Organization -->
-    <!-- Schema Markup: SoftwareApplication -->
+    <!-- SoftwareApplication Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Salary Hike Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/salary-hike/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Salary Hike Calculator",
-      "operatingSystem": "Web",
-      "applicationCategory": "FinanceApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "INR"
+      "@type": "Question",
+      "name": "What is the average salary hike in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Historically, average hikes range from 8.5% to 10.5%. High-growth sectors like IT often see higher numbers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is salary hike calculated on CTC or basic salary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most Indian companies, the percentage hike is applied to the Total CTC. However, the exact breakdown of components may change."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good salary hike after promotion?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A promotion commanding higher responsibilities usually attracts a hike between 20% and 40%, depending on the level and industry standards."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does inflation affect salary hikes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If your hike is 6% but inflation is also 6%, your real purchasing power hasn't changed."
       }
     }
+  ]
+}
     </script>
-
-    <!-- Schema Markup: HowTo -->
-    <!-- Schema Markup: Breadcrumb -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
-        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
-        { "@type": "ListItem", "position": 3, "name": "Salary Hike", "item": "https://arthcalculator.in/salary-hike" }
-      ]
-    }
-    </script>
-
-    <!-- Schema Markup: FAQ -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is a good salary hike in India?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "In India, an average annual salary hike usually ranges between 8% and 12%. High performers often receive 15% to 20%, depending on the industry."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How to calculate salary increment percentage?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The formula is: ((New Salary - Old Salary) / Old Salary) x 100."
-          }
-        },
-        {
-            "@type": "Question",
-            "name": "Does inflation affect salary hikes?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. If your hike percentage is lower than the inflation rate, your real purchasing power actually decreases despite a nominal increase in salary."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Is salary hike calculated on CTC or basic salary?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "In most Indian companies, the percentage hike is applied to the Total CTC. However, the exact breakdown of components like HRA or Basic may change."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "How often do salary hikes happen?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Most companies in India follow an annual increment cycle, typically aligned with the financial year starting April."
-            }
-        }
-      ]
-    }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com" defer></script>
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-        input[type="range"] { accent-color: #2563eb; height: 6px; }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
-        .nav-link.active { color: #2563eb; font-weight: 600; }
-        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
-        details summary { list-style: none; }
-        details summary::-webkit-details-marker { display: none; }
-        details[open] summary svg { transform: rotate(180deg); }
-        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
-        .btn-outline { border: 1px solid #e2e8f0; transition: all 0.2s; }
-        .btn-outline:hover { border-color: #2563eb; color: #2563eb; background: #eff6ff; }
-    </style>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
     <div id="navbar"></div>
@@ -145,7 +123,7 @@
     <!-- Header & Breadcrumbs -->
     <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
         <div class="max-w-6xl mx-auto px-4">
-            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
                 <ol class="flex list-none p-0">
                     <li class="flex items-center">
                         <a href="/" class="hover:text-blue-600 transition-colors">Home</a>

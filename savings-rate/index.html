@@ -21,133 +21,118 @@
     <meta property="og:image" content="https://arthcalculator.in/logo.png">
 
     <!-- Schema Markup -->
-    <script type="application/ld+json">
+    <!-- Breadcrumb Schema -->
     
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Savings Rate Calculator India (2026)",
-  "description": "A financial tool to calculate the percentage of income saved monthly after expenses.",
-  "url": "https://arthcalculator.in/savings-rate/"
-}
-
-    </script>
-
-    <script type="application/ld+json">
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
       "name": "Savings Rate Calculator",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0"
-      }
+      "item": "https://arthcalculator.in/savings-rate/"
     }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://arthcalculator.in/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Financial Calculators",
-        "item": "https://arthcalculator.in/calculators/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Savings Rate Calculator",
-        "item": "https://arthcalculator.in/savings-rate/"
-      }
-      ]
-    }
+  ]
+}
     </script>
 
+    <!-- SoftwareApplication Schema -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is a good savings rate?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A good savings rate in India is typically 20% to 30%. High achievers aiming for financial independence often aim for 50% or higher."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How to increase savings rate?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You can increase your savings rate by either increasing your income or aggressively cutting down on discretionary 'wants' like dining out or subscriptions."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is 20% enough?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "20% is the baseline recommended by the 50/30/20 rule. It is enough for a standard retirement if you start early, but you may need more if you have ambitious goals."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is FIRE savings rate?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The Financial Independence, Retire Early (FIRE) movement usually suggests a savings rate of 50% to 70% to reach retirement within 10-15 years."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much should I save in India?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Given the lack of a universal social security net, saving at least 25% is advisable to build an emergency fund and plan for inflation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does income affect savings rate?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Generally, as income increases, the potential to save more increases (operating on the 'lifestyle creep' principle). However, low income can still maintain a high rate through frugality."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Ideal savings for early retirement?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For early retirement, your savings rate should be at a level where your investments grow to cover 25x of your annual expenses."
-          }
-        }
-      ]
-    }
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Savings Rate Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/savings-rate/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
     </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-        input[type="range"] { accent-color: #2563eb; height: 6px; }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
-    </style>
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a good savings rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In India, 20-30% is considered good for standard wealth building."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to increase savings rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Focus on \"pay yourself first\"\u2014automate your SIP on salary day so you spend only what's left."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is 20% enough?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's a great start, but if you want to retire early (FIRE), you usually need to aim for 40% or more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is FIRE savings rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The FIRE movement suggests saving 50%+ of your income to reach a point where your investments cover your expenses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much should I save in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Save enough to have 6 months of expenses in an emergency fund, then maximize long-term equity exposure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does income affect savings rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, higher income makes a higher rate easier, but only if you control \"lifestyle inflation.\""
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ideal savings for early retirement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mathematically, a 50% savings rate allows you to retire in about 17 years if starting from zero wealth."
+      }
+    }
+  ]
+}
+    </script>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12">
 <div id="navbar"></div>
@@ -161,7 +146,7 @@
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="flex items-center">
-                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="text-blue-600 font-bold">Savings Rate Calculator</li>

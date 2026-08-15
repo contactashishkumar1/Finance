@@ -21,123 +21,126 @@
     <meta property="og:site_name" content="ArthCalculator">
     
     <!-- Schema Markup: WebPage -->
-    <script type="application/ld+json">
+    <!-- Breadcrumb Schema -->
     
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Cost of Equity Calculator India (2026)",
-  "url": "https://arthcalculator.in/cost-of-equity/",
-  "description": "An advanced financial tool to calculate the cost of equity for companies and investment projects using CAPM."
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Cost of Equity Calculator",
+      "item": "https://arthcalculator.in/cost-of-equity/"
+    }
+  ]
 }
-
     </script>
 
-    <!-- Schema Markup: Organization -->
-    <!-- Schema Markup: SoftwareApplication -->
+    <!-- SoftwareApplication Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Cost of Equity Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/cost-of-equity/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Cost of Equity Calculator",
-      "applicationCategory": "FinanceApplication",
-      "operatingSystem": "All",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "INR"
+      "@type": "Question",
+      "name": "1. What is the Cost of Equity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cost of Equity is the return a company requires to decide if an investment meets capital return requirements. It represents the opportunity cost for shareholders."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "2. What is the CAPM formula?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The formula is: Cost of Equity = Risk-Free Rate + Beta * (Market Return - Risk-Free Rate). This is the industry standard for risk-adjustment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "3. Is Cost of Equity a cash expense?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Unlike debt interest, companies don't pay a monthly check for the cost of equity. It is an \"implied cost\" representing the minimum return required to keep investors satisfied."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "4. Why does a high Beta increase the cost of equity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Beta represents volatility. In financial theory, investors demand a higher return (premium) for higher risks. Therefore, a riskier company must earn a higher profit to justify its valuation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "5. Does inflation affect the cost of equity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. High inflation leads to higher interest rates, which increases the Risk-Free Rate (Rf). As Rf rises, the overall Cost of Equity increases."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "6. How is the Risk-Free Rate determined in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Professionals typically use the yield on the 10-year Government of India (GoI) Securities (G-Secs) as the standard Rf for Indian valuations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "7. What is the Market Risk Premium?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the difference between the Market Return and the Risk-Free Rate (Rm - Rf). It represents the extra return investors expect for choosing stocks over bonds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "8. Is there a tax benefit on equity cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Unlike debt (interest is tax-deductible), dividends and equity returns are paid from after-tax profits. This is why equity is considered \"expensive\" capital."
       }
     }
+  ]
+}
     </script>
-
-    <!-- Schema Markup: HowTo -->
-    <!-- Schema Markup: FAQ (Full 8 Items) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the Cost of Equity?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Cost of Equity is the return a company requires to decide if an investment meets capital return requirements. It represents the opportunity cost for shareholders."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the CAPM formula?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The formula is: Cost of Equity = Risk-Free Rate + Beta * (Market Return - Risk-Free Rate)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is Cost of Equity a cash expense?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Unlike debt interest, it is an implied cost representing the minimum return required to satisfy investors."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why does a high Beta increase the cost of equity?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Beta represents volatility. Investors demand a higher risk premium for taking on higher volatility, raising the required return."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does inflation affect the cost of equity?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. High inflation leads to higher G-Sec yields (Risk-Free Rate), which increases the overall Cost of Equity."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is the Risk-Free Rate determined in India?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Professionals typically use the yield on the 10-year Government of India (GoI) Securities (G-Secs) as the standard Rf."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the Market Risk Premium?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It is the difference between the Market Return and the Risk-Free Rate (Rm - Rf), representing the extra return for choosing stocks over bonds."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is there a tax benefit on equity cost?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Dividends are paid from after-tax profits, unlike debt interest which is tax-deductible."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-        input[type="range"] { accent-color: #2563eb; height: 6px; }
-        .table-container::-webkit-scrollbar { height: 4px; }
-        .table-container::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
-        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
-    </style>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12">
     <div id="navbar"></div>
@@ -146,16 +149,16 @@
     <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
         <div class="max-w-6xl mx-auto px-4">
             <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
-                <ol class="flex list-none p-0 text-pretty">
+                <ol class="flex list-none p-0">
                     <li class="flex items-center">
                         <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="flex items-center text-pretty">
-                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600 font-bold">Cost of Equity</li>
+                    <li class="text-blue-600 font-bold">Cost of Equity Calculator</li>
                 </ol>
             </nav>
 
@@ -435,12 +438,6 @@
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">8. Is there a tax benefit on equity cost?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">No. Unlike debt (interest is tax-deductible), dividends and equity returns are paid from after-tax profits. This is why equity is considered "expensive" capital.</div></details>
                 </div>
             </section>
-
-            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-center text-pretty text-pretty text-pretty">
-                <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide text-pretty">Disclaimer</p>
-                Cost of equity calculations are mathematical estimates based on user-provided data. Actual market returns, risk-free rates, and beta values fluctuate daily. This tool is for educational purposes only.
-                <p class="mt-4 font-semibold italic text-slate-600 text-pretty text-pretty text-pretty">Last Updated: April 12, 2026</p>
-            </div>
         </div>
     </main>
 

@@ -21,124 +21,126 @@
     <meta property="og:site_name" content="ArthCalculator">
     
     <!-- Schema Markup: WebPage -->
-    <script type="application/ld+json">
+    <!-- Breadcrumb Schema -->
     
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Enterprise Value Calculator India (2026)",
-  "url": "https://arthcalculator.in/enterprise-value/",
-  "description": "A comprehensive financial tool to calculate Enterprise Value (EV) and analyze corporate capital structure."
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Enterprise Value Calculator",
+      "item": "https://arthcalculator.in/enterprise-value/"
+    }
+  ]
 }
-
     </script>
 
-    <!-- Schema Markup: Organization -->
-    <!-- Schema Markup: SoftwareApplication -->
+    <!-- SoftwareApplication Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Enterprise Value Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/enterprise-value/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Enterprise Value Calculator",
-      "applicationCategory": "FinanceApplication",
-      "operatingSystem": "All",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "INR"
+      "@type": "Question",
+      "name": "1. What is Enterprise Value (EV)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enterprise Value is a measure of a company's total value, often used as a more comprehensive alternative to equity market capitalization. It includes the market cap but also adds debt, minority interest, and preferred shares, while subtracting cash."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "2. Why is cash subtracted in EV?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cash is subtracted because it reduces the effective cost of acquiring a business. If you buy a company for \u20b9100 Crores and it has \u20b920 Crores in the bank, your net cost is only \u20b980 Crores."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "3. Can Enterprise Value be lower than Market Cap?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. This happens when a company has more cash and cash equivalents than total debt (Net Cash positive). In such cases, the enterprise value will be lower than the market capitalization."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "4. Can EV be negative?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Technically, yes. If a company has massive amounts of cash that exceed both its market cap and total debt, EV can be negative. This usually happens in struggling companies where the market thinks the cash is going to be burned quickly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "5. Does EV include long-term debt only?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. EV should include all interest-bearing debt, both short-term and long-term. Non-interest-bearing liabilities like accounts payable are usually excluded."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "6. Why is EV used in EV/EBITDA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "EBITDA is the cash flow available to both debt and equity holders. Since EV represents the total capital (debt + equity), it is a mathematically consistent numerator for EBITDA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "7. What is Minority Interest in EV?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It represents the value of subsidiaries that the parent company does not own but consolidates. It is added to match the total asset value reported in EBITDA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "8. Should I use book value or market value for debt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In an ideal model, you should use the Market Value of Debt. However, book value is usually used as a standard and acceptable proxy in corporate finance."
       }
     }
+  ]
+}
     </script>
-
-    <!-- Schema Markup: HowTo -->
-    <!-- Schema Markup: FAQ (Full 8 Questions) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is Enterprise Value (EV)?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Enterprise Value is a measure of a company's total value, representing the theoretical takeover price. It includes market cap, debt, minority interest, and preferred shares minus cash."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why is cash subtracted in EV?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Cash is subtracted because it reduces the net cost for an acquirer. Since the buyer 'keeps' the cash inside the business, the effective price paid is lower."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can Enterprise Value be lower than Market Cap?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. This occurs when a company has more cash than total debt (Net Cash positive), effectively reducing the acquisition cost below the equity value."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can EV be negative?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, if a company's cash reserves are so large that they exceed both the market cap and total debt combined."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does EV include long-term debt only?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. EV includes all interest-bearing debt, both short-term and long-term, to reflect the total capital burden of the business."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why is EV used in EV/EBITDA?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "EBITDA is the cash flow available to both debt and equity holders. Since EV represents the total capital structure, it is the most consistent numerator for comparison."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is Minority Interest in EV?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It represents the portion of subsidiaries not owned by the parent company. It is added to match the consolidated earnings reported in EBITDA."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Should I use book value or market value for debt?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Ideally, market value should be used, but since it's hard to track for private loans, book value is an acceptable and standard proxy."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-        input[type="range"] { accent-color: #2563eb; height: 6px; }
-        .table-container::-webkit-scrollbar { height: 4px; }
-        .table-container::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
-        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
-        details summary { list-style: none; }
-        details summary::-webkit-details-marker { display: none; }
-        details[open] summary svg { transform: rotate(180deg); }
-    </style>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12">
     <div id="navbar"></div>
@@ -152,11 +154,11 @@
                         <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="flex items-center text-pretty">
-                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600 font-bold">Enterprise Value</li>
+                    <li class="text-blue-600 font-bold">Enterprise Value Calculator</li>
                 </ol>
             </nav>
 
@@ -384,12 +386,6 @@
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">8. Should I use book value or market value for debt?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">In an ideal model, you should use the Market Value of Debt. However, book value is usually used as a standard and acceptable proxy in corporate finance.</div></details>
                 </div>
             </section>
-
-            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-center text-pretty text-pretty text-pretty">
-                <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide text-pretty">Disclaimer</p>
-                Enterprise Value calculations are based on accounting formulas. Actual acquisition prices can involve control premiums and strategic negotiations. This tool is for educational purposes only and is not financial advice.
-                <p class="mt-4 font-semibold italic text-slate-600 text-pretty">Last Updated: April 12, 2026</p>
-            </div>
         </div>
     </main>
 

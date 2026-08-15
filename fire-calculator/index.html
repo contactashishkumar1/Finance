@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIRE Calculator India 2026: Find Financial Freedom Number</title>
+    <title>FIRE Calculator India 2026: Early Retirement Planner</title>
     <meta name="description" content="Calculate your FIRE number, lean/fat FIRE goals, safe withdrawal rate and exact year of retirement for Financial Independence Retire Early.">
     <meta name="keywords" content="fire calculator, financial independence calculator, early retirement calculator, how much money to retire early, financial independence number, fire movement india, retirement planning india">
     <meta name="author" content="Ashish Kumar">
@@ -22,47 +22,54 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Breadcrumb Schema -->
     
+    <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
-    
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "FIRE Calculator India (2026)",
-  "url": "https://arthcalculator.in/fire-calculator/",
-  "description": "Estimate your FIRE number and plan for early retirement by calculating future wealth based on expenses and investments.",
-  "datePublished": "2024-03-08",
-  "dateModified": "2026-04-11"
-}
-
-    </script>
-    <script type="application/ld+json">
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
       "name": "FIRE Calculator",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "description": "A high-precision tool to calculate the financial independence number (FIRE) adjusted for inflation and investment returns.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "INR"
-      }
+      "item": "https://arthcalculator.in/fire-calculator/"
     }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
-        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
-        { "@type": "ListItem", "position": 3, "name": "FIRE Calculator", "item": "https://arthcalculator.in/fire-calculator" }
-      ]
-    }
+  ]
+}
     </script>
 
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "FIRE Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/fire-calculator/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -135,23 +142,6 @@
   ]
 }
     </script>
-
-    <script src="https://cdn.tailwindcss.com" defer></script>
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-        input[type="range"] { accent-color: #2563eb; height: 6px; }
-        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
-        .nav-link.active { color: #2563eb; font-weight: 600; }
-        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
-        details summary { list-style: none; }
-        details summary::-webkit-details-marker { display: none; }
-        details[open] summary svg { transform: rotate(180deg); }
-        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
-        .btn-outline { border: 1px solid #e2e8f0; transition: all 0.2s; }
-        .btn-outline:hover { border-color: #2563eb; color: #2563eb; background: #eff6ff; }
-    </style>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
     <div id="navbar"></div>
@@ -462,12 +452,6 @@
             </section>
 
             <div id="arthcalculatorLinkingHub"></div>
-
-            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-pretty text-pretty text-pretty">
-                <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide text-pretty">Disclaimer</p>
-                FIRE calculations are based on standard mathematical models and the 4% safe withdrawal rule. Market volatility, changes in life circumstances, and unexpected health costs are not accounted for. This calculator uses standard financial independence formulas including inflation-adjusted expense projection and safe withdrawal rate principles. This tool does not constitute personal financial advice.
-                <p class="mt-4 font-semibold italic text-slate-600 text-pretty">Last Updated: April 11, 2026</p>
-            </div>
         </div>
     </main>
 

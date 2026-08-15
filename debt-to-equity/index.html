@@ -21,133 +21,118 @@
     <meta property="og:image" content="https://arthcalculator.in/logo.png">
 
     <!-- Schema Markup -->
-    <script type="application/ld+json">
+    <!-- Breadcrumb Schema -->
     
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Debt to Equity Ratio Calculator",
-  "description": "Advanced business tool to calculate the debt to equity ratio and analyze capital structure distribution.",
-  "url": "https://arthcalculator.in/debt-to-equity/"
-}
-
-    </script>
-
-    <script type="application/ld+json">
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
       "name": "Debt to Equity Ratio Calculator",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0"
-      }
+      "item": "https://arthcalculator.in/debt-to-equity/"
     }
+  ]
+}
     </script>
 
+    <!-- SoftwareApplication Schema -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://arthcalculator.in/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Financial Calculators",
-        "item": "https://arthcalculator.in/calculators/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Debt to Equity Ratio Calculator",
-        "item": "https://arthcalculator.in/debt-to-equity/"
-      }
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is debt to equity ratio?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The debt-to-equity (D/E) ratio is a financial ratio indicating the relative proportion of shareholders' equity and debt used to finance a company's assets."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is a good D/E ratio?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A good D/E ratio depends on the industry, but generally, a ratio below 1.0 is considered safe, while a ratio above 2.0 may indicate high financial risk."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is high D/E bad?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "High D/E isn't always bad (e.g., in capital-intensive industries like utilities), but it signifies higher risk because the company has more debt obligations to fulfill."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Industry differences in D/E?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Tech companies usually have very low D/E ratios, whereas manufacturing, real estate, and financial services often maintain higher debt levels."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can D/E be negative?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, if a company has negative shareholders' equity (liabilities exceed assets), the D/E ratio becomes negative, indicating severe financial distress."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How to improve D/E ratio?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A company can improve its D/E ratio by paying down existing debt, increasing retained earnings, or issuing new equity shares."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Difference between D/E and leverage?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "D/E ratio is a specific type of financial leverage ratio focusing on the capital structure. Leverage is a broader term for using borrowed capital for investments."
-          }
-        }
-      ]
-    }
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Debt to Equity Ratio Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/debt-to-equity/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
     </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-        input[type="range"] { accent-color: #2563eb; height: 6px; }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
-    </style>
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is debt to equity ratio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a solvency ratio that compares a company\u2019s total liabilities to its shareholders\u2019 equity. It measures how much debt a company is using to finance its assets relative to the value of shareholders' equity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good D/E ratio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ideally, a ratio of 1.0 or lower is considered safe for most companies. However, capital-intensive industries like manufacturing or utilities often have higher ratios (up to 2.0 or more) which may be acceptable for them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is high D/E bad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A high D/E indicates that a company has been aggressive in financing its growth with debt. This can lead to volatile earnings and increased bankruptcy risk if cash flows aren't stable enough to cover interest payments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Industry differences in D/E?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, banking and financial services have high D/E ratios because they use debt (deposits) as their core business material. Tech companies often have almost zero debt and low D/E ratios."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can D/E be negative?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if the company\u2019s shareholders' equity is negative (total liabilities exceed total assets). This usually indicates that a company is technically insolvent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to improve D/E ratio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Companies can improve their D/E ratio by repaying existing debt, increasing profits to boost retained earnings, or raising fresh capital by issuing new shares."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Difference between D/E and leverage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Debt to Equity is a specific leverage ratio. Leverage is the general concept of using borrowed funds to increase potential returns. D/E is one way to measure that concept."
+      }
+    }
+  ]
+}
+    </script>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12">
 <div id="navbar"></div>
@@ -161,10 +146,10 @@
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="flex items-center">
-                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600 font-bold">Debt to Equity Ratio</li>
+                    <li class="text-blue-600 font-bold">Debt to Equity Ratio Calculator</li>
                 </ol>
             </nav>
 

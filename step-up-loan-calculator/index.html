@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Step-Up Loan Calculator 2026 | EMI & Repayment Optimizer</title>
-    <meta name="description" content="Calculate Step-Up loan EMIs and compare interest costs against standard flat EMIs. Plan your progressive repayment schedule based on future salary hikes in India (2026).">
+    <meta name="description" content="Calculate Step-Up loan EMIs and compare total interest vs flat EMIs. Plan progressive loan repayments based on annual salary hikes.">
     <meta name="keywords" content="step up loan calculator india, progressive emi calculator, sbi flexipay calculator 2026, negative amortization warning, step up vs flat emi, home loan repayment optimizer">
     <meta name="author" content="Ashish Kumar">
     <meta name="last-modified" content="2026-04-30">
@@ -30,19 +30,92 @@
         input[type="range"] { accent-color: #4f46e5; height: 6px; }
         .formula-box { background: #f5f3ff; padding: 1.25rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; color: #4338ca; }
     </style>
-
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Step-Up Loan Calculator 2026",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "INR"
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Step-Up Loan EMI & Repayment Optimizer",
+      "item": "https://arthcalculator.in/step-up-loan-calculator/"
+    }
+  ]
+}
+    </script>
+
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Step-Up Loan EMI & Repayment Optimizer Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/step-up-loan-calculator/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Who is eligible for a Step-Up home loan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most banks offer this to salaried individuals aged 21-45 years with a stable income and high career growth potential. It is very popular among IT professionals and Government employees."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the 'FlexiPay' scheme?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FlexiPay is SBI's version of a step-up loan. It allows borrowers to pay only the interest for the first few years (moratorium), followed by stepped-up EMIs, helping them buy a more expensive house earlier in life."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I prepay a Step-Up loan without penalty?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. As per RBI rules, there are no foreclosure or part-payment penalties on floating-rate home loans for individual borrowers, even if it is a Step-Up scheme."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if my salary doesn't increase?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This is the biggest risk. Since the EMI increases annually regardless of your actual hike, you must ensure you have a financial buffer. If it becomes unmanageable, consider a Balance Transfer to a standard loan."
+      }
+    }
+  ]
 }
     </script>
 </head>
@@ -51,17 +124,17 @@
 
     <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left text-pretty">
         <div class="max-w-6xl mx-auto px-4">
-            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
                 <ol class="flex list-none p-0">
                     <li class="flex items-center">
-                        <a href="/" class="hover:text-indigo-600 transition-colors">Home</a>
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="flex items-center">
-                        <a href="/calculators/" class="hover:text-indigo-600 transition-colors text-pretty">Calculators</a>
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-indigo-600 font-bold">Step-Up Loan Planner</li>
+                    <li class="text-blue-600 font-bold">Step-Up Loan EMI & Repayment Optimizer</li>
                 </ol>
             </nav>
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FD Calculator India 2026 – Fixed Deposit Interest & Maturity</title>
+    <title>Fixed Deposit (FD) Calculator India 2026: Interest</title>
     <meta name="description" content="Calculate maturity amount, compounding interest and total returns on Fixed Deposit investments with cumulative & non-cumulative options.">
     <meta name="keywords" content="FD Calculator India, Fixed Deposit Calculator, FD Interest Calculator, FD Maturity Calculator, FD vs SIP, TDS on FD, tax saving fd">
     <meta name="robots" content="index, follow">
@@ -16,198 +16,126 @@
     <meta property="og:url" content="https://arthcalculator.in/fd/">
 
     <!-- Schema Markup: WebPage -->
-    <script type="application/ld+json">
     
+<!-- Schema Markup: FAQ -->
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "FD Calculator India (2026)",
-  "description": "A high-precision financial tool to calculate Fixed Deposit maturity and interest returns with various compounding frequencies."
-}
-
-    </script>
-
-    <!-- Schema Markup: Breadcrumb -->
-  <script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "BreadcrumbList",
- "itemListElement": [{
-   "@type": "ListItem",
-   "position": 1,
-   "name": "Home",
-   "item": "https://arthcalculator.in/"
- },{
-   "@type": "ListItem",
-   "position": 2,
-   "name": "Financial Calculators",
-   "item": "https://arthcalculator.in/calculators/"
- },{
-   "@type": "ListItem",
-   "position": 3,
-   "name": "FD Calculator",
-   "item": "https://arthcalculator.in/fd/"
- }]
-}
-</script>
-
-    <!-- Schema Markup: FAQ -->
-    <script type="application/ld+json">
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Cumulative vs Non-Cumulative FD: What's the difference?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Cumulative FDs reinvest your interest, paying a lump sum at maturity (wealth creation). Non-cumulative FDs pay out interest monthly or quarterly (regular income)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do Senior Citizens get higher interest rates?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, in India, most banks offer an additional 0.50% interest rate to individuals aged 60 and above on all FD tenures."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is TDS calculated on FD interest?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "TDS is 10% if interest exceeds ₹40,000 (₹50,000 for Seniors). If PAN is not provided, 20% is deducted. Submit Form 15G/15H to avoid TDS if your total income is below the taxable limit."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is a Tax Saving FD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It has a 5-year lock-in period and allows deductions up to ₹1.5 Lakh under Section 80C. However, the interest earned remains taxable as per your slab."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I get a loan against my FD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, most banks offer up to 90-95% of the FD value as a loan or overdraft. The interest rate is usually 1-2% higher than the FD rate."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the minimum amount for an FD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Usually ₹1,000 to ₹5,000 for standard banks. However, some digital banks allow starting an FD with as low as ₹100."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does compounding frequency affect my final returns?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Monthly compounding gives a higher yield than quarterly or yearly compounding because interest earns interest more frequently."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which is the best tenure for FD in India?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The \"best\" tenure depends on when you need the money. Historically, 1-year to 3-year tenures often offer the highest relative interest rates."
-          }
-        }
-      ]
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Fixed Deposit (FD) Calculator",
+      "item": "https://arthcalculator.in/fd/"
     }
+  ]
+}
     </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            -webkit-tap-highlight-color: transparent;
-            scroll-behavior: smooth;
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .card-shadow {
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-        }
-        input[type="range"] {
-            accent-color: #2563eb;
-            height: 6px;
-        }
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        .table-container::-webkit-scrollbar {
-            height: 4px;
-        }
-        .table-container::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 10px;
-        }
-        .nav-link {
-            transition: all 0.2s ease;
-            position: relative;
-            padding: 0.5rem 0.25rem;
-        }
-        .nav-link.active {
-            color: #2563eb;
-            font-weight: 600;
-        }
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background-color: #2563eb;
-        }
-        details summary {
-            list-style: none;
-        }
-        details summary::-webkit-details-marker {
-            display: none;
-        }
-        details[open] summary svg {
-            transform: rotate(180deg);
-        }
-        .formula-box {
-            background: #f1f5f9;
-            padding: 1.5rem;
-            border-radius: 1rem;
-            font-family: 'Courier New', Courier, monospace;
-            overflow-x: auto;
-        }
-    </style>
-
+    <!-- SoftwareApplication Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Fixed Deposit (FD) Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/fd/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "FD Calculator India 2026 \u2013 Fixed Deposit Interest & Maturity",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "INR"
+      "@type": "Question",
+      "name": "1. Cumulative vs Non-Cumulative FD: What's the difference?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cumulative FDs reinvest your interest, paying a lump sum at maturity (wealth creation). Non-cumulative FDs pay out interest monthly or quarterly (regular income)."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "2. Do Senior Citizens get higher interest rates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, in India, most banks offer an additional 0.50% interest rate to individuals aged 60 and above on all FD tenures."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "3. How is TDS calculated on FD interest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TDS is 10% if interest exceeds \u20b940,000 (\u20b950,000 for Seniors). If PAN is not provided, 20% is deducted. Submit Form 15G/15H to avoid TDS if your total income is below the taxable limit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "4. What is a Tax Saving FD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It has a 5-year lock-in period and allows deductions up to \u20b91.5 Lakh under Section 80C. However, the interest earned remains taxable as per your slab."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "5. Can I get a loan against my FD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, most banks offer up to 90-95% of the FD value as a loan or overdraft. The interest rate is usually 1-2% higher than the FD rate. Use our EMI Calculator to plan repayments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "6. What is the minimum amount for an FD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually \u20b91,000 to \u20b95,000 for standard banks. However, some digital banks allow starting an FD with as low as \u20b9100."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "7. Does compounding frequency affect my final returns?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Monthly compounding gives a higher yield than quarterly or yearly compounding because interest earns interest more frequently."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "8. Which is the best tenure for FD in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The \"best\" tenure depends on when you need the money. Historically, 1-year to 3-year tenures often offer the highest relative interest rates."
+      }
+    }
+  ]
 }
     </script>
 </head>
@@ -224,10 +152,10 @@
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="flex items-center">
-                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600">FD Calculator</li>
+                    <li class="text-blue-600 font-bold">Fixed Deposit (FD) Calculator</li>
                 </ol>
             </nav>
 
