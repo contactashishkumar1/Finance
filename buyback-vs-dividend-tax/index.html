@@ -184,7 +184,7 @@
                 <div class="space-y-6">
                     <!-- Shares -->
                     <div>
-                        <label class="font-semibold text-slate-700 block mb-2">Number of Shares</label>
+                        <label for="numShares" class="font-semibold text-slate-700 block mb-2">Number of Shares</label>
                         <div class="relative">
                             <input type="number" id="numShares" value="100" min="1" step="1" class="w-full text-right bg-slate-50 border border-slate-200 text-slate-800 rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-3 pr-4 font-bold text-lg">
                         </div>
@@ -192,33 +192,44 @@
                     
                     <!-- Offer Price -->
                     <div>
-                        <label class="font-semibold text-slate-700 block mb-2">Corporate Offer Price / Share</label>
+                        <label for="offerPrice" class="font-semibold text-slate-700 block mb-2">Corporate Offer Price / Share</label>
                         <div class="relative">
                             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
                             <input type="number" id="offerPrice" value="1000" min="1" step="1" class="w-full text-right bg-slate-50 border border-slate-200 text-slate-800 rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-3 pl-7 font-bold text-lg">
                         </div>
                         <p class="text-[10px] text-slate-500 mt-2">The buyback price OR the special dividend per share.</p>
                     </div>
+
+                    <!-- Buyback Holding Period -->
+                    <div>
+                        <label for="holdingPeriod" class="font-semibold text-slate-700 block mb-2">Buyback Holding Period (Capital Gains)</label>
+                        <select id="holdingPeriod" class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-3 font-bold text-sm cursor-pointer">
+                            <option value="ltcg" selected>Long Term (&gt; 12 Months) – 12.5% LTCG</option>
+                            <option value="stcg">Short Term (≤ 12 Months) – 20% STCG</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="space-y-6">
                     <!-- Original Buy Price -->
                     <div>
-                        <label class="font-semibold text-slate-700 block mb-2">Your Original Buy Price / Share</label>
+                        <label for="buyPrice" class="font-semibold text-slate-700 block mb-2">Your Original Buy Price / Share</label>
                         <div class="relative">
                             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
                             <input type="number" id="buyPrice" value="600" min="1" step="1" class="w-full text-right bg-slate-50 border border-slate-200 text-slate-800 rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-3 pl-7 font-bold text-lg">
                         </div>
+                        <p class="text-[10px] text-slate-500 mt-2">Used to calculate Capital Gain / Loss on Buyback tender.</p>
                     </div>
 
-                    <!-- Tax Slab -->
+                    <!-- Tax Slab for Dividend -->
                     <div>
-                        <label class="font-semibold text-slate-700 block mb-2">Your Income Tax Slab</label>
+                        <label class="font-semibold text-slate-700 block mb-2">Your Income Tax Slab (for Dividend)</label>
                         <div class="grid grid-cols-3 gap-2" id="taxGroup">
-                            <button class="tier-btn" data-tax="10">10%</button>
-                            <button class="tier-btn" data-tax="20">20%</button>
-                            <button class="tier-btn active" data-tax="30">30%</button>
+                            <button type="button" class="tier-btn" data-tax="10">10%</button>
+                            <button type="button" class="tier-btn" data-tax="20">20%</button>
+                            <button type="button" class="tier-btn active" data-tax="30">30%</button>
                         </div>
+                        <p class="text-[10px] text-slate-500 mt-2">Dividends are taxed at personal slab rates + 4% cess.</p>
                     </div>
                 </div>
             </div>
@@ -230,7 +241,7 @@
             <!-- Dividend Card -->
             <div class="bg-white rounded-2xl border border-blue-200 card-shadow overflow-hidden flex flex-col">
                 <div class="bg-blue-600 p-4 text-center text-white">
-                    <h3 class="text-xl font-bold">If Given as Dividend</h3>
+                    <h3 class="text-xl font-bold">If Distributed as Dividend</h3>
                 </div>
                 <div class="p-6 flex-grow flex flex-col">
                     <div class="mb-6 flex-grow">
@@ -248,19 +259,19 @@
                         </div>
                         <div class="flex justify-between pt-2">
                             <span class="text-slate-600">Shares Owned After</span>
-                            <span class="font-bold text-emerald-600" id="divShares">100 Shares</span>
+                            <span class="font-bold text-emerald-600" id="divShares">100 Shares (Retained)</span>
                         </div>
                     </div>
                     <div class="mt-4 pt-4 border-t border-blue-100 text-xs text-blue-800 bg-blue-50 p-3 rounded-lg">
-                        <strong>Outcome:</strong> You receive the cash, pay slab rate tax, and still retain 100% of your shares.
+                        <strong>Outcome:</strong> You receive the dividend cash, pay slab rate tax, and retain 100% of your shares.
                     </div>
                 </div>
             </div>
 
-            <!-- Buyback Card (New Rules) -->
-            <div class="bg-white rounded-2xl border border-blue-200 card-shadow overflow-hidden flex flex-col relative">
-                <div class="bg-blue-600 p-4 text-center text-white">
-                    <h3 class="text-xl font-bold">If Given as Buyback (Oct '24)</h3>
+            <!-- Buyback Card (Capital Gains Rules) -->
+            <div class="bg-white rounded-2xl border border-emerald-200 card-shadow overflow-hidden flex flex-col relative">
+                <div class="bg-emerald-600 p-4 text-center text-white">
+                    <h3 class="text-xl font-bold">If Distributed as Share Buyback</h3>
                 </div>
                 <div class="p-6 flex-grow flex flex-col">
                     <div class="mb-6 flex-grow">
@@ -272,21 +283,21 @@
                             <span class="text-slate-600">Gross Received</span>
                             <span class="font-bold text-blue-600" id="bbGross">₹0</span>
                         </div>
+                        <div class="flex justify-between pb-2 border-b border-slate-100">
+                            <span class="text-slate-600">Capital Gain / (Loss)</span>
+                            <span class="font-bold text-slate-800" id="bbGainLoss">₹0</span>
+                        </div>
                         <div class="flex justify-between text-rose-600 pb-2 border-b border-slate-100">
-                            <span>Dividend Tax Deducted</span>
+                            <span id="bbTaxLabel">Capital Gains Tax</span>
                             <span class="font-bold" id="bbTax">- ₹0</span>
                         </div>
-                        <div class="flex justify-between pt-2 pb-2 border-b border-slate-100">
+                        <div class="flex justify-between pt-2">
                             <span class="text-slate-600">Shares Owned After</span>
-                            <span class="font-bold text-rose-600">0 Shares (Destroyed)</span>
-                        </div>
-                        <div class="flex justify-between pt-2 bg-emerald-50 p-2 rounded">
-                            <span class="text-emerald-700 font-bold">Capital Loss Generated</span>
-                            <span class="font-bold text-emerald-600" id="bbLoss">₹0</span>
+                            <span class="font-bold text-slate-500">0 Shares (Extinguished)</span>
                         </div>
                     </div>
-                    <div class="mt-4 pt-4 border-t border-blue-100 text-xs text-blue-800 bg-blue-50 p-3 rounded-lg">
-                        <strong>Hidden Benefit:</strong> You can carry forward the <span class="font-bold" id="bbLossText">₹0</span> loss to offset future STCG/LTCG taxes on other trades.
+                    <div class="mt-4 pt-4 border-t border-emerald-100 text-xs text-emerald-800 bg-emerald-50 p-3 rounded-lg" id="bbOutcomeNote">
+                        <strong>Outcome:</strong> Taxed only on Capital Gain at 12.5% LTCG / 20% STCG.
                     </div>
                 </div>
             </div>
@@ -501,6 +512,7 @@
             numShares: document.getElementById('numShares'),
             offerPrice: document.getElementById('offerPrice'),
             buyPrice: document.getElementById('buyPrice'),
+            holdingPeriod: document.getElementById('holdingPeriod'),
             taxBtns: document.querySelectorAll('.tier-btn'),
             
             divNet: document.getElementById('divNet'),
@@ -510,9 +522,10 @@
 
             bbNet: document.getElementById('bbNet'),
             bbGross: document.getElementById('bbGross'),
+            bbGainLoss: document.getElementById('bbGainLoss'),
+            bbTaxLabel: document.getElementById('bbTaxLabel'),
             bbTax: document.getElementById('bbTax'),
-            bbLoss: document.getElementById('bbLoss'),
-            bbLossText: document.getElementById('bbLossText')
+            bbOutcomeNote: document.getElementById('bbOutcomeNote')
         };
 
         let currentTaxSlab = 30; // Default
@@ -534,30 +547,63 @@
             const shares = parseFloat(elements.numShares.value) || 0;
             const offer = parseFloat(elements.offerPrice.value) || 0;
             const buy = parseFloat(elements.buyPrice.value) || 0;
-            const taxRate = currentTaxSlab / 100;
+            const holding = elements.holdingPeriod ? elements.holdingPeriod.value : 'ltcg';
 
             const gross = shares * offer;
-            const tax = gross * taxRate;
-            const net = gross - tax;
-            const capitalLoss = shares * buy;
+            const totalCost = shares * buy;
+            const capitalGain = gross - totalCost;
+
+            // Dividend Calculation: Full gross taxed at slab + 4% cess
+            const divTaxRate = (currentTaxSlab / 100) * 1.04;
+            const divTax = gross * divTaxRate;
+            const divNet = gross - divTax;
+
+            // Buyback Calculation (Capital Gains Regime):
+            // LTCG: 12.5% + 4% cess = 13.0%; STCG: 20% + 4% cess = 20.8%
+            const cgRate = holding === 'ltcg' ? (0.125 * 1.04) : (0.20 * 1.04);
+            let bbTax = 0;
+            if (capitalGain > 0) {
+                bbTax = capitalGain * cgRate;
+            }
+            const bbNet = gross - bbTax;
 
             // Dividend Updates
             elements.divGross.textContent = formatIndian(gross);
-            elements.divTax.textContent = "- " + formatIndian(tax);
-            elements.divNet.textContent = formatIndian(net);
-            elements.divShares.textContent = shares + " Shares";
+            elements.divTax.textContent = "- " + formatIndian(divTax);
+            elements.divNet.textContent = formatIndian(divNet);
+            elements.divShares.textContent = shares + " Shares (Retained)";
 
             // Buyback Updates
             elements.bbGross.textContent = formatIndian(gross);
-            elements.bbTax.textContent = "- " + formatIndian(tax);
-            elements.bbNet.textContent = formatIndian(net);
-            elements.bbLoss.textContent = formatIndian(capitalLoss);
-            elements.bbLossText.textContent = formatIndian(capitalLoss);
+            if (capitalGain >= 0) {
+                elements.bbGainLoss.textContent = "+" + formatIndian(capitalGain) + " (Profit)";
+                elements.bbGainLoss.className = "font-bold text-emerald-600";
+            } else {
+                elements.bbGainLoss.textContent = "-" + formatIndian(Math.abs(capitalGain)) + " (Loss)";
+                elements.bbGainLoss.className = "font-bold text-rose-600";
+            }
+            
+            if (elements.bbTaxLabel) {
+                elements.bbTaxLabel.textContent = holding === 'ltcg' ? 'LTCG Tax (12.5% + Cess)' : 'STCG Tax (20% + Cess)';
+            }
+            elements.bbTax.textContent = "- " + formatIndian(bbTax);
+            elements.bbNet.textContent = formatIndian(bbNet);
+
+            if (elements.bbOutcomeNote) {
+                if (capitalGain > 0) {
+                    elements.bbOutcomeNote.innerHTML = `<strong>Tax Advantage:</strong> Net gain is ${formatIndian(capitalGain)}. Taxed at ${(cgRate * 100).toFixed(1)}% instead of ${(divTaxRate * 100).toFixed(1)}% slab tax.`;
+                } else {
+                    elements.bbOutcomeNote.innerHTML = `<strong>Capital Loss:</strong> Generated ${formatIndian(Math.abs(capitalGain))} capital loss to offset other capital gains. ₹0 tax payable.`;
+                }
+            }
         }
 
         elements.numShares.addEventListener('input', calculateTaxes);
         elements.offerPrice.addEventListener('input', calculateTaxes);
         elements.buyPrice.addEventListener('input', calculateTaxes);
+        if (elements.holdingPeriod) {
+            elements.holdingPeriod.addEventListener('change', calculateTaxes);
+        }
 
         window.addEventListener('DOMContentLoaded', calculateTaxes);
     </script>

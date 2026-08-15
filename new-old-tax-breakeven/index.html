@@ -428,29 +428,59 @@
 
             <h3 class="text-xl font-bold text-slate-800 mb-4">FY 2026-27 Tax Slabs — Side-by-Side Comparison</h3>
             <div class="bg-white rounded-2xl border border-slate-100 card-shadow overflow-hidden mb-8">
-                <div class="overflow-x-auto">
-                    <table class="w-full text-sm">
-                        <thead class="bg-slate-50 border-b border-slate-200">
-                            <tr>
-                                <th class="text-left px-4 py-3 font-semibold text-slate-700">Income Slab</th>
-                                <th class="text-center px-4 py-3 font-semibold text-sky-700">New Regime Rate</th>
-                                <th class="text-center px-4 py-3 font-semibold text-purple-700">Old Regime Rate</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-100">
-                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 text-slate-700">Up to ₹3,00,000</td><td class="text-center px-4 py-3 text-sky-600 font-semibold">0%</td><td class="text-center px-4 py-3 text-purple-600 font-semibold">0%</td></tr>
-                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 text-slate-700">₹3,00,001 – ₹4,00,000</td><td class="text-center px-4 py-3 text-sky-600 font-semibold">0%</td><td class="text-center px-4 py-3 text-purple-600 font-semibold">5%</td></tr>
-                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 text-slate-700">₹4,00,001 – ₹5,00,000</td><td class="text-center px-4 py-3 text-sky-600 font-semibold">5%</td><td class="text-center px-4 py-3 text-purple-600 font-semibold">5%</td></tr>
-                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 text-slate-700">₹5,00,001 – ₹7,00,000</td><td class="text-center px-4 py-3 text-sky-600 font-semibold">5%</td><td class="text-center px-4 py-3 text-purple-600 font-semibold">20%</td></tr>
-                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 text-slate-700">₹7,00,001 – ₹8,00,000</td><td class="text-center px-4 py-3 text-sky-600 font-semibold">10%</td><td class="text-center px-4 py-3 text-purple-600 font-semibold">20%</td></tr>
-                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 text-slate-700">₹8,00,001 – ₹10,00,000</td><td class="text-center px-4 py-3 text-sky-600 font-semibold">10%</td><td class="text-center px-4 py-3 text-purple-600 font-semibold">20%</td></tr>
-                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 text-slate-700">₹10,00,001 – ₹12,00,000</td><td class="text-center px-4 py-3 text-sky-600 font-semibold">15%</td><td class="text-center px-4 py-3 text-purple-600 font-semibold">30%</td></tr>
-                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 text-slate-700">₹12,00,001 – ₹15,00,000</td><td class="text-center px-4 py-3 text-sky-600 font-semibold">20%</td><td class="text-center px-4 py-3 text-purple-600 font-semibold">30%</td></tr>
-                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 text-slate-700">Above ₹15,00,000</td><td class="text-center px-4 py-3 text-sky-600 font-semibold">30%</td><td class="text-center px-4 py-3 text-purple-600 font-semibold">30%</td></tr>
-                        </tbody>
-                    </table>
+                <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+                    <!-- New Regime Slabs -->
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="font-bold text-sky-800 text-base">New Tax Regime Slabs (Default)</h4>
+                            <span class="text-xs bg-sky-100 text-sky-700 font-bold px-2.5 py-0.5 rounded-full">FY 2026-27</span>
+                        </div>
+                        <table class="w-full text-sm">
+                            <thead class="bg-sky-50/50 text-slate-600 text-xs">
+                                <tr>
+                                    <th class="text-left px-3 py-2 font-semibold">Taxable Income Slab</th>
+                                    <th class="text-right px-3 py-2 font-semibold">Tax Rate</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100">
+                                <tr class="hover:bg-slate-50"><td class="px-3 py-2 text-slate-700">Up to ₹4,00,000</td><td class="text-right px-3 py-2 text-sky-600 font-bold">0% (Nil)</td></tr>
+                                <tr class="hover:bg-slate-50"><td class="px-3 py-2 text-slate-700">₹4,00,001 – ₹8,00,000</td><td class="text-right px-3 py-2 text-sky-600 font-bold">5%</td></tr>
+                                <tr class="hover:bg-slate-50"><td class="px-3 py-2 text-slate-700">₹8,00,001 – ₹12,00,000</td><td class="text-right px-3 py-2 text-sky-600 font-bold">10%</td></tr>
+                                <tr class="hover:bg-slate-50"><td class="px-3 py-2 text-slate-700">₹12,00,001 – ₹16,00,000</td><td class="text-right px-3 py-2 text-sky-600 font-bold">15%</td></tr>
+                                <tr class="hover:bg-slate-50"><td class="px-3 py-2 text-slate-700">₹16,00,001 – ₹20,00,000</td><td class="text-right px-3 py-2 text-sky-600 font-bold">20%</td></tr>
+                                <tr class="hover:bg-slate-50"><td class="px-3 py-2 text-slate-700">₹20,00,001 – ₹24,00,000</td><td class="text-right px-3 py-2 text-sky-600 font-bold">25%</td></tr>
+                                <tr class="hover:bg-slate-50"><td class="px-3 py-2 text-slate-700">Above ₹24,00,000</td><td class="text-right px-3 py-2 text-sky-600 font-bold">30%</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="text-xs text-slate-500 mt-3 pt-2 border-t border-slate-100">✨ <strong>Section 87A Rebate:</strong> Taxable income up to ₹12 Lakh gets ₹60,000 rebate (Zero Tax). Salaried gets ₹75,000 Standard Deduction (Zero tax up to ₹12.75 Lakh).</p>
+                    </div>
+
+                    <!-- Old Regime Slabs -->
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="font-bold text-purple-800 text-base">Old Tax Regime Slabs (Opt-in)</h4>
+                            <span class="text-xs bg-purple-100 text-purple-700 font-bold px-2.5 py-0.5 rounded-full">Form 10-IEA</span>
+                        </div>
+                        <table class="w-full text-sm">
+                            <thead class="bg-purple-50/50 text-slate-600 text-xs">
+                                <tr>
+                                    <th class="text-left px-3 py-2 font-semibold">Taxable Income Slab</th>
+                                    <th class="text-right px-3 py-2 font-semibold">Tax Rate</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100">
+                                <tr class="hover:bg-slate-50"><td class="px-3 py-2 text-slate-700">Up to ₹2,50,000</td><td class="text-right px-3 py-2 text-purple-600 font-bold">0% (Nil)</td></tr>
+                                <tr class="hover:bg-slate-50"><td class="px-3 py-2 text-slate-700">₹2,50,001 – ₹5,00,000</td><td class="text-right px-3 py-2 text-purple-600 font-bold">5%</td></tr>
+                                <tr class="hover:bg-slate-50"><td class="px-3 py-2 text-slate-700">₹5,00,001 – ₹10,00,000</td><td class="text-right px-3 py-2 text-purple-600 font-bold">20%</td></tr>
+                                <tr class="hover:bg-slate-50"><td class="px-3 py-2 text-slate-700">Above ₹10,00,000</td><td class="text-right px-3 py-2 text-purple-600 font-bold">30%</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="text-xs text-slate-500 mt-3 pt-2 border-t border-slate-100">✨ <strong>Section 87A Rebate:</strong> Taxable income up to ₹5 Lakh gets ₹12,500 rebate (Zero Tax). Allows 80C, 80D, HRA, and Home Loan interest deductions.</p>
+                    </div>
                 </div>
-                <p class="text-xs text-slate-400 px-4 py-2 bg-slate-50 border-t border-slate-100">+ 4% Health & Education Cess on all regimes. Section 87A rebate (New: ₹60K on taxable ≤₹12L | Old: ₹12.5K on taxable ≤₹5L)</p>
+                <div class="px-6 py-3 bg-slate-50 border-t border-slate-100 text-xs text-slate-500">
+                    * 4% Health & Education Cess applies on total tax payable across all regimes.
+                </div>
             </div>
 
             <h3 class="text-xl font-bold text-slate-800 mb-4">Which Deductions Are Allowed in Each Regime?</h3>
@@ -512,7 +542,7 @@
                 <h3 class="font-bold text-amber-900 mb-3">⚠️ Important Notes & Common Mistakes</h3>
                 <ul class="space-y-2 text-sm text-amber-800">
                     <li>• <strong>New Regime is now the default</strong> — you must actively opt for Old Regime via Form 10-IEA before due date</li>
-                    <li>• <strong>87A rebate in new regime is ₹60,000</strong> on taxable income up to ₹12 lakh (not ₹12.75L gross for salaried)</li>
+                    <li>• <strong>87A rebate in new regime is ₹60,000</strong> on taxable income up to ₹12 lakh (effectively ₹12.75L gross for salaried)</li>
                     <li>• <strong>Surcharge of 37%</strong> has been abolished in New Regime — cap is 25%. Old Regime still has 37% surcharge</li>
                     <li>• <strong>Loss from House Property</strong> cannot be set off against salary income in New Regime</li>
                     <li>• <strong>Employer NPS 80CCD(2)</strong> up to 14% of salary is allowed in New Regime — often overlooked</li>
@@ -532,11 +562,10 @@
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-slate-100">
-                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">Up to ₹7.75L (Salaried)</td><td class="px-4 py-3 text-slate-600">Any amount</td><td class="px-4 py-3 text-sky-600 font-semibold">New Regime (Zero Tax via 87A)</td></tr>
-                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">₹8L – ₹10L</td><td class="px-4 py-3 text-slate-600">~₹1.5L – ₹2L</td><td class="px-4 py-3 text-sky-600 font-semibold">New Regime (usually)</td></tr>
-                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">₹10L – ₹15L</td><td class="px-4 py-3 text-slate-600">~₹2.5L – ₹3.5L</td><td class="px-4 py-3 text-amber-600 font-semibold">Depends on HRA city</td></tr>
-                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">₹15L – ₹25L</td><td class="px-4 py-3 text-slate-600">~₹3.75L – ₹4.5L</td><td class="px-4 py-3 text-purple-600 font-semibold">Old if metro HRA + max 80C</td></tr>
-                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">Above ₹25L</td><td class="px-4 py-3 text-slate-600">~₹4.5L+</td><td class="px-4 py-3 text-purple-600 font-semibold">Old if high HRA + home loan</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">Up to ₹12.75L (Salaried)</td><td class="px-4 py-3 text-slate-600">Any amount</td><td class="px-4 py-3 text-sky-600 font-semibold">New Regime (Zero Tax via 87A + ₹75k SD)</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">₹13L – ₹15L</td><td class="px-4 py-3 text-slate-600">~₹3.0L – ₹3.75L</td><td class="px-4 py-3 text-sky-600 font-semibold">New Regime (unless high Metro HRA)</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">₹15L – ₹25L</td><td class="px-4 py-3 text-slate-600">~₹3.75L – ₹4.75L</td><td class="px-4 py-3 text-amber-600 font-semibold">Old if metro HRA + max 80C + Home Loan</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium">Above ₹25L</td><td class="px-4 py-3 text-slate-600">~₹4.75L+</td><td class="px-4 py-3 text-purple-600 font-semibold">Old if high Metro HRA + Home Loan</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -549,7 +578,7 @@
             <div class="space-y-3 max-w-3xl mx-auto">
                 <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
                     <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">At what salary is New Tax Regime always better?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
-                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">If your total deductions (80C + HRA + 80D + NPS etc.) are less than approximately ₹3.75 Lakhs for incomes between ₹15L-₹20L, the New Regime is always better. Below ₹7.75L gross salary (salaried), the New Regime is almost always preferable due to the ₹60,000 Section 87A rebate making effective tax zero.</div>
+                    <div class="px-6 pb-5 text-slate-600 text-sm leading-relaxed">For salaried individuals with gross income up to ₹12.75 Lakhs (or ₹12 Lakhs for non-salaried), the New Tax Regime is unbeatable because total tax is ₹0 after standard deduction and Section 87A rebate. For higher incomes (₹15L–₹25L), New Regime is better unless your total eligible deductions exceed ₹3.75L–₹4.5L.</div>
                 </details>
                 <details class="bg-white rounded-2xl border border-slate-100 card-shadow group">
                     <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-800">What deductions make Old Regime better than New?<svg class="chevron w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
@@ -630,9 +659,17 @@
                 tax += taxable * rate;
                 remaining -= taxable;
             }
-            // 87A rebate: if taxable <= 12L, rebate = min(tax, 60000)
-            const rebate = (income <= 1200000) ? Math.min(tax, 60000) : 0;
-            return { taxBeforeRebate: tax, rebate, taxAfterRebate: Math.max(0, tax - rebate) };
+            // 87A rebate and statutory marginal relief
+            let taxAfterRebate = 0;
+            let rebate = 0;
+            if (income <= 1200000) {
+                rebate = Math.min(tax, 60000);
+                taxAfterRebate = 0;
+            } else {
+                taxAfterRebate = Math.min(tax, income - 1200000);
+                rebate = Math.max(0, tax - taxAfterRebate);
+            }
+            return { taxBeforeRebate: tax, rebate, taxAfterRebate };
         }
 
         function calcOldRegimeTax(income) {

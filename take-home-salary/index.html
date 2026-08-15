@@ -378,7 +378,8 @@
                         prevLimit = slab.limit;
                     } else break;
                 }
-                if (taxableIncome <= 1200000) tax = 0;
+                // Section 87A rebate & marginal relief
+                tax = taxableIncome <= 1200000 ? 0 : Math.min(tax, taxableIncome - 1200000);
             } else {
                 const slabs = [
                     { limit: 250000, rate: 0 },
@@ -393,7 +394,7 @@
                         prevLimit = slab.limit;
                     } else break;
                 }
-                if (taxableIncome <= 500000) tax = 0;
+                tax = taxableIncome <= 500000 ? 0 : Math.min(tax, tax);
             }
             return tax * 1.04; // 4% Cess
         }

@@ -562,8 +562,9 @@
             return new Intl.NumberFormat('en-IN').format(Math.round(val));
         }
 
-        // New Tax Regime Slabs — FY 2025-26 (Budget 2025)
-        function calcNewRegimeTax(income) {
+        // New Tax Regime Slabs — FY 2025-26 / 2026-27 (Budget 2025)
+        function calcNewRegimeTax(income, isIndividual = false) {
+            const initialIncome = income;
             if(income <= 400000) return 0;
             let tax = 0;
             if(income > 2400000) { tax += (income - 2400000) * 0.30; income = 2400000; }
@@ -573,19 +574,28 @@
             if(income > 800000) { tax += (income - 800000) * 0.10; income = 800000; }
             if(income > 400000) { tax += (income - 400000) * 0.05; }
             
-            // NOTE: HUFs are NOT eligible for Section 87A rebate
+            // Section 87A rebate applies ONLY to resident individuals, not HUFs
+            if (isIndividual && initialIncome <= 1200000) {
+                tax = 0;
+            } else if (isIndividual && initialIncome > 1200000) {
+                tax = Math.min(tax, initialIncome - 1200000);
+            }
             return tax + (tax * 0.04); // Cess
         }
 
-        function calcOldRegimeTax(income) {
-            let exemptLimit = 250000; // HUF always gets non-senior citizen limit
+        function calcOldRegimeTax(income, isIndividual = false) {
+            const initialIncome = income;
+            let exemptLimit = 250000;
             if(income <= exemptLimit) return 0;
             let tax = 0;
             if(income > 1000000) { tax += (income - 1000000) * 0.30; income = 1000000; }
             if(income > 500000) { tax += (income - 500000) * 0.20; income = 500000; }
             if(income > exemptLimit) { tax += (income - exemptLimit) * 0.05; }
             
-            // NOTE: HUFs are NOT eligible for Section 87A rebate
+            // Section 87A rebate applies ONLY to resident individuals up to 5L
+            if (isIndividual && initialIncome <= 500000) {
+                tax = 0;
+            }
             return tax + (tax * 0.04); // Cess
         }
 
@@ -594,21 +604,21 @@
             const fam = parseFloat(document.getElementById('inpFamIncome').value) || 0;
             const regime = document.getElementById('inpRegime').value;
 
-            // Scenario 1
+            // Scenario 1: Everything in Individual PAN
             const combined = ind + fam;
             let taxCombined = 0;
-            if(regime === 'new') taxCombined = calcNewRegimeTax(combined);
-            else taxCombined = calcOldRegimeTax(combined);
+            if(regime === 'new') taxCombined = calcNewRegimeTax(combined, true);
+            else taxCombined = calcOldRegimeTax(combined, true);
 
-            // Scenario 2
+            // Scenario 2: Split between Individual and HUF
             let taxInd = 0;
             let taxHuf = 0;
             if(regime === 'new') {
-                taxInd = calcNewRegimeTax(ind);
-                taxHuf = calcNewRegimeTax(fam);
+                taxInd = calcNewRegimeTax(ind, true);
+                taxHuf = calcNewRegimeTax(fam, false); // HUF does NOT get 87A
             } else {
-                taxInd = calcOldRegimeTax(ind);
-                taxHuf = calcOldRegimeTax(fam);
+                taxInd = calcOldRegimeTax(ind, true);
+                taxHuf = calcOldRegimeTax(fam, false); // HUF does NOT get 87A
             }
             let taxSplit = taxInd + taxHuf;
 
