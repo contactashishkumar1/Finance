@@ -17,86 +17,94 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Schema Markup: WebPage -->
-    <script type="application/ld+json">
     
+<!-- Schema Markup: FAQ -->
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Debt Payoff Calculator India (2026)",
-  "description": "Calculate your debt freedom date and total interest savings by adding extra monthly payments to your loans."
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Debt Payoff Calculator",
+      "item": "https://arthcalculator.in/debt-payoff/"
+    }
+  ]
 }
-
     </script>
 
-    <!-- Schema Markup: Organization -->
-    <!-- Schema Markup: Breadcrumb -->
+    <!-- SoftwareApplication Schema -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
-        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
-        { "@type": "ListItem", "position": 3, "name": "Debt Payoff", "item": "https://arthcalculator.in/debt-payoff" }
-      ]
-    }
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Debt Payoff Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/debt-payoff/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
     </script>
 
-    <!-- Schema Markup: FAQ -->
+    <!-- FAQPage Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is a debt payoff calculator?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A debt payoff calculator is a tool that determines how long it will take to pay off a loan based on your current payments and shows how much interest you can save by making extra monthly contributions."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the debt snowball method?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The debt snowball method involves paying off the smallest debt balances first while making minimum payments on others to build psychological momentum."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-        input[type="range"] { accent-color: #2563eb; height: 6px; }
-        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
-        .nav-link.active { color: #2563eb; font-weight: 600; }
-        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
-        details summary { list-style: none; }
-        details summary::-webkit-details-marker { display: none; }
-        details[open] summary svg { transform: rotate(180deg); }
-        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
-        .btn-outline { border: 1px solid #e2e8f0; transition: all 0.2s; }
-        .btn-outline:hover { border-color: #2563eb; color: #2563eb; background: #eff6ff; }
-    </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Debt Payoff Calculator India 2026 \u2013 Track Interest Saved",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "INR"
+      "@type": "Question",
+      "name": "Is it better to pay off debt or invest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If the interest rate on your debt (e.g. 15%) is higher than the expected return on your investment (e.g. 12% in SIP ), it is mathematically better to pay off the debt first."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I close a loan early without penalty?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In India, individual borrowers with floating-rate Home Loans have zero prepayment charges. Personal loans may have a lock-in period or charges of 2-4%. Check your loan agreement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the most expensive type of debt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unpaid credit card balances are the most expensive, often charging 36% to 42% interest annually. These should always be cleared first using the avalanche method."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much interest can I save with \u20b95,000 extra per month?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On a 10 Lakh home loan for 20 years, an extra \u20b95,000 every month can save you over \u20b925 Lakhs in interest and close the loan 10 years earlier!"
+      }
+    }
+  ]
 }
     </script>
 </head>
@@ -106,7 +114,7 @@
     <!-- Header & Breadcrumbs -->
     <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left text-pretty">
         <div class="max-w-6xl mx-auto px-4">
-            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
                 <ol class="flex list-none p-0">
                     <li class="flex items-center">
                         <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
@@ -116,7 +124,7 @@
                         <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600 font-bold">Debt Payoff</li>
+                    <li class="text-blue-600 font-bold">Debt Payoff Calculator</li>
                 </ol>
             </nav>
 

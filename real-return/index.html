@@ -26,104 +26,94 @@
     <meta property="og:image" content="https://arthcalculator.in/logo.png">
 
     <!-- Schema Markup: WebPage -->
-    <script type="application/ld+json">
+    <!-- Breadcrumb Schema -->
     
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Real Return Calculator India (2026)",
-  "url": "https://arthcalculator.in/real-return/",
-  "description": "Calculate the inflation-adjusted rate of return on your investments to understand true purchasing power."
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Real Return Calculator",
+      "item": "https://arthcalculator.in/real-return/"
+    }
+  ]
 }
-
     </script>
 
-    <!-- Schema Markup: SoftwareApplication -->
+    <!-- SoftwareApplication Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Real Return Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/real-return/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Real Return Calculator",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "description": "Calculates the real rate of return on investments by adjusting nominal gains against the inflation rate.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "INR"
+      "@type": "Question",
+      "name": "1. What is the Real Rate of Return?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The real rate of return is the net profit or loss you earn on an investment after adjusting for inflation. It represents the increase or decrease in your actual purchasing power over time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "2. Real Return vs Nominal Return: What is the difference?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nominal return is the literal percentage gain (e.g., 10%). Real return accounts for the fact that prices for goods also rose (e.g., 6% inflation). Your real growth is roughly the difference between the two."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "3. How is inflation-adjusted return calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The precise formula is: ((1 + Nominal Rate) / (1 + Inflation Rate)) - 1. For example, if you earn 12% and inflation is 6%, the real return is roughly 5.66%, not just 6%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "4. Can real return be negative?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If inflation is higher than your investment return, your real return is negative. This is common in savings accounts or short-term deposits when inflation spikes."
       }
     }
+  ]
+}
     </script>
-
-    <!-- Schema Markup: HowTo -->
-    <!-- Schema Markup: FAQ -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the Real Rate of Return?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The Real Rate of Return is the actual annual profit on an investment after adjusting for inflation. It measures the true increase in an investor's purchasing power rather than just the nominal value of the currency."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Real Return vs Nominal Return: What is the difference?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Nominal Return is the percentage growth shown on your statement (e.g., 10% in a mutual fund). Real Return is the profit left after subtracting the inflation rate (e.g., 10% returns minus 6% inflation results in approximately 3.77% real growth)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is inflation-adjusted return calculated?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The standard formula is: Real Return = [(1 + Nominal Rate) / (1 + Inflation Rate)] - 1. This formula accounts for the geometric nature of compounding and inflation simultaneously."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can real return be negative?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. If your investment return is lower than the inflation rate (e.g., keeping cash in a 3% savings account when inflation is 6%), your real return is -3%. This means you are losing purchasing power over time."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is a healthy real rate of return in India?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "In the Indian context, a real rate of return of 4% to 7% is considered healthy for long-term wealth creation. This usually requires investing in growth assets like Equity Mutual Funds."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com" defer></script>
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-        input[type="range"] { accent-color: #2563eb; height: 6px; }
-        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
-        .nav-link.active { color: #2563eb; font-weight: 600; }
-        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
-        details summary { list-style: none; }
-        details summary::-webkit-details-marker { display: none; }
-        details[open] summary svg { transform: rotate(180deg); }
-        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
-        .btn-outline { border: 1px solid #e2e8f0; transition: all 0.2s; }
-        .btn-outline:hover { border-color: #2563eb; color: #2563eb; background: #eff6ff; }
-        .tab-btn { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
-        .tab-btn.active { background-color: #2563eb; color: white; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2); }
-    </style>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
     <div id="navbar"></div>
@@ -131,13 +121,13 @@
     <!-- Header & Breadcrumbs -->
     <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
         <div class="max-w-6xl mx-auto px-4">
-            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
                 <ol class="flex list-none p-0">
                     <li class="flex items-center">
                         <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="flex items-center text-pretty">
+                    <li class="flex items-center">
                         <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>

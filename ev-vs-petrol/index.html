@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EV vs Petrol Cost Calculator 2026: True Savings & Break-Even</title>
-    <meta name="description" content="Compare Electric Vehicle vs Petrol car costs in India (2026). Calculate monthly running costs, maintenance savings, and the exact break-even point for your EV.">
+    <meta name="description" content="Compare Electric Vehicle vs Petrol car ownership costs in India. Calculate monthly running costs, maintenance, and breakeven kilometers.">
     <meta name="keywords" content="ev vs petrol calculator india, electric car savings calculator, ev break even calculator, petrol vs ev cost per km india, pm e-drive scheme 2026">
     <meta name="author" content="Ashish Kumar">
     <meta name="last-modified" content="2026-04-25">
@@ -20,42 +20,84 @@
     <meta property="og:image" content="https://arthcalculator.in/logo.png">
 
     <!-- Schema Markup -->
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "FinancialProduct",
-      "name": "EV vs ICE Comparison Calculator",
-      "description": "Calculates the Total Cost of Ownership (TCO) difference between Electric and Petrol vehicles in India.",
-      "url": "https://arthcalculator.in/ev-vs-petrol/",
-      "brand": {
-        "@type": "Brand",
-        "name": "ArthCalculator"
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "EV vs Petrol Cost Calculator",
+      "item": "https://arthcalculator.in/ev-vs-petrol/"
+    }
+  ]
+}
+    </script>
+
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "EV vs Petrol Cost Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/ev-vs-petrol/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are PM E-DRIVE Scheme 2026 extension details?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The PM E-DRIVE scheme for 2026 continues to offer direct subsidies primarily for Electric 2-wheelers and 3-wheelers. For Passenger Cars, the primary benefit comes from the massive \u20b92,000 Crore investment in public charging infrastructure and the continued exemption of road tax and registration fees in many Indian states like Tamil Nadu, Delhi, and Maharashtra."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the average EV battery life in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Modern EV batteries in India are typically warranted for 8 years or 1.6 Lakh km. Even after this period, batteries usually retain 70-80% health, making them viable for over 10-12 years of regular city usage before needing a second-life application."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "EV Resale value vs Petrol savings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "While Petrol cars have a more established used car market, the operational savings of an EV (often exceeding \u20b95 Lakhs over 5 years of moderate usage) usually far outweigh any higher depreciation costs, resulting in a lower net cost to the owner."
       }
     }
-    </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-        input[type="range"] { accent-color: #2563eb; height: 6px; }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
-    </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "EV vs Petrol Cost Calculator 2026: True Savings & Break-Even",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "INR"
-      }
+  ]
 }
     </script>
 </head>
@@ -70,11 +112,11 @@
                         <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="flex items-center text-pretty">
-                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600 font-bold">EV vs Petrol Calculator</li>
+                    <li class="text-blue-600 font-bold">EV vs Petrol Cost Calculator</li>
                 </ol>
             </nav>
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emergency Fund Calculator India – How Much Savings Needed</title>
+    <title>Emergency Fund Calculator: 3-6 Month Expense Buffer</title>
     <meta name="description" content="Calculate ideal contingency emergency reserve (3 to 12 months expenses) based on monthly living costs and liabilities instantly in India.">
     <meta name="keywords" content="emergency fund calculator india, emergency savings calculator, how much emergency fund needed, financial safety net india, contingency fund calculator">
     <meta name="author" content="Ashish Kumar">
@@ -15,36 +15,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Emergency Fund Calculator India",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "description": "Calculate the ideal financial safety net based on monthly expenses, job stability, and family dependents.",
-      "url": "https://arthcalculator.in/emergency-fund/",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "INR"
-      }
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
-        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
-        { "@type": "ListItem", "position": 3, "name": "Emergency Fund", "item": "https://arthcalculator.in/emergency-fund/" }
-      ]
-    }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+<script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
         .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -59,13 +31,59 @@
         .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
         select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748b'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25rem; }
     </style>
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Emergency Fund Planner",
+      "item": "https://arthcalculator.in/emergency-fund/"
+    }
+  ]
+}
+    </script>
+
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Emergency Fund Planner",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/emergency-fund/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
     <div id="navbar"></div>
 
     <header class="bg-white border-b border-slate-200 py-8 sm:py-12 mb-6 sm:mb-8 text-center md:text-left">
         <div class="max-w-6xl mx-auto px-4 text-pretty">
-            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
                 <ol class="flex list-none p-0">
                     <li class="flex items-center">
                         <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
@@ -75,7 +93,7 @@
                         <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600 font-bold">Emergency Fund</li>
+                    <li class="text-blue-600 font-bold">Emergency Fund Planner</li>
                 </ol>
             </nav>
 
@@ -360,13 +378,6 @@
                     <p>Recommended strategies for Indian savers include using a 'Laddering' technique: keeping 20% in cash/savings for immediate needs, 40% in high-interest savings accounts or sweep-in FDs, and the remaining 40% in Liquid Mutual Funds. This balance provides safety, ease of access, and a small hedge against rising costs without exposing your vital safety net to unnecessary market risk.</p>
                 </div>
             </section>
-
-            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-pretty text-pretty">
-                <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide">Disclaimer</p>
-                Calculations are based on general financial planning principles. Your actual requirement may vary based on personal risk appetite and life changes. This tool provides an estimate for educational awareness and does not constitute formal financial advice.
-                <p class="mt-4 font-bold text-slate-400 uppercase tracking-widest text-[9px]">Updated for FY 2026-27 financial planning guidelines</p>
-                <p class="mt-1 font-semibold italic text-slate-600">Last Updated: March 2026</p>
-            </div>
         </div>
     </main>
 

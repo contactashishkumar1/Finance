@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P2P Lending Return Calculator (2026) – NPA & Post-Tax Net Yield</title>
-    <meta name="description" content="Calculate realistic Peer-to-Peer (P2P) lending net returns in 2026. Computes gross interest, expected default NPA losses, and post-tax yield for 12% Club & LiquiLoans.">
+    <title>P2P Lending Return Calculator: Post-Tax Net Yield</title>
+    <meta name="description" content="Calculate net returns on P2P lending investments (Faircent, Lendbox, 12% Club). Factor in borrower default rates, platform fees, and income tax.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://arthcalculator.in/peer-to-peer-p2p-lending-returns/">
     
@@ -19,139 +19,126 @@
     <meta property="og:url" content="https://arthcalculator.in/peer-to-peer-p2p-lending-returns/">
     <meta property="og:site_name" content="ArthCalculator">
     <meta property="og:image" content="https://arthcalculator.in/logo.png">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "P2P Lending Return Calculator",
-      "url": "https://arthcalculator.in/peer-to-peer-p2p-lending-returns/",
-      "description": "Calculate P2P lending NPA default losses and post-tax net yield.",
-      "datePublished": "2026-08-08",
-      "dateModified": "2026-08-08"
-    }
-    </script>
+    <!-- Breadcrumb Schema -->
     
+    <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "P2P Lending Return Calculator",
-      "applicationCategory": "FinanceApplication",
-      "operatingSystem": "Web",
-      "url": "https://arthcalculator.in/peer-to-peer-p2p-lending-returns/",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "INR"
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "P2P Lending Net Return Calculator",
+      "item": "https://arthcalculator.in/peer-to-peer-p2p-lending-returns/"
+    }
+  ]
+}
+    </script>
+
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "P2P Lending Net Return Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/peer-to-peer-p2p-lending-returns/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is P2P lending interest taxed in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Interest earned on P2P lending platforms (e.g. 12% Club, LiquiLoans, Faircent) is treated as 'Income from Other Sources' and taxed at your applicable income tax slab rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the maximum investment limit in P2P lending under RBI rules?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RBI caps the total aggregate P2P lending exposure across all NBFC-P2P platforms at \u20b950,00,000 (\u20b950 Lakhs) per individual lender."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are P2P lending default NPA losses tax-deductible?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If P2P lending is carried out as a business/profession, bad debt default losses can be written off under Section 36(1)(vii). For individual investors, tax write-offs depend on platform documentation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the average NPA default rate on Indian P2P platforms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Average default NPA rates range between 1.5% and 4.0% depending on borrower credit risk grade (Prime vs Sub-prime)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is P2P lending covered by DICGC bank deposit insurance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. P2P lending is an unsecured peer-to-peer debt arrangement and carries zero DICGC insurance or government guarantees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do RBI P2P guidelines protect investor funds?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RBI mandates that P2P platforms must route funds through an independent Trustee-monitored Escrow Account with a scheduled commercial bank."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the maximum exposure permitted to a single borrower?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RBI limits a lender's total exposure to a single borrower across all P2P platforms to \u20b950,000 to ensure mandatory diversification."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is post-tax P2P yield lower for investors in 30% tax slabs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a 30% slab rate investor, a 12% stated gross P2P interest rate shrinks to ~7.5% post-tax yield after accounting for 31.2% tax and 1.0% NPA default drag."
       }
     }
+  ]
+}
     </script>
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://arthcalculator.in/"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Financial Calculators",
-        "item": "https://arthcalculator.in/calculators/"
-      },{
-        "@type": "ListItem",
-        "position": 3,
-        "name": "P2P Lending Return Calculator",
-        "item": "https://arthcalculator.in/peer-to-peer-p2p-lending-returns/"
-      }]
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How is P2P lending interest taxed in India?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Interest earned on P2P lending platforms (e.g. 12% Club, LiquiLoans, Faircent) is treated as 'Income from Other Sources' and taxed at your applicable income tax slab rate."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the maximum investment limit in P2P lending under RBI rules?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "RBI caps the total aggregate P2P lending exposure across all NBFC-P2P platforms at ₹50,00,000 (₹50 Lakhs) per individual lender."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are P2P lending default NPA losses tax-deductible?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If P2P lending is carried out as a business/profession, bad debt default losses can be written off under Section 36(1)(vii). For individual investors, tax write-offs depend on platform documentation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the average NPA default rate on Indian P2P platforms?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Average default NPA rates range between 1.5% and 4.0% depending on borrower credit risk grade (Prime vs Sub-prime)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is P2P lending covered by DICGC bank deposit insurance?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. P2P lending is an unsecured peer-to-peer debt arrangement and carries zero DICGC insurance or government guarantees."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do RBI P2P guidelines protect investor funds?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "RBI mandates that P2P platforms must route funds through an independent Trustee-monitored Escrow Account with a scheduled commercial bank."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the maximum exposure permitted to a single borrower?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "RBI limits a lender's total exposure to a single borrower across all P2P platforms to ₹50,000 to ensure mandatory diversification."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why is post-tax P2P yield lower for investors in 30% tax slabs?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For a 30% slab rate investor, a 12% stated gross P2P interest rate shrinks to ~7.5% post-tax yield after accounting for 31.2% tax and 1.0% NPA default drag."
-          }
-        }
-      ]
-    }
-    </script>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-        details summary { list-style: none; }
-        details summary::-webkit-details-marker { display: none; }
-        details[open] summary svg { transform: rotate(180deg); }
-    </style>
 </head>
 <body class="text-slate-800 antialiased selection:bg-blue-200">
     <div id="navbar"></div>
@@ -174,18 +161,18 @@
         
         <!-- Breadcrumb -->
         <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
-            <ol class="flex list-none p-0">
-                <li class="flex items-center">
-                    <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
-                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
-                </li>
-                <li class="flex items-center">
-                    <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
-                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
-                </li>
-                <li class="text-blue-600 font-bold">P2P Lending Return Calculator</li>
-            </ol>
-        </nav>
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">P2P Lending Net Return Calculator</li>
+                </ol>
+            </nav>
 
         <!-- Hero Section -->
         <div class="text-center max-w-3xl mx-auto mb-10">

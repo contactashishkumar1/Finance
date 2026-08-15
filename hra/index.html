@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HRA Calculator India 2026: House Rent Exemption</title>
+    <title>HRA Exemption Calculator 2026: Section 10(13A) Tax</title>
     <meta name="description" content="Calculate tax-exempt House Rent Allowance under Section 10(13A) using basic salary, DA, metro status and actual rent paid instantly.">
     <meta name="author" content="Ashish Kumar">
     <meta name="robots" content="index, follow">
@@ -17,118 +17,124 @@
     <meta property="og:site_name" content="ArthCalculator">
 
     <!-- Schema Markup -->
-    <script type="application/ld+json">
+    <!-- Breadcrumb Schema -->
     
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "HRA Calculator India",
-  "description": "Professional tool to calculate House Rent Allowance (HRA) tax exemptions in India."
-}
-
-    </script>
-
-    <!-- FAQ Schema -->
-    <script type="application/ld+json">
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is HRA exemption?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "HRA (House Rent Allowance) exemption is the part of your salary given by your employer for house rent that is not taxable under Section 10(13A) of the IT Act."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is HRA calculated in India?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It is the minimum of three values: 1) Actual HRA received, 2) Rent paid minus 10% of basic salary, or 3) 50% of basic salary for metros (40% for non-metros)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I claim HRA if I live in my own house?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. HRA exemption is only applicable if you are paying rent. If you own the house you live in, the entire HRA amount received from your employer will be fully taxable."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I need rent receipts for HRA?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Employers usually require monthly rent receipts as proof to calculate your TDS correctly. If your rent exceeds ₹1,00,000 annually, providing the landlord's PAN is mandatory."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is HRA allowed in the new tax regime?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. The New Tax Regime offers lower slab rates but removes almost all exemptions, including HRA. You must choose the Old Regime to claim HRA benefits."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I claim HRA and home loan interest both?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, if you own a house in one city and pay rent in another due to employment, you can claim both HRA exemption and Section 24 home loan interest deduction."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is PAN of landlord mandatory for HRA?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, if your annual rent exceeds ₹1,00,000, it is mandatory to provide the PAN of your landlord to your employer to claim the HRA exemption."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I pay rent to my parents and claim HRA?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, you can pay rent to your parents and claim HRA. However, the rent you pay will be added to your parents' taxable income, and you cannot pay rent to your spouse."
-          }
-        }
-      ]
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "HRA Exemption Calculator",
+      "item": "https://arthcalculator.in/hra/"
     }
+  ]
+}
     </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
-        .nav-link.active { color: #2563eb; font-weight: 600; }
-        .nav-link.active::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background-color: #2563eb; }
-        details summary { list-style: none; }
-        details summary::-webkit-details-marker { display: none; }
-        details[open] summary svg { transform: rotate(180deg); }
-        input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
-    </style>
-
+    <!-- SoftwareApplication Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "HRA Exemption Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/hra/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "HRA Calculator India 2026: House Rent Exemption",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "INR"
+      "@type": "Question",
+      "name": "1. What is HRA exemption?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HRA exemption is the tax-free part of the House Rent Allowance component of your salary. It is designed to lower the tax burden for individuals paying rent for their residential accommodation."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "2. How is HRA calculated in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the lowest of three amounts: Actual HRA received, Rent paid minus 10% of basic salary, or a fixed percentage of salary (50% for metros and 40% for non-metros)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "3. Can I claim HRA if I live in my own house?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. HRA exemption is only applicable if you are paying rent. If you own the house you live in, the entire HRA amount received from your employer will be fully taxable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "4. Do I need rent receipts for HRA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Employers usually require monthly rent receipts as proof to calculate your TDS correctly. If your rent exceeds \u20b91,00,000 annually, providing the landlord's PAN is mandatory."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "5. Is HRA allowed in the new tax regime?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The New Tax Regime offers lower slab rates but removes almost all exemptions, including HRA. You must choose the Old Regime to claim HRA benefits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "6. Can I claim HRA and home loan interest both?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if you own a house in one city and pay rent in another due to employment, you can claim both HRA exemption and Section 24 home loan interest deduction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "7. Is PAN of landlord mandatory for HRA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if your annual rent exceeds \u20b91,00,000, it is mandatory to provide the PAN of your landlord to your employer to claim the HRA exemption."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "8. Can I pay rent to my parents and claim HRA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can pay rent to your parents and claim HRA. However, the rent you pay will be added to your parents' taxable income, and you cannot pay rent to your spouse."
+      }
+    }
+  ]
 }
     </script>
 </head>
@@ -145,10 +151,10 @@
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="flex items-center">
-                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600">HRA Calculator</li>
+                    <li class="text-blue-600 font-bold">HRA Exemption Calculator</li>
                 </ol>
             </nav>
 

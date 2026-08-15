@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moratorium Interest Calculator (2026) – Loan Interest Accrual</title>
-    <meta name="description" content="Calculate accrued interest during loan moratorium periods (Education loan, Home loan moratorium). See the compounding impact on total loan tenure and EMIs in 2026.">
+    <title>Moratorium Interest Calculator: Loan Accrual</title>
+    <meta name="description" content="Calculate loan interest accrual and capitalization during a loan moratorium period. See how EMI and total repayment increase after grace periods.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://arthcalculator.in/moratorium-interest-calculator/">
     
@@ -19,139 +19,126 @@
     <meta property="og:url" content="https://arthcalculator.in/moratorium-interest-calculator/">
     <meta property="og:site_name" content="ArthCalculator">
     <meta property="og:image" content="https://arthcalculator.in/logo.png">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Moratorium Interest Calculator",
-      "url": "https://arthcalculator.in/moratorium-interest-calculator/",
-      "description": "Calculate accrued interest during loan moratorium periods in India.",
-      "datePublished": "2026-08-08",
-      "dateModified": "2026-08-08"
-    }
-    </script>
+    <!-- Breadcrumb Schema -->
     
+    <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
       "name": "Moratorium Interest Calculator",
-      "applicationCategory": "FinanceApplication",
-      "operatingSystem": "Web",
-      "url": "https://arthcalculator.in/moratorium-interest-calculator/",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "INR"
+      "item": "https://arthcalculator.in/moratorium-interest-calculator/"
+    }
+  ]
+}
+    </script>
+
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Moratorium Interest Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/moratorium-interest-calculator/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a loan moratorium?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A loan moratorium is a temporary period during which a borrower is not required to make monthly EMI payments. However, interest continues to accrue during this period."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is moratorium interest waived by banks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, a moratorium is not an interest waiver. Interest accrues monthly on the outstanding loan principal and is capitalized (added to the principal balance)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does moratorium impact education loans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In education loans, the moratorium period spans the course duration plus 6-12 months. Simple interest accrued during this time is added to the principal before EMI repayment starts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What options do borrowers have after moratorium ends?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Borrowers can either increase their monthly EMI to keep tenure constant or keep EMI constant and extend the loan tenure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is moratorium interest calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Accrued Interest = Principal * ((1 + Monthly Interest Rate)^Moratorium Months - 1)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I pay simple interest during the moratorium?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, paying simple interest during the moratorium prevents interest capitalization and reduces your future loan burden significantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does moratorium affect CIBIL credit score?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Opting for an officially sanctioned bank moratorium does not negatively impact your CIBIL credit score."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I opt for a moratorium if offered?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you have sufficient cash flow, it is recommended to continue paying regular EMIs to avoid accrued interest costs."
       }
     }
+  ]
+}
     </script>
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://arthcalculator.in/"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Financial Calculators",
-        "item": "https://arthcalculator.in/calculators/"
-      },{
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Moratorium Calculator",
-        "item": "https://arthcalculator.in/moratorium-interest-calculator/"
-      }]
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is a loan moratorium?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A loan moratorium is a temporary period during which a borrower is not required to make monthly EMI payments. However, interest continues to accrue during this period."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is moratorium interest waived by banks?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No, a moratorium is not an interest waiver. Interest accrues monthly on the outstanding loan principal and is capitalized (added to the principal balance)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does moratorium impact education loans?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "In education loans, the moratorium period spans the course duration plus 6-12 months. Simple interest accrued during this time is added to the principal before EMI repayment starts."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What options do borrowers have after moratorium ends?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Borrowers can either increase their monthly EMI to keep tenure constant or keep EMI constant and extend the loan tenure."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is moratorium interest calculated?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Accrued Interest = Principal * ((1 + Monthly Interest Rate)^Moratorium Months - 1)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I pay simple interest during the moratorium?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, paying simple interest during the moratorium prevents interest capitalization and reduces your future loan burden significantly."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does moratorium affect CIBIL credit score?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Opting for an officially sanctioned bank moratorium does not negatively impact your CIBIL credit score."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Should I opt for a moratorium if offered?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If you have sufficient cash flow, it is recommended to continue paying regular EMIs to avoid accrued interest costs."
-          }
-        }
-      ]
-    }
-    </script>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-        details summary { list-style: none; }
-        details summary::-webkit-details-marker { display: none; }
-        details[open] summary svg { transform: rotate(180deg); }
-    </style>
 </head>
 <body class="text-slate-800 antialiased selection:bg-blue-200">
     <div id="navbar"></div>
@@ -174,18 +161,18 @@
         
         <!-- Breadcrumb -->
         <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
-            <ol class="flex list-none p-0">
-                <li class="flex items-center">
-                    <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
-                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
-                </li>
-                <li class="flex items-center">
-                    <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
-                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
-                </li>
-                <li class="text-blue-600 font-bold">Moratorium Calculator</li>
-            </ol>
-        </nav>
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Moratorium Interest Calculator</li>
+                </ol>
+            </nav>
 
         <!-- Hero Section -->
         <div class="text-center max-w-3xl mx-auto mb-10">

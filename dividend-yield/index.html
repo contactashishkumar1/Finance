@@ -17,121 +17,126 @@
     <meta property="og:image" content="/favicon.ico">
     
     <!-- Schema Markup: WebPage -->
-    <script type="application/ld+json">
     
+<!-- Schema Markup: FAQ -->
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Dividend Yield Calculator India (2026)",
-  "description": "A high-precision financial tool to calculate dividend yield and annual passive income from stocks."
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Dividend Yield Calculator",
+      "item": "https://arthcalculator.in/dividend-yield/"
+    }
+  ]
 }
-
     </script>
 
-    <!-- Schema Markup: Breadcrumb -->
+    <!-- SoftwareApplication Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Dividend Yield Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/dividend-yield/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-     "@context": "https://schema.org",
-     "@type": "BreadcrumbList",
-     "itemListElement": [
-      {
-       "@type": "ListItem",
-       "position": 1,
-       "name": "Home",
-       "item": "https://arthcalculator.in/"
-      },
-      {
-       "@type": "ListItem",
-       "position": 2,
-       "name": "Financial Calculators",
-       "item": "https://arthcalculator.in/calculators/"
-      },
-      {
-       "@type": "ListItem",
-       "position": 3,
-       "name": "Dividend Yield",
-       "item": "https://arthcalculator.in/dividend-yield/"
+      "@type": "Question",
+      "name": "1. What is a \"Good\" dividend yield in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typically, a yield between 2% to 5% is considered healthy for a stable blue-chip company. Anything above 6% is very high but requires careful checking of the company's growth potential."
       }
-     ]
-    }
-    </script>
-
-    <!-- Schema Markup: FAQ -->
-    <script type="application/ld+json">
+    },
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is Dividend Yield?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Dividend yield is a financial ratio that shows how much a company pays out in dividends each year relative to its stock price, expressed as a percentage."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do you calculate dividend yield?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Dividend Yield = (Annual Dividend Per Share / Price Per Share) x 100."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            -webkit-tap-highlight-color: transparent;
-            scroll-behavior: smooth;
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .card-shadow {
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-        }
-        input[type="range"] {
-            accent-color: #2563eb;
-            height: 6px;
-        }
-        .table-container::-webkit-scrollbar {
-            height: 4px;
-        }
-        .table-container::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 10px;
-        }
-        .formula-box {
-            background: #f1f5f9;
-            padding: 1.5rem;
-            border-radius: 1rem;
-            font-family: 'Courier New', Courier, monospace;
-            overflow-x: auto;
-        }
-    </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Dividend Yield Calculator India 2026: Stock Income & Yield",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "INR"
+      "@type": "Question",
+      "name": "2. Why does the yield change even when the dividend is constant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Since yield is a ratio of dividend divided by price, any change in the stock price inversely affects the yield. If the stock price goes up, the yield drops. If the price crashes, the yield increases."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "3. Are dividends tax-free in India in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Dividend income is added to your total income and taxed as per your individual income tax slab rates. Additionally, companies deduct a 10% TDS (Tax Deducted at Source) if the annual dividend exceeds \u20b95,000."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "4. What is the Ex-Dividend Date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To receive a dividend, you must buy the stock before the ex-dividend date. If you buy the stock on or after this date, the previous owner gets the dividend."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "5. Does yield matter for long-term growth stocks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not as much. Rapidly growing companies often prefer to reinvest their profits back into the business rather than paying dividends. For these stocks, you should focus on Earnings per Share (EPS) growth instead of yield."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "6. What is the Dividend Payout Ratio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the percentage of net income that a company pays out as dividends. If a company earns \u20b9100 and pays \u20b940 as dividend, the payout ratio is 40%. A very high ratio (e.g. > 90%) might mean the company isn't investing enough in its future."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "7. Can I receive dividends monthly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most Indian companies pay dividends once or twice a year. However, by building a portfolio of many different stocks that pay in different months, you can create a structure that provides cash flow almost every month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "8. Does a bonus issue or stock split affect yield?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In a stock split or bonus, the number of shares increases and the price per share decreases proportionally. While the yield percentage initially looks the same, your total dividend income often grows if the company maintains its dividend per share level after the split."
+      }
+    }
+  ]
 }
     </script>
 </head>
@@ -148,10 +153,10 @@
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="flex items-center">
-                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600">Dividend Yield</li>
+                    <li class="text-blue-600 font-bold">Dividend Yield Calculator</li>
                 </ol>
             </nav>
 
@@ -484,11 +489,6 @@
                     </details>
                 </div>
             </section>
-
-            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-center">
-                <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
-                Dividend yield is based on historical data. Companies are not legally required to pay dividends and can reduce or cancel them at any time. Past yield is not an indicator of future income. Consult with a SEBI-registered advisor before making investment choices.
-            </div>
         </div>
     </main>
 

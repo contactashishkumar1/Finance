@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Return Calculator 2026: Check Combined CAGR</title>
-    <meta name="description" content="Calculate portfolio returns, profit, CAGR and weighted returns of multiple investments. Professional portfolio analysis tool for investors.">
+    <title>Portfolio Return Calculator: Weighted Asset Yield</title>
+    <meta name="description" content="Calculate weighted average return of your multi-asset portfolio. Track combined CAGR performance across stocks, mutual funds, gold, and debt.">
     <meta name="keywords" content="portfolio return calculator, weighted average return calculator, cagr calculator multiple investments, investment portfolio tracker india, total portfolio return formula">
     <meta name="author" content="Ashish Kumar">
     <meta name="last-modified" content="2026-03-15">
@@ -17,120 +17,126 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Schema Markup: SoftwareApplication -->
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
       "name": "Portfolio Return Calculator",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "description": "Calculates total portfolio return, weighted return, and CAGR across multiple investment tranches.",
-      "featureList": [
-        "Weighted Return Calculation",
-        "Portfolio CAGR Analysis",
-        "Asset Allocation Visualization",
-        "Performance Benchmarking"
-      ],
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "INR"
+      "item": "https://arthcalculator.in/portfolio-return-calculator/"
+    }
+  ]
+}
+    </script>
+
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Portfolio Return Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/portfolio-return-calculator/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How to calculate portfolio return?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the sum of (Individual Return \u00d7 Weight of that asset). Alternatively, (Total Current Value - Total Invested) / Total Invested."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good portfolio return in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A healthy long-term portfolio should target 12-14% CAGR. In the short term, anything above the risk-free rate (approx 7%) is positive."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does diversification increase returns?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Diversification primarily reduces risk (volatility). While it might slightly lower potential peak returns compared to a single lucky stock, it ensures long-term survival and consistent wealth growth."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Difference between CAGR and Absolute Return?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolute return is total profit %. CAGR is the smoothed annual growth rate. If you double money in 10 years, Absolute is 100%, but CAGR is 7.2%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I review my portfolio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A semi-annual or annual review is best. Over-monitoring leads to panic-selling, while under-monitoring leads to carrying obsolete or bad assets. Check your Net Worth regularly for better context."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I include my EPF or PPF in my portfolio return?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. To get a true picture of your wealth growth, you should include debt instruments like EPF, PPF, and FDs. They lower your overall return but accurately reflect your total capital safety."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Asset Allocation Weight leakage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is when a high-performing asset grows so much that it dominates your portfolio (e.g. from 10% to 40%). This increases your risk if that single asset crashes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I track real estate returns in this calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Enter the total purchase price + registration costs as \"Invested\" and the current estimated market value as \"Value\" to see how your property is dragging or boosting your overall portfolio."
       }
     }
+  ]
+}
     </script>
-
-    <!-- Schema Markup: FAQPage -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How to calculate portfolio return?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Total portfolio return is calculated by taking the sum of current values of all investments, subtracting the total initial investment, and dividing by the total initial investment."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is a good portfolio return in India?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A good portfolio return should ideally beat inflation (approx 6%) and Fixed Deposit rates (approx 7%). For long-term equity heavy portfolios, 12-15% is considered healthy."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does diversification increase returns?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Diversification primarily reduces risk (volatility). While it might slightly lower potential peak returns compared to a single lucky stock, it ensures long-term survival and consistent wealth growth."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Difference between CAGR and Absolute Return?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolute return is total profit %. CAGR is the smoothed annual growth rate. If you double money in 10 years, Absolute is 100%, but CAGR is 7.2%."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How often should I review my portfolio?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A semi-annual or annual review is best. Over-monitoring leads to panic-selling, while under-monitoring leads to carrying obsolete or bad assets. Check your Net Worth regularly for better context."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Should I include my EPF or PPF in my portfolio return?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. To get a true picture of your wealth growth, you should include debt instruments like EPF, PPF, and FDs. They lower your overall return but accurately reflect your total capital safety."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is Asset Allocation Weight leakage?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It is when a high-performing asset grows so much that it dominates your portfolio (e.g. from 10% to 40%). This increases your risk if that single asset crashes."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I track real estate returns in this calculator?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Enter the total purchase price + registration costs as 'Invested' and the current estimated market value as 'Value' to see how your property is dragging or boosting your overall portfolio."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
-        .nav-link.active { color: #2563eb; font-weight: 600; }
-        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
-        input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
-        details summary { list-style: none; }
-        details summary::-webkit-details-marker { display: none; }
-        details[open] summary svg { transform: rotate(180deg); }
-        .table-container::-webkit-scrollbar { height: 4px; }
-        .table-container::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
-        @keyframes countUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .animate-result { animation: countUp 0.5s ease-out forwards; }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-    </style>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12">
     <div id="navbar"></div>
@@ -148,7 +154,7 @@
                         <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600 font-bold">Portfolio Return</li>
+                    <li class="text-blue-600 font-bold">Portfolio Return Calculator</li>
                 </ol>
             </nav>
 

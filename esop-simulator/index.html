@@ -30,19 +30,108 @@
         input[type="range"] { accent-color: #4f46e5; height: 6px; }
         .formula-box { background: #f5f3ff; padding: 1.25rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; color: #4338ca; }
     </style>
-
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "ESOP & RSU Wealth Simulator 2026: Startup Equity Tax",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "INR"
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ESOP & RSU Wealth Simulator",
+      "item": "https://arthcalculator.in/esop-simulator/"
+    }
+  ]
+}
+    </script>
+
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ESOP & RSU Wealth Simulator Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/esop-simulator/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is Perquisite tax calculated on ESOPs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is calculated as: (FMV on Exercise Date - Exercise Price) \u00d7 Your Income Tax Slab. Your employer is responsible for deducting this TDS from your regular salary."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the FMV for unlisted shares?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For unlisted companies, FMV must be determined by a Category-I Merchant Banker on the date of exercise. Startups usually provide this annually after their 409A or equivalent valuation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I defer ESOP tax in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if your company is an IMB-recognized startup. Under Section 192(1C), tax can be deferred for 5 years, or until the shares are sold, or until you leave the company\u2014whichever is earliest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I resign before vesting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Any unvested options are permanently lost and return to the company pool. Vested options usually have a small window (e.g., 90 days) during which you must exercise them, or they too will expire."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long to hold for LTCG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For unlisted shares, 24 months. For listed shares (after IPO), 12 months. Holding past this period drops your tax rate from your income slab to 12.5%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are US-based RSUs taxed differently?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In India, they are taxed the same as RSUs from Indian companies (Perquisite + Capital Gains). However, US tax law may require 24% backup withholding, which you can claim back under the Double Taxation Avoidance Agreement (DTAA)."
+      }
+    }
+  ]
 }
     </script>
 </head>
@@ -51,17 +140,17 @@
 
     <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left text-pretty">
         <div class="max-w-6xl mx-auto px-4">
-            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
                 <ol class="flex list-none p-0">
                     <li class="flex items-center">
-                        <a href="/" class="hover:text-indigo-600 transition-colors">Home</a>
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="flex items-center">
-                        <a href="/calculators/" class="hover:text-indigo-600 transition-colors text-pretty">Calculators</a>
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600 font-bold">ESOP & RSU Simulator</li>
+                    <li class="text-blue-600 font-bold">ESOP & RSU Wealth Simulator</li>
                 </ol>
             </nav>
 

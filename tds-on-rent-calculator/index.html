@@ -25,156 +25,128 @@
     <meta property="og:image" content="https://arthcalculator.in/logo.png">
     
     <!-- Schema Markup: WebPage -->
-    <script type="application/ld+json">
     
+<!-- Schema Markup: FAQ -->
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "TDS on Rent (Section 194-IB) Calculator",
-  "url": "https://arthcalculator.in/tds-on-rent-calculator/",
-  "description": "Calculate the 2% or 20% TDS to be deducted on rent exceeding \u20b950,000 per month."
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "TDS on Rent (Sec 194-IB) Calculator",
+      "item": "https://arthcalculator.in/tds-on-rent-calculator/"
+    }
+  ]
 }
-
     </script>
 
-    <!-- Schema Markup: Organization -->
-    <!-- Schema Markup: SoftwareApplication -->
+    <!-- SoftwareApplication Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "TDS on Rent (Sec 194-IB) Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/tds-on-rent-calculator/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context":"https://schema.org",
-      "@type":"SoftwareApplication",
-      "name":"TDS on Rent (194-IB) Calculator",
-      "applicationCategory":"FinanceApplication",
-      "operatingSystem":"Web",
-      "offers":{
-        "@type":"Offer",
-        "price":"0",
-        "priceCurrency":"INR"
+      "@type": "Question",
+      "name": "Who is required to deduct TDS under Section 194-IB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Any individual or HUF who is NOT liable to tax audit, and pays a monthly rent exceeding \u20b950,000, must deduct TDS under Section 194-IB."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the rate of TDS under Section 194-IB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The TDS rate is 2% (reduced from 5% under Budget 2024/2026 rules) if the landlord has provided a PAN. If the landlord does not provide a PAN, the TDS rate is 20%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I deduct TDS under 194-IB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TDS is to be deducted only once in a Financial Year. It is deducted from the rent paid in the last month of the financial year (March), or in the last month of tenancy if the property is vacated during the year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if the TDS amount is more than the last month's rent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If the landlord does not provide a PAN, the TDS is calculated at 20%. However, the law specifies that the TDS amount cannot exceed the rent payable for the last month. The calculator automatically handles this cap."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a TAN to deduct TDS under 194-IB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, you do not need a TAN (Tax Deduction and Collection Account Number) to deduct TDS under Section 194-IB. You can use your PAN and the landlord's PAN to file Form 26QC."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I deposit the TDS to the government?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You must deposit the deducted TDS within 30 days from the end of the month in which the deduction is made, by filling out Form 26QC on the Income Tax e-filing portal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I fail to deduct or deposit TDS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Failure to deduct TDS attracts interest at 1% per month. Failure to deposit deducted TDS attracts interest at 1.5% per month. There is also a late filing fee of \u20b9200 per day under Section 234E."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to issue a TDS certificate to the landlord?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, after filing Form 26QC and paying the tax, you must download Form 16C from the TRACES portal and provide it to your landlord within 15 days as proof of tax deduction."
       }
     }
+  ]
+}
     </script>
-
-    <!-- Schema Markup: HowTo -->
-    <!-- Schema Markup: Breadcrumb -->
-    <script type="application/ld+json">
-    {
-     "@context": "https://schema.org",
-     "@type": "BreadcrumbList",
-     "itemListElement": [
-      {
-       "@type": "ListItem",
-       "position": 1,
-       "name": "Home",
-       "item": "https://arthcalculator.in/"
-      },
-      {
-       "@type": "ListItem",
-       "position": 2,
-       "name": "Income Tax Calculators",
-       "item": "https://arthcalculator.in/income-tax/"
-      },
-      {
-       "@type": "ListItem",
-       "position": 3,
-       "name": "TDS on Rent (194-IB) Calculator",
-       "item": "https://arthcalculator.in/tds-on-rent-calculator/"
-      }
-     ]
-    }
-    </script>
-
-    <!-- Schema Markup: FAQ -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Who is required to deduct TDS under Section 194-IB?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Any individual or HUF who is NOT liable to tax audit, and pays a monthly rent exceeding ₹50,000, must deduct TDS under Section 194-IB."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the rate of TDS under Section 194-IB?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The TDS rate is 5% if the landlord has provided a PAN. If the landlord does not provide a PAN, the TDS rate increases to 20%."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "When should I deduct TDS under 194-IB?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "TDS is to be deducted only once in a Financial Year. It is deducted from the rent paid in the last month of the financial year (March), or in the last month of tenancy if the property is vacated during the year."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What if the TDS amount is more than the last month's rent?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If the landlord does not provide a PAN, the TDS is calculated at 20%. However, the law specifies that the TDS amount cannot exceed the rent payable for the last month. The calculator automatically handles this cap."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I need a TAN to deduct TDS under 194-IB?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No, you do not need a TAN (Tax Deduction and Collection Account Number) to deduct TDS under Section 194-IB. You can use your PAN and the landlord's PAN to file Form 26QC."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I deposit the TDS to the government?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You must deposit the deducted TDS within 30 days from the end of the month in which the deduction is made, by filling out Form 26QC on the Income Tax e-filing portal."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What happens if I fail to deduct or deposit TDS?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Failure to deduct TDS attracts interest at 1% per month. Failure to deposit deducted TDS attracts interest at 1.5% per month. There is also a late filing fee of ₹200 per day under Section 234E."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I need to issue a TDS certificate to the landlord?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, after filing Form 26QC, you must download Form 16C from the TRACES portal and provide it to your landlord within 15 days as proof of tax deduction."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-        .gradient-text { background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-        details summary { list-style: none; }
-        details summary::-webkit-details-marker { display: none; }
-        details[open] summary svg.chevron { transform: rotate(180deg); }
-        
-        /* Custom Checkbox as Switch */
-        .switch { position: relative; display: inline-block; width: 50px; height: 26px; }
-        .switch input { opacity: 0; width: 0; height: 0; }
-        .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #cbd5e1; transition: .4s; border-radius: 34px; }
-        .slider:before { position: absolute; content: ""; height: 18px; width: 18px; left: 4px; bottom: 4px; background-color: white; transition: .4s; border-radius: 50%; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
-        input:checked + .slider { background-color: #2563eb; }
-        input:checked + .slider:before { transform: translateX(24px); }
-    </style>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12">
     <div id="navbar"></div>
@@ -188,10 +160,10 @@
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="flex items-center">
-                        <a href="/income-tax/" class="hover:text-blue-600 transition-colors">Income Tax</a>
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600 font-bold" aria-current="page">TDS on Rent (194-IB)</li>
+                    <li class="text-blue-600 font-bold">TDS on Rent (Sec 194-IB) Calculator</li>
                 </ol>
             </nav>
 
@@ -275,7 +247,7 @@
                 <div class="bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-2xl card-shadow p-6 sm:p-8 sticky top-6 text-slate-800 flex flex-col h-full">
                     
                     <div class="mb-6 pb-6 border-b border-blue-200/60">
-                        <h3 class="text-sm font-medium text-slate-500 mb-2 uppercase tracking-wider">Total TDS to Deduct</h3>
+                        <p class="text-sm font-medium text-slate-500 mb-2 uppercase tracking-wider">Total TDS to Deduct</p>
                         <div class="text-4xl sm:text-5xl font-bold text-blue-700 mb-2 tracking-tight">
                             <span class="text-3xl font-medium text-slate-500">₹</span><span id="resTDS">36,000</span>
                         </div>

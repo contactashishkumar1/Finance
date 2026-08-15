@@ -30,19 +30,100 @@
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
     </style>
-
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Freelancer vs Salaried Tax Calculator 2026: Sec 44ADA",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "INR"
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Freelancer vs Salaried Tax Calculator",
+      "item": "https://arthcalculator.in/freelancer-vs-salaried/"
+    }
+  ]
+}
+    </script>
+
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Freelancer vs Salaried Tax Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/freelancer-vs-salaried/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I use Sec 44ADA for any business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Section 44ADA is strictly for \"Specified Professionals\" such as Software Engineers, Doctors, Lawyers, Accountants, Architects, and Interior Designers. General shopkeepers or trading businesses must use Section 44AD (8% profit scheme)."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I lose Standard Deduction as a freelancer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The \u20b975,000 standard deduction is a perk for the 'Salaried' income head. Freelancers compute income under 'Profits and Gains of Business or Profession' (PGBP) and receive the 50% expense allowance instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is 44ADA applicable if I have both salary and freelance income?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You will be taxed on (Salary - deductions) + (50% of Freelance Income). However, the tax will be calculated on the combined total, often pushing you into the 30% slab quickly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to manage health insurance and PF when quitting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As a freelancer, you must buy individual health insurance and can continue contributing to your PF via Voluntary PF or shift focus to NPS and PPF for long-term retirement savings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to file ITR-4 for presumptive income?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ITR-4 (Sugam) is the specific form for Section 44ADA. You simply need to enter your gross turnover, and the system automatically calculates the 50% profit. You don't need to maintain a balance sheet or profit & loss statement."
+      }
+    }
+  ]
 }
     </script>
 </head>
@@ -51,17 +132,17 @@
 
     <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
         <div class="max-w-6xl mx-auto px-4">
-            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
                 <ol class="flex list-none p-0">
                     <li class="flex items-center">
                         <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="flex items-center text-pretty">
-                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600 font-bold">Freelancer vs Salaried</li>
+                    <li class="text-blue-600 font-bold">Freelancer vs Salaried Tax Calculator</li>
                 </ol>
             </nav>
 

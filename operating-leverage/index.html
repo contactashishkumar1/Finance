@@ -21,134 +21,118 @@
     <meta property="og:image" content="https://arthcalculator.in/logo.png">
 
     <!-- Schema Markup -->
-    <script type="application/ld+json">
+    <!-- Breadcrumb Schema -->
     
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Operating Leverage Calculator",
-  "description": "Advanced business tool to calculate the degree of operating leverage and EBIT sensitivity.",
-  "url": "https://arthcalculator.in/operating-leverage/"
-}
-
-    </script>
-
-    <script type="application/ld+json">
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
       "name": "Operating Leverage Calculator",
-      "operatingSystem": "All",
-      "applicationCategory": "BusinessApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0"
+      "item": "https://arthcalculator.in/operating-leverage/"
+    }
+  ]
+}
+    </script>
+
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Operating Leverage Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/operating-leverage/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is operating leverage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Operating leverage is a measure of how fixed costs affect the sensitivity of a company's operating profit to changes in sales volume."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is DOL?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Degree of Operating Leverage (DOL) is a ratio used to quantify the business risk by calculating Total Contribution divided by Operating Income (EBIT)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "High vs low leverage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "High leverage means profits jump significantly with sales increases. Low leverage means profits grow steadily but at a lower rate relative to sales."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is it important?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It helps businesses decide if their cost structure is too risky or if they can handle a temporary drop in sales volume."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Risk implications?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "High operating leverage increases financial risk because even a minor drop in sales can result in a significant drop in net income or a loss."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Relation with break-even?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Businesses with high fixed costs (high leverage) need to sell more units to reach the break-even point compared to low-leverage companies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is high leverage good?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "High leverage is beneficial in a growing market because it accelerates earnings per share (EPS) and operating income."
       }
     }
+  ]
+}
     </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://arthcalculator.in/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Business Calculators",
-        "item": "https://arthcalculator.in/calculators/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Operating Leverage Calculator",
-        "item": "https://arthcalculator.in/operating-leverage/"
-      }
-      ]
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is operating leverage?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Operating leverage is a measure of how a change in sales volume affects a company's operating income (EBIT), primarily driven by the ratio of fixed costs to variable costs."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is DOL?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "DOL stands for Degree of Operating Leverage. It is a leverage ratio that quantifies the sensitivity of EBIT to changes in sales, calculated as Total Contribution divided by EBIT."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "High vs low leverage?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "High operating leverage means a company has high fixed costs; a small sales increase leads to a large profit jump. Low operating leverage means variable costs dominate, leading to more stable but less explosive profit growth."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why is operating leverage important?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It helps managers understand the business risk and the 'magnifying effect' their cost structure has on profitability when sales fluctuate."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Risk implications?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "High operating leverage increases business risk because the company must maintain a certain sales volume to cover high fixed costs or face significant losses."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Relation with break-even?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Companies with high operating leverage have higher break-even points because they need more revenue to cover substantial fixed costs."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is high leverage good?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It is good when sales are rising, as it exponentially increases profits. It is dangerous when sales are falling, as it exponentially increases losses."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-        input[type="range"] { accent-color: #2563eb; height: 6px; }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
-    </style>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12">
 <div id="navbar"></div>
@@ -162,7 +146,7 @@
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="flex items-center">
-                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Business Calculators</a>
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="text-blue-600 font-bold">Operating Leverage Calculator</li>

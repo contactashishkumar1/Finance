@@ -21,132 +21,126 @@
     <meta property="og:image" content="https://arthcalculator.in/logo.png">
 
     <!-- Schema Markup -->
-    <script type="application/ld+json">
+    <!-- Breadcrumb Schema -->
     
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "50/30/20 Rule Calculator India (2026)",
-  "description": "Budgeting tool based on the 50/30/20 rule to manage personal finances in India.",
-  "url": "https://arthcalculator.in/50-30-20-rule/"
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "50/30/20 Budget Planner",
+      "item": "https://arthcalculator.in/50-30-20-rule/"
+    }
+  ]
 }
-
     </script>
 
+    <!-- SoftwareApplication Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "50/30/20 Budget Planner",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/50-30-20-rule/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "50/30/20 Rule Calculator",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0"
+      "@type": "Question",
+      "name": "What is the 50/30/20 rule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's a ratio-based budgeting plan: 50% on essentials, 30% on leisure, and 20% on future goals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it good for India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, but often Indian families adjust it to 40/20/40 to prioritize higher savings for education or weddings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I change percentages?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. If you have no debt, you might move more to 'Wants'. If you live in an expensive city, 'Needs' might be 60%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much should I save monthly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "According to the rule, 20% is the baseline. High-net-worth individuals often aim for 40-50%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What counts as needs vs wants?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Needs are things you can't live without (Medicine, Basic Groceries). Wants are things you desire for comfort (Dining, Latest Phone)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is 20% savings enough?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your retirement age. If you start in your 20s, 20% is great. If you start in your 40s, you need more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Best budgeting strategy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Consistency is key. Use a simple rule like 50/30/20 and review your bank statements once a month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should debt payments go to needs or savings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Minimum debt payments (like an ongoing home loan EMI) go under 'Needs'. Extra debt payments to clear loans faster should come from the 'Savings' category."
       }
     }
+  ]
+}
     </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://arthcalculator.in/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Financial Calculators",
-        "item": "https://arthcalculator.in/calculators/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "50/30/20 Rule Calculator",
-        "item": "https://arthcalculator.in/50-30-20-rule/"
-      }
-      ]
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the 50/30/20 rule?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The 50/30/20 rule is a simple budgeting method that suggests dividing your after-tax income into three categories: 50% for Needs, 30% for Wants, and 20% for Savings or debt repayment."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is the 50/30/20 rule good for India?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, it is highly effective in India, especially for salaried individuals to ensure they are saving enough for inflation and retirement while managing rising living costs."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I change the percentages?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, depending on your lifestyle. Some people prefer a 40/30/30 split if they are aggressively saving, while others might need 60% for needs in expensive metro cities."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much should I save monthly?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Ideally, at least 20% of your in-hand salary should go toward savings, emergency funds, and long-term investments like SIPs."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What counts as needs vs wants?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Needs are essential expenses like rent, groceries, and insurance. Wants are non-essential spending like dining out, Netflix, and vacations."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is 20% savings enough?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "20% is the minimum recommended. If you have high financial goals or started saving late, aim for 30% or more."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the best budgeting strategy?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Automating your savings through SIPs and tracking your 'Wants' spending is the most successful strategy for long-term wealth."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-        input[type="range"] { accent-color: #2563eb; height: 6px; }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-    </style>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12">
 <div id="navbar"></div>
@@ -160,10 +154,10 @@
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="flex items-center">
-                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600 font-bold">50/30/20 Budget Calculator</li>
+                    <li class="text-blue-600 font-bold">50/30/20 Budget Planner</li>
                 </ol>
             </nav>
 

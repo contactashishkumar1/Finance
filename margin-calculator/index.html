@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profit Margin Calculator 2026: Gross & Net Profit Margin</title>
-    <meta name="description" content="Calculate profit margin, gross margin and markup percentage easily using this free margin calculator. Useful for businesses and traders to optimize pricing.">
+    <meta name="description" content="Calculate profit margin, gross margin, and markup percentage easily. Free tool for businesses and traders to optimize product pricing.">
     <meta name="keywords" content="profit margin calculator, gross margin calculator, markup calculator, net profit margin india, business margin tool, sales profit calculator">
     <meta name="author" content="Ashish Kumar">
     <meta name="last-modified" content="2026-03-14">
@@ -17,54 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Schema Markup: WebPage -->
-    <script type="application/ld+json">
-    {
-     "@context":"https://schema.org",
-     "@type":"WebPage",
-     "name":"Profit Margin Calculator",
-     "url":"https://arthcalculator.in/margin-calculator/",
-     "description":"Calculate gross and net profit margins based on cost price, selling price, and operational expenses.",
-     "inLanguage":"en"
-    }
-    </script>
-
-    <!-- Schema Markup: SoftwareApplication -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Profit Margin Calculator",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "description": "Calculates profit margin and markup percentages for retail, manufacturing and trading businesses.",
-      "featureList": [
-        "Gross Margin Calculation",
-        "Markup Percentage Estimation",
-        "Net Margin Analysis",
-        "Profit Quality Indicator"
-      ],
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "INR"
-      }
-    }
-    </script>
-
-    <!-- Schema Markup: Breadcrumb -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
-        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
-        { "@type": "ListItem", "position": 3, "name": "Margin Calculator", "item": "https://arthcalculator.in/margin-calculator/" }
-      ]
-    }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+<script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
         .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -78,6 +32,94 @@
         .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
         input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
     </style>
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Profit Margin Calculator",
+      "item": "https://arthcalculator.in/margin-calculator/"
+    }
+  ]
+}
+    </script>
+
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Profit Margin Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/margin-calculator/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a good profit margin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the industry. Retail might operate on 10-15% margins, while Software (SaaS) or Luxury goods can exceed 50-70%. Generally, 20% is considered healthy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate margin from markup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the formula: Margin = Markup / (1 + Markup). For example, a 100% markup (doubling the price) results in a 50% profit margin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is 10% margin good for a startup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 10% gross margin is usually low for a startup because it leaves very little room to cover operating expenses and marketing. Aim for at least 25% gross margin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why did my net margin drop?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Common reasons include rising raw material costs, high customer acquisition costs (marketing), or increasing utility and staff expenses."
+      }
+    }
+  ]
+}
+    </script>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
     <div id="navbar"></div>
@@ -85,7 +127,7 @@
     <!-- Header & Breadcrumbs -->
     <header class="bg-white border-b border-slate-200 py-8 sm:py-12 mb-6 sm:mb-8 text-center md:text-left">
         <div class="max-w-6xl mx-auto px-4">
-            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
                 <ol class="flex list-none p-0">
                     <li class="flex items-center">
                         <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
@@ -95,7 +137,7 @@
                         <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600 font-bold">Margin Calculator</li>
+                    <li class="text-blue-600 font-bold">Profit Margin Calculator</li>
                 </ol>
             </nav>
 

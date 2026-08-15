@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock Pivot Point Calculator – Standard, Fibonacci & Camarilla S&R | ArthCalculator</title>
-    <meta name="description" content="Calculate daily intraday pivot points, support (S1, S2, S3) and resistance (R1, R2, R3) levels using Standard, Fibonacci, Camarilla, and Woodie formulas.">
+    <title>Stock Pivot Point Calculator: Daily S&R Levels</title>
+    <meta name="description" content="Calculate Standard, Woodie, Camarilla, and Fibonacci Pivot Points. Find intraday support (S1-S4) and resistance (R1-R4) levels for stocks.">
     <meta name="keywords" content="pivot point calculator, intraday pivot points, camarilla pivot calculator, fibonacci pivot point calculator Nifty BankNifty 2026">
     <meta name="author" content="ArthCalculator">
     <meta name="last-modified" content="2026-08-09">
@@ -26,123 +26,126 @@
     <meta property="og:image" content="https://arthcalculator.in/logo.png">
 
     <!-- Schemas -->
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
       "name": "Stock Pivot Point Calculator",
-      "url": "https://arthcalculator.in/pivot-point-calculator/",
-      "description": "Calculate daily support and resistance pivot points using Standard, Fibonacci, and Camarilla algorithms.",
-      "datePublished": "2026-08-09",
-      "dateModified": "2026-08-09"
+      "item": "https://arthcalculator.in/pivot-point-calculator/"
     }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Stock Pivot Point Calculator",
-      "applicationCategory": "FinanceApplication",
-      "operatingSystem": "Web",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
-        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
-        { "@type": "ListItem", "position": 3, "name": "Pivot Point Calculator", "item": "https://arthcalculator.in/pivot-point-calculator/" }
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is a Pivot Point in Stock Trading?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A pivot point is a technical indicator calculated from the high, low, and closing prices of the previous trading day. It represents the primary directional bias and key support and resistance levels for the current trading day."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is the Standard Pivot Point calculated?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Pivot Point (P) = (High + Low + Close) / 3. R1 = (2 × P) - Low. S1 = (2 × P) - High. R2 = P + (High - Low). S2 = P - (High - Low)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the Camarilla Pivot Point method?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Camarilla pivot points use a set of 8 levels (H1-H4, L1-L4) based on yesterday's range. Traders use H3/L3 for mean-reversal trades and H4/L4 for breakout trades."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the Fibonacci Pivot Point method?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Fibonacci pivot points calculate the central pivot (P = (H+L+C)/3) and apply Fibonacci ratios (38.2%, 61.8%, 100%) to the previous day's price range to establish support and resistance levels."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How to trade using Pivot Points in Nifty & BankNifty?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If price opens above the Central Pivot (P), the intraday bias is bullish (targets R1, R2). If price opens below P, the bias is bearish (targets S1, S2)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which timeframe is best for Pivot Points?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Daily pivot points are best used on 5-minute, 15-minute, or 1-hour intraday price charts."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is CPR (Central Pivot Range)?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "CPR consists of 3 levels: TC (Top Central = (P - BC) + P), P (Pivot = (H+L+C)/3), and BC (Bottom Central = (H+L)/2). A narrow CPR indicates a high probability of a trending day."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use today's open price in Woodie Pivot calculation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes! The Woodie pivot formula gives extra weight to the open price: Pivot (P) = (High + Low + 2 × Open) / 4."
-          }
-        }
-      ]
-    }
+  ]
+}
     </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-        .gradient-text { background: linear-gradient(135deg, #d97706 0%, #ca8a04 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05); }
-        details summary { list-style: none; cursor: pointer; }
-        details summary::-webkit-details-marker { display: none; }
-        details[open] summary svg.chevron { transform: rotate(180deg); }
-        input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
-        @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .animate-slide { animation: slideIn 0.4s ease forwards; }
-    </style>
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Stock Pivot Point Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/pivot-point-calculator/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a Pivot Point in Stock Trading?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A pivot point is a technical indicator calculated from the high, low, and closing prices of the previous trading day. It represents the primary directional bias and key support and resistance levels for the current trading day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the Standard Pivot Point calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pivot Point (P) = (High + Low + Close) / 3. R1 = (2 \u00d7 P) - Low. S1 = (2 \u00d7 P) - High. R2 = P + (High - Low). S2 = P - (High - Low)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Camarilla Pivot Point method?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Camarilla pivot points use a set of 8 levels (H1-H4, L1-L4) based on yesterday's range. Traders use H3/L3 for mean-reversal trades and H4/L4 for breakout trades."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Fibonacci Pivot Point method?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fibonacci pivot points calculate the central pivot (P = (H+L+C)/3) and apply Fibonacci ratios (38.2%, 61.8%, 100%) to the previous day's price range to establish support and resistance levels."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to trade using Pivot Points in Nifty & BankNifty?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If price opens above the Central Pivot (P), the intraday bias is bullish (targets R1, R2). If price opens below P, the bias is bearish (targets S1, S2)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which timeframe is best for Pivot Points?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Daily pivot points are best used on 5-minute, 15-minute, or 1-hour intraday price charts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is CPR (Central Pivot Range)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CPR consists of 3 levels: TC (Top Central = (P - BC) + P), P (Pivot = (H+L+C)/3), and BC (Bottom Central = (H+L)/2). A narrow CPR indicates a high probability of a trending day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use today's open price in Woodie Pivot calculation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! The Woodie pivot formula gives extra weight to the open price: Pivot (P) = (High + Low + 2 \u00d7 Open) / 4."
+      }
+    }
+  ]
+}
+    </script>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12">
     <div id="navbar"></div>
@@ -150,11 +153,17 @@
     <!-- Hero -->
     <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8">
         <div class="max-w-6xl mx-auto px-4">
-            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider" aria-label="Breadcrumb">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
                 <ol class="flex list-none p-0">
-                    <li class="flex items-center"><a href="/" class="hover:text-amber-600 transition-colors">Home</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
-                    <li class="flex items-center"><a href="/calculators/" class="hover:text-amber-600 transition-colors">Calculators</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
-                    <li class="text-amber-600 font-bold" aria-current="page">Pivot Point Calculator</li>
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Stock Pivot Point Calculator</li>
                 </ol>
             </nav>
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">

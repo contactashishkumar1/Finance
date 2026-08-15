@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>F&O Trading Tax Audit Turnover Calculator (2026) – Sec 44AB & 44AD</title>
-    <meta name="description" content="Calculate F&O trading turnover for tax audit under Section 44AB and 44AD in 2026. Computes absolute profit/loss sum + option premium received to determine CA audit eligibility.">
+    <title>F&O Tax Audit Turnover Calculator: Sec 44AB & 44AD</title>
+    <meta name="description" content="Calculate F&O trading turnover and determine Income Tax Audit applicability under Section 44AB and Section 44AD for derivative traders.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://arthcalculator.in/fo-tax-audit-turnover-calculator/">
     
@@ -19,139 +19,126 @@
     <meta property="og:url" content="https://arthcalculator.in/fo-tax-audit-turnover-calculator/">
     <meta property="og:site_name" content="ArthCalculator">
     <meta property="og:image" content="https://arthcalculator.in/logo.png">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "F&O Trading Tax Audit Turnover Calculator",
-      "url": "https://arthcalculator.in/fo-tax-audit-turnover-calculator/",
-      "description": "Compute F&O legal turnover and test Section 44AB CA Tax Audit requirement.",
-      "datePublished": "2026-08-08",
-      "dateModified": "2026-08-08"
-    }
-    </script>
+    <!-- Breadcrumb Schema -->
     
+    <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "F&O Trading Tax Audit Turnover Calculator",
-      "applicationCategory": "FinanceApplication",
-      "operatingSystem": "Web",
-      "url": "https://arthcalculator.in/fo-tax-audit-turnover-calculator/",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "INR"
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "F&O Tax Audit Turnover Calculator",
+      "item": "https://arthcalculator.in/fo-tax-audit-turnover-calculator/"
+    }
+  ]
+}
+    </script>
+
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "F&O Tax Audit Turnover Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/fo-tax-audit-turnover-calculator/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is F&O turnover calculated for Income Tax purposes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under ICAI tax audit guidelines, F&O Turnover = Sum of Absolute Positive Profits + Sum of Absolute Negative Losses + Premium Received on Sale of Options."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Tax Audit threshold under Section 44AB for F&O traders?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mandatory Tax Audit by a Chartered Accountant is required under Section 44AB if digital turnover exceeds \u20b910 Crores in a financial year (provided cash transactions are \u2264 5%)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can F&O losses be set off against salary income?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. F&O trading losses are treated as Non-Speculative Business Losses. They CANNOT be set off against Salary income, but can be set off against rental, dividend, interest, or capital gain income and carried forward for 8 financial years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Section 44AD Presumptive Tax applicable to F&O trading?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. F&O traders with turnover up to \u20b93 Crores (if digital receipt rules met) can opt for Section 44AD, declaring 6% of turnover as presumptive net profit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is Tax Audit mandatory if I declare net loss in F&O?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tax Audit is required if you declare net profit lower than 6% of turnover under Section 44AD AND your total annual taxable income exceeds the basic exemption limit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What expenses can be claimed against F&O trading turnover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can deduct STT (Securities Transaction Tax), exchange turnover fees, brokerage charges, GST, internet/broadband bills, trading software/charting subscriptions, and advisory fees as business expenses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is option selling premium treated in turnover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under revised ICAI guidelines, the premium received on the sale of options is added to the turnover computation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the penalty for not getting F&O tax audit done?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Failure to get accounts audited under Section 44AB attracts a penalty under Section 271B equal to 0.5% of total turnover or \u20b91,50,000, whichever is lower."
       }
     }
+  ]
+}
     </script>
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://arthcalculator.in/"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Financial Calculators",
-        "item": "https://arthcalculator.in/calculators/"
-      },{
-        "@type": "ListItem",
-        "position": 3,
-        "name": "F&O Tax Audit Calculator",
-        "item": "https://arthcalculator.in/fo-tax-audit-turnover-calculator/"
-      }]
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How is F&O turnover calculated for Income Tax purposes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Under ICAI tax audit guidelines, F&O Turnover = Sum of Absolute Positive Profits + Sum of Absolute Negative Losses + Premium Received on Sale of Options."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the Tax Audit threshold under Section 44AB for F&O traders?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Mandatory Tax Audit by a Chartered Accountant is required under Section 44AB if digital turnover exceeds ₹10 Crores in a financial year (provided cash transactions are ≤ 5%)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can F&O losses be set off against salary income?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. F&O trading losses are treated as Non-Speculative Business Losses. They CANNOT be set off against Salary income, but can be set off against rental, dividend, interest, or capital gain income and carried forward for 8 financial years."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is Section 44AD Presumptive Tax applicable to F&O trading?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. F&O traders with turnover up to ₹3 Crores (if digital receipt rules met) can opt for Section 44AD, declaring 6% of turnover as presumptive net profit."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "When is Tax Audit mandatory if I declare net loss in F&O?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Tax Audit is required if you declare net profit lower than 6% of turnover under Section 44AD AND your total annual taxable income exceeds the basic exemption limit."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What expenses can be claimed against F&O trading turnover?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You can deduct STT (Securities Transaction Tax), exchange turnover fees, brokerage charges, GST, internet/broadband bills, trading software/charting subscriptions, and advisory fees as business expenses."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is option selling premium treated in turnover?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Under revised ICAI guidelines, the premium received on the sale of options is added to the turnover computation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the penalty for not getting F&O tax audit done?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Failure to get accounts audited under Section 44AB attracts a penalty under Section 271B equal to 0.5% of total turnover or ₹1,50,000, whichever is lower."
-          }
-        }
-      ]
-    }
-    </script>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-        details summary { list-style: none; }
-        details summary::-webkit-details-marker { display: none; }
-        details[open] summary svg { transform: rotate(180deg); }
-    </style>
 </head>
 <body class="text-slate-800 antialiased selection:bg-blue-200">
     <div id="navbar"></div>
@@ -174,18 +161,18 @@
         
         <!-- Breadcrumb -->
         <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
-            <ol class="flex list-none p-0">
-                <li class="flex items-center">
-                    <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
-                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
-                </li>
-                <li class="flex items-center">
-                    <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
-                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
-                </li>
-                <li class="text-blue-600 font-bold">F&O Tax Audit Calculator</li>
-            </ol>
-        </nav>
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">F&O Tax Audit Turnover Calculator</li>
+                </ol>
+            </nav>
 
         <!-- Hero Section -->
         <div class="text-center max-w-3xl mx-auto mb-10">

@@ -16,183 +16,102 @@
     <meta property="og:url" content="https://arthcalculator.in/future-value/">
     
     <!-- Schema Markup: WebPage -->
-    <script type="application/ld+json">
     
+<!-- Schema Markup: FAQ -->
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Future Value Calculator India (2026)",
-  "description": "A financial tool to calculate the future value of lump sum investments with compounding options."
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Future Value Calculator",
+      "item": "https://arthcalculator.in/future-value/"
+    }
+  ]
 }
-
     </script>
 
-    <!-- Schema Markup: Breadcrumb -->
+    <!-- SoftwareApplication Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Future Value Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/future-value/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-     "@context": "https://schema.org",
-     "@type": "BreadcrumbList",
-     "itemListElement": [
-      {
-       "@type": "ListItem",
-       "position": 1,
-       "name": "Home",
-       "item": "https://arthcalculator.in/"
-      },
-      {
-       "@type": "ListItem",
-       "position": 2,
-       "name": "Financial Calculators",
-       "item": "https://arthcalculator.in/calculators/"
-      },
-      {
-       "@type": "ListItem",
-       "position": 3,
-       "name": "Future Value Calculator",
-       "item": "https://arthcalculator.in/future-value/"
+      "@type": "Question",
+      "name": "1. What is Future Value (FV)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Future Value is the estimated worth of a current asset at a future date based on an assumed rate of growth and compounding."
       }
-     ]
-    }
-    </script>
-
-    <!-- Schema Markup: FAQ -->
-    <script type="application/ld+json">
+    },
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is Future Value (FV)?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Future Value is the value of a current asset at a specific date in the future based on an assumed rate of growth. It uses the principle of compounding to calculate the final worth."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is Future Value calculated?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "FV is calculated using the formula FV = PV × (1 + r/n)^(nt), where PV is present value, r is interest rate, n is compounding frequency, and t is time in years."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does a higher compounding frequency increase Future Value?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, the more frequently interest is compounded (e.g., monthly vs annually), the higher the Future Value will be, as interest is earned on interest more often."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the importance of Future Value?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It helps investors plan for long-term goals like retirement or education by showing how much their current savings will grow over time."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is Future Value different from CAGR?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, Future Value is the absolute maturity amount, whereas CAGR is the annual growth rate required to reach that amount over time."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            -webkit-tap-highlight-color: transparent;
-            scroll-behavior: smooth;
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .card-shadow {
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-        }
-        input[type="range"] {
-            accent-color: #2563eb;
-            height: 6px;
-        }
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        .table-container::-webkit-scrollbar {
-            height: 4px;
-        }
-        .table-container::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 10px;
-        }
-        .nav-link {
-            transition: all 0.2s ease;
-            position: relative;
-            padding: 0.5rem 0.25rem;
-        }
-        .nav-link.active {
-            color: #2563eb;
-            font-weight: 600;
-        }
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background-color: #2563eb;
-        }
-        details summary {
-            list-style: none;
-        }
-        details summary::-webkit-details-marker {
-            display: none;
-        }
-        details[open] summary svg {
-            transform: rotate(180deg);
-        }
-        .formula-box {
-            background: #f1f5f9;
-            padding: 1.5rem;
-            border-radius: 1rem;
-            font-family: 'Courier New', Courier, monospace;
-            overflow-x: auto;
-        }
-        .freq-btn.active {
-            background-color: #2563eb;
-            color: white;
-            border-color: #2563eb;
-        }
-    </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Future Value Calculator 2026: Calculate Investment Growth",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "INR"
+      "@type": "Question",
+      "name": "2. How is Future Value calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FV is calculated using the formula FV = PV \u00d7 (1 + r/n)^(nt), where PV is present value, r is rate, n is compounding frequency, and t is time."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "3. Does compounding frequency affect the final amount?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the more frequently interest is compounded (e.g., monthly), the higher the Future Value due to interest being earned on interest more often."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "4. What is the difference between FV and CAGR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FV is the total amount you will have in the future, while CAGR is the annual growth rate that gets you there."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "5. Is inflation considered in Future Value?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard FV calculations don't account for inflation. You should subtract the inflation rate from your expected return to see the \"Real\" Future Value."
+      }
+    }
+  ]
 }
     </script>
 </head>
@@ -210,10 +129,10 @@
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="flex items-center">
-                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600">Future Value Calculator</li>
+                    <li class="text-blue-600 font-bold">Future Value Calculator</li>
                 </ol>
             </nav>
 
@@ -561,12 +480,6 @@
                     </a>
                 </div>
             </section>
-
-            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed">
-                <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
-                Projections are based on mathematical formulas. Market returns are not guaranteed. Actual value may vary due to taxes and market volatility.
-                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
-            </div>
         </div>
     </main>
 

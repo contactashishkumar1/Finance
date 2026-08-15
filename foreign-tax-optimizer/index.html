@@ -10,7 +10,7 @@
 
     <title>Foreign Freelance Tax Calculator 2026: Sec 44ADA, GST & LRS</title>
 
-    <meta name="description" content="Calculate net take-home for foreign freelancers in India. Optimize taxes under Section 44ADA, calculate 20% TCS on LRS, and compare Salaried vs. Contractor income.">
+    <meta name="description" content="Calculate net take-home for foreign freelancers in India. Optimize taxes under Section 44ADA, 20% TCS on LRS, and contractor income.">
 
     <meta name="keywords" content="freelance tax calculator india, section 44ADA calculator, 20% tcs on remittance, foreign income tax india, gst for export of services india">
 
@@ -37,66 +37,84 @@
     <meta property="og:image" content="https://arthcalculator.in/logo.png">
 
     <!-- Schema Markup -->
-
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
-
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-
-      "@context": "https://schema.org",
-
-      "@type": "FinancialProduct",
-
-      "name": "Global Remote Worker Tax Optimizer",
-
-      "description": "Tax optimization tool for Indian freelancers receiving foreign currency, covering Section 44ADA and LRS impact.",
-
-      "url": "https://arthcalculator.in/foreign-tax-optimizer/",
-
-      "brand": {
-
-        "@type": "Brand",
-
-        "name": "ArthCalculator"
-
-      }
-
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Foreign Freelance Tax Calculator",
+      "item": "https://arthcalculator.in/foreign-tax-optimizer/"
     }
-
+  ]
+}
     </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-
-        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
-
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-
-        input[type="range"] { accent-color: #2563eb; height: 6px; }
-
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-
-        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
-
-    </style>
-
-
+    <!-- SoftwareApplication Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Foreign Freelance Tax Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/foreign-tax-optimizer/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Foreign Freelance Tax Calculator 2026: Sec 44ADA, GST & LRS",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "INR"
+      "@type": "Question",
+      "name": "How to claim 20% TCS back?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you spend or invest money abroad (remittance), banks collect 20% TCS on the amount above the \u20b910L LRS threshold. You can see this amount in your Form 26AS and adjust it against your final tax liability or claim a refund where applicable."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Is GST registration mandatory for $10,000+ income?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In India, GST registration is mandatory if your total annual turnover (income) exceeds \u20b920 Lakhs. Since $10,000 is approx \u20b98.5 Lakhs, you don't need it for a one-time payment, but if your annual earnings cross \u20b920L, registration and LUT filing are mandatory to avoid paying 18% tax."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "44ADA vs 44AD for developers and designers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "44ADA is for 'Professionals' (Engineers, IT Consultants, Accountants, Designers) and assumes 50% profit. 44AD is for 'Business' and assumes 6-8% profit. Most remote freelancers must use 44ADA. If your expenses are actually higher than 50%, you should opt for standard filing with an audit."
+      }
+    }
+  ]
 }
     </script>
 </head>
@@ -110,29 +128,17 @@
         <div class="max-w-6xl mx-auto px-4">
 
             <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
-
                 <ol class="flex list-none p-0">
-
                     <li class="flex items-center">
-
                         <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
-
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
-
                     </li>
-
-                    <li class="flex items-center text-pretty">
-
-                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
-
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
-
                     </li>
-
-                    <li class="text-blue-600 font-bold">Foreign Freelance Optimizer</li>
-
+                    <li class="text-blue-600 font-bold">Foreign Freelance Tax Calculator</li>
                 </ol>
-
             </nav>
 
             <div class="flex flex-col md:flex-row justify-between items-center text-pretty">

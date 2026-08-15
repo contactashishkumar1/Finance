@@ -21,179 +21,129 @@
     <meta name="last-modified" content="2026-08-01">
     
     <!-- Schema Markup: WebPage -->
-    <script type="application/ld+json">
     
+<!-- Schema Markup: FAQ -->
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "PF Withdrawal Taxability Calculator",
-  "description": "Calculate Taxable EPF Withdrawal amount and 10% TDS application for early PF withdrawals."
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "PF Withdrawal Taxability & TDS Calculator",
+      "item": "https://arthcalculator.in/pf-withdrawal-taxability-calculator/"
+    }
+  ]
 }
-
     </script>
 
-    <!-- Schema Markup: SoftwareApplication -->
+    <!-- SoftwareApplication Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "PF Withdrawal Taxability & TDS Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/pf-withdrawal-taxability-calculator/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "PF Withdrawal Taxability Calculator",
-      "applicationCategory": "FinanceApplication",
-      "operatingSystem": "All",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "INR"
+      "@type": "Question",
+      "name": "1. Is EPF withdrawal taxable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "EPF withdrawal is completely tax-free if you withdraw after completing 5 years of continuous service. If you withdraw before 5 years, the amount becomes fully taxable in your hands."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "2. What does 'Continuous Service' mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Continuous service includes your tenure with your previous employers as well, provided you transferred your EPF balance from the old employer to the new employer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "3. When is TDS deducted on PF withdrawal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TDS is deducted at 10% if you withdraw before completing 5 years of service AND your withdrawal amount is \u20b950,000 or more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "4. What if my withdrawal is less than \u20b950,000 before 5 years?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If the withdrawal is less than \u20b950,000 before 5 years, no TDS will be deducted by the EPFO. However, you must still declare this amount in your ITR and pay tax according to your slab rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "5. What happens if I don't link my PAN card?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you fail to provide a valid PAN card at the time of an early withdrawal (>= \u20b950,000), TDS will be deducted at the highest marginal rate of 30% instead of 10%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "6. Are there any exceptions to the 5-year rule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If your employment is terminated due to ill health, contraction or discontinuation of employer's business, or reasons beyond your control, the withdrawal is tax-free even before 5 years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "7. How is the withdrawn amount taxed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Employer's contribution + Interest is taxed under 'Income from Salary'. Your contribution is taxed (as a reversal of 80C) under Salary. Interest on your contribution is taxed under 'Income from Other Sources'."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "8. Can I submit Form 15G/15H to avoid TDS on PF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if your total estimated income for the financial year is below the basic taxable limit, you can submit Form 15G (or 15H for senior citizens) to the EPFO. In that case, no TDS will be deducted even if the amount exceeds \u20b950,000."
       }
     }
+  ]
+}
     </script>
-
-    <!-- Schema Markup: Breadcrumb -->
-    <script type="application/ld+json">
-    {
-     "@context": "https://schema.org",
-     "@type": "BreadcrumbList",
-     "itemListElement": [
-      {
-       "@type": "ListItem",
-       "position": 1,
-       "name": "Home",
-       "item": "https://arthcalculator.in/"
-      },
-      {
-       "@type": "ListItem",
-       "position": 2,
-       "name": "Salary Calculators",
-       "item": "https://arthcalculator.in/salary-calculators/"
-      },
-      {
-       "@type": "ListItem",
-       "position": 3,
-       "name": "PF Withdrawal Tax",
-       "item": "https://arthcalculator.in/pf-withdrawal-taxability-calculator/"
-      }
-     ]
-    }
-    </script>
-
-    <!-- Schema Markup: FAQ -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is EPF withdrawal taxable?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "EPF withdrawal is completely tax-free if you withdraw after completing 5 years of continuous service. If you withdraw before 5 years, the amount becomes fully taxable in your hands."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What does 'Continuous Service' mean?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Continuous service includes your tenure with your previous employers as well, provided you transferred your EPF balance from the old employer to the new employer."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "When is TDS deducted on PF withdrawal?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "TDS is deducted at 10% if you withdraw before completing 5 years of service AND your withdrawal amount is ₹50,000 or more."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What if my withdrawal is less than ₹50,000 before 5 years?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If the withdrawal is less than ₹50,000 before 5 years, no TDS will be deducted by the EPFO. However, you must still declare this amount in your ITR and pay tax according to your slab rate."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What happens if I don't link my PAN card?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If you fail to provide a valid PAN card at the time of an early withdrawal (>= ₹50,000), TDS will be deducted at the highest marginal rate of 30% instead of 10%."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are there any exceptions to the 5-year rule?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. If your employment is terminated due to ill health, contraction or discontinuation of employer's business, or reasons beyond your control, the withdrawal is tax-free even before 5 years."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is the withdrawn amount taxed?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Employer's contribution + Interest is taxed under 'Income from Salary'. Your contribution is taxed (as a reversal of 80C) under Salary. Interest on your contribution is taxed under 'Income from Other Sources'."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I submit Form 15G/15H to avoid TDS on PF?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, if your total estimated income for the financial year is below the basic taxable limit, you can submit Form 15G (or 15H for senior citizens) to the EPFO. In that case, no TDS will be deducted even if the amount exceeds ₹50,000."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            -webkit-tap-highlight-color: transparent;
-            scroll-behavior: smooth;
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .card-shadow {
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-        }
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        details summary {
-            list-style: none;
-        }
-        details summary::-webkit-details-marker {
-            display: none;
-        }
-        details[open] summary svg {
-            transform: rotate(180deg);
-        }
-        .formula-box {
-            background: #f1f5f9;
-            padding: 1.5rem;
-            border-radius: 1rem;
-            font-family: 'Courier New', Courier, monospace;
-            overflow-x: auto;
-        }
-    </style>
-
-    <!-- Schema Markup: Organization -->
-    <!-- Schema Markup: HowTo --></head>
+</head>
 <body class="text-slate-800 antialiased min-h-screen pb-12">
 <div id="navbar"></div>
 
@@ -206,10 +156,10 @@
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="flex items-center">
-                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600">PF Withdrawal Taxability</li>
+                    <li class="text-blue-600 font-bold">PF Withdrawal Taxability & TDS Calculator</li>
                 </ol>
             </nav>
 
@@ -514,12 +464,6 @@
                     </a>
                 </div>
             </section>
-
-            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed">
-                <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
-                This calculator uses rules from the Income Tax Act governing EPF withdrawals. If you withdraw before 5 years but the reason is beyond your control (e.g. medical termination), you can declare it exempt in your ITR regardless of TDS. Please consult a CA.
-                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
-            </div>
         </div>
     
             <!-- Related Calculators (15 Internal Links) -->

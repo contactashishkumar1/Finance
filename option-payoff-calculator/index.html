@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Option Payoff Calculator – Call & Put Profit/Loss Visualizer | ArthCalculator</title>
-    <meta name="description" content="Calculate Call and Put option profit, loss, and breakeven point at expiry. Visualizes Nifty, BankNifty, and stock options payoff diagrams easily.">
+    <title>Option Payoff Calculator: Call & Put P&L Visualizer</title>
+    <meta name="description" content="Visualize option payoff diagrams for Calls and Puts. Calculate max profit, max loss, and breakeven points for single and multi-leg option strategies.">
     <meta name="keywords" content="option payoff calculator, call option payoff calculator, put option payoff, options profit calculator Nifty BankNifty 2026">
     <meta name="author" content="ArthCalculator">
     <meta name="last-modified" content="2026-08-09">
@@ -26,123 +26,126 @@
     <meta property="og:image" content="https://arthcalculator.in/logo.png">
 
     <!-- Schemas -->
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
       "name": "Option Payoff Calculator",
-      "url": "https://arthcalculator.in/option-payoff-calculator/",
-      "description": "Calculate Call and Put option profit, loss, and breakeven points for Indian derivative traders.",
-      "datePublished": "2026-08-09",
-      "dateModified": "2026-08-09"
+      "item": "https://arthcalculator.in/option-payoff-calculator/"
     }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Option Payoff Calculator",
-      "applicationCategory": "FinanceApplication",
-      "operatingSystem": "Web",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
-        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
-        { "@type": "ListItem", "position": 3, "name": "Option Payoff Calculator", "item": "https://arthcalculator.in/option-payoff-calculator/" }
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the breakeven price for a Call Option?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For a Long Call Option, Breakeven Price = Strike Price + Premium Paid. For example, if you buy a Nifty 24,000 Call at a ₹100 premium, your breakeven price at expiry is ₹24,100."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the breakeven price for a Put Option?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For a Long Put Option, Breakeven Price = Strike Price - Premium Paid. If you buy a Nifty 24,000 Put at ₹100 premium, your breakeven price at expiry is ₹23,900."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the maximum loss in buying a Call or Put option?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "When buying options (Long Call or Long Put), your maximum loss is strictly capped at the total premium paid (Premium × Lot Size × Number of Lots)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the maximum profit in Option Selling (Writing)?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "When selling options (Short Call or Short Put), your maximum profit is limited to the total premium received. However, maximum loss is theoretically unlimited."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the current Nifty 50 lot size?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "NSE Nifty 50 derivative lot size is 25 shares per lot (revised by NSE). BankNifty lot size is 15 shares, and FinNifty lot size is 25 shares."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does option payoff change before expiry?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Before expiry, option prices are impacted by Implied Volatility (IV) and Time Decay (Theta). At expiry, the payoff depends purely on intrinsic value (Spot Price vs Strike Price)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is Intrinsic Value vs Extrinsic Value?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Intrinsic Value is the actual in-the-money amount (e.g. Spot ₹24,100 - Strike ₹24,000 = ₹100 intrinsic). Extrinsic Value (Time Value) is the remaining premium amount above intrinsic value."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are STT and brokerage included in option payoff?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Standard option payoff diagrams show gross P&L. To calculate net P&L, subtract STT (0.125% on exercised options or 0.0625% on premium), exchange transaction charges, and broker fees."
-          }
-        }
-      ]
-    }
+  ]
+}
     </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-        .gradient-text { background: linear-gradient(135deg, #059669 0%, #0d9488 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05); }
-        details summary { list-style: none; cursor: pointer; }
-        details summary::-webkit-details-marker { display: none; }
-        details[open] summary svg.chevron { transform: rotate(180deg); }
-        input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
-        @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .animate-slide { animation: slideIn 0.4s ease forwards; }
-    </style>
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Option Payoff Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/option-payoff-calculator/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the breakeven price for a Call Option?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a Long Call Option, Breakeven Price = Strike Price + Premium Paid. For example, if you buy a Nifty 24,000 Call at a \u20b9100 premium, your breakeven price at expiry is \u20b924,100."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the breakeven price for a Put Option?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a Long Put Option, Breakeven Price = Strike Price - Premium Paid. If you buy a Nifty 24,000 Put at \u20b9100 premium, your breakeven price at expiry is \u20b923,900."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the maximum loss in buying a Call or Put option?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When buying options (Long Call or Long Put), your maximum loss is strictly capped at the total premium paid (Premium \u00d7 Lot Size \u00d7 Number of Lots)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the maximum profit in Option Selling (Writing)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When selling options (Short Call or Short Put), your maximum profit is limited to the total premium received. However, maximum loss is theoretically unlimited."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the current Nifty 50 lot size?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "NSE Nifty 50 derivative lot size is 25 shares per lot (revised by NSE). BankNifty lot size is 15 shares, and FinNifty lot size is 25 shares."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does option payoff change before expiry?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Before expiry, option prices are impacted by Implied Volatility (IV) and Time Decay (Theta). At expiry, the payoff depends purely on intrinsic value (Spot Price vs Strike Price)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Intrinsic Value vs Extrinsic Value?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Intrinsic Value is the actual in-the-money amount (e.g. Spot \u20b924,100 - Strike \u20b924,000 = \u20b9100 intrinsic). Extrinsic Value (Time Value) is the remaining premium amount above intrinsic value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are STT and brokerage included in option payoff?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard option payoff diagrams show gross P&L. To calculate net P&L, subtract STT (0.125% on exercised options or 0.0625% on premium), exchange transaction charges, and broker fees."
+      }
+    }
+  ]
+}
+    </script>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12">
     <div id="navbar"></div>
@@ -150,11 +153,17 @@
     <!-- Hero -->
     <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8">
         <div class="max-w-6xl mx-auto px-4">
-            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider" aria-label="Breadcrumb">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
                 <ol class="flex list-none p-0">
-                    <li class="flex items-center"><a href="/" class="hover:text-teal-600 transition-colors">Home</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
-                    <li class="flex items-center"><a href="/calculators/" class="hover:text-teal-600 transition-colors">Calculators</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
-                    <li class="text-teal-600 font-bold" aria-current="page">Option Payoff Calculator</li>
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Option Payoff Calculator</li>
                 </ol>
             </nav>
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">

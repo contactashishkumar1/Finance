@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delay in TDS Deposit Penalty Calculator | Section 201(1A) & 234E</title>
-    <meta name="description" content="Calculate exact interest and penalty for late deduction or late deposit of TDS. Calculate 1.5% per month interest and ₹200/day late filing fees under 234E.">
+    <title>TDS Late Payment Penalty Calculator: Sec 201 & 234E</title>
+    <meta name="description" content="Calculate interest penalties under Section 201(1A) (1.5%/month) and late filing fees under Section 234E (₹200/day) for delayed TDS deposits.">
     <meta name="keywords" content="tds penalty calculator, tds late payment interest, section 201(1A), 234e late fee calculator, delay in tds deposit, tds interest rate">
     <meta name="author" content="ArthCalculator">
     <meta name="last-modified" content="2026-08-02">
@@ -25,175 +25,128 @@
     <meta property="og:image" content="https://arthcalculator.in/logo.png">
     
     <!-- Schema Markup: WebPage -->
-    <script type="application/ld+json">
     
+<!-- Schema Markup: FAQ -->
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Delay in TDS Deposit Penalty Calculator",
-  "url": "https://arthcalculator.in/tds-late-payment-penalty-calculator/",
-  "description": "Calculate interest under section 201(1A) and late fees under 234E for delayed TDS deduction or deposit."
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "TDS Late Payment Penalty Calculator",
+      "item": "https://arthcalculator.in/tds-late-payment-penalty-calculator/"
+    }
+  ]
 }
-
     </script>
 
-    <!-- Schema Markup: Organization -->
-    <!-- Schema Markup: SoftwareApplication -->
+    <!-- SoftwareApplication Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "TDS Late Payment Penalty Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/tds-late-payment-penalty-calculator/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context":"https://schema.org",
-      "@type":"SoftwareApplication",
-      "name":"TDS Penalty & Interest Calculator",
-      "applicationCategory":"FinanceApplication",
-      "operatingSystem":"Web",
-      "offers":{
-        "@type":"Offer",
-        "price":"0",
-        "priceCurrency":"INR"
+      "@type": "Question",
+      "name": "Is there any grace period for TDS deposit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, there is absolutely no grace period. If the due date is the 7th of the month and you pay on the 8th, the penalty for late deposit will be calculated retrospectively from the actual date of deduction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I claim TDS interest as a business expense?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The Income Tax Act expressly disallows claiming any interest or penalty paid under Section 201(1A) or 234E as a deductible business expense. It must be paid out of your own net profits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if the due date falls on a Sunday or Bank Holiday?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If the 7th (or the specific due date) falls on a public holiday or a Sunday, you are allowed to deposit the TDS on the immediately next working day without attracting any penalty."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the month calculated if I deduct on 30th April and deposit on 5th May?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you deposit by the due date (which is 7th May for April deductions), NO interest is applicable. The 1.5% interest only kicks in if you cross the due date. Once you cross it, the interest is calculated from April backwards."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Section 271H Penalty?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If a deductor delays filing the TDS return for more than one year from the original due date, or provides incorrect information, the Assessing Officer can levy an additional penalty ranging from \u20b910,000 to \u20b91,00,000."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "6. Do I need to file an ITR if my income is below the basic exemption limit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually no, but you must file if you paid TDS and want a refund, or if you meet certain criteria like spending over \u20b92 Lakhs on foreign travel or depositing over \u20b91 Crore in a current account."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "7. What is the difference between Old and New Tax Regime?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Old Regime allows deductions like 80C, 80D, HRA, etc., while the New Regime has lower slab rates but does not allow most deductions. From FY 2025-26, the New Regime is the default."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "8. Can I switch back to the Old Tax Regime?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Salaried individuals can choose between the regimes every year. However, individuals with business income can switch only once in their lifetime."
       }
     }
+  ]
+}
     </script>
-
-    <!-- Schema Markup: HowTo -->
-    <!-- Schema Markup: Breadcrumb -->
-    <script type="application/ld+json">
-    {
-     "@context": "https://schema.org",
-     "@type": "BreadcrumbList",
-     "itemListElement": [
-      {
-       "@type": "ListItem",
-       "position": 1,
-       "name": "Home",
-       "item": "https://arthcalculator.in/"
-      },
-      {
-       "@type": "ListItem",
-       "position": 2,
-       "name": "Income Tax Calculators",
-       "item": "https://arthcalculator.in/income-tax/"
-      },
-      {
-       "@type": "ListItem",
-       "position": 3,
-       "name": "TDS Late Payment Penalty Calculator",
-       "item": "https://arthcalculator.in/tds-late-payment-penalty-calculator/"
-      }
-     ]
-    }
-    </script>
-
-    <!-- Schema Markup: FAQ -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the penalty for late deduction of TDS?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If you fail to deduct TDS on the required date, you are liable to pay interest @ 1% per month or part of a month from the date the tax was deductible to the actual date of deduction."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the penalty for late deposit of TDS to the government?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If you deducted TDS but deposited it late, interest @ 1.5% per month or part of a month applies. This is calculated from the date of deduction to the actual date of deposit."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What does 'part of a month' mean for TDS interest?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The Income Tax Department calculates interest based on calendar months. If you delay by even one day into the next calendar month, it is counted as a full month. For example, deducting on 30th May and depositing on 8th June (1 day late) incurs 2 months of interest (May and June)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is Section 234E Late Filing Fee?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Under Section 234E, if you fail to file your TDS return (TDS statement) by the due date, a late fee of ₹200 per day is levied until the return is filed. However, the total fee cannot exceed the TDS amount."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is there any penalty under Section 271H?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, if you delay filing the TDS return for more than a year from the specified due date, the assessing officer can levy a penalty ranging from ₹10,000 to ₹1,00,000 under Section 271H."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "When is the due date for depositing TDS?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For months April to February, TDS must be deposited by the 7th of the following month. For the month of March, TDS must be deposited by the 30th of April."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can the penalty or interest be waived off?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No, the interest under section 201(1A) is mandatory and cannot be waived off by the assessing officer. The late fee under 234E is also processed automatically."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is interest paid on TDS allowed as a business expense?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Any interest or penalty paid for late deduction or late deposit of TDS is not an allowable business expense under the Income Tax Act."
-          }
-        }
-      ,
-        {
-          "@type": "Question",
-          "name": "Do I need to file an ITR if my income is below the basic exemption limit?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Usually no, but you must file if you paid TDS and want a refund, or if you meet certain criteria like spending over ₹2 Lakhs on foreign travel or depositing over ₹1 Crore in a current account."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the difference between Old and New Tax Regime?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The Old Regime allows deductions like 80C, 80D, HRA, etc., while the New Regime has lower slab rates but does not allow most deductions. From FY 2025-26, the New Regime is the default."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I switch back to the Old Tax Regime?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Salaried individuals can choose between the regimes every year. However, individuals with business income can switch only once in their lifetime."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-        .gradient-text { background: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-        details summary { list-style: none; }
-        details summary::-webkit-details-marker { display: none; }
-        details[open] summary svg.chevron { transform: rotate(180deg); }
-        input[type="date"]::-webkit-calendar-picker-indicator { cursor: pointer; opacity: 0.6; transition: 0.2s; }
-        input[type="date"]::-webkit-calendar-picker-indicator:hover { opacity: 1; }
-    </style>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12">
     <div id="navbar"></div>
@@ -207,10 +160,10 @@
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="flex items-center">
-                        <a href="/income-tax/" class="hover:text-blue-600 transition-colors">Income Tax</a>
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600 font-bold" aria-current="page">Delay in TDS Deposit Penalty</li>
+                    <li class="text-blue-600 font-bold">TDS Late Payment Penalty Calculator</li>
                 </ol>
             </nav>
 

@@ -19,99 +19,8 @@
     <script src="https://cdn.tailwindcss.com" defer></script>
     
     <!-- Schema Markup: WebPage -->
-    <script type="application/ld+json">
-    {
-     "@context":"https://schema.org",
-     "@type":"WebPage",
-     "name":"GST Profit Calculator India",
-     "url":"https://arthcalculator.in/gst-profit-calculator/",
-     "description":"Calculate net profit and margin after accounting for Goods and Services Tax (GST) in India.",
-     "datePublished": "2024-03-15",
-     "dateModified": "2026-03-15",
-     "inLanguage":"en"
-    }
-    </script>
-
-    <!-- Schema Markup: SoftwareApplication -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "GST Profit Calculator",
-      "operatingSystem": "All",
-      "applicationCategory": "BusinessApplication",
-      "description": "Calculates profit and margin after GST for both inclusive and exclusive pricing models.",
-      "featureList": [
-        "GST Inclusive Calculation",
-        "GST Exclusive Calculation",
-        "Profit Margin Analysis",
-        "Business Health Indicator"
-      ],
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "INR"
-      }
-    }
-    </script>
-
-    <!-- Schema Markup: HowTo -->
-    <!-- Schema Markup: FAQPage -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How does GST affect my profit?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "GST is not a cost for registered businesses; it is collected from the customer. However, if you are selling at an 'inclusive' price, GST reduces the base income you keep, thereby lowering your net profit."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How to calculate GST profit margin?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "First, find the Base Selling Price (Price excluding tax). Then subtract the Cost Price to find Profit. Divide this Profit by the Base Selling Price to get the Margin Percentage."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is GST inclusive price?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "An inclusive price means the tax is already added to the item's cost. Formula to extract GST: (Total Price × GST Rate) / (100 + GST Rate)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does GST reduce business net worth?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Directly, no. GST is a liability you hold on behalf of the government. However, the administrative cost of compliance and the impact on consumer pricing can indirectly affect business growth."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <!-- Schema Markup: Breadcrumb -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
-        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
-        { "@type": "ListItem", "position": 3, "name": "GST Profit Calculator", "item": "https://arthcalculator.in/gst-profit-calculator/" }
-      ]
-    }
-    </script>
-
-    <style>
+    
+<style>
         body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
         .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
@@ -124,6 +33,94 @@
         details[open] summary svg { transform: rotate(180deg); }
         select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748b'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25rem; }
     </style>
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "GST Profit Calculator",
+      "item": "https://arthcalculator.in/gst-profit-calculator/"
+    }
+  ]
+}
+    </script>
+
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "GST Profit Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/gst-profit-calculator/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does GST affect my profit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GST is not a cost for registered businesses; it is collected from the customer. However, if you are selling at an \"inclusive\" price, GST reduces the base income you keep, thereby lowering your net profit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to calculate GST profit margin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "First, find the Base Selling Price (Price excluding tax). Then subtract the Cost Price to find Profit. Divide this Profit by the Base Selling Price to get the Margin Percentage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is GST inclusive price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An inclusive price means the tax is already added to the item's cost. Formula to extract GST: (Total Price \u00d7 GST Rate) / (100 + GST Rate)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does GST reduce business net worth?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Directly, no. GST is a liability you hold on behalf of the government. However, the administrative cost of compliance and the impact on consumer pricing can indirectly affect business growth."
+      }
+    }
+  ]
+}
+    </script>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
     <div id="navbar"></div>
@@ -131,7 +128,7 @@
     <!-- Header & Hero -->
     <header class="bg-white border-b border-slate-200 py-8 sm:py-12 mb-6 sm:mb-8 text-center md:text-left">
         <div class="max-w-6xl mx-auto px-4">
-            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
                 <ol class="flex list-none p-0">
                     <li class="flex items-center">
                         <a href="/" class="hover:text-blue-600 transition-colors">Home</a>

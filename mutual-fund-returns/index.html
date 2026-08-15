@@ -17,121 +17,126 @@
     <meta property="og:image" content="/favicon.ico">
     
     <!-- Schema Markup: WebPage -->
-    <script type="application/ld+json">
     
+<!-- Schema Markup: FAQ -->
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Mutual Fund Return Calculator India (2026)",
-  "description": "A precision financial tool to calculate future returns on mutual fund investments in India."
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Mutual Fund Return Calculator",
+      "item": "https://arthcalculator.in/mutual-fund-returns/"
+    }
+  ]
 }
-
     </script>
 
-    <!-- Schema Markup: Breadcrumb -->
+    <!-- SoftwareApplication Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Mutual Fund Return Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/mutual-fund-returns/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-     "@context": "https://schema.org",
-     "@type": "BreadcrumbList",
-     "itemListElement": [
-      {
-       "@type": "ListItem",
-       "position": 1,
-       "name": "Home",
-       "item": "https://arthcalculator.in/"
-      },
-      {
-       "@type": "ListItem",
-       "position": 2,
-       "name": "Financial Calculators",
-       "item": "https://arthcalculator.in/calculators/"
-      },
-      {
-       "@type": "ListItem",
-       "position": 3,
-       "name": "Mutual Fund Return Calculator",
-       "item": "https://arthcalculator.in/mutual-fund-returns/"
+      "@type": "Question",
+      "name": "1. Are mutual fund returns guaranteed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, mutual fund returns are subject to market risks. While equity funds historically outperform other assets over long periods, they can fluctuate in the short term."
       }
-     ]
-    }
-    </script>
-
-    <!-- Schema Markup: FAQ -->
-    <script type="application/ld+json">
+    },
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is a Mutual Fund Return Calculator?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It is a tool that helps investors estimate the potential future value of their mutual fund investments based on a specific investment amount, duration, and expected rate of return."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is a 12% return realistic for Mutual Funds in India?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Historically, diversified Indian equity mutual funds have delivered between 12% to 15% CAGR over long periods of 10 years or more, though past performance does not guarantee future results."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            -webkit-tap-highlight-color: transparent;
-            scroll-behavior: smooth;
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .card-shadow {
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-        }
-        input[type="range"] {
-            accent-color: #2563eb;
-            height: 6px;
-        }
-        .table-container::-webkit-scrollbar {
-            height: 4px;
-        }
-        .table-container::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 10px;
-        }
-        .formula-box {
-            background: #f1f5f9;
-            padding: 1.5rem;
-            border-radius: 1rem;
-            font-family: 'Courier New', Courier, monospace;
-            overflow-x: auto;
-        }
-    </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Mutual Fund Return Calculator India 2026 \u2013 SIP & Lumpsum",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "INR"
+      "@type": "Question",
+      "name": "2. How is this different from a Fixed Deposit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fixed Deposits offer a guaranteed interest rate set by the bank. Mutual funds invest in market-linked assets like stocks or bonds, offering higher potential returns but with price volatility."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "3. Does inflation impact my mutual fund returns?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. While your investment grows, its purchasing power decreases due to inflation. You should ideally subtract the inflation rate from your ROI to find the 'Real Rate of Return'."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "4. What is the minimum SIP amount in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most mutual fund schemes in India allow you to start a SIP with as little as \u20b9500 per month, making it accessible for everyone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "5. Should I stop my SIP during a market crash?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Actually, a market crash is the best time to continue or even increase your SIP. This is when you buy more units at lower prices, which maximizes your returns when the market eventually recovers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "6. What is 'direct' vs 'regular' mutual fund?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Direct plans have lower expense ratios because no commission is paid to an agent. Over 20 years, a direct plan can result in 10-15% higher wealth compared to a regular plan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "7. Can I withdraw my money anytime?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open-ended funds allow withdrawal anytime, usually credited in 1-3 working days. ELSS (Tax saving) funds have a mandatory 3-year lock-in. Some funds charge an 'Exit Load' if withdrawn within 1 year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "8. Does this calculator support Step-up SIP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This specific tool calculates for fixed SIPs. If you want to increase your SIP annually, please use our dedicated Step-up SIP Calculator for more complex projections."
+      }
+    }
+  ]
 }
     </script>
 </head>
@@ -148,10 +153,10 @@
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="flex items-center">
-                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600">Mutual Fund Return Calculator</li>
+                    <li class="text-blue-600 font-bold">Mutual Fund Return Calculator</li>
                 </ol>
             </nav>
 
@@ -492,12 +497,6 @@
                     </details>
                 </div>
             </section>
-
-            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-center">
-                <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
-                Calculations are based on standard compounding mathematical formulas. Mutual fund investments are subject to market risks. Actual maturity values may vary significantly based on fund performance and market fluctuations. Past performance is not an indicator of future returns.
-                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
-            </div>
         </div>
     </main>
 

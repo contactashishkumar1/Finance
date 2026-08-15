@@ -32,19 +32,92 @@
         .floating-badge { position: fixed; top: 1rem; right: 1rem; z-index: 50; }
         @media print { .no-print { display: none; } }
     </style>
-
+    <!-- Breadcrumb Schema -->
+    
+    <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Influencer Tax Tracker",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "INR"
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://arthcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://arthcalculator.in/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Influencer Business Expense & Tax Tracker",
+      "item": "https://arthcalculator.in/influencer-tax-tracker/"
+    }
+  ]
+}
+    </script>
+
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Influencer Business Expense & Tax Tracker Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "url": "https://arthcalculator.in/influencer-tax-tracker/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I deduct makeup and clothes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if they are specific to a theme or shoot. General everyday clothing and makeup are treated as personal expenses. If you use Sec 44ADA, these are already bundled into your 50% deduction."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "How to claim refund for TDS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Brands deduct 1-10% TDS. While filing your ITR, if your final tax liability is lower than the TDS already paid, the Income Tax department will refund the difference to your bank account."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is AdSense income foreign remittance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Technically, yes. It is income from an overseas entity. However, you don't pay TCS on it; rather, it is a business export of services. You must maintain FIRC (Foreign Inward Remittance Certificate) from your bank."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I claim depreciation on my iPhone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If you use the Actual Expense method, you can claim 15% depreciation on mobile phones used for your creator business."
+      }
+    }
+  ]
 }
     </script>
 </head>
@@ -57,17 +130,17 @@
 
     <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
         <div class="max-w-6xl mx-auto px-4">
-            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
                 <ol class="flex list-none p-0">
                     <li class="flex items-center">
-                        <a href="/" class="hover:text-fuchsia-600 transition-colors">Home</a>
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="flex items-center text-pretty">
-                        <a href="/calculators/" class="hover:text-fuchsia-600 transition-colors">Calculators</a>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-fuchsia-600 font-bold">Influencer Tax Tracker</li>
+                    <li class="text-blue-600 font-bold">Influencer Business Expense & Tax Tracker</li>
                 </ol>
             </nav>
 
