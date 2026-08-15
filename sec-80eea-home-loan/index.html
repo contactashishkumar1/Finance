@@ -422,7 +422,7 @@
             const claimed80EE = document.getElementById('claimed80EE').checked;
 
             // Sec 24(b) cap = ₹2,00,000
-            const sec24b = Math.min(200000, interest);
+            const sec24b = oldRegime ? Math.min(200000, interest) : 0;
             const remainingInterest = Math.max(0, interest - sec24b);
 
             let sec80eea = 0, statusText = '';

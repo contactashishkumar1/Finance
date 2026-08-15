@@ -528,7 +528,7 @@
             // PAN Penalty Check (Section 206CC)
             if (!hasPan) {
                 let penaltyRate = 20; 
-                if (elements.catSel.value === 'sale_goods') penaltyRate = 1;
+                
                 tcsAmount = (amount * penaltyRate) / 100;
                 appliedRateText = penaltyRate + "% (No PAN)";
             }
