@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NRE / NRO Capital Repatriation & 15CA/CB Tax Calculator | RBI $1M Quota</title>
+    <meta name="description" content="Calculate net repatriable funds and TDS tax deductions when transferring money from NRO to NRE or overseas bank accounts under the RBI $1 Million annual quota.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Ashish Kumar">
+    <link rel="canonical" href="https://arthcalculator.in/money-transfer/calculators/nre-nro-repatriation/">
+    <link rel="icon" href="/favicon.png">
+
+    <meta property="og:title" content="NRE / NRO Capital Repatriation & 15CA/CB Tax Calculator | RBI $1M Quota">
+    <meta property="og:description" content="Free NRI capital repatriation calculator. Compute TDS withholding on property sales, inheritance, rental income, Form 15CA/CB requirements, and net foreign transfer.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://arthcalculator.in/money-transfer/calculators/nre-nro-repatriation/">
+    <meta property="og:site_name" content="ArthCalculator">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NRE / NRO Capital Repatriation & 15CA/CB Tax Calculator | RBI $1M Quota">
+    <meta name="twitter:description" content="Free NRI capital repatriation calculator. Compute TDS withholding on property sales, inheritance, rental income, Form 15CA/CB requirements, and net foreign transfer.">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebPage","name":"NRE & NRO Capital Repatriation Tax Calculator","url":"https://arthcalculator.in/money-transfer/calculators/nre-nro-repatriation/","description":"Calculate net repatriable funds and TDS tax deductions when transferring money from NRO to NRE or overseas bank accounts under the RBI $1 Million annual quota."}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"NRE & NRO Capital Repatriation Tax Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Calculate net repatriable funds and TDS tax deductions when transferring money from NRO to NRE or overseas bank accounts under the RBI $1 Million annual quota.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://arthcalculator.in/"},{"@type":"ListItem","position":2,"name":"Money Transfer","item":"https://arthcalculator.in/money-transfer/"},{"@type":"ListItem","position":3,"name":"Calculators","item":"https://arthcalculator.in/money-transfer/calculators/"},{"@type":"ListItem","position":4,"name":"NRE & NRO Capital Repatriation Tax Calculator","item":"https://arthcalculator.in/money-transfer/calculators/nre-nro-repatriation/"}]}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much money can an NRI transfer from an NRO account per year?","acceptedAnswer":{"@type":"Answer","text":"Under RBI guidelines, NRIs can repatriate up to $1,000,000 USD (or equivalent foreign currency) per financial year from their NRO accounts."}},{"@type":"Question","name":"What is the difference between Form 15CA and Form 15CB?","acceptedAnswer":{"@type":"Answer","text":"Form 15CB is a tax determination certificate signed by a practicing Indian Chartered Accountant. Form 15CA is an online undertaking filed by the remitter on the tax portal."}},{"@type":"Question","name":"Is inheritance money received in India taxable for an NRI?","acceptedAnswer":{"@type":"Answer","text":"No. Inheritance received by an NRI under a will or family settlement is not taxable under Indian income tax laws. However, future income (rent, interest, capital gains) earned from inherited assets is taxable."}},{"@type":"Question","name":"Can I transfer funds from NRO to NRE instead of overseas?","acceptedAnswer":{"@type":"Answer","text":"Yes. Moving funds from NRO to NRE is permitted within the $1M quota with Form 15CA/CB. Once in NRE, future interest is 100% tax-free and freely repatriable."}},{"@type":"Question","name":"How long does the NRO repatriation process take?","acceptedAnswer":{"@type":"Answer","text":"Obtaining Form 15CB from a CA typically takes 2 to 4 business days. Once submitted with Form 15CA, the authorized dealer bank processes the outward wire within 2 to 3 business days."}},{"@type":"Question","name":"What is the TDS rate on sale of property by an NRI in India?","acceptedAnswer":{"@type":"Answer","text":"Long-term capital gains on property held over 2 years attract 20% TDS (+ surcharge and cess). Short-term capital gains attract 30% TDS (+ surcharge and cess)."}},{"@type":"Question","name":"Can an NRI lower their property sale TDS in India?","acceptedAnswer":{"@type":"Answer","text":"Yes. An NRI seller can apply for a Lower/Nil TDS Deduction Certificate under Section 195(3) or 197 from the Income Tax Officer before the property transaction is executed."}},{"@type":"Question","name":"What documents does the bank require for NRO repatriation?","acceptedAnswer":{"@type":"Answer","text":"You must submit Form A2 (LRS application), Form 15CA, Form 15CB, FEMA NRI declaration, proof of source of funds (sale deed, inheritance deed, tax receipts), and PAN Card copy."}}]}
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); transition: all 0.3s ease; }
+        .card-shadow:hover { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); transform: translateY(-2px); }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen">
+
+<div id="navbar"></div>
+
+<header class="bg-white border-b border-slate-200 py-12 sm:py-16 text-center">
+    <div class="max-w-5xl mx-auto px-4">
+        <nav class="flex mb-6 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center" aria-label="Breadcrumb">
+            <ol class="flex list-none p-0 flex-wrap justify-center items-center">
+                <li class="flex items-center"><a href="/" class="hover:text-blue-600 transition-colors">Home</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                <li class="flex items-center"><a href="/money-transfer/" class="hover:text-blue-600 transition-colors">Money Transfer</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                <li class="flex items-center"><a href="/money-transfer/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                <li class="text-blue-600 font-bold">Nre Nro Repatriation</li>
+            </ol>
+        </nav>
+        <h1 class="text-3xl sm:text-5xl font-extrabold gradient-text pb-3 leading-tight">NRE & NRO Capital Repatriation Tax Calculator</h1>
+        <p class="text-slate-600 mt-2 max-w-3xl mx-auto leading-relaxed text-sm sm:text-base">Under RBI guidelines, Non-Resident Indians (NRIs) can repatriate up to $1,000,000 USD per financial year from their NRO account balances (rental income, property sales, inheritance) to their NRE account or overseas bank accounts. Use this calculator to estimate TDS deductions and net foreign currency payout.</p>
+    </div>
+</header>
+
+<!-- Main Container Layout: Sidebar TOC + Main Content -->
+<div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="flex flex-col lg:flex-row gap-10">
+
+        <!-- Sticky Table of Contents Sidebar (Desktop) -->
+        <aside class="lg:w-64 shrink-0">
+            <div class="sticky top-24 bg-white p-5 rounded-2xl border border-slate-200 card-shadow">
+                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path></svg>
+                    Calculator Index
+                </p>
+                <nav class="space-y-1 text-xs font-medium text-slate-600">
+                    <a href="#calculator" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">1. Calculation Engine</a>
+                    <a href="#waterfall" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">2. Cost Breakdown</a>
+                    <a href="#regulatory-table" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">3. Statutory Rules Table</a>
+                    <a href="#math" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">4. Calculation Logic</a>
+                    <a href="#faq" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">5. FAQs</a>
+                    <a href="#related" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">6. Related Tools</a>
+                </nav>
+
+                <div class="mt-6 pt-4 border-t border-slate-100">
+                    <a href="/money-transfer/calculators/" class="block text-center text-xs font-bold text-blue-600 bg-blue-50 py-2 rounded-lg hover:bg-blue-100 transition-colors">
+                        ← All Calculators
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Column -->
+        <main class="flex-1 min-w-0 space-y-14">
+            
+
+                <!-- Interactive NRE / NRO Repatriation Calculator -->
+                <section id="calculator" class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <div class="mb-6">
+                        <span class="inline-block bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-2">🧮 Live Calculation Engine</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">NRO Repatriation & Tax Deduction Computation</h2>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-1">Estimate capital gains/income tax withholding and net foreign currency payout under the $1,000,000 USD annual quota.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                        <!-- Inputs -->
+                        <div class="lg:col-span-7 space-y-5">
+                            <div>
+                                <label for="incomeType" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Source of Repatriation Funds</label>
+                                <select id="incomeType" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-800 focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all">
+                                    <option value="property_ltcg">Sale of Inherited / Owned Property (Long-Term Capital Gain) - 20%</option>
+                                    <option value="property_stcg">Sale of Property (Short-Term Capital Gain) - 30%</option>
+                                    <option value="rental_income">Rental Income / Dividends / Business Profits - 30%</option>
+                                    <option value="tax_paid" selected>Existing Tax-Paid Bank Savings / NRO Principal Balance - 0%</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="grossRepatInr" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Gross Repatriation Amount (₹ INR)</label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-400 font-bold text-sm">₹</span>
+                                    <input type="number" id="grossRepatInr" value="5000000" min="0" step="50000" class="w-full pl-9 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-800 focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all">
+                                </div>
+                                <span class="text-[11px] text-slate-500 mt-1 block">Default: ₹50,00,000 (₹50 Lakhs)</span>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="destCurr" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Target Destination Currency</label>
+                                    <select id="destCurr" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-800 focus:bg-white focus:border-blue-500 outline-none">
+                                        <option value="USD" data-rate="86.80">USD ($) - US Dollar</option>
+                                        <option value="GBP" data-rate="109.80">GBP (£) - British Pound</option>
+                                        <option value="EUR" data-rate="90.50">EUR (€) - Euro</option>
+                                        <option value="CAD" data-rate="63.80">CAD (C$) - Canadian Dollar</option>
+                                        <option value="AUD" data-rate="57.10">AUD (A$) - Australian Dollar</option>
+                                        <option value="AED" data-rate="23.64">AED - UAE Dirham</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="fxSpread" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Bank FX Spread Margin (%)</label>
+                                    <input type="number" id="fxSpread" value="0.75" min="0" max="5" step="0.05" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-800 focus:bg-white focus:border-blue-500 outline-none">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Results Card -->
+                        <div class="lg:col-span-5 bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-2xl p-6 flex flex-col justify-between shadow-xl">
+                            <div>
+                                <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider block mb-1">Net Foreign Currency Payout</span>
+                                <div class="text-3xl sm:text-4xl font-extrabold text-white mb-4" id="resForeignPayout">$57,175 USD</div>
+                                <div class="inline-block bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs px-3 py-1 rounded-full font-semibold mb-4" id="resQuotaBadge">
+                                    Utilizes 5.7% of $1,000,000 Annual Quota
+                                </div>
+
+                                <div class="space-y-3 text-xs border-t border-slate-700/80 pt-4">
+                                    <div class="flex justify-between">
+                                        <span class="text-slate-400">Estimated TDS Withheld:</span>
+                                        <span class="font-bold text-rose-400" id="resTds">₹0</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-slate-400">Net Repatriable INR Base:</span>
+                                        <span class="font-bold text-slate-200" id="resNetInr">₹50,00,000</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-slate-400">Form 15CA/CB Mandate:</span>
+                                        <span class="font-bold text-blue-300" id="resDocMandate">Required (CA Certified 15CB)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 pt-4 border-t border-slate-700/80 text-[11px] text-slate-400 leading-relaxed">
+                                📄 <strong>Statutory Process:</strong> A practicing Indian Chartered Accountant issues Form 15CB certifying tax clearance, after which you file Form 15CA on the income tax portal for bank remittance.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+            <!-- Visual Cost Breakdown Section -->
+            <section id="waterfall" class="scroll-mt-28 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 card-shadow">
+                <div class="mb-5">
+                    <span class="inline-block bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-2">📊 Cost Anatomy</span>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900">
+                        The 3 Components of NRO Capital Repatriation
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-1">
+                        When repatriating funds from an Indian NRO account overseas, your final net foreign currency payout is determined by three distinct statutory deduction layers:
+                    </p>
+                </div>
+
+                <!-- 3 Pillars Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <div class="bg-blue-50/60 border border-blue-100 p-4 rounded-2xl">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-extrabold text-slate-900 text-sm">1. TDS Tax Withheld</span>
+                            <span class="text-xs font-bold text-blue-700 bg-blue-100 px-2 py-0.5 rounded-md">Statutory</span>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Indian withholding tax on property capital gains (20.8%) or rental income (31.2%).
+                        </p>
+                    </div>
+
+                    <div class="bg-amber-50/60 border border-amber-100 p-4 rounded-2xl">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-extrabold text-slate-900 text-sm">2. CA 15CB Certification Fee</span>
+                            <span class="text-xs font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded-md">Direct</span>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Professional fee paid to an Indian Chartered Accountant for Form 15CB audit.
+                        </p>
+                    </div>
+
+                    <div class="bg-rose-50/60 border border-rose-100 p-4 rounded-2xl">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-extrabold text-slate-900 text-sm">3. Bank FX Outward Spread</span>
+                            <span class="text-xs font-bold text-rose-700 bg-rose-100 px-2 py-0.5 rounded-md">Bank Margin</span>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            The currency conversion spread deducted when converting net INR into foreign currency.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Visual Comparison Formula Box -->
+                <div class="p-4 bg-slate-900 text-white rounded-2xl text-xs sm:text-sm font-mono flex flex-col sm:flex-row items-center justify-between gap-3">
+                    <span>Net Foreign Payout = (Gross Repatriation INR - Statutory TDS) ÷ (Mid-Market Rate × (1 + Bank FX Margin %))</span>
+                    <span class="text-emerald-400 font-bold bg-slate-800 px-3 py-1 rounded-xl text-xs font-sans">All transfers up to $1 Million USD per FY are fully permitted under the RBI LRS window.</span>
+                </div>
+            </section>
+
+            <!-- Statutory Rules Table -->
+            <section id="regulatory-table" class="scroll-mt-28 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 card-shadow">
+                <div class="mb-5">
+                    <span class="inline-block bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-2">📊 Statutory Regulatory Rules</span>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900">
+                        Tax Compliance & Regulatory Benchmark
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-1">
+                        Official tax and exchange control parameters governing foreign capital remittances:
+                    </p>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse min-w-[650px]">
+                        <thead>
+                            <tr class="bg-slate-50 border-b-2 border-slate-200 text-xs font-extrabold text-slate-700 uppercase tracking-wider">
+<th class="p-4">Income Source in NRO</th><th class="p-4">TDS Withholding Rate</th><th class="p-4">DTAA Relief Available?</th><th class="p-4">Form 15CB Mandatory?</th><th class="p-4">Allowable Quota</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-xs sm:text-sm divide-y divide-slate-100">
+
+                                        <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                            <td class="p-4 font-bold text-slate-900">Sale of Long-Term Property (>2 yrs)</td><td class="p-4 text-emerald-700 font-bold">20% + Surcharge + Cess (20.8%+)</td><td class="p-4 text-slate-700">Generally No (Real Estate taxed in India)</td><td class="p-4 text-slate-700">Yes (Mandatory)</td><td class="p-4 text-slate-700">Up to $1 Million USD / FY</td>
+                                        </tr>
+
+                                        <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                            <td class="p-4 font-bold text-slate-900">Sale of Short-Term Property (<2 yrs)</td><td class="p-4 text-emerald-700 font-bold">30% + Surcharge + Cess (31.2%+)</td><td class="p-4 text-slate-700">Generally No</td><td class="p-4 text-slate-700">Yes (Mandatory)</td><td class="p-4 text-slate-700">Up to $1 Million USD / FY</td>
+                                        </tr>
+
+                                        <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                            <td class="p-4 font-bold text-slate-900">Rental Income from Indian Property</td><td class="p-4 text-emerald-700 font-bold">30% + Surcharge + Cess (31.2%+)</td><td class="p-4 text-slate-700">Yes (Subject to TRC & Form 10F)</td><td class="p-4 text-slate-700">Yes (if >₹5 Lakhs)</td><td class="p-4 text-slate-700">Up to $1 Million USD / FY</td>
+                                        </tr>
+
+                                        <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                            <td class="p-4 font-bold text-slate-900">Inheritance / Family Settlement</td><td class="p-4 text-emerald-700 font-bold">0% (Inheritance is non-taxable in India)</td><td class="p-4 text-slate-700">Not Applicable</td><td class="p-4 text-slate-700">Yes (Proof of Will/Deed)</td><td class="p-4 text-slate-700">Up to $1 Million USD / FY</td>
+                                        </tr>
+
+                                        <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                            <td class="p-4 font-bold text-slate-900">Existing Tax-Paid Bank Savings</td><td class="p-4 text-emerald-700 font-bold">0% (Already taxed in prior years)</td><td class="p-4 text-slate-700">Not Applicable</td><td class="p-4 text-slate-700">Yes (if >₹5 Lakhs)</td><td class="p-4 text-slate-700">Up to $1 Million USD / FY</td>
+                                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <div id="math" class="space-y-12">
+
+                <!-- The RBI $1 Million USD Annual Quota Explained -->
+                <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">The RBI $1 Million USD Annual Quota Explained</h2>
+                    <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-4">
+                        <p>Under the Reserve Bank of India's Liberalised Remittance Scheme (LRS) framework for NRIs, non-residents are legally permitted to repatriate up to $1,000,000 USD per financial year (April 1 to March 31) from their NRO account balances. This quota covers proceeds from selling ancestral property, rental income, domestic mutual fund redemptions, and legal family inheritances.</p>
+                    </div>
+                </section>
+
+                <!-- Step-by-Step Statutory Clearance: Form 15CA & 15CB -->
+                <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">Step-by-Step Statutory Clearance: Form 15CA & 15CB</h2>
+                    <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-4">
+                        <p>To execute an NRO outward transfer, the Indian Income Tax Department mandates two filings: (1) Form 15CB is an official certificate issued and digitally signed by a practicing Chartered Accountant (CA), verifying that all applicable Indian taxes (capital gains, TDS) on the underlying income have been satisfied; (2) Form 15CA is an online declaration submitted by the remitter on the income tax e-filing portal containing the 15CB acknowledgment number. The bank processes the transfer only upon receiving both forms.</p>
+                    </div>
+                </section>
+
+                <!-- NRO to NRE Transfer vs Direct Overseas Bank Transfer -->
+                <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">NRO to NRE Transfer vs Direct Overseas Bank Transfer</h2>
+                    <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-4">
+                        <p>NRIs have two execution choices: (1) Transfer funds directly from NRO to an overseas bank account in their country of residence; or (2) Transfer funds from NRO into their Indian NRE Account. Transferring to an NRE account is highly strategic: once deposited in NRE, the capital earns 100% tax-free interest in India and becomes freely repatriable overseas in the future without repeating Form 15CA/CB documentation.</p>
+                    </div>
+                </section>
+
+            </div>
+
+            
+                <!-- Detailed Form 15CA & 15CB Statutory Filing Procedure -->
+                <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">Step-by-Step Form 15CA & Form 15CB Statutory Repatriation Protocol</h2>
+                    <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-4 text-sm sm:text-base">
+                        <p>To transfer capital from an Indian NRO account to an NRE or overseas bank account under the RBI $1,000,000 USD annual quota, follow this mandatory statutory procedure:</p>
+                        <ol class="list-decimal pl-5 space-y-2">
+                            <li><strong>Engage an Indian Chartered Accountant for Form 15CB:</strong> Submit underlying source of funds documentation (sale deed for property, ancestral will for inheritance, rent receipts, tax returns) to a practicing CA. The CA computes the exact capital gains tax liability, verifies TDS deposits, and signs Form 15CB electronically on the income tax portal.</li>
+                            <li><strong>File Form 15CA (Part C) Online:</strong> Log in to the income tax e-filing portal. Navigate to 'e-File' > 'Income Tax Forms' > 'File Form 15CA'. Select Part C, input the 15CB Acknowledgment Number, and verify remitter and beneficiary wire details.</li>
+                            <li><strong>Submit Form A2 & FEMA Declaration to Bank:</strong> Provide your authorized dealer bank with the signed Form A2 (FEMA outward remittance application), Form 15CA acknowledgment copy, Form 15CB certificate, PAN card copy, and FEMA NRI non-resident declaration.</li>
+                            <li><strong>Lock in Wholesale FX Conversion:</strong> Instruct your bank's foreign exchange treasury desk or relationship manager to book the conversion during active interbank market hours to minimize exchange rate spreads.</li>
+                            <li><strong>Receive Funds in NRE or Foreign Bank:</strong> Once the bank verifies tax clearance, the wire is dispatched via SWIFT or transferred internally into your NRE account within 2 to 3 business days.</li>
+                        </ol>
+                    </div>
+                </section>
+    
+
+            <!-- FAQ Section -->
+            <section id="faq" class="scroll-mt-28 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Frequently Asked Questions</h2>
+                <div class="space-y-3">
+
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                <span>How much money can an NRI transfer from an NRO account per year?</span>
+                                <svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                Under RBI guidelines, NRIs can repatriate up to $1,000,000 USD (or equivalent foreign currency) per financial year from their NRO accounts.
+                            </div>
+                        </details>
+
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                <span>What is the difference between Form 15CA and Form 15CB?</span>
+                                <svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                Form 15CB is a tax determination certificate signed by a practicing Indian Chartered Accountant. Form 15CA is an online undertaking filed by the remitter on the tax portal.
+                            </div>
+                        </details>
+
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                <span>Is inheritance money received in India taxable for an NRI?</span>
+                                <svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                No. Inheritance received by an NRI under a will or family settlement is not taxable under Indian income tax laws. However, future income (rent, interest, capital gains) earned from inherited assets is taxable.
+                            </div>
+                        </details>
+
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                <span>Can I transfer funds from NRO to NRE instead of overseas?</span>
+                                <svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                Yes. Moving funds from NRO to NRE is permitted within the $1M quota with Form 15CA/CB. Once in NRE, future interest is 100% tax-free and freely repatriable.
+                            </div>
+                        </details>
+
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                <span>How long does the NRO repatriation process take?</span>
+                                <svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                Obtaining Form 15CB from a CA typically takes 2 to 4 business days. Once submitted with Form 15CA, the authorized dealer bank processes the outward wire within 2 to 3 business days.
+                            </div>
+                        </details>
+
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                <span>What is the TDS rate on sale of property by an NRI in India?</span>
+                                <svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                Long-term capital gains on property held over 2 years attract 20% TDS (+ surcharge and cess). Short-term capital gains attract 30% TDS (+ surcharge and cess).
+                            </div>
+                        </details>
+
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                <span>Can an NRI lower their property sale TDS in India?</span>
+                                <svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                Yes. An NRI seller can apply for a Lower/Nil TDS Deduction Certificate under Section 195(3) or 197 from the Income Tax Officer before the property transaction is executed.
+                            </div>
+                        </details>
+
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                <span>What documents does the bank require for NRO repatriation?</span>
+                                <svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                You must submit Form A2 (LRS application), Form 15CA, Form 15CB, FEMA NRI declaration, proof of source of funds (sale deed, inheritance deed, tax receipts), and PAN Card copy.
+                            </div>
+                        </details>
+
+                </div>
+            </section>
+
+            <!-- Related Resources -->
+            <section id="related" class="bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-200 text-center">
+                <h2 class="text-xl sm:text-2xl font-bold text-slate-900 mb-2">Explore Related Calculators & Guides</h2>
+                <p class="text-xs sm:text-sm text-slate-600 mb-6 max-w-xl mx-auto">Calculate international wire costs, evaluate foreign exchange spreads, and read independent reviews.</p>
+                <div class="flex flex-wrap justify-center gap-3 text-xs font-semibold">
+                    <a href="/money-transfer/calculators/total-transfer-cost/" class="bg-white px-4 py-2 rounded-xl border border-slate-200 hover:border-blue-300 hover:text-blue-600 transition-all shadow-2xs">Total Cost Calculator →</a>
+                    <a href="/money-transfer/calculators/international-wire-cost/" class="bg-white px-4 py-2 rounded-xl border border-slate-200 hover:border-blue-300 hover:text-blue-600 transition-all shadow-2xs">SWIFT Wire Calculator →</a>
+                    <a href="/money-transfer/country-guides/sending-money-to-nre-vs-nro-account/" class="bg-white px-4 py-2 rounded-xl border border-slate-200 hover:border-blue-300 hover:text-blue-600 transition-all shadow-2xs">NRE vs NRO Guide →</a>
+                    <a href="/money-transfer/calculators/" class="bg-white px-4 py-2 rounded-xl border border-slate-200 hover:border-blue-300 hover:text-blue-600 transition-all shadow-2xs">All Calculators →</a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</div>
+
+<div id="footer"></div>
+
+<script>
+
+        function calculateRepat() {
+            const incomeType = document.getElementById('incomeType').value;
+            const grossInr = parseFloat(document.getElementById('grossRepatInr').value) || 0;
+            const destSelect = document.getElementById('destCurr');
+            const destCurr = destSelect.value;
+            const baseRate = parseFloat(destSelect.options[destSelect.selectedIndex].getAttribute('data-rate')) || 86.80;
+            const fxSpreadPct = parseFloat(document.getElementById('fxSpread').value) || 0.75;
+
+            let tdsRate = 0;
+            if (incomeType === 'property_ltcg') {
+                tdsRate = 0.208; // 20% + 4% cess
+            } else if (incomeType === 'property_stcg' || incomeType === 'rental_income') {
+                tdsRate = 0.312; // 30% + 4% cess
+            } else {
+                tdsRate = 0.0; // Already tax-paid savings
+            }
+
+            const tdsAmount = grossInr * tdsRate;
+            const netInr = Math.max(0, grossInr - tdsAmount);
+
+            // Calculate Effective Conversion Rate
+            const effectiveRate = baseRate * (1 + (fxSpreadPct / 100));
+            const foreignPayout = effectiveRate > 0 ? (netInr / effectiveRate) : 0;
+
+            // Quota calculation (based on USD benchmark $86.80)
+            const usdEquivalent = netInr / 86.80;
+            const quotaPct = Math.min(100, (usdEquivalent / 1000000) * 100);
+
+            let sym = '$';
+            if (destCurr === 'GBP') sym = '£';
+            else if (destCurr === 'EUR') sym = '€';
+            else if (destCurr === 'CAD') sym = 'C$';
+            else if (destCurr === 'AUD') sym = 'A$';
+            else if (destCurr === 'AED') sym = 'AED ';
+
+            document.getElementById('resTds').innerText = '₹' + Math.round(tdsAmount).toLocaleString('en-IN');
+            document.getElementById('resNetInr').innerText = '₹' + Math.round(netInr).toLocaleString('en-IN');
+            document.getElementById('resForeignPayout').innerText = sym + Math.round(foreignPayout).toLocaleString('en-US') + ' ' + destCurr;
+            document.getElementById('resQuotaBadge').innerText = 'Utilizes ' + quotaPct.toFixed(1) + '% of $1,000,000 USD Annual Quota';
+            
+            const docText = grossInr > 500000 ? 'Required (Form 15CA Part C + CA 15CB)' : 'Form 15CA Part A (Self Declaration)';
+            document.getElementById('resDocMandate').innerText = docText;
+        }
+
+        document.getElementById('incomeType').addEventListener('change', calculateRepat);
+        document.getElementById('grossRepatInr').addEventListener('input', calculateRepat);
+        document.getElementById('destCurr').addEventListener('change', calculateRepat);
+        document.getElementById('fxSpread').addEventListener('input', calculateRepat);
+        document.addEventListener('DOMContentLoaded', calculateRepat);
+
+</script>
+
+<script>
+    fetch("/navbar.html").then(r => r.text()).then(html => {
+        document.getElementById("navbar").innerHTML = html;
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+        }
+    });
+    fetch("/footer.html").then(r => r.text()).then(html => {
+        document.getElementById("footer").innerHTML = html;
+    });
+</script>
+</body>
+</html>

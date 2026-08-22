@@ -48,7 +48,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Money Transfer Tools, Guides & Resources Calculator",
+      "name": "Global Money Transfer Hub",
       "item": "https://arthcalculator.in/money-transfer/"
     }
   ]
@@ -60,7 +60,7 @@
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "Money Transfer Tools, Guides & Resources Calculator",
+  "name": "Global Money Transfer Hub",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "All",
   "url": "https://arthcalculator.in/money-transfer/",
@@ -274,7 +274,7 @@
                         <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600 font-bold">Money Transfer Tools, Guides & Resources Calculator</li>
+                    <li class="text-blue-600 font-bold">Global Money Transfer Hub</li>
                 </ol>
             </nav>
 
@@ -295,6 +295,205 @@
             </div>
         </div>
     </header>
+
+    <!-- Interactive Remittance Estimator & Provider Scorecard Widget -->
+    <section class="max-w-6xl mx-auto px-4 -mt-8 sm:-mt-12 relative z-10">
+        <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl">
+            <div class="max-w-3xl mb-8">
+                <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-3.5 py-1.5 rounded-full text-blue-700 text-xs font-bold uppercase tracking-wider mb-3">
+                    <span>⚡ Remittance Payout Estimator</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                    Compare Estimated Transfer Payouts & Provider Fees
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base mt-2">
+                    Enter your send amount below to calculate estimated recipient payouts, hidden exchange rate spreads, and transparent fees across top remittance providers.
+                </p>
+            </div>
+
+            <!-- Input Controls -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-5 bg-slate-50 border border-slate-200/80 rounded-2xl mb-8">
+                <!-- Send Amount -->
+                <div>
+                    <label for="sendAmountInput" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">You Send</label>
+                    <div class="relative">
+                        <input type="number" id="sendAmountInput" value="1000" min="10" step="50" 
+                            class="w-full bg-white border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 rounded-xl px-3.5 py-2.5 text-base font-bold text-slate-900 focus:outline-none transition-all">
+                    </div>
+                </div>
+
+                <!-- Send Currency -->
+                <div>
+                    <label for="sendCurrencySelect" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Send Currency</label>
+                    <select id="sendCurrencySelect" class="w-full bg-white border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 rounded-xl px-3.5 py-2.5 text-sm font-semibold text-slate-800 focus:outline-none transition-all">
+                        <option value="USD" selected>USD - US Dollar ($)</option>
+                        <option value="GBP">GBP - British Pound (£)</option>
+                        <option value="EUR">EUR - Euro (€)</option>
+                        <option value="CAD">CAD - Canadian Dollar (C$)</option>
+                        <option value="AUD">AUD - Australian Dollar (A$)</option>
+                        <option value="AED">AED - UAE Dirham (د.إ)</option>
+                        <option value="SAR">SAR - Saudi Riyal (﷼)</option>
+                        <option value="SGD">SGD - Singapore Dollar (S$)</option>
+                    </select>
+                </div>
+
+                <!-- Receive Currency -->
+                <div>
+                    <label for="receiveCurrencySelect" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Recipient Gets</label>
+                    <select id="receiveCurrencySelect" class="w-full bg-white border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 rounded-xl px-3.5 py-2.5 text-sm font-semibold text-slate-800 focus:outline-none transition-all">
+                        <option value="INR" selected>INR - Indian Rupee (₹)</option>
+                        <option value="PKR">PKR - Pakistani Rupee (₨)</option>
+                        <option value="PHP">PHP - Philippine Peso (₱)</option>
+                        <option value="BDT">BDT - Bangladeshi Taka (৳)</option>
+                        <option value="NGN">NGN - Nigerian Naira (₦)</option>
+                        <option value="MXN">MXN - Mexican Peso ($)</option>
+                        <option value="CNY">CNY - Chinese Yuan (¥)</option>
+                    </select>
+                </div>
+
+                <!-- Transfer Priority -->
+                <div>
+                    <label for="transferPrioritySelect" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Transfer Priority</label>
+                    <select id="transferPrioritySelect" class="w-full bg-white border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 rounded-xl px-3.5 py-2.5 text-sm font-semibold text-slate-800 focus:outline-none transition-all">
+                        <option value="cost" selected>Lowest Cost / Highest Payout</option>
+                        <option value="speed">Fastest Delivery</option>
+                        <option value="large">Large Amount (>$10,000)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Dynamic Comparison Table Results -->
+            <div class="overflow-x-auto not-prose border border-slate-200 rounded-2xl shadow-xs">
+                <table class="w-full text-left text-sm" id="comparisonTable">
+                    <thead class="bg-slate-100/80 text-slate-800 text-xs uppercase font-extrabold tracking-wider border-b border-slate-200">
+                        <tr>
+                            <th class="p-4 sm:p-5">Provider & Rating</th>
+                            <th class="p-4 sm:p-5">Exchange Rate</th>
+                            <th class="p-4 sm:p-5">Transfer Fee</th>
+                            <th class="p-4 sm:p-5">Estimated Payout</th>
+                            <th class="p-4 sm:p-5">Transfer Speed</th>
+                            <th class="p-4 sm:p-5 text-right">In-Depth Guide</th>
+                        </tr>
+                    </thead>
+                    <tbody id="comparisonResultsBody" class="divide-y divide-slate-200 bg-white font-medium">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mt-4 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500">
+                <span>ℹ️ Indicative comparison based on standard non-promotional fee structures. Exchange rates and fee estimates are indicative benchmarks based on standard provider pricing models.</span>
+                <a href="/money-transfer/calculators/total-transfer-cost/" class="text-blue-600 font-bold hover:underline">Calculate Custom Margin →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Provider by Category Scorecards -->
+    <section class="max-w-6xl mx-auto px-4 mt-16">
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                Best Money Transfer Providers by Category
+            </h2>
+            <p class="text-slate-600 text-sm sm:text-base mt-2">
+                Our independent financial analysis evaluated speed, exchange rate markups, regulatory licensing, and payout networks.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Wise Card -->
+            <div class="bg-white border-2 border-blue-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative">
+                <span class="absolute -top-3 left-6 bg-blue-600 text-white text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">🏆 Best Overall</span>
+                <div>
+                    <div class="flex items-center justify-between mb-3 mt-1">
+                        <h3 class="font-extrabold text-xl text-slate-900">Wise</h3>
+                        <span class="text-xs bg-emerald-50 text-emerald-700 font-bold px-2 py-0.5 rounded-md">Mid-Market FX</span>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                        Zero hidden exchange rate markups. Uses pure mid-market rate with transparent ~0.43% transfer fee. Instant bank & UPI payouts.
+                    </p>
+                    <ul class="text-xs text-slate-600 space-y-1.5 mb-6">
+                        <li class="flex items-center gap-1.5"><span class="text-blue-600 font-bold">✓</span> Real Google Exchange Rate</li>
+                        <li class="flex items-center gap-1.5"><span class="text-blue-600 font-bold">✓</span> Fast local bank/UPI rails</li>
+                        <li class="flex items-center gap-1.5"><span class="text-blue-600 font-bold">✓</span> Multi-currency account</li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                    <a href="/money-transfer/provider-reviews/wise-review/" class="font-bold text-blue-600 hover:underline">Read Full Review →</a>
+                    <a href="/money-transfer/provider-comparisons/wise-vs-remitly/" class="text-slate-500 hover:text-blue-600">vs Remitly</a>
+                </div>
+            </div>
+
+            <!-- Remitly Card -->
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative">
+                <span class="absolute -top-3 left-6 bg-indigo-600 text-white text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">⚡ Fastest Delivery</span>
+                <div>
+                    <div class="flex items-center justify-between mb-3 mt-1">
+                        <h3 class="font-extrabold text-xl text-slate-900">Remitly</h3>
+                        <span class="text-xs bg-indigo-50 text-indigo-700 font-bold px-2 py-0.5 rounded-md">Instant Express</span>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                        Exceptional speed via debit card. Instant delivery to mobile wallets, bank accounts, and thousands of cash pickup locations.
+                    </p>
+                    <ul class="text-xs text-slate-600 space-y-1.5 mb-6">
+                        <li class="flex items-center gap-1.5"><span class="text-indigo-600 font-bold">✓</span> Express instant transfers</li>
+                        <li class="flex items-center gap-1.5"><span class="text-indigo-600 font-bold">✓</span> Promotional new-user rates</li>
+                        <li class="flex items-center gap-1.5"><span class="text-indigo-600 font-bold">✓</span> Extensive cash network</li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                    <a href="/money-transfer/provider-reviews/remitly-review/" class="font-bold text-indigo-600 hover:underline">Read Full Review →</a>
+                    <a href="/money-transfer/provider-comparisons/remitly-vs-western-union/" class="text-slate-500 hover:text-indigo-600">vs WU</a>
+                </div>
+            </div>
+
+            <!-- OFX Card -->
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative">
+                <span class="absolute -top-3 left-6 bg-amber-600 text-white text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">💼 Best for $10k+</span>
+                <div>
+                    <div class="flex items-center justify-between mb-3 mt-1">
+                        <h3 class="font-extrabold text-xl text-slate-900">OFX</h3>
+                        <span class="text-xs bg-amber-50 text-amber-700 font-bold px-2 py-0.5 rounded-md">$0 Fee on Large</span>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                        Ideal for high-ticket property purchases, tuition fees, and overseas investments. Dedicated currency broker with 24/7 phone support.
+                    </p>
+                    <ul class="text-xs text-slate-600 space-y-1.5 mb-6">
+                        <li class="flex items-center gap-1.5"><span class="text-amber-600 font-bold">✓</span> $0 transfer fee on large sums</li>
+                        <li class="flex items-center gap-1.5"><span class="text-amber-600 font-bold">✓</span> Forward contracts & limit orders</li>
+                        <li class="flex items-center gap-1.5"><span class="text-amber-600 font-bold">✓</span> 24/7 dedicated dealer support</li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                    <a href="/money-transfer/provider-reviews/ofx-review/" class="font-bold text-amber-600 hover:underline">Read Full Review →</a>
+                    <a href="/money-transfer/provider-comparisons/wise-vs-ofx/" class="text-slate-500 hover:text-amber-600">vs Wise</a>
+                </div>
+            </div>
+
+            <!-- Western Union Card -->
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative">
+                <span class="absolute -top-3 left-6 bg-slate-700 text-white text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">🏧 Cash Pickup</span>
+                <div>
+                    <div class="flex items-center justify-between mb-3 mt-1">
+                        <h3 class="font-extrabold text-xl text-slate-900">Western Union</h3>
+                        <span class="text-xs bg-slate-100 text-slate-700 font-bold px-2 py-0.5 rounded-md">500k+ Agents</span>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                        Global reach for sending cash to unbanked recipients in over 200 countries and territories. Digital app or cash at counter.
+                    </p>
+                    <ul class="text-xs text-slate-600 space-y-1.5 mb-6">
+                        <li class="flex items-center gap-1.5"><span class="text-slate-700 font-bold">✓</span> Unrivaled physical locations</li>
+                        <li class="flex items-center gap-1.5"><span class="text-slate-700 font-bold">✓</span> Cash-to-cash capability</li>
+                        <li class="flex items-center gap-1.5"><span class="text-slate-700 font-bold">✓</span> Trusted legacy network</li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                    <a href="/money-transfer/provider-reviews/western-union-review/" class="font-bold text-slate-800 hover:underline">Read Full Review →</a>
+                    <a href="/money-transfer/provider-comparisons/paypal-vs-western-union/" class="text-slate-500 hover:text-slate-800">vs PayPal</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <main class="max-w-6xl mx-auto px-4 space-y-20 pb-24 pt-12">
 
@@ -887,7 +1086,7 @@
 
             <section class="bg-white p-8 rounded-3xl border border-slate-200 text-center card-shadow mt-12">
                 <h2 class="text-xl font-bold text-slate-900 mb-2">Why Trust ArthCalculator?</h2>
-                <p class="text-slate-600 max-w-3xl mx-auto">ArthCalculator approaches financial analysis through strict mathematical rigor. Our directory tools and comparison matrices calculate fees utilizing the live mid-market rate, exposing hidden margins without bias. We empower users with transparent data, ensuring you can navigate global capital transfers securely and efficiently.</p>
+                <p class="text-slate-600 max-w-3xl mx-auto">ArthCalculator approaches financial analysis through strict mathematical rigor. Our directory tools and comparison matrices calculate fees utilizing the mid-market benchmark rate, exposing hidden margins without bias. We empower users with transparent data, ensuring you can navigate global capital transfers securely and efficiently.</p>
             </section>
 
         </article>
@@ -962,5 +1161,167 @@
       document.getElementById("footer").innerHTML = data;
     });
     </script>
+
+    <!-- Remittance Estimator Calculation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const amountInput = document.getElementById('sendAmountInput');
+            const fromSelect = document.getElementById('sendCurrencySelect');
+            const toSelect = document.getElementById('receiveCurrencySelect');
+            const prioritySelect = document.getElementById('transferPrioritySelect');
+            const tbody = document.getElementById('comparisonResultsBody');
+
+            // Representative exchange rate matrix against USD
+            const USD_BASE_RATES = {
+                'USD': 1.0,
+                'GBP': 0.79,
+                'EUR': 0.92,
+                'CAD': 1.36,
+                'AUD': 1.52,
+                'AED': 3.6725,
+                'SAR': 3.75,
+                'SGD': 1.34,
+                'INR': 86.80,
+                'PKR': 278.50,
+                'PHP': 58.20,
+                'BDT': 118.50,
+                'NGN': 1520.0,
+                'MXN': 19.80,
+                'CNY': 7.24
+            };
+
+            function calculateMidMarketRate(fromCurr, toCurr) {
+                const usdToFrom = USD_BASE_RATES[fromCurr] || 1.0;
+                const usdToDest = USD_BASE_RATES[toCurr] || 1.0;
+                return (1 / usdToFrom) * usdToDest;
+            }
+
+            function updateComparison() {
+                if (!tbody) return;
+                const sendAmt = parseFloat(amountInput.value) || 1000;
+                const fromC = fromSelect.value;
+                const toC = toSelect.value;
+                const priority = prioritySelect ? prioritySelect.value : 'cost';
+
+                const midRate = calculateMidMarketRate(fromC, toC);
+
+                // Providers models
+                const providers = [
+                    {
+                        name: 'Wise',
+                        badge: 'Lowest Cost',
+                        badgeColor: 'bg-emerald-100 text-emerald-800',
+                        rate: midRate * 1.0, // 0% margin
+                        fee: Math.max(1.5, sendAmt * 0.0045), // ~0.45%
+                        speed: 'Minutes (ACH/Debit)',
+                        reviewUrl: '/money-transfer/provider-reviews/wise-review/',
+                        isRecommended: true
+                    },
+                    {
+                        name: 'Remitly',
+                        badge: 'Fastest Speed',
+                        badgeColor: 'bg-indigo-100 text-indigo-800',
+                        rate: midRate * 0.988, // 1.2% margin
+                        fee: sendAmt > 1000 ? 0.0 : 2.99,
+                        speed: 'Instant (Debit Card)',
+                        reviewUrl: '/money-transfer/provider-reviews/remitly-review/',
+                        isRecommended: false
+                    },
+                    {
+                        name: 'OFX',
+                        badge: 'Best for >$10k',
+                        badgeColor: 'bg-amber-100 text-amber-800',
+                        rate: midRate * (sendAmt > 10000 ? 0.995 : 0.985), // tighter on large
+                        fee: sendAmt > 5000 ? 0.0 : 15.0,
+                        speed: '1-2 Days (Wire)',
+                        reviewUrl: '/money-transfer/provider-reviews/ofx-review/',
+                        isRecommended: sendAmt >= 10000
+                    },
+                    {
+                        name: 'Western Union',
+                        badge: 'Cash Pickup',
+                        badgeColor: 'bg-slate-100 text-slate-800',
+                        rate: midRate * 0.978, // 2.2% margin
+                        fee: 4.99,
+                        speed: 'Minutes (Agent Pickup)',
+                        reviewUrl: '/money-transfer/provider-reviews/western-union-review/',
+                        isRecommended: false
+                    },
+                    {
+                        name: 'High-Street Bank (SWIFT)',
+                        badge: 'Traditional Wire',
+                        badgeColor: 'bg-rose-50 text-rose-700',
+                        rate: midRate * 0.970, // 3.0% margin
+                        fee: 35.0,
+                        speed: '3-5 Business Days',
+                        reviewUrl: '/money-transfer/calculators/international-wire-cost/',
+                        isRecommended: false
+                    }
+                ];
+
+                // Calculate payouts
+                providers.forEach(p => {
+                    const netSend = Math.max(0, sendAmt - p.fee);
+                    p.payout = netSend * p.rate;
+                });
+
+                // Sort by priority
+                if (priority === 'cost') {
+                    providers.sort((a, b) => b.payout - a.payout);
+                } else if (priority === 'speed') {
+                    // Wise & Remitly top
+                    providers.sort((a, b) => (a.name === 'Remitly' || a.name === 'Wise' ? -1 : 1));
+                } else if (priority === 'large') {
+                    providers.sort((a, b) => (a.name === 'OFX' ? -1 : b.payout - a.payout));
+                }
+
+                const currencySymbols = {
+                    'INR': '₹', 'USD': '$', 'GBP': '£', 'EUR': '€', 'CAD': 'C$', 'AUD': 'A$',
+                    'AED': 'AED ', 'SAR': 'SAR ', 'PKR': '₨', 'PHP': '₱', 'BDT': '৳', 'NGN': '₦', 'MXN': '$', 'CNY': '¥'
+                };
+                const destSym = currencySymbols[toC] || '';
+                const fromSym = currencySymbols[fromC] || '';
+
+                let rowsHtml = '';
+                providers.forEach((p, idx) => {
+                    const isTop = (idx === 0);
+                    const rowClass = isTop ? 'bg-blue-50/50 font-semibold' : '';
+                    const payoutFormatted = destSym + Math.round(p.payout).toLocaleString();
+                    const feeFormatted = fromSym + p.fee.toFixed(2);
+                    const rateFormatted = '1 ' + fromC + ' = ' + p.rate.toFixed(4) + ' ' + toC;
+
+                    rowsHtml += `
+                        <tr class="hover:bg-slate-50/80 transition-colors ${rowClass}">
+                            <td class="p-4 sm:p-5">
+                                <div class="flex items-center gap-2">
+                                    <span class="font-extrabold text-slate-900">${p.name}</span>
+                                    <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${p.badgeColor}">${p.badge}</span>
+                                </div>
+                            </td>
+                            <td class="p-4 sm:p-5 text-slate-700 text-xs sm:text-sm">${rateFormatted}</td>
+                            <td class="p-4 sm:p-5 text-slate-700 text-xs sm:text-sm">${feeFormatted}</td>
+                            <td class="p-4 sm:p-5 text-slate-900 font-extrabold text-base text-blue-700">${payoutFormatted}</td>
+                            <td class="p-4 sm:p-5 text-slate-600 text-xs">${p.speed}</td>
+                            <td class="p-4 sm:p-5 text-right">
+                                <a href="${p.reviewUrl}" class="inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:text-blue-800 hover:underline">
+                                    Full Guide →
+                                </a>
+                            </td>
+                        </tr>
+                    `;
+                });
+
+                tbody.innerHTML = rowsHtml;
+            }
+
+            if (amountInput) amountInput.addEventListener('input', updateComparison);
+            if (fromSelect) fromSelect.addEventListener('change', updateComparison);
+            if (toSelect) toSelect.addEventListener('change', updateComparison);
+            if (prioritySelect) prioritySelect.addEventListener('change', updateComparison);
+
+            updateComparison();
+        });
+    </script>
+
 </body>
 </html>
