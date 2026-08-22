@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBI LRS TCS Remittance Calculator | Section 206C(1G) Tax Rules 2026</title>
+    <meta name="description" content="Calculate Tax Collected at Source (TCS) on foreign remittances from India under Section 206C(1G). Compare 0%, 0.5%, 5%, and 20% TCS on education, tour, and investments.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Ashish Kumar">
+    <link rel="canonical" href="https://arthcalculator.in/money-transfer/calculators/lrs-tcs-remittance/">
+    <link rel="icon" href="/favicon.png">
+
+    <meta property="og:title" content="RBI LRS TCS Remittance Calculator | Section 206C(1G) Tax Rules 2026">
+    <meta property="og:description" content="Free Indian outward remittance TCS calculator under Section 206C(1G). Compute exact upfront tax deduction, threshold exemptions, and ITR tax credits.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://arthcalculator.in/money-transfer/calculators/lrs-tcs-remittance/">
+    <meta property="og:site_name" content="ArthCalculator">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RBI LRS TCS Remittance Calculator | Section 206C(1G) Tax Rules 2026">
+    <meta name="twitter:description" content="Free Indian outward remittance TCS calculator under Section 206C(1G). Compute exact upfront tax deduction, threshold exemptions, and ITR tax credits.">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebPage","name":"RBI LRS TCS Foreign Remittance Calculator","url":"https://arthcalculator.in/money-transfer/calculators/lrs-tcs-remittance/","description":"Calculate Tax Collected at Source (TCS) on foreign remittances from India under Section 206C(1G). Compare 0%, 0.5%, 5%, and 20% TCS on education, tour, and investments."}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"RBI LRS TCS Foreign Remittance Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Calculate Tax Collected at Source (TCS) on foreign remittances from India under Section 206C(1G). Compare 0%, 0.5%, 5%, and 20% TCS on education, tour, and investments.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://arthcalculator.in/"},{"@type":"ListItem","position":2,"name":"Money Transfer","item":"https://arthcalculator.in/money-transfer/"},{"@type":"ListItem","position":3,"name":"Calculators","item":"https://arthcalculator.in/money-transfer/calculators/"},{"@type":"ListItem","position":4,"name":"RBI LRS TCS Foreign Remittance Calculator","item":"https://arthcalculator.in/money-transfer/calculators/lrs-tcs-remittance/"}]}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is TCS on foreign remittance under Section 206C(1G)?","acceptedAnswer":{"@type":"Answer","text":"TCS is an advance tax collected by authorized dealer banks when an Indian resident remits funds overseas under the RBI Liberalised Remittance Scheme (LRS)."}},{"@type":"Question","name":"Can I claim a refund for 20% TCS paid on foreign investments?","acceptedAnswer":{"@type":"Answer","text":"Yes. TCS is fully refundable or adjustable against your total income tax liability when you file your annual Income Tax Return (ITR)."}},{"@type":"Question","name":"Does the \u20b97 Lakh threshold reset every year?","acceptedAnswer":{"@type":"Answer","text":"Yes. The \u20b97,00,000 exemption limit resets on April 1 at the beginning of each Indian financial year."}},{"@type":"Question","name":"What happens if I remit money through multiple different banks?","acceptedAnswer":{"@type":"Answer","text":"Banks track your cumulative remittances using your PAN through the RBI LRS reporting portal. All remittances across all banks count toward your \u20b97 Lakh threshold."}},{"@type":"Question","name":"Is there TCS on international credit card transactions?","acceptedAnswer":{"@type":"Answer","text":"As per current Ministry of Finance notifications, international credit card spending overseas during foreign travel is currently excluded from LRS and does not attract TCS."}},{"@type":"Question","name":"How do I prove my education remittance is funded by a loan to get 0.5% TCS?","acceptedAnswer":{"@type":"Answer","text":"You must provide your bank with a loan sanction letter and disbursement document from a specified banking or financial institution defined under Section 80E."}},{"@type":"Question","name":"What is the TCS rate if the remitter does not provide a PAN card?","acceptedAnswer":{"@type":"Answer","text":"If the remitter does not furnish a valid PAN, the bank is legally mandated to collect TCS at the maximum rate of 20% regardless of the purpose or threshold."}},{"@type":"Question","name":"Is TCS applicable on business commercial import payments?","acceptedAnswer":{"@type":"Answer","text":"No. Section 206C(1G) applies exclusively to individual remittances under the LRS scheme. Commercial import trade payments do not attract LRS TCS."}}]}
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); transition: all 0.3s ease; }
+        .card-shadow:hover { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); transform: translateY(-2px); }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen">
+
+<div id="navbar"></div>
+
+<header class="bg-white border-b border-slate-200 py-12 sm:py-16 text-center">
+    <div class="max-w-5xl mx-auto px-4">
+        <nav class="flex mb-6 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center" aria-label="Breadcrumb">
+            <ol class="flex list-none p-0 flex-wrap justify-center items-center">
+                <li class="flex items-center"><a href="/" class="hover:text-blue-600 transition-colors">Home</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                <li class="flex items-center"><a href="/money-transfer/" class="hover:text-blue-600 transition-colors">Money Transfer</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                <li class="flex items-center"><a href="/money-transfer/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a><svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                <li class="text-blue-600 font-bold">Lrs Tcs Remittance</li>
+            </ol>
+        </nav>
+        <h1 class="text-3xl sm:text-5xl font-extrabold gradient-text pb-3 leading-tight">RBI LRS TCS Foreign Remittance Calculator</h1>
+        <p class="text-slate-600 mt-2 max-w-3xl mx-auto leading-relaxed text-sm sm:text-base">Under Section 206C(1G) of the Indian Income Tax Act, authorized dealer banks must collect Tax Collected at Source (TCS) on outward remittances sent under the RBI's Liberalised Remittance Scheme (LRS). Use this calculator to determine your exact TCS liability, threshold exemptions, and net cash outflow.</p>
+    </div>
+</header>
+
+<!-- Main Container Layout: Sidebar TOC + Main Content -->
+<div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="flex flex-col lg:flex-row gap-10">
+
+        <!-- Sticky Table of Contents Sidebar (Desktop) -->
+        <aside class="lg:w-64 shrink-0">
+            <div class="sticky top-24 bg-white p-5 rounded-2xl border border-slate-200 card-shadow">
+                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path></svg>
+                    Calculator Index
+                </p>
+                <nav class="space-y-1 text-xs font-medium text-slate-600">
+                    <a href="#calculator" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">1. Calculation Engine</a>
+                    <a href="#waterfall" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">2. Cost Breakdown</a>
+                    <a href="#regulatory-table" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">3. Statutory Rules Table</a>
+                    <a href="#math" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">4. Calculation Logic</a>
+                    <a href="#faq" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">5. FAQs</a>
+                    <a href="#related" class="block py-1.5 px-3 rounded-lg hover:bg-slate-50 hover:text-blue-600 transition-all">6. Related Tools</a>
+                </nav>
+
+                <div class="mt-6 pt-4 border-t border-slate-100">
+                    <a href="/money-transfer/calculators/" class="block text-center text-xs font-bold text-blue-600 bg-blue-50 py-2 rounded-lg hover:bg-blue-100 transition-colors">
+                        ← All Calculators
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Column -->
+        <main class="flex-1 min-w-0 space-y-14">
+            
+
+                <!-- Interactive LRS TCS Calculator -->
+                <section id="calculator" class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <div class="mb-6">
+                        <span class="inline-block bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-2">🧮 Live Calculation Engine</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">LRS TCS Tax Computation</h2>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-1">Select remittance purpose and enter your planned transfer amount in Indian Rupees (INR).</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                        <!-- Inputs -->
+                        <div class="lg:col-span-7 space-y-5">
+                            <div>
+                                <label for="remitPurpose" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Remittance Purpose (LRS Category)</label>
+                                <select id="remitPurpose" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-800 focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all">
+                                    <option value="edu_loan">Education (Funded via Loan from Financial Institution) - 0.5%</option>
+                                    <option value="edu_self">Education (Self-Funded / Living Expenses) - 5.0%</option>
+                                    <option value="medical">Medical Treatment Overseas - 5.0%</option>
+                                    <option value="tour">Overseas Tour Package - 5.0% (Up to ₹7L) / 20.0% (Above ₹7L)</option>
+                                    <option value="other" selected>Investments, Real Estate, Gifts, Maintenance - 20.0%</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="remitAmount" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Total Remittance Amount (₹ INR)</label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-400 font-bold text-sm">₹</span>
+                                    <input type="number" id="remitAmount" value="1000000" min="0" step="10000" class="w-full pl-9 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-800 focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all">
+                                </div>
+                                <span class="text-[11px] text-slate-500 mt-1 block">Default: ₹10,00,000 (₹10 Lakhs)</span>
+                            </div>
+
+                            <div>
+                                <label for="priorRemit" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Prior LRS Remittances in Current Financial Year (₹ INR)</label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-400 font-bold text-sm">₹</span>
+                                    <input type="number" id="priorRemit" value="0" min="0" step="10000" class="w-full pl-9 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-800 focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all">
+                                </div>
+                                <span class="text-[11px] text-slate-500 mt-1 block">TCS ₹7 Lakh exemption applies cumulatively across all bank accounts per FY.</span>
+                            </div>
+                        </div>
+
+                        <!-- Results Output Card -->
+                        <div class="lg:col-span-5 bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-2xl p-6 flex flex-col justify-between shadow-xl">
+                            <div>
+                                <span class="text-xs font-bold text-blue-400 uppercase tracking-wider block mb-1">Total Upfront TCS Deducted</span>
+                                <div class="text-3xl sm:text-4xl font-extrabold text-white mb-4" id="resTcs">₹60,000</div>
+                                <div class="inline-block bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs px-3 py-1 rounded-full font-semibold mb-4" id="resRateBadge">
+                                    Applicable TCS Rate: 20% on excess over ₹7L
+                                </div>
+
+                                <div class="space-y-3 text-xs border-t border-slate-700/80 pt-4">
+                                    <div class="flex justify-between">
+                                        <span class="text-slate-400">Exempt Base Amount:</span>
+                                        <span class="font-bold text-slate-200" id="resExempt">₹7,00,000</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-slate-400">Taxable Remittance Base:</span>
+                                        <span class="font-bold text-slate-200" id="resTaxable">₹3,00,000</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-slate-400">Total Outflow (Principal + TCS):</span>
+                                        <span class="font-bold text-emerald-400" id="resTotalOutflow">₹10,60,000</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 pt-4 border-t border-slate-700/80 text-[11px] text-slate-400 leading-relaxed">
+                                💡 <strong>ITR Note:</strong> TCS is not a permanent tax expense. It reflects in Form 26AS / AIS and can be offset against your annual income tax liability or claimed as a refund.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+            <!-- Visual Cost Breakdown Section -->
+            <section id="waterfall" class="scroll-mt-28 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 card-shadow">
+                <div class="mb-5">
+                    <span class="inline-block bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-2">📊 Cost Anatomy</span>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900">
+                        The 3 Components of LRS Remittance Cost
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-1">
+                        When executing an international wire transfer from India, your total cash outflow combines foreign exchange pricing, bank wire charges, and statutory tax withholding:
+                    </p>
+                </div>
+
+                <!-- 3 Pillars Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <div class="bg-blue-50/60 border border-blue-100 p-4 rounded-2xl">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-extrabold text-slate-900 text-sm">1. Upfront Bank Wire Fee</span>
+                            <span class="text-xs font-bold text-blue-700 bg-blue-100 px-2 py-0.5 rounded-md">Visible</span>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Flat outbound TT wire fee charged by authorized dealer banks (typically ₹500 to ₹1,500 + GST).
+                        </p>
+                    </div>
+
+                    <div class="bg-amber-50/60 border border-amber-100 p-4 rounded-2xl">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-extrabold text-slate-900 text-sm">2. FX Currency Spread</span>
+                            <span class="text-xs font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded-md">Hidden</span>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            The margin added by your bank above the wholesale interbank rate (typically 0.8% to 2.0%).
+                        </p>
+                    </div>
+
+                    <div class="bg-rose-50/60 border border-rose-100 p-4 rounded-2xl">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-extrabold text-slate-900 text-sm">3. Statutory TCS Deducted</span>
+                            <span class="text-xs font-bold text-rose-700 bg-rose-100 px-2 py-0.5 rounded-md">Tax Credit</span>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Tax Collected at Source (0%, 0.5%, 5%, or 20%) remitted to Income Tax Dept under your PAN.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Visual Comparison Formula Box -->
+                <div class="p-4 bg-slate-900 text-white rounded-2xl text-xs sm:text-sm font-mono flex flex-col sm:flex-row items-center justify-between gap-3">
+                    <span>Total Cash Outflow = Remittance Principal + Upfront Bank Fees + (Taxable Base × TCS Rate)</span>
+                    <span class="text-emerald-400 font-bold bg-slate-800 px-3 py-1 rounded-xl text-xs font-sans">TCS is fully adjustable against your annual income tax liability during ITR filing.</span>
+                </div>
+            </section>
+
+            <!-- Statutory Rules Table -->
+            <section id="regulatory-table" class="scroll-mt-28 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 card-shadow">
+                <div class="mb-5">
+                    <span class="inline-block bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-2">📊 Statutory Regulatory Rules</span>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900">
+                        Tax Compliance & Regulatory Benchmark
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-1">
+                        Official tax and exchange control parameters governing foreign capital remittances:
+                    </p>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse min-w-[650px]">
+                        <thead>
+                            <tr class="bg-slate-50 border-b-2 border-slate-200 text-xs font-extrabold text-slate-700 uppercase tracking-wider">
+<th class="p-4">Remittance Purpose</th><th class="p-4">Threshold Limit</th><th class="p-4">TCS Rate up to ₹7 Lakhs</th><th class="p-4">TCS Rate above ₹7 Lakhs</th><th class="p-4">PAN Mandate</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-xs sm:text-sm divide-y divide-slate-100">
+
+                                        <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                            <td class="p-4 font-bold text-slate-900">Education (Loan from Financial Inst.)</td><td class="p-4 text-emerald-700 font-bold">₹7,00,000 per FY</td><td class="p-4 text-slate-700">NIL (0%)</td><td class="p-4 text-slate-700">0.5%</td><td class="p-4 text-slate-700">Mandatory (20% if No PAN)</td>
+                                        </tr>
+
+                                        <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                            <td class="p-4 font-bold text-slate-900">Education (Self-Funded / Savings)</td><td class="p-4 text-emerald-700 font-bold">₹7,00,000 per FY</td><td class="p-4 text-slate-700">NIL (0%)</td><td class="p-4 text-slate-700">5.0%</td><td class="p-4 text-slate-700">Mandatory (20% if No PAN)</td>
+                                        </tr>
+
+                                        <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                            <td class="p-4 font-bold text-slate-900">Medical Treatment Abroad</td><td class="p-4 text-emerald-700 font-bold">₹7,00,000 per FY</td><td class="p-4 text-slate-700">NIL (0%)</td><td class="p-4 text-slate-700">5.0%</td><td class="p-4 text-slate-700">Mandatory (20% if No PAN)</td>
+                                        </tr>
+
+                                        <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                            <td class="p-4 font-bold text-slate-900">Overseas Tour Program Package</td><td class="p-4 text-emerald-700 font-bold">No Exemption Threshold</td><td class="p-4 text-slate-700">5.0%</td><td class="p-4 text-slate-700">20.0%</td><td class="p-4 text-slate-700">Mandatory</td>
+                                        </tr>
+
+                                        <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                            <td class="p-4 font-bold text-slate-900">Investments, Real Estate, Gifts, Others</td><td class="p-4 text-emerald-700 font-bold">₹7,00,000 per FY</td><td class="p-4 text-slate-700">NIL (0%)</td><td class="p-4 text-slate-700">20.0%</td><td class="p-4 text-slate-700">Mandatory (20% if No PAN)</td>
+                                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <div id="math" class="space-y-12">
+
+                <!-- LRS TCS Rate Matrix under Section 206C(1G) -->
+                <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">LRS TCS Rate Matrix under Section 206C(1G)</h2>
+                    <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-4">
+                        <p>The Finance Act established clear tax brackets for outward remittances under the Liberalised Remittance Scheme: (1) Education funded by an education loan from an approved financial institution: 0.5% on amounts exceeding ₹7 Lakhs; (2) Self-funded Education or Overseas Medical Treatment: 5% on amounts exceeding ₹7 Lakhs; (3) Overseas Tour Packages: 5% on amounts up to ₹7 Lakhs, and 20% on amounts exceeding ₹7 Lakhs; (4) Any other purpose (Foreign Stocks, Real Estate, Family Maintenance, Gifts): 20% on amounts exceeding ₹7 Lakhs.</p>
+                    </div>
+                </section>
+
+                <!-- How the ₹7 Lakh Cumulative Exemption Operates -->
+                <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">How the ₹7 Lakh Cumulative Exemption Operates</h2>
+                    <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-4">
+                        <p>The ₹7,00,000 threshold applies on a cumulative basis across all remittances made in a single financial year (April 1 to March 31). If you remit ₹4 Lakhs via HDFC Bank in May and ₹5 Lakhs via ICICI Bank in August, the second bank will verify your PAN history and apply TCS on the ₹2 Lakh excess above ₹7 Lakhs.</p>
+                    </div>
+                </section>
+
+                <!-- Reclaiming TCS in Your Annual Income Tax Return (ITR) -->
+                <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">Reclaiming TCS in Your Annual Income Tax Return (ITR)</h2>
+                    <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-4">
+                        <p>TCS is not an additional final tax burden or expense. When your bank collects TCS, it deposits the tax directly with the Income Tax Department linked to your PAN. The credit reflects in your Form 26AS and AIS (Annual Information Statement). When filing your ITR, you can adjust the full TCS amount against your total income tax liability or receive a direct bank refund with interest.</p>
+                    </div>
+                </section>
+
+            </div>
+
+            
+                <!-- Detailed Statutory Step-by-Step Guide to Claiming TCS Refund -->
+                <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">Step-by-Step Guide: How to Claim TCS Refund in Your ITR</h2>
+                    <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-4 text-sm sm:text-base">
+                        <p>Because TCS collected under Section 206C(1G) is an advance withholding tax rather than a final non-refundable fee, remitter taxpayers can reclaim or adjust the entire amount during annual tax assessment:</p>
+                        <ol class="list-decimal pl-5 space-y-2">
+                            <li><strong>Collect Bank TCS Certificate (Form 27D):</strong> Within 15 days after the end of the fiscal quarter in which remittance occurred, your remitting bank issues Form 27D certifying the exact TCS collected and deposited under your PAN.</li>
+                            <li><strong>Verify Form 26AS & Annual Information Statement (AIS):</strong> Log in to the Income Tax e-Filing portal (incometax.gov.in) and verify that the TCS credit appears under Schedule TCS in Form 26AS and AIS under the correct tax year.</li>
+                            <li><strong>Offset Against Advance Tax or Self-Assessment Tax:</strong> If you owe income tax on domestic salary, capital gains, or business income, deduct the entire TCS amount from your total tax liability, reducing your direct cash tax outflow.</li>
+                            <li><strong>Claim Direct Bank Refund with Interest:</strong> If your total tax liability is less than the TCS deducted (e.g. for students or dependents with zero taxable income), filing your ITR generates a direct electronic refund into your pre-validated bank account with 0.5% monthly interest under Section 244A.</li>
+                            <li><strong>Adjust Employer TDS via Form 12BB:</strong> Salaried employees can declare TCS collected on overseas remittances to their HR payroll department via Form 12BB, enabling employers to lower monthly salary TDS deductions.</li>
+                        </ol>
+                    </div>
+                </section>
+    
+
+            <!-- FAQ Section -->
+            <section id="faq" class="scroll-mt-28 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Frequently Asked Questions</h2>
+                <div class="space-y-3">
+
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                <span>What is TCS on foreign remittance under Section 206C(1G)?</span>
+                                <svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                TCS is an advance tax collected by authorized dealer banks when an Indian resident remits funds overseas under the RBI Liberalised Remittance Scheme (LRS).
+                            </div>
+                        </details>
+
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                <span>Can I claim a refund for 20% TCS paid on foreign investments?</span>
+                                <svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                Yes. TCS is fully refundable or adjustable against your total income tax liability when you file your annual Income Tax Return (ITR).
+                            </div>
+                        </details>
+
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                <span>Does the ₹7 Lakh threshold reset every year?</span>
+                                <svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                Yes. The ₹7,00,000 exemption limit resets on April 1 at the beginning of each Indian financial year.
+                            </div>
+                        </details>
+
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                <span>What happens if I remit money through multiple different banks?</span>
+                                <svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                Banks track your cumulative remittances using your PAN through the RBI LRS reporting portal. All remittances across all banks count toward your ₹7 Lakh threshold.
+                            </div>
+                        </details>
+
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                <span>Is there TCS on international credit card transactions?</span>
+                                <svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                As per current Ministry of Finance notifications, international credit card spending overseas during foreign travel is currently excluded from LRS and does not attract TCS.
+                            </div>
+                        </details>
+
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                <span>How do I prove my education remittance is funded by a loan to get 0.5% TCS?</span>
+                                <svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                You must provide your bank with a loan sanction letter and disbursement document from a specified banking or financial institution defined under Section 80E.
+                            </div>
+                        </details>
+
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                <span>What is the TCS rate if the remitter does not provide a PAN card?</span>
+                                <svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                If the remitter does not furnish a valid PAN, the bank is legally mandated to collect TCS at the maximum rate of 20% regardless of the purpose or threshold.
+                            </div>
+                        </details>
+
+                        <details class="group border border-slate-200 rounded-xl overflow-hidden bg-white">
+                            <summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-slate-800 text-sm">
+                                <span>Is TCS applicable on business commercial import payments?</span>
+                                <svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="p-4 pt-0 text-slate-600 text-xs border-t border-slate-100 mt-2 leading-relaxed">
+                                No. Section 206C(1G) applies exclusively to individual remittances under the LRS scheme. Commercial import trade payments do not attract LRS TCS.
+                            </div>
+                        </details>
+
+                </div>
+            </section>
+
+            <!-- Related Resources -->
+            <section id="related" class="bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-200 text-center">
+                <h2 class="text-xl sm:text-2xl font-bold text-slate-900 mb-2">Explore Related Calculators & Guides</h2>
+                <p class="text-xs sm:text-sm text-slate-600 mb-6 max-w-xl mx-auto">Calculate international wire costs, evaluate foreign exchange spreads, and read independent reviews.</p>
+                <div class="flex flex-wrap justify-center gap-3 text-xs font-semibold">
+                    <a href="/money-transfer/calculators/total-transfer-cost/" class="bg-white px-4 py-2 rounded-xl border border-slate-200 hover:border-blue-300 hover:text-blue-600 transition-all shadow-2xs">Total Cost Calculator →</a>
+                    <a href="/money-transfer/calculators/international-wire-cost/" class="bg-white px-4 py-2 rounded-xl border border-slate-200 hover:border-blue-300 hover:text-blue-600 transition-all shadow-2xs">SWIFT Wire Calculator →</a>
+                    <a href="/money-transfer/country-guides/sending-money-to-nre-vs-nro-account/" class="bg-white px-4 py-2 rounded-xl border border-slate-200 hover:border-blue-300 hover:text-blue-600 transition-all shadow-2xs">NRE vs NRO Guide →</a>
+                    <a href="/money-transfer/calculators/" class="bg-white px-4 py-2 rounded-xl border border-slate-200 hover:border-blue-300 hover:text-blue-600 transition-all shadow-2xs">All Calculators →</a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</div>
+
+<div id="footer"></div>
+
+<script>
+
+        function calculateTCS() {
+            const purpose = document.getElementById('remitPurpose').value;
+            const amount = parseFloat(document.getElementById('remitAmount').value) || 0;
+            const prior = parseFloat(document.getElementById('priorRemit').value) || 0;
+
+            const THRESHOLD = 700000; // ₹7 Lakhs
+            const totalCumulative = prior + amount;
+
+            let tcs = 0;
+            let taxableBase = 0;
+            let exemptBase = 0;
+            let rateText = '';
+
+            if (purpose === 'tour') {
+                if (totalCumulative <= THRESHOLD) {
+                    tcs = amount * 0.05;
+                    rateText = '5% on total tour package (Under ₹7L)';
+                    exemptBase = 0;
+                    taxableBase = amount;
+                } else if (prior >= THRESHOLD) {
+                    tcs = amount * 0.20;
+                    rateText = '20% (Threshold of ₹7L already exhausted)';
+                    exemptBase = 0;
+                    taxableBase = amount;
+                } else {
+                    const under7L = THRESHOLD - prior;
+                    const over7L = amount - under7L;
+                    tcs = (under7L * 0.05) + (over7L * 0.20);
+                    rateText = '5% on first ₹' + under7L.toLocaleString('en-IN') + ' + 20% on remaining ₹' + over7L.toLocaleString('en-IN');
+                    exemptBase = 0;
+                    taxableBase = amount;
+                }
+            } else {
+                if (totalCumulative <= THRESHOLD) {
+                    tcs = 0;
+                    exemptBase = amount;
+                    taxableBase = 0;
+                    rateText = '0% (Within ₹7 Lakh annual exempt threshold)';
+                } else if (prior >= THRESHOLD) {
+                    exemptBase = 0;
+                    taxableBase = amount;
+                    if (purpose === 'edu_loan') {
+                        tcs = amount * 0.005;
+                        rateText = '0.5% (Education loan from financial institution)';
+                    } else if (purpose === 'edu_self' || purpose === 'medical') {
+                        tcs = amount * 0.05;
+                        rateText = '5.0% (Education / Medical self-funded)';
+                    } else {
+                        tcs = amount * 0.20;
+                        rateText = '20.0% (Investments, gifts, maintenance, other)';
+                    }
+                } else {
+                    exemptBase = THRESHOLD - prior;
+                    taxableBase = amount - exemptBase;
+                    if (purpose === 'edu_loan') {
+                        tcs = taxableBase * 0.005;
+                        rateText = '0.5% on excess over ₹7 Lakhs';
+                    } else if (purpose === 'edu_self' || purpose === 'medical') {
+                        tcs = taxableBase * 0.05;
+                        rateText = '5.0% on excess over ₹7 Lakhs';
+                    } else {
+                        tcs = taxableBase * 0.20;
+                        rateText = '20.0% on excess over ₹7 Lakhs';
+                    }
+                }
+            }
+
+            const totalOutflow = amount + tcs;
+
+            document.getElementById('resTcs').innerText = '₹' + Math.round(tcs).toLocaleString('en-IN');
+            document.getElementById('resExempt').innerText = '₹' + Math.round(exemptBase).toLocaleString('en-IN');
+            document.getElementById('resTaxable').innerText = '₹' + Math.round(taxableBase).toLocaleString('en-IN');
+            document.getElementById('resTotalOutflow').innerText = '₹' + Math.round(totalOutflow).toLocaleString('en-IN');
+            document.getElementById('resRateBadge').innerText = 'Applicable Rule: ' + rateText;
+        }
+
+        document.getElementById('remitPurpose').addEventListener('change', calculateTCS);
+        document.getElementById('remitAmount').addEventListener('input', calculateTCS);
+        document.getElementById('priorRemit').addEventListener('input', calculateTCS);
+        document.addEventListener('DOMContentLoaded', calculateTCS);
+
+</script>
+
+<script>
+    fetch("/navbar.html").then(r => r.text()).then(html => {
+        document.getElementById("navbar").innerHTML = html;
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+        }
+    });
+    fetch("/footer.html").then(r => r.text()).then(html => {
+        document.getElementById("footer").innerHTML = html;
+    });
+</script>
+</body>
+</html>
