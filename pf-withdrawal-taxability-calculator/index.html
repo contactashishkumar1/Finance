@@ -25,6 +25,7 @@
     <meta property="og:description" content="Are you withdrawing your PF before 5 years? Calculate your exact tax liability and TDS deduction instantly.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://arthcalculator.in/pf-withdrawal-taxability-calculator/">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
     <meta property="og:site_name" content="ArthCalculator">
     <meta name="author" content="ArthCalculator">
     <meta name="last-modified" content="2026-08-01">
@@ -703,6 +704,17 @@
         window.addEventListener('DOMContentLoaded', () => {
             document.getElementById('calcBtn').click();
         });
+    </script>
+    <script>
+
+        // Fetch Navbar and Footer
+        fetch("/navbar.html").then(res => res.text()).then(data => {
+            document.getElementById("navbar").innerHTML = data;
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
     </script>
 </body>
 </html>
