@@ -9,5 +9,17 @@
     textarea {
       font-size: 16px !important;
     }
+
+    header.bg-white {
+      padding-top: 1.25rem !important;
+      padding-bottom: 1.25rem !important;
+      margin-bottom: 1.25rem !important;
+    }
+
+    header.bg-white h1 {
+      font-size: 1.625rem !important;
+      line-height: 2rem !important;
+      margin-bottom: 0.5rem !important;
+    }
   }
 }

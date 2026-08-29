@@ -2414,10 +2414,149 @@
         `;
     }
 
+    // Issue D: Mobile Floating Quick-Result Pill (< 768px) - Safety-First Scoped Detection
+    function initMobileFloatingResultPill() {
+        if (typeof window === "undefined" || window.innerWidth >= 768) return;
+        if (!("IntersectionObserver" in window)) return;
+
+        const main = document.querySelector("main");
+        if (!main) return;
+
+        // 1. Explicit verified primary financial result IDs across ArthCalculator
+        const explicitResultSelectors = [
+            "#maturityValue", "#taxLabel", "#profitVal", "#emiValDisp", "#netTax",
+            "#taxPayable", "#profitDisplay", "#cibilScore", "#costOfDebt", "#capitalGainsTax",
+            "#cagrValue", "#resTax", "#netProfitDisp", "#adaTax", "#beUnitsDisp",
+            "#targetSavingsDisplay", "#winnerText", "#resTaxSaved", "#resMaxProfit",
+            "#resTaxableGain", "#totalFundValue", "#roiDisp", "#ratioResultDisplay",
+            "#resultAmount", "#resEffectiveApr", "#resDisallowedLoss", "#resAnnualizedYield",
+            "#futureCostDisplay", "#profitResultDisplay", "#resNetSavings", "#resRupeeValue",
+            "#netBenefitDisplay", "#burnRateDisplay", "#runwayDisplay", "#monthlyEmi",
+            "#emiValue", "#totalMaturity", "#finalCorpus", "#netInHandSalary", "#inHandSalary",
+            "#totalTaxPayable", "#taxLiability", "#estimatedTax", "#totalInterest",
+            "#wealthGained", "#resTotalIncome", "#taxPayableDisp", "#emiDisp",
+            "#totalInterestDisp", "#beUnits", "#cagrDisp", "#sipMaturity", "#fdMaturity",
+            "#rdMaturity", "#ppfMaturity", "#ssyMaturity", "#npsCorpus", "#gratuityAmount",
+            "#gratuityValue", "#exemptHraDisp", "#taxableHraDisp", "#taxSavedAmt",
+            "#mainResultVal", "#resMinIncome", "#resFinalDeclare",
+            "#hraExemption", "#taxSavedVal", "#resNetBenefit", "#resAnnualYield", "#resScore",
+            "#resNetCost", "#resBreakEven", "#resMargin", "#resNetProfit", "#resTotalReturn"
+        ];
+
+        let valueElem = null;
+
+        // Priority 1: Check explicit verified IDs inside <main>
+        for (let i = 0; i < explicitResultSelectors.length; i++) {
+            const el = main.querySelector(explicitResultSelectors[i]);
+            if (el && el.tagName !== "H1" && el.tagName !== "INPUT" && el.tagName !== "SELECT" && el.tagName !== "BUTTON") {
+                valueElem = el;
+                break;
+            }
+        }
+
+        // Priority 2: Scoped pattern check inside <main> (excluding header, navigation, and inputs)
+        if (!valueElem) {
+            const candidate = main.querySelector("[id^='res']:not(input):not(button):not(select), [id$='Disp']:not(input):not(button):not(select), [id$='Display']:not(input):not(button):not(select), [id$='Value']:not(input):not(button):not(select), [id$='Tax']:not(input):not(button):not(select), [id$='Profit']:not(input):not(button):not(select), [id$='Maturity']:not(input):not(button):not(select)");
+            if (candidate && candidate.tagName !== "H1") {
+                valueElem = candidate;
+            }
+        }
+
+        // Safety-First Rule: If no verified result element found, gracefully exit (do not display wrong pill)
+        if (!valueElem) return;
+
+        // Guarantee element is never inside a header or navigation
+        if (valueElem.closest("header") || valueElem.closest("nav") || valueElem.tagName === "H1") return;
+
+        // 2. Derive parent result card container strictly inside <main>
+        const resultCard = main.querySelector("#resultCard, #resultsContainer, #calculatorResults, [id*='result-card'], [id*='results-card']") || 
+                           valueElem.closest("#resultCard, #resultsContainer, .card-shadow, .bg-white.p-6, .bg-white.p-8, .bg-slate-900.p-6, .bg-slate-900.p-8, .rounded-2xl, .rounded-xl") || 
+                           valueElem.parentElement;
+
+        if (!resultCard || resultCard.closest("header") || resultCard.closest("nav")) return;
+
+        // 3. Extract or derive label safely from result container
+        let cleanLabel = "Result";
+        const labelElem = resultCard.querySelector("h2, h3, p.uppercase, [class*='uppercase']");
+        if (labelElem && labelElem.tagName !== "H1") {
+            const rawLabel = labelElem.textContent.trim();
+            if (rawLabel && rawLabel.length <= 25) {
+                cleanLabel = rawLabel;
+            } else if (rawLabel && rawLabel.length > 25) {
+                cleanLabel = rawLabel.substring(0, 22) + "…";
+            }
+        }
+
+        // Create mobile floating pill container
+        const pill = document.createElement("div");
+        pill.id = "mobileQuickResultPill";
+        pill.className = "fixed bottom-4 left-1/2 -translate-x-1/2 z-40 bg-slate-900/95 backdrop-blur text-white px-4 py-2 rounded-full shadow-2xl border border-slate-700/60 flex items-center gap-2.5 max-w-[92vw] transition-all duration-300 transform translate-y-12 opacity-0 pointer-events-none text-xs md:hidden";
+        pill.setAttribute("aria-live", "polite");
+        pill.innerHTML = `
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+            <span id="mobilePillLabel" class="text-slate-400 font-medium truncate max-w-[120px]">${cleanLabel}:</span>
+            <span id="mobilePillValue" class="font-bold text-white tracking-tight"></span>
+            <button type="button" id="mobilePillScrollBtn" class="ml-1 pl-2 border-l border-slate-700 text-blue-400 font-semibold hover:text-blue-300 flex items-center gap-0.5 shrink-0">View ↓</button>
+        `;
+        document.body.appendChild(pill);
+
+        const pillValue = pill.querySelector("#mobilePillValue");
+        const scrollBtn = pill.querySelector("#mobilePillScrollBtn");
+
+        function updatePillValue() {
+            if (valueElem && pillValue) {
+                const currentVal = valueElem.textContent.trim();
+                if (currentVal && currentVal.length <= 35) {
+                    pillValue.textContent = currentVal;
+                }
+            }
+        }
+        updatePillValue();
+
+        // MutationObserver to sync with real-time recalculations
+        const observer = new MutationObserver(updatePillValue);
+        observer.observe(valueElem, { childList: true, characterData: true, subtree: true });
+
+        // IntersectionObserver to show/hide pill based on result card viewport position
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    pill.classList.add("translate-y-12", "opacity-0", "pointer-events-none");
+                    pill.classList.remove("translate-y-0", "opacity-100", "pointer-events-auto");
+                } else {
+                    // Only show if the result card is below viewport (user is at top editing inputs)
+                    const rect = entry.boundingClientRect;
+                    if (rect.top > (window.innerHeight || document.documentElement.clientHeight)) {
+                        updatePillValue();
+                        pill.classList.remove("translate-y-12", "opacity-0", "pointer-events-none");
+                        pill.classList.add("translate-y-0", "opacity-100", "pointer-events-auto");
+                    } else {
+                        pill.classList.add("translate-y-12", "opacity-0", "pointer-events-none");
+                        pill.classList.remove("translate-y-0", "opacity-100", "pointer-events-auto");
+                    }
+                }
+            });
+        }, { threshold: 0.05 });
+
+        io.observe(resultCard);
+
+        // Smooth scroll to result card on tap
+        function scrollToResult() {
+            resultCard.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+        pill.addEventListener("click", scrollToResult);
+        if (scrollBtn) scrollBtn.addEventListener("click", (e) => { e.stopPropagation(); scrollToResult(); });
+    }
+
     // Direct lifecycle initialization
     if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", injectMasterLinkingHub);
+        document.addEventListener("DOMContentLoaded", () => {
+            injectMasterLinkingHub();
+            initMobileFloatingResultPill();
+        });
     } else {
         injectMasterLinkingHub();
+        initMobileFloatingResultPill();
     }
 })();
+
