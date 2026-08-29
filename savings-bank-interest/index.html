@@ -235,7 +235,7 @@
                             <label class="font-semibold text-slate-700">Average Daily Balance</label>
                             <div class="relative">
                                 <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
-                                <input type="number" id="balanceInput" value="100000" min="1000" step="1000" class="w-32 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                                <input type="number" inputmode="numeric" id="balanceInput" value="100000" min="1000" step="1000" class="w-32 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
                             </div>
                         </div>
                         <input type="range" id="balanceRange" min="1000" max="1000000" step="1000" value="100000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
@@ -246,7 +246,7 @@
                         <div class="flex justify-between mb-2">
                             <label class="font-semibold text-slate-700">Bank Interest Rate (%)</label>
                             <div class="relative">
-                                <input type="number" id="rateInput" value="2.7" min="2" max="8" step="0.1" class="w-24 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-7 font-bold">
+                                <input type="number" inputmode="decimal" id="rateInput" value="2.7" min="2" max="8" step="0.1" class="w-24 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-7 font-bold">
                                 <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">%</span>
                             </div>
                         </div>
@@ -259,7 +259,7 @@
                         <div class="flex justify-between mb-2">
                             <label class="font-semibold text-slate-700">Duration (Months)</label>
                             <div class="relative">
-                                <input type="number" id="monthsInput" value="12" min="1" max="120" step="1" class="w-24 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-10 font-bold">
+                                <input type="number" inputmode="numeric" id="monthsInput" value="12" min="1" max="120" step="1" class="w-24 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-10 font-bold">
                                 <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium text-xs">Mths</span>
                             </div>
                         </div>

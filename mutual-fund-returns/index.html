@@ -250,7 +250,7 @@
                     <div class="mb-8">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Monthly SIP Amount (₹)</label>
-                            <input type="number" id="monthlyInput" value="10000" min="500" step="500" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                            <input type="number" inputmode="numeric" id="monthlyInput" value="10000" min="500" step="500" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                         </div>
                         <input type="range" id="monthlyRange" min="500" max="1000000" step="500" value="10000" class="w-full py-2 cursor-pointer">
                     </div>
@@ -259,7 +259,7 @@
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Expected Return Rate (% p.a)</label>
                             <div class="relative w-full sm:w-28">
-                                <input type="number" id="rateInput" value="12" step="0.1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <input type="number" inputmode="decimal" id="rateInput" value="12" step="0.1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                                 <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">%</span>
                             </div>
                         </div>
@@ -270,7 +270,7 @@
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Time Period (Years)</label>
                             <div class="relative w-full sm:w-28">
-                                <input type="number" id="yearsInput" value="10" min="1" max="40" step="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <input type="number" inputmode="numeric" id="yearsInput" value="10" min="1" max="40" step="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                                 <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">Yr</span>
                             </div>
                         </div>

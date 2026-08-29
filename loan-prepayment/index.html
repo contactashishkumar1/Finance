@@ -201,7 +201,7 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600">Loan Amount (₹)</label>
-                            <input type="number" id="loanInput" value="5000000" step="50000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="numeric" id="loanInput" value="5000000" step="50000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="loanRange" min="100000" max="50000000" step="100000" value="5000000" class="w-full">
                     </div>
@@ -210,14 +210,14 @@
                         <div>
                             <div class="flex justify-between items-center mb-3">
                                 <label class="text-xs font-medium text-slate-600">Interest Rate (%)</label>
-                                <input type="number" id="rateInput" value="8.5" step="0.1" class="w-16 px-2 py-1.5 border rounded-lg text-right font-bold text-xs focus:ring-2 focus:ring-blue-500">
+                                <input type="number" inputmode="decimal" id="rateInput" value="8.5" step="0.1" class="w-16 px-2 py-1.5 border rounded-lg text-right font-bold text-xs focus:ring-2 focus:ring-blue-500">
                             </div>
                             <input type="range" id="rateRange" min="5" max="20" step="0.1" value="8.5" class="w-full">
                         </div>
                         <div>
                             <div class="flex justify-between items-center mb-3">
                                 <label class="text-xs font-medium text-slate-600">Tenure (Years)</label>
-                                <input type="number" id="yearsInput" value="20" step="1" class="w-16 px-2 py-1.5 border rounded-lg text-right font-bold text-xs focus:ring-2 focus:ring-blue-500">
+                                <input type="number" inputmode="numeric" id="yearsInput" value="20" step="1" class="w-16 px-2 py-1.5 border rounded-lg text-right font-bold text-xs focus:ring-2 focus:ring-blue-500">
                             </div>
                             <input type="range" id="yearsRange" min="1" max="30" step="1" value="20" class="w-full">
                         </div>
@@ -231,7 +231,7 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600">One-time Prepayment (₹)</label>
-                            <input type="number" id="prepayInput" value="500000" step="10000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="numeric" id="prepayInput" value="500000" step="10000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="prepayRange" min="10000" max="10000000" step="10000" value="500000" class="w-full">
                     </div>
@@ -239,7 +239,7 @@
                     <div class="mb-6">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600">Month of Prepayment</label>
-                            <input type="number" id="prepayMonthInput" value="12" step="1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="numeric" id="prepayMonthInput" value="12" step="1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="prepayMonthRange" min="1" max="360" step="1" value="12" class="w-full">
                     </div>

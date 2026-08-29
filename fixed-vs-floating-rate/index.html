@@ -212,7 +212,7 @@
                     <div class="mb-8">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Loan Amount (₹)</label>
-                            <input type="number" id="loanInput" value="5000000" min="100000" step="50000" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                            <input type="number" inputmode="numeric" id="loanInput" value="5000000" min="100000" step="50000" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                         </div>
                         <input type="range" id="loanRange" min="100000" max="20000000" step="100000" value="5000000" class="w-full py-2 cursor-pointer">
                     </div>
@@ -221,7 +221,7 @@
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Tenure (Years)</label>
                             <div class="relative w-full sm:w-28">
-                                <input type="number" id="tenureInput" value="20" step="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <input type="number" inputmode="numeric" id="tenureInput" value="20" step="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                                 <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">Yr</span>
                             </div>
                         </div>
@@ -232,7 +232,7 @@
                         <h3 class="text-xs font-bold text-slate-500 uppercase mb-4">Fixed Rate Scenario</h3>
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                             <label class="text-sm font-medium text-slate-600">Fixed Rate (% p.a.)</label>
-                            <input type="number" id="fixedRateInput" value="9.5" step="0.1" class="w-full sm:w-24 px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500">
+                            <input type="number" inputmode="decimal" id="fixedRateInput" value="9.5" step="0.1" class="w-full sm:w-24 px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500">
                         </div>
                     </div>
 
@@ -241,15 +241,15 @@
                         <div class="space-y-4">
                             <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                                 <label class="text-sm font-medium text-slate-600">Start Rate (% p.a.)</label>
-                                <input type="number" id="floatStartInput" value="8.5" step="0.1" class="w-full sm:w-24 px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500">
+                                <input type="number" inputmode="decimal" id="floatStartInput" value="8.5" step="0.1" class="w-full sm:w-24 px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500">
                             </div>
                             <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                                 <label class="text-sm font-medium text-slate-600">Yearly Change (%)</label>
-                                <input type="number" id="rateChangeInput" value="0.25" step="0.05" class="w-full sm:w-24 px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500">
+                                <input type="number" inputmode="decimal" id="rateChangeInput" value="0.25" step="0.05" class="w-full sm:w-24 px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500">
                             </div>
                             <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                                 <label class="text-sm font-medium text-slate-600">Change Every (Yrs)</label>
-                                <input type="number" id="changeFreqInput" value="2" step="1" class="w-full sm:w-24 px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500">
+                                <input type="number" inputmode="numeric" id="changeFreqInput" value="2" step="1" class="w-full sm:w-24 px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500">
                             </div>
                         </div>
                     </div>

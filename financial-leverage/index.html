@@ -213,7 +213,7 @@
                     <div class="mb-8">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">EBIT (Operating Profit ₹)</label>
-                            <input type="number" id="ebitInput" value="500000" min="0" step="10000" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                            <input type="number" inputmode="numeric" id="ebitInput" value="500000" min="0" step="10000" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                         </div>
                         <input type="range" id="ebitRange" min="0" max="10000000" step="10000" value="500000" class="w-full py-2 cursor-pointer">
                     </div>
@@ -221,7 +221,7 @@
                     <div class="mb-8">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Interest Expense (₹)</label>
-                            <input type="number" id="interestInput" value="100000" min="0" step="5000" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                            <input type="number" inputmode="decimal" id="interestInput" value="100000" min="0" step="5000" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                         </div>
                         <input type="range" id="interestRange" min="0" max="5000000" step="5000" value="100000" class="w-full py-2 cursor-pointer">
                     </div>
@@ -229,11 +229,11 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                         <div>
                             <label class="text-xs font-medium text-slate-500 uppercase mb-2 block">Tax Rate (%)</label>
-                            <input type="number" id="taxInput" value="25" min="0" max="100" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500">
+                            <input type="number" inputmode="numeric" id="taxInput" value="25" min="0" max="100" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500">
                         </div>
                         <div>
                             <label class="text-xs font-medium text-slate-500 uppercase mb-2 block text-pretty">Number of Shares</label>
-                            <input type="number" id="sharesInput" value="10000" min="0" step="100" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500">
+                            <input type="number" inputmode="numeric" id="sharesInput" value="10000" min="0" step="100" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500">
                         </div>
                     </div>
 

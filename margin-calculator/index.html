@@ -185,22 +185,22 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                         <div>
                             <label for="costInp" class="text-xs font-bold text-slate-500 uppercase block mb-2 tracking-tight">Cost Price (₹)</label>
-                            <input type="number" id="costInp" value="500" step="0.01" min="0" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
+                            <input type="number" inputmode="decimal" id="costInp" value="500" step="0.01" min="0" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
                         </div>
                         <div>
                             <label for="sellInp" class="text-xs font-bold text-slate-500 uppercase block mb-2 tracking-tight text-pretty">Selling Price (₹)</label>
-                            <input type="number" id="sellInp" value="800" step="0.01" min="0" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
+                            <input type="number" inputmode="decimal" id="sellInp" value="800" step="0.01" min="0" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
                         </div>
                     </div>
 
                     <div class="mb-6">
                         <label for="unitsInp" class="text-xs font-bold text-slate-500 uppercase block mb-2 tracking-tight">Units Sold (Optional)</label>
-                        <input type="number" id="unitsInp" value="1" min="0" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
+                        <input type="number" inputmode="numeric" id="unitsInp" value="1" min="0" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
                     </div>
 
                     <div class="mb-8">
                         <label for="expenseInp" class="text-xs font-bold text-slate-500 uppercase block mb-2 tracking-tight">Operating Expenses (₹)</label>
-                        <input type="number" id="expenseInp" value="0" min="0" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
+                        <input type="number" inputmode="decimal" id="expenseInp" value="0" min="0" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
                         <p class="text-[9px] text-slate-400 mt-2 italic">Salary, rent, marketing etc. (used for Net Margin calculation).</p>
                     </div>
 

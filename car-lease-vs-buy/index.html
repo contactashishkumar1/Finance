@@ -177,7 +177,7 @@
 
                     <div class="mb-8">
                         <label class="text-sm font-medium text-slate-600 block mb-2 text-pretty">Ex-Showroom Price (₹)</label>
-                        <input type="number" id="carPrice" value="1500000" min="100000" step="10000" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500 text-pretty">
+                        <input type="number" inputmode="numeric" id="carPrice" value="1500000" min="100000" step="10000" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500 text-pretty">
                     </div>
 
                     <div class="grid grid-cols-2 gap-4 mb-8 text-pretty">
@@ -205,12 +205,12 @@
                         <div class="space-y-4">
                             <div>
                                 <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1 text-pretty text-pretty">Monthly Rental (₹ Inc. GST)</label>
-                                <input type="number" id="leaseRental" value="35000" class="w-full px-3 py-2 border border-blue-200 rounded-lg text-sm font-semibold">
+                                <input type="number" inputmode="numeric" id="leaseRental" value="35000" class="w-full px-3 py-2 border border-blue-200 rounded-lg text-sm font-semibold">
                             </div>
                             <div class="grid grid-cols-2 gap-4 text-pretty">
                                 <div>
                                     <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1 text-pretty text-pretty">Residual Value (%)</label>
-                                    <input type="number" id="residualPct" value="25" class="w-full px-3 py-2 border border-blue-200 rounded-lg text-sm font-semibold">
+                                    <input type="number" inputmode="decimal" id="residualPct" value="25" class="w-full px-3 py-2 border border-blue-200 rounded-lg text-sm font-semibold">
                                 </div>
                                 <div>
                                     <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1 text-pretty text-pretty">Engine CC</label>
@@ -229,16 +229,16 @@
                         <div class="space-y-4 text-pretty">
                             <div>
                                 <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Down Payment (₹)</label>
-                                <input type="number" id="downPayment" value="300000" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                                <input type="number" inputmode="numeric" id="downPayment" value="300000" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
                             </div>
                             <div class="grid grid-cols-2 gap-4">
                                 <div>
                                     <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Loan Rate (%)</label>
-                                    <input type="number" id="loanRate" value="8.5" step="0.1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                                    <input type="number" inputmode="decimal" id="loanRate" value="8.5" step="0.1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
                                 </div>
                                 <div>
                                     <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Annual Maint. (₹)</label>
-                                    <input type="number" id="annualMaint" value="40000" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                                    <input type="number" inputmode="numeric" id="annualMaint" value="40000" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
                                 </div>
                             </div>
                         </div>

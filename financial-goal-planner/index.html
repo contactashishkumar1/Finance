@@ -277,14 +277,14 @@
                         <div>
                             <div class="flex justify-between items-center mb-3">
                                 <label class="text-xs font-bold text-slate-400 uppercase tracking-tighter">Annual Step-up SIP (%)</label>
-                                <input type="number" id="stepUpInput" value="10" step="1" class="w-16 px-2 py-1 border rounded text-right font-bold text-xs focus:ring-2 focus:ring-blue-500">
+                                <input type="number" inputmode="decimal" id="stepUpInput" value="10" step="1" class="w-16 px-2 py-1 border rounded text-right font-bold text-xs focus:ring-2 focus:ring-blue-500">
                             </div>
                             <input type="range" id="stepUpRange" min="0" max="50" step="1" value="10" class="w-full">
                         </div>
                         <div>
                             <div class="flex justify-between items-center mb-3 text-pretty">
                                 <label class="text-xs font-bold text-slate-400 uppercase tracking-tighter">Existing Savings (₹)</label>
-                                <input type="number" id="existingInput" value="0" step="10000" class="w-24 px-2 py-1 border rounded text-right font-bold text-xs focus:ring-2 focus:ring-blue-500">
+                                <input type="number" inputmode="numeric" id="existingInput" value="0" step="10000" class="w-24 px-2 py-1 border rounded text-right font-bold text-xs focus:ring-2 focus:ring-blue-500">
                             </div>
                             <input type="range" id="existingRange" min="0" max="10000000" step="10000" value="0" class="w-full">
                         </div>
@@ -471,13 +471,13 @@
                 <div class="space-y-6">
                     <h3 class="text-xs font-black text-blue-600 uppercase tracking-widest">Retirement Settings</h3>
                     <div class="grid grid-cols-2 gap-4">
-                        <div><label class="text-xs font-bold text-slate-600">Current Age</label><input type="number" id="curAge" value="30" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                        <div><label class="text-xs font-bold text-slate-600 text-pretty">Retirement Age</label><input type="number" id="retAge" value="60" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
+                        <div><label class="text-xs font-bold text-slate-600">Current Age</label><input type="number" inputmode="numeric" id="curAge" value="30" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
+                        <div><label class="text-xs font-bold text-slate-600 text-pretty">Retirement Age</label><input type="number" inputmode="numeric" id="retAge" value="60" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
                     </div>
-                    <div><label class="text-sm font-medium text-slate-600 text-pretty text-pretty">Monthly Expenses Today (₹)</label><input type="number" id="monthlyExp" value="50000" step="5000" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty text-pretty"></div>
+                    <div><label class="text-sm font-medium text-slate-600 text-pretty text-pretty">Monthly Expenses Today (₹)</label><input type="number" inputmode="numeric" id="monthlyExp" value="50000" step="5000" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty text-pretty"></div>
                     <div class="grid grid-cols-2 gap-4">
-                        <div><label class="text-xs font-bold text-slate-600 text-pretty">Inflation (%)</label><input type="number" id="infRate" value="6" step="0.1" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
-                        <div><label class="text-xs font-bold text-slate-600">Life Expectancy</label><input type="number" id="lifeExp" value="85" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
+                        <div><label class="text-xs font-bold text-slate-600 text-pretty">Inflation (%)</label><input type="number" inputmode="decimal" id="infRate" value="6" step="0.1" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
+                        <div><label class="text-xs font-bold text-slate-600">Life Expectancy</label><input type="number" inputmode="numeric" id="lifeExp" value="85" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
                     </div>
                     <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 text-pretty">
                         <label class="text-xs font-bold text-slate-400 uppercase block mb-3 text-pretty">Corpus Calculation Logic</label>
@@ -491,46 +491,46 @@
                 <div class="space-y-6">
                     <h3 class="text-xs font-black text-emerald-600 uppercase tracking-widest text-pretty">Education Settings</h3>
                     <div class="grid grid-cols-2 gap-4">
-                        <div><label class="text-xs font-bold text-slate-600 text-pretty text-pretty">Child Age</label><input type="number" id="childAge" value="3" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                        <div><label class="text-xs font-bold text-slate-600 text-pretty">Admission Age</label><input type="number" id="studyAge" value="18" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty text-pretty"></div>
+                        <div><label class="text-xs font-bold text-slate-600 text-pretty text-pretty">Child Age</label><input type="number" inputmode="numeric" id="childAge" value="3" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
+                        <div><label class="text-xs font-bold text-slate-600 text-pretty">Admission Age</label><input type="number" inputmode="numeric" id="studyAge" value="18" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty text-pretty"></div>
                     </div>
-                    <div><label class="text-sm font-medium text-slate-600 text-pretty text-pretty">Course Cost Today (₹)</label><input type="number" id="courseCost" value="1500000" step="50000" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
-                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Edu. Inflation (%)</label><input type="number" id="eduInf" value="10" step="0.1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
+                    <div><label class="text-sm font-medium text-slate-600 text-pretty text-pretty">Course Cost Today (₹)</label><input type="number" inputmode="numeric" id="courseCost" value="1500000" step="50000" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
+                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Edu. Inflation (%)</label><input type="number" inputmode="decimal" id="eduInf" value="10" step="0.1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
                 </div>`,
             house: `
                 <div class="space-y-6">
                     <h3 class="text-xs font-black text-blue-900 uppercase tracking-widest text-pretty text-pretty text-pretty">Property Settings</h3>
-                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Property Price Today (₹)</label><input type="number" id="housePrice" value="8000000" step="100000" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty text-pretty"></div>
+                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Property Price Today (₹)</label><input type="number" inputmode="numeric" id="housePrice" value="8000000" step="100000" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty text-pretty"></div>
                     <div class="grid grid-cols-2 gap-4">
-                        <div><label class="text-xs font-bold text-slate-600 text-pretty">Appreciation (%)</label><input type="number" id="houseGrow" value="5" step="0.1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                        <div><label class="text-xs font-bold text-slate-600 text-pretty">Down Payment (%)</label><input type="number" id="houseDP" value="20" step="1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
+                        <div><label class="text-xs font-bold text-slate-600 text-pretty">Appreciation (%)</label><input type="number" inputmode="decimal" id="houseGrow" value="5" step="0.1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
+                        <div><label class="text-xs font-bold text-slate-600 text-pretty">Down Payment (%)</label><input type="number" inputmode="numeric" id="houseDP" value="20" step="1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
                     </div>
-                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Years until purchase</label><input type="number" id="houseYears" value="10" step="1" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
+                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Years until purchase</label><input type="number" inputmode="numeric" id="houseYears" value="10" step="1" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
                 </div>`,
             emergency: `
                 <div class="space-y-6 text-pretty text-pretty text-pretty">
                     <h3 class="text-xs font-black text-purple-600 uppercase tracking-widest text-pretty">Safety Net Settings</h3>
-                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Monthly Expenses (₹)</label><input type="number" id="emgExp" value="50000" step="5000" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty text-pretty"></div>
-                    <div><label class="text-sm font-medium text-slate-600 text-pretty text-pretty text-pretty">Buffer Months</label><input type="number" id="emgMonths" value="6" step="1" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
-                    <div><label class="text-sm font-medium text-slate-600">Target Time (Years)</label><input type="number" id="emgYears" value="2" step="1" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty text-pretty"></div>
+                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Monthly Expenses (₹)</label><input type="number" inputmode="numeric" id="emgExp" value="50000" step="5000" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty text-pretty"></div>
+                    <div><label class="text-sm font-medium text-slate-600 text-pretty text-pretty text-pretty">Buffer Months</label><input type="number" inputmode="numeric" id="emgMonths" value="6" step="1" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
+                    <div><label class="text-sm font-medium text-slate-600">Target Time (Years)</label><input type="number" inputmode="numeric" id="emgYears" value="2" step="1" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty text-pretty"></div>
                 </div>`,
             wealth: `
                 <div class="space-y-6 text-pretty text-pretty">
                     <h3 class="text-xs font-black text-indigo-600 uppercase tracking-widest text-pretty">Growth Settings</h3>
-                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Target Amount Today (₹)</label><input type="number" id="wealthTarget" value="10000000" step="100000" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
-                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Time Horizon (Years)</label><input type="number" id="wealthYears" value="15" step="1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
+                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Target Amount Today (₹)</label><input type="number" inputmode="numeric" id="wealthTarget" value="10000000" step="100000" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
+                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Time Horizon (Years)</label><input type="number" inputmode="numeric" id="wealthYears" value="15" step="1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
                 </div>`,
             car: `
                 <div class="space-y-6 text-pretty">
                     <h3 class="text-xs font-black text-slate-900 uppercase tracking-widest text-pretty text-pretty">Vehicle Settings</h3>
-                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Car Price Today (₹)</label><input type="number" id="carPrice" value="1000000" step="100000" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
-                    <div><label class="text-sm font-medium text-slate-600">Time Horizon (Years)</label><input type="number" id="carYears" value="5" step="1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
+                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Car Price Today (₹)</label><input type="number" inputmode="numeric" id="carPrice" value="1000000" step="100000" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
+                    <div><label class="text-sm font-medium text-slate-600">Time Horizon (Years)</label><input type="number" inputmode="numeric" id="carYears" value="5" step="1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
                 </div>`,
             vacation: `
                 <div class="space-y-6">
                     <h3 class="text-xs font-black text-slate-900 uppercase tracking-widest text-pretty text-pretty text-pretty">Vacation Settings</h3>
-                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Trip Cost Today (₹)</label><input type="number" id="vacPrice" value="500000" step="50000" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
-                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Time Horizon (Years)</label><input type="number" id="vacYears" value="3" step="1" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
+                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Trip Cost Today (₹)</label><input type="number" inputmode="numeric" id="vacPrice" value="500000" step="50000" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
+                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Time Horizon (Years)</label><input type="number" inputmode="numeric" id="vacYears" value="3" step="1" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
                 </div>`
         };
 
@@ -560,7 +560,7 @@
                     <div class="mt-6 text-pretty">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600">Expected Annual Return (%)</label>
-                            <input type="number" id="retRate" value="${defaultReturn}" step="0.1" class="w-20 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500">
+                            <input type="number" inputmode="decimal" id="retRate" value="${defaultReturn}" step="0.1" class="w-20 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500">
                         </div>
                         <input type="range" id="retRateRange" min="1" max="25" step="0.1" value="${defaultReturn}" class="w-full">
                     </div>`;

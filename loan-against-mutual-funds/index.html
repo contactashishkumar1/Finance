@@ -218,7 +218,7 @@
                         <label class="font-semibold text-slate-700">Equity Mutual Funds Value (50% LTV)</label>
                         <div class="relative">
                             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
-                            <input type="number" id="equityInput" value="1000000" min="0" step="50000" class="w-36 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                            <input type="number" inputmode="numeric" id="equityInput" value="1000000" min="0" step="50000" class="w-36 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
                         </div>
                     </div>
                     <input type="range" id="equityRange" min="0" max="10000000" step="50000" value="1000000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
@@ -230,7 +230,7 @@
                         <label class="font-semibold text-slate-700">Debt Mutual Funds Value (80% LTV)</label>
                         <div class="relative">
                             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
-                            <input type="number" id="debtInput" value="500000" min="0" step="50000" class="w-36 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                            <input type="number" inputmode="numeric" id="debtInput" value="500000" min="0" step="50000" class="w-36 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
                         </div>
                     </div>
                     <input type="range" id="debtRange" min="0" max="5000000" step="50000" value="500000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
@@ -242,7 +242,7 @@
                         <label class="font-semibold text-slate-700">Amount You Wish to Withdraw</label>
                         <div class="relative">
                             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
-                            <input type="number" id="utilizedInput" value="400000" min="10000" step="10000" class="w-36 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                            <input type="number" inputmode="numeric" id="utilizedInput" value="400000" min="10000" step="10000" class="w-36 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
                         </div>
                     </div>
                     <input type="range" id="utilizedRange" min="10000" max="9000000" step="10000" value="400000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
@@ -253,7 +253,7 @@
                     <div class="flex justify-between mb-2">
                         <label class="font-semibold text-slate-700">Overdraft Interest Rate (p.a.)</label>
                         <div class="relative">
-                            <input type="number" id="rateInput" value="10.5" min="8" max="16" step="0.25" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-7 font-bold">
+                            <input type="number" inputmode="decimal" id="rateInput" value="10.5" min="8" max="16" step="0.25" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-7 font-bold">
                             <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">%</span>
                         </div>
                     </div>

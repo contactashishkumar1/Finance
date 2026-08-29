@@ -200,7 +200,7 @@
                     <div class="mb-8">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Purchase Price (₹)</label>
-                            <input type="number" id="purchaseInput" value="5000000" min="100000" step="100000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                            <input type="number" inputmode="numeric" id="purchaseInput" value="5000000" min="100000" step="100000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                         </div>
                         <input type="range" id="purchaseRange" min="100000" max="50000000" step="100000" value="5000000" class="w-full py-2 cursor-pointer">
                     </div>
@@ -209,7 +209,7 @@
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Expected Growth (% p.a)</label>
                             <div class="relative w-full sm:w-28">
-                                <input type="number" id="rateInput" value="8" step="0.1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <input type="number" inputmode="decimal" id="rateInput" value="8" step="0.1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                                 <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">%</span>
                             </div>
                         </div>
@@ -220,7 +220,7 @@
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Investment Period (Years)</label>
                             <div class="relative w-full sm:w-28">
-                                <input type="number" id="yearsInput" value="10" min="1" max="50" step="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <input type="number" inputmode="numeric" id="yearsInput" value="10" min="1" max="50" step="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                                 <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">Yr</span>
                             </div>
                         </div>
@@ -230,7 +230,7 @@
                     <div class="mb-6 p-4 bg-blue-50/50 rounded-xl border border-blue-100">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                             <label class="text-xs font-bold text-blue-600 uppercase">Incidental Costs (%)</label>
-                            <input type="number" id="incidentalIn" value="7" step="0.5" class="w-full sm:w-32 px-3 py-1 border border-blue-200 rounded-lg text-left sm:text-right font-bold text-blue-700 focus:outline-none">
+                            <input type="number" inputmode="decimal" id="incidentalIn" value="7" step="0.5" class="w-full sm:w-32 px-3 py-1 border border-blue-200 rounded-lg text-left sm:text-right font-bold text-blue-700 focus:outline-none">
                         </div>
                         <p class="text-[10px] text-blue-400 mt-2 italic text-pretty">Includes stamp duty, registration fees, and initial legal costs.</p>
                     </div>

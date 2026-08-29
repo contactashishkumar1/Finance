@@ -285,14 +285,14 @@
                         <div>
                             <div class="flex justify-between items-center mb-2">
                                 <label class="text-xs font-medium text-slate-600">Gross Annual Value (Rent Received)</label>
-                                <input type="number" id="gavInput" value="300000" min="0" class="w-24 px-2 py-1 text-sm border border-slate-200 rounded-lg text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                                <input type="number" inputmode="numeric" id="gavInput" value="300000" min="0" class="w-24 px-2 py-1 text-sm border border-slate-200 rounded-lg text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none">
                             </div>
                             <input type="range" id="gavRange" min="0" max="2000000" step="10000" value="300000" class="w-full py-2 cursor-pointer">
                         </div>
                         <div>
                             <div class="flex justify-between items-center mb-2">
                                 <label class="text-xs font-medium text-slate-600">Municipal Taxes Paid (₹)</label>
-                                <input type="number" id="taxesInput" value="20000" min="0" class="w-24 px-2 py-1 text-sm border border-slate-200 rounded-lg text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                                <input type="number" inputmode="numeric" id="taxesInput" value="20000" min="0" class="w-24 px-2 py-1 text-sm border border-slate-200 rounded-lg text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none">
                             </div>
                             <input type="range" id="taxesRange" min="0" max="100000" step="1000" value="20000" class="w-full py-2 cursor-pointer">
                         </div>
@@ -301,7 +301,7 @@
                     <div class="mt-6 mb-8">
                         <div class="flex justify-between items-center mb-2">
                             <label class="text-xs font-medium text-slate-600">Home Loan Interest Paid u/s 24(b)</label>
-                            <input type="number" id="interestInput" value="150000" min="0" class="w-24 px-2 py-1 text-sm border border-slate-200 rounded-lg text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none text-red-600">
+                            <input type="number" inputmode="decimal" id="interestInput" value="150000" min="0" class="w-24 px-2 py-1 text-sm border border-slate-200 rounded-lg text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none text-red-600">
                         </div>
                         <input type="range" id="interestRange" min="0" max="1000000" step="5000" value="150000" class="w-full py-2 cursor-pointer">
                     </div>

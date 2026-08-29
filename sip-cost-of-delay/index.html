@@ -232,7 +232,7 @@
                             <label class="font-semibold text-slate-700">Monthly SIP Amount</label>
                             <div class="relative">
                                 <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
-                                <input type="number" id="sipInput" value="10000" min="500" step="500" class="w-32 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                                <input type="number" inputmode="numeric" id="sipInput" value="10000" min="500" step="500" class="w-32 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
                             </div>
                         </div>
                         <input type="range" id="sipRange" min="500" max="100000" step="500" value="10000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
@@ -243,7 +243,7 @@
                         <div class="flex justify-between mb-2">
                             <label class="font-bold text-rose-800">I will delay starting by...</label>
                             <div class="relative">
-                                <input type="number" id="delayInput" value="3" min="1" max="15" step="1" class="w-24 text-right bg-white border border-rose-300 text-rose-900 text-sm rounded-lg focus:ring-rose-500 focus:border-rose-500 block p-2 pr-8 font-bold">
+                                <input type="number" inputmode="numeric" id="delayInput" value="3" min="1" max="15" step="1" class="w-24 text-right bg-white border border-rose-300 text-rose-900 text-sm rounded-lg focus:ring-rose-500 focus:border-rose-500 block p-2 pr-8 font-bold">
                                 <span class="absolute right-3 top-1/2 -translate-y-1/2 text-rose-500 font-medium text-xs">Yrs</span>
                             </div>
                         </div>
@@ -257,7 +257,7 @@
                                 <label class="text-sm font-semibold text-slate-700">Total Goal Time</label>
                             </div>
                             <div class="relative">
-                                <input type="number" id="yearsInput" value="20" min="5" max="40" step="1" class="w-full text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-8 font-bold">
+                                <input type="number" inputmode="numeric" id="yearsInput" value="20" min="5" max="40" step="1" class="w-full text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-8 font-bold">
                                 <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium text-xs">Yrs</span>
                             </div>
                             <p class="text-[10px] text-slate-500 mt-1">E.g. "I want money in 20 yrs"</p>
@@ -269,7 +269,7 @@
                                 <label class="text-sm font-semibold text-slate-700">Expected Return</label>
                             </div>
                             <div class="relative">
-                                <input type="number" id="rateInput" value="12" min="5" max="20" step="0.5" class="w-full text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-7 font-bold">
+                                <input type="number" inputmode="decimal" id="rateInput" value="12" min="5" max="20" step="0.5" class="w-full text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-7 font-bold">
                                 <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium text-xs">%</span>
                             </div>
                             <p class="text-[10px] text-slate-500 mt-1">12% is standard for Equity</p>

@@ -213,7 +213,7 @@
                     <div class="mb-8">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Selling Price per Unit (₹)</label>
-                            <input type="number" id="priceInput" value="1000" min="0" step="50" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                            <input type="number" inputmode="numeric" id="priceInput" value="1000" min="0" step="50" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                         </div>
                         <input type="range" id="priceRange" min="0" max="50000" step="50" value="1000" class="w-full py-2 cursor-pointer">
                     </div>
@@ -221,7 +221,7 @@
                     <div class="mb-8">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Variable Cost per Unit (₹)</label>
-                            <input type="number" id="vCostInput" value="600" min="0" step="50" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                            <input type="number" inputmode="numeric" id="vCostInput" value="600" min="0" step="50" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                         </div>
                         <input type="range" id="vCostRange" min="0" max="50000" step="50" value="600" class="w-full py-2 cursor-pointer">
                     </div>
@@ -229,11 +229,11 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                         <div>
                             <label class="text-xs font-medium text-slate-500 uppercase mb-2 block">Fixed Costs (₹)</label>
-                            <input type="number" id="fixedCostInput" value="50000" min="0" step="1000" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500">
+                            <input type="number" inputmode="numeric" id="fixedCostInput" value="50000" min="0" step="1000" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500">
                         </div>
                         <div>
                             <label class="text-xs font-medium text-slate-500 uppercase mb-2 block text-pretty">Annual Units Sold</label>
-                            <input type="number" id="unitsInput" value="250" min="0" step="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500">
+                            <input type="number" inputmode="numeric" id="unitsInput" value="250" min="0" step="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500">
                         </div>
                     </div>
 

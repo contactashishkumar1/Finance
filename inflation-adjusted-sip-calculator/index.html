@@ -215,7 +215,7 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3 text-pretty">
                             <label for="sipInput" class="text-sm font-medium text-slate-600">Monthly SIP Amount (₹)</label>
-                            <input type="number" id="sipInput" value="10000" step="500" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="numeric" id="sipInput" value="10000" step="500" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="sipRange" min="500" max="500000" step="500" value="10000" class="w-full">
                     </div>
@@ -223,7 +223,7 @@
                     <div class="mb-8 text-pretty">
                         <div class="flex justify-between items-center mb-3">
                             <label for="returnInput" class="text-sm font-medium text-slate-600">Expected Annual Return (%)</label>
-                            <input type="number" id="returnInput" value="12" step="0.1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="decimal" id="returnInput" value="12" step="0.1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="returnRange" min="1" max="25" step="0.1" value="12" class="w-full">
                     </div>
@@ -231,7 +231,7 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3 text-pretty">
                             <label for="inflationInput" class="text-sm font-medium text-slate-600">Estimated Inflation (%)</label>
-                            <input type="number" id="inflationInput" value="6" step="0.1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="decimal" id="inflationInput" value="6" step="0.1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="inflationRange" min="1" max="15" step="0.1" value="6" class="w-full">
                         <p class="text-[10px] text-slate-400 mt-2 italic">Avg. Indian Inflation (CPI) is approx 6%.</p>
@@ -240,7 +240,7 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3 text-pretty">
                             <label for="yearsInput" class="text-sm font-medium text-slate-600">Investment Tenure (Years)</label>
-                            <input type="number" id="yearsInput" value="20" step="1" class="w-20 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="numeric" id="yearsInput" value="20" step="1" class="w-20 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="yearsRange" min="1" max="50" step="1" value="20" class="w-full">
                     </div>
@@ -248,7 +248,7 @@
                     <div class="mb-6 pt-6 border-t border-slate-50 text-pretty">
                         <div class="flex justify-between items-center mb-3 text-pretty">
                             <label for="stepUpInput" class="text-sm font-medium text-slate-400 font-bold uppercase tracking-tighter">Annual Step-up SIP (%) <span class="text-[10px] lowercase font-normal">(Optional)</span></label>
-                            <input type="number" id="stepUpInput" value="0" step="1" class="w-20 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="decimal" id="stepUpInput" value="0" step="1" class="w-20 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="stepUpRange" min="0" max="50" step="1" value="0" class="w-full">
                     </div>

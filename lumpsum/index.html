@@ -235,7 +235,7 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600">Initial Investment (₹)</label>
-                            <input type="number" id="principalInput" value="100000" min="500" max="100000000" step="1000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="numeric" id="principalInput" value="100000" min="500" max="100000000" step="1000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="principalRange" min="5000" max="100000000" step="100000" value="100000" class="w-full">
                         <p class="text-[10px] text-slate-400 mt-2">Max Limit: ₹10 Crores | Step: ₹1 Lakh</p>
@@ -244,7 +244,7 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600">Expected Return (% p.a)</label>
-                            <input type="number" id="rateInput" value="12" step="0.1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="decimal" id="rateInput" value="12" step="0.1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="rateRange" min="1" max="30" step="0.1" value="12" class="w-full">
                         <div class="mt-3 flex gap-2">
@@ -257,7 +257,7 @@
                     <div class="mb-6">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600">Tenure (Years)</label>
-                            <input type="number" id="yearsInput" value="10" min="1" max="40" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="numeric" id="yearsInput" value="10" min="1" max="40" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="yearsRange" min="1" max="40" value="10" class="w-full">
                     </div>

@@ -228,7 +228,7 @@
                         <label class="font-semibold text-slate-700">Cutoff Price (Per ₹100 Face Value)</label>
                         <div class="relative">
                             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
-                            <input type="number" id="cutoffPriceInput" value="98.35" min="90" max="99.9" step="0.05" class="w-32 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                            <input type="number" inputmode="decimal" id="cutoffPriceInput" value="98.35" min="90" max="99.9" step="0.05" class="w-32 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
                         </div>
                     </div>
                     <input type="range" id="cutoffPriceRange" min="90" max="99.9" step="0.05" value="98.35" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
@@ -240,7 +240,7 @@
                         <label class="font-semibold text-slate-700">Total Investment Capital</label>
                         <div class="relative">
                             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
-                            <input type="number" id="investCapInput" value="100000" min="10000" step="10000" class="w-36 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                            <input type="number" inputmode="numeric" id="investCapInput" value="100000" min="10000" step="10000" class="w-36 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
                         </div>
                     </div>
                     <input type="range" id="investCapRange" min="10000" max="1000000" step="10000" value="100000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">

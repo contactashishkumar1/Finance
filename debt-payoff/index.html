@@ -186,7 +186,7 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600">Total Debt Balance (₹)</label>
-                            <input type="number" id="balanceInput" value="500000" step="10000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="numeric" id="balanceInput" value="500000" step="10000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="balanceRange" min="10000" max="50000000" step="10000" value="500000" class="w-full">
                     </div>
@@ -194,7 +194,7 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3 text-pretty">
                             <label class="text-sm font-medium text-slate-600">Interest Rate (% p.a)</label>
-                            <input type="number" id="rateInput" value="12" step="0.1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="decimal" id="rateInput" value="12" step="0.1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="rateRange" min="1" max="50" step="0.1" value="12" class="w-full">
                     </div>
@@ -202,7 +202,7 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600">Monthly Payment (₹)</label>
-                            <input type="number" id="monthlyInput" value="10000" step="500" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="numeric" id="monthlyInput" value="10000" step="500" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="monthlyRange" min="1000" max="1000000" step="1000" value="10000" class="w-full">
                     </div>
@@ -210,7 +210,7 @@
                     <div class="mb-8 text-pretty">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600">Extra Monthly Payment (₹)</label>
-                            <input type="number" id="extraInput" value="5000" step="500" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="numeric" id="extraInput" value="5000" step="500" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="extraRange" min="0" max="500000" step="500" value="5000" class="w-full">
                         <p class="text-[10px] text-slate-400 mt-2 italic">Goal: Accelerate debt payoff and save on interest.</p>

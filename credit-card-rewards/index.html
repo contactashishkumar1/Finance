@@ -172,11 +172,11 @@
                     <div class="mb-8 p-4 bg-slate-50 rounded-xl border border-slate-100 space-y-4">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                             <label class="text-sm font-medium text-slate-600">Annual Fee (₹)</label>
-                            <input type="number" id="annualFeeInput" value="2999" min="0" class="w-full sm:w-28 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500">
+                            <input type="number" inputmode="numeric" id="annualFeeInput" value="2999" min="0" class="w-full sm:w-28 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500">
                         </div>
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                             <label class="text-sm font-medium text-slate-600">Spend for Fee Waiver (₹)</label>
-                            <input type="number" id="feeWaiverTarget" value="300000" min="0" class="w-full sm:w-28 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500">
+                            <input type="number" inputmode="numeric" id="feeWaiverTarget" value="300000" min="0" class="w-full sm:w-28 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500">
                         </div>
                         <p class="text-[10px] text-slate-400 italic">Banks usually waive the next year's fee (and GST) if you hit this annual target.</p>
                     </div>
@@ -187,21 +187,21 @@
                         <div class="grid grid-cols-2 gap-4">
                             <div>
                                 <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Travel (₹)</label>
-                                <input type="number" id="spendTravel" value="10000" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                                <input type="number" inputmode="decimal" id="spendTravel" value="10000" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
                             </div>
                             <div>
                                 <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1 text-pretty">Dining/Online (₹)</label>
-                                <input type="number" id="spendSpecial" value="15000" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                                <input type="number" inputmode="decimal" id="spendSpecial" value="15000" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
                             </div>
                         </div>
                         <div class="grid grid-cols-2 gap-4">
                             <div>
                                 <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Groceries (₹)</label>
-                                <input type="number" id="spendGroceries" value="8000" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold text-pretty">
+                                <input type="number" inputmode="decimal" id="spendGroceries" value="8000" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold text-pretty">
                             </div>
                             <div>
                                 <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1 text-pretty">Fuel & Misc (₹)</label>
-                                <input type="number" id="spendBase" value="7000" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                                <input type="number" inputmode="decimal" id="spendBase" value="7000" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
                             </div>
                         </div>
                     </div>
@@ -212,16 +212,16 @@
                         <div class="grid grid-cols-2 gap-4">
                             <div>
                                 <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1 text-pretty">Base Reward (%)</label>
-                                <input type="number" id="rateBase" value="1.5" step="0.1" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                                <input type="number" inputmode="decimal" id="rateBase" value="1.5" step="0.1" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
                             </div>
                             <div>
                                 <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1 text-pretty">Special Rate (%)</label>
-                                <input type="number" id="rateSpecial" value="5" step="0.1" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                                <input type="number" inputmode="decimal" id="rateSpecial" value="5" step="0.1" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
                             </div>
                         </div>
                         <div class="mt-4">
                             <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1 text-pretty">Value of 1 Reward Point (₹)</label>
-                            <input type="number" id="pointValue" value="0.25" step="0.01" min="0" class="w-full px-3 py-2 border border-blue-200 rounded-lg text-sm font-bold bg-blue-50">
+                            <input type="number" inputmode="decimal" id="pointValue" value="0.25" step="0.01" min="0" class="w-full px-3 py-2 border border-blue-200 rounded-lg text-sm font-bold bg-blue-50">
                             <p class="text-[10px] text-slate-400 mt-1">Set to 1.0 for flat cashback cards.</p>
                         </div>
                     </div>
@@ -232,11 +232,11 @@
                         <div class="grid grid-cols-2 gap-4">
                             <div>
                                 <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1 text-pretty">Annual Target (₹)</label>
-                                <input type="number" id="milestoneTarget" value="400000" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                                <input type="number" inputmode="numeric" id="milestoneTarget" value="400000" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
                             </div>
                             <div>
                                 <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1 text-pretty">Target Reward (₹)</label>
-                                <input type="number" id="milestoneValue" value="5000" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                                <input type="number" inputmode="numeric" id="milestoneValue" value="5000" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
                             </div>
                         </div>
                     </div>
