@@ -195,24 +195,24 @@
 
                     <div class="mb-6">
                         <label for="fixedCostInp" class="text-xs font-bold text-slate-500 uppercase block mb-2 tracking-tight">Fixed Cost (Total ₹)</label>
-                        <input type="number" id="fixedCostInp" value="100000" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
+                        <input type="number" inputmode="numeric" id="fixedCostInp" value="100000" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
                         <p class="text-[9px] text-slate-400 mt-2">Rent, salaries, equipment, insurance, etc.</p>
                     </div>
 
                     <div class="grid grid-cols-2 gap-4 mb-6">
                         <div>
                             <label for="variableCostInp" class="text-xs font-bold text-slate-500 uppercase block mb-2 tracking-tight">Variable Cost / Unit</label>
-                            <input type="number" id="variableCostInp" value="200" step="0.01" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-bold text-sm focus:ring-2 focus:ring-blue-500 transition-all outline-none">
+                            <input type="number" inputmode="decimal" id="variableCostInp" value="200" step="0.01" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-bold text-sm focus:ring-2 focus:ring-blue-500 transition-all outline-none">
                         </div>
                         <div>
                             <label for="sellingPriceInp" class="text-xs font-bold text-slate-500 uppercase block mb-2 tracking-tight text-pretty">Selling Price / Unit</label>
-                            <input type="number" id="sellingPriceInp" value="500" step="0.01" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-bold text-sm focus:ring-2 focus:ring-emerald-500 transition-all outline-none">
+                            <input type="number" inputmode="decimal" id="sellingPriceInp" value="500" step="0.01" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-bold text-sm focus:ring-2 focus:ring-emerald-500 transition-all outline-none">
                         </div>
                     </div>
 
                     <div class="mb-6">
                         <label for="unitsSoldInp" class="text-xs font-bold text-slate-500 uppercase block mb-2 tracking-tight">Estimated Units Sold (Optional)</label>
-                        <input type="number" id="unitsSoldInp" value="0" min="0" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
+                        <input type="number" inputmode="numeric" id="unitsSoldInp" value="0" min="0" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
                     </div>
 
                     <button type="button" id="calcBtn" onclick="calculate()" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all text-pretty">Calculate Break Even</button>

@@ -224,7 +224,7 @@
                     <label class="font-semibold text-slate-700 block mb-2">Annual 80C Investment</label>
                     <div class="relative">
                         <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
-                        <input type="number" id="annualInv" value="150000" min="10000" max="150000" step="10000" class="w-full text-right bg-slate-50 border border-slate-200 text-slate-800 rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-3 pl-7 font-bold text-lg">
+                        <input type="number" inputmode="numeric" id="annualInv" value="150000" min="10000" max="150000" step="10000" class="w-full text-right bg-slate-50 border border-slate-200 text-slate-800 rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-3 pl-7 font-bold text-lg">
                     </div>
                     <p class="text-xs text-slate-500 mt-2">Max limit for Section 80C is ₹1.5 Lakhs per year.</p>
                 </div>
@@ -246,15 +246,15 @@
                 <div class="grid grid-cols-3 gap-4">
                     <div>
                         <label class="text-xs font-bold text-emerald-700 block mb-1">ELSS (Equity)</label>
-                        <input type="number" id="elssRate" value="12" step="0.5" class="w-full text-center bg-emerald-50 border border-emerald-200 text-emerald-900 font-bold rounded-lg p-2">
+                        <input type="number" inputmode="decimal" id="elssRate" value="12" step="0.5" class="w-full text-center bg-emerald-50 border border-emerald-200 text-emerald-900 font-bold rounded-lg p-2">
                     </div>
                     <div>
                         <label class="text-xs font-bold text-blue-700 block mb-1">PPF (Fixed)</label>
-                        <input type="number" id="ppfRate" value="7.1" step="0.1" class="w-full text-center bg-blue-50 border border-blue-200 text-blue-900 font-bold rounded-lg p-2">
+                        <input type="number" inputmode="decimal" id="ppfRate" value="7.1" step="0.1" class="w-full text-center bg-blue-50 border border-blue-200 text-blue-900 font-bold rounded-lg p-2">
                     </div>
                     <div>
                         <label class="text-xs font-bold text-rose-700 block mb-1">Tax-Saving FD</label>
-                        <input type="number" id="fdRate" value="7.0" step="0.1" class="w-full text-center bg-rose-50 border border-rose-200 text-rose-900 font-bold rounded-lg p-2">
+                        <input type="number" inputmode="decimal" id="fdRate" value="7.0" step="0.1" class="w-full text-center bg-rose-50 border border-rose-200 text-rose-900 font-bold rounded-lg p-2">
                     </div>
                 </div>
             </div>

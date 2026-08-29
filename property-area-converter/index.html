@@ -236,7 +236,7 @@
                 <div id="qtySection">
                     <label class="font-semibold text-slate-700 text-xs block mb-1">Enter Area Quantity</label>
                     <div class="grid grid-cols-12 gap-2">
-                        <input type="number" id="areaValueInput" value="1000" min="0" step="10" class="col-span-7 p-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm font-bold text-slate-800 focus:ring-blue-500 focus:border-blue-500">
+                        <input type="number" inputmode="numeric" id="areaValueInput" value="1000" min="0" step="10" class="col-span-7 p-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm font-bold text-slate-800 focus:ring-blue-500 focus:border-blue-500">
                         <select id="sourceUnitSelect" class="col-span-5 p-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold text-slate-800 focus:ring-blue-500 focus:border-blue-500">
                             <option value="sqft" selected>Sq. Ft. (Square Feet)</option>
                             <option value="gaj">Gaj (Sq. Yards)</option>
@@ -261,11 +261,11 @@
                     <div class="grid grid-cols-2 gap-3 text-xs">
                         <div>
                             <label class="font-semibold text-slate-700 block mb-1">Plot Length (Feet)</label>
-                            <input type="number" id="lengthInput" value="30" min="1" step="1" class="w-full p-2 bg-white border border-slate-200 rounded-lg font-bold">
+                            <input type="number" inputmode="numeric" id="lengthInput" value="30" min="1" step="1" class="w-full p-2 bg-white border border-slate-200 rounded-lg font-bold">
                         </div>
                         <div>
                             <label class="font-semibold text-slate-700 block mb-1">Plot Width (Feet)</label>
-                            <input type="number" id="widthInput" value="50" min="1" step="1" class="w-full p-2 bg-white border border-slate-200 rounded-lg font-bold">
+                            <input type="number" inputmode="numeric" id="widthInput" value="50" min="1" step="1" class="w-full p-2 bg-white border border-slate-200 rounded-lg font-bold">
                         </div>
                     </div>
                     <p class="text-[11px] text-slate-500">Calculated Area: <span id="dimCalculatedSqft" class="font-bold text-blue-600">1,500 Sq. Ft.</span> (<span id="dimCalculatedGaj" class="font-bold text-emerald-600">166.67 Gaj</span>)</p>
@@ -279,7 +279,7 @@
                     </div>
                     <div class="relative">
                         <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium text-xs">₹</span>
-                        <input type="number" id="totalPriceInput" value="5000000" min="0" step="100000" class="w-full p-2.5 pl-7 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold text-slate-800">
+                        <input type="number" inputmode="numeric" id="totalPriceInput" value="5000000" min="0" step="100000" class="w-full p-2.5 pl-7 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold text-slate-800">
                     </div>
                 </div>
             </div>

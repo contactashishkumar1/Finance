@@ -200,7 +200,7 @@
                     <div class="mb-8">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2 text-pretty">
                             <label class="text-sm font-medium text-slate-600">Annual Gross Salary/Business Income (₹)</label>
-                            <input type="number" id="incomeInput" value="1500000" min="0" step="10000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                            <input type="number" inputmode="numeric" id="incomeInput" value="1500000" min="0" step="10000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                         </div>
                         <input type="range" id="incomeRange" min="0" max="10000000" step="10000" value="1500000" class="w-full py-2 cursor-pointer">
                     </div>
@@ -208,7 +208,7 @@
                     <div class="mb-8">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Other Income (Rent/Interest/Gains) (₹)</label>
-                            <input type="number" id="otherIncomeInput" value="50000" min="0" step="1000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                            <input type="number" inputmode="numeric" id="otherIncomeInput" value="50000" min="0" step="1000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                         </div>
                         <input type="range" id="otherIncomeRange" min="0" max="2000000" step="1000" value="50000" class="w-full py-2 cursor-pointer">
                         <p class="text-[9px] text-slate-400 mt-1">Include profits from <a href="/capital-gains-tax/" class="underline">Capital Gains</a> or <a href="/tax-loss-harvesting/" class="underline">Harvested Losses</a>.</p>
@@ -217,7 +217,7 @@
                     <div class="mb-8">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Total TDS/TCS Already Paid (₹)</label>
-                            <input type="number" id="tdsInput" value="50000" min="0" step="1000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                            <input type="number" inputmode="numeric" id="tdsInput" value="50000" min="0" step="1000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                         </div>
                         <input type="range" id="tdsRange" min="0" max="1000000" step="1000" value="50000" class="w-full py-2 cursor-pointer">
                         <p class="text-[9px] text-slate-400 mt-1">You can <a href="/tds-calculator/" class="underline">Track TDS deductions</a> from your 26AS here.</p>
@@ -233,7 +233,7 @@
                         <!-- Dynamic Deductions Input -->
                         <div id="deductionsWrapper" class="hidden animate-in fade-in duration-300">
                             <label class="text-xs font-bold text-slate-500 uppercase block mb-1">Total Deductions (80C, 80D, HRA etc.) (₹)</label>
-                            <input type="number" id="deductionInput" value="200000" min="0" step="5000" class="w-full px-3 py-2 border border-blue-200 rounded-lg font-bold text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <input type="number" inputmode="numeric" id="deductionInput" value="200000" min="0" step="5000" class="w-full px-3 py-2 border border-blue-200 rounded-lg font-bold text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
                             <p class="text-[9px] text-blue-400 mt-1 italic text-pretty">Deductions are only applicable in the Old Regime. Use <a href="/sip/" class="underline">SIPs</a> to maximize 80C limits.</p>
                         </div>
                     </div>

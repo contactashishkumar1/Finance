@@ -204,19 +204,19 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-6">
                     <div>
                         <label class="block text-sm font-semibold text-slate-700 mb-1.5">Current Age (Years)</label>
-                        <input type="number" id="currAge" placeholder="30" min="18" max="65" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-400 outline-none transition-all">
+                        <input type="number" inputmode="numeric" id="currAge" placeholder="30" min="18" max="65" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-400 outline-none transition-all">
                     </div>
                     <div>
                         <label class="block text-sm font-semibold text-slate-700 mb-1.5">Planned Retirement Age</label>
-                        <input type="number" id="retireAge" placeholder="60" min="40" max="70" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-400 outline-none transition-all">
+                        <input type="number" inputmode="numeric" id="retireAge" placeholder="60" min="40" max="70" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-400 outline-none transition-all">
                     </div>
                     <div>
                         <label class="block text-sm font-semibold text-slate-700 mb-1.5">Annual Income (₹)</label>
-                        <input type="number" id="annualIncome" placeholder="1200000" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-400 outline-none transition-all">
+                        <input type="number" inputmode="numeric" id="annualIncome" placeholder="1200000" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-400 outline-none transition-all">
                     </div>
                     <div>
                         <label class="block text-sm font-semibold text-slate-700 mb-1.5">Annual Personal Expenses (₹)</label>
-                        <input type="number" id="personalExp" placeholder="300000" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-400 outline-none transition-all">
+                        <input type="number" inputmode="decimal" id="personalExp" placeholder="300000" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-400 outline-none transition-all">
                         <p class="text-xs text-slate-400 mt-1">Your own consumption share of income</p>
                     </div>
                 </div>
@@ -225,19 +225,19 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                     <div>
                         <label class="block text-xs font-semibold text-slate-600 mb-1.5">Home Loan Outstanding</label>
-                        <input type="number" id="homeLoan" placeholder="0" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold focus:ring-2 focus:ring-blue-300 outline-none transition-all">
+                        <input type="number" inputmode="numeric" id="homeLoan" placeholder="0" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold focus:ring-2 focus:ring-blue-300 outline-none transition-all">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-600 mb-1.5">Car / Personal Loan</label>
-                        <input type="number" id="otherLoan" placeholder="0" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold focus:ring-2 focus:ring-blue-300 outline-none transition-all">
+                        <input type="number" inputmode="numeric" id="otherLoan" placeholder="0" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold focus:ring-2 focus:ring-blue-300 outline-none transition-all">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-600 mb-1.5">Children's Education Fund Needed</label>
-                        <input type="number" id="eduFund" placeholder="0" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold focus:ring-2 focus:ring-blue-300 outline-none transition-all">
+                        <input type="number" inputmode="numeric" id="eduFund" placeholder="0" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold focus:ring-2 focus:ring-blue-300 outline-none transition-all">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-600 mb-1.5">Other Goals (Marriage, etc.) ₹</label>
-                        <input type="number" id="otherGoals" placeholder="0" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold focus:ring-2 focus:ring-blue-300 outline-none transition-all">
+                        <input type="number" inputmode="numeric" id="otherGoals" placeholder="0" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold focus:ring-2 focus:ring-blue-300 outline-none transition-all">
                     </div>
                 </div>
 
@@ -245,11 +245,11 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                     <div>
                         <label class="block text-xs font-semibold text-slate-600 mb-1.5">Existing Term / Life Insurance</label>
-                        <input type="number" id="existingCover" placeholder="0" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold focus:ring-2 focus:ring-blue-300 outline-none transition-all">
+                        <input type="number" inputmode="numeric" id="existingCover" placeholder="0" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold focus:ring-2 focus:ring-blue-300 outline-none transition-all">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-600 mb-1.5">Group Life Insurance (Employer)</label>
-                        <input type="number" id="groupCover" placeholder="0" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold focus:ring-2 focus:ring-blue-300 outline-none transition-all">
+                        <input type="number" inputmode="numeric" id="groupCover" placeholder="0" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold focus:ring-2 focus:ring-blue-300 outline-none transition-all">
                     </div>
                 </div>
 

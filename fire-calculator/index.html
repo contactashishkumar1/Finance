@@ -217,18 +217,18 @@
                     <div class="grid grid-cols-2 gap-4 mb-8">
                         <div>
                             <label class="text-xs font-medium text-slate-600 block mb-1 uppercase tracking-tighter">Current Age</label>
-                            <input type="number" id="currentAge" value="30" min="1" max="100" class="w-full px-3 py-2 border rounded-lg font-bold focus:ring-2 focus:ring-blue-500">
+                            <input type="number" inputmode="numeric" id="currentAge" value="30" min="1" max="100" class="w-full px-3 py-2 border rounded-lg font-bold focus:ring-2 focus:ring-blue-500">
                         </div>
                         <div>
                             <label class="text-xs font-medium text-slate-600 block mb-1 uppercase tracking-tighter">Desired FIRE Age</label>
-                            <input type="number" id="fireAge" value="45" min="1" max="100" class="w-full px-3 py-2 border rounded-lg font-bold focus:ring-2 focus:ring-blue-500">
+                            <input type="number" inputmode="numeric" id="fireAge" value="45" min="1" max="100" class="w-full px-3 py-2 border rounded-lg font-bold focus:ring-2 focus:ring-blue-500">
                         </div>
                     </div>
 
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600">Annual Expenses (Today ₹)</label>
-                            <input type="number" id="expenseInput" value="600000" min="0" step="10000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="decimal" id="expenseInput" value="600000" min="0" step="10000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="expenseRange" min="50000" max="10000000" step="50000" value="600000" class="w-full">
                     </div>
@@ -236,7 +236,7 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600">Current Savings (₹)</label>
-                            <input type="number" id="savingsInput" value="1000000" min="0" step="50000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="numeric" id="savingsInput" value="1000000" min="0" step="50000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="savingsRange" min="0" max="100000000" step="100000" value="1000000" class="w-full">
                     </div>
@@ -244,7 +244,7 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3 text-pretty">
                             <label class="text-sm font-medium text-slate-600">Monthly SIP / Investment (₹)</label>
-                            <input type="number" id="sipInput" value="50000" min="0" step="1000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="numeric" id="sipInput" value="50000" min="0" step="1000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="sipRange" min="0" max="1000000" step="5000" value="50000" class="w-full">
                     </div>
@@ -252,7 +252,7 @@
                     <div class="mb-6">
                         <div class="flex justify-between items-center mb-3 text-pretty">
                             <label class="text-sm font-medium text-slate-600">Expected Investment Return (%)</label>
-                            <input type="number" id="returnInput" value="12" min="0.1" max="30" step="0.1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="decimal" id="returnInput" value="12" min="0.1" max="30" step="0.1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="returnRange" min="1" max="25" step="0.1" value="12" class="w-full">
                     </div>

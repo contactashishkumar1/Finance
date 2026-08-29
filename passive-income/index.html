@@ -218,7 +218,7 @@
                     <div class="mb-8">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Monthly Investment (₹)</label>
-                            <input type="number" id="monthlyInput" value="20000" min="500" step="500" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                            <input type="number" inputmode="numeric" id="monthlyInput" value="20000" min="500" step="500" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                         </div>
                         <input type="range" id="monthlyRange" min="500" max="1000000" step="500" value="20000" class="w-full py-2 cursor-pointer">
                     </div>
@@ -227,7 +227,7 @@
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Expected ROI (% p.a)</label>
                             <div class="relative w-full sm:w-28">
-                                <input type="number" id="rateInput" value="12" step="0.1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <input type="number" inputmode="decimal" id="rateInput" value="12" step="0.1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                                 <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">%</span>
                             </div>
                         </div>
@@ -238,7 +238,7 @@
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Duration (Years)</label>
                             <div class="relative w-full sm:w-28">
-                                <input type="number" id="yearsInput" value="15" step="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <input type="number" inputmode="numeric" id="yearsInput" value="15" step="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                                 <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">Yr</span>
                             </div>
                         </div>
@@ -248,7 +248,7 @@
                     <div class="mb-6 p-4 bg-blue-50/50 rounded-xl border border-blue-100">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                             <label class="text-xs font-bold text-blue-600 uppercase">Target Yield Rate (% p.a)</label>
-                            <input type="number" id="yieldIn" value="6" step="0.5" class="w-full sm:w-32 px-3 py-1 border border-blue-200 rounded-lg text-left sm:text-right font-bold text-blue-700 focus:outline-none">
+                            <input type="number" inputmode="decimal" id="yieldIn" value="6" step="0.5" class="w-full sm:w-32 px-3 py-1 border border-blue-200 rounded-lg text-left sm:text-right font-bold text-blue-700 focus:outline-none">
                         </div>
                         <p class="text-[10px] text-blue-400 mt-2 italic">The annual return rate during the payout phase (SWP/Dividend).</p>
                     </div>

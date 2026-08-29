@@ -503,11 +503,11 @@
                 </div>
                 <div class="col-span-1 sm:col-span-4">
                     <label class="text-[10px] font-bold text-slate-500 uppercase sm:hidden mb-1 block">Invested Amount (₹)</label>
-                    <input type="number" class="asset-amt w-full bg-white border border-slate-300 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 font-bold" placeholder="10000" min="0" value="${data ? data.amt : ''}">
+                    <input type="number" inputmode="numeric" class="asset-amt w-full bg-white border border-slate-300 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 font-bold" placeholder="10000" min="0" value="${data ? data.amt : ''}">
                 </div>
                 <div class="col-span-1 sm:col-span-3">
                     <label class="text-[10px] font-bold text-slate-500 uppercase sm:hidden mb-1 block">Individual Beta</label>
-                    <input type="number" class="asset-beta w-full bg-white border border-slate-300 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 font-bold" placeholder="1.0" step="0.01" value="${data ? data.beta : ''}">
+                    <input type="number" inputmode="decimal" class="asset-beta w-full bg-white border border-slate-300 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 font-bold" placeholder="1.0" step="0.01" value="${data ? data.beta : ''}">
                 </div>
                 <div class="col-span-1 sm:col-span-1 flex justify-end sm:justify-center">
                     <button class="delete-btn text-rose-500 hover:text-rose-700 bg-rose-50 p-2 rounded-lg transition-colors" title="Remove row">

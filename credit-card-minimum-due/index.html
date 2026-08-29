@@ -218,7 +218,7 @@
                         <label class="font-semibold text-slate-700">Total Outstanding Card Bill</label>
                         <div class="relative">
                             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
-                            <input type="number" id="balanceInput" value="50000" min="5000" step="5000" class="w-36 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                            <input type="number" inputmode="numeric" id="balanceInput" value="50000" min="5000" step="5000" class="w-36 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
                         </div>
                     </div>
                     <input type="range" id="balanceRange" min="5000" max="500000" step="5000" value="50000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
@@ -229,7 +229,7 @@
                     <div class="flex justify-between mb-2">
                         <label class="font-semibold text-slate-700">Monthly Interest Rate (%)</label>
                         <div class="relative">
-                            <input type="number" id="monthlyRateInput" value="3.5" min="1.5" max="4.5" step="0.1" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-7 font-bold">
+                            <input type="number" inputmode="decimal" id="monthlyRateInput" value="3.5" min="1.5" max="4.5" step="0.1" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-7 font-bold">
                             <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">%</span>
                         </div>
                     </div>
@@ -241,7 +241,7 @@
                     <div class="flex justify-between mb-2">
                         <label class="font-semibold text-slate-700">Minimum Due Percentage</label>
                         <div class="relative">
-                            <input type="number" id="madPctInput" value="5" min="5" max="15" step="1" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-7 font-bold">
+                            <input type="number" inputmode="decimal" id="madPctInput" value="5" min="5" max="15" step="1" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-7 font-bold">
                             <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">%</span>
                         </div>
                     </div>

@@ -194,7 +194,7 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600">Total Options / Shares</label>
-                            <input type="number" id="sharesInput" value="1000" min="1" class="w-24 px-2 py-1 border border-slate-200 rounded-lg text-right font-bold text-indigo-600">
+                            <input type="number" inputmode="numeric" id="sharesInput" value="1000" min="1" class="w-24 px-2 py-1 border border-slate-200 rounded-lg text-right font-bold text-indigo-600">
                         </div>
                         <input type="range" id="sharesRange" min="100" max="50000" step="100" value="1000" class="w-full py-2 cursor-pointer">
                     </div>
@@ -202,11 +202,11 @@
                     <div class="grid grid-cols-2 gap-4 mb-8">
                         <div>
                             <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Exercise Price (₹)</label>
-                            <input type="number" id="strikeInput" value="10" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                            <input type="number" inputmode="numeric" id="strikeInput" value="10" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
                         </div>
                         <div>
                             <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Current FMV (₹)</label>
-                            <input type="number" id="fmvInput" value="150" min="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                            <input type="number" inputmode="numeric" id="fmvInput" value="150" min="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
                         </div>
                     </div>
 

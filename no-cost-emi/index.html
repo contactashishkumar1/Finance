@@ -182,7 +182,7 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600">Product Price (₹)</label>
-                            <input type="number" id="priceInput" value="50000" step="1000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all text-pretty">
+                            <input type="number" inputmode="numeric" id="priceInput" value="50000" step="1000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all text-pretty">
                         </div>
                         <input type="range" id="priceRange" min="5000" max="500000" step="1000" value="50000" class="w-full">
                     </div>
@@ -190,7 +190,7 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600">Down Payment (₹)</label>
-                            <input type="number" id="downInput" value="0" step="500" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all text-pretty">
+                            <input type="number" inputmode="numeric" id="downInput" value="0" step="500" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all text-pretty">
                         </div>
                         <input type="range" id="downRange" min="0" max="400000" step="500" value="0" class="w-full">
                     </div>
@@ -198,7 +198,7 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600 text-pretty">Tenure (Months)</label>
-                            <input type="number" id="tenureInput" value="12" step="1" class="w-20 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all text-pretty text-pretty">
+                            <input type="number" inputmode="numeric" id="tenureInput" value="12" step="1" class="w-20 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all text-pretty text-pretty">
                         </div>
                         <input type="range" id="tenureRange" min="3" max="36" step="3" value="12" class="w-full">
                     </div>
@@ -206,7 +206,7 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600 text-pretty">Bank Interest Rate (% p.a)</label>
-                            <input type="number" id="rateInput" value="15" step="0.1" class="w-20 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all text-pretty">
+                            <input type="number" inputmode="decimal" id="rateInput" value="15" step="0.1" class="w-20 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all text-pretty">
                         </div>
                         <input type="range" id="rateRange" min="5" max="25" step="0.1" value="15" class="w-full">
                     </div>
@@ -214,7 +214,7 @@
                     <div class="mb-6">
                         <div class="flex justify-between items-center mb-3 text-pretty">
                             <label class="text-sm font-medium text-slate-600">Processing Fee (₹ incl. GST)</label>
-                            <input type="number" id="feeInput" value="235" step="1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all text-pretty text-pretty">
+                            <input type="number" inputmode="numeric" id="feeInput" value="235" step="1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all text-pretty text-pretty">
                         </div>
                         <p class="text-[9px] text-slate-400">Common: ₹199 + 18% GST ≈ ₹235</p>
                     </div>

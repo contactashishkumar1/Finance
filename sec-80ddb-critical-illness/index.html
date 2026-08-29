@@ -241,18 +241,18 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
                     <div>
                         <label class="block text-xs font-semibold text-slate-600 mb-1.5">Total Medical Expenses Incurred (₹)</label>
-                        <input type="number" id="totalExpense" placeholder="120000" value="120000" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-rose-400 outline-none text-sm">
+                        <input type="number" inputmode="decimal" id="totalExpense" placeholder="120000" value="120000" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-rose-400 outline-none text-sm">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-600 mb-1.5">Insurance / Employer Claim Received (₹)</label>
-                        <input type="number" id="reimbursedAmount" placeholder="30000" value="30000" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-rose-400 outline-none text-sm">
+                        <input type="number" inputmode="numeric" id="reimbursedAmount" placeholder="30000" value="30000" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-rose-400 outline-none text-sm">
                     </div>
                 </div>
 
                 <!-- Tax Slab -->
                 <div class="mb-6">
                     <label class="block text-xs font-semibold text-slate-600 mb-1.5">Your Income Tax Slab Rate (%)</label>
-                    <input type="number" id="taxSlab" placeholder="30" value="30" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-rose-400 outline-none text-sm">
+                    <input type="number" inputmode="numeric" id="taxSlab" placeholder="30" value="30" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-rose-400 outline-none text-sm">
                 </div>
 
                 <div class="flex gap-3">

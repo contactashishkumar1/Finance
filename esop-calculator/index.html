@@ -204,16 +204,16 @@
                     <div class="space-y-4 mb-8 text-pretty">
                         <div>
                             <label class="text-sm font-medium text-slate-600 block mb-2 text-pretty">Total Options Granted</label>
-                            <input type="number" id="totalOptions" value="1000" min="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500 text-pretty">
+                            <input type="number" inputmode="numeric" id="totalOptions" value="1000" min="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500 text-pretty">
                         </div>
                         <div class="grid grid-cols-2 gap-4 text-pretty text-pretty">
                             <div>
                                 <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1 text-pretty">Strike Price (₹)</label>
-                                <input type="number" id="strikePrice" value="10" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold text-pretty">
+                                <input type="number" inputmode="numeric" id="strikePrice" value="10" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold text-pretty">
                             </div>
                             <div>
                                 <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1 text-pretty text-pretty">Current FMV (₹)</label>
-                                <input type="number" id="currentFmv" value="150" min="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold text-pretty">
+                                <input type="number" inputmode="numeric" id="currentFmv" value="150" min="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold text-pretty">
                             </div>
                         </div>
                         <p class="text-[10px] text-slate-400 italic text-pretty">FMV is usually the price from the last funding round.</p>
@@ -223,11 +223,11 @@
                     <div class="grid grid-cols-2 gap-4 mb-8 text-pretty text-pretty text-pretty">
                         <div>
                             <label class="text-xs font-medium text-slate-600 block mb-2 text-pretty text-pretty">Vesting Period (Yrs)</label>
-                            <input type="number" id="vestingYears" value="4" min="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold text-pretty">
+                            <input type="number" inputmode="numeric" id="vestingYears" value="4" min="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold text-pretty">
                         </div>
                         <div>
                             <label class="text-xs font-medium text-slate-600 block mb-2 text-pretty text-pretty">Cliff Period (Yrs)</label>
-                            <input type="number" id="cliffYears" value="1" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold text-pretty">
+                            <input type="number" inputmode="numeric" id="cliffYears" value="1" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold text-pretty">
                         </div>
                     </div>
 

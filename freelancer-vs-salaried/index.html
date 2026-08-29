@@ -186,7 +186,7 @@
                     <div class="mb-8 text-pretty">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Annual Gross Income / CTC (₹)</label>
-                            <input type="number" id="grossIncome" value="3000000" min="0" step="50000" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                            <input type="number" inputmode="numeric" id="grossIncome" value="3000000" min="0" step="50000" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                         </div>
                         <input type="range" id="grossRange" min="500000" max="7500000" step="50000" value="3000000" class="w-full py-2 cursor-pointer text-pretty">
                         <p class="text-[10px] text-slate-400 italic mt-1 text-pretty">44ADA limit is ₹50L, or ₹75L only when cash receipts are at most 5%.</p>
@@ -194,7 +194,7 @@
 
                     <div class="mb-6">
                         <label class="text-sm font-medium text-slate-600 block mb-2">Cash Receipts in Freelance Turnover (₹)</label>
-                        <input type="number" id="cashReceipts" value="0" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                        <input type="number" inputmode="numeric" id="cashReceipts" value="0" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
                         <p id="adaEligibility" class="text-[10px] text-slate-400 mt-1">₹75L eligibility requires cash receipts of 5% or less.</p>
                     </div>
 
@@ -203,11 +203,11 @@
                         <div class="grid grid-cols-2 gap-4">
                             <div>
                                 <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Standard Deduction (₹)</label>
-                                <input type="number" id="stdDed" value="75000" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold bg-slate-50" readonly>
+                                <input type="number" inputmode="numeric" id="stdDed" value="75000" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold bg-slate-50" readonly>
                             </div>
                             <div>
                                 <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1 text-pretty">Prof. Tax (Annual ₹)</label>
-                                <input type="number" id="profTax" value="2500" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold text-pretty">
+                                <input type="number" inputmode="numeric" id="profTax" value="2500" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold text-pretty">
                             </div>
                         </div>
                     </div>

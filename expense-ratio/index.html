@@ -201,7 +201,7 @@
                     <div class="mb-8 text-pretty">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600 text-pretty">Initial Investment (<a href="/lumpsum/" class="underline font-bold">Lumpsum</a> ₹)</label>
-                            <input type="number" id="principalInput" value="100000" step="10000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="numeric" id="principalInput" value="100000" step="10000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="principalRange" min="0" max="10000000" step="10000" value="100000" class="w-full">
                     </div>
@@ -209,7 +209,7 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3 text-pretty">
                             <label class="text-sm font-medium text-slate-600 text-pretty">Monthly <a href="/sip/" class="underline font-bold">SIP</a> (Optional ₹)</label>
-                            <input type="number" id="sipInput" value="10000" step="500" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="numeric" id="sipInput" value="10000" step="500" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="sipRange" min="0" max="500000" step="500" value="10000" class="w-full">
                     </div>
@@ -217,7 +217,7 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600">Expected Annual Return (%)</label>
-                            <input type="number" id="rateInput" value="12" step="0.1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="decimal" id="rateInput" value="12" step="0.1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="rateRange" min="1" max="30" step="0.1" value="12" class="w-full">
                     </div>
@@ -225,7 +225,7 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600 text-pretty">Expense Ratio (%)</label>
-                            <input type="number" id="expenseInput" value="1" step="0.01" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="decimal" id="expenseInput" value="1" step="0.01" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="expenseRange" min="0.01" max="5" step="0.01" value="1" class="w-full">
                         <p class="text-[10px] text-slate-400 mt-2 italic text-pretty text-pretty">Standard: 0.1% to 2.5% for Indian Mutual Funds.</p>
@@ -234,7 +234,7 @@
                     <div class="mb-6">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600">Investment Tenure (Years)</label>
-                            <input type="number" id="yearsInput" value="20" step="1" class="w-20 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="numeric" id="yearsInput" value="20" step="1" class="w-20 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="yearsRange" min="1" max="50" step="1" value="20" class="w-full">
                     </div>

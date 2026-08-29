@@ -245,27 +245,27 @@
                     <div class="grid grid-cols-2 gap-4 mb-6">
                         <div>
                             <label for="buyPrice" class="text-xs font-bold text-slate-500 uppercase block mb-2">Buy Price (₹)</label>
-                            <input type="number" id="buyPrice" value="1000" step="0.05" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-bold text-sm focus:ring-2 focus:ring-blue-500">
+                            <input type="number" inputmode="decimal" id="buyPrice" value="1000" step="0.05" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-bold text-sm focus:ring-2 focus:ring-blue-500">
                         </div>
                         <div>
                             <label for="sellPrice" class="text-xs font-bold text-slate-500 uppercase block mb-2">Sell Price (₹)</label>
-                            <input type="number" id="sellPrice" value="1050" step="0.05" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-bold text-sm focus:ring-2 focus:ring-blue-500">
+                            <input type="number" inputmode="decimal" id="sellPrice" value="1050" step="0.05" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-bold text-sm focus:ring-2 focus:ring-blue-500">
                         </div>
                     </div>
 
                     <div class="mb-6">
                         <label for="quantity" class="text-xs font-bold text-slate-500 uppercase block mb-2">Quantity</label>
-                        <input type="number" id="quantity" value="100" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm">
+                        <input type="number" inputmode="numeric" id="quantity" value="100" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm">
                     </div>
 
                     <div class="grid grid-cols-2 gap-4 mb-6 text-pretty">
                         <div>
                             <label for="brokerageRate" class="text-xs font-bold text-slate-500 uppercase block mb-2 tracking-tighter">Max Brokerage / Order</label>
-                            <input type="number" id="brokerageRate" value="20" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-bold text-sm focus:ring-2 focus:ring-blue-500">
+                            <input type="number" inputmode="decimal" id="brokerageRate" value="20" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-bold text-sm focus:ring-2 focus:ring-blue-500">
                         </div>
                         <div>
                             <label for="dpChargeInput" class="text-xs font-bold text-slate-500 uppercase block mb-2 tracking-tighter">DP Charges (Incl. GST)</label>
-                            <input type="number" id="dpChargeInput" value="15.93" step="0.01" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-bold text-sm focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:bg-slate-50 disabled:cursor-not-allowed">
+                            <input type="number" inputmode="decimal" id="dpChargeInput" value="15.93" step="0.01" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-bold text-sm focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:bg-slate-50 disabled:cursor-not-allowed">
                         </div>
                     </div>
 

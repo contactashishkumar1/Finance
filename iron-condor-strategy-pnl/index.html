@@ -218,11 +218,11 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
                     <div>
                         <label class="block text-xs font-semibold text-slate-600 mb-1.5">Lot Size (Qty)</label>
-                        <input type="number" id="lotSize" placeholder="25" value="25" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                        <input type="number" inputmode="numeric" id="lotSize" placeholder="25" value="25" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-600 mb-1.5">Spread Width (Points)</label>
-                        <input type="number" id="spreadWidth" placeholder="300" value="300" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                        <input type="number" inputmode="numeric" id="spreadWidth" placeholder="300" value="300" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
                     </div>
                 </div>
 
@@ -230,18 +230,18 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
                     <div>
                         <label class="block text-xs font-semibold text-slate-600 mb-1.5">Sell Put Strike (Lower Inner) (₹)</label>
-                        <input type="number" id="shortPut" placeholder="23500" value="23500" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                        <input type="number" inputmode="numeric" id="shortPut" placeholder="23500" value="23500" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-600 mb-1.5">Sell Call Strike (Upper Inner) (₹)</label>
-                        <input type="number" id="shortCall" placeholder="24500" value="24500" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                        <input type="number" inputmode="numeric" id="shortCall" placeholder="24500" value="24500" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
                     </div>
                 </div>
 
                 <!-- Total Net Credit Received per Share -->
                 <div class="mb-6">
                     <label class="block text-xs font-semibold text-slate-600 mb-1.5">Net Credit Collected per Unit (Put Credit + Call Credit) (₹)</label>
-                    <input type="number" id="netCredit" placeholder="85" value="85" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
+                    <input type="number" inputmode="numeric" id="netCredit" placeholder="85" value="85" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-bold focus:ring-2 focus:ring-sky-400 outline-none text-sm">
                 </div>
 
                 <div class="flex gap-3">

@@ -214,28 +214,28 @@
 
                 <div>
                     <label class="font-semibold text-slate-700 text-xs block mb-1">Blocked Exchange Margin (₹)</label>
-                    <input type="number" id="marginInput" value="150000" min="10000" step="10000" class="w-full p-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold">
+                    <input type="number" inputmode="decimal" id="marginInput" value="150000" min="10000" step="10000" class="w-full p-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold">
                 </div>
 
                 <div class="grid grid-cols-2 gap-2 text-xs">
                     <div>
                         <label class="font-semibold text-slate-700 block mb-1">Gross Premium Collected (₹)</label>
-                        <input type="number" id="premiumInput" value="4500" min="100" step="500" class="w-full p-2 bg-slate-50 border rounded-lg font-bold">
+                        <input type="number" inputmode="numeric" id="premiumInput" value="4500" min="100" step="500" class="w-full p-2 bg-slate-50 border rounded-lg font-bold">
                     </div>
                     <div>
                         <label class="font-semibold text-slate-700 block mb-1">Holding Period (Days to Expiry)</label>
-                        <input type="number" id="dteInput" value="7" min="1" max="90" step="1" class="w-full p-2 bg-slate-50 border rounded-lg font-bold">
+                        <input type="number" inputmode="numeric" id="dteInput" value="7" min="1" max="90" step="1" class="w-full p-2 bg-slate-50 border rounded-lg font-bold">
                     </div>
                 </div>
 
                 <div class="grid grid-cols-2 gap-2 text-xs">
                     <div>
                         <label class="font-semibold text-slate-700 block mb-1">Brokerage & Taxes per Trade (₹)</label>
-                        <input type="number" id="chargesInput" value="120" min="0" step="10" class="w-full p-2 bg-slate-50 border rounded-lg font-bold">
+                        <input type="number" inputmode="numeric" id="chargesInput" value="120" min="0" step="10" class="w-full p-2 bg-slate-50 border rounded-lg font-bold">
                     </div>
                     <div>
                         <label class="font-semibold text-slate-700 block mb-1">Target Premium Decay %</label>
-                        <input type="number" id="decayTargetInput" value="80" min="10" max="100" step="5" class="w-full p-2 bg-slate-50 border rounded-lg font-bold">
+                        <input type="number" inputmode="numeric" id="decayTargetInput" value="80" min="10" max="100" step="5" class="w-full p-2 bg-slate-50 border rounded-lg font-bold">
                     </div>
                 </div>
             </div>

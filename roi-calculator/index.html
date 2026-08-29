@@ -224,7 +224,7 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600">Investment Amount (₹)</label>
-                            <input type="number" id="investmentInput" value="100000" step="1000" class="w-32 px-3 py-2 border border-slate-200 rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none">
+                            <input type="number" inputmode="numeric" id="investmentInput" value="100000" step="1000" class="w-32 px-3 py-2 border border-slate-200 rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none">
                         </div>
                         <input type="range" id="investmentRange" min="1000" max="10000000" step="5000" value="100000" class="w-full">
                     </div>
@@ -232,7 +232,7 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3">
                             <label id="returnLabel" class="text-sm font-medium text-slate-600">Final Value / Return (₹)</label>
-                            <input type="number" id="returnInput" value="125000" step="1000" class="w-32 px-3 py-2 border border-slate-200 rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none">
+                            <input type="number" inputmode="decimal" id="returnInput" value="125000" step="1000" class="w-32 px-3 py-2 border border-slate-200 rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none">
                         </div>
                         <input type="range" id="returnRange" min="1000" max="20000000" step="5000" value="125000" class="w-full">
                     </div>
@@ -240,7 +240,7 @@
                     <div class="mb-6">
                         <div class="flex justify-between items-center mb-3 text-pretty">
                             <label class="text-sm font-medium text-slate-600">Duration (Years - Optional)</label>
-                            <input type="number" id="yearsInput" value="0" step="1" class="w-20 px-3 py-2 border border-slate-200 rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 text-sm">
+                            <input type="number" inputmode="numeric" id="yearsInput" value="0" step="1" class="w-20 px-3 py-2 border border-slate-200 rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 text-sm">
                         </div>
                         <input type="range" id="yearsRange" min="0" max="40" step="1" value="0" class="w-full">
                     </div>

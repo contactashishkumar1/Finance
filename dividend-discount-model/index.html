@@ -218,7 +218,7 @@
                         <label class="font-semibold text-slate-700">Current Annual Dividend Per Share (D0)</label>
                         <div class="relative">
                             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
-                            <input type="number" id="divInput" value="25.0" min="0.5" step="0.5" class="w-32 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                            <input type="number" inputmode="decimal" id="divInput" value="25.0" min="0.5" step="0.5" class="w-32 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
                         </div>
                     </div>
                     <input type="range" id="divRange" min="0.5" max="200" step="0.5" value="25.0" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
@@ -229,7 +229,7 @@
                     <div class="flex justify-between mb-2">
                         <label class="font-semibold text-slate-700">Constant Dividend Growth Rate (g)</label>
                         <div class="relative">
-                            <input type="number" id="gRateInput" value="6.0" min="0.5" max="15" step="0.1" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-7 font-bold">
+                            <input type="number" inputmode="decimal" id="gRateInput" value="6.0" min="0.5" max="15" step="0.1" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-7 font-bold">
                             <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium text-xs">%</span>
                         </div>
                     </div>
@@ -241,7 +241,7 @@
                     <div class="flex justify-between mb-2">
                         <label class="font-semibold text-slate-700">Required Return / Cost of Equity (r)</label>
                         <div class="relative">
-                            <input type="number" id="rRateInput" value="11.5" min="1.0" max="25" step="0.1" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-7 font-bold">
+                            <input type="number" inputmode="decimal" id="rRateInput" value="11.5" min="1.0" max="25" step="0.1" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-7 font-bold">
                             <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium text-xs">%</span>
                         </div>
                     </div>
@@ -254,7 +254,7 @@
                         <label class="font-semibold text-slate-700">Current Market Price (CMP)</label>
                         <div class="relative">
                             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
-                            <input type="number" id="cmpInput" value="420" min="10" step="10" class="w-32 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                            <input type="number" inputmode="numeric" id="cmpInput" value="420" min="10" step="10" class="w-32 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
                         </div>
                     </div>
                 </div>

@@ -218,7 +218,7 @@
                         <label class="font-semibold text-slate-700">Monthly Salary (Gross or Basic)</label>
                         <div class="relative">
                             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium">₹</span>
-                            <input type="number" id="monthlySalaryInput" value="90000" min="10000" step="5000" class="w-36 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
+                            <input type="number" inputmode="numeric" id="monthlySalaryInput" value="90000" min="10000" step="5000" class="w-36 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pl-7 font-bold">
                         </div>
                     </div>
                     <input type="range" id="monthlySalaryRange" min="10000" max="500000" step="5000" value="90000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
@@ -229,7 +229,7 @@
                     <div class="flex justify-between mb-2">
                         <label class="font-semibold text-slate-700">Company Notice Period</label>
                         <div class="relative">
-                            <input type="number" id="totalNoticeDaysInput" value="90" min="15" max="180" step="15" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-10 font-bold">
+                            <input type="number" inputmode="numeric" id="totalNoticeDaysInput" value="90" min="15" max="180" step="15" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-10 font-bold">
                             <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium text-xs">Days</span>
                         </div>
                     </div>
@@ -240,7 +240,7 @@
                     <div class="flex justify-between mb-2">
                         <label class="font-semibold text-slate-700">Unserved Notice Days (Shortfall)</label>
                         <div class="relative">
-                            <input type="number" id="unservedDaysInput" value="30" min="0" max="180" step="1" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-10 font-bold">
+                            <input type="number" inputmode="numeric" id="unservedDaysInput" value="30" min="0" max="180" step="1" class="w-28 text-right bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 pr-10 font-bold">
                             <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 font-medium text-xs">Days</span>
                         </div>
                     </div>

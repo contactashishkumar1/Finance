@@ -186,7 +186,7 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-1">
                             <label class="text-sm font-medium text-slate-600">Statement Balance (₹)</label>
-                            <input type="number" id="balanceInput" value="50000" step="1000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="numeric" id="balanceInput" value="50000" step="1000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <p class="text-[10px] text-slate-400 mb-3 font-normal">The total unpaid amount from your credit card bill.</p>
                         <input type="range" id="balanceRange" min="1000" max="1000000" step="1000" value="50000" class="w-full">
@@ -195,7 +195,7 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-1 text-pretty">
                             <label class="text-sm font-medium text-slate-600">Interest Rate (APR % p.a)</label>
-                            <input type="number" id="rateInput" value="36" step="0.5" class="w-20 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="decimal" id="rateInput" value="36" step="0.5" class="w-20 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <p class="text-[10px] text-slate-400 mb-3 font-normal">Yearly interest charged by your bank (Typical: 36% to 42%).</p>
                         <input type="range" id="rateRange" min="12" max="48" step="0.5" value="36" class="w-full">
@@ -204,7 +204,7 @@
                     <div class="mb-8 text-pretty">
                         <div class="flex justify-between items-center mb-1">
                             <label class="text-sm font-medium text-slate-600 text-pretty">Minimum Due (%)</label>
-                            <input type="number" id="minPercInput" value="5" step="0.5" class="w-20 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="decimal" id="minPercInput" value="5" step="0.5" class="w-20 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <p class="text-[10px] text-slate-400 mb-3 font-normal">Smallest % required to pay to avoid late fees (Standard: 5%).</p>
                         <input type="range" id="minPercRange" min="2" max="15" step="0.5" value="5" class="w-full">
@@ -213,7 +213,7 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-1 text-pretty">
                             <label class="text-sm font-medium text-slate-600">Fixed Monthly Payment (₹)</label>
-                            <input type="number" id="monthlyInput" value="2500" step="100" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="numeric" id="monthlyInput" value="2500" step="100" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <p class="text-[10px] text-slate-400 mb-3 font-normal">The amount you plan to pay every month to clear this debt.</p>
                         <input type="range" id="monthlyRange" min="1000" max="100000" step="500" value="2500" class="w-full">
@@ -222,7 +222,7 @@
                     <div class="mb-6">
                         <div class="flex justify-between items-center mb-1 text-pretty">
                             <label class="text-sm font-medium text-slate-600">Days Late / Interest Period</label>
-                            <input type="number" id="daysInput" value="0" step="1" class="w-20 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" inputmode="numeric" id="daysInput" value="0" step="1" class="w-20 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <p class="text-[10px] text-slate-400 mb-3 font-normal">Days past your due date used to calculate immediate daily interest.</p>
                         <input type="range" id="daysRange" min="0" max="90" step="1" value="0" class="w-full">

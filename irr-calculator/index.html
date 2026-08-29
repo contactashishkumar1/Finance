@@ -202,18 +202,18 @@
 
                     <div class="mb-6">
                         <label for="initialInvestInp" class="text-xs font-bold text-slate-500 uppercase block mb-2 tracking-tight">Initial Investment (₹)</label>
-                        <input type="number" id="initialInvestInp" value="500000" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
+                        <input type="number" inputmode="numeric" id="initialInvestInp" value="500000" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
                         <p class="text-[9px] text-slate-400 mt-2 italic">Amount spent at Year 0 (Outflow).</p>
                     </div>
 
                     <div class="mb-6">
                         <label for="tenureInp" class="text-xs font-bold text-slate-500 uppercase block mb-2 tracking-tight">Period (Years)</label>
-                        <input type="number" id="tenureInp" value="5" min="1" max="25" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+                        <input type="number" inputmode="numeric" id="tenureInp" value="5" min="1" max="25" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 outline-none transition-all">
                     </div>
 
                     <div id="simpleFlow" class="mb-8">
                         <label for="fixedFlowInp" class="text-xs font-bold text-slate-500 uppercase block mb-2 tracking-tight">Annual Cash Inflow (₹)</label>
-                        <input type="number" id="fixedFlowInp" value="150000" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
+                        <input type="number" inputmode="numeric" id="fixedFlowInp" value="150000" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
                         <p class="text-[9px] text-slate-400 mt-2 italic">Uniform amount expected every year.</p>
                     </div>
 
@@ -226,7 +226,7 @@
 
                     <div class="pt-6 border-t border-slate-100 mb-6">
                         <label for="requiredReturnInp" class="text-xs font-bold text-slate-400 uppercase block mb-2 tracking-tight">Required Return / Hurdle Rate (%)</label>
-                        <input type="number" id="requiredReturnInp" value="10" step="0.1" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none">
+                        <input type="number" inputmode="decimal" id="requiredReturnInp" value="10" step="0.1" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none">
                     </div>
 
                     <button type="button" onclick="calculate()" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all text-pretty">Calculate IRR %</button>
@@ -416,7 +416,7 @@
                 div.className = 'flex items-center gap-4';
                 div.innerHTML = `
                     <span class="text-xs font-bold text-slate-400 w-12">Year ${i}</span>
-                    <input type="number" class="flow-item flex-1 px-3 py-2 border rounded-lg text-sm font-bold focus:ring-2 focus:ring-blue-500" value="${elements.fixedFlowInp.value}">
+                    <input type="number" inputmode="numeric" class="flow-item flex-1 px-3 py-2 border rounded-lg text-sm font-bold focus:ring-2 focus:ring-blue-500" value="${elements.fixedFlowInp.value}">
                 `;
                 elements.cashFlowInputs.appendChild(div);
             }
