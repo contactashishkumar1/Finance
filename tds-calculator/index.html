@@ -527,7 +527,9 @@
             document.getElementById("navbar").innerHTML = data;
             const btn = document.getElementById("menuBtn");
             const menu = document.getElementById("mobileMenu");
-            if(btn){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
+            if(btn){ btn.addEventListener("click", () => { const isOpen = menu.classList.toggle("hidden") === false;
+   btn.setAttribute("aria-expanded", String(isOpen));
+   btn.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu"); }); }
         });
         fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
     </script>

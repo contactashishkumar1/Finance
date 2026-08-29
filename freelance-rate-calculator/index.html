@@ -467,7 +467,11 @@
             document.getElementById('navbar').innerHTML = h;
             const btn = document.getElementById('menuBtn');
             const menu = document.getElementById('mobileMenu');
-            if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+            if (btn && menu) btn.addEventListener('click', () => {
+   const isOpen = menu.classList.toggle('hidden') === false;
+   btn.setAttribute('aria-expanded', String(isOpen));
+   btn.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+  });
         });
         fetch('/footer.html').then(r => r.text()).then(h => { document.getElementById('footer').innerHTML = h; });
     </script>
