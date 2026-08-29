@@ -9,7 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const menu = document.getElementById("mobileMenu");
         if (btn && menu) {
           btn.addEventListener("click", () => {
-            menu.classList.toggle("hidden");
+            const isOpen = menu.classList.toggle("hidden") === false;
+            btn.setAttribute("aria-expanded", String(isOpen));
+            btn.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
           });
         }
       }

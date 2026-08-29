@@ -2490,13 +2490,13 @@
         // Create mobile floating pill container
         const pill = document.createElement("div");
         pill.id = "mobileQuickResultPill";
-        pill.className = "fixed bottom-4 left-1/2 -translate-x-1/2 z-40 bg-slate-900/95 backdrop-blur text-white px-4 py-2 rounded-full shadow-2xl border border-slate-700/60 flex items-center gap-2.5 max-w-[92vw] transition-all duration-300 transform translate-y-12 opacity-0 pointer-events-none text-xs md:hidden";
+        pill.className = "fixed bottom-4 left-1/2 -translate-x-1/2 z-40 bg-slate-900/95 backdrop-blur text-white px-4 py-2.5 rounded-full shadow-2xl border border-slate-700/60 flex items-center gap-2.5 max-w-[92vw] min-h-[44px] transition-all duration-300 transform translate-y-12 opacity-0 pointer-events-none text-xs md:hidden";
         pill.setAttribute("aria-live", "polite");
         pill.innerHTML = `
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
             <span id="mobilePillLabel" class="text-slate-400 font-medium truncate max-w-[120px]">${cleanLabel}:</span>
             <span id="mobilePillValue" class="font-bold text-white tracking-tight"></span>
-            <button type="button" id="mobilePillScrollBtn" class="ml-1 pl-2 border-l border-slate-700 text-blue-400 font-semibold hover:text-blue-300 flex items-center gap-0.5 shrink-0">View ↓</button>
+            <button type="button" id="mobilePillScrollBtn" class="ml-1 pl-2 border-l border-slate-700 text-blue-400 font-semibold hover:text-blue-300 flex items-center gap-0.5 shrink-0 self-stretch px-2">View ↓</button>
         `;
         document.body.appendChild(pill);
 
