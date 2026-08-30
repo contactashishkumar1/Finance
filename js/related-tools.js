@@ -2424,6 +2424,7 @@
 
         // 1. Explicit verified primary financial result IDs across ArthCalculator
         const explicitResultSelectors = [
+            "#mainTaxDisplay", "#monthlyEmiVal", "#phase1EmiVal",
             "#maturityValue", "#taxLabel", "#profitVal", "#emiValDisp", "#netTax",
             "#taxPayable", "#profitDisplay", "#cibilScore", "#costOfDebt", "#capitalGainsTax",
             "#cagrValue", "#resTax", "#netProfitDisp", "#adaTax", "#beUnitsDisp",
@@ -2477,26 +2478,28 @@
 
         // 3. Extract or derive label safely from result container
         let cleanLabel = "Result";
-        const labelElem = resultCard.querySelector("h2, h3, p.uppercase, [class*='uppercase']");
-        if (labelElem && labelElem.tagName !== "H1") {
-            const rawLabel = labelElem.textContent.trim();
-            if (rawLabel && rawLabel.length <= 25) {
+        const labelElem = valueElem.closest("div")?.parentElement?.querySelector("h2, h3, p.uppercase, [class*='uppercase'], span.uppercase, p, label") ||
+                          valueElem.closest("div")?.querySelector("h2, h3, p.uppercase, [class*='uppercase'], span.uppercase, p, label") ||
+                          resultCard.querySelector("[class*='uppercase'], h2, h3, p");
+
+        if (labelElem && labelElem.tagName !== "H1" && labelElem !== valueElem && !labelElem.closest("header") && !labelElem.closest("nav")) {
+            const rawLabel = labelElem.textContent.trim().replace(/\s+/g, " ").replace(/[:：]$/, "");
+            if (rawLabel && !rawLabel.startsWith("₹") && !/^\d+$/.test(rawLabel)) {
                 cleanLabel = rawLabel;
-            } else if (rawLabel && rawLabel.length > 25) {
-                cleanLabel = rawLabel.substring(0, 22) + "…";
             }
         }
 
-        // Create mobile floating pill container
+        // 4. Create mobile floating pill container (Single declaration, single className, unique IDs)
         const pill = document.createElement("div");
         pill.id = "mobileQuickResultPill";
-        pill.className = "fixed bottom-4 left-1/2 -translate-x-1/2 z-40 bg-slate-900/95 backdrop-blur text-white px-4 py-2.5 rounded-full shadow-2xl border border-slate-700/60 flex items-center gap-2.5 max-w-[92vw] min-h-[44px] transition-all duration-300 transform translate-y-12 opacity-0 pointer-events-none text-xs md:hidden";
+        pill.className = "fixed bottom-4 left-1/2 -translate-x-1/2 z-40 bg-slate-900/95 backdrop-blur text-white px-3.5 py-2 rounded-full shadow-2xl border border-slate-700/60 flex items-center gap-2 max-w-[95vw] transition-all duration-300 transform translate-y-12 opacity-0 pointer-events-none text-xs md:hidden";
+        pill.style.minHeight = "44px";
         pill.setAttribute("aria-live", "polite");
         pill.innerHTML = `
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
-            <span id="mobilePillLabel" class="text-slate-400 font-medium truncate max-w-[120px]">${cleanLabel}:</span>
-            <span id="mobilePillValue" class="font-bold text-white tracking-tight"></span>
-            <button type="button" id="mobilePillScrollBtn" class="ml-1 pl-2 border-l border-slate-700 text-blue-400 font-semibold hover:text-blue-300 flex items-center gap-0.5 shrink-0 self-stretch px-2">View ↓</button>
+            <span id="mobilePillLabel" class="text-slate-300 font-medium min-w-0 shrink truncate leading-tight">${cleanLabel}:</span>
+            <span id="mobilePillValue" class="font-bold text-white tracking-tight whitespace-nowrap shrink-0"></span>
+            <button type="button" id="mobilePillScrollBtn" class="ml-0.5 pl-2 border-l border-slate-700 text-blue-400 font-semibold hover:text-blue-300 flex items-center gap-0.5 shrink-0 self-stretch px-1.5 focus:outline-none">View ↓</button>
         `;
         document.body.appendChild(pill);
 
@@ -2506,7 +2509,7 @@
         function updatePillValue() {
             if (valueElem && pillValue) {
                 const currentVal = valueElem.textContent.trim();
-                if (currentVal && currentVal.length <= 35) {
+                if (currentVal) {
                     pillValue.textContent = currentVal;
                 }
             }
