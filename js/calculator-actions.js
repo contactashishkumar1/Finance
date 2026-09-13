@@ -240,13 +240,32 @@
         }
     }
 
+    // 5. UNIVERSAL FAQ ACCORDION INTERACTION NORMALIZATION
+    function initFaqAccordionStyles() {
+        if (document.getElementById('arth-faq-accordion-styles')) return;
+        const style = document.createElement('style');
+        style.id = 'arth-faq-accordion-styles';
+        style.textContent = `
+            details summary { list-style: none; }
+            details summary::-webkit-details-marker { display: none; }
+            details summary svg { transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
+            details[open] summary svg { transform: rotate(180deg); }
+            details[open] summary { background-color: #f8fafc; }
+            details[open] { border-color: #cbd5e1; }
+        `;
+        document.head.appendChild(style);
+    }
+
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
             initLiveCalculation();
+            initFaqAccordionStyles();
             setTimeout(updateDynamicInsights, 300);
         });
     } else {
         initLiveCalculation();
+        initFaqAccordionStyles();
         setTimeout(updateDynamicInsights, 300);
     }
 })();
+

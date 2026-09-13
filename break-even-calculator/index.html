@@ -135,6 +135,30 @@
         "@type": "Answer",
         "text": "Technically, yes\u2014if you have zero fixed costs. In such a case, every sale starting from the very first unit produces a profit."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Break-Even in Units vs Break-Even in Revenue?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Break-even in units tells you exactly how many items you must produce and sell to cover all costs. Break-even in revenue multiplies that unit volume by the selling price to show the exact rupee turnover required to achieve zero net profit/loss."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do price discounts impact a company's break-even point?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Offering price discounts reduces the contribution margin per unit, which substantially raises the number of units you must sell to break even, increasing operational risk."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Margin of Safety in break-even analysis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Margin of Safety represents the percentage by which your actual sales can drop before the business begins incurring losses. A higher margin of safety indicates a resilient, low-risk business."
+      }
     }
   ]
 }
@@ -361,7 +385,31 @@
             </section>
 
             <!-- FAQ Section -->
-            <section class="max-w-4xl mx-auto py-10" id="faqs">
+            
+        <div class="mt-8">
+            <h3 class="text-lg font-bold text-slate-800 mb-3">Cost Classification & Contribution Margin Impact Matrix</h3>
+            <div class="overflow-x-auto border border-slate-200 rounded-xl my-4 shadow-sm">
+                <table class="w-full text-left text-xs sm:text-sm">
+                    <thead class="bg-slate-50 border-b border-slate-200 text-slate-700">
+                        <tr>
+                            <th class="px-4 py-3 font-semibold">Cost Component</th>
+                            <th class="px-4 py-3 font-semibold">Classification</th>
+                            <th class="px-4 py-3 font-semibold">Impact on Break-Even Point (BEP)</th>
+                            <th class="px-4 py-3 font-semibold">Optimization Strategy</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-600">
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Office Rent & Executive Salaries</td><td class="px-4 py-3">Fixed Cost (FC)</td><td class="px-4 py-3">Direct linear increase in break-even units</td><td class="px-4 py-3">Negotiate revenue-share or co-working leases to convert fixed to variable.</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Raw Materials & Direct Packaging</td><td class="px-4 py-3">Variable Cost (VC)</td><td class="px-4 py-3">Reduces Contribution Margin (Price − VC)</td><td class="px-4 py-3">Bulk procurement discounts and alternate vendor agreements.</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Sales Commissions & Shipping</td><td class="px-4 py-3">Variable Cost (VC)</td><td class="px-4 py-3">Increases volume needed to clear fixed overheads</td><td class="px-4 py-3">Tiered commission structures that reward high-margin product sales.</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Equipment Depreciation & SaaS Subscriptions</td><td class="px-4 py-3">Fixed Overhead</td><td class="px-4 py-3">Requires baseline continuous cash flow</td><td class="px-4 py-3">Audit monthly recurring licenses and consolidate redundant tools.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+
+        <section class="max-w-4xl mx-auto py-10" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
                 <div class="space-y-4">
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">What is a break-even point?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">The break-even point is the production level or sales volume at which total revenues for a product exactly equal total expenses.</div></details>
@@ -369,6 +417,9 @@
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">What is the contribution margin?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">The contribution margin is the selling price per unit minus the variable cost per unit. It represents how much each sale contributes to covering fixed costs and creating profit.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How can I reduce my break-even point?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">You can reduce the BEP by lowering your fixed costs (e.g., cheaper rent), lowering variable costs (e.g., buying raw materials in bulk), or increasing your selling price.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Can a break-even point be zero?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Technically, yes—if you have zero fixed costs. In such a case, every sale starting from the very first unit produces a profit.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">6. What is the difference between Break-Even in Units vs Break-Even in Revenue?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Break-even in units tells you exactly how many items you must produce and sell to cover all costs. Break-even in revenue multiplies that unit volume by the selling price to show the exact rupee turnover required to achieve zero net profit/loss.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">7. How do price discounts impact a company's break-even point?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Offering price discounts reduces the contribution margin per unit, which substantially raises the number of units you must sell to break even, increasing operational risk.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">8. What is Margin of Safety in break-even analysis?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Margin of Safety represents the percentage by which your actual sales can drop before the business begins incurring losses. A higher margin of safety indicates a resilient, low-risk business.</div></details>
                 </div>
             </section>
 

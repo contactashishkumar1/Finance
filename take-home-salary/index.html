@@ -106,6 +106,46 @@
         "@type": "Answer",
         "text": "Yes, in many private companies, the gratuity component is part of the total CTC package. This amount is retained by the company to pay you at the time of exit (after 5 years)."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the zero-tax rebate limit under Section 87A for FY 2025-26?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under the New Tax Regime, taxable income up to ₹12,00,000 receives a full tax rebate under Section 87A. With the salaried standard deduction of ₹75,000, individuals earning up to ₹12.75 Lakhs pay zero income tax."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Professional Tax deducted from monthly salary in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Professional Tax is a state-level tax capped at ₹2,500 per year (typically deducted as ₹200/month and ₹300 in February in states like Maharashtra, Karnataka, and West Bengal)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can employee PF contribution be reduced to increase monthly take-home salary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under statutory rules, employee EPF is 12% of Basic + DA. If your Basic Salary exceeds ₹15,000/month, some employers allow capping the EPF contribution at 12% of ₹15,000 (₹1,800/month), increasing your monthly take-home cash."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Gross Salary, Net Salary, and CTC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CTC is the total annual cost incurred by the employer. Gross Salary is CTC minus employer retirement benefits (EPF/Gratuity/Insurance). Net Take-Home Salary is Gross Salary minus employee deductions (EPF, Professional Tax, and TDS)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are reimbursements part of taxable take-home salary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Legitimate business expense reimbursements backed by valid bills are exempt from income tax and do not attract TDS, effectively boosting net take-home pay."
+      }
     }
   ]
 }
@@ -380,12 +420,41 @@
             </section>
 
             <!-- FAQ Section -->
-            <section class="max-w-4xl mx-auto py-10" id="faqs">
+            
+        <div class="mt-8">
+            <h3 class="text-lg font-bold text-slate-800 mb-3">CTC Breakdown & Statutory In-Hand Deductions Structure</h3>
+            <div class="overflow-x-auto border border-slate-200 rounded-xl my-4 shadow-sm">
+                <table class="w-full text-left text-xs sm:text-sm">
+                    <thead class="bg-slate-50 border-b border-slate-200 text-slate-700">
+                        <tr>
+                            <th class="px-4 py-3 font-semibold">Salary Component</th>
+                            <th class="px-4 py-3 font-semibold">Standard Share of CTC</th>
+                            <th class="px-4 py-3 font-semibold">Taxability / Exemption Rules</th>
+                            <th class="px-4 py-3 font-semibold">Impact on Bank Credit</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-600">
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Basic Salary</td><td class="px-4 py-3 font-semibold text-blue-700">40% - 50% of CTC</td><td class="px-4 py-3">100% Taxable (Forms base for EPF & Gratuity)</td><td class="px-4 py-3">Credited monthly</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">House Rent Allowance (HRA)</td><td class="px-4 py-3">20% - 25% of CTC</td><td class="px-4 py-3 text-emerald-600 font-semibold">Exempt under Sec 10(13A) if paying rent (Old Regime)</td><td class="px-4 py-3">Credited monthly</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Employee Provident Fund (EPF)</td><td class="px-4 py-3">12% of Basic</td><td class="px-4 py-3 text-blue-600">Section 80C deduction eligible (Old Regime)</td><td class="px-4 py-3 text-red-600">Deducted from monthly pay into EPFO</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Professional Tax (PT)</td><td class="px-4 py-3">₹200 / month (₹2,500/yr)</td><td class="px-4 py-3">Deductible under Section 16(iii)</td><td class="px-4 py-3 text-red-600">Statutory state deduction</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+
+        <section class="max-w-4xl mx-auto py-10" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
                 <div class="space-y-4">
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How is in-hand salary calculated?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">It is calculated as: Monthly Gross Salary minus (Income Tax + Employee PF + Gratuity + Professional Tax + any other voluntary deductions).</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Is 4.81% the standard gratuity rate?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">Yes. Under the Payment of Gratuity Act, the formula used is (15/26 × Basic Salary × Years of service). Employers use the (15/26) fraction (approx 4.81%) to calculate the annual accrual in your CTC.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Does Gratuity reduce my monthly salary?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">Yes, in many private companies, the gratuity component is part of the total CTC package. This amount is retained by the company to pay you at the time of exit (after 5 years).</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">4. What is the zero-tax rebate limit under Section 87A for FY 2025-26?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Under the New Tax Regime, taxable income up to ₹12,00,000 receives a full tax rebate under Section 87A. With the salaried standard deduction of ₹75,000, individuals earning up to ₹12.75 Lakhs pay zero income tax.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">5. How is Professional Tax deducted from monthly salary in India?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Professional Tax is a state-level tax capped at ₹2,500 per year (typically deducted as ₹200/month and ₹300 in February in states like Maharashtra, Karnataka, and West Bengal).</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">6. Can employee PF contribution be reduced to increase monthly take-home salary?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Under statutory rules, employee EPF is 12% of Basic + DA. If your Basic Salary exceeds ₹15,000/month, some employers allow capping the EPF contribution at 12% of ₹15,000 (₹1,800/month), increasing your monthly take-home cash.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">7. What is the difference between Gross Salary, Net Salary, and CTC?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">CTC is the total annual cost incurred by the employer. Gross Salary is CTC minus employer retirement benefits (EPF/Gratuity/Insurance). Net Take-Home Salary is Gross Salary minus employee deductions (EPF, Professional Tax, and TDS).</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">8. Are reimbursements part of taxable take-home salary?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Legitimate business expense reimbursements backed by valid bills are exempt from income tax and do not attract TDS, effectively boosting net take-home pay.</div></details>
                 </div>
             </section>
 

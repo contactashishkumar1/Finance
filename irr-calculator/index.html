@@ -121,6 +121,38 @@
         "@type": "Answer",
         "text": "CAGR only looks at the beginning and end values. IRR looks at every single cash inflow and outflow during the investment period."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the fundamental reinvestment assumption of IRR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard IRR assumes all intermediate cash inflows are reinvested at the same IRR percentage rate. When this assumption is unrealistic, Modified Internal Rate of Return (MIRR) is preferred."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Hurdle Rate in IRR decision making?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The hurdle rate is the minimum rate of return required by a company or investor. An investment is accepted if its IRR exceeds the hurdle rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why can projects with unconventional cash flows have multiple IRRs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If cash flows change signs more than once (e.g. initial outflow, subsequent inflows, followed by another large outflow for site restoration), the polynomial equation yields multiple mathematical IRRs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does XIRR differ from standard IRR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard IRR assumes cash flows occur at equal periodic intervals. XIRR handles irregular cash flow dates, making it essential for mutual fund SIP and real estate transactions."
+      }
     }
   ]
 }
@@ -352,13 +384,40 @@
             </section>
 
             <!-- FAQ Section -->
-            <section class="max-w-4xl mx-auto py-10" id="faqs">
+            
+        <div class="mt-8">
+            <h3 class="text-lg font-bold text-slate-800 mb-3">Internal Rate of Return (IRR) Decision Matrix vs Hurdle Rate</h3>
+            <div class="overflow-x-auto border border-slate-200 rounded-xl my-4 shadow-sm">
+                <table class="w-full text-left text-xs sm:text-sm">
+                    <thead class="bg-slate-50 border-b border-slate-200 text-slate-700">
+                        <tr>
+                            <th class="px-4 py-3 font-semibold">IRR vs Hurdle Rate Condition</th>
+                            <th class="px-4 py-3 font-semibold">NPV Status at Cost of Capital</th>
+                            <th class="px-4 py-3 font-semibold">Corporate Finance Recommendation</th>
+                            <th class="px-4 py-3 font-semibold">Economic Meaning</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-600">
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-bold text-emerald-700">Project IRR &gt; Cost of Capital (WACC)</td><td class="px-4 py-3 font-semibold text-emerald-700">Positive NPV (NPV &gt; 0)</td><td class="px-4 py-3 font-bold text-emerald-700">ACCEPT THE PROJECT</td><td class="px-4 py-3">Creates shareholder wealth above the required cost of borrowing/equity.</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Project IRR = Cost of Capital (WACC)</td><td class="px-4 py-3 font-semibold text-slate-700">Breakeven NPV (NPV = 0)</td><td class="px-4 py-3 font-semibold text-amber-700">INDIFFERENT / MARGINAL</td><td class="px-4 py-3">Covers initial capital outlay and debt cost without generating economic value add (EVA).</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-bold text-red-600">Project IRR &lt; Cost of Capital (WACC)</td><td class="px-4 py-3 font-semibold text-red-600">Negative NPV (NPV &lt; 0)</td><td class="px-4 py-3 font-bold text-red-600">REJECT THE PROJECT</td><td class="px-4 py-3">Destroys shareholder value; cash flows fail to meet minimum opportunity cost.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+
+        <section class="max-w-4xl mx-auto py-10" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
                 <div class="space-y-4">
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is IRR?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">IRR stands for Internal Rate of Return. It is the annualized rate of earnings an investment generates over its life, considering the timing of every cash flow.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">How is IRR calculated?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">It is calculated using an iterative mathematical process to find the rate where the sum of discounted future cash flows equals the initial investment.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is a good IRR?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty text-pretty text-pretty">A "good" IRR depends on your required rate of return. However, in the Indian market, any IRR above 15% for a business project is generally considered attractive.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">Difference between IRR and CAGR?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty text-pretty text-pretty">CAGR only looks at the beginning and end values. IRR looks at every single cash inflow and outflow during the investment period.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">5. What is the fundamental reinvestment assumption of IRR?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Standard IRR assumes all intermediate cash inflows are reinvested at the same IRR percentage rate. When this assumption is unrealistic, Modified Internal Rate of Return (MIRR) is preferred.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">6. What is the Hurdle Rate in IRR decision making?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">The hurdle rate is the minimum rate of return required by a company or investor. An investment is accepted if its IRR exceeds the hurdle rate.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">7. Why can projects with unconventional cash flows have multiple IRRs?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">If cash flows change signs more than once (e.g. initial outflow, subsequent inflows, followed by another large outflow for site restoration), the polynomial equation yields multiple mathematical IRRs.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">8. How does XIRR differ from standard IRR?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Standard IRR assumes cash flows occur at equal periodic intervals. XIRR handles irregular cash flow dates, making it essential for mutual fund SIP and real estate transactions.</div></details>
                 </div>
             </section>
 

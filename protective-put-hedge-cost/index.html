@@ -351,6 +351,29 @@
         </section>
 
         <!-- FAQs -->
+        
+        <div class="mt-8">
+            <h3 class="text-lg font-bold text-slate-800 mb-3">Protective Put Insurance Cost vs Downside Floor Matrix</h3>
+            <div class="overflow-x-auto border border-slate-200 rounded-xl my-4 shadow-sm">
+                <table class="w-full text-left text-xs sm:text-sm">
+                    <thead class="bg-slate-50 border-b border-slate-200 text-slate-700">
+                        <tr>
+                            <th class="px-4 py-3 font-semibold">Put Option Moneyness</th>
+                            <th class="px-4 py-3 font-semibold">Typical Monthly Premium Cost</th>
+                            <th class="px-4 py-3 font-semibold">Protected Portfolio Floor</th>
+                            <th class="px-4 py-3 font-semibold">Optimal Hedging Use Case</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-600">
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">At-The-Money (ATM 100%)</td><td class="px-4 py-3 text-red-600 font-semibold">2.0% - 3.5% of stock value</td><td class="px-4 py-3 font-bold text-emerald-700">100% Floor (Zero downside risk)</td><td class="px-4 py-3">High-risk quarterly earnings or union budget event volatility.</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">5% Out-of-the-Money (OTM 95%)</td><td class="px-4 py-3 text-blue-700">1.0% - 1.8% of stock value</td><td class="px-4 py-3 font-semibold text-blue-700">95% Floor (Max 5% loss)</td><td class="px-4 py-3">Cost-effective monthly insurance for long equity portfolios.</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">10% Out-of-the-Money (OTM 90%)</td><td class="px-4 py-3 text-emerald-600 font-semibold">0.4% - 0.8% of stock value</td><td class="px-4 py-3 font-medium">90% Floor (Max 10% loss)</td><td class="px-4 py-3">Catastrophic crash insurance / Black swan tail risk hedging.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+
         <section id="faqs" class="mb-12">
             <h2 class="text-2xl font-bold text-slate-800 mb-6">Frequently Asked Questions</h2>
             <div class="space-y-3 max-w-3xl mx-auto">

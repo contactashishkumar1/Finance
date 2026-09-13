@@ -129,6 +129,30 @@
         "@type": "Answer",
         "text": "Both STCL and LTCL can be carried forward for 8 assessment years provided the tax return is filed before the due date."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Long-Term Capital Losses (LTCL) be adjusted against Short-Term Capital Gains (STCG)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, under Section 70 of the Income Tax Act, LTCL can only be set off against LTCG. However, Short-Term Capital Losses (STCL) can be adjusted against both STCG and LTCG."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the deadline for tax loss harvesting in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To offset gains for a particular financial year, all loss-booking trades must be executed and settled on the exchange on or before March 31 of that financial year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can unadjusted capital losses be carried forward if I file ITR late?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, under Section 139(3), capital losses can only be carried forward for up to 8 assessment years if you file your Income Tax Return on or before the statutory due date (typically July 31 for individuals)."
+      }
     }
   ]
 }
@@ -385,7 +409,30 @@
             </section>
 
             <!-- FAQ Section -->
-            <section class="max-w-4xl mx-auto py-10" id="faqs">
+            
+        <div class="mt-8">
+            <h3 class="text-lg font-bold text-slate-800 mb-3">Capital Loss Set-off & Carry Forward Matrix (Section 70 & 71)</h3>
+            <div class="overflow-x-auto border border-slate-200 rounded-xl my-4 shadow-sm">
+                <table class="w-full text-left text-xs sm:text-sm">
+                    <thead class="bg-slate-50 border-b border-slate-200 text-slate-700">
+                        <tr>
+                            <th class="px-4 py-3 font-semibold">Nature of Capital Loss</th>
+                            <th class="px-4 py-3 font-semibold">Permissible Set-off Against</th>
+                            <th class="px-4 py-3 font-semibold">Disallowed Set-off</th>
+                            <th class="px-4 py-3 font-semibold">Carry Forward Limit</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-600">
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Short-Term Capital Loss (STCL)</td><td class="px-4 py-3 font-semibold text-emerald-700">BOTH Short-Term and Long-Term Gains</td><td class="px-4 py-3 text-red-600 font-semibold">Cannot set-off against Salary or Business Income</td><td class="px-4 py-3 font-semibold text-blue-700">8 Assessment Years</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Long-Term Capital Loss (LTCL)</td><td class="px-4 py-3 font-bold text-blue-700">ONLY Long-Term Capital Gains</td><td class="px-4 py-3 text-red-600 font-bold">CANNOT set-off against STCG or any other income head!</td><td class="px-4 py-3 font-semibold text-blue-700">8 Assessment Years</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Mandatory Rule for Carry Forward</td><td class="px-4 py-3 font-semibold text-amber-700">ITR must be filed on or before July 31 due date</td><td class="px-4 py-3 text-red-600">Late filing under Sec 139(4) forfeits carry-forward right!</td><td class="px-4 py-3 font-bold text-red-600">Strict Section 80 compliance</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+
+        <section class="max-w-4xl mx-auto py-10" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
                 <div class="space-y-4">
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is tax loss harvesting?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">It is selling loss-making investments to reduce your net capital gain, thereby paying lower capital gains tax. This is a common practice among Indian investors to optimize their <a href="/xirr/" class="underline">XIRR returns</a>.</div></details>
@@ -393,6 +440,9 @@
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">Can STCL offset LTCG?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">Yes, Short Term Capital Loss (STCL) can be set off against both Short Term and Long Term Capital Gains. This is useful when you have significant gains in your <a href="/lumpsum/" class="underline">lumpsum investments</a>.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">Can LTCL offset STCG?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">No. Long Term Capital Loss can only be set off against Long Term Capital Gains. It cannot be used to reduce STCG.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">How many years can losses be carried forward?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Both STCL and LTCL can be carried forward for 8 assessment years provided the tax return is filed before the due date.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">6. Can Long-Term Capital Losses (LTCL) be adjusted against Short-Term Capital Gains (STCG)?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">No, under Section 70 of the Income Tax Act, LTCL can only be set off against LTCG. However, Short-Term Capital Losses (STCL) can be adjusted against both STCG and LTCG.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">7. What is the deadline for tax loss harvesting in India?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">To offset gains for a particular financial year, all loss-booking trades must be executed and settled on the exchange on or before March 31 of that financial year.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">8. Can unadjusted capital losses be carried forward if I file ITR late?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">No, under Section 139(3), capital losses can only be carried forward for up to 8 assessment years if you file your Income Tax Return on or before the statutory due date (typically July 31 for individuals).</div></details>
                 </div>
             </section>
 

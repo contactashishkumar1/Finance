@@ -135,6 +135,22 @@
         "@type": "Answer",
         "text": "An override is an additional commission paid to managers based on the sales performance of their team. It encourages mentorship and team-building."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the statutory TDS rate on commission and brokerage income in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under Section 194H of the Income Tax Act, commission or brokerage payments exceeding ₹15,000 in a financial year attract TDS at 5% (subject to surcharge and cess if applicable). PAN is mandatory to prevent 20% deduction under Section 206AA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can GST be levied on sales commission earned by freelancers or agents?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if the agent or consultant's aggregate annual turnover from services exceeds ₹20 Lakhs (₹10 Lakhs in special category states), GST registration is mandatory and standard 18% GST applies to commission invoices."
+      }
     }
   ]
 }
@@ -403,7 +419,31 @@
             </section>
 
             <!-- FAQ Section -->
-            <section class="max-w-4xl mx-auto py-10" id="faqs">
+            
+        <div class="mt-8">
+            <h3 class="text-lg font-bold text-slate-800 mb-3">Tiered Commission & Accelerator Structure Framework</h3>
+            <div class="overflow-x-auto border border-slate-200 rounded-xl my-4 shadow-sm">
+                <table class="w-full text-left text-xs sm:text-sm">
+                    <thead class="bg-slate-50 border-b border-slate-200 text-slate-700">
+                        <tr>
+                            <th class="px-4 py-3 font-semibold">Performance Quota Tier</th>
+                            <th class="px-4 py-3 font-semibold">Sales Revenue Band</th>
+                            <th class="px-4 py-3 font-semibold">Base Commission Rate</th>
+                            <th class="px-4 py-3 font-semibold">Accelerator Bonus Rate</th>
+                            <th class="px-4 py-3 font-semibold">Effective Marginal Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-600">
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Tier 1: Baseline Quota</td><td class="px-4 py-3">₹0 to ₹5,00,000</td><td class="px-4 py-3">5.0%</td><td class="px-4 py-3">0.0%</td><td class="px-4 py-3">5.0%</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Tier 2: Target Achieved</td><td class="px-4 py-3">₹5,00,001 to ₹15,00,000</td><td class="px-4 py-3">5.0%</td><td class="px-4 py-3">+ 2.5%</td><td class="px-4 py-3 font-semibold text-blue-600">7.5%</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Tier 3: President's Club / Overachievement</td><td class="px-4 py-3">Above ₹15,00,000</td><td class="px-4 py-3">5.0%</td><td class="px-4 py-3">+ 5.0%</td><td class="px-4 py-3 font-bold text-emerald-600">10.0%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+
+        <section class="max-w-4xl mx-auto py-10" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
                 <div class="space-y-4">
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How is sales commission calculated?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">The basic calculation is: Sales Amount × Commission Percentage. For tiered systems, different rates apply to different slabs of the total sales.</div></details>
@@ -412,6 +452,8 @@
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm">Is a 10% commission rate good?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty text-pretty text-pretty text-pretty">In most industries, 10% is considered a very strong incentive. Typical rates for high-volume consumer goods are 2-5%, while software or niche services can be 15-20%.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm">Can I deduct expenses from my commission?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty text-pretty text-pretty text-pretty">Yes, if you are a professional or consultant. You can use the "Presumptive Taxation Scheme" under Section 44ADA to pay tax on only 50% of your total receipts.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm">What is a commission override?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty text-pretty text-pretty text-pretty">An override is an additional commission paid to managers based on the sales performance of their team. It encourages mentorship and team-building.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">7. What is the statutory TDS rate on commission and brokerage income in India?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Under Section 194H of the Income Tax Act, commission or brokerage payments exceeding ₹15,000 in a financial year attract TDS at 5% (subject to surcharge and cess if applicable). PAN is mandatory to prevent 20% deduction under Section 206AA.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">8. Can GST be levied on sales commission earned by freelancers or agents?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Yes, if the agent or consultant's aggregate annual turnover from services exceeds ₹20 Lakhs (₹10 Lakhs in special category states), GST registration is mandatory and standard 18% GST applies to commission invoices.</div></details>
                 </div>
             </section>
 

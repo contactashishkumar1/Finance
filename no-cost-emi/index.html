@@ -107,6 +107,46 @@
         "@type": "Answer",
         "text": "Yes. Since it is a loan, timely payments will improve your CIBIL score, while late payments will negatively impact it."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "How do retailers offer 'No Cost EMI' if banks cannot lend at 0% interest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under RBI guidelines, banks cannot lend at 0%. Retailers and brands offer 'No Cost EMI' by discounting the product's upfront price by the exact interest amount the bank will charge, creating an effective zero-interest experience for the consumer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is No Cost EMI not completely free due to GST and processing fees?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Even though the interest is discounted, the bank charges 18% GST on the interest component every month, plus a one-time loan processing fee (₹99 to ₹199 + GST), making the total payout slightly higher than the upfront price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does taking multiple No Cost EMIs affect my CIBIL credit score?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each No Cost EMI is recorded as an active consumer durable loan on your credit bureau report. Having too many active consumer loans simultaneously can temporarily lower your credit score by increasing your credit utilization."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I cancel or return an item purchased on No Cost EMI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you cancel the order, the merchant refunds the amount to your credit card, but the bank loan may remain active until you contact your bank to formally cancel the EMI facility, which may incur a loan cancellation fee."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it better to pay upfront with an instant card discount or opt for No Cost EMI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If the merchant offers an instant cash discount vs No Cost EMI, paying in full is mathematically better because you save both the cash discount and the 18% GST on EMI interest."
+      }
     }
   ]
 }
@@ -384,12 +424,40 @@
             </section>
 
             <!-- FAQ Section -->
-            <section class="max-w-4xl mx-auto py-10" id="faqs">
+            
+        <div class="mt-8">
+            <h3 class="text-lg font-bold text-slate-800 mb-3">No Cost EMI Mechanics: Transparent Cost Decomposition</h3>
+            <div class="overflow-x-auto border border-slate-200 rounded-xl my-4 shadow-sm">
+                <table class="w-full text-left text-xs sm:text-sm">
+                    <thead class="bg-slate-50 border-b border-slate-200 text-slate-700">
+                        <tr>
+                            <th class="px-4 py-3 font-semibold">Transaction Component</th>
+                            <th class="px-4 py-3 font-semibold">Advertised Claim</th>
+                            <th class="px-4 py-3 font-semibold">Actual Financial Structure</th>
+                            <th class="px-4 py-3 font-semibold">Hidden Outflow Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-600">
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Interest Cost</td><td class="px-4 py-3 font-bold text-emerald-600">0% Interest</td><td class="px-4 py-3">Merchant gives upfront discount equal to bank interest (14%-16%)</td><td class="px-4 py-3">You forfeit any upfront cash/card discount offers.</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">GST on Bank Interest</td><td class="px-4 py-3 text-slate-500">Not highlighted</td><td class="px-4 py-3 text-red-600 font-semibold">18% GST levied on monthly interest component</td><td class="px-4 py-3 text-red-600 font-bold">Paid by buyer; NOT discounted by merchant!</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Bank Processing Fee</td><td class="px-4 py-3 text-slate-500">Free financing</td><td class="px-4 py-3">₹99 - ₹299 + 18% GST charged upfront</td><td class="px-4 py-3">Increases effective APR to 4% - 8% on short tenures.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+
+        <section class="max-w-4xl mx-auto py-10" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty text-pretty">Frequently Asked Questions</h2>
                 <div class="space-y-4">
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Is No Cost EMI really free?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">It is free of "Interest" because the store gives a discount. However, you pay a processing fee and 18% GST on the interest component.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Is No Cost EMI available on debit cards?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Yes, most major banks like HDFC, ICICI, and SBI offer No Cost EMI on pre-approved debit cards for eligible customers.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Does it affect my credit score?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty text-pretty text-pretty">Yes. Since it is a loan, timely payments will improve your CIBIL score, while late payments will negatively impact it.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">4. How do retailers offer 'No Cost EMI' if banks cannot lend at 0% interest?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Under RBI guidelines, banks cannot lend at 0%. Retailers and brands offer 'No Cost EMI' by discounting the product's upfront price by the exact interest amount the bank will charge, creating an effective zero-interest experience for the consumer.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">5. Why is No Cost EMI not completely free due to GST and processing fees?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Even though the interest is discounted, the bank charges 18% GST on the interest component every month, plus a one-time loan processing fee (₹99 to ₹199 + GST), making the total payout slightly higher than the upfront price.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">6. Does taking multiple No Cost EMIs affect my CIBIL credit score?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Each No Cost EMI is recorded as an active consumer durable loan on your credit bureau report. Having too many active consumer loans simultaneously can temporarily lower your credit score by increasing your credit utilization.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">7. What happens if I cancel or return an item purchased on No Cost EMI?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">If you cancel the order, the merchant refunds the amount to your credit card, but the bank loan may remain active until you contact your bank to formally cancel the EMI facility, which may incur a loan cancellation fee.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">8. Is it better to pay upfront with an instant card discount or opt for No Cost EMI?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">If the merchant offers an instant cash discount vs No Cost EMI, paying in full is mathematically better because you save both the cash discount and the 18% GST on EMI interest.</div></details>
                 </div>
             </section>
 

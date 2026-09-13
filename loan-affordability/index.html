@@ -114,6 +114,38 @@
         "@type": "Answer",
         "text": "Generally, no. Paying half your salary towards debt leaves you vulnerable to emergencies and limits your ability to save for retirement or children's education."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Fixed Obligation to Income Ratio (FOIR) used by banks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FOIR measures total monthly debt commitments (existing EMIs + proposed EMI) as a percentage of net monthly income. Most lenders cap FOIR at 40% to 50% to ensure borrowers have sufficient income for living expenses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does having a co-applicant increase loan affordability?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Adding an earning co-applicant (such as a spouse or parent) combines your monthly incomes, significantly increasing the maximum loan eligibility approved by the bank."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What role does credit score (CIBIL) play in loan affordability?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A CIBIL score of 750 or higher qualifies you for the lowest preferential interest rates. A 0.5% lower interest rate can increase your loan eligibility by several lakhs for the same monthly EMI."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does a longer tenure affect my loan borrowing capacity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Choosing a longer tenure (e.g. 25-30 years instead of 15 years) lowers the monthly EMI per lakh, allowing you to qualify for a higher total loan amount on the same income."
+      }
     }
   ]
 }
@@ -398,13 +430,41 @@
             </section>
 
             <!-- FAQ Section -->
-            <section class="max-w-4xl mx-auto py-10 text-pretty" id="faqs">
+            
+        <div class="mt-8">
+            <h3 class="text-lg font-bold text-slate-800 mb-3">Banking FOIR (Fixed Obligation to Income Ratio) Lending Limits</h3>
+            <div class="overflow-x-auto border border-slate-200 rounded-xl my-4 shadow-sm">
+                <table class="w-full text-left text-xs sm:text-sm">
+                    <thead class="bg-slate-50 border-b border-slate-200 text-slate-700">
+                        <tr>
+                            <th class="px-4 py-3 font-semibold">Net Monthly Income Slab</th>
+                            <th class="px-4 py-3 font-semibold">Maximum Permissible FOIR</th>
+                            <th class="px-4 py-3 font-semibold">Max Allowable Total EMI</th>
+                            <th class="px-4 py-3 font-semibold">Bank Risk Assessment</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-600">
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Up to ₹30,000 / month</td><td class="px-4 py-3">40%</td><td class="px-4 py-3">₹12,000</td><td class="px-4 py-3 text-amber-600">Conservative (Higher living cost vulnerability)</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">₹30,001 to ₹75,000 / month</td><td class="px-4 py-3">50%</td><td class="px-4 py-3">₹15,000 - ₹37,500</td><td class="px-4 py-3 text-blue-600">Standard Tier-1 Bank guideline</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">₹75,001 to ₹1,50,000 / month</td><td class="px-4 py-3">60%</td><td class="px-4 py-3">₹45,000 - ₹90,000</td><td class="px-4 py-3 text-emerald-600 font-semibold">Healthy discretionary cushion</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Above ₹1,50,000 / month</td><td class="px-4 py-3 font-bold text-emerald-700">65% - 70%</td><td class="px-4 py-3 font-bold text-emerald-700">₹1,05,000+</td><td class="px-4 py-3 text-emerald-600 font-semibold">Prime borrower; eligible for maximum leverage</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+
+        <section class="max-w-4xl mx-auto py-10 text-pretty" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
                 <div class="space-y-4">
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How much loan can I afford?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">It depends on your surplus income. Take your monthly salary, subtract all expenses and existing debts, and the remainder is your absolute max EMI capacity.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">What is the ideal debt-to-income ratio?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty text-pretty">An ideal DTI is 30% or less. Between 30% and 45% is manageable. Crossing 50% is considered high-risk and could lead to financial stress.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How much salary is needed for ₹50 lakh loan?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">For a ₹50 Lakh home loan (8.5%, 20Y), the EMI is ~₹43,400. Assuming a 40% DTI, you would need a net monthly salary of approx ₹1,10,000.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Is 50% EMI safe?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty text-pretty">Generally, no. Paying half your salary towards debt leaves you vulnerable to emergencies and limits your ability to save for retirement or children's education.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">5. What is the Fixed Obligation to Income Ratio (FOIR) used by banks?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">FOIR measures total monthly debt commitments (existing EMIs + proposed EMI) as a percentage of net monthly income. Most lenders cap FOIR at 40% to 50% to ensure borrowers have sufficient income for living expenses.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">6. How does having a co-applicant increase loan affordability?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Adding an earning co-applicant (such as a spouse or parent) combines your monthly incomes, significantly increasing the maximum loan eligibility approved by the bank.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">7. What role does credit score (CIBIL) play in loan affordability?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">A CIBIL score of 750 or higher qualifies you for the lowest preferential interest rates. A 0.5% lower interest rate can increase your loan eligibility by several lakhs for the same monthly EMI.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">8. How does a longer tenure affect my loan borrowing capacity?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Choosing a longer tenure (e.g. 25-30 years instead of 15 years) lowers the monthly EMI per lakh, allowing you to qualify for a higher total loan amount on the same income.</div></details>
                 </div>
             </section>
 

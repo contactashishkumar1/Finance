@@ -456,7 +456,30 @@
             </section> 
 
             <!-- FAQ Section -->
-            <section class="max-w-4xl mx-auto py-10" id="faqs">
+            
+        <div class="mt-8">
+            <h3 class="text-lg font-bold text-slate-800 mb-3">Return Metrics Comparison: XIRR vs CAGR vs Absolute Return</h3>
+            <div class="overflow-x-auto border border-slate-200 rounded-xl my-4 shadow-sm">
+                <table class="w-full text-left text-xs sm:text-sm">
+                    <thead class="bg-slate-50 border-b border-slate-200 text-slate-700">
+                        <tr>
+                            <th class="px-4 py-3 font-semibold">Performance Metric</th>
+                            <th class="px-4 py-3 font-semibold">Underlying Mathematical Model</th>
+                            <th class="px-4 py-3 font-semibold">Best Suited Investment Avenue</th>
+                            <th class="px-4 py-3 font-semibold">Limitation / Vulnerability</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-600">
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-bold text-blue-700">XIRR (Extended IRR)</td><td class="px-4 py-3">Exact day-weighted discounting of multiple uneven inflows/outflows</td><td class="px-4 py-3 font-bold text-emerald-700">SIPs, SWPs, partial stock purchases, ULIPs</td><td class="px-4 py-3">Assumes interim cash distributions are reinvested at same rate.</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">CAGR (Compounded Annual Growth)</td><td class="px-4 py-3">Smooth point-to-point geometric growth rate: (End/Start)^(1/n) − 1</td><td class="px-4 py-3">Lump sum mutual fund, fixed deposits, real estate holdings</td><td class="px-4 py-3 text-red-600">Fails completely when there are ongoing SIP installments.</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Absolute / Point Return</td><td class="px-4 py-3">Simple percentage change: ((Final − Invested) ÷ Invested) × 100</td><td class="px-4 py-3">Short-term trades (&lt; 1 year holding)</td><td class="px-4 py-3 text-red-600">Distorts time: 100% return in 1 year vs 10 years treated identically!</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+
+        <section class="max-w-4xl mx-auto py-10" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions (XIRR)</h2>
                 <div class="space-y-4">
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">1. Why is XIRR used for SIPs?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Because each SIP installment stays in the market for a different amount of time. XIRR normalizes these time differences into a single annual percentage. Use a <a href="/sip/" class="underline">SIP calculator</a> to plan future goals.</div></details>

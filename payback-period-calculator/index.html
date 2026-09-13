@@ -126,6 +126,38 @@
         "@type": "Answer",
         "text": "Usually, yes, because it minimizes risk. However, you shouldn't ignore long-term wealth creators that might have slow starts but massive compounding potential, such as Blue-chip Stocks or Prime Real Estate."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Discounted Payback Period and why is it superior?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Discounted Payback Period discounts each future cash inflow back to present value before calculating when the initial investment is recovered, properly accounting for the time value of money."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the primary drawback of the standard Payback Period method?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The standard payback period completely ignores cash flows received after the payback cutoff date and fails to account for the project's overall profitability or terminal salvage value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is considered an acceptable payback period for business equipment in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For commercial machinery and rooftop solar, a payback period of 3 to 5 years is considered attractive, while software and digital automation tools often target paybacks under 12 to 18 months."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does high inflation alter project payback calculations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "High inflation reduces the real purchasing power of future cash inflows, meaning a simple 3-year payback may fail to preserve real capital unless discounted cash flows are used."
+      }
     }
   ]
 }
@@ -333,13 +365,40 @@
             </section>
 
             <!-- FAQ Section -->
-            <section class="max-w-4xl mx-auto py-10" id="faqs">
+            
+        <div class="mt-8">
+            <h3 class="text-lg font-bold text-slate-800 mb-3">Simple Payback vs Discounted Payback Comparison</h3>
+            <div class="overflow-x-auto border border-slate-200 rounded-xl my-4 shadow-sm">
+                <table class="w-full text-left text-xs sm:text-sm">
+                    <thead class="bg-slate-50 border-b border-slate-200 text-slate-700">
+                        <tr>
+                            <th class="px-4 py-3 font-semibold">Methodology Feature</th>
+                            <th class="px-4 py-3 font-semibold">Simple Payback Period</th>
+                            <th class="px-4 py-3 font-semibold">Discounted Payback Period</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-600">
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Time Value of Money (TVM)</td><td class="px-4 py-3 text-red-600 font-semibold">Ignored (₹1 today = ₹1 in year 5)</td><td class="px-4 py-3 font-semibold text-emerald-600">Fully incorporated using Weighted Cost of Capital (WACC)</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Calculated Breakeven Time</td><td class="px-4 py-3 font-medium text-blue-700">Shorter (Optimistic illusion)</td><td class="px-4 py-3 font-medium text-slate-800">Longer (Reflects true economic reality)</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Post-Payback Cash Flows</td><td class="px-4 py-3 text-red-600">Completely ignored</td><td class="px-4 py-3 text-red-600">Ignored (Use NPV or IRR for full lifecycle analysis)</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Primary Industry Utility</td><td class="px-4 py-3">Rapid liquidity screening for small equipment</td><td class="px-4 py-3">Rigorous institutional capital budgeting for capex projects</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+
+        <section class="max-w-4xl mx-auto py-10" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
                 <div class="space-y-4">
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is a good payback period?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">It varies by industry, but most investors target a payback period of 3 to 5 years. For extremely high-risk startups, a payback within 18-24 months is ideal.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Difference between ROI and Payback?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">ROI measures the total profitability (percentage gain) of an investment. Payback measures the speed of capital recovery (time). A project can have a high ROI but a very slow payback.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">Does payback period include profit?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty">No. The payback period only measures the time taken to reach the "Zero" mark (break-even). Real economic profit only begins once the payback period has ended.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Is shorter payback always better?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty text-pretty">Usually, yes, because it minimizes risk. However, you shouldn't ignore long-term wealth creators that might have slow starts but massive compounding potential, such as <a href="/net-worth/" class="text-blue-600 underline">Blue-chip Stocks</a> or Prime Real Estate.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">5. What is the Discounted Payback Period and why is it superior?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">The Discounted Payback Period discounts each future cash inflow back to present value before calculating when the initial investment is recovered, properly accounting for the time value of money.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">6. What is the primary drawback of the standard Payback Period method?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">The standard payback period completely ignores cash flows received after the payback cutoff date and fails to account for the project's overall profitability or terminal salvage value.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">7. What is considered an acceptable payback period for business equipment in India?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">For commercial machinery and rooftop solar, a payback period of 3 to 5 years is considered attractive, while software and digital automation tools often target paybacks under 12 to 18 months.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">8. How does high inflation alter project payback calculations?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">High inflation reduces the real purchasing power of future cash inflows, meaning a simple 3-year payback may fail to preserve real capital unless discounted cash flows are used.</div></details>
                 </div>
             </section>
 

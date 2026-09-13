@@ -126,6 +126,30 @@
         "@type": "Answer",
         "text": "Divide the discounted sale price by (1 - Discount Rate). For example, if you paid \u20b9800 after a 20% discount: \u20b9800 / (1 - 0.20) = \u20b91,000 original price."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "How do successive discounts work (e.g. 20% + 10% off)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Successive discounts are calculated sequentially, not added together. 20% off on ₹1,000 leaves ₹800, and a further 10% off on ₹800 leaves ₹720. The effective discount is 28%, not 30%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Trade Discount and Cash Discount?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A trade discount is granted by wholesalers based on purchase volume or list price, while a cash discount is offered to incentivize immediate or early payment within a set invoice window."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does GST apply to discounted prices in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under Indian GST law, GST is calculated on the net transaction value after deducting any discount allowed on or before the time of supply and shown in the invoice."
+      }
     }
   ]
 }
@@ -406,7 +430,30 @@
         </div>
     
             <!-- FAQ Section -->
-            <section class="max-w-4xl mx-auto py-10" id="faqs">
+            
+        <div class="mt-8">
+            <h3 class="text-lg font-bold text-slate-800 mb-3">Commercial Discount Structures & Net Cost Impact</h3>
+            <div class="overflow-x-auto border border-slate-200 rounded-xl my-4 shadow-sm">
+                <table class="w-full text-left text-xs sm:text-sm">
+                    <thead class="bg-slate-50 border-b border-slate-200 text-slate-700">
+                        <tr>
+                            <th class="px-4 py-3 font-semibold">Discount Category</th>
+                            <th class="px-4 py-3 font-semibold">Commercial Application</th>
+                            <th class="px-4 py-3 font-semibold">Timing / Condition</th>
+                            <th class="px-4 py-3 font-semibold">Accounting & Tax Treatment</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-600">
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Trade Discount</td><td class="px-4 py-3">Wholesale list price reduction (10% - 40%)</td><td class="px-4 py-3">Applied upfront on the catalog price</td><td class="px-4 py-3">Deducted from invoice value before GST calculation.</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Cash / Prompt Payment Discount</td><td class="px-4 py-3">Early settlement incentive (e.g., 2/10 Net 30)</td><td class="px-4 py-3">Awarded if buyer pays within 10 days</td><td class="px-4 py-3">Recorded as financial expense; GST credit note issued if pre-agreed.</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Quantity / Tiered Rebate</td><td class="px-4 py-3">Bulk order thresholds (Buy 5 Get 10% Off)</td><td class="px-4 py-3">Triggered on crossing defined volume slabs</td><td class="px-4 py-3">Lowers average unit procurement cost for the buyer.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+
+        <section class="max-w-4xl mx-auto py-10" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
                 <div class="space-y-4 text-pretty">
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">How is a percentage discount calculated?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">To calculate a percentage discount, multiply the original price by the discount percentage and divide by 100 to get the savings amount. Then subtract this savings from the original price to find the final sale price.</div></details>
@@ -414,6 +461,9 @@
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Is GST calculated before or after applying discounts?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Under Indian GST laws, GST is charged on the transaction value (the discounted price), provided the discount is recorded on the invoice. Hence, the discount reduces your taxable value and overall GST liability.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Which offer is better: Buy 1 Get 1 Free or 50% Off Everything?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Mathematically, both provide an effective 50% discount on the purchase. However, 50% off allows you to buy single items, whereas Buy 1 Get 1 requires purchasing at least 2 units.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">How do I calculate the original price from a discounted price?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Divide the discounted sale price by (1 - Discount Rate). For example, if you paid ₹800 after a 20% discount: ₹800 / (1 - 0.20) = ₹1,000 original price.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">6. How do successive discounts work (e.g. 20% + 10% off)?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Successive discounts are calculated sequentially, not added together. 20% off on ₹1,000 leaves ₹800, and a further 10% off on ₹800 leaves ₹720. The effective discount is 28%, not 30%.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">7. What is the difference between Trade Discount and Cash Discount?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">A trade discount is granted by wholesalers based on purchase volume or list price, while a cash discount is offered to incentivize immediate or early payment within a set invoice window.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">8. How does GST apply to discounted prices in India?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Under Indian GST law, GST is calculated on the net transaction value after deducting any discount allowed on or before the time of supply and shown in the invoice.</div></details>
                 </div>
             </section>
     </main>

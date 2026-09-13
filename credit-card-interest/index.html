@@ -114,6 +114,38 @@
         "@type": "Answer",
         "text": "APR is the Annual Percentage Rate. To find the monthly rate, divide APR by 12. For example, 36% APR equals 3% interest per month."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is paying only the 'Minimum Due' dangerous on credit cards?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Minimum Due is typically just 5% of your total balance. Paying only minimum due triggers annualized interest rates of 36% to 48%, which can trap you in revolving debt for decades."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the interest-free grace period work on credit cards?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 45 to 50-day interest-free grace period only applies if your previous billing statement was paid in full. If you carry any unpaid balance, the grace period is revoked and interest accrues daily on all new purchases from day one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is GST charged on credit card interest and finance charges?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, standard 18% GST is levied on all finance charges, late fees, and interest billed by Indian credit card issuers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does cash withdrawal from an ATM using a credit card have a grace period?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, cash advances on credit cards do NOT have an interest-free grace period. Interest starts accruing from the minute cash is dispensed, along with an immediate cash advance transaction fee (2.5% to 3%)."
+      }
     }
   ]
 }
@@ -356,13 +388,41 @@
             </section>
 
             <!-- FAQ Section -->
-            <section class="max-w-4xl mx-auto py-10" id="faqs">
+            
+        <div class="mt-8">
+            <h3 class="text-lg font-bold text-slate-800 mb-3">Credit Card Minimum Amount Due (MAD) Trap vs Full Payment</h3>
+            <div class="overflow-x-auto border border-slate-200 rounded-xl my-4 shadow-sm">
+                <table class="w-full text-left text-xs sm:text-sm">
+                    <thead class="bg-slate-50 border-b border-slate-200 text-slate-700">
+                        <tr>
+                            <th class="px-4 py-3 font-semibold">Outstanding Balance</th>
+                            <th class="px-4 py-3 font-semibold">Repayment Strategy</th>
+                            <th class="px-4 py-3 font-semibold">Time to Become Debt Free</th>
+                            <th class="px-4 py-3 font-semibold">Total Interest Paid (at 42% APR)</th>
+                            <th class="px-4 py-3 font-semibold">Total Money Paid</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-600">
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">₹1,00,000</td><td class="px-4 py-3 text-red-600 font-semibold">Paying Only 5% MAD</td><td class="px-4 py-3 font-bold text-red-600">14 Years & 8 Months</td><td class="px-4 py-3 text-red-600 font-bold">₹1,84,300 (184% of debt)</td><td class="px-4 py-3">₹2,84,300</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">₹1,00,000</td><td class="px-4 py-3 text-blue-700 font-medium">Fixed ₹5,000 / month</td><td class="px-4 py-3">2 Years & 7 Months</td><td class="px-4 py-3 text-amber-600">₹46,200</td><td class="px-4 py-3">₹1,46,200</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">₹1,00,000</td><td class="px-4 py-3 text-emerald-600 font-bold">100% Full Payment on Due Date</td><td class="px-4 py-3 font-bold text-emerald-600">Immediate (30-50 Days Grace)</td><td class="px-4 py-3 font-bold text-emerald-600">₹0</td><td class="px-4 py-3">₹1,00,000</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+
+        <section class="max-w-4xl mx-auto py-10" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
                 <div class="space-y-4">
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Is credit card interest calculated daily?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Yes. Banks track your balance daily. Even if you pay halfway through the month, you are charged interest for the days you held the full balance.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Can I avoid paying credit card interest?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">Yes. Simply pay the "Total Amount Due" in full before the due date. The "No Cost EMI" offers can also help, which you can check on our <a href="/no-cost-emi/" class="text-blue-600 underline">No Cost EMI Calculator</a>.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">What happens if I miss a payment?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty text-pretty">You will be charged a "Late Payment Fee" (usually ₹500-₹1300) plus high interest on the balance. This can drop your credit score significantly.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Is APR different from monthly interest?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty text-pretty">APR is the Annual Percentage Rate. To find the monthly rate, divide APR by 12. For example, 36% APR equals 3% interest per month.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">5. Why is paying only the 'Minimum Due' dangerous on credit cards?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">The Minimum Due is typically just 5% of your total balance. Paying only minimum due triggers annualized interest rates of 36% to 48%, which can trap you in revolving debt for decades.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">6. How does the interest-free grace period work on credit cards?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">The 45 to 50-day interest-free grace period only applies if your previous billing statement was paid in full. If you carry any unpaid balance, the grace period is revoked and interest accrues daily on all new purchases from day one.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">7. Is GST charged on credit card interest and finance charges?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Yes, standard 18% GST is levied on all finance charges, late fees, and interest billed by Indian credit card issuers.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">8. Does cash withdrawal from an ATM using a credit card have a grace period?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">No, cash advances on credit cards do NOT have an interest-free grace period. Interest starts accruing from the minute cash is dispensed, along with an immediate cash advance transaction fee (2.5% to 3%).</div></details>
                 </div>
             </section>
 

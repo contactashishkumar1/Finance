@@ -128,6 +128,38 @@
         "@type": "Answer",
         "text": "Directly, no. GST is a liability you hold on behalf of the government. However, the administrative cost of compliance and the impact on consumer pricing can indirectly affect business growth."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Does GST directly reduce business net profit margins?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, GST is a pass-through consumption tax collected from the customer and remitted to the government. Business net profit is impacted only if input tax credit is blocked or pricing cannot absorb compliance costs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Input Tax Credit (ITC) protect profit margins?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ITC allows you to deduct GST paid on business purchases and raw materials from the GST liability owed on sales, preventing tax cascading and preserving product profit margins."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if a supplier does not file GSTR-1?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under GSTR-2B matching rules, you cannot claim ITC if your supplier fails to upload invoices in their GSTR-1, which directly blocks your cash flow and temporarily reduces operating profit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the GST Composition Scheme affect profit calculations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Composition dealers pay a flat 1% to 6% tax on turnover without claiming ITC or charging GST to customers, which simplifies accounting but requires baking the cost into pricing."
+      }
     }
   ]
 }
@@ -340,13 +372,41 @@
             </section>
 
             <!-- FAQ Section -->
-            <section class="max-w-4xl mx-auto py-10" id="faqs">
+            
+        <div class="mt-8">
+            <h3 class="text-lg font-bold text-slate-800 mb-3">Input Tax Credit (ITC) Impact on Gross Profit & Pricing Matrix</h3>
+            <div class="overflow-x-auto border border-slate-200 rounded-xl my-4 shadow-sm">
+                <table class="w-full text-left text-xs sm:text-sm">
+                    <thead class="bg-slate-50 border-b border-slate-200 text-slate-700">
+                        <tr>
+                            <th class="px-4 py-3 font-semibold">Transaction Step</th>
+                            <th class="px-4 py-3 font-semibold">B2B Registered Flow (With ITC)</th>
+                            <th class="px-4 py-3 font-semibold">Unregistered / Blocked Flow (No ITC)</th>
+                            <th class="px-4 py-3 font-semibold">Cost Variance</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-600">
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Base Procurement Price</td><td class="px-4 py-3">₹10,000</td><td class="px-4 py-3">₹10,000</td><td class="px-4 py-3">Identical</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Inward GST Paid (18%)</td><td class="px-4 py-3">₹1,800 (Credited into Electronic Credit Ledger)</td><td class="px-4 py-3 text-red-600">₹1,800 (Added directly to Cost of Goods Sold)</td><td class="px-4 py-3 text-red-600">Cost becomes ₹11,800</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Selling Price (Before GST)</td><td class="px-4 py-3">₹15,000</td><td class="px-4 py-3">₹15,000</td><td class="px-4 py-3">Identical</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Net Gross Profit Realized</td><td class="px-4 py-3 font-bold text-emerald-700">₹5,000 (33.3% Gross Margin)</td><td class="px-4 py-3 font-semibold text-amber-700">₹3,200 (21.3% Gross Margin)</td><td class="px-4 py-3 font-bold text-emerald-700">+₹1,800 higher profit with ITC</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+
+        <section class="max-w-4xl mx-auto py-10" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
                 <div class="space-y-4">
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">How does GST affect my profit?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">GST is not a cost for registered businesses; it is collected from the customer. However, if you are selling at an "inclusive" price, GST reduces the base income you keep, thereby lowering your net profit.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">How to calculate GST profit margin?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">First, find the Base Selling Price (Price excluding tax). Then subtract the Cost Price to find Profit. Divide this Profit by the Base Selling Price to get the Margin Percentage.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is GST inclusive price?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">An inclusive price means the tax is already added to the item's cost. Formula to extract GST: (Total Price × GST Rate) / (100 + GST Rate).</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">Does GST reduce business net worth?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Directly, no. GST is a liability you hold on behalf of the government. However, the administrative cost of compliance and the impact on consumer pricing can indirectly affect business growth.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">5. Does GST directly reduce business net profit margins?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">No, GST is a pass-through consumption tax collected from the customer and remitted to the government. Business net profit is impacted only if input tax credit is blocked or pricing cannot absorb compliance costs.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">6. How does Input Tax Credit (ITC) protect profit margins?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">ITC allows you to deduct GST paid on business purchases and raw materials from the GST liability owed on sales, preventing tax cascading and preserving product profit margins.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">7. What happens if a supplier does not file GSTR-1?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Under GSTR-2B matching rules, you cannot claim ITC if your supplier fails to upload invoices in their GSTR-1, which directly blocks your cash flow and temporarily reduces operating profit.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">8. How does the GST Composition Scheme affect profit calculations?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Composition dealers pay a flat 1% to 6% tax on turnover without claiming ITC or charging GST to customers, which simplifies accounting but requires baking the cost into pricing.</div></details>
                 </div>
             </section>
 

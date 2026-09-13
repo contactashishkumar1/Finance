@@ -127,6 +127,38 @@
         "@type": "Answer",
         "text": "Common reasons include rising raw material costs, high customer acquisition costs (marketing), or increasing utility and staff expenses."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Gross Margin and Net Margin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gross Margin measures profitability after subtracting Cost of Goods Sold (COGS). Net Margin measures profitability after subtracting all operating expenses, administrative overheads, taxes, and interest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is Profit Margin always lower than Markup percentage for the same product?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Margin is calculated as profit divided by Selling Price, while Markup is calculated as profit divided by Cost. Because selling price is higher than cost, margin percentage is always mathematically lower."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good Operating Profit Margin for Indian businesses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An operating margin of 15% to 20% is considered healthy for manufacturing and trading businesses, while software and technology service companies often achieve 25% to 35%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do supply chain price increases impact profit margins?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If input costs rise and retail prices cannot be increased due to competition, gross profit margin contracts directly, requiring cost-reduction measures to maintain profitability."
+      }
     }
   ]
 }
@@ -389,13 +421,41 @@
             </section>
 
             <!-- FAQ Section -->
-            <section class="max-w-4xl mx-auto py-10" id="faqs">
+            
+        <div class="mt-8">
+            <h3 class="text-lg font-bold text-slate-800 mb-3">Gross Profit Margin vs Markup Percentage Conversion Matrix</h3>
+            <div class="overflow-x-auto border border-slate-200 rounded-xl my-4 shadow-sm">
+                <table class="w-full text-left text-xs sm:text-sm">
+                    <thead class="bg-slate-50 border-b border-slate-200 text-slate-700">
+                        <tr>
+                            <th class="px-4 py-3 font-semibold">Markup on Cost (%)</th>
+                            <th class="px-4 py-3 font-semibold">Corresponding Margin on Sale (%)</th>
+                            <th class="px-4 py-3 font-semibold">Selling Price for ₹100 Cost</th>
+                            <th class="px-4 py-3 font-semibold">Profit Generated</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-600">
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">15% Markup</td><td class="px-4 py-3 font-semibold text-blue-700">13.0% Gross Margin</td><td class="px-4 py-3">₹115.00</td><td class="px-4 py-3">₹15.00</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">25% Markup</td><td class="px-4 py-3 font-semibold text-blue-700">20.0% Gross Margin</td><td class="px-4 py-3">₹125.00</td><td class="px-4 py-3">₹25.00</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">50% Markup</td><td class="px-4 py-3 font-semibold text-blue-700">33.3% Gross Margin</td><td class="px-4 py-3">₹150.00</td><td class="px-4 py-3">₹50.00</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">100% Markup (Keystone)</td><td class="px-4 py-3 font-bold text-emerald-700">50.0% Gross Margin</td><td class="px-4 py-3">₹200.00</td><td class="px-4 py-3">₹100.00</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+
+        <section class="max-w-4xl mx-auto py-10" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
                 <div class="space-y-4">
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is a good profit margin?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">It depends on the industry. Retail might operate on 10-15% margins, while Software (SaaS) or Luxury goods can exceed 50-70%. Generally, 20% is considered healthy.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">How do I calculate margin from markup?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Use the formula: Margin = Markup / (1 + Markup). For example, a 100% markup (doubling the price) results in a 50% profit margin.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Is 10% margin good for a startup?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty">A 10% gross margin is usually low for a startup because it leaves very little room to cover operating expenses and marketing. Aim for at least 25% gross margin.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">Why did my net margin drop?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty">Common reasons include rising raw material costs, high customer acquisition costs (marketing), or increasing utility and staff expenses.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">5. What is the difference between Gross Margin and Net Margin?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Gross Margin measures profitability after subtracting Cost of Goods Sold (COGS). Net Margin measures profitability after subtracting all operating expenses, administrative overheads, taxes, and interest.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">6. Why is Profit Margin always lower than Markup percentage for the same product?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Margin is calculated as profit divided by Selling Price, while Markup is calculated as profit divided by Cost. Because selling price is higher than cost, margin percentage is always mathematically lower.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">7. What is a good Operating Profit Margin for Indian businesses?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">An operating margin of 15% to 20% is considered healthy for manufacturing and trading businesses, while software and technology service companies often achieve 25% to 35%.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">8. How do supply chain price increases impact profit margins?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">If input costs rise and retail prices cannot be increased due to competition, gross profit margin contracts directly, requiring cost-reduction measures to maintain profitability.</div></details>
                 </div>
             </section>
 
