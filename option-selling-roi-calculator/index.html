@@ -249,7 +249,7 @@
             <!-- Output Display -->
             <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
                 
-                <div class="bg-blue-600 text-white rounded-2xl p-6 md:p-8 card-shadow">
+                <div class="bg-blue-600 text-white rounded-2xl p-6 md:p-8 card-shadow lg:sticky lg:top-6">
                     <p class="text-blue-100 text-xs font-bold uppercase tracking-wider mb-2">Annualized Return on Capital (ROC)</p>
                     <h3 class="text-4xl md:text-5xl font-black mb-4" id="annualizedRocVal">120.4% p.a.</h3>
                     
@@ -264,6 +264,9 @@
                         </div>
                     </div>
                 
+                    <!-- Smart Financial Insights Box -->
+                    <div id="insightsBox" class="bg-blue-50 p-4 rounded-xl border border-blue-100 text-sm text-blue-800 leading-relaxed mb-4 text-pretty"></div>
+
                     <!-- Action Utilities Bar -->
                     <div class="flex items-center gap-2 mt-6 pt-4 border-t border-slate-100 no-print">
                         <button type="button" onclick="resetCalculator()" class="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-3 bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs font-semibold rounded-xl border border-slate-200 transition-colors">
