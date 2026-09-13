@@ -363,6 +363,29 @@
         </section>
 
         <!-- FAQs -->
+        
+        <div class="mt-8">
+            <h3 class="text-lg font-bold text-slate-800 mb-3">Long Straddle vs Long Strangle Structure Comparison</h3>
+            <div class="overflow-x-auto border border-slate-200 rounded-xl my-4 shadow-sm">
+                <table class="w-full text-left text-xs sm:text-sm">
+                    <thead class="bg-slate-50 border-b border-slate-200 text-slate-700">
+                        <tr>
+                            <th class="px-4 py-3 font-semibold">Strategy Element</th>
+                            <th class="px-4 py-3 font-semibold">Long Straddle Setup</th>
+                            <th class="px-4 py-3 font-semibold">Long Strangle Setup</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-600">
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Strike Selection</td><td class="px-4 py-3 font-bold text-blue-700">Same Strike (ATM Call + ATM Put)</td><td class="px-4 py-3 font-bold text-purple-700">Different Strikes (OTM Call + OTM Put)</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Upfront Capital / Premium Cost</td><td class="px-4 py-3 text-red-600 font-semibold">Higher (Expensive ATM premiums)</td><td class="px-4 py-3 text-emerald-600 font-semibold">Lower (Cheaper OTM wings)</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Breakeven Distance Required</td><td class="px-4 py-3 font-semibold text-blue-700">Strike ± Total Premium Paid</td><td class="px-4 py-3 text-amber-600">Requires significantly wider breakout move</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Vega / Theta Sensitivity</td><td class="px-4 py-3">Extreme Theta decay; rapidly gains on IV spikes</td><td class="px-4 py-3">Moderate Theta decay; lower probability of profit</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+
         <section id="faqs" class="mb-12">
             <h2 class="text-2xl font-bold text-slate-800 mb-6">Frequently Asked Questions</h2>
             <div class="space-y-3 max-w-3xl mx-auto">

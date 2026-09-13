@@ -351,6 +351,30 @@
         </section>
 
         <!-- FAQs -->
+        
+        <div class="mt-8">
+            <h3 class="text-lg font-bold text-slate-800 mb-3">Long Butterfly Spread Payoff & Risk Profile Matrix</h3>
+            <div class="overflow-x-auto border border-slate-200 rounded-xl my-4 shadow-sm">
+                <table class="w-full text-left text-xs sm:text-sm">
+                    <thead class="bg-slate-50 border-b border-slate-200 text-slate-700">
+                        <tr>
+                            <th class="px-4 py-3 font-semibold">Market Expiry Scenario</th>
+                            <th class="px-4 py-3 font-semibold">Lower Wing (Buy 1 Call K1)</th>
+                            <th class="px-4 py-3 font-semibold">Body (Sell 2 Calls K2)</th>
+                            <th class="px-4 py-3 font-semibold">Upper Wing (Buy 1 Call K3)</th>
+                            <th class="px-4 py-3 font-semibold">Net P&L Result</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-600">
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Underlying Price &le; K1</td><td class="px-4 py-3">Expires worthless</td><td class="px-4 py-3">Expires worthless</td><td class="px-4 py-3">Expires worthless</td><td class="px-4 py-3 text-red-600 font-semibold">Max Loss = Net Debit Paid</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Underlying Price = K2 (Sweet Spot)</td><td class="px-4 py-3 text-emerald-600 font-semibold">In The Money (K2 − K1)</td><td class="px-4 py-3">Expires worthless</td><td class="px-4 py-3">Expires worthless</td><td class="px-4 py-3 text-emerald-600 font-bold">Max Profit = (K2 − K1) − Net Debit</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Underlying Price &ge; K3</td><td class="px-4 py-3">ITM by (S − K1)</td><td class="px-4 py-3 text-red-600">Short loss 2×(S − K2)</td><td class="px-4 py-3">ITM by (S − K3)</td><td class="px-4 py-3 text-red-600 font-semibold">Max Loss = Net Debit Paid</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+
         <section id="faqs" class="mb-12">
             <h2 class="text-2xl font-bold text-slate-800 mb-6">Frequently Asked Questions</h2>
             <div class="space-y-3 max-w-3xl mx-auto">

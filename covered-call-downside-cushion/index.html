@@ -351,6 +351,31 @@
         </section>
 
         <!-- FAQs -->
+        
+        <div class="mt-8">
+            <h3 class="text-lg font-bold text-slate-800 mb-3">Covered Call Downside Cushion & Outcome Scenarios</h3>
+            <div class="overflow-x-auto border border-slate-200 rounded-xl my-4 shadow-sm">
+                <table class="w-full text-left text-xs sm:text-sm">
+                    <thead class="bg-slate-50 border-b border-slate-200 text-slate-700">
+                        <tr>
+                            <th class="px-4 py-3 font-semibold">Underlying Expiry Price</th>
+                            <th class="px-4 py-3 font-semibold">Stock Position Gain/Loss</th>
+                            <th class="px-4 py-3 font-semibold">Short Call Option Payoff</th>
+                            <th class="px-4 py-3 font-semibold">Net Strategy P&L</th>
+                            <th class="px-4 py-3 font-semibold">Outcome Assessment</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-600">
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Fall &gt; Cushion (% Premium)</td><td class="px-4 py-3 text-red-600">Loss &gt; Premium Received</td><td class="px-4 py-3 text-emerald-600">Keep 100% of Premium</td><td class="px-4 py-3 text-red-600 font-semibold">Net Loss (Reduced by Cushion)</td><td class="px-4 py-3">Downside buffer softens loss compared to holding pure stock.</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Mild Fall (Within Cushion)</td><td class="px-4 py-3 text-red-600">Loss &lt; Premium Received</td><td class="px-4 py-3 text-emerald-600">Keep 100% of Premium</td><td class="px-4 py-3 text-emerald-600 font-semibold">Net Profit</td><td class="px-4 py-3">Generates positive cash yield even in a stagnant or slightly down market.</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Unchanged / Sideways</td><td class="px-4 py-3">₹0 Stock Capital Gain</td><td class="px-4 py-3 text-emerald-600">Keep 100% of Premium</td><td class="px-4 py-3 text-emerald-600 font-bold">Full Option Premium Kept</td><td class="px-4 py-3">Maximum return on investment relative to zero stock price action.</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Sharp Rally Above Strike Price</td><td class="px-4 py-3 text-emerald-600">Gains capped at Strike</td><td class="px-4 py-3 text-red-600">Assigned / Shares called away</td><td class="px-4 py-3 text-blue-700 font-bold">Max Profit = (Strike − Entry) + Premium</td><td class="px-4 py-3">Capital gain capped; missed out on runaway upside.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+
         <section id="faqs" class="mb-12">
             <h2 class="text-2xl font-bold text-slate-800 mb-6">Frequently Asked Questions</h2>
             <div class="space-y-3 max-w-3xl mx-auto">

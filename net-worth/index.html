@@ -135,6 +135,22 @@
         "@type": "Answer",
         "text": "Yes. Mutual funds, stocks, and your PPF balance are significant assets. You can calculate their compounded value using our Compound Interest Tool ."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I include my primary residential house in my net worth calculation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, your primary residence contributes to total net worth (asset value minus outstanding home loan). However, for retirement planning, wealth advisors recommend tracking 'Liquid Net Worth' separately, as your primary home does not generate cash flow for living expenses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I calculate and rebalance my net worth?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Financial planners recommend calculating your net worth once every 6 months or annually. This helps verify that your asset allocation aligns with your financial goals and that debt is declining relative to compounding assets."
+      }
     }
   ]
 }
@@ -423,7 +439,31 @@
             </section>
 
             <!-- FAQ Section -->
-            <section class="max-w-4xl mx-auto py-10" id="faqs">
+            
+        <div class="mt-8">
+            <h3 class="text-lg font-bold text-slate-800 mb-3">Balance Sheet Asset Classification & Liquidity Profile</h3>
+            <div class="overflow-x-auto border border-slate-200 rounded-xl my-4 shadow-sm">
+                <table class="w-full text-left text-xs sm:text-sm">
+                    <thead class="bg-slate-50 border-b border-slate-200 text-slate-700">
+                        <tr>
+                            <th class="px-4 py-3 font-semibold">Asset / Liability Category</th>
+                            <th class="px-4 py-3 font-semibold">Liquidity Tier</th>
+                            <th class="px-4 py-3 font-semibold">Examples Included</th>
+                            <th class="px-4 py-3 font-semibold">Valuation Principle</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-600">
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-emerald-700">Liquid Financial Assets</td><td class="px-4 py-3 font-semibold text-emerald-600">Tier 1 (T+0 to T+2)</td><td class="px-4 py-3">Savings balances, fixed deposits, mutual funds, listed stocks</td><td class="px-4 py-3">Current mark-to-market value post capital gains tax estimation</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-blue-700">Semi-Liquid / Retirement Assets</td><td class="px-4 py-3 font-semibold text-blue-600">Tier 2 (Lock-in)</td><td class="px-4 py-3">EPF, PPF, NPS Tier-1, vested unlisted ESOPs, SGBs</td><td class="px-4 py-3">Latest EPFO passbook / NPS NAV statement balance</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-purple-700">Illiquid Physical Assets</td><td class="px-4 py-3 font-semibold text-amber-600">Tier 3 (Months to liquidate)</td><td class="px-4 py-3">Primary residence, rental real estate, commercial plots, physical gold</td><td class="px-4 py-3">Conservative market realization value (excluding sentimental premium)</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-red-600">Outstanding Liabilities</td><td class="px-4 py-3 font-semibold text-red-600">Total Obligation</td><td class="px-4 py-3">Home loan balance, car loan, education loan, credit card dues</td><td class="px-4 py-3 font-bold text-red-600">Subtracted 100% from total assets to calculate Net Worth</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+
+        <section class="max-w-4xl mx-auto py-10" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
                 <div class="space-y-4">
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is net worth?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Net worth is the sum of all your assets minus all your liabilities. It represents your true financial value at any given point in time. Use our calculator to track your progress today.</div></details>
@@ -432,6 +472,8 @@
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What is the difference between assets and liabilities?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">Assets are items you own that have cash value (like cash, stocks, and property). Liabilities are financial obligations you owe to others (like loans and credit card dues). Reducing liabilities via <a href="/loan-prepayment/" class="text-blue-600 underline">Loan Prepayment</a> is a great way to boost net worth.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">How can I increase my net worth?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">By either increasing your assets (saving and investing more in <a href="/lumpsum/" class="text-blue-600 underline">mutual funds</a>) or decreasing your liabilities. Avoiding <a href="/inflation/" class="text-blue-600 underline">lifestyle inflation</a> is also key.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty text-pretty">Does investment value count in net worth?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty text-pretty">Yes. Mutual funds, stocks, and your PPF balance are significant assets. You can calculate their compounded value using our <a href="/compound-interest/" class="text-blue-600 underline">Compound Interest Tool</a>.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">7. Should I include my primary residential house in my net worth calculation?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Yes, your primary residence contributes to total net worth (asset value minus outstanding home loan). However, for retirement planning, wealth advisors recommend tracking 'Liquid Net Worth' separately, as your primary home does not generate cash flow for living expenses.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">8. How often should I calculate and rebalance my net worth?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Financial planners recommend calculating your net worth once every 6 months or annually. This helps verify that your asset allocation aligns with your financial goals and that debt is declining relative to compounding assets.</div></details>
                 </div>
             </section>
 

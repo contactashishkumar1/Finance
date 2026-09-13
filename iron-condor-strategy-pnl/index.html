@@ -357,6 +357,30 @@
         </section>
 
         <!-- FAQs -->
+        
+        <div class="mt-8">
+            <h3 class="text-lg font-bold text-slate-800 mb-3">Iron Condor 4-Leg Setup & Payoff Structure</h3>
+            <div class="overflow-x-auto border border-slate-200 rounded-xl my-4 shadow-sm">
+                <table class="w-full text-left text-xs sm:text-sm">
+                    <thead class="bg-slate-50 border-b border-slate-200 text-slate-700">
+                        <tr>
+                            <th class="px-4 py-3 font-semibold">Leg Position</th>
+                            <th class="px-4 py-3 font-semibold">Strike Placement</th>
+                            <th class="px-4 py-3 font-semibold">Delta & Volatility Role</th>
+                            <th class="px-4 py-3 font-semibold">Risk / Reward Contribution</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-600">
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Leg 1: Long Put (Lower Wing)</td><td class="px-4 py-3">Deep Out-of-the-Money (OTM) Put</td><td class="px-4 py-3">Downside Black Swan Protection</td><td class="px-4 py-3 text-red-600">Caps maximum catastrophic loss</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Leg 2: Short Put (Bull Put Spread)</td><td class="px-4 py-3">OTM Put (~15 - 20 Delta)</td><td class="px-4 py-3 text-emerald-600 font-semibold">Collects Put Premium (Theta positive)</td><td class="px-4 py-3 text-emerald-600">Generates income if price stays above</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Leg 3: Short Call (Bear Call Spread)</td><td class="px-4 py-3">OTM Call (~15 - 20 Delta)</td><td class="px-4 py-3 text-emerald-600 font-semibold">Collects Call Premium (Theta positive)</td><td class="px-4 py-3 text-emerald-600">Generates income if price stays below</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Leg 4: Long Call (Upper Wing)</td><td class="px-4 py-3">Deep Out-of-the-Money (OTM) Call</td><td class="px-4 py-3">Upside Tail-Risk Hedge</td><td class="px-4 py-3 text-red-600">Caps maximum upside squeeze risk</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+
         <section id="faqs" class="mb-12">
             <h2 class="text-2xl font-bold text-slate-800 mb-6">Frequently Asked Questions</h2>
             <div class="space-y-3 max-w-3xl mx-auto">

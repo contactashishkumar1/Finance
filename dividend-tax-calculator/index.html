@@ -387,7 +387,31 @@
                 </p>
             </section>
 
-            <section class="max-w-4xl mx-auto" id="faqs">
+            
+        <div class="mt-8">
+            <h3 class="text-lg font-bold text-slate-800 mb-3">Dividend Taxation & Withholding Tax (TDS) Slabs under Income Tax Act</h3>
+            <div class="overflow-x-auto border border-slate-200 rounded-xl my-4 shadow-sm">
+                <table class="w-full text-left text-xs sm:text-sm">
+                    <thead class="bg-slate-50 border-b border-slate-200 text-slate-700">
+                        <tr>
+                            <th class="px-4 py-3 font-semibold">Taxpayer Category</th>
+                            <th class="px-4 py-3 font-semibold">Annual Exemption Threshold</th>
+                            <th class="px-4 py-3 font-semibold">TDS Rate (Section 194)</th>
+                            <th class="px-4 py-3 font-semibold">Final Tax Slab Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-600">
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Resident Individual (Valid PAN)</td><td class="px-4 py-3">₹5,000 per company per FY</td><td class="px-4 py-3 font-semibold text-blue-700">10% (If dividend &gt; ₹5,000)</td><td class="px-4 py-3">Taxed at individual applicable slab rates (up to 39%)</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Resident Individual (No PAN / Invalid PAN)</td><td class="px-4 py-3">₹5,000 per company</td><td class="px-4 py-3 font-bold text-red-600">20% under Section 206AA</td><td class="px-4 py-3">TDS credited against final slab tax liability</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Senior Citizen (Form 15H submitted)</td><td class="px-4 py-3">Nil tax liability threshold</td><td class="px-4 py-3 font-bold text-emerald-600">0% (Nil TDS certificate)</td><td class="px-4 py-3">Subject to overall taxable income slab</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Non-Resident Indian (NRI)</td><td class="px-4 py-3">Nil threshold</td><td class="px-4 py-3 font-bold text-red-600">20% + Surcharge + Cess (Sec 195)</td><td class="px-4 py-3">Or DTAA treaty rate (whichever is lower, with TRC)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+
+        <section class="max-w-4xl mx-auto" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
                 <div class="space-y-4">
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">

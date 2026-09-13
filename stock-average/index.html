@@ -121,6 +121,38 @@
         "@type": "Answer",
         "text": "Yes, if you average a stock with declining business fundamentals. You might end up throwing \"good money after bad.\" Always ensure you have a clear reason for the price drop."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Stock Averaging Down and is it safe for retail investors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Averaging down means buying additional shares of a stock as its price declines to lower your average purchase price. While effective for fundamentally sound blue-chip companies, averaging down on failing businesses often leads to severe capital losses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Averaging Up and when should it be used?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Averaging up means buying more shares as the stock price rises, adding to winning positions that confirm your bullish thesis while managing risk with trailing stop losses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is average price calculated for multiple buy orders with brokerage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Average Price = Total Purchase Outlay (Shares × Price + All Brokerage/STT/GST) / Total Quantity of Shares Owned."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does stock averaging impact capital gains taxation on sale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under Indian income tax law, shares are sold on a First-In, First-Out (FIFO) basis. Capital gains are calculated based on the purchase price and holding period of the earliest acquired shares, not the blended average cost."
+      }
     }
   ]
 }
@@ -357,13 +389,41 @@
             </section>
 
             <!-- FAQ Section -->
-            <section class="max-w-4xl mx-auto py-10" id="faqs">
+            
+        <div class="mt-8">
+            <h3 class="text-lg font-bold text-slate-800 mb-3">Rupee Cost Averaging Scenarios in a Volatile Market</h3>
+            <div class="overflow-x-auto border border-slate-200 rounded-xl my-4 shadow-sm">
+                <table class="w-full text-left text-xs sm:text-sm">
+                    <thead class="bg-slate-50 border-b border-slate-200 text-slate-700">
+                        <tr>
+                            <th class="px-4 py-3 font-semibold">Tranche Order</th>
+                            <th class="px-4 py-3 font-semibold">Market Share Price</th>
+                            <th class="px-4 py-3 font-semibold">Amount Invested</th>
+                            <th class="px-4 py-3 font-semibold">Shares Purchased</th>
+                            <th class="px-4 py-3 font-semibold">New Cumulative Average Price</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-600">
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Tranche 1 (Initial Buy)</td><td class="px-4 py-3">₹500</td><td class="px-4 py-3">₹50,000</td><td class="px-4 py-3">100 Shares</td><td class="px-4 py-3 font-semibold text-blue-700">₹500.00 / share</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Tranche 2 (Market Dip 20%)</td><td class="px-4 py-3">₹400</td><td class="px-4 py-3">₹50,000</td><td class="px-4 py-3">125 Shares</td><td class="px-4 py-3 font-semibold text-blue-700">₹444.44 / share</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Tranche 3 (Correction 40%)</td><td class="px-4 py-3">₹300</td><td class="px-4 py-3">₹60,000</td><td class="px-4 py-3">200 Shares</td><td class="px-4 py-3 font-bold text-emerald-700">₹376.47 / share</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+
+        <section class="max-w-4xl mx-auto py-10" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
                 <div class="space-y-4">
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is stock averaging?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Stock averaging is buying more units of a stock at different prices to adjust the overall cost basis. It results in a new 'Weighted Average' price for your entire holding.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Does averaging reduce my actual loss?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">No. Averaging simply changes the price at which you break even. Your actual rupee loss on the initial investment remains the same until the price recovers.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">How many times should I average a stock?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Avoid averaging more than 2-3 times. Constant averaging can lead to over-concentration in a single stock, which increases your portfolio risk significantly.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Is averaging risky?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Yes, if you average a stock with declining business fundamentals. You might end up throwing "good money after bad." Always ensure you have a clear reason for the price drop.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">5. What is Stock Averaging Down and is it safe for retail investors?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Averaging down means buying additional shares of a stock as its price declines to lower your average purchase price. While effective for fundamentally sound blue-chip companies, averaging down on failing businesses often leads to severe capital losses.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">6. What is Averaging Up and when should it be used?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Averaging up means buying more shares as the stock price rises, adding to winning positions that confirm your bullish thesis while managing risk with trailing stop losses.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">7. How is average price calculated for multiple buy orders with brokerage?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Average Price = Total Purchase Outlay (Shares × Price + All Brokerage/STT/GST) / Total Quantity of Shares Owned.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">8. How does stock averaging impact capital gains taxation on sale?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Under Indian income tax law, shares are sold on a First-In, First-Out (FIFO) basis. Capital gains are calculated based on the purchase price and holding period of the earliest acquired shares, not the blended average cost.</div></details>
                 </div>
             </section>
 

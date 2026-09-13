@@ -352,6 +352,30 @@
         </section>
 
         <!-- FAQs -->
+        
+        <div class="mt-8">
+            <h3 class="text-lg font-bold text-slate-800 mb-3">Options Wheel Strategy 4-Phase Execution Lifecycle</h3>
+            <div class="overflow-x-auto border border-slate-200 rounded-xl my-4 shadow-sm">
+                <table class="w-full text-left text-xs sm:text-sm">
+                    <thead class="bg-slate-50 border-b border-slate-200 text-slate-700">
+                        <tr>
+                            <th class="px-4 py-3 font-semibold">Wheel Phase</th>
+                            <th class="px-4 py-3 font-semibold">Action Executed</th>
+                            <th class="px-4 py-3 font-semibold">Income / Return Source</th>
+                            <th class="px-4 py-3 font-semibold">Next Step Trigger</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-600">
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Phase 1: Cash-Secured Put</td><td class="px-4 py-3">Sell OTM Put on blue-chip stock with 100% cash buffer</td><td class="px-4 py-3 font-semibold text-emerald-600">Keep 100% Put Premium</td><td class="px-4 py-3">If expired OTM: Repeat Phase 1. If assigned: Move to Phase 2.</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Phase 2: Stock Delivery Takeover</td><td class="px-4 py-3">Buy stock at Strike price using reserved cash</td><td class="px-4 py-3">Effective cost basis = Strike − Put Premium</td><td class="px-4 py-3">Shares credited to demat; transition to Covered Call.</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Phase 3: Covered Call Selling</td><td class="px-4 py-3">Sell OTM Call option against held stock</td><td class="px-4 py-3 font-semibold text-emerald-600">Collect monthly Call Premium + Dividends</td><td class="px-4 py-3">If expired OTM: Repeat Phase 3. If breached: Move to Phase 4.</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-4 py-3 font-medium text-slate-800">Phase 4: Stock Called Away</td><td class="px-4 py-3">Deliver stock at Call Strike price</td><td class="px-4 py-3 font-bold text-blue-700">Capital Gain on shares + Call Premium</td><td class="px-4 py-3 font-bold text-emerald-700">Full capital returned to cash; Restart at Phase 1.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+
         <section id="faqs" class="mb-12">
             <h2 class="text-2xl font-bold text-slate-800 mb-6">Frequently Asked Questions</h2>
             <div class="space-y-3 max-w-3xl mx-auto">

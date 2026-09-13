@@ -92,7 +92,7 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "1. Can I get a refund of the TCS amount?",
+      "name": "Can I get a refund of the TCS amount?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Yes. TCS is not a final tax. It is a credit that reflects in your Form 26AS. You can adjust it against your total tax liability during ITR filing. If your total tax is less than the TCS paid, you will receive a refund with interest."
@@ -100,23 +100,23 @@
     },
     {
       "@type": "Question",
-      "name": "2. What is the limit for TCS on Car Purchase?",
+      "name": "What is the limit for TCS on Car Purchase?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Under Section 206C(1F), 1% TCS is applicable on the purchase of any motor vehicle if the value exceeds \u20b910 Lakhs. This applies to both luxury cars and commercial vehicles."
+        "text": "Under Section 206C(1F), 1% TCS is applicable on the purchase of any motor vehicle if the value exceeds ₹10 Lakhs. This applies to both luxury cars and commercial vehicles."
       }
     },
     {
       "@type": "Question",
-      "name": "3. Does the \u20b910 Lakh LRS limit apply to each bank?",
+      "name": "Does the ₹10 Lakh LRS limit apply to each bank?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. The \u20b910 Lakh threshold is an aggregate limit per financial year across all banks and authorised dealers."
+        "text": "No. The ₹10 Lakh threshold is an aggregate limit per financial year across all banks and authorised dealers."
       }
     },
     {
       "@type": "Question",
-      "name": "4. Is TCS applicable on foreign credit card spending?",
+      "name": "Is TCS applicable on foreign credit card spending?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "As per current 2026 rules, international credit card spending while traveling abroad is currently exempt from the LRS limit and TCS. However, debit card spending is counted under LRS."
@@ -124,10 +124,34 @@
     },
     {
       "@type": "Question",
-      "name": "5. What is the difference between TDS and TCS?",
+      "name": "What is the difference between TDS and TCS?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "TDS (Tax Deducted at Source) is deducted by the payer (e.g., employer paying salary). TCS (Tax Collected at Source) is collected by the receiver/seller (e.g., a car dealer or a bank selling foreign currency)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I do not provide a PAN card during TCS deduction?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under Section 206CC, if the buyer or remitter fails to furnish a valid PAN, TCS is collected at twice the applicable rate or 5%, whichever is higher (up to 20% in LRS categories)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the TCS rate if foreign education is funded by a loan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If foreign education remittance under LRS is funded through an approved education loan from a financial institution under Section 80E, the TCS rate is concessional at 0.5% on amounts exceeding ₹10 Lakhs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can salaried employees adjust TCS against monthly salary TDS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, under Section 192 amendments, employees can declare TCS collected on foreign remittances or car purchases to their employers, who can adjust it against monthly salary TDS to increase take-home pay."
       }
     }
   ]
@@ -380,15 +404,62 @@
 
         <!-- NEW SEO CONTENT SECTION 2 -->
         <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty mb-12">
-            <h2 class="text-2xl font-bold text-slate-900 mb-6">Latest TCS Rates (2026)</h2>
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Latest TCS Rates & Threshold Limits (2026)</h2>
             <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
-                <p>The Union Budget 2026 maintained the increased rates for foreign spending to encourage domestic investment. Here is the summary of current rates:</p>
-                <ul class="list-disc ml-5 space-y-2">
-                    <li><strong>Education and medical treatment:</strong> 5% on the amount above ₹10 Lakhs.</li>
-                    <li><strong>Investment/Gift/Maintenance:</strong> 20% on the amount above ₹10 Lakhs.</li>
-                    <li><strong>Overseas Tour Packages:</strong> 5% up to ₹10 Lakhs and 20% on the excess.</li>
-                </ul>
-                <p>Planning a big purchase? Check your <a href="/capital-gains-tax/" class="text-blue-600 underline">Capital Gains Tax</a> before redeeming assets for foreign transfers.</p>
+                <p>The Union Budget 2026 maintained the updated rate structure for foreign outward remittances and high-value purchases. Below is the official rate card:</p>
+                
+                <div class="overflow-x-auto border border-slate-200 rounded-xl my-6">
+                    <table class="w-full text-left text-xs sm:text-sm">
+                        <thead class="bg-slate-50 border-b border-slate-200 text-slate-700">
+                            <tr>
+                                <th class="px-4 py-3 font-semibold">Remittance / Transaction Category</th>
+                                <th class="px-4 py-3 font-semibold text-center">Exemption Threshold</th>
+                                <th class="px-4 py-3 font-semibold text-center">TCS Rate (Up to ₹10L)</th>
+                                <th class="px-4 py-3 font-semibold text-center">TCS Rate (Above ₹10L)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-slate-600">
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold text-slate-800">Overseas Tour Program Package</td>
+                                <td class="px-4 py-3 text-center text-slate-500">Nil (No threshold)</td>
+                                <td class="px-4 py-3 text-center font-semibold text-blue-600">5%</td>
+                                <td class="px-4 py-3 text-center font-bold text-rose-600">20%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold text-slate-800">Foreign Education (Self-Funded / Parents)</td>
+                                <td class="px-4 py-3 text-center font-medium">Up to ₹10,00,000</td>
+                                <td class="px-4 py-3 text-center text-emerald-600 font-semibold">0% (Nil)</td>
+                                <td class="px-4 py-3 text-center font-semibold text-blue-600">5%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold text-slate-800">Foreign Education (Funded by Bank Loan u/s 80E)</td>
+                                <td class="px-4 py-3 text-center font-medium">Up to ₹10,00,000</td>
+                                <td class="px-4 py-3 text-center text-emerald-600 font-semibold">0% (Nil)</td>
+                                <td class="px-4 py-3 text-center font-semibold text-emerald-700">0.5%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold text-slate-800">Overseas Medical Treatment</td>
+                                <td class="px-4 py-3 text-center font-medium">Up to ₹10,00,000</td>
+                                <td class="px-4 py-3 text-center text-emerald-600 font-semibold">0% (Nil)</td>
+                                <td class="px-4 py-3 text-center font-semibold text-blue-600">5%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold text-slate-800">Foreign Investments / Gifts / Other LRS</td>
+                                <td class="px-4 py-3 text-center font-medium">Up to ₹10,00,000</td>
+                                <td class="px-4 py-3 text-center text-emerald-600 font-semibold">0% (Nil)</td>
+                                <td class="px-4 py-3 text-center font-bold text-rose-600">20%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold text-slate-800">Motor Vehicle Purchase (Section 206C(1F))</td>
+                                <td class="px-4 py-3 text-center font-medium">Up to ₹10,00,000</td>
+                                <td class="px-4 py-3 text-center text-emerald-600 font-semibold">0% (Nil)</td>
+                                <td class="px-4 py-3 text-center font-semibold text-slate-800">1% on total value</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>Planning a big purchase? Check your <a href="/capital-gains-tax/" class="text-blue-600 underline font-medium">Capital Gains Tax</a> before redeeming assets for foreign transfers.</p>
             </div>
         </section>
 
@@ -437,6 +508,12 @@
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm text-pretty text-pretty text-pretty">4. Is TCS applicable on foreign credit card spending?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">As per current 2026 rules, international credit card spending while traveling abroad is currently exempt from the LRS limit and TCS. However, debit card spending is counted under LRS.</div></details>
 
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">5. What is the difference between TDS and TCS?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">TDS (Tax Deducted at Source) is deducted by the payer (e.g., employer paying salary). TCS (Tax Collected at Source) is collected by the receiver/seller (e.g., a car dealer or a bank selling foreign currency).</div></details>
+
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">6. What happens if I do not provide a PAN card during TCS deduction?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Under Section 206CC, if the buyer or remitter fails to furnish a valid PAN, TCS is collected at twice the applicable rate or 5%, whichever is higher (up to 20% in LRS categories).</div></details>
+
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">7. What is the TCS rate if foreign education is funded by a loan?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">If foreign education remittance under LRS is funded through an approved education loan from a financial institution under Section 80E, the TCS rate is concessional at 0.5% on amounts exceeding ₹10 Lakhs.</div></details>
+
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">8. Can salaried employees adjust TCS against monthly salary TDS?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Yes, under Section 192 amendments, employees can declare TCS collected on foreign remittances or car purchases to their employers, who can adjust it against monthly salary TDS to increase take-home pay.</div></details>
                 </div>
             </section>
 

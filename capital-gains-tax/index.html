@@ -103,7 +103,7 @@
       "name": "Is LTCG tax free up to 1.25 lakh?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, for equity shares and equity mutual funds, LTCG is exempt up to \u20b91,25,000 total per financial year starting from July 2026."
+        "text": "Yes, for equity shares and equity mutual funds, LTCG is exempt up to ₹1,25,000 total per financial year starting from July 2026."
       }
     },
     {
@@ -127,7 +127,31 @@
       "name": "How to save capital gains tax?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You can save tax by utilizing the \u20b91.25L annual exemption, using Tax Loss Harvesting , or reinvesting property gains under Section 54/54F."
+        "text": "You can save tax by utilizing the ₹1.25L annual exemption, using Tax Loss Harvesting , or reinvesting property gains under Section 54/54F."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are Debt Mutual Funds taxed after Finance Act 2023?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Debt funds acquired on or after April 1, 2023 no longer enjoy LTCG rates or indexation benefits. All gains are treated as short term capital gains and taxed at your applicable income tax slab rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the holding period requirement for unlisted vs listed shares?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Listed equity shares qualify as Long-Term when held for more than 12 months. Unlisted shares, physical gold, and real estate qualify as Long-Term only after 24 months of holding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can capital losses be carried forward to offset future gains?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, short-term capital losses can be carried forward for up to 8 assessment years to offset both STCG and LTCG. Long-term capital losses can only offset LTCG. Timely ITR filing is mandatory to claim this benefit."
       }
     }
   ]
@@ -362,32 +386,55 @@
                         </div>
                     </div>
                     <p class="text-[9px] text-slate-500 mt-4 uppercase font-bold tracking-widest">Note: Surcharge not included for income above ₹50L.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- content: SEO KNOWLEDGE -->
+                </di        <!-- content: SEO KNOWLEDGE -->
         <div class="space-y-12 mb-12">
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
-                <h2 class="text-2xl font-bold text-slate-900 mb-6">Budget 2026: New Capital Gains Tax Rates</h2>
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Budget 2026: Capital Gains Tax Rate Card</h2>
                 <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
                     <p>The Union Budget 2026 introduced significant changes to the capital gains tax structure in India to simplify the holding periods and tax rates across different asset classes.</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-pretty">
-                        <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl">
-                            <h3 class="font-bold text-slate-800 text-lg mb-4 flex items-center gap-2">Equity (Stocks/MFs)</h3>
-                            <ul class="space-y-3 list-none">
-                                <li><strong class="text-blue-600">STCG:</strong> Rate increased from 15% to <strong>20%</strong>. Use <a href="/sip/" class="underline">SIP</a> for long-term gains.</li>
-                                <li><strong class="text-emerald-600">LTCG:</strong> Rate increased from 10% to <strong>12.5%</strong>. Check <a href="/cagr/" class="underline">CAGR</a> for historical returns.</li>
-                                <li><strong class="text-emerald-600">Exemption:</strong> Annual LTCG limit raised to <strong>₹1.25 Lakh</strong>.</li>
-                            </ul>
-                        </div>
-                        <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl text-pretty">
-                            <h3 class="font-bold text-slate-800 text-lg mb-4 flex items-center gap-2">Other Assets (Gold/Estate)</h3>
-                            <ul class="space-y-3 list-none">
-                                <li><strong class="text-blue-600">LTCG:</strong> Reduced from 20% to <strong>12.5%</strong>.</li>
-                                <li><strong class="text-red-500">Indexation:</strong> Removed for assets bought after 2001.</li>
-                            </ul>
-                        </div>
+                    
+                    <div class="overflow-x-auto border border-slate-200 rounded-xl my-6">
+                        <table class="w-full text-left text-xs sm:text-sm">
+                            <thead class="bg-slate-50 border-b border-slate-200 text-slate-700">
+                                <tr>
+                                    <th class="px-4 py-3 font-semibold">Asset Class</th>
+                                    <th class="px-4 py-3 font-semibold text-center">Holding Period (LTCG)</th>
+                                    <th class="px-4 py-3 font-semibold text-center">STCG Rate</th>
+                                    <th class="px-4 py-3 font-semibold text-center">LTCG Rate</th>
+                                    <th class="px-4 py-3 font-semibold">Exemption / Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 text-slate-600">
+                                <tr class="hover:bg-slate-50">
+                                    <td class="px-4 py-3 font-bold text-slate-800">Equity Shares & Equity MFs</td>
+                                    <td class="px-4 py-3 text-center">> 12 Months</td>
+                                    <td class="px-4 py-3 text-center text-rose-600 font-semibold">20%</td>
+                                    <td class="px-4 py-3 text-center text-emerald-600 font-semibold">12.5%</td>
+                                    <td class="px-4 py-3">₹1.25 Lakh annual LTCG exemption</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="px-4 py-3 font-bold text-slate-800">Debt Mutual Funds (Post Apr-23)</td>
+                                    <td class="px-4 py-3 text-center">N/A (Slab Rate)</td>
+                                    <td class="px-4 py-3 text-center font-semibold">Slab Rate</td>
+                                    <td class="px-4 py-3 text-center font-semibold">Slab Rate</td>
+                                    <td class="px-4 py-3">No indexation; taxed as normal income</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="px-4 py-3 font-bold text-slate-800">Real Estate / Immovable Property</td>
+                                    <td class="px-4 py-3 text-center">> 24 Months</td>
+                                    <td class="px-4 py-3 text-center font-semibold">Slab Rate</td>
+                                    <td class="px-4 py-3 text-center text-emerald-600 font-semibold">12.5%</td>
+                                    <td class="px-4 py-3">Section 54/54EC rollover available</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="px-4 py-3 font-bold text-slate-800">Physical Gold & Gold ETFs</td>
+                                    <td class="px-4 py-3 text-center">> 24 Months</td>
+                                    <td class="px-4 py-3 text-center font-semibold">Slab Rate</td>
+                                    <td class="px-4 py-3 text-center text-emerald-600 font-semibold">12.5%</td>
+                                    <td class="px-4 py-3">Standard 12.5% LTCG without indexation</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </section>
@@ -456,7 +503,7 @@
             </section>
 
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
-                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is Capital Gains Tax?</h2>
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is Capital Gains Tax in India?</h2>
                 <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
                     <p>Capital Gains Tax is the tax you pay on the profit earned from the sale of an asset (like stocks, mutual funds, gold, or real estate). If the sale price is higher than the purchase price, the difference is your <strong>Capital Gain</strong>.</p>
                     <p>In India, these gains are divided into <strong>Short Term (STCG)</strong> and <strong>Long Term (LTCG)</strong> based on how long you held the asset. For a deeper look at your overall annual taxes, use our <a href="/income-tax/" class="text-blue-600 underline font-medium">Income Tax Calculator</a>.</p>
@@ -474,11 +521,14 @@
             <section class="max-w-4xl mx-auto py-10" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
                 <div class="space-y-4 text-pretty">
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is LTCG tax?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">LTCG (Long Term Capital Gains) tax applies when you sell an asset after holding it for a specified long-term period (1 year for stocks, 2 years for property).</div></details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">Is LTCG tax free up to 1.25 lakh?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">Yes, for equity shares and equity mutual funds, LTCG is exempt up to ₹1,25,000 total per financial year starting from July 2026.</div></details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What is the new STCG rate on shares?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">The Short Term Capital Gains (STCG) tax on listed equity shares has been increased from 15% to 20% in the latest budget.</div></details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Do mutual funds have capital gains tax?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">Yes. Every redemption from a mutual fund is a taxable event. The tax rate depends on whether the fund is Equity or Debt oriented.</div></details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">How to save capital gains tax?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">You can save tax by utilizing the ₹1.25L annual exemption, using <a href="/tax-loss-harvesting/" class="underline">Tax Loss Harvesting</a>, or reinvesting property gains under Section 54/54F.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">1. What is LTCG tax?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">LTCG (Long Term Capital Gains) tax applies when you sell an asset after holding it for a specified long-term period (1 year for stocks, 2 years for property).</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">2. Is LTCG tax free up to 1.25 lakh?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">Yes, for equity shares and equity mutual funds, LTCG is exempt up to ₹1,25,000 total per financial year starting from July 2026.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">3. What is the new STCG rate on shares?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">The Short Term Capital Gains (STCG) tax on listed equity shares has been increased from 15% to 20% in the latest budget.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">4. Do mutual funds have capital gains tax?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">Yes. Every redemption from a mutual fund is a taxable event. The tax rate depends on whether the fund is Equity or Debt oriented.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">5. How to save capital gains tax?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">You can save tax by utilizing the ₹1.25L annual exemption, using <a href="/tax-loss-harvesting/" class="underline">Tax Loss Harvesting</a>, or reinvesting property gains under Section 54/54F.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">6. How are Debt Mutual Funds taxed after Finance Act 2023?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">Debt funds acquired on or after April 1, 2023 no longer enjoy LTCG rates or indexation benefits. All gains are treated as short term capital gains and taxed at your applicable income tax slab rate.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">7. What is the holding period requirement for unlisted vs listed shares?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">Listed equity shares qualify as Long-Term when held for more than 12 months. Unlisted shares, physical gold, and real estate qualify as Long-Term only after 24 months of holding.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">8. Can capital losses be carried forward to offset future gains?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">Yes, short-term capital losses can be carried forward for up to 8 assessment years to offset both STCG and LTCG. Long-term capital losses can only offset LTCG. Timely ITR filing is mandatory to claim this benefit.</div></details>
                 </div>
             </section>
 
