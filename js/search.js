@@ -1084,12 +1084,614 @@
         "keys": "markup calculator markup calculator business business formula finance calculator"
     },
     {
-        "name": "Money Transfer Tools, Guides & Resources Calculator",
-        "url": "/money-transfer/",
-        "icon": "\ud83d\udc64",
-        "category": "Personal",
-        "keys": "money transfer money transfer tools, guides & resources calculator personal personal formula finance calculator"
-    },
+    "name": "Amount After Fees Calculator",
+    "url": "/money-transfer/calculators/amount-after-fees/",
+    "icon": "📊",
+    "category": "Money Transfer",
+    "keys": "amount after fees calculator amount after fees money transfer remittance foreign exchange currency transfer calculator"
+},
+    {
+    "name": "Money Transfer Comparison Calculator",
+    "url": "/money-transfer/calculators/comparison/",
+    "icon": "📊",
+    "category": "Money Transfer",
+    "keys": "money transfer comparison calculator comparison money transfer remittance foreign exchange currency transfer calculator"
+},
+    {
+    "name": "Effective Exchange Rate Calculator",
+    "url": "/money-transfer/calculators/effective-exchange-rate/",
+    "icon": "📊",
+    "category": "Money Transfer",
+    "keys": "effective exchange rate calculator effective exchange rate money transfer remittance foreign exchange currency transfer calculator"
+},
+    {
+    "name": "Exchange Rate Calculator",
+    "url": "/money-transfer/calculators/exchange-rate/",
+    "icon": "📊",
+    "category": "Money Transfer",
+    "keys": "exchange rate calculator exchange rate money transfer remittance foreign exchange currency transfer calculator"
+},
+    {
+    "name": "Exchange Rate Markup Calculator",
+    "url": "/money-transfer/calculators/exchange-rate-markup/",
+    "icon": "📊",
+    "category": "Money Transfer",
+    "keys": "exchange rate markup calculator exchange rate markup money transfer remittance foreign exchange currency transfer calculator"
+},
+    {
+    "name": "Money Transfer Calculators",
+    "url": "/money-transfer/calculators/",
+    "icon": "📊",
+    "category": "Money Transfer",
+    "keys": "money transfer calculators calculators money transfer remittance foreign exchange currency transfer calculator"
+},
+    {
+    "name": "International Wire Cost Calculator",
+    "url": "/money-transfer/calculators/international-wire-cost/",
+    "icon": "📊",
+    "category": "Money Transfer",
+    "keys": "international wire cost calculator international wire cost money transfer remittance foreign exchange currency transfer calculator"
+},
+    {
+    "name": "RBI LRS TCS Foreign Remittance Calculator",
+    "url": "/money-transfer/calculators/lrs-tcs-remittance/",
+    "icon": "📊",
+    "category": "Money Transfer",
+    "keys": "rbi lrs tcs foreign remittance calculator lrs tcs remittance money transfer remittance foreign exchange currency transfer calculator lrs tcs tax collected at source 20% 5% 0.5% education medical 7 lakh rbi form a2"
+},
+    {
+    "name": "NRE & NRO Capital Repatriation Tax Calculator",
+    "url": "/money-transfer/calculators/nre-nro-repatriation/",
+    "icon": "📊",
+    "category": "Money Transfer",
+    "keys": "nre & nro capital repatriation tax calculator nre nro repatriation money transfer remittance foreign exchange currency transfer calculator nre nro repatriation form 15ca 15cb 1 million usd quota tds 30% capital gains property sale"
+},
+    {
+    "name": "Received Amount After Conversion",
+    "url": "/money-transfer/calculators/received-after-conversion/",
+    "icon": "📊",
+    "category": "Money Transfer",
+    "keys": "received amount after conversion received after conversion money transfer remittance foreign exchange currency transfer calculator received amount after conversion recipient gets net payout calculation"
+},
+    {
+    "name": "Recipient Gets Calculator",
+    "url": "/money-transfer/calculators/recipient-gets/",
+    "icon": "📊",
+    "category": "Money Transfer",
+    "keys": "recipient gets calculator recipient gets money transfer remittance foreign exchange currency transfer calculator"
+},
+    {
+    "name": "Send Amount Calculator",
+    "url": "/money-transfer/calculators/send-amount/",
+    "icon": "📊",
+    "category": "Money Transfer",
+    "keys": "send amount calculator send amount money transfer remittance foreign exchange currency transfer calculator"
+},
+    {
+    "name": "Total Transfer Cost Calculator",
+    "url": "/money-transfer/calculators/total-transfer-cost/",
+    "icon": "📊",
+    "category": "Money Transfer",
+    "keys": "total transfer cost calculator total transfer cost money transfer remittance foreign exchange currency transfer calculator total transfer cost fee exchange rate markup spread true cost calculator"
+},
+    {
+    "name": "Transfer Cost Calculator",
+    "url": "/money-transfer/calculators/transfer-cost/",
+    "icon": "📊",
+    "category": "Money Transfer",
+    "keys": "transfer cost calculator transfer cost money transfer remittance foreign exchange currency transfer calculator"
+},
+    {
+    "name": "Transfer Fee Calculator",
+    "url": "/money-transfer/calculators/transfer-fee/",
+    "icon": "📊",
+    "category": "Money Transfer",
+    "keys": "transfer fee calculator transfer fee money transfer remittance foreign exchange currency transfer calculator"
+},
+    {
+    "name": "Australia to India Money Transfer Guide",
+    "url": "/money-transfer/country-guides/australia-to-india/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "australia to india money transfer guide australia to india money transfer remittance foreign exchange currency corridor guide aud to inr australian dollar austrac 10000 payid osko commbank anz nab westpac"
+},
+    {
+    "name": "Australia to Nepal Money Transfer Guide",
+    "url": "/money-transfer/country-guides/australia-to-nepal/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "australia to nepal money transfer guide australia to nepal money transfer remittance foreign exchange currency corridor guide"
+},
+    {
+    "name": "Australia to Philippines Money Transfer Guide",
+    "url": "/money-transfer/country-guides/australia-to-philippines/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "australia to philippines money transfer guide australia to philippines money transfer remittance foreign exchange currency corridor guide aud to php payid gcash maya remittance cebuana lhuillier bdo bpi"
+},
+    {
+    "name": "Canada to India Money Transfer Guide",
+    "url": "/money-transfer/country-guides/canada-to-india/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "canada to india money transfer guide canada to india money transfer remittance foreign exchange currency corridor guide"
+},
+    {
+    "name": "Freelancer & Remote Contractor International Payment Guide",
+    "url": "/money-transfer/country-guides/freelancer-international-client-payment/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "freelancer & remote contractor international payment guide freelancer international client payment money transfer remittance foreign exchange currency corridor guide"
+},
+    {
+    "name": "Germany to India Money Transfer Guide",
+    "url": "/money-transfer/country-guides/germany-to-india/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "germany to india money transfer guide germany to india money transfer remittance foreign exchange currency corridor guide"
+},
+    {
+    "name": "Country Guides",
+    "url": "/money-transfer/country-guides/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "country guides country guides money transfer remittance foreign exchange currency corridor guide"
+},
+    {
+    "name": "International Student Tuition Money Transfer Guide",
+    "url": "/money-transfer/country-guides/international-student-tuition-transfer/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "international student tuition money transfer guide international student tuition transfer money transfer remittance foreign exchange currency corridor guide student tuition college university fee wire lrs tcs tax 7 lakh 0.5% 5% form a2 swift mt103 flywire"
+},
+    {
+    "name": "Kuwait to India Money Transfer Guide",
+    "url": "/money-transfer/country-guides/kuwait-to-india/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "kuwait to india money transfer guide kuwait to india money transfer remittance foreign exchange currency corridor guide kwd to inr kuwait dinar indian rupee paci civil id biometric knet al muzzaini bec lulu exchange nre nro"
+},
+    {
+    "name": "Large Sum & Overseas Property Money Transfer Guide",
+    "url": "/money-transfer/country-guides/large-sum-property-overseas-transfer/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "large sum & overseas property money transfer guide large sum property overseas transfer money transfer remittance foreign exchange currency corridor guide"
+},
+    {
+    "name": "New Zealand to Pacific Islands Money Transfer Guide",
+    "url": "/money-transfer/country-guides/new-zealand-to-pacific/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "new zealand to pacific islands money transfer guide new zealand to pacific money transfer remittance foreign exchange currency corridor guide"
+},
+    {
+    "name": "Qatar to India Money Transfer Guide",
+    "url": "/money-transfer/country-guides/qatar-to-india/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "qatar to india money transfer guide qatar to india money transfer remittance foreign exchange currency corridor guide qar to inr qatari riyal rupee qid ooredoo money wps al dar cbq commercial bank imps"
+},
+    {
+    "name": "Saudi Arabia to India Money Transfer Guide",
+    "url": "/money-transfer/country-guides/saudi-arabia-to-india/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "saudi arabia to india money transfer guide saudi arabia to india money transfer remittance foreign exchange currency corridor guide sar to inr saudi riyal sama iqama absher stc pay urpay tahweel al rajhi mada"
+},
+    {
+    "name": "Saudi Arabia to Pakistan Money Transfer Guide",
+    "url": "/money-transfer/country-guides/saudi-arabia-to-pakistan/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "saudi arabia to pakistan money transfer guide saudi arabia to pakistan money transfer remittance foreign exchange currency corridor guide sar to pkr saudi riyal pakistani rupee roshan digital account rda easypaisa jazzcash"
+},
+    {
+    "name": "Saudi Arabia to Philippines Money Transfer Guide",
+    "url": "/money-transfer/country-guides/saudi-arabia-to-philippines/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "saudi arabia to philippines money transfer guide saudi arabia to philippines money transfer remittance foreign exchange currency corridor guide"
+},
+    {
+    "name": "Sending Money to NRE vs NRO Account Guide",
+    "url": "/money-transfer/country-guides/sending-money-to-nre-vs-nro-account/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "sending money to nre vs nro account guide sending money to nre vs nro account money transfer remittance foreign exchange currency corridor guide"
+},
+    {
+    "name": "Singapore to India Money Transfer Guide",
+    "url": "/money-transfer/country-guides/singapore-to-india/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "singapore to india money transfer guide singapore to india money transfer remittance foreign exchange currency corridor guide sgd to inr paynow dbs posb ocbc uob remittance"
+},
+    {
+    "name": "Singapore to Philippines Money Transfer Guide",
+    "url": "/money-transfer/country-guides/singapore-to-philippines/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "singapore to philippines money transfer guide singapore to philippines money transfer remittance foreign exchange currency corridor guide"
+},
+    {
+    "name": "UAE to India Money Transfer Guide",
+    "url": "/money-transfer/country-guides/uae-to-india/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "uae to india money transfer guide uae to india money transfer remittance foreign exchange currency corridor guide aed to inr uae dirham al ansari lulu exchange enbd wps"
+},
+    {
+    "name": "UAE to Pakistan Money Transfer Guide",
+    "url": "/money-transfer/country-guides/uae-to-pakistan/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "uae to pakistan money transfer guide uae to pakistan money transfer remittance foreign exchange currency corridor guide"
+},
+    {
+    "name": "UK to India Money Transfer Guide",
+    "url": "/money-transfer/country-guides/uk-to-india/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "uk to india money transfer guide uk to india money transfer remittance foreign exchange currency corridor guide"
+},
+    {
+    "name": "UK to Nigeria Money Transfer Guide",
+    "url": "/money-transfer/country-guides/uk-to-nigeria/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "uk to nigeria money transfer guide uk to nigeria money transfer remittance foreign exchange currency corridor guide gbp to ngn british pound nigerian naira cbn bvn nin faster payments lemfi remitly wise domiciliary"
+},
+    {
+    "name": "UK to Pakistan Money Transfer Guide",
+    "url": "/money-transfer/country-guides/uk-to-pakistan/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "uk to pakistan money transfer guide uk to pakistan money transfer remittance foreign exchange currency corridor guide"
+},
+    {
+    "name": "UK to Philippines Money Transfer Guide",
+    "url": "/money-transfer/country-guides/uk-to-philippines/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "uk to philippines money transfer guide uk to philippines money transfer remittance foreign exchange currency corridor guide"
+},
+    {
+    "name": "US to Canada Money Transfer Guide",
+    "url": "/money-transfer/country-guides/us-to-canada/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "us to canada money transfer guide us to canada money transfer remittance foreign exchange currency corridor guide"
+},
+    {
+    "name": "US to China Money Transfer Guide",
+    "url": "/money-transfer/country-guides/us-to-china/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "us to china money transfer guide us to china money transfer remittance foreign exchange currency corridor guide usd to cny united states china alipay wechat unionpay safe quota 50000 pinyin exchange rate"
+},
+    {
+    "name": "US to India Money Transfer Guide",
+    "url": "/money-transfer/country-guides/us-to-india/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "us to india money transfer guide us to india money transfer remittance foreign exchange currency corridor guide usd to inr dollars to rupees ach debit fincen 10000 nre nro firc tax exemption family maintenance"
+},
+    {
+    "name": "US to Mexico Money Transfer Guide",
+    "url": "/money-transfer/country-guides/us-to-mexico/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "us to mexico money transfer guide us to mexico money transfer remittance foreign exchange currency corridor guide"
+},
+    {
+    "name": "US to Nigeria Money Transfer Guide",
+    "url": "/money-transfer/country-guides/us-to-nigeria/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "us to nigeria money transfer guide us to nigeria money transfer remittance foreign exchange currency corridor guide"
+},
+    {
+    "name": "US to Philippines Money Transfer Guide",
+    "url": "/money-transfer/country-guides/us-to-philippines/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "us to philippines money transfer guide us to philippines money transfer remittance foreign exchange currency corridor guide"
+},
+    {
+    "name": "Exchange Rate Guide: UAE Dirham to Indian Rupee",
+    "url": "/money-transfer/exchange-rates/aed-to-inr/",
+    "icon": "💱",
+    "category": "Money Transfer",
+    "keys": "exchange rate guide: uae dirham to indian rupee aed to inr money transfer remittance foreign exchange currency exchange rate"
+},
+    {
+    "name": "Exchange Rate Guide: Australian Dollar to Philippine Peso",
+    "url": "/money-transfer/exchange-rates/aud-to-php/",
+    "icon": "💱",
+    "category": "Money Transfer",
+    "keys": "exchange rate guide: australian dollar to philippine peso aud to php money transfer remittance foreign exchange currency exchange rate"
+},
+    {
+    "name": "Exchange Rate Guide: British Pound to Indian Rupee",
+    "url": "/money-transfer/exchange-rates/gbp-to-inr/",
+    "icon": "💱",
+    "category": "Money Transfer",
+    "keys": "exchange rate guide: british pound to indian rupee gbp to inr money transfer remittance foreign exchange currency exchange rate"
+},
+    {
+    "name": "Exchange Rate Guide: British Pound to Nigerian Naira",
+    "url": "/money-transfer/exchange-rates/gbp-to-ngn/",
+    "icon": "💱",
+    "category": "Money Transfer",
+    "keys": "exchange rate guide: british pound to nigerian naira gbp to ngn money transfer remittance foreign exchange currency exchange rate"
+},
+    {
+    "name": "Exchange Rate Guide",
+    "url": "/money-transfer/exchange-rates/",
+    "icon": "💱",
+    "category": "Money Transfer",
+    "keys": "exchange rate guide exchange rates money transfer remittance foreign exchange currency exchange rate"
+},
+    {
+    "name": "Exchange Rate Guide: Saudi Riyal to Pakistani Rupee",
+    "url": "/money-transfer/exchange-rates/sar-to-pkr/",
+    "icon": "💱",
+    "category": "Money Transfer",
+    "keys": "exchange rate guide: saudi riyal to pakistani rupee sar to pkr money transfer remittance foreign exchange currency exchange rate"
+},
+    {
+    "name": "Exchange Rate Guide: US Dollar to Chinese Yuan (USD to CNY)",
+    "url": "/money-transfer/exchange-rates/usd-to-cny/",
+    "icon": "💱",
+    "category": "Money Transfer",
+    "keys": "exchange rate guide: us dollar to chinese yuan (usd to cny) usd to cny money transfer remittance foreign exchange currency exchange rate"
+},
+    {
+    "name": "Exchange Rate Guide: US Dollar to Indian Rupee",
+    "url": "/money-transfer/exchange-rates/usd-to-inr/",
+    "icon": "💱",
+    "category": "Money Transfer",
+    "keys": "exchange rate guide: us dollar to indian rupee usd to inr money transfer remittance foreign exchange currency exchange rate"
+},
+    {
+    "name": "Exchange Rate Guide: US Dollar to Mexican Peso",
+    "url": "/money-transfer/exchange-rates/usd-to-mxn/",
+    "icon": "💱",
+    "category": "Money Transfer",
+    "keys": "exchange rate guide: us dollar to mexican peso usd to mxn money transfer remittance foreign exchange currency exchange rate"
+},
+    {
+    "name": "Exchange Rate Guide: US Dollar to Philippine Peso",
+    "url": "/money-transfer/exchange-rates/usd-to-php/",
+    "icon": "💱",
+    "category": "Money Transfer",
+    "keys": "exchange rate guide: us dollar to philippine peso usd to php money transfer remittance foreign exchange currency exchange rate"
+},
+    {
+    "name": "Money Transfer Hub: Calculators, Guides & Reviews",
+    "url": "/money-transfer/",
+    "icon": "🌐",
+    "category": "Money Transfer",
+    "keys": "money transfer hub: calculators, guides & reviews money transfer money transfer remittance foreign exchange currency hub directory"
+},
+    {
+    "name": "International Money Transfer Provider Comparisons",
+    "url": "/money-transfer/provider-comparisons/",
+    "icon": "⚖️",
+    "category": "Money Transfer",
+    "keys": "international money transfer provider comparisons provider comparisons money transfer remittance foreign exchange currency provider comparison"
+},
+    {
+    "name": "Instarem vs Remitly: Money Transfer Guide",
+    "url": "/money-transfer/provider-comparisons/instarem-vs-remitly/",
+    "icon": "⚖️",
+    "category": "Money Transfer",
+    "keys": "instarem vs remitly: money transfer guide instarem vs remitly money transfer remittance foreign exchange currency provider comparison remitly economy express cash pickup bank deposit home delivery"
+},
+    {
+    "name": "OFX vs CurrencyFair: Money Transfer Guide",
+    "url": "/money-transfer/provider-comparisons/ofx-vs-currencyfair/",
+    "icon": "⚖️",
+    "category": "Money Transfer",
+    "keys": "ofx vs currencyfair: money transfer guide ofx vs currencyfair money transfer remittance foreign exchange currency provider comparison ofx ozforex large sum transfer broker forward contract target rate 10000+"
+},
+    {
+    "name": "OFX vs XE: Money Transfer Comparison",
+    "url": "/money-transfer/provider-comparisons/ofx-vs-xe/",
+    "icon": "⚖️",
+    "category": "Money Transfer",
+    "keys": "ofx vs xe: money transfer comparison ofx vs xe money transfer remittance foreign exchange currency provider comparison ofx ozforex large sum transfer broker forward contract target rate 10000+"
+},
+    {
+    "name": "PayPal vs Western Union: Transfer Guide",
+    "url": "/money-transfer/provider-comparisons/paypal-vs-western-union/",
+    "icon": "⚖️",
+    "category": "Money Transfer",
+    "keys": "paypal vs western union: transfer guide paypal vs western union money transfer remittance foreign exchange currency provider comparison western union wu cash pickup agent location wire money"
+},
+    {
+    "name": "Remitly vs Western Union: Money Transfer Comparison",
+    "url": "/money-transfer/provider-comparisons/remitly-vs-western-union/",
+    "icon": "⚖️",
+    "category": "Money Transfer",
+    "keys": "remitly vs western union: money transfer comparison remitly vs western union money transfer remittance foreign exchange currency provider comparison remitly economy express cash pickup bank deposit home delivery"
+},
+    {
+    "name": "Remitly vs Xoom: Money Transfer Guide",
+    "url": "/money-transfer/provider-comparisons/remitly-vs-xoom/",
+    "icon": "⚖️",
+    "category": "Money Transfer",
+    "keys": "remitly vs xoom: money transfer guide remitly vs xoom money transfer remittance foreign exchange currency provider comparison remitly economy express cash pickup bank deposit home delivery"
+},
+    {
+    "name": "Wise vs Traditional Bank Transfer",
+    "url": "/money-transfer/provider-comparisons/wise-vs-bank-transfer/",
+    "icon": "⚖️",
+    "category": "Money Transfer",
+    "keys": "wise vs traditional bank transfer wise vs bank transfer money transfer remittance foreign exchange currency provider comparison wise transferwise mid-market rate borderless account debit card fca"
+},
+    {
+    "name": "Wise vs CurrencyFair: Money Transfer Comparison",
+    "url": "/money-transfer/provider-comparisons/wise-vs-currencyfair/",
+    "icon": "⚖️",
+    "category": "Money Transfer",
+    "keys": "wise vs currencyfair: money transfer comparison wise vs currencyfair money transfer remittance foreign exchange currency provider comparison wise transferwise mid-market rate borderless account debit card fca"
+},
+    {
+    "name": "Wise vs Instarem: Money Transfer Comparison",
+    "url": "/money-transfer/provider-comparisons/wise-vs-instarem/",
+    "icon": "⚖️",
+    "category": "Money Transfer",
+    "keys": "wise vs instarem: money transfer comparison wise vs instarem money transfer remittance foreign exchange currency provider comparison wise transferwise mid-market rate borderless account debit card fca"
+},
+    {
+    "name": "Wise vs OFX: Money Transfer Comparison Guide",
+    "url": "/money-transfer/provider-comparisons/wise-vs-ofx/",
+    "icon": "⚖️",
+    "category": "Money Transfer",
+    "keys": "wise vs ofx: money transfer comparison guide wise vs ofx money transfer remittance foreign exchange currency provider comparison wise transferwise mid-market rate borderless account debit card fca"
+},
+    {
+    "name": "Wise vs PayPal: International Money Transfer Comparison",
+    "url": "/money-transfer/provider-comparisons/wise-vs-paypal/",
+    "icon": "⚖️",
+    "category": "Money Transfer",
+    "keys": "wise vs paypal: international money transfer comparison wise vs paypal money transfer remittance foreign exchange currency provider comparison wise transferwise mid-market rate borderless account debit card fca"
+},
+    {
+    "name": "Wise vs Remitly: Money Transfer Comparison Guide",
+    "url": "/money-transfer/provider-comparisons/wise-vs-remitly/",
+    "icon": "⚖️",
+    "category": "Money Transfer",
+    "keys": "wise vs remitly: money transfer comparison guide wise vs remitly money transfer remittance foreign exchange currency provider comparison wise transferwise mid-market rate borderless account debit card fca"
+},
+    {
+    "name": "Wise vs Western Union: Money Transfer Guide",
+    "url": "/money-transfer/provider-comparisons/wise-vs-western-union/",
+    "icon": "⚖️",
+    "category": "Money Transfer",
+    "keys": "wise vs western union: money transfer guide wise vs western union money transfer remittance foreign exchange currency provider comparison wise transferwise mid-market rate borderless account debit card fca"
+},
+    {
+    "name": "Wise vs XE: Money Transfer Comparison Guide",
+    "url": "/money-transfer/provider-comparisons/wise-vs-xe/",
+    "icon": "⚖️",
+    "category": "Money Transfer",
+    "keys": "wise vs xe: money transfer comparison guide wise vs xe money transfer remittance foreign exchange currency provider comparison wise transferwise mid-market rate borderless account debit card fca"
+},
+    {
+    "name": "Wise vs Xoom: Money Transfer Guide",
+    "url": "/money-transfer/provider-comparisons/wise-vs-xoom/",
+    "icon": "⚖️",
+    "category": "Money Transfer",
+    "keys": "wise vs xoom: money transfer guide wise vs xoom money transfer remittance foreign exchange currency provider comparison wise transferwise mid-market rate borderless account debit card fca"
+},
+    {
+    "name": "XE vs CurrencyFair: Money Transfer Comparison",
+    "url": "/money-transfer/provider-comparisons/xe-vs-currencyfair/",
+    "icon": "⚖️",
+    "category": "Money Transfer",
+    "keys": "xe vs currencyfair: money transfer comparison xe vs currencyfair money transfer remittance foreign exchange currency provider comparison xe money transfer xe.com currency converter hiFX wire"
+},
+    {
+    "name": "CurrencyFair Review 2026: P2P Marketplace Fees, Rates & Verdict",
+    "url": "/money-transfer/provider-reviews/currencyfair-review/",
+    "icon": "⭐",
+    "category": "Money Transfer",
+    "keys": "currencyfair review 2026: p2p marketplace fees, rates & verdict currencyfair review money transfer remittance foreign exchange currency provider review"
+},
+    {
+    "name": "Money Transfer Provider Reviews",
+    "url": "/money-transfer/provider-reviews/",
+    "icon": "⭐",
+    "category": "Money Transfer",
+    "keys": "money transfer provider reviews provider reviews money transfer remittance foreign exchange currency provider review"
+},
+    {
+    "name": "Instarem Review 2026: Asian Remittance Fees, Rates & Verdict",
+    "url": "/money-transfer/provider-reviews/instarem-review/",
+    "icon": "⭐",
+    "category": "Money Transfer",
+    "keys": "instarem review 2026: asian remittance fees, rates & verdict instarem review money transfer remittance foreign exchange currency provider review"
+},
+    {
+    "name": "OFX Money Transfer Review 2026: Large Transfer Fees, Rates & Verdict",
+    "url": "/money-transfer/provider-reviews/ofx-review/",
+    "icon": "⭐",
+    "category": "Money Transfer",
+    "keys": "ofx money transfer review 2026: large transfer fees, rates & verdict ofx review money transfer remittance foreign exchange currency provider review ofx ozforex large sum transfer broker forward contract target rate 10000+"
+},
+    {
+    "name": "Payoneer Independent Review (2026)",
+    "url": "/money-transfer/provider-reviews/payoneer-review/",
+    "icon": "⭐",
+    "category": "Money Transfer",
+    "keys": "payoneer independent review (2026) payoneer review money transfer remittance foreign exchange currency provider review"
+},
+    {
+    "name": "PayPal Money Transfer Review 2026: Fees, FX Rates & Verdict",
+    "url": "/money-transfer/provider-reviews/paypal-review/",
+    "icon": "⭐",
+    "category": "Money Transfer",
+    "keys": "paypal money transfer review 2026: fees, fx rates & verdict paypal review money transfer remittance foreign exchange currency provider review"
+},
+    {
+    "name": "Remitly Review 2026: Express vs Economy Fees, Speed & Verdict",
+    "url": "/money-transfer/provider-reviews/remitly-review/",
+    "icon": "⭐",
+    "category": "Money Transfer",
+    "keys": "remitly review 2026: express vs economy fees, speed & verdict remitly review money transfer remittance foreign exchange currency provider review remitly economy express cash pickup bank deposit home delivery"
+},
+    {
+    "name": "Revolut Independent Review (2026)",
+    "url": "/money-transfer/provider-reviews/revolut-review/",
+    "icon": "⭐",
+    "category": "Money Transfer",
+    "keys": "revolut independent review (2026) revolut review money transfer remittance foreign exchange currency provider review revolut multi-currency account premium metal exchange rates"
+},
+    {
+    "name": "TorFX Independent Review (2026)",
+    "url": "/money-transfer/provider-reviews/torfx-review/",
+    "icon": "⭐",
+    "category": "Money Transfer",
+    "keys": "torfx independent review (2026) torfx review money transfer remittance foreign exchange currency provider review"
+},
+    {
+    "name": "Western Union Review 2026: Agent Network, Cash Pickup, Fees & Verdict",
+    "url": "/money-transfer/provider-reviews/western-union-review/",
+    "icon": "⭐",
+    "category": "Money Transfer",
+    "keys": "western union review 2026: agent network, cash pickup, fees & verdict western union review money transfer remittance foreign exchange currency provider review western union wu cash pickup agent location wire money"
+},
+    {
+    "name": "Wise Review 2026: Mid-Market Exchange Rates, Fees & Verdict",
+    "url": "/money-transfer/provider-reviews/wise-review/",
+    "icon": "⭐",
+    "category": "Money Transfer",
+    "keys": "wise review 2026: mid-market exchange rates, fees & verdict wise review money transfer remittance foreign exchange currency provider review wise transferwise mid-market rate borderless account debit card fca"
+},
+    {
+    "name": "WorldRemit Independent Review (2026)",
+    "url": "/money-transfer/provider-reviews/worldremit-review/",
+    "icon": "⭐",
+    "category": "Money Transfer",
+    "keys": "worldremit independent review (2026) worldremit review money transfer remittance foreign exchange currency provider review"
+},
+    {
+    "name": "XE Money Transfer Review 2026: Zero Transfer Fees, Rates & Verdict",
+    "url": "/money-transfer/provider-reviews/xe-review/",
+    "icon": "⭐",
+    "category": "Money Transfer",
+    "keys": "xe money transfer review 2026: zero transfer fees, rates & verdict xe review money transfer remittance foreign exchange currency provider review xe money transfer xe.com currency converter hiFX wire"
+},
+    {
+    "name": "SWIFT & IBAN Guide",
+    "url": "/money-transfer/swift-iban/",
+    "icon": "🏦",
+    "category": "Money Transfer",
+    "keys": "swift & iban guide swift iban money transfer remittance foreign exchange currency banking codes"
+},
     {
         "name": "Moratorium Interest Calculator",
         "url": "/moratorium-interest-calculator/",
@@ -2268,14 +2870,27 @@
     }
 
     function renderDefaultQuickLaunches() {
-        const popularSlugs = ["/income-tax/", "/in-hand-salary/", "/step-up-sip/", "/home-loan/", "/ppf/", "/gst/"];
+        const isMoneyTransfer = typeof window !== 'undefined' && window.location && window.location.pathname.startsWith("/money-transfer/");
+        const popularSlugs = isMoneyTransfer ? [
+            "/money-transfer/calculators/total-transfer-cost/",
+            "/money-transfer/calculators/received-after-conversion/",
+            "/money-transfer/country-guides/us-to-china/",
+            "/money-transfer/country-guides/kuwait-to-india/",
+            "/money-transfer/country-guides/international-student-tuition-transfer/",
+            "/money-transfer/provider-comparisons/wise-vs-western-union/",
+            "/money-transfer/provider-reviews/wise-review/"
+        ] : ["/income-tax/", "/in-hand-salary/", "/step-up-sip/", "/home-loan/", "/ppf/", "/gst/"];
+
         currentResults = catalog.filter(c => popularSlugs.includes(c.url));
         selectedIndex = -1;
 
+        const badgeTitle = isMoneyTransfer ? "🌐 Popular Money Transfer Tools & Guides" : "⭐ Suggested Quick Launches";
+        const badgeSub = isMoneyTransfer ? "Money Transfer Network" : "Popular Calculators";
+
         let html = `
             <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider px-3 py-2 text-left flex items-center justify-between">
-                <span>⭐ Suggested Quick Launches</span>
-                <span class="text-[10px] text-slate-400 font-normal">Popular Calculators</span>
+                <span>${badgeTitle}</span>
+                <span class="text-[10px] text-blue-600 font-semibold">${badgeSub}</span>
             </div>`;
 
         currentResults.forEach((item, idx) => {
@@ -2361,6 +2976,10 @@
             }
 
             if (matchedAllTokens && score > 0) {
+                const isMoneyTransfer = typeof window !== 'undefined' && window.location && window.location.pathname.startsWith("/money-transfer/");
+                if (isMoneyTransfer && item.category === "Money Transfer") {
+                    score += 65;
+                }
                 scored.push({ item, score });
             }
         }
@@ -2453,6 +3072,12 @@
             overlay.classList.remove("opacity-0");
             card.classList.remove("scale-95");
             if (inputField) {
+                const isMoneyTransfer = typeof window !== 'undefined' && window.location && window.location.pathname.startsWith("/money-transfer/");
+                if (isMoneyTransfer) {
+                    inputField.placeholder = "Search countries, providers, or tools (e.g. China, Kuwait, Wise, TCS)...";
+                } else {
+                    inputField.placeholder = "Search any calculator, tool, or guide (e.g. sip, tax, emi)...";
+                }
                 inputField.focus();
                 inputField.select();
                 renderDefaultQuickLaunches();
@@ -2472,6 +3097,18 @@
         document.body.style.overflow = "";
         if (inputField) inputField.value = "";
     };
+
+    // Context-Aware Navbar Placeholder on Money Transfer Pages
+    function applyContextAwarePlaceholder() {
+        if (typeof window !== 'undefined' && window.location && window.location.pathname.startsWith("/money-transfer/")) {
+            const dt = document.getElementById("desktopSearchTrigger");
+            if (dt) {
+                dt.placeholder = "Search 87+ Money Transfer Guides, Calculators & Providers...";
+            }
+        }
+    }
+    document.addEventListener("DOMContentLoaded", applyContextAwarePlaceholder);
+    setTimeout(applyContextAwarePlaceholder, 500);
 
     // Global Event Delegation for Search Triggers
     document.addEventListener("click", function(event) {
