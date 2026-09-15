@@ -156,12 +156,16 @@
             <section id="example" class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
                 <div class="border-b border-slate-100 pb-5 mb-6">
                     <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Application</span>
-                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Practical Example</h2>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Practical Example: Calculating Exchange Rate Spread</h2>
                 </div>
-                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed">
-                    <p>Imagine you are comparing transfer estimates for a $1,000 transaction. Provider A displays a high upfront fee but utilizes an excellent exchange rate near the mid-market. Provider B advertises 'zero fees' but applies a significant, yet hidden, margin to the exchange rate.</p>
-                    <p>By inputting the exact quoted metrics into this calculator, the mathematical formula normalizes the data. It might reveal that Provider A's total true cost is $15, while Provider B's hidden markup effectively costs you $25.</p>
-                    <p>This objective calculation removes marketing jargon, enabling you to make a strictly numbers-based decision that preserves your principal.</p>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>Suppose you are transferring <strong>$2,000 USD to Euros (EUR)</strong>. You check the wholesale interbank market on Reuters or Google and find the mid-market exchange rate is <strong>0.9200 EUR per USD</strong>. At fair market value, your $2,000 is worth exactly €1,840.00.</p>
+                    <p>Your bank advertises "zero commission transfers" but quotes you a customer rate of <strong>0.8970 EUR per USD</strong>. At this rate, your recipient gets €1,794.00.</p>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 font-mono text-xs sm:text-sm space-y-1">
+                        <div>Markup % = ((0.9200 - 0.8970) / 0.9200) × 100 = <strong>2.50%</strong></div>
+                        <div>Hidden Spread Cost = $2,000 × 2.50% = <strong>$50.00 USD</strong> (€46.00 EUR lost)</div>
+                    </div>
+                    <p>Even though the bank displayed no upfront transaction fees, the 2.5% hidden margin cost you $50.00 in deducted foreign currency before the funds arrived.</p>
                 </div>
             </section>
 
@@ -169,7 +173,7 @@
         <!-- Visual Cost Breakdown & Fee Waterfall Section -->
         <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 card-shadow my-8">
             <div class="mb-5">
-                <span class="inline-block bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-2">📊 Cost Anatomy</span>
+                <span class="inline-block bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-2">Fee Breakdown</span>
                 <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900">
                     The 3 Components of International Transfer Cost
                 </h3>
@@ -273,7 +277,7 @@
         <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 pb-6 border-b border-slate-800 gap-4">
             <div>
                 <div class="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs px-3 py-1 rounded-full font-bold mb-2">
-                    <span>🌐 Money Transfer Network</span>
+                    <span>Explore Corridor Guides & Tools</span>
                 </div>
                 <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
                     Explore Global Remittance Guides &amp; Calculators
