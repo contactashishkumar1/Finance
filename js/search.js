@@ -3103,7 +3103,7 @@
         if (typeof window !== 'undefined' && window.location && window.location.pathname.startsWith("/money-transfer/")) {
             const dt = document.getElementById("desktopSearchTrigger");
             if (dt) {
-                dt.placeholder = "Search 87+ Money Transfer Guides, Calculators & Providers...";
+                dt.placeholder = "Search 87+ transfer tools...";
             }
         }
     }

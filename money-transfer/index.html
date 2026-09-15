@@ -274,15 +274,6 @@
     <!-- Hero Section -->
     <header class="bg-white border-b border-slate-200 py-16 sm:py-24 text-center">
         <div class="max-w-4xl mx-auto px-4">
-            <nav class="flex mb-6 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center" aria-label="Breadcrumb">
-                <ol class="flex list-none p-0 flex-wrap justify-center items-center gap-1 sm:gap-2">
-                    <li><a href="/" class="hover:text-blue-600 transition-colors">Home</a></li>
-                    <li><span class="text-slate-300">/</span></li>
-                    <li><a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a></li>
-                    <li><span class="text-slate-300">/</span></li>
-                    <li class="text-slate-600 font-semibold" aria-current="page">Money Transfer Hub</li>
-                </ol>
-            </nav>
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text pb-4 leading-tight">
                 Money Transfer Tools, Guides & Resources
             </h1>
@@ -291,15 +282,13 @@
             </p>
 
             <!-- Hero Instant Search Trigger Bar -->
-            <div class="max-w-xl mx-auto mt-8 mb-2 text-left">
-                <div class="relative cursor-pointer group" onclick="window.showModalContext ? window.showModalContext() : null">
-                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-blue-600">
-                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            <div class="max-w-xl mx-auto mt-8 mb-2 text-left" style="max-width: 36rem; margin-left: auto; margin-right: auto;">
+                <div class="flex items-center w-full bg-slate-50 hover:bg-white border border-slate-300 hover:border-blue-400 rounded-2xl shadow-sm hover:shadow-md transition-all cursor-pointer px-4 py-3.5 gap-3 group" style="display: flex; align-items: center; width: 100%; padding: 14px 18px; gap: 12px; background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 16px; cursor: pointer; box-sizing: border-box;" onclick="window.showModalContext ? window.showModalContext() : null" role="button" aria-label="Search 87+ countries, providers, or tools" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.showModalContext?window.showModalContext():null;}">
+                    <div class="text-blue-600 shrink-0 flex items-center" style="flex-shrink: 0; color: #2563eb; display: flex; align-items: center;">
+                        <svg class="w-5 h-5" style="width: 20px; height: 20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                     </div>
-                    <input type="text" readonly placeholder="Search 87+ countries, providers, or tools (e.g. Kuwait, Wise, TCS)..." class="w-full pl-12 pr-20 py-3.5 bg-slate-50 border border-slate-300 rounded-2xl text-sm font-medium text-slate-800 placeholder-slate-400 shadow-sm group-hover:bg-white group-hover:border-blue-400 group-hover:shadow-md transition-all cursor-pointer">
-                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                        <kbd class="hidden sm:inline-block px-2.5 py-1 text-[11px] font-bold text-slate-500 bg-white border border-slate-200 rounded-lg shadow-sm">⌘K</kbd>
-                    </div>
+                    <span class="text-sm font-medium text-slate-500 select-none flex-1 truncate" style="flex: 1; min-width: 0; font-size: 14px; color: #64748b; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; user-select: none;">Search 87+ countries, providers, or tools (e.g. Kuwait, Wise, TCS)...</span>
+                    <kbd class="hidden sm:inline-block px-2.5 py-1 text-[11px] font-bold text-slate-500 bg-white border border-slate-200 rounded-lg shadow-sm shrink-0" style="flex-shrink: 0; padding: 4px 8px; font-size: 11px; font-weight: 700; color: #64748b; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px;">⌘K</kbd>
                 </div>
             </div>
             
@@ -318,9 +307,7 @@
     <section class="max-w-6xl mx-auto px-4 -mt-8 sm:-mt-12 relative z-10">
         <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl">
             <div class="max-w-3xl mb-8">
-                <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-3.5 py-1.5 rounded-full text-blue-700 text-xs font-bold uppercase tracking-wider mb-3">
-                    <span>⚡ Remittance Payout Estimator</span>
-                </div>
+                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-2">Remittance Payout Estimator</span>
                 <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
                     Compare Estimated Transfer Payouts & Provider Fees
                 </h2>
@@ -539,7 +526,7 @@
                 </div>
                 <div class="border-l-4 border-blue-200 pl-5 py-1">
                     <p class="text-slate-600 text-sm sm:text-base leading-relaxed max-w-4xl text-pretty m-0">
-                        Navigating the exact cost of an international money transfer can be confusing when providers bury their profits within the exchange rate. Our suite of independent money transfer calculators strips away the marketing jargon and exposes the true, underlying costs. By using these mathematical models, you will learn how to identify exchange rate margins, calculate precise hidden fees, estimate the total bank transfer cost, and accurately predict exactly how much money the recipient will receive. Whether you are sending a small family remittance or a large overseas payment, these tools provide complete financial transparency before you initiate any transaction.
+                        Calculating the true cost of an international money transfer can be confusing when providers bury their profits within the exchange rate. Our suite of independent money transfer calculators strips away the marketing jargon and exposes the true, underlying costs. By using these mathematical models, you will learn how to identify exchange rate margins, calculate precise hidden fees, estimate the total bank transfer cost, and accurately predict exactly how much money the recipient will receive. Whether you are sending a small family remittance or a large overseas payment, these tools provide complete financial transparency before you initiate any transaction.
                     </p>
                 </div>
             </div>
@@ -624,7 +611,7 @@
                 </div>
                 <div class="border-l-4 border-indigo-200 pl-5 py-1">
                     <p class="text-slate-600 text-sm sm:text-base leading-relaxed max-w-4xl text-pretty m-0">
-                        Choosing the right money transfer service is crucial for ensuring the safety of your funds and keeping fees low. This section provides unbiased, comprehensive reviews of the industry's most popular digital transfer platforms and traditional financial institutions. We systematically break down each provider's fee structure, analyze their historical exchange rates against the mid-market standard, and review their delivery speeds, security measures, and overall user experience. By exploring these reviews, you will gain the knowledge necessary to decide which platform perfectly aligns with your specific transfer requirements, allowing you to sidestep the deceptive marketing claims often prevalent in the financial sector.
+                        Choosing the right money transfer service protects your funds and keeps unexpected fees to a minimum. This section provides unbiased, comprehensive reviews of the industry's most popular digital transfer platforms and traditional financial institutions. We systematically break down each provider's fee structure, analyze their historical exchange rates against the mid-market standard, and review their delivery speeds, security measures, and overall user experience. By exploring these reviews, you will gain the knowledge necessary to decide which platform perfectly aligns with your specific transfer requirements, allowing you to sidestep the deceptive marketing claims often prevalent in the financial sector.
                     </p>
                 </div>
             </div>
@@ -634,7 +621,7 @@
                 <a href="/money-transfer/provider-reviews/wise-review/" class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-indigo-300 transition-all card-shadow flex flex-col h-full group">
                     <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">⭐</div>
                     <h3 class="text-lg font-bold text-slate-900 mb-2 leading-tight">Wise Review</h3>
-                    <p class="text-sm text-slate-500 mb-6 flex-grow">Deep dive into Wise fees, exchange rates, and speed.</p>
+                    <p class="text-sm text-slate-500 mb-6 flex-grow">Comprehensive analysis of Wise fees, exchange rates, and speed.</p>
                     <span class="text-indigo-600 text-sm font-bold flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">
                         Read Review <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </span>
@@ -944,7 +931,7 @@
                 </div>
                 <div class="border-l-4 border-amber-200 pl-5 py-1">
                     <p class="text-slate-600 text-sm sm:text-base leading-relaxed max-w-4xl text-pretty m-0">
-                        When initiating a traditional bank wire across international borders, precision is mandatory to prevent funds from becoming trapped in the banking system. This category demystifies the complex identifiers used by global banking networks, namely SWIFT/BIC codes and IBAN structures. By reading these resources, you will learn how to accurately format international banking details, understand how funds are routed between intermediary banks, and avoid the exorbitant fees or delayed processing times associated with incorrect wire instructions.
+                        When initiating a traditional bank wire across international borders, precision is mandatory to prevent funds from becoming trapped in the banking system. This guide explains the identifiers used by global banking networks, namely SWIFT/BIC codes and IBAN structures. By reading these resources, you will learn how to accurately format international banking details, understand how funds are routed between intermediary banks, and avoid the exorbitant fees or delayed processing times associated with incorrect wire instructions.
                     </p>
                 </div>
             </div>
@@ -1033,7 +1020,7 @@
                     </div>
                     <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-blue-500 transition-colors">
                         <h3 class="text-white font-bold mb-2 text-lg">For Convenience</h3>
-                        <p class="text-sm">Mobile wallet integrations allow users to send capital directly to a recipient's phone number, providing unparalleled accessibility for unbanked populations in developing regions.</p>
+                        <p class="text-sm">Mobile wallet integrations allow users to send capital directly to a recipient's phone number, providing broad accessibility for unbanked populations in developing regions.</p>
                     </div>
                 </div>
             </section>
@@ -1168,7 +1155,7 @@
         <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 pb-6 border-b border-slate-800 gap-4">
             <div>
                 <div class="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs px-3 py-1 rounded-full font-bold mb-2">
-                    <span>🌐 Money Transfer Network</span>
+                    <span>Explore Corridor Guides & Tools</span>
                 </div>
                 <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
                     Explore Global Remittance Guides &amp; Calculators

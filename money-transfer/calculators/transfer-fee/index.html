@@ -169,12 +169,16 @@
             <section id="example" class="scroll-mt-28 bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
                 <div class="border-b border-slate-100 pb-5 mb-6">
                     <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Application</span>
-                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Practical Example</h2>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Practical Example: Fixed vs. Percentage Fee Break-Even</h2>
                 </div>
-                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed">
-                    <p>Imagine you are sending a remittance of $1,000. You compare two providers to find the best deal. Provider A charges a flat fee of $10, while Provider B charges a 2% variable fee. By using our mathematical formula, you can clearly evaluate the financial impact.</p>
-                    <p>For Provider A, the fee is a simple $10. For Provider B, 2% of $1,000 equals $20. In this scenario, despite Provider A charging a prominent upfront fixed fee, it is mathematically cheaper than Provider B's percentage-based approach.</p>
-                    <p>As the transfer size grows, the difference becomes starker. This is why utilizing objective calculators is crucial before confirming an international payment.</p>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>Suppose you are evaluating two transfer methods for moving funds abroad: <strong>Provider A</strong> charges a flat <strong>$18.00 fee</strong> regardless of transfer size. <strong>Provider B</strong> charges a variable <strong>0.65% fee</strong> with no fixed base.</p>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 font-mono text-xs sm:text-sm space-y-1">
+                        <div>On $1,000: Provider A costs $18.00 | Provider B costs $6.50 (<strong>Provider B saves $11.50</strong>)</div>
+                        <div>Break-Even Point: $18.00 ÷ 0.0065 = <strong>$2,769.23 USD</strong></div>
+                        <div>On $5,000: Provider A costs $18.00 | Provider B costs $32.50 (<strong>Provider A saves $14.50</strong>)</div>
+                    </div>
+                    <p>For smaller remittances under $2,769, percentage fees are cheaper. For large transactions above $2,769, flat-fee structures save significant capital.</p>
                 </div>
             </section>
 
@@ -182,7 +186,7 @@
         <!-- Visual Cost Breakdown & Fee Waterfall Section -->
         <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 card-shadow my-8">
             <div class="mb-5">
-                <span class="inline-block bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-2">📊 Cost Anatomy</span>
+                <span class="inline-block bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-2">Fee Breakdown</span>
                 <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900">
                     The 3 Components of International Transfer Cost
                 </h3>
@@ -286,7 +290,7 @@
         <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 pb-6 border-b border-slate-800 gap-4">
             <div>
                 <div class="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs px-3 py-1 rounded-full font-bold mb-2">
-                    <span>🌐 Money Transfer Network</span>
+                    <span>Explore Corridor Guides & Tools</span>
                 </div>
                 <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
                     Explore Global Remittance Guides &amp; Calculators
