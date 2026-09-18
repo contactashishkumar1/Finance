@@ -542,7 +542,7 @@
         <a href="/lumpsum/" class="bg-slate-800 p-5 rounded-xl border border-slate-700 hover:border-blue-500 hover:bg-slate-800/50 transition-all group flex flex-col justify-between">
             <div>
                 <h3 class="text-sm font-bold text-white mb-1 flex items-center justify-between">
-                    Lumpsum Investment Calc <span class="text-base">💵</span>
+                    Lumpsum Investment Calc <span class="text-base">💰</span>
                 </h3>
                 <p class="text-[11px] text-slate-400 leading-normal">Project the long-term compounded future value of one-time wealth placements.</p>
             </div>
@@ -562,7 +562,7 @@
         <a href="/net-worth/" class="bg-slate-800 p-5 rounded-xl border border-slate-700 hover:border-blue-500 hover:bg-slate-800/50 transition-all group flex flex-col justify-between">
             <div>
                 <h3 class="text-sm font-bold text-white mb-1 flex items-center justify-between">
-                    Net Worth Liquidity Tracker <span class="text-base">💎</span>
+                    Net Worth Liquidity Tracker <span class="text-base">🏛️</span>
                 </h3>
                 <p class="text-[11px] text-slate-400 leading-normal">Audit total assets against current active debt liabilities to find real wealth values.</p>
             </div>
@@ -581,7 +581,7 @@ window.addEventListener("DOMContentLoaded", function() {
     const silos = {
         investment: [
             { name: "SIP Calculator", url: "/sip/", icon: "💰" },
-            { name: "Lumpsum Growth", url: "/lumpsum/", icon: "💵" },
+            { name: "Lumpsum Growth", url: "/lumpsum/", icon: "💰" },
             { name: "CAGR Tool", url: "/cagr/", icon: "📊" },
             { name: "Compound Interest", url: "/compound-interest/", icon: "⏳" },
             { name: "FD Calculator", url: "/fd/", icon: "🏦" },
@@ -605,11 +605,11 @@ window.addEventListener("DOMContentLoaded", function() {
             { name: "EMI Calculator", url: "/emi/", icon: "💳" },
             { name: "Home Loan Planner", url: "/home-loan/", icon: "🏠" },
             { name: "Car Loan EMI", url: "/car-loan/", icon: "🚗" },
-            { name: "Personal Loan EMI", url: "/personal-loan-emi/", icon: "💸" },
+            { name: "Personal Loan EMI", url: "/personal-loan-emi/", icon: "💳" },
             { name: "Loan Eligibility", url: "/loan-eligibility/", icon: "🆗" },
             { name: "Loan Prepayment", url: "/loan-prepayment/", icon: "⚡" },
             { name: "Balance Transfer HLBT", url: "/home-loan-balance-transfer/", icon: "🏦" },
-            { name: "Education Moratorium", url: "/education-loan-moratorium/", icon: "🎒" },
+            { name: "Education Moratorium", url: "/education-loan-moratorium/", icon: "🎓" },
             { name: "Gold vs Personal Loan", url: "/gold-loan-vs-personal-loan/", icon: "🏆" },
             { name: "Flat vs Reducing Rate", url: "/flat-vs-reducing-rate/", icon: "📉" },
             { name: "Fixed vs Floating Rate", url: "/fixed-vs-floating-rate/", icon: "⚖️" },
@@ -620,7 +620,7 @@ window.addEventListener("DOMContentLoaded", function() {
             { name: "Debt Payoff Planner", url: "/debt-payoff/", icon: "📅" },
             { name: "Loan Affordability", url: "/loan-affordability/", icon: "📈" },
             { name: "Loan vs Investment", url: "/loan-vs-investment-calculator/", icon: "🔄" },
-            { name: "Step-Up Loan Calc", url: "/step-up-loan-calculator/", icon: "🪜" },
+            { name: "Step-Up Loan Calc", url: "/step-up-loan-calculator/", icon: "📈" },
             { name: "Home Affordability Tool", url: "/home-affordability/", icon: "🏠" }
         ],
         taxAndSalary: [
@@ -632,7 +632,7 @@ window.addEventListener("DOMContentLoaded", function() {
             { name: "EPF Retirement Corpus", url: "/epf/", icon: "🏦" },
             { name: "Gratuity Service Benefit", url: "/gratuity/", icon: "💼" },
             { name: "Capital Gains Tax", url: "/capital-gains-tax/", icon: "📉" },
-            { name: "Tax Loss Harvesting", url: "/tax-loss-harvesting/", icon: "✂️" },
+            { name: "Tax Loss Harvesting", url: "/tax-loss-harvesting/", icon: "⚖️" },
             { name: "Foreign Income Plan", url: "/foreign-tax-optimizer/", icon: "🌍" },
             { name: "TCS Refund Calculator", url: "/tcs-calculator/", icon: "🛂" },
             { name: "GST Profit Calculator", url: "/gst-profit-calculator/", icon: "📈" }
@@ -654,15 +654,15 @@ window.addEventListener("DOMContentLoaded", function() {
             { name: "CTC to In-Hand Tool", url: "/ctc-to-in-hand/", icon: "🏧" },
             { name: "Appraisal Salary Bonus", url: "/bonus-calculator/", icon: "🎁" },
             { name: "Freelancer vs Job Tax", url: "/freelancer-vs-salaried/", icon: "⚖️" },
-            { name: "ESOP & RSU Simulator", url: "/esop-simulator/", icon: "💎" },
+            { name: "ESOP & RSU Simulator", url: "/esop-simulator/", icon: "💼" },
             { name: "Remote vs Office Savings", url: "/remote-vs-office-calculator/", icon: "🏠" },
             { name: "Corporate Car Lease", url: "/car-lease-vs-buy/", icon: "🚗" },
-            { name: "ESOP Startup Value", url: "/esop-calculator/", icon: "💎" }
+            { name: "ESOP Startup Value", url: "/esop-calculator/", icon: "💼" }
         ],
         tradingMetrics: [
             { name: "Brokerage & P&L Tool", url: "/brokerage-calculator/", icon: "⚖️" },
             { name: "Futures Optimization", url: "/futures-profit/", icon: "📦" },
-            { name: "Options Profit Strategy", url: "/options-profit/", icon: "🎭" },
+            { name: "Options Profit Strategy", url: "/options-profit/", icon: "⚡" },
             { name: "Intraday Profit Analyzer", url: "/intraday-profit-calculator/", icon: "⚡" },
             { name: "Position Sizing Calc", url: "/position-size-calculator/", icon: "📏" },
             { name: "Risk Reward Ratio Tool", url: "/risk-reward-calculator/", icon: "⚖️" },
@@ -677,14 +677,14 @@ window.addEventListener("DOMContentLoaded", function() {
         ],
         businessAnalytics: [
             { name: "Break Even Sales Volume", url: "/break-even-calculator/", icon: "⚖️" },
-            { name: "DCF Intrinsic Valuation", url: "/dcf/", icon: "💎" },
+            { name: "DCF Intrinsic Valuation", url: "/dcf/", icon: "📊" },
             { name: "EBITDA Operating Profit", url: "/ebitda/", icon: "📊" },
             { name: "Gross & Net Margins", url: "/margin-calculator/", icon: "📏" },
             { name: "Retail Markup Percent", url: "/markup-calculator/", icon: "🏷️" },
             { name: "DSCR Debt Analyzer", url: "/dscr/", icon: "💰" },
             { name: "Financial Leverage DFL", url: "/financial-leverage/", icon: "🧱" },
             { name: "Operating Leverage DOL", url: "/operating-leverage/", icon: "🏗️" },
-            { name: "Corporate Cost of Debt", url: "/cost-of-debt/", icon: "💸" },
+            { name: "Corporate Cost of Debt", url: "/cost-of-debt/", icon: "📊" },
             { name: "CAPM Cost of Equity", url: "/cost-of-equity/", icon: "📈" },
             { name: "Enterprise Valuation", url: "/enterprise-value/", icon: "🏢" },
             { name: "Investment Payback", url: "/payback-period-calculator/", icon: "🕰️" },
@@ -695,8 +695,8 @@ window.addEventListener("DOMContentLoaded", function() {
         ],
         personalFinance: [
             { name: "Budget Planner Tracker", url: "/budget-planner/", icon: "📝" },
-            { name: "Net Worth Asset Ledger", url: "/net-worth/", icon: "💎" },
-            { name: "Crorepati Milestone Plan", url: "/crorepati-calculator/", icon: "👑" },
+            { name: "Net Worth Asset Ledger", url: "/net-worth/", icon: "🏛️" },
+            { name: "Crorepati Milestone Plan", url: "/crorepati-calculator/", icon: "🎯" },
             { name: "Emergency Fund Buffer", url: "/emergency-fund/", icon: "🛡️" },
             { name: "Monthly Expense Tracker", url: "/expense-tracker/", icon: "📊" },
             { name: "Savings Rate Tracker %", url: "/savings-rate/", icon: "📈" },
@@ -709,30 +709,30 @@ window.addEventListener("DOMContentLoaded", function() {
             { name: "Side Income Potential", url: "/side-income/", icon: "💼" }
         ],
         lifeMilestones: [
-            { name: "Retirement Target Corpus", url: "/retirement/", icon: "👴" },
+            { name: "Retirement Target Corpus", url: "/retirement/", icon: "🏖️" },
             { name: "Marriage Budget Planner", url: "/marriage-planner/", icon: "💍" },
             { name: "Child Education Planner", url: "/child-education-planner/", icon: "🎓" },
             { name: "Health Insurance Tool", url: "/health-insurance-evaluator/", icon: "🏥" },
             { name: "Human Life Value HLV", url: "/hlv-calculator/", icon: "🛡️" },
-            { name: "NPS Tax Alpha Optimizer", url: "/nps-optimizer-2026/", icon: "👴" },
+            { name: "NPS Tax Alpha Optimizer", url: "/nps-optimizer-2026/", icon: "🏛️" },
             { name: "Sequence of Returns Risk", url: "/srr-simulator/", icon: "📉" },
             { name: "Wedding Inflation Planner", url: "/wedding-inflation-planner/", icon: "💍" },
             { name: "Retirement SWP Longevity", url: "/retirement-withdrawal/", icon: "🏦" },
             { name: "Vacation Savings Goal", url: "/vacation-goal/", icon: "✈️" },
-            { name: "Inflation Adjusted Salary", url: "/inflation-adjusted-salary-calculator/", icon: "💵" },
+            { name: "Inflation Adjusted Salary", url: "/inflation-adjusted-salary-calculator/", icon: "💼" },
             { name: "Inflation Adjusted SIP", url: "/inflation-adjusted-sip-calculator/", icon: "📈" },
             { name: "Car Inflation Planner", url: "/car-purchase/", icon: "🚗" },
             { name: "Early Retirement Calculator", url: "/early-retirement/", icon: "🏃‍♂️" },
             { name: "Education Future Cost", url: "/education-cost/", icon: "🎓" },
-            { name: "Education Savings Roadmap", url: "/education-planning/", icon: "🎒" },
+            { name: "Education Savings Roadmap", url: "/education-planning/", icon: "🎓" },
             { name: "Absolute Independence", url: "/financial-independence/", icon: "🔥" },
             { name: "Goal Portfolio Design", url: "/goal-portfolio/", icon: "📁" },
             { name: "Goal Allocation Priority", url: "/goal-priority/", icon: "🚥" },
             { name: "Goal-Driven SIP Calc", url: "/goal-sip-calculator/", icon: "🎯" },
-            { name: "Goal Annual Step-Up", url: "/goal-step-up/", icon: "🪜" },
-            { name: "Inflation Power Tool", url: "/inflation/", icon: "🎈" },
+            { name: "Goal Annual Step-Up", url: "/goal-step-up/", icon: "📈" },
+            { name: "Inflation Power Tool", url: "/inflation/", icon: "📊" },
             { name: "Multiple Goal Tracker", url: "/multiple-goals/", icon: "🎯" },
-            { name: "NPS Standard Calculator", url: "/nps/", icon: "👴" },
+            { name: "NPS Standard Calculator", url: "/nps/", icon: "🏛️" },
             { name: "Sukanya Samriddhi Yojana", url: "/ssy/", icon: "👧" },
             { name: "Property Appreciation", url: "/property-appreciation/", icon: "Property Appreciation" },
             { name: "Real Estate Rental Yield", url: "/rental-yield/", icon: "🏠" },

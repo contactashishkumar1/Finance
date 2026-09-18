@@ -553,7 +553,7 @@
             badge.classList.remove('hidden');
             if (eligible && netTax === 0) {
                 badge.className = 'rounded-2xl card-shadow p-6 animate-slide text-center bg-green-50 border border-green-200';
-                document.getElementById('eligIcon').textContent = '🎉';
+                document.getElementById('eligIcon').textContent = '✅';
                 document.getElementById('eligTitle').textContent = 'ZERO TAX — You Qualify!';
                 document.getElementById('eligTitle').className = 'text-xl font-bold mb-2 text-green-800';
                 document.getElementById('eligDesc').textContent = `Your taxable income of ${fmtI(taxableIncome)} is within the ₹${regime==='new'?'12,00,000':'5,00,000'} limit. Section 87A rebate of ${fmtI(rebate)} fully offsets your tax liability.`;
