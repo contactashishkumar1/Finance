@@ -531,7 +531,7 @@
             elements.usedLabel.textContent = "Capital Used: " + capitalUsedPerc.toFixed(1) + "%";
             elements.exposureBar.style.width = Math.min(100, capitalUsedPerc) + "%";
 
-            let insightHtml = `<div class="space-y-1"><p>🚨 <strong>Risk Check:</strong> If your Stop Loss is hit, you will lose <strong>${formatInr(quantity * riskPerShare)}</strong>.</p>`;
+            let insightHtml = `<div class="space-y-1"><p>⚠️ <strong>Risk Check:</strong> If your Stop Loss is hit, you will lose <strong>${formatInr(quantity * riskPerShare)}</strong>.</p>`;
             if (target > entry) insightHtml += `<p class="mt-2 text-pretty text-pretty">🎯 <strong>Target Check:</strong> If your target is reached, you gain <strong>${formatInr(potentialReward)}</strong>.</p>`;
             else insightHtml += `<p class="mt-2 text-slate-500 text-pretty text-pretty">💡 <strong>Goal Setting:</strong> To achieve a professional 2R reward ratio, your target price should be <strong>${formatInr(entry + (riskPerShare * 2))}</strong>.</p>`;
             insightHtml += `</div>`;

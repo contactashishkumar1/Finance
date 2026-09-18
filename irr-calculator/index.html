@@ -594,7 +594,7 @@
             // Insights
             let insightHtml = `<p>🚀 <strong>Performance:</strong> This investment generates an Internal Rate of Return of <strong>${irrPerc.toFixed(2)}%</strong>.</p>`;
             if (irrPerc < 8) insightHtml += `<p class="mt-2 text-red-700">⚠️ <strong>Weak Return:</strong> This rate is likely lower than your cost of capital or inflation.</p>`;
-            else if (irrPerc >= 15) insightHtml += `<p class="mt-2 text-emerald-700">💎 <strong>Strong Return:</strong> This project is creating significant value beyond the standard market average.</p>`;
+            else if (irrPerc >= 15) insightHtml += `<p class="mt-2 text-emerald-700">✨ <strong>Strong Return:</strong> This project is creating significant value beyond the standard market average.</p>`;
             
             elements.insightsBox.innerHTML = insightHtml;
         }
